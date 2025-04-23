@@ -1,0 +1,123 @@
+---
+title: "Week 1"
+subtitle: "Introduction to Probability"
+author: "Paul Laskowski and Alex Hughes"
+institute: "UC Berkeley, School of Information"
+format:
+  revealjs:
+    theme: default
+    slideNumber: true
+---
+
+# The Nature of Statistical Models
+
+## What is a Model?
+
+![](figures/lego_1.png){width=80%}
+
+- This course is about statistical modeling. So let's start by asking, what is a model?
+- Here's a model, built out of lego bricks.
+- Some of you might have played with legos growing up, I definitely did.
+- The thing with legos is you learn some basic rules: the ways that legos can fit together.
+- Then you can build something that resembles something in the real world, that captures important behavior.
+- When you're starting out with legos for the first time, you don't immediately try to build a giant machine.
+- Maybe you take two legos, test them to see how they fit together. Once you're familiar with the pieces, you can then try to create something that you see in the world.
+
+## What is a Statistical Model?
+
+![](figures/modeling.png){width=80%}
+
+- A statistical model is also a representation of something in the world.
+- When you have data, it comes from a real-world system.
+- But we don't just care about this data, we have questions: what data is coming next? what other data could have plausibly come up? what features of the world are consistent with this data?
+- For those questions, we can't interrogate the world directly, we need a statistical model.
+- This is a representation that also creates data.
+- We have to pretend that this data actually came from the model. Then we can start to answer these questions.
+
+## Course Plan
+
+1. Putting together statistical models
+2. Fitting models to data
+
+- Most courses jump around, looking at data, then building models, then back.
+- We believe it's better to really commit to understanding models, then apply them.
+- Because of that, we're actually not going to touch any data for several weeks.
+- But don't worry, there will be a LOT of application in the second half of the course.
+
+## First Models
+
+![](figures/legos_3.png){width=80%}
+
+- When we start out, our models are not going to resemble the world at all.
+- They will be brittle - with no flexibility to make them look like the real world.
+- Actually, just like this tower of legos, they may be very rectangular.
+- You may ask, where did this rectangular distribution come from?
+- The answer is we made it up! and we just want to build something simple to understand how the bricks fit together.
+
+## Useful Models
+
+![](figures/disney_castle.png){width=40%}
+
+- But the key is not to worry about those problems at the beginning. As we learn more, we'll see that our models can be more flexible, to represent a wide range of real-world systems.
+- We'll also learn how to fit our models to data, and that's going to make them really useful.
+
+# Probability is Rules for Putting Pieces Together
+
+![](figures/sheep.png){width=80%}
+
+- This week, we're starting with the foundation: probability theory.
+- This is really the nuts and bolts, how do the pieces of statistical models fit together.
+- A strong understanding of probability will be useful to you through this course and through your career as a data scientist.
+
+# Unit Plan
+
+## Necessary Foundation
+
+- A precise definition of probability
+- How mathematicians build from a set of axioms to useful properties
+- How to connect these properties to problems that we want to solve
+
+# Reading Assignment
+
+## Reading Assignment
+
+Throughout this course, we intersperse reading, lectures, and work that you complete as a bundled **async**. This way, you can very quickly move from:
+
+- An introduction to a concept
+- An explanation of its use
+- A proof of that concept
+- An application using data or problem solving
+
+We have designed the course so that you can complete the async, reading, and lecture activity components over a few self-contained study sessions.
+
+## Reading Assignment (cont.)
+
+Read the following sections:
+
+- Introduction, page xv - xviii
+
+# Probability is Reasoning Under Uncertainty
+
+## Probability is A System of Reasoning
+
+::: columns
+::: column
+"Essentially, the theory of probability is nothing but good common sense reduced to mathematics. It provides an exact appreciation of what sound minds feel with a kind of instinct, frequently without being able to account for it.”
+
+- Pierre-Simon Laplace
+:::
+
+::: column
+![](figures/Laplace.png){width=100%}
+:::
+:::
+
+- How would you define probability? Is it something that you encounter in your day-to-day life? A measure of randomness in the world?
+- Laplace was a famous mathematician, who developed what we call the Bayesian interpretation of probability. Let's read what he said in 1814.
+- Laplace believed that, as humans, we are natural processors of probability. We think in probabilities, we use probability when we speak to each other.
+- So of course we think of probability as existing out in the natural world.
+- But, I'm here to tell you that probability is actually a model.
+- That's right, the randomness that we perceive around us is a model that we use to make sense of the world.
+- Let me try to convince you with a few examples.
+
+...
