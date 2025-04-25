@@ -6,6 +6,10 @@ institute: "UC Berkeley, School of Information"
 format:
     revealjs:
         theme: simple 
+        show-notes: true
+        pdf-separate-fragments: true
+
+
 ---
 
 # The Nature of Statistical Models
