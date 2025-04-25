@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="unit_01_files/libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link rel="stylesheet" href="unit_01_files/libs/revealjs/dist/theme/quarto-8f3eebe07241f08526c91a7e9cbef8fd.css">
   <link href="unit_01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="unit_01_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="unit_01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -150,7 +150,8 @@ Paul Laskowski and Alex Hughes
 <section id="what-is-a-model" class="slide level2">
 <h2>What is a Model?</h2>
 
-<img data-src="figures/lego_1.png" style="width:80.0%" class="r-stretch"><ul>
+<img data-src="figures/lego_1.jpg" style="width:80.0%" class="r-stretch"><aside class="notes">
+<ul>
 <li>This course is about statistical modeling. So let’s start by asking, what is a model?</li>
 <li>Here’s a model, built out of lego bricks.</li>
 <li>Some of you might have played with legos growing up, I definitely did.</li>
@@ -159,11 +160,23 @@ Paul Laskowski and Alex Hughes
 <li>When you’re starting out with legos for the first time, you don’t immediately try to build a giant machine.</li>
 <li>Maybe you take two legos, test them to see how they fit together. Once you’re familiar with the pieces, you can then try to create something that you see in the world.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-is-a-statistical-model" class="slide level2">
 <h2>What is a Statistical Model?</h2>
 
-<img data-src="figures/modeling.png" style="width:80.0%" class="r-stretch"><ul>
+<img data-src="figures/modeling.png" style="width:80.0%" class="r-stretch"><aside class="notes">
+<ul>
 <li>A statistical model is also a representation of something in the world.</li>
 <li>When you have data, it comes from a real-world system.</li>
 <li>But we don’t just care about this data, we have questions: what data is coming next? what other data could have plausibly come up? what features of the world are consistent with this data?</li>
@@ -171,6 +184,17 @@ Paul Laskowski and Alex Hughes
 <li>This is a representation that also creates data.</li>
 <li>We have to pretend that this data actually came from the model. Then we can start to answer these questions.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="course-plan" class="slide level2">
 <h2>Course Plan</h2>
@@ -178,40 +202,90 @@ Paul Laskowski and Alex Hughes
 <li>Putting together statistical models</li>
 <li>Fitting models to data</li>
 </ol>
+<aside class="notes">
 <ul>
+<li>When we designed this course, we decided to follow a very strict narrative.</li>
+<li>At the highest level of abstraction, here’s our plan…</li>
 <li>Most courses jump around, looking at data, then building models, then back.</li>
 <li>We believe it’s better to really commit to understanding models, then apply them.</li>
 <li>Because of that, we’re actually not going to touch any data for several weeks.</li>
 <li>But don’t worry, there will be a LOT of application in the second half of the course.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="first-models" class="slide level2">
 <h2>First Models</h2>
 
-<img data-src="figures/legos_3.png" style="width:80.0%" class="r-stretch"><ul>
+<img data-src="figures/legos_3.jpg" style="width:80.0%" class="r-stretch"><aside class="notes">
+<ul>
 <li>When we start out, our models are not going to resemble the world at all.</li>
 <li>They will be brittle - with no flexibility to make them look like the real world.</li>
 <li>Actually, just like this tower of legos, they may be very rectangular.</li>
 <li>You may ask, where did this rectangular distribution come from?</li>
 <li>The answer is we made it up! and we just want to build something simple to understand how the bricks fit together.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="useful-models" class="slide level2">
 <h2>Useful Models</h2>
 
-<img data-src="figures/disney_castle.png" style="width:40.0%" class="r-stretch"><ul>
+<img data-src="figures/disney_castle.jpg" style="width:40.0%" class="r-stretch"><aside class="notes">
+<ul>
 <li>But the key is not to worry about those problems at the beginning. As we learn more, we’ll see that our models can be more flexible, to represent a wide range of real-world systems.</li>
 <li>We’ll also learn how to fit our models to data, and that’s going to make them really useful.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section id="probability-is-rules-for-putting-pieces-together" class="title-slide slide level1 center">
 <h1>Probability is Rules for Putting Pieces Together</h1>
 
-<img data-src="figures/sheep.png" style="width:80.0%" class="r-stretch"><ul>
+<img data-src="figures/sheep.jpg" style="width:80.0%" class="r-stretch"><aside class="notes">
+<ul>
 <li>This week, we’re starting with the foundation: probability theory.</li>
 <li>This is really the nuts and bolts, how do the pieces of statistical models fit together.</li>
 <li>A strong understanding of probability will be useful to you through this course and through your career as a data scientist.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
 <section>
@@ -234,7 +308,7 @@ Paul Laskowski and Alex Hughes
 </section>
 <section id="reading-assignment-1" class="slide level2">
 <h2>Reading Assignment</h2>
-<p>Throughout this course, we intersperse reading, lectures, and work that you complete as a bundled <strong>async</strong>. This way, you can very quickly move from:</p>
+<p>Throughout this course, we intersperse reading, lectures, and work that you complete as a bundled <em>async</em>. This way, you can very quickly move from :</p>
 <ul>
 <li>An introduction to a concept</li>
 <li>An explanation of its use</li>
@@ -245,10 +319,24 @@ Paul Laskowski and Alex Hughes
 </section>
 <section id="reading-assignment-cont." class="slide level2">
 <h2>Reading Assignment (cont.)</h2>
-<p>Read the following sections:</p>
 <ul>
 <li>Introduction, page xv - xviii</li>
 </ul>
+<aside class="notes">
+<ul>
+<li>What do we actually say in this?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section id="probability-is-reasoning-under-uncertainty" class="title-slide slide level1 center">
@@ -258,14 +346,13 @@ Paul Laskowski and Alex Hughes
 <section id="probability-is-a-system-of-reasoning" class="slide level2">
 <h2>Probability is A System of Reasoning</h2>
 <div class="columns">
-<div class="column">
-<p>“Essentially, the theory of probability is nothing but good common sense reduced to mathematics. It provides an exact appreciation of what sound minds feel with a kind of instinct, frequently without being able to account for it.”</p>
-<ul>
-<li>Pierre-Simon Laplace</li>
-</ul>
-</div><div class="column">
-<p><img data-src="figures/Laplace.png" style="width:100.0%"></p>
+<div class="column" style="width:60%;">
+<p>“Essentially, the theory of probability is nothing but good common sense reduced to mathematics. It provides an exact appreciation of what sound minds feel with a kind of instinct, frequently without being able to account for it.”<br>
+- Pierre-Simon Laplace</p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="figures/Laplace.jpg" style="width:100.0%"></p>
 </div></div>
+<aside class="notes">
 <ul>
 <li>How would you define probability? Is it something that you encounter in your day-to-day life? A measure of randomness in the world?</li>
 <li>Laplace was a famous mathematician, who developed what we call the Bayesian interpretation of probability. Let’s read what he said in 1814.</li>
@@ -275,9 +362,279 @@ Paul Laskowski and Alex Hughes
 <li>That’s right, the randomness that we perceive around us is a model that we use to make sense of the world.</li>
 <li>Let me try to convince you with a few examples.</li>
 </ul>
-<p>…</p>
-
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="probability-is-a-model-of-the-world" class="slide level2">
+<h2>Probability is A Model of the World</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>“All models are wrong; some are useful.”<br>
+—George Box</p>
+</div>
+</div>
+</div>
+<p>Probability is:</p>
+<ul>
+<li>A mathematical construct</li>
+<li>A model or abstraction of the world</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>But I’m here to tell you that probability is just a model. It’s a very useful model - one that we can make mathematically precise. But it’s a model of the world.</li>
+<li>Let me try to convince you with a few examples.</li>
+<li>Not sure how to fit the Box quote into the narrative - wonder if there’s something more specific to probability.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
+<section id="probability-is-a-model---example-1" class="title-slide slide level1 center">
+<h1>Probability is a Model - Example 1</h1>
+
+<img data-src="figures/mil_doctors.jpg" style="width:80.0%" class="r-stretch"><aside class="notes">
+<ul>
+<li>First, say that you go to the doctor with some abdominal pain.</li>
+<li>The doctor tells you that you have an 80% chance of having kidney stones.</li>
+<li>But is there any randomness in whether you have kidney stones?</li>
+<li>If you walk out of the office and come back the next day, will you have kidney stones 80% of the time?</li>
+<li>Of course not. There’s no randomness, you either have kidney stones or you don’t.</li>
+<li>The doctor is using probability in what we call its subjective sense – as a strength of belief.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="probability-is-a-model---example-2" class="title-slide slide level1 center">
+<h1>Probability is a Model - Example 2</h1>
+
+<img data-src="figures/forecast.png" style="width:80.0%" class="r-stretch"><aside class="notes">
+<ul>
+<li>Next, you look at the weather forecast and you see that there’s a 50% chance of rain tomorrow.</li>
+<li>Is there any randomness in whether it will rain? It’s a future event, so you might think maybe.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="probability-is-a-model---example-2-cont." class="title-slide slide level1 center">
+<h1>Probability is a Model - Example 2 (cont.)</h1>
+
+<img data-src="figures/earth_copies.png" style="width:80.0%" class="r-stretch"><aside class="notes">
+<ul>
+<li>But what if you made 100 copies of the earth, and arranged the atoms in each one perfectly in exactly the same position with the same speed. Would it rain in your location in half of them?</li>
+<li>Probably it would rain in all of them or none. If we could perfectly model how all the atoms in the atmosphere interact, we’d know for sure whether it will rain.</li>
+<li>Again, there’s no real randomness - probability is just a model for the world.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="probability-is-a-model---example-3" class="title-slide slide level1 center">
+<h1>Probability is a Model - Example 3</h1>
+
+<img data-src="figures/coin.jpg" style="width:80.0%" class="r-stretch"><aside class="notes">
+<ul>
+<li>Finally, what about the most classic random event of all - the coin flip.</li>
+<li>Everyone knows that a coin lands heads 50% of the time.</li>
+<li>But is that true? What if you could flip the coin in exactly the same way each time.</li>
+<li>And make sure every single atom in the air was moving in exactly the same way.</li>
+<li>You would probably find that it lands on the same side each time.</li>
+<li>Really, the only people who work with true randomness are quantum physicists. The rest of us are using probability as a model.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section>
+<section id="an-axiomatic-approach" class="title-slide slide level1 center">
+<h1>An Axiomatic Approach</h1>
+
+</section>
+<section id="why-take-an-axiomatic-approach" class="slide level2">
+<h2>Why take an axiomatic approach?</h2>
+<ul>
+<li>Define a minimal set of statements that are consistent with the world we observe.</li>
+<li>Deduce statements that must then be logically entailed.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>We already have an intuitive model for probability in our heads, but that’s not enough to build statistical models - we need a mathematically precise system.</li>
+<li>How do we create one? We distill our intuition into a small set of axioms. This is what mathematicians do…</li>
+<li>Suppose that you’re rolling dice – you could observe that the P(1|2) is just P(1) + P(2). You could write that down as a fact.</li>
+<li>If you kept doing that, you’d end up with a huge pile of facts, and you still would not be able to predict the probability of a new event. You would have no logical way to move from one fact to another.</li>
+<li>Instead, we need to identify axioms that explain the probabilities of many different events. Induct up to a higher set of principles – the pieces of the model that we need, that are used to predict events.</li>
+<li>You might find this frustrating – you might want to study this like it is an observational science; counting lions or cosmic rays. But, it isn’t!</li>
+<li>Probability is a model, so we’re inventing the rules, not discovering them. But if our system reminds us enough of the real world, it can be useful.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="learnosity-set-theory-diagnostic-quiz" class="title-slide slide level1 center">
+<h1>Learnosity: Set Theory Diagnostic Quiz</h1>
+
+</section>
+<section id="set-theory" class="slide level2">
+<h2>Set Theory</h2>
+<ul>
+<li>To understand the upcoming definitions, you will need to be familiar with basic set theory. This sequence is a quick review of the set operations we will be using most.</li>
+<li>If you already understand the following notation and can solve the problem, we recommend that you skip this sequence and go straight to the next segment about partitions.</li>
+</ul>
+<h3 id="notation">Notation:</h3>
+<ul>
+<li><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets.</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Operation</th>
+<th>Notation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Union</td>
+<td><span class="math inline">\(A \cup B\)</span></td>
+</tr>
+<tr class="even">
+<td>Intersection</td>
+<td><span class="math inline">\(A \cap B\)</span></td>
+</tr>
+<tr class="odd">
+<td>Set Difference</td>
+<td><span class="math inline">\(A \setminus B\)</span></td>
+</tr>
+<tr class="even">
+<td>Complement</td>
+<td><span class="math inline">\(A^C\)</span></td>
+</tr>
+<tr class="odd">
+<td>Empty Set</td>
+<td><span class="math inline">\(\emptyset\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="simplify-the-expression">Simplify the expression:</h4>
+<p><span class="math display">\[(A \cap B) \cup (B \setminus A)\]</span></p>
+<aside class="notes">
+<ul>
+<li>To understand the upcoming definitions, you will need to be familiar with basic set theory. This sequence is a quick review of the set operations we will be using most.</li>
+<li>If you already understand the following notation and can solve the problem, we recommend that you skip this sequence and go straight to the next segment about partitions.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="the-set-operations-part-1" class="title-slide slide level1 center">
+<h1>The Set Operations, Part 1</h1>
+
+</section>
+<section id="visualizing-a-set" class="slide level2">
+<h2>Visualizing a Set</h2>
+
+<img data-src="figures/bag.png" style="width:30.0%" class="r-stretch"><aside class="notes">
+<ul>
+<li>What is a set? I’m not going to give a precise definition, set theory is interesting but it’s pretty far down into the foundations of mathematics.</li>
+<li>What you need to know is that sets contain objects.</li>
+<li>Imagine a bag, so there’s no order inside the set.</li>
+<li>An object is either in the set or outside.</li>
+<li>Also, an object can’t be in the set twice. No repetition - you’re in or you’re out.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="additional-sections-and-slides-will-follow-the-same-structure." class="title-slide slide level1 center">
+<h1>Additional sections and slides will follow the same structure.</h1>
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -334,7 +691,7 @@ Paul Laskowski and Alex Hughes
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
