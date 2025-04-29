@@ -32,7 +32,7 @@ class Notes:
     def to_md(self):
         if len(self.items) == 0:
             return ''
-        bullets = [f' - {item}' for item in self.items]
+        bullets = [f'- {item}' for item in self.items]
 
         return '\n'.join([
             '::: {.notes}',
@@ -119,7 +119,7 @@ def parse_list(root):
         if child.name == 'itemize':
             result.append(UnorderedList(parse_list(child)))
         elif child.name == 'item':
-            result.append(' '.join([text for text in child.text]).strip())
+            result.append(''.join([text for text in child.text]))
     return result
 
 def parse_include_graphics(root):
@@ -145,7 +145,7 @@ def parse_slide(frame_root):
             elif child.name == 'enumerate':
                 contents.append(OrderedList(parse_list(child)))
             elif child.name == "note":
-                note_items.append(child.args[1])
+                note_items.append(child.args[1].string)
             elif child.name == "includegraphics":
                 contents.append(parse_include_graphics(child))
             elif child.name == "textit":
