@@ -1,7 +1,7 @@
 import os
 from typing import TypedDict
-from tex2py import tex2py
 import yaml
+from TexSoup import TexSoup
 from TexSoup.data import TexNode
 
 # Define the input and output file paths
@@ -122,6 +122,13 @@ def parse_list(root):
             result.append(' '.join([text for text in child.text]).strip())
     return result
 
+def parse_include_graphics(root):
+    filename = root.args[1].string
+    path = find_image_file(filename)
+    if path is None:
+        raise ValueError(f"could not find file path: {filename}")
+    return Image(path)
+
 def parse_slide(frame_root):  
     slide_title = ""
     if frame_root.frametitle is not None:
@@ -140,11 +147,7 @@ def parse_slide(frame_root):
             elif child.name == "note":
                 note_items.append(child.args[1])
             elif child.name == "includegraphics":
-                filename = child.args[1]
-                path = find_image_file(filename)
-                if path is None:
-                    raise ValueError(f"could not find file path: {filename}")
-                contents.append(Image(path))
+                contents.append(parse_include_graphics(child))
             elif child.name == "textit":
                 contents.append(f'__{str(child.args[0])}__')
             elif child.name in ["$", "$$", "\\"]:
@@ -159,7 +162,7 @@ def parse_slide(frame_root):
             )
 
 def convert_doc(doc):
-    root = doc.source.find("document")
+    root = doc.find("document")
     slideshow = Slideshow()
     for child in root.children:
         if child.name == "section":
@@ -184,7 +187,7 @@ def open_tex():
         tex_content = file.read()
 
     # Parse the LaTeX content using text2py
-    parsed_content = tex2py(tex_content)
+    parsed_content = TexSoup(tex_content)
     return parsed_content
 
 def main():
@@ -192,7 +195,7 @@ def main():
     # Start writing the Quarto markdown content
 
     parsed_content = open_tex()
-    doc = parsed_content.source
+    doc = parsed_content
     metadata = get_doc_metadata(doc)
     qmd_content = "---\ntitle: 'Unit 01 Presentation'\nformat: revealjs\n---\n\n"
     qmd_content = convert_doc(parsed_content).to_md()
@@ -237,4 +240,5 @@ def parse_orig(parse_content):
                 qmd_content += ":::\n\n"
 
 
-main()
+if __name__ == '__main__':
+    main()
