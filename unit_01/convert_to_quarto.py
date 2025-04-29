@@ -17,11 +17,12 @@ class QmdHeader(TypedDict):
     
 
 def get_doc_metadata(doc):
+    print(doc.title.string)
     return QmdHeader(
-        title = doc.title.string,
-        subtitle = doc.subtitle.string,
-        author = doc.author.string,
-        institute = doc.institute.string,
+        title = str(doc.title.string),
+        subtitle = str(doc.subtitle.string),
+        author = str(doc.author.string),
+        institute = str(doc.institute.string),
         format = {"revealjs": {"show-notes": True}}
     )
 
@@ -51,7 +52,7 @@ class Slide:
     def to_md(self):
         return ('\n'.join([
             f'## {self.title}',
-            '\n\n'.join([str(x) for x in self.contents]),
+            '\n'.join([str(x) for x in self.contents]),
             '',
             self.notes.to_md(),  
         ]))
@@ -92,11 +93,12 @@ class UnorderedList:
 
 class Image:
     
-    def __init__(self, path: str):
+    def __init__(self, path: str, caption = ''):
+        self.caption = caption
         self.path = path
     
     def to_md(self):
-        return f'![]({self.path})\n'
+        return f'![{self.caption}]({self.path})\n'
 
     def __str__(self):
         return self.to_md()
@@ -135,7 +137,8 @@ def parse_slide(frame_root):
         slide_title = frame_root.frametitle.string
     contents = list()
     note_items = list()
-    alls = frame_root.children
+    alls = frame_root.contents
+    previous_image = None
     for child in alls:
         if isinstance(child, TexNode):
             if child.name == 'frametitle':
@@ -147,13 +150,14 @@ def parse_slide(frame_root):
             elif child.name == "note":
                 note_items.append(child.args[1].string)
             elif child.name == "includegraphics":
-                contents.append(parse_include_graphics(child))
+                previous_image = parse_include_graphics(child)
+                contents.append(previous_image)
             elif child.name == "textit":
-                contents.append(f'__{str(child.args[0])}__')
+                contents.append(f'_{str(child.args[0].string)}_')
             elif child.name in ["$", "$$", "\\"]:
                 contents.append(child)
             else: print(slide_title, '"', child.name, '"')
-        else: contents.append(child)
+        else: contents.append(str(child))
         
     return Slide(
                     title = slide_title,
