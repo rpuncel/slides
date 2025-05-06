@@ -13,6 +13,7 @@ def test_parse_slide_notes_only():
   \frametitle{First Models}
   \note[item]{They will be brittle - with no flexibility to make them look like the real world}
   \note[item]{Actually, just like this tower of legos, they may be very rectangle.}
+  \note[item]{The answer is we made it up!  and we just want to build
     something simple to understand how the bricks fit together}
 \end{frame}
     """
@@ -23,6 +24,8 @@ def test_parse_slide_notes_only():
 ::: {.notes}
 - They will be brittle - with no flexibility to make them look like the real world
 - Actually, just like this tower of legos, they may be very rectangle.
+- The answer is we made it up!  and we just want to build
+    something simple to understand how the bricks fit together
 :::
 """
     assert parse_slide(list(soup.children)[0]).to_md() == expect
