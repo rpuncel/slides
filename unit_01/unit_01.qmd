@@ -5,16 +5,27 @@ author: "Paul Laskowski and Alex Hughes"
 institute: "UC Berkeley, School of Information"
 format:
     revealjs:
-        theme: simple 
+        theme: mytheme.scss 
         show-notes: true
         pdf-separate-fragments: true
+        include-in-header: 
+            text: |
+                <style>
+                .center-y {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                }
+                </style>
 
 
 ---
 
 # The Nature of Statistical Models
 
-## What is a Model?
+## What is a Model? {style="text-align: center;"}
 
 ![](figures/lego_1.jpg){width=80%}
 
@@ -43,8 +54,10 @@ format:
 
 ## Course Plan
 
+::: {.center-y}
 1. Putting together statistical models
 2. Fitting models to data
+:::
 
 ::: {.notes}
 - When we designed this course, we decided to follow a very strict narrative.
@@ -227,10 +240,9 @@ Probability is:
 
 # Learnosity: Set Theory Diagnostic Quiz
 
-## Set Theory
+## Set Theory {.smaller}
 
-- To understand the upcoming definitions, you will need to be familiar with basic set theory. This sequence is a quick review of the set operations we will be using most.
-- If you already understand the following notation and can solve the problem, we recommend that you skip this sequence and go straight to the next segment about partitions.
+If you already understand the following notation and can solve the problem, we recommend that you skip this sequence and go straight to the next segment about partitions.
 
 ### Notation:
 
@@ -257,7 +269,20 @@ $$(A \cap B) \cup (B \setminus A)$$
 
 ## Visualizing a Set
 
-![](figures/bag.png){width=30%}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](figures/bag.png)
+:::
+
+::: {.column width="70%"}
+- A set contains objects.
+- item Items don't have an order.
+- Items can't repeat.
+:::
+
+::::
 
 ::: {.notes}
 - What is a set? I'm not going to give a precise definition, set theory is interesting but it's pretty far down into the foundations of mathematics.
