@@ -174,6 +174,11 @@ def parse_block(root):
 
 
     return Block(title, contents)
+
+class Centering:
+
+    def __init__(self):
+        pass
     
 
 def parse_texnode(root):
@@ -190,6 +195,9 @@ def parse_texnode(root):
         return parse_block(root)
     elif root.name in ["$", "$$", "\\"]:
         return root
+    elif root.name in ["centering", "footnotesize"]:
+        return ""
+
     else:
         return root
 
@@ -210,7 +218,9 @@ def parse_slide(frame_root):
                 note_items.append(child.args[1].string)
             else:
                 contents.append(parse_texnode(child))
-        else: contents.append(str(child))
+        else:
+            if r'\\' in str(child): continue
+            else: contents.append(str(child))
         
     return Slide(
                     title = slide_title,

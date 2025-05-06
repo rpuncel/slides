@@ -47,7 +47,11 @@ def test_parse_slide_single_figure():
     """
     soup = TexSoup(tex)
     expect = """## First Models
+
 ![](figures/legos_3.jpg)
+
+
+ Image: Hans Schou (CC BY-SA 3.0)
 
 
 ::: {.notes}
