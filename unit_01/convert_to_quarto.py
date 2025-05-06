@@ -2,7 +2,7 @@ import os
 from typing import TypedDict
 import yaml
 from TexSoup import TexSoup
-from TexSoup.data import TexNode
+from TexSoup.data import TexNode, TexCmd, TexExpr
 
 # Define the input and output file paths
 input_file = '/Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex'
@@ -91,6 +91,23 @@ class UnorderedList:
     def __str__(self):
         return self.to_md()
 
+class Block:
+    def __init__(self, title, content: list):
+        self.title = title
+        self.content = content
+    
+    def to_md(self):
+        content = [ str(c).strip() for c in self.content ]
+        return '\n'.join([
+            f'::: {{.callout-note title="{self.title}"}}',
+           '\n'.join(content),
+            ':::',
+        ])
+        
+    def __str__(self):
+        return self.to_md()
+        
+
 class Image:
     
     def __init__(self, path: str, caption = ''):
@@ -131,6 +148,52 @@ def parse_include_graphics(root):
         raise ValueError(f"could not find file path: {filename}")
     return Image(path)
 
+def parse_simple(root):
+    contents = list()
+    for child in root.contents:
+        if hasattr(child, "name"):
+            if child.name == "textit":
+                contents.append(f'_{str(child.args[0].string)}_')
+            if child.name == "$":
+                contents.append(child.string)
+            else: contents.append(child.string)
+        else: contents.append(child)
+    return contents
+
+def parse_block(root):
+    block_title_expr = root.args[0]
+    title = ' '.join(parse_simple(block_title_expr))
+    skip = len(list(block_title_expr.contents))
+    contents = list()
+    for i, content in enumerate(root.contents):
+        if i < skip:
+            continue
+        if isinstance(content, str):
+            contents.append(content)
+        else: contents.append(parse_texnode(content))
+
+
+    return Block(title, contents)
+    
+
+def parse_texnode(root):
+    if root.name == 'itemize':
+        return UnorderedList(parse_list(root))
+    elif root.name == 'enumerate':
+        return OrderedList(parse_list(root))
+    elif root.name == "includegraphics":
+        previous_image = parse_include_graphics(root)
+        return previous_image
+    elif root.name == "textit":
+        return f'_{str(root.args[0].string)}_'
+    elif root.name == "block":
+        return parse_block(root)
+    elif root.name in ["$", "$$", "\\"]:
+        return root
+    else:
+        return root
+
+
 def parse_slide(frame_root):  
     slide_title = ""
     if frame_root.frametitle is not None:
@@ -143,20 +206,10 @@ def parse_slide(frame_root):
         if isinstance(child, TexNode):
             if child.name == 'frametitle':
                 slide_title = child.string
-            elif child.name == 'itemize':
-                contents.append(UnorderedList(parse_list(child)))
-            elif child.name == 'enumerate':
-                contents.append(OrderedList(parse_list(child)))
             elif child.name == "note":
                 note_items.append(child.args[1].string)
-            elif child.name == "includegraphics":
-                previous_image = parse_include_graphics(child)
-                contents.append(previous_image)
-            elif child.name == "textit":
-                contents.append(f'_{str(child.args[0].string)}_')
-            elif child.name in ["$", "$$", "\\"]:
-                contents.append(child)
-            else: print(slide_title, '"', child.name, '"')
+            else:
+                contents.append(parse_texnode(child))
         else: contents.append(str(child))
         
     return Slide(

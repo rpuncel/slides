@@ -6,6 +6,7 @@ def test_parse_include_graphics():
     soup = TexSoup(tex)
     parse_include_graphics(list(soup.children)[0])
 
+
 def test_parse_slide_notes_only():
     tex = r"""
     \begin{frame}
@@ -58,3 +59,22 @@ def test_parse_slide_single_figure():
 
 """
     assert parse_slide(list(soup.children)[0]).to_md() == expect
+
+
+def test_parse_block():
+    text = r"""\begin{block}{Definition 1.1.12: \textit{partition}}
+    A set of sets $A_{1}, A_{2}, \dots, A_{n}$ is a \textit{partition} of set $S$, if $A_{1}, A_{2}, \dots, A_{n}$ are nonempty and
+    pairwise disjoint, and if $S = A_{1} \cup A_{2} 
+    \cup \cdots \cup A_{n}$.
+  \end{block}
+    """
+    expect = """::: {.callout-note title="Definition 1.1.12:  _partition_ "}
+
+A set of sets $A_{1}, A_{2}, \dots, A_{n}$ is a _partition_ of set $S$, if $A_{1}, A_{2}, \dots, A_{n}$ are nonempty and
+pairwise disjoint, and if $S = A_{1} \cup A_{2} 
+\cup \cdots \cup A_{n}$.
+  
+:::"""
+    soup = TexSoup(text)
+    parsed = parse_block(list(soup.children)[0])
+    assert parsed.to_md() == expect
