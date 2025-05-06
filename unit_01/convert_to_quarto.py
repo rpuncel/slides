@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 import os
 from typing import TypedDict
 import yaml
@@ -175,11 +176,59 @@ def parse_block(root):
 
     return Block(title, contents)
 
-class Centering:
 
-    def __init__(self):
-        pass
+@dataclass
+class Column:
     
+    width: float | None
+    contents: str
+    skip: int = 0
+
+    def to_md(self):
+        width_specifier = f'width="{self.width:g}%"' if self.width is not None else ""
+        lines = []
+        lines.append(f'::: {{.column {width_specifier}}}\n')
+        for line in self.contents[self.skip:]:
+            lines.append(str(line).rstrip().replace(r"\\", "\n"))
+        lines.append('\n:::\n')
+        return ''.join(lines)
+
+
+    def __str__(self):
+        return self.to_md()
+
+
+@dataclass
+class Columns:
+    columns: list[Column]
+
+    def to_md(self):
+        content = "\n".join(c.to_md() for c in self.columns)
+        return "\n".join([
+            ":::: {.columns}\n",
+            content,
+            "::::"
+
+        ])
+
+    def __str__(self):
+        return self.to_md()
+
+
+def parse_columns(root):
+    columns: list[Column] = []
+    for child in root.children:
+        assert child.name == "column"
+        idx = child.args[0].string.find("\\textwidth")
+        skip = 0
+        if idx != -1:
+            width_str = child.args[0].string[:idx]
+            width = float(width_str)
+            width_pct = width * 100
+            skip = 2
+        columns.append(Column(width_pct, child.contents, skip))
+    return Columns(columns)
+
 
 def parse_texnode(root):
     if root.name == 'itemize':
@@ -193,14 +242,16 @@ def parse_texnode(root):
         return f'_{str(root.args[0].string)}_'
     elif root.name == "block":
         return parse_block(root)
+    elif root.name == "columns":
+        return parse_columns(root)
     elif root.name in ["$", "$$", "\\"]:
         return root
     elif root.name in ["centering", "footnotesize"]:
         return ""
+    
 
     else:
         return root
-
 
 def parse_slide(frame_root):  
     slide_title = ""
@@ -220,6 +271,7 @@ def parse_slide(frame_root):
                 contents.append(parse_texnode(child))
         else:
             if r'\\' in str(child): continue
+            elif str(child).startswith('%'): continue
             else: contents.append(str(child))
         
     return Slide(

@@ -84,3 +84,43 @@ pairwise disjoint, and if $S = A_{1} \cup A_{2}
     soup = TexSoup(text)
     parsed = parse_block(list(soup.children)[0])
     assert parsed.to_md() == expect
+
+
+def test_parse_columns():
+    text = r"""
+      \begin{columns}
+    \begin{column}{0.6\textwidth}
+      "Essentially, the theory of probability is nothing but good common
+      sense reduced to mathematics. It provides an exact appreciation of
+      what sound minds feel with a kind of instinct, frequently without
+      being able to account for it.”\\
+      - Pierre-Simon Laplace
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{figures/Laplace}
+      \end{center}
+    \end{column}
+  \end{columns}
+  """
+
+    expect = """\
+:::: {.columns}
+
+::: {.column width="60%"}
+
+      "Essentially, the theory of probability is nothing but good common
+      sense reduced to mathematics. It provides an exact appreciation of
+      what sound minds feel with a kind of instinct, frequently without
+      being able to account for it.”
+
+      - Pierre-Simon Laplace
+:::
+
+::: {.column width="40%"}
+
+::::\
+"""
+    soup = TexSoup(text)
+    parsed = parse_columns(list(soup.children)[0])
+    assert parsed.to_md() == expect
