@@ -500,7 +500,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="the-model-building-process" class="level2">
 <h2 class="anchored" data-anchor-id="the-model-building-process">The Model-Building Process</h2>
-<p><embed src="images/propose_evaluate.pdf" class="img-fluid"></p>
+<p><img src="images/propose_evaluate.png" class="img-fluid"></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -665,7 +665,7 @@ economic output and Internet access?</code></pre>
 <h1>Introduction to Descriptive Modeling</h1>
 <section id="how-would-you-describe-these-data" class="level2">
 <h2 class="anchored" data-anchor-id="how-would-you-describe-these-data">How Would You Describe These Data?</h2>
-<p><embed src="images/cars.pdf" class="img-fluid"></p>
+<p><img src="images/cars.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>If you had to describe this data over the phone, how would you do it? Take 10 seconds, and try to say a few words about it right now.</li>
@@ -721,7 +721,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="is-ols-regression-appropriate" class="level2">
 <h2 class="anchored" data-anchor-id="is-ols-regression-appropriate">Is OLS Regression Appropriate?</h2>
-<p><embed src="images/gdp1.pdf" class="img-fluid"></p>
+<p><img src="images/gdp1.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>Here’s a graph of our data.</li>
@@ -745,7 +745,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="does-ols-regression-meet-our-goals" class="level2">
 <h2 class="anchored" data-anchor-id="does-ols-regression-meet-our-goals">Does OLS Regression Meet Our Goals?</h2>
-<p><embed src="images/gdp2.pdf" class="img-fluid"></p>
+<p><img src="images/gdp2.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>Here’s what the regression line looks like. We know this is valid as far as ols assumptions.</li>
@@ -787,7 +787,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="taking-the-log-of-gdp" class="level2">
 <h2 class="anchored" data-anchor-id="taking-the-log-of-gdp">Taking the Log of GDP</h2>
-<p><embed src="images/gdp3.pdf" class="img-fluid"></p>
+<p><img src="images/gdp3.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>Here’s what the data looks like after you take a log of GDP per capita. Can you draw a line through it? Much easier!</li>
@@ -796,7 +796,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="taking-the-log-of-gdp-1" class="level2">
 <h2 class="anchored" data-anchor-id="taking-the-log-of-gdp-1">Taking the Log of GDP</h2>
-<p><embed src="images/gdp4.pdf" class="img-fluid"></p>
+<p><img src="images/gdp4.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>And here is the new regression line, which matches the shape of this relationship.</li>
@@ -805,7 +805,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="model-widehatusers-beta_0-beta_1-ln-gdp-quadquad-r2-.68" class="level2">
 <h2 class="anchored" data-anchor-id="model-widehatusers-beta_0-beta_1-ln-gdp-quadquad-r2-.68">Model: <span class="math inline">\(\widehat{users} = \beta_0 + \beta_1 \ln GDP \quad\quad R^2 = .68\)</span></h2>
-<p><embed src="images/gdp5.pdf" class="img-fluid"></p>
+<p><img src="images/gdp5.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>There’s another way to view this model. Let’s go back to the original x-axis, without the log</li>
@@ -846,7 +846,7 @@ economic output and Internet access?</code></pre>
 <section id="model" class="level2">
 <h2 class="anchored" data-anchor-id="model">Model:</h2>
 <pre><code>$\widehat{users} = \beta_0 + \beta_1 \ln GDP \quad\quad R^2 = .68$</code></pre>
-<p><embed src="images/gdp5.pdf" class="img-fluid"></p>
+<p><img src="images/gdp5.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li><p>Let’s see what that rule of thumb looks like on the graph. Let’s choose some point on the curve, GDP = 10,000.</p></li>
@@ -913,7 +913,7 @@ economic output and Internet access?</code></pre>
 <h1>Polynomials</h1>
 <section id="how-can-we-improve-predictive-accuracy" class="level2">
 <h2 class="anchored" data-anchor-id="how-can-we-improve-predictive-accuracy">How Can We Improve Predictive Accuracy?</h2>
-<p><embed src="images/gdp1.pdf" class="img-fluid"></p>
+<p><img src="images/gdp1.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>Here’s another look at our GDP and Internet User data. Previously, we used a log transform. That was good for capturing the shape and great for model interpretability.</li>
@@ -943,7 +943,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="a-parabolic-pattern" class="level2">
 <h2 class="anchored" data-anchor-id="a-parabolic-pattern">A Parabolic Pattern?</h2>
-<p><embed src="images/gdp1.pdf" class="img-fluid"></p>
+<p><img src="images/gdp1.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>Let’s try the quadratic form.</li>
@@ -955,7 +955,7 @@ economic output and Internet access?</code></pre>
 <h2 class="anchored" data-anchor-id="model-1">Model:</h2>
 <pre><code>$\widehat{users} = \beta_0 + \beta_1 GDP + \beta_2 GDP^2
 \quad\quad R^2 = .66$ </code></pre>
-<p><embed src="images/gdp6.pdf" class="img-fluid"></p>
+<p><img src="images/gdp6.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>There you have the best fitting parabola</li>
@@ -982,7 +982,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="higher-order-polynomials" class="level2">
 <h2 class="anchored" data-anchor-id="higher-order-polynomials">Higher-Order Polynomials</h2>
-<p><embed src="images/gdp9.pdf" class="img-fluid"></p>
+<p><img src="images/gdp9.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>what happens if we increase the order of our polynomial?</li>
@@ -994,7 +994,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="higher-order-polynomials-1" class="level2">
 <h2 class="anchored" data-anchor-id="higher-order-polynomials-1">Higher-Order Polynomials</h2>
-<p><embed src="images/gdp10.pdf" class="img-fluid"></p>
+<p><img src="images/gdp10.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>Here, I tried to fit an order 30 polynomial. Indeed, the</li>
@@ -1016,7 +1016,7 @@ economic output and Internet access?</code></pre>
 <h1>Interpreting Indicator Variables</h1>
 <section id="example-measuring-the-wage-gap" class="level2">
 <h2 class="anchored" data-anchor-id="example-measuring-the-wage-gap">Example: Measuring the Wage Gap</h2>
-<p><embed src="images/news.pdf" class="img-fluid"></p>
+<p><img src="images/news.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>Let’s take a look at an example measurement goal. The example we’ll use is the wage gap.</li>
@@ -1047,7 +1047,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="overall-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="overall-comparison">Overall Comparison</h2>
-<p><embed src="images/wage_hist.pdf" class="img-fluid"></p>
+<p><img src="images/wage_hist.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>First, let’s try the simplest thing we can do: comparing all men against all women.</li>
@@ -1089,7 +1089,7 @@ economic output and Internet access?</code></pre>
 <h2 class="anchored" data-anchor-id="the-same-analysis-in-a-regression-framework-part-ii">The Same Analysis in a Regression Framework, Part II</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><embed src="images/wage_slope.pdf" class="img-fluid"></p>
+<p><img src="images/wage_slope.png" class="img-fluid"></p>
 </div><div class="column" style="width:40%;">
 <p><span class="math inline">\(\Delta Y = \frac{\text{slope}}{\Delta X}\)</span></p>
 </div>
@@ -1136,7 +1136,7 @@ economic output and Internet access?</code></pre>
 <section id="controlling-for-occupation-part-ii" class="level2">
 <h2 class="anchored" data-anchor-id="controlling-for-occupation-part-ii">Controlling for Occupation, Part II</h2>
 <p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 Female + \beta_2 Banker + \beta_3 Engineer + ...\)</span></p>
-<p><embed src="images/artists.pdf" class="img-fluid"></p>
+<p><img src="images/artists.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>What we need to do, is add an indicator variable for every possible occupation (we need a base category, let’s make it artist).</li>
@@ -1320,7 +1320,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="how-should-you-think-about-specifications" class="level2">
 <h2 class="anchored" data-anchor-id="how-should-you-think-about-specifications">How Should You Think About Specifications?</h2>
-<p><embed src="images/reasonable.pdf" class="img-fluid"></p>
+<p><img src="images/reasonable.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>With all that in mind, how should you think about your model specifications?</li>
@@ -1382,7 +1382,7 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="conditional-effects-of-age-part-ii" class="level2">
 <h2 class="anchored" data-anchor-id="conditional-effects-of-age-part-ii">Conditional Effects of Age, Part II</h2>
-<p><embed src="images/age_interaction.pdf" class="img-fluid"></p>
+<p><img src="images/age_interaction.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
 <li>Here’s what that looks like. we’re fitting a very flexible model, with two different slopes and two different intercepts.</li>

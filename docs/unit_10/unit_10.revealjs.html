@@ -305,8 +305,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="the-model-building-process" class="slide level2">
 <h2>The Model-Building Process</h2>
-<p><embed data-src="images/propose_evaluate.pdf"></p>
-<div class="columns">
+
+<img data-src="images/propose_evaluate.png" class="r-stretch"><div class="columns">
 <div class="column" style="width:50%;">
 <ul>
 <li>Modeling goals</li>
@@ -543,8 +543,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="how-would-you-describe-these-data" class="slide level2">
 <h2>How Would You Describe These Data?</h2>
-<p><embed data-src="images/cars.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/cars.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>If you had to describe this data over the phone, how would you do it? Take 10 seconds, and try to say a few words about it right now.</li>
 <li>What words are you using? Slope? Decreasing? Maybe hyperbolic or exponential?</li>
@@ -631,8 +631,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="is-ols-regression-appropriate" class="slide level2">
 <h2>Is OLS Regression Appropriate?</h2>
-<p><embed data-src="images/gdp1.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp1.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>Here’s a graph of our data.</li>
 <li>You can see it has this very interesting pattern - a very nonlinear pattern. Try taking your finger, and drawing a line to represent this data. Take a moment to think about this question: is it ok to run a linear regression? here?</li>
@@ -675,8 +675,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="does-ols-regression-meet-our-goals" class="slide level2">
 <h2>Does OLS Regression Meet Our Goals?</h2>
-<p><embed data-src="images/gdp2.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp2.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>Here’s what the regression line looks like. We know this is valid as far as ols assumptions.</li>
 <li>But does it meet our goals? In particular, one of the main goals of descriptive modeling is capturing features of the world.</li>
@@ -739,8 +739,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="taking-the-log-of-gdp" class="slide level2">
 <h2>Taking the Log of GDP</h2>
-<p><embed data-src="images/gdp3.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp3.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>Here’s what the data looks like after you take a log of GDP per capita. Can you draw a line through it? Much easier!</li>
 </ul>
@@ -758,8 +758,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="taking-the-log-of-gdp-1" class="slide level2">
 <h2>Taking the Log of GDP</h2>
-<p><embed data-src="images/gdp4.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp4.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>And here is the new regression line, which matches the shape of this relationship.</li>
 </ul>
@@ -777,8 +777,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="model-widehatusers-beta_0-beta_1-ln-gdp-quadquad-r2-.68" class="slide level2">
 <h2>Model: <span class="math inline">\(\widehat{users} = \beta_0 + \beta_1 \ln GDP \quad\quad R^2 = .68\)</span></h2>
-<p><embed data-src="images/gdp5.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp5.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>There’s another way to view this model. Let’s go back to the original x-axis, without the log</li>
 <li>If we do that, this is what our model looks like</li>
@@ -850,8 +850,8 @@ economic output and Internet access?</code></pre>
 <section id="model" class="slide level2">
 <h2>Model:</h2>
 <pre><code>$\widehat{users} = \beta_0 + \beta_1 \ln GDP \quad\quad R^2 = .68$</code></pre>
-<p><embed data-src="images/gdp5.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp5.png" class="r-stretch"><aside class="notes">
 <ul>
 <li><p>Let’s see what that rule of thumb looks like on the graph. Let’s choose some point on the curve, GDP = 10,000.</p></li>
 <li><p>I’m going to draw the tangent line at that point - it’s a good approximation for small changes in GDP.</p></li>
@@ -949,8 +949,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="how-can-we-improve-predictive-accuracy" class="slide level2">
 <h2>How Can We Improve Predictive Accuracy?</h2>
-<p><embed data-src="images/gdp1.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp1.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>Here’s another look at our GDP and Internet User data. Previously, we used a log transform. That was good for capturing the shape and great for model interpretability.</li>
 <li>What if I tell you that your goals are little different. You still care about interpretation, but you really want more accuracy. You’d be willing to give up a little bit of interpretability to get a higher</li>
@@ -999,8 +999,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="a-parabolic-pattern" class="slide level2">
 <h2>A Parabolic Pattern?</h2>
-<p><embed data-src="images/gdp1.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp1.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>Let’s try the quadratic form.</li>
 <li>Here’s the data again. I want you to imagine what you think the best fitting parabola looks like. try tracing it with your finger.</li>
@@ -1021,8 +1021,8 @@ economic output and Internet access?</code></pre>
 <h2>Model:</h2>
 <pre><code>$\widehat{users} = \beta_0 + \beta_1 GDP + \beta_2 GDP^2
 \quad\quad R^2 = .66$ </code></pre>
-<p><embed data-src="images/gdp6.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp6.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>There you have the best fitting parabola</li>
 <li>You can see that it definitely looks closer to the data than the line. The fit is actually slightly worse</li>
@@ -1068,8 +1068,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="higher-order-polynomials" class="slide level2">
 <h2>Higher-Order Polynomials</h2>
-<p><embed data-src="images/gdp9.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp9.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>what happens if we increase the order of our polynomial?</li>
 <li>Here you can see the best fitting cubic function. Notice that the</li>
@@ -1090,8 +1090,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="higher-order-polynomials-1" class="slide level2">
 <h2>Higher-Order Polynomials</h2>
-<p><embed data-src="images/gdp10.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/gdp10.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>Here, I tried to fit an order 30 polynomial. Indeed, the</li>
 <li>But the shape doesn’t make sense. Why would internet users go up and down with GDP?</li>
@@ -1126,8 +1126,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="example-measuring-the-wage-gap" class="slide level2">
 <h2>Example: Measuring the Wage Gap</h2>
-<p><embed data-src="images/news.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/news.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>Let’s take a look at an example measurement goal. The example we’ll use is the wage gap.</li>
 <li>You probably already know about the wage gap - newspapers in the US talk about it from time to time.</li>
@@ -1177,8 +1177,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="overall-comparison" class="slide level2">
 <h2>Overall Comparison</h2>
-<p><embed data-src="images/wage_hist.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/wage_hist.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>First, let’s try the simplest thing we can do: comparing all men against all women.</li>
 <li>Actually, we’ve seen this problem before. When we talked about t-tests, we had two groups, and we wanted to know if the means were the same.</li>
@@ -1249,7 +1249,7 @@ economic output and Internet access?</code></pre>
 <h2>The Same Analysis in a Regression Framework, Part II</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><embed data-src="images/wage_slope.pdf"></p>
+<p><img data-src="images/wage_slope.png"></p>
 </div><div class="column" style="width:40%;">
 <p><span class="math inline">\(\Delta Y = \frac{\text{slope}}{\Delta X}\)</span></p>
 </div></div>
@@ -1327,8 +1327,8 @@ economic output and Internet access?</code></pre>
 <section id="controlling-for-occupation-part-ii" class="slide level2">
 <h2>Controlling for Occupation, Part II</h2>
 <p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 Female + \beta_2 Banker + \beta_3 Engineer + ...\)</span></p>
-<p><embed data-src="images/artists.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/artists.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>What we need to do, is add an indicator variable for every possible occupation (we need a base category, let’s make it artist).</li>
 <li>What does this do? Here’s a picture of what the model looks like.</li>
@@ -1626,8 +1626,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="how-should-you-think-about-specifications" class="slide level2">
 <h2>How Should You Think About Specifications?</h2>
-<p><embed data-src="images/reasonable.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/reasonable.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>With all that in mind, how should you think about your model specifications?</li>
 <li>Imagine a space that represents reasonable modeling choices</li>
@@ -1732,8 +1732,8 @@ economic output and Internet access?</code></pre>
 </section>
 <section id="conditional-effects-of-age-part-ii" class="slide level2">
 <h2>Conditional Effects of Age, Part II</h2>
-<p><embed data-src="images/age_interaction.pdf"></p>
-<aside class="notes">
+
+<img data-src="images/age_interaction.png" class="r-stretch"><aside class="notes">
 <ul>
 <li>Here’s what that looks like. we’re fitting a very flexible model, with two different slopes and two different intercepts.</li>
 <li>by the way, how would you test whether the effect really is heterogeneous? that is, how can you test whether the slopes really are different?</li>

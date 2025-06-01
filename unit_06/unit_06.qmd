@@ -1,0 +1,1339 @@
+---
+author: Paul Laskowski and D. Alex Hughes
+format:
+  html: default
+  revealjs:
+    output-file: unit_06.revealjs.html
+    show-notes: true
+institute: UC Berkeley, School of Information
+subtitle: Hypothesis Testing
+title: Week 6
+---
+
+# 
+
+## 
+
+\maketitle
+
+
+
+
+
+
+# 6.1 Historical Development of Frequentist Statistics
+
+## Introduction
+
+- Hypothesis, H, is a model for how the world might work
+- In practice, evidence is rarely conclusive
+- We want $Pr(H|D)$ , or the probability of the event that our hypothesis is true
+
+
+
+
+
+
+
+## The Dilemma
+Whether our hypothesis is true is something we can never know 
+  
+- The world is not a perfectly controlled lab
+- Evidence collected contains information but does not begin to identify a unique model out of all the possible models
+- We do not know how to weight all the possibilities out there
+
+
+
+
+
+
+
+## Example 1
+
+\begin{exampleblock}{You flip a coin once and it lands on heads}
+    What is the probability that it is a double-headed coin?
+  \end{exampleblock}
+_Is there enough information to answer this?_
+- How did the coin get there?
+- The context is missing: - How do we choose between the different models?
+- How do we weight all the alternatives?
+- Even with more information, you can never know the context completely
+
+
+
+
+
+
+
+## Example 2
+
+\begin{exampleblock}{Isaac Newton}
+    Both motions are consistent with a gravitation attraction that is proportional to the square of the distance between the objects
+  \end{exampleblock}
+- What is the probability that Newton's theory of gravity is correct?
+- __Problem:__ Newton's second theory seemed to work up to the precision of 17th-century instruments
+- Only later were instruments developed that were precise enough to show Newton's laws were incorrect
+
+
+
+
+
+
+
+## Example 2 (cont.)
+
+- How could Newton decide how probable his model was compared to general relativity (not imagined yet)?
+- If he could have imagined another theory, would we be equipped to compare two very different ideas?
+- We could never write down the infinite number of models consistent with observations of the planet in order to assign each a probability
+- It may not even make sense to assign a probability to Newton's gravity (eg. true state of world or not)
+
+
+
+
+
+
+
+## Example 3
+You discover three specimens of a new species of squid that measure 3.2, 3.3, and 4.0 feet long
+  
+- What is the probability that the average length amount the entire species is 3.5 feet? - Probability zero for a single number (point estimate)
+  probability that the average length is between 3 and 4 feet?
+- Positive number for length
+- No new numbers that have not been imagined
+- A better grasp of the possibilities
+
+
+
+
+
+
+
+## Example 3 (cont.)
+
+- However, we don't know how representative the specimens are - We still don't know all the relevant information
+- Examples: deep water pressure, amount of light
+
+__We cannot deduce the probability of our model because we do not know enough about the structure of the world__
+
+
+
+
+
+
+## Two Branches of Statistics 
+
+
+
+![](./figures/two_worlds.png)
+
+
+
+
+
+
+
+# 6.4 The Frequentist Approach
+
+## The Birth of Modern Statistics
+
+
+![](figures/neyman_and_pearson.png)
+- Before the 1930's, there were lots of statistical procedures but no coherent account of how to choose the right one
+- Neyman and Pearson published articles that added a rigorous mathematical treatment, forming the basis of frequentist statistics
+
+
+
+
+
+
+
+## The Central Dilemma
+
+- We observe data, $D$
+- Given that this data occurs, we want the probability that our hypothesis $P(H|D)$ is __true__
+
+
+  To a strict frequentist:
+
+  
+- Not just impossible to compute
+- Does not even make sense to assign a probability to a hypothesis
+
+
+
+
+
+
+
+## Objective Probability
+A frequentist defines probability as a matter of long-run frequencies
+  
+- We need to specify a collective of elements - Eg. throws of a dice
+- __Collective:__ a frame of observations that can happen over and over
+- As number of observations approaches infinity, proportion of throws of the die that show a 3 is 1/6
+- The probability is the long-run frequency of the event relative to all observations (or of 3's relative to all throws) - Called __objective probability__
+
+
+
+
+
+
+
+## Objective Probability and Hypothesis
+
+- If you view probability as objective, you cannot talk about the probability of a hypothesis
+- it is just true or false
+- __Subjective Probability:__ The probability of a hypothesis - Allows for disagreement about what it is
+- Reflects our lack of information
+
+__So, what probabilities can we study?__
+- We need a long-run collective
+
+
+
+
+
+
+
+## $PR(D|H)$
+
+- $H$ = hypothesis
+- $D$ = data
+
+
+  Assume H is true and call it the null hypothesis
+
+  
+- Has to be quite specific (the only extra assumption we're making)
+- Is the basis for predictions we need to make about what data should come out of the experiment
+- Governs how the experiment behaves as we run it over and over
+
+
+
+
+
+
+
+## $PR(D|H)$ (cont.)
+Now we have a meaningful collective
+  
+- Can look at the relative frequencies of different outcomes
+- Can specifically look at the number of hypothetical experiments in which we would get data at least as extreme as D - Captured by $p$ -value
+- __\textit{p}-value:__ The probability of getting data as extreme as our observations, assuming the null hypothesis is true
+
+
+
+
+
+
+
+# Components of a Hypothesis Test
+
+## Notes while Screensharing
+
+\[
+  \begin{aligned}
+    & g(x_{1}, X_{2}, \dots, X_{n}) \rightarrow S \in \mathbb{R} \\
+    H_{0} &= 0
+  \end{aligned}
+  \]
+
+
+
+
+
+
+## Hypothesis Test Example
+
+\begin{exampleblock}{Mad data science}
+    Suppose that your lab has synthesized a new compound, 
+    \textit{Vitamin W}.
+
+    Let random variable $B$ represent the change in blood pressure that results from taking
+    \textit{Vitamin W}.
+    
+    Let $\mu = \E[B]$.
+
+    You need to make a decision, to invest resources in Vitamin W or not. 
+  \end{exampleblock}
+
+
+::: {.notes}
+
+- Let's use a stylized example to motivate the hypothesis testing framework.
+:::
+
+
+
+
+## Two Possible States of the World
+__Goal:__
+ Begin with a reasonable default supposition; leave
+  this supposition behind if data provides compelling evidence
+  
+
+:::: {.columns}
+
+
+::: {.column width="50%"}
+
+__Null hypothesis__- Default assumption, status quo, statement that data might overturn
+- $H_\varnothing: \text{Usually } \mu=0$
+- No effect
+:::
+
+
+::: {.column width="50%"}
+
+__Alternative hypothesis__- Idea or alternative to status quo
+- $H_a:$ Usually $\mu \neq 0$
+- Some effect exists
+:::
+
+::::
+
+
+  With compelling evidence, we leave the specific null hypothesis
+  (
+$H_{\varnothing}$
+) for the alternative (
+$H_{a}$
+)
+
+
+
+
+
+
+
+## A Hypothesis Test
+A 
+_hypothesis test_
+ is a procedure.
+
+
+
+![](figures/test_procedure.png)
+
+
+::: {.notes}
+
+- This is very strict: you might want your hypothesis test
+  to do more, to give you fine-grained information about the world.
+  but statistics doesn't work like that.  All we can do, is set up a
+  specific null hypothesis and make this binary decision: reject or
+  not reject.
+:::
+
+
+
+
+## False Positive and False Negative Errors
+
+\small\begin{tabular}{p{3cm}| p{3cm}| p{3cm}}
+      & \multicolumn{2}{c}{\textbf{True state of the world}}  
+ 
+      & \textit{The null is true} & \textit{The null is false} 
+
+      \hline \hline 
+      \textit{Reject the null} & False Positive & 
+
+      & (Type I Error) & 
+
+      \hline 
+      \textit{Do not reject the } & & False Negative
+
+      \textit{null}&& (Type II Error)
+    \end{tabular}
+
+
+
+
+
+
+## False Positive and False Negative Errors (cont.)
+__False Positive Errors__
+- Typically the most destructive \note[item]{Why?  Because we don't want to abandon our existing
+      beliefs about the world too quickly - our existing beliefs are
+      our beliefs for a reason.} \note[item]{The world has all these researchers testing different
+      medications, we don't want to be flooded with treatments that
+      don't actually work.} \note[item]{Once a single study finds a link between red wine and
+      heart disease, it gets out into the papers, people start
+      believing it, and there's no way to undo that. }
+- Error rate, denoted $\alpha$ , is the probability of rejecting
+    the null hypothesis when we should not; $P(\text{Reject } H_\varnothing |
+    H_\varnothing)$
+- Starting with Ronald Fisher: set $\alpha = 0.05$
+
+
+  A hypothesis test is a procedure for rejecting or not rejecting a
+  null, such that the false positive error rate is controlled (
+$\alpha = 0.05$
+).
+
+
+
+
+
+
+
+## Breaking Down a Test Procedure
+__A test statistic__
+- A function of our sample
+- Measures deviations from the null hypothesis
+- Distribution must be completely determined by the null
+
+__A rejection region__
+- A set of values for which we will reject the null
+- Chosen to be contrary to the null
+- Total probability must be $\alpha = 0.05$
+
+
+
+
+
+
+
+## What a Hypothesis Test Doesn't Do
+__A hypothesis test does not prove the null hypothesis.__
+- We control Type 1 error rates \note[item]{Throughout, can we refer to these as false positives
+      and false negatives? Or, at the very least, can we be really
+      clear about defining once what we mean by type-one and type-two
+      errors? This is a pet peeve of mine.}
+- We cannot control Type 2 error rates
+- How can you be sure the real B is not 0.01?  Or 0.00001? \note[item]{I'm not sure what we mean with this last point?}
+
+__Never accept the null hypothesis.__
+- The valid decisions are reject and fail to reject.
+
+
+
+
+
+
+
+# The One-Sample z-Test
+
+## 
+
+\begin{exampleblock}{Vitamin W Example} 
+    Suppose $(B_1,..,B_{100})$ are i.i.d. random variables with mean $\mu = \E[B]$, representing changes in blood pressure.
+    
+    Assume $B \sim N(\mu, \sigma)$.  Assume we know $\sigma[B]=20$.
+      \end{exampleblock}
+
+\begin{flushright} \includegraphics[height=.5\textheight, width = .5\textwidth]{figures/normal.pdf}
+\end{flushright}
+
+
+::: {.notes}
+
+- We want to know if Vitamin W has an effect.  so we write 
+- We need a statistic, and a rejection region
+- For our statistic, we usually want to find something that follows a famous distribution.
+- Can use the standardized mean. 
+- For our rejection region , we need to choose a subset of the real numbers.  I'll show you the most common choice, above 1.96 and below -1.96.
+- Why these numbers?  If you integrate, you get a probability of 0.05.
+- Ex: 
+:::
+
+
+
+
+# One- and Two-Tailed Tests
+
+## The Two-Tailed z-Test
+
+
+![](figures/normal_with_two_tails.png)
+- __Null hypothesis__ : $\mu = 0$
+- __Alternative hypothesis__ : $\mu \neq 0$
+
+
+
+
+
+
+
+## The One-Tailed z-Test
+
+
+![](figures/normal_with_one_tail.png)
+- __Null hypothesis__ : $\mu = 0$
+- __Alternative hypothesis 1__ : $\mu > 0$
+- __Alternative hypothesis 2__ : $\mu < 0$
+
+
+
+
+
+
+
+## Choosing One or Two Tails
+
+
+![](figures/normal_with_two_tails.png)
+
+![](figures/normal_with_one_tail.png)
+
+Switching your test after you see the statistic is cheating.
+
+
+
+::: {.notes}
+
+- One-tailed and two-tailed tests ask different questions, and are
+  
+- It is kind of like being ID when you're buy a beer --
+    they're not asking, ``Is this person different from 21?'' They're
+    asking, ``Is this person older than 21?''
+:::
+
+
+
+
+## One-Tailed Test: Things to Consider
+Before using a one-tailed test, ask yourself these questions:
+
+1. Will the audience believe that I started with one tail before I saw the data?
+2. Will the audience share my opinion of which tail is interesting?
+3. Am I really 100 \% committed to only this tail? - What if the effect turns out to be huge, but in the other direction?
+- Would I be willing to call that a negative result?
+- Can I convince my audience I have this much commitment?
+
+
+
+::: {.notes}
+
+- ``Do you feel lucky, punk? Well do ya?''
+:::
+
+
+
+
+# T-Test Assumptions
+
+## T-Test Assumptions, Part I
+
+
+::: {.callout-note title="Assumptions of t-test"}
+
+
+    The textbook assumptions
+    
+    - $X$ is a metric variable.
+- $\{X_1,X_2,...,X_n\}$ is a random sample.
+- $X$ has a normal distribution.
+
+:::
+
+
+
+    Variables are almost never normal.
+    
+
+
+::: {.notes}
+
+- And so, these assumptions are nearly never met in practice
+:::
+
+
+
+
+## T-Test Assumptions, Part II
+But, in the large sample case, this is more plausible.
+
+  
+
+::: {.callout-note title="Large sample t-test assumptions"}
+
+__If__: 
+    - $X$ is a metric variable
+- $\{X_1,X_2,...,X_n\}$ is a random sample
+- $n$ is large enough that the CLT implies a normal distribution of mean
+__Then__: The t-test is asymptotically valid
+    
+:::
+
+
+
+
+
+
+
+
+## T-Test Assumptions, Part III
+
+
+
+
+
+
+
+## T-Test Assumptions, Part IV
+The t-test is considered "reasonably robust," even when 
+$n<30$
+, as
+  long as deviations from normality are moderate.
+
+  However, watch out for strong skewness, especially when 
+$n<30$
+.
+
+  
+
+
+::: {.notes}
+
+- DAH: We've got to give students more to work with than
+    this; I think that this might end up being unsatisfying for many
+    folks.
+:::
+
+
+
+
+## T-Test Assumptions
+More practical guidance:
+  
+  
+- $X$ is a metric variable.
+- $\{X_1,X_2,...,X_n\}$ is a random sample.
+- The distribution is not too non-normal, considering $n$ .
+
+
+  When the t-test is not valid, consider using a non-parametric test instead.
+
+
+
+
+
+
+
+# Introduction to P-Values
+
+## Introducing P-Values
+
+\begin{quote} The p-value is the probability, calculated assuming
+    that the null hypothesis is true, of obtaining a value of the test
+    statistic at least as contradictory to $H_0$ as the value
+    calculated from the available sample.
+  \end{quote}
+\begin{flushright}
+  \textit{ Jay L. Devore (2015)}
+\end{flushright}
+
+
+::: {.notes}
+
+- Let's note 2 things right away: just like in hypothesis
+  testing.
+- We're going to assume the null is true.
+- We're measuring the probability of data - We may be
+  interested in the probability that the null is correct - but
+  statistics doesn't let us calculate that.
+:::
+
+
+
+
+## Z-Distribution
+
+
+
+
+
+
+
+## The P-Value for a Z-Test
+
+\begin{exampleblock}{Vitamin W}
+     
+    You measure the effects of Vitamin W on blood pressure (measured
+    in $mmHg$) for 100 patients and get $\bar{X} =3$.
+     
+    Assume $X \sim N(\mu,20)$.
+     
+    \begin{itemize}
+    \item $H_0: \mu=0$
+    \item $z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}} $
+    \end{itemize}
+  \end{exampleblock}
+
+
+::: {.notes}
+
+- $= 3 - 0 / ( 20 / \sqrt{100}) = 1.5$
+- $p =
+    2*( 1- pnorm(1.5)) = 0.13$
+:::
+
+
+
+
+## The P-Value and Decision Rules, Part I
+Neyman-Pearson hypothesis testing: rules to make a decision and
+  usually be right (
+$\alpha = 0.05$
+)
+
+  
+\begin{exampleblock}{A classic z-test}
+    \begin{itemize}
+    \item z=1 $\rightarrow$ Do not reject null.
+    \item z=2 $\rightarrow$ Reject null.
+    \item z=10 $\rightarrow$ Reject null.
+    \end{itemize}
+  \end{exampleblock}
+- Strict frequentist with a dichotomous decision rule: treat $z=2$ and $z=10$ identically.
+- But is there value in knowing _how contrary_ the data
+    is to the null?
+
+
+
+
+
+
+
+## The P-Value and Decision Rules, Part II
+
+\begin{align*}
+    |z| & > \text{critical value} \Rightarrow \text{reject } H_{0} \\
+    |z| & < \text{critical value} \Rightarrow \text{fail to reject } H_{0}
+  \end{align*}
+
+![](figures/normal_with_two_tails.png)
+
+
+
+
+
+
+## The P-Value and Decision Rules, Part III
+
+\begin{align*}
+    |z| & > \text{critical value} \Rightarrow \text{reject } H_{0} \\
+    |z| & < \text{critical value} \Rightarrow \text{fail to reject } H_{0}
+  \end{align*}
+
+![](figures/normal_with_one_tail.png)
+
+
+
+
+
+
+## An Equivalent Decision Procedure
+Compute p-value.
+  
+- If $p<.05 \Rightarrow \text{reject } H_0$
+- If $p\geq.05 \Rightarrow \text{do not reject } H_0$
+
+
+  But, can you justify making such a bright-line statement after
+  reducing information so much?
+  
+1. Concept
+2. Measurement
+3. Statistic
+4. Assumptions about distribution
+5. __p-value__
+6. Reject/fail to reject
+
+
+
+
+
+
+
+# t-Test and p-Values
+
+## P-Value Convention
+
+\begin{tabular}{ c | c | c }
+      p-value range & Convention  & Symbol 
+
+      \hline
+      $p>0.10$ & Non-significant & 
+
+      \textcolor{textgray}{  $0.10 > p > 0.05$}  & \textcolor{textgray}{ Marginally-significant  } & . 
+
+      \hline
+      $p<0.05$ & Significant & * 
+
+      $p<0.01$ & Highly significant & ** 
+ 
+      $p<0.001$ & Very highly significant & *** 
+
+    \end{tabular}
+
+
+
+
+
+
+## Reporting Test Results
+
+- A t-test for the effect of Vitamin W on blood pressure was
+    highly significant ( $t=3.1$ , $p=.008$ ).
+- We found evidence that Vitamin W decreases blood pressure
+    ( $t=2.3$ , $p=.04$ ).
+- The effect of Vitamin X on blood pressure was not
+    statistically significant ( $t=1.2$ , $p=.23$ ).
+
+
+\begin{tabular}{ c | c }
+      Vitamin W & Vitamin X 
+
+      \hline
+      2.2 ** & 1.2 
+
+      (0.6) & (0.8) 
+
+    \end{tabular}
+
+
+  This is half the story; next, you'll need to describe practical
+  significance.
+
+
+
+
+
+
+
+
+## Variable Importance and P-Values
+Does a small p-value mean that a variable is ``important''?
+  
+- Statistical significance
+- Practical significance
+
+
+
+
+
+
+
+## A Warning
+A very common mistake is to assume a p-value is the chance the null
+  hypothesis is true.
+  
+  Frequentist statistics cannot tell you the probability of a
+  hypothesis!
+
+
+
+
+
+
+
+
+## A Warning (cont.)
+
+\begin{exampleblock}{Example}
+    I test whether Vitamin X decreases blood pressure: $p = 0.03$.
+  
+    However, you know that Vitamin X is secretly cornstarch because
+    you created it yourself.
+  
+    My test will not convince you that there is a 97\% chance Vitamin
+    X decreases blood pressure.
+  \end{exampleblock}
+
+
+
+
+
+
+# Statistical Power
+
+## False Positive and False Negative Errors
+
+\begin{tabular}{ r | c | c  }
+    & The null is true & The null is false \\
+    \hline
+    Reject the null & False Positive (I) & \\
+    Do not reject the null & & False Negative (II) \\
+  \end{tabular}
+\vskip
+ 1cm
+  
+  
+- False Positive (I) errors are jumping without cause
+- False Negative (II) errors are failing to jump when you
+    should - Failing to detect a real effect
+- Missed opportunity to create a product, publish a paper, or advance knowledge
+
+
+
+
+
+
+
+## Statistical Power, Part I
+
+\begin{exampleblock}{Much Vitamin W}
+    Consider a \textit{specific} alternate hypothesis: 
+    
+    \begin{itemize}
+    \item $H_a: $ Vitamin W decreases blood pressure by 20 mmHg
+    \end{itemize}
+  \end{exampleblock}
+- False Negative Error Rate: $\beta = P(\text{not rejecting }H_0 | H_a)$
+- Statistical power: $1-\beta$
+- Statistical power is the probability of supporting the
+    alternate hypothesis, assuming it is true
+
+
+
+
+
+
+
+## Statistical Power, Part II
+
+\note[]{\includegraphics[width=\linewidth]{./figures/power}}
+
+
+
+
+
+
+## Statistical Power, Part II
+
+
+
+
+
+
+
+## Statistical Power, Part III
+How to increase power
+
+- Increase sample size.
+- Choose a powerful test (if you can justify its assumptions).
+
+
+
+
+
+
+
+# Practical Significance
+
+## Practical significance
+
+
+::: {.callout-note title="Statistical significance"}
+
+- How much does the data support the existence of an effect?
+
+:::
+
+
+
+::: {.callout-note title="Practical significance"}
+
+- Is the size of this effect important?
+- What is the magnitude of the effect?
+- Should we care about this effect?
+
+:::
+
+
+
+
+::: {.notes}
+
+- In many cases, statistical significance is little more
+    than a statement of how large a sample was used to test a
+    question.
+:::
+
+
+
+
+## Example
+
+\begin{exampleblock}{Productivity supplements}
+     % Suppose that two studies examine how vitamin supplements affect
+     % productivity.
+     \vspace{1em}
+
+     \begin{columns}[t]
+       \column{0.42\textwidth}
+       \textbf{Vitamin W}
+       \begin{align*}
+         n &= 30 \\ 
+         \mu_{treat} &= 12.6 \\
+         \mu_{control} & = 6.1 \\
+         p &= 0.11
+       \end{align*} 
+        \textit{``The difference between groups was not
+           statistically significant}, $(t=1.34, p=0.11$).''
+       \column{0.42\textwidth}
+       \textbf{Vitamin Q}
+       \begin{align*}
+         n &= 30,000 \\
+         \mu_{treat} &= 6.25 \\
+         \mu_{control} &= 6.21 \\
+         p &= 0.0005
+       \end{align*}
+       \textit{``The difference between the two groups was highly
+         significant}, $(t = 3.34, p<0.001)$.'' 
+     \end{columns}
+   \end{exampleblock}
+
+
+
+
+
+
+## Practical Significance: Context
+__Primary goal__
+: Provide context for your audience to reason
+   about results.
+   
+- Who is your audience?
+- What action might be taken based on these results?
+- How does this result alter how you would run the business?
+- What is the cost-benefit for implementing a change based on
+     this result?
+- How does this result ``stack up'' to other effects?
+
+
+
+::: {.notes}
+
+- Understanding and communicating the business context is
+     what separates good analysts from great data scientists.
+- One might be very certain of a very small increase in a
+     desirable metric; one might be less certain of a very large
+     increase in a desirable metric.
+- In many places, every relationship examined is
+     significant. But, what do they 
+- We should directly tie this in to the machine learning
+     conversation they're going to have in 207 about feature
+     importance.
+:::
+
+
+
+
+## Practical Significance: Model Explainability
+
+- Some tasks require _explainable_ models.
+- Finance, healthcare, insurance, and other regulated industries
+     stipulate specific model forms .
+- Humans reason in linear hypotheses— higher-dimensional
+     and conditional hypotheses are too much to keep in
+     mind.
+
+
+
+
+
+
+
+## Practical Significance: Effect Sizes
+
+
+::: {.callout-note title="Effect sizes"}
+
+- Single-number metrics that characterize the
+      magnitude of an effect
+- Population parameters that we estimate— _do not vary
+        based on sample size_
+
+:::
+
+
+
+
+:::: {.columns}
+
+
+::: {.column width="49%"}
+
+__Invalid effect size metrics__- t-stat
+- p-value
+:::
+
+
+::: {.column width="49%"}
+
+__Valid effect size metrics__- Mean values
+- Difference in means between groups
+:::
+
+::::
+
+
+
+::: {.notes}
+
+- This headline test feels out of place relative to the
+  other content on this section.
+:::
+
+
+
+
+## Standard Effect Size Measures
+Standardized effect sizes are designed to be flexible and apply in
+  many scenarios:
+  
+- Cohen's $d$
+- Correlation $\rho$
+- Cramer's $V$
+
+
+  General metrics ignore the specific context around your research or
+  business question.
+  
+
+
+::: {.notes}
+
+- These provide general guidance about whether an effect
+    is small, medium, or large.
+:::
+
+
+
+
+## Cohen's d
+Sometimes, a mean (or difference in means) is hard to assess because
+  the units are unfamiliar.
+  
+- __Example__ : The effect of angled bristles on tooth decay
+    is 5 millicaviparsecs per
+    brushstroke %% TO THE REVIEWERS: Yes, we know this isn't a word
+
+
+::: {.callout-note title="Cohen's d"}
+
+ 
+    Compare effect size relative to the underlying natural variation
+    in the outcome.
+    \[
+      \text{Cohen's } d = \frac{\text{mean difference}}{\text{standard
+          deviation}}
+    \]
+:::
+
+
+
+
+
+
+
+
+## Cohen's d (cont.)
+
+
+![](figures/cohens_d.png)
+
+
+
+
+
+
+## 
+
+
+::: {.callout-note title="Rules of thumb (according to Cohen)"}
+
+\begin{tabular}{rc}
+        Small effect     & $d = 0.2$ 
+ 
+        Medium effect & $d = 0.5$ 
+ 
+        Large effect      & $d = 0.8$ 
+
+      \end{tabular}
+:::
+
+
+- Applicable across a huge number of contexts
+- Ignores any important differences between context
+- Saving dollars or saving lives are the same to Cohen's d
+
+
+
+
+
+
+
+## Takeaways
+
+- After a statistical test, it's important to assess both
+    statistical significance and practical significance.
+- Standard effect size measures can help in a wide variety of situations.
+- But don't get carried away and reach for them automatically.
+- The main objective is to clearly explain how important the
+    magnitude of the effect is.
+
+
+
+
+
+
+
+# Guidelines For Statistical Reporting
+
+## Guidelines for Statistical Reporting
+
+- Communicating your results is a key part of statistical analysis
+- In this class (and other classes in the program) we'll ask you to submit your analysis as a written report
+- Next are some guidelines to keep in mind when writing a report
+
+_In this case, the guidelines are specific to exploratory analysis_
+
+
+
+
+
+
+## Guideline One
+
+\begin{exampleblock}{A statistical analysis is a written argument}
+      \begin{itemize}
+        \item A good writing style is key
+        \item This is technical writing: aim for clarity and exposition
+        \item All rules of good writing apply
+        \begin{itemize}
+          \item Organize your argument clearly
+          \item Guide reader through the evidence in the data
+          \item Proofread
+        \end{itemize}
+      \end{itemize}
+    \end{exampleblock}
+
+
+
+
+
+
+## Guideline Two
+
+\begin{exampleblock}{If you don't have something nice to say (about your output), don't display it at all}
+  \begin{itemize}
+      \item There should be no output dumps
+      \item Every graph should be mentioned in your writing and should have some purpose
+      \item Explain what the graphs and numbers mean
+  \end{itemize}
+\end{exampleblock}
+
+
+
+
+
+
+## Guideline Three
+
+\begin{exampleblock}{You should document decisions}
+  \begin{itemize}
+      \item If you decide that observations should be removed, state which ones
+      \item If values are suspicious, but you leave them in, state that too
+      \item If you transform a variable, for example, by taking the logarithm, state that
+      \item Your justification can often be very brief (just a sentence), but make sure that the reader can follow your logic
+  \end{itemize}
+\end{exampleblock}
+
+
+
+
+
+
+## Guideline Four
+
+\begin{exampleblock}{Identify features that should be reflected in statistical models}
+    \begin{itemize}
+      \item This will make more sense once you have experience building models
+      \item Keep in mind the purpose of the analysis
+      \item Eg. if you're interested in explaining the price of a house, look to see what kind of relationship that variable has with the explanatory variables
+        \begin{itemize}
+          \item Is it linear?
+          \item Is it exponential?
+          \item Are there values that don't seem to fit with the overall trend?
+        \end{itemize}
+    \end{itemize}
+  \end{exampleblock}
+
+
+
+
+
+
+## Guideline Five
+
+\begin{exampleblock}{Remember the difference between sample and population}
+    \begin{itemize}
+      \item At this point, we don't know how to model a population
+      This means that you must confine your conclusions to the sample
+      \begin{itemize}
+          \item You can talk about sample means, sample covariances
+      \end{itemize}
+      \item You can't say anything about the population that generated your sample
+    \end{itemize}
+  \end{exampleblock}
+
+
+
+
+
+
+## Guideline Five (cont.)
+
+\begin{exampleblock}{Remember the difference between sample and population}
+    \begin{itemize}
+      \item Be wary of technical words--in particular the word \textit{significant}
+      \begin{itemize}
+          \item People might casually say one value is significantly bigger than another
+          \item But this has a technical meaning, and it implies that we've built a model and performed a statistical test
+      \end{itemize}
+    \end{itemize}
+  \end{exampleblock}
+
+
+
+
+
+
+## Guideline Six
+
+\begin{exampleblock}{Show us the code (a guideline for this class)}
+    \begin{itemize}
+      \item We really want to see the code that generates your output so we can follow your analysis in detail, step by step
+      \begin{itemize}
+          \item Typically, your software will have a setting to suppress the code when generating a pdf report, but don't do it
+      \end{itemize}
+      \item This is probably the biggest difference between writing analyses in school and in a professional context
+    \end{itemize}
+  \end{exampleblock}
+
+
+
+
+
+
+## Guideline Six (cont.)
+
+\begin{exampleblock}{Show us the code (a guideline for this class)}
+    \begin{itemize}
+      \item In most situations, you have to think about different levels of detail for different audiences
+      \begin{itemize}
+        \item It's usually a good idea to provide an executive summary
+        \item Not everyone can read 50 pages of output
+        \item Often, you'll want to move details like your script to an appendix
+      \end{itemize}
+      \item In this class, however, we'd like to see your code in the body of your report so we can evaluate it effectively
+    \end{itemize}
+  \end{exampleblock}
+
+
+
+

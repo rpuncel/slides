@@ -1,7 +1,9 @@
 ---
 author: Paul Laskowski and Alex Hughes
 format:
+  html: default
   revealjs:
+    output-file: unit_02.revealjs.html
     show-notes: true
 institute: UC Berkeley, School of Information
 subtitle: Introduction to Probability
@@ -61,11 +63,15 @@ Intuition:
 - Like a regular variable but with uncertainty about its value. \note[item]{with
     some probability of taking on different values}
 
+
 ::: {.callout-note title="Random Variable"}
+
 
   Given probability space $(\Omega, S, P)$, a _random variable_ is a measurable function from $\Omega$ to  $\mathbb{R}$.
   
 :::
+
+
 
 
 ::: {.notes}
@@ -89,7 +95,9 @@ Intuition:
 ## What Is a Random Variable (Formally)?
 
 
-![](figures/roaster1.pdf)
+
+![](figures/roaster1.png)
+
 
 
 ::: {.notes}
@@ -119,7 +127,9 @@ Intuition:
 
 ## What Is a Random Variable (Formally)?
 
-![](figures/roaster2.pdf)
+
+![](figures/roaster2.png)
+
 
 
 ::: {.notes}
@@ -149,7 +159,9 @@ Intuition:
 
 ## What Is a Random Variable (Formally)?
 
-![](figures/roaster3.pdf)
+
+![](figures/roaster3.png)
+
 
 
 ::: {.notes}
@@ -169,7 +181,9 @@ Intuition:
 
 ## Probabilities of Real Numbers
 
+
 ![](figures/prob_space.png)
+
 
 
 ::: {.notes}
@@ -202,7 +216,9 @@ _Foundations of Agnostic Statistics_
 ## Functions of a Random Variable
 
 
-![](figures/roaster1.pdf)
+
+![](figures/roaster1.png)
+
 - Random variable $T$ represents temperature in Fahrenheit, but
     you need Celsius.
 
@@ -223,7 +239,9 @@ _Foundations of Agnostic Statistics_
 ## Creating Events from a Random Variable
 
 
-![](figures/roaster1.pdf)
+
+![](figures/roaster1.png)
+
 
   You want to know whether the temperature is below 150.
   
@@ -242,7 +260,9 @@ _Foundations of Agnostic Statistics_
 ## Operators Applied to a Random Variable
 
 
-![](figures/roaster1.pdf)
+
+![](figures/roaster1.png)
+
 
   You want to know the minimum possible temperature.  
 
@@ -263,7 +283,9 @@ _Foundations of Agnostic Statistics_
 
 ## Learnosity: Roaster Temperature
 
-![](figures/roaster1.pdf)
+
+![](figures/roaster1.png)
+
 
   Suppose 
 $T$
@@ -369,8 +391,10 @@ A function that gives the probability that a discrete random
 $\R$
 - $f_X(x) = P(X = x)$
 
-\vspace{.5cm}
-![](figures/axes.pdf)
+
+
+![](figures/axes.png)
+
 
 
 ::: {.notes}
@@ -385,7 +409,9 @@ $\R$
 
 ## Key Properties of the PMF
 
+
 ::: {.callout-note title="Theorem"}
+
 
   For a discrete random variable $X$ with pmf $f$, 
   
@@ -393,6 +419,8 @@ $\R$
 2. $\sum_{x \in X(\Omega)} f(x) = 1$ .
 
 :::
+
+
 
 
 ::: {.notes}
@@ -412,12 +440,18 @@ $\R$
 
 ## Computing Other Event Probabilities from the PMF
 
+
 ::: {.callout-note title="Theorem: The PMF fully characterizes a discrete RV"}
+
 
   For a discrete random variable $X$ with pmf $f$, if $D \subseteq \R$,
   $P(X \in D) = \sum_{x \in X(\Omega) \cap D } f(x).$
 :::
-![](figures/pmf_to_events.pdf)
+
+
+
+![](figures/pmf_to_events.png)
+
  Take-away:
 The pmf contains 
 _all_
@@ -445,7 +479,9 @@ _Foundations of Agnostic Statistics_
 
 ## The Cumulative Distribution Function
 
+
 ![](figures/cdf_axes.png)
+
 
 
 
@@ -454,7 +490,9 @@ _Foundations of Agnostic Statistics_
 
 ## The Cumulative Distribution Function (Solution)
 
-![](figures/cdf_axes_key.pdf)
+
+![](figures/cdf_axes_key.png)
+
 
 
 ::: {.notes}
@@ -472,7 +510,9 @@ _Foundations of Agnostic Statistics_
 
 ## Motivation for Continuous Random Variables
 
+
 ![](figures/squid.jpg)
+
 
 
 ::: {.notes}
@@ -556,7 +596,9 @@ _Foundations of Agnostic Statistics_
 
 ## The Probability Density Function
 
-![](figures/density.pdf)
+
+![](figures/density.png)
+
 
 
 ::: {.notes}
@@ -592,12 +634,18 @@ _Foundations of Agnostic Statistics_
 
 ## Continuous Random Variables
 
+
 ::: {.callout-note title="Definition"}
+
 
   A random variable $X$ is _continuous_ if there exists a non-negative function $f:\R \rightarrow \R$ such that the cdf of $X$ is
   $F(x) = \int_{-\infty}^x f(u) du \text{, for all } x \in \R$
 :::
-![](figures/density.pdf)
+
+
+
+![](figures/density.png)
+
 
 
 ::: {.notes}
@@ -613,12 +661,18 @@ _Foundations of Agnostic Statistics_
 
 ## Characterizing Continuous Random Variables
 
+
 ::: {.callout-note title="Deriving the PDF from the CDF"}
+
 
   For a continuous random variable with cdf $F$, the probability density function of $X$ is
   $f(x) = \frac{dF(u)}{du} \Bigg|_{u=x} \text{, for all } x \in \R$
 :::
+
+
+
 ![](figures/cdf.png)
+
 
 
 ::: {.notes}
@@ -636,13 +690,17 @@ _Foundations of Agnostic Statistics_
 
 ## Characterizing Continuous Random Variables (cont.)
 
+
 ::: {.callout-note title="Properties of Probability Density Functions"}
+
 
   For a continuous random variable $X$ with pdf $f$,
   1. For all $x\in \R$ , $f(x) \geq 0$ .
 2. $\int_{-\infty}^\infty f(x)dx = 1$ .
 
 :::
+
+
 
 
 ::: {.notes}
@@ -657,11 +715,15 @@ _Foundations of Agnostic Statistics_
 
 ## Support
 
+
 ::: {.callout-note title="Definition"}
+
 
   For a random variable $X$ with pmf or pdf $f$, the _support_ of $X$ is
   $\text{Supp}[X] = \{x \in \R : f(x) > 0 \}$
 :::
+
+
 
 
 ::: {.notes}
@@ -673,9 +735,8 @@ _Foundations of Agnostic Statistics_
 
 
 ## Uniform Random Variables
-
-\textbf{Note: This is a placeholder for a video that we're going to
-    re-use from:}
+__Note: This is a placeholder for a video that we're going to
+    re-use from:__
  Use the old video 3.9 Uniform Random Variables -
   only the start through 6.12, before I start talking about
   expectation.
@@ -697,12 +758,11 @@ Use the old video 3.10 The Normal Distribution
 
 
 ## The Normal Distribution
-
-\textbf{The most important distribution in statistics}
+__The most important distribution in statistics__
 - The variables measured don't always come directly from a normal distribution - Human height has a close-to-normal distribution--so do anthropometric measurements on fossils, reaction times in psychological experiments, etc.
 - Most variables deviate from a normal distribution
 - We'll see how the normal distribution pops up as a consequence of basic mathematical laws
-- A famous theorem is the \textbf{Central Limit Theorem} . Many of our statistical tests depend on this theorem, and it tells us when certain distributions will approach a normal distribution
+- A famous theorem is the __Central Limit Theorem__ . Many of our statistical tests depend on this theorem, and it tells us when certain distributions will approach a normal distribution
 
 
 
@@ -714,7 +774,7 @@ Use the old video 3.10 The Normal Distribution
 A continuous rv 
 $X$
  is said to have a 
-\textbf{normal distribution}
+__normal distribution__
  with parameters 
 $\mu$
  and 
@@ -765,6 +825,7 @@ $X$
 
 ## Normal Curve Examples
 
+
 ![](figures/normal_curve.png)
 - These are normal curves with different $\mu$ and $\sigma$
 - Each curve is symmetric around its mean
@@ -812,6 +873,7 @@ $X$
 ## Standardizing a Normal Variable (cont.)
 These are easy to compute in statistical software
   
+
 ![](figures/standardizing_normal_variable.png)
 
 
@@ -820,6 +882,7 @@ These are easy to compute in statistical software
 
 
 ## Properties of the Normal Distribution
+
 
 ![](figures/properties_normal_distribution.png)
 
@@ -854,7 +917,9 @@ These are easy to compute in statistical software
 
 ## Introducing Joint Distributions
 
-![](figures/sample_space.pdf)
+
+![](figures/sample_space.png)
+
 
 
 ::: {.notes}
@@ -877,7 +942,9 @@ These are easy to compute in statistical software
 
 ## Introducing Joint Distributions
 
-![](figures/sample_space.pdf)
+
+![](figures/sample_space.png)
+
 
 
 ::: {.notes}
@@ -909,12 +976,16 @@ _Foundations of Agnostic Statistics_
 
 ## Equality of Random Variables
 
+
 ::: {.callout-note title="Equality of random variables"}
+
 
     Let $X$ and $Y$ be random variables. Then, $X = Y$ if, for all
     $\omega \in \Omega, X(\omega) = Y(\omega)$.
   
 :::
+
+
 \pause
  Don't assume 
 $X=Y$
@@ -996,7 +1067,8 @@ $f(b,d) = P(B=b, D=d)$
       $\mathbf{B=1}$ & 0.1 & 0.1 & 0.2 
  
     \end{tabular}
-\pause% \alex{Does 2U course services have a nice 3d set of axes with a% transparent background?}![](figures/joint_axes.pdf)
+\pause% \alex{Does 2U course services have a nice 3d set of axes with a% transparent background?}
+![](figures/joint_axes.png)
 
 
 ::: {.notes}
@@ -1085,12 +1157,16 @@ _Foundations of Agnostic Statistics_
 
 ## Marginal vs. Joint Distributions
 
-![](figures/sample_space.pdf)
+
+![](figures/sample_space.png)
+
 
 
 ::: {.notes}
 
-- ![](figures/two_random_vars.pdf)
+- 
+![](figures/two_random_vars.png)
+
 - Let's go back again to our car dealer example
 - You've created a customer model with two random
     variables: B for the Buy decision and D for number of cars taken
@@ -1195,7 +1271,7 @@ $f_D$
 Two joint distributions with the same marginals:
     
     
-\vspace{1cm}
+
 \begin{tabular}{c c}
     \begin{tabular}[t]{c | c | c |c}
       & $B = 0$ & $B = 1$  & $F_D$ \\
@@ -1284,14 +1360,18 @@ Two joint distributions with the same marginals:
 
 ## The Conditional PMF (cont.)
 
+
 ::: {.callout-note title="Conditional expectation, car dealers"}
+
 \begin{align*}
       f_{B|D}(b|d) & = P(B=b | D=d) \\
                    &= \frac{P(B=b, D=d)}{P(D=d)} = \frac{f(b,d)}{f_D(d)}
     \end{align*}
 :::
+
+
 \pause
-\vspace{.5cm}
+
 $\text{conditional} = \frac{\text{joint}}{\text{marginal}} \Leftrightarrow \pause \text{joint} = \text{marginal} \cdot \text{conditional}$
 
 
@@ -1324,7 +1404,9 @@ _Foundations of Agnostic Statistics_
 
 ## The Joint Density Function
 
+
 ![](figures/surface.png)
+
 
 
 ::: {.notes}
@@ -1479,7 +1561,9 @@ $X \indep Y$
 
 - Draw a normal curve in two dimensions, but linear in
     one.
-- ![](figures/independent_rv.pdf)
+- 
+![](figures/independent_rv.png)
+
 :::
 
 
@@ -1492,7 +1576,9 @@ $X \indep Y$
 ::: {.notes}
 
 - Draw a normal curve in two dimensions
-- ![](figures/non-independent_rv.pdf)
+- 
+![](figures/non-independent_rv.png)
+
 :::
 
 
