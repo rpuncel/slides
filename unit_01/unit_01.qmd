@@ -4,23 +4,27 @@ subtitle: "Introduction to Probability"
 author: "Paul Laskowski and Alex Hughes"
 institute: "UC Berkeley, School of Information"
 format:
-    revealjs:
-        theme: mytheme.scss 
-        show-notes: true
-        pdf-separate-fragments: true
-        include-in-header: 
-            text: |
-                <style>
-                .center-y {
-                margin: 0;
-                position: absolute;
-                top: 50%;
-                -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-                }
-                </style>
-
-
+  revealjs:
+    theme: mytheme.scss
+    show-notes: true
+    pdf-separate-fragments: true
+    include-in-header:
+      text: |
+        <style>
+        .center-y {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        }
+        </style>
+    output-file: unit_01_slides.html
+  html:
+    toc: true
+    number-sections: false
+    theme: default
+    output-file: unit_01.html
 ---
 
 # The Nature of Statistical Models

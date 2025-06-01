@@ -6,7 +6,13 @@ institute: "UC Berkeley, School of Information"
 format:
   revealjs:
     theme: default
-    slideNumber: true
+    slide-number: true
+    output-file: unit_03_slides.html
+  html:
+    toc: true
+    number-sections: false
+    theme: default
+    output-file: unit_03.html
 ---
 
 # The Importance of Summarizing Distributions
@@ -79,5 +85,3 @@ Why not restrict to distributions in a parametric family?
 - Putting a random variable into a function gives you another random variable.
 - Expectation is an operator, which means it takes an entire random variable as input.
 - So, for example, $\mathbb{E}[X]$ is a real number.
-
-...

@@ -1,0 +1,1176 @@
+latexml (LaTeXML version 0.8.8) processing unit_01.tex
+(Digesting TeX unit_01...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/TeX.pool.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/eTeX.pool.ltxml... 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/pdfTeX.pool.ltxml... 0.00 sec) 0.05 sec)
+(Processing content /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/textcomp.sty.ltxml... 0.00 sec) 0.08 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/beamer.cls.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/ifpdf.sty.ltxml... 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml...
+Warning:missing_file:keyval Can't find package keyval
+	at keyval.sty.ltxml; line 19
+	Anticipate undefined macros or environments
+	search paths are /Users/rpuncel/Workspaces/slides/unit_01
+	In Core::Gullet[@0x115190548] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/keyval.sty.ltxml; line 19
+ 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/graphicx.sty.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/graphics.sty.ltxml... 0.00 sec) 0.01 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/etoolbox.sty.ltxml... 0.07 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/xcolor.sty.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/color.sty.ltxml... 0.00 sec) 0.02 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/enumerate.sty.ltxml... 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/amsthm.sty.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/amsgen.sty.ltxml... 0.00 sec) 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/amsmath.sty.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/amsbsy.sty.ltxml... 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/amstext.sty.ltxml... 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/amsopn.sty.ltxml... 0.00 sec) 0.02 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/amssymb.sty.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/amsfonts.sty.ltxml... 0.00 sec) 0.01 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/hyperref.sty.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/ltxcmds.sty.ltxml...
+Warning:missing_file:ltxcmds Can't find package ltxcmds
+	at ltxcmds.sty.ltxml; line 20
+	Anticipate undefined macros or environments
+	In Core::Gullet[@0x115190548] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/ltxcmds.sty.ltxml; line 20
+ 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml...
+Warning:missing_file:kvsetkeys Can't find package kvsetkeys
+	at kvsetkeys.sty.ltxml; line 20
+	Anticipate undefined macros or environments
+	In Core::Gullet[@0x115190548] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/kvsetkeys.sty.ltxml; line 20
+ 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml...
+Warning:missing_file:kvdefinekeys Can't find package kvdefinekeys
+	at kvdefinekeys.sty.ltxml; line 20
+	Anticipate undefined macros or environments
+	In Core::Gullet[@0x115190548] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/kvdefinekeys.sty.ltxml; line 20
+ 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml...
+Warning:missing_file:kvoptions Can't find package kvoptions
+	at kvoptions.sty.ltxml; line 20
+	Anticipate undefined macros or environments
+	In Core::Gullet[@0x115190548] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/kvoptions.sty.ltxml; line 20
+ 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/nameref.sty.ltxml...
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml...
+Warning:missing_file:refcount Can't find package refcount
+	at refcount.sty.ltxml; line 20
+	Anticipate undefined macros or environments
+	In Core::Gullet[@0x115190548] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/refcount.sty.ltxml; line 20
+ 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml...
+Warning:missing_file:gettitlestring Can't find package gettitlestring
+	at gettitlestring.sty.ltxml; line 20
+	Anticipate undefined macros or environments
+	In Core::Gullet[@0x115190548] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/gettitlestring.sty.ltxml; line 20
+ 0.00 sec) 0.01 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/url.sty.ltxml... 0.00 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml...
+Warning:missing_file:bitset Can't find package bitset
+	at bitset.sty.ltxml; line 20
+	Anticipate undefined macros or environments
+	In Core::Gullet[@0x115190548] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/bitset.sty.ltxml; line 20
+ 0.00 sec) 0.04 sec)
+(Loading /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/article.cls.ltxml... 0.00 sec) 0.25 sec)
+Warning:todo:themes 
+	at beamer feature themes is not yet supported; binding requires more development
+	In Core::Definition::Expandable[\usethem... /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/beamer.cls.ltxml; line 1246
+Error:undefined:\metroset The token T_CS[\metroset] is not defined.
+	at unit_01.tex; line 28 col 9 - line 28 col 9
+	Defining it now as <ltx:ERROR/>
+	Next token is T_BEGIN[{] ( == T_BEGIN[{])
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 28 col 0 to line 28 col 10
+	 <= Core::Stomach[@0x114fa9ca8] <= ...
+Warning:missing_file:pgfpages Can't find binding for package pgfpages
+	at unit_01.tex; line 33 col 17 - line 33 col 17
+	Anticipate undefined macros or environments
+	In Core::Definition::Constructor[\usepac... /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 879
+Error:undefined:\setbeameroption The token T_CS[\setbeameroption] is not defined.
+	at unit_01.tex; line 33 col 17 - line 33 col 17
+	Defining it now as <ltx:ERROR/>
+	Next token is T_BEGIN[{] ( == T_BEGIN[{])
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 33 col 18 to line 33 col 18
+	 <= Core::Stomach[@0x114fa9ca8] <= ...
+Error:undefined:\setbeamerfont The token T_CS[\setbeamerfont] is not defined.
+	at unit_01.tex; line 36 col 14 - line 36 col 14
+	Defining it now as <ltx:ERROR/>
+	Next token is T_BEGIN[{] ( == T_BEGIN[{])
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 36 col 15 to line 36 col 15
+	 <= Core::Stomach[@0x114fa9ca8] <= ...
+Error:undefined:\subtitle The token T_CS[\subtitle] is not defined.
+	at unit_01.tex; line 40 col 9 - line 40 col 9
+	Defining it now as <ltx:ERROR/>
+	Next token is T_BEGIN[{] ( == T_BEGIN[{])
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 40 col 10 to line 40 col 10
+	 <= Core::Stomach[@0x114fa9ca8] <= ...
+Error:undefined:\institute The token T_CS[\institute] is not defined.
+	at unit_01.tex; line 43 col 10 - line 43 col 10
+	Defining it now as <ltx:ERROR/>
+	Next token is T_BEGIN[{] ( == T_BEGIN[{])
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 43 col 11 to line 43 col 11
+	 <= Core::Stomach[@0x114fa9ca8] <= ...
+Error:undefined:\note The token T_CS[\note] is not defined.
+	at unit_01.tex; line 69 col 0 - line 69 col 11
+	Defining it now as <ltx:ERROR/>
+	Next token is T_OTHER[[] ( == T_OTHER[[]) more: item]{This course is about statistical modeling. So let's
+start by asking, what is a model?}
+\note[item]{Here's a model, built out of lego bricks.}
+\note[item]{Some of you might have played with legos growing up, I definitely did.}
+\note[item]{The thing with legos is you learn some basic rules: the
+ways that legos can fit together.}
+\note[item]{Then you can build something that resembles something in
+the real world, that captures important behavior.}
+\note[item]{When you're starting out with legos for the first time,
+you don't immediately try to build a giant machine.}
+\note[item]{Maybe you take two legos, test them to see how they fit
+together. Once you're familiar with the pieces, you can then try
+to create something that you see in the world. }
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 69 col 0 to line 69 col 11
+	 <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= Core::Stomach[@0x114fa9ca8] <= ...
+Error:undefined:{columns} The environment {columns} is not defined.
+	at unit_01.tex; line 358 col 0 - line 358 col 11
+	Next token is T_SPACE[U+000a/LF] ( == T_SPACE[U+000a/LF]) more: \begin{column}{0.6\textwidth}
+"Essentially, the theory of probability is nothing but good common
+sense reduced to mathematics. It provides an exact appreciation of
+what sound minds feel with a kind of instinct, frequently without
+being able to account for it.”\\
+- Pierre-Simon Laplace
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{figures/Laplace}
+\end{center}
+\end{column}
+\end{columns}
+\par\note[item]{How would you define probability? Is it something
+that you encounter in your day-to-day life? A measure of
+randomness in the world?}
+\note[item]{Laplace was a famous mathematician, who developed what
+we call the Bayesian interpretation of probability. Let's read
+what he said in 1814.}
+\note[item]{Laplace believed that, as humans, we are natural
+processors of probability. We think in probabilities, we use
+probability when we speak to each other.}
+\note[item]{So of course we think of probability as existing out in
+the natural world.}
+\note[item]{But, I'm here to tell you that probability is actually a
+model.}
+\note[item]{That's right, the randomness that we perceive around us
+is a model that we use to make sense of the world. }
+\note[item]{Let me try to convince you with a few examples.}
+\par\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{column} The environment {column} is not defined.
+	at unit_01.tex; line 358 col 0 - line 358 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: 0.6\textwidth}
+"Essentially, the theory of probability is nothing but good common
+sense reduced to mathematics. It provides an exact appreciation of
+what sound minds feel with a kind of instinct, frequently without
+being able to account for it.”\\
+- Pierre-Simon Laplace
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{figures/Laplace}
+\end{center}
+\end{column}
+\end{columns}
+\par\note[item]{How would you define probability? Is it something
+that you encounter in your day-to-day life? A measure of
+randomness in the world?}
+\note[item]{Laplace was a famous mathematician, who developed what
+we call the Bayesian interpretation of probability. Let's read
+what he said in 1814.}
+\note[item]{Laplace believed that, as humans, we are natural
+processors of probability. We think in probabilities, we use
+probability when we speak to each other.}
+\note[item]{So of course we think of probability as existing out in
+the natural world.}
+\note[item]{But, I'm here to tell you that probability is actually a
+model.}
+\note[item]{That's right, the randomness that we perceive around us
+is a model that we use to make sense of the world. }
+\note[item]{Let me try to convince you with a few examples.}
+\par\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 358 col 0 - line 358 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more: 
+	"Essentially, the theory of probability is nothing but good common
+	sense reduced to mathematics. It provides an exact appreciation of
+	what sound minds feel with a kind of instinct, frequently without
+	being able to account for it.”\\
+	- Pierre-Simon Laplace
+	\end{column}
+	\begin{column}{0.4\textwidth}
+	\begin{center}
+	\includegraphics[width=\textwidth]{figures/Laplace}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\par\note[item]{How would you define probability? Is it something
+	that you encounter in your day-to-day life? A measure of
+	randomness in the world?}
+	\note[item]{Laplace was a famous mathematician, who developed what
+	we call the Bayesian interpretation of probability. Let's read
+	what he said in 1814.}
+	\note[item]{Laplace believed that, as humans, we are natural
+	processors of probability. We think in probabilities, we use
+	probability when we speak to each other.}
+	\note[item]{So of course we think of probability as existing out in
+	the natural world.}
+	\note[item]{But, I'm here to tell you that probability is actually a
+	model.}
+	\note[item]{That's right, the randomness that we perceive around us
+	is a model that we use to make sense of the world. }
+	\note[item]{Let me try to convince you with a few examples.}
+	\par\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 358 col 0 to line 358 col 11
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 358 col 0 - line 358 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more: 
+	\begin{center}
+	\includegraphics[width=\textwidth]{figures/Laplace}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\par\note[item]{How would you define probability? Is it something
+	that you encounter in your day-to-day life? A measure of
+	randomness in the world?}
+	\note[item]{Laplace was a famous mathematician, who developed what
+	we call the Bayesian interpretation of probability. Let's read
+	what he said in 1814.}
+	\note[item]{Laplace believed that, as humans, we are natural
+	processors of probability. We think in probabilities, we use
+	probability when we speak to each other.}
+	\note[item]{So of course we think of probability as existing out in
+	the natural world.}
+	\note[item]{But, I'm here to tell you that probability is actually a
+	model.}
+	\note[item]{That's right, the randomness that we perceive around us
+	is a model that we use to make sense of the world. }
+	\note[item]{Let me try to convince you with a few examples.}
+	\par\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 358 col 0 to line 358 col 11
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 387 col 0 - line 387 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Apocryphal quotations}
+``\textit{All models are wrong; some are useful.}'' \\
+\hspace{1em} —George Box
+\end{block}
+\parProbability is:
+\par\begin{itemize}
+\itemA mathematical construct
+\itemA model or abstraction of the world
+\end{itemize}
+\par\note[item]{But I'm here to tell you that probability is just a
+model. It's a very useful model - one that we can make
+mathematically precise. But it's a model of the world.}
+\note[item]{Let me try to convince you with a few examples.}
+\note[item]{\paul{Not sure how to fit the box quote into the
+narrative - wonder if there's something more specific to
+probability.}}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{columns} The environment {columns} is not defined.
+	at unit_01.tex; line 560 col 0 - line 560 col 11
+	Next token is T_SPACE[U+000a/LF] ( == T_SPACE[U+000a/LF]) more: \begin{column}{0.3\textwidth}
+\includegraphics[width=\textwidth]{figures/bag}
+\end{column}
+\begin{column}{0.7\textwidth}
+\begin{center}
+\begin{itemize}
+\itemA set contains objects.
+\itemItems don't have an order.
+\itemItems can't repeat.
+\end{itemize}
+\end{center}
+\end{column}
+\end{columns}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{column} The environment {column} is not defined.
+	at unit_01.tex; line 560 col 0 - line 560 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: 0.3\textwidth}
+\includegraphics[width=\textwidth]{figures/bag}
+\end{column}
+\begin{column}{0.7\textwidth}
+\begin{center}
+\begin{itemize}
+\itemA set contains objects.
+\itemItems don't have an order.
+\itemItems can't repeat.
+\end{itemize}
+\end{center}
+\end{column}
+\end{columns}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 560 col 0 - line 560 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more: 
+	\includegraphics[width=\textwidth]{figures/bag}
+	\end{column}
+	\begin{column}{0.7\textwidth}
+	\begin{center}
+	\begin{itemize}
+	\itemA set contains objects.
+	\itemItems don't have an order.
+	\itemItems can't repeat.
+	\end{itemize}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 560 col 0 to line 560 col 11
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 560 col 0 - line 560 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more: 
+	\begin{center}
+	\begin{itemize}
+	\itemA set contains objects.
+	\itemItems don't have an order.
+	\itemItems can't repeat.
+	\end{itemize}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 560 col 0 to line 560 col 11
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 819 col 0 - line 819 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Definition 1.1.12: \textit{partition}}
+A set of sets $A_{1}, A_{2}, \dots, A_{n}$ is a \textit{partition} of set $S$, if $A_{1}, A_{2}, \dots, A_{n}$ are nonempty and
+pairwise disjoint, and if $S = A_{1} \cupA_{2}
+\cup\cdots\cupA_{n}$.
+\end{block}
+\par\begin{center}
+\includegraphics[width=0.7\textwidth]{./figures/set_for_partition}
+\end{center}
+\par\note[item]{While we're talking about sets, there's an idea that's really useful, which is dividing a set up into a partition. Let's read exactly what a partition is... }
+\note[item]{Here's a set $S$ - how do I create a partition? I will draw in some sets. each one has to be completely inside $S$, and they can't overlap at all. And I have to make sure I cover all of $S$.}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 882 col 0 - line 882 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: A Probability Space}
+\begin{itemize}
+\itemA \textbf{sample space}, denoted as $\Omega$, is the
+collection of \textit{all} possible outcomes.
+\itemAn \textbf{event space}, denoted as $S$, is made up of sets of outcomes.
+\itemA \textbf{probability measure} is a function that maps
+events to numbers in $[0,1]$.
+\end{itemize}
+\end{block}
+\note[item]{To build statistical models, we need a mathematical description of probability.}
+\note[item]{We need to take our intuition for what a system with uncertainty means, and encode it into a mathematical object. that object will be what we call a probability space. }
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{columns} The environment {columns} is not defined.
+	at unit_01.tex; line 954 col 0 - line 954 col 11
+	Next token is T_SPACE[U+000a/LF] ( == T_SPACE[U+000a/LF]) more: \begin{column}{0.3\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{figures/dice}
+\end{center}
+\end{column}
+\par\begin{column}{0.7\textwidth}
+$A = \{1,2\}, B = \{2,4,6\}$
+\vspace{.5cm}
+\note[item]{Because events are sets, we can combine them with
+set operations to make new events. Let's think about what
+those operations mean.}
+\note[item]{Here's two events for the simple example of a die roll}
+\note[item]{First, think about how you would write down the
+event A OR B? that is, either A occurs or B occurs.}
+\note[item]{Well, that means that the outcome that occurs must
+be in at least one of A or B, so it must be in their union.
+When you see a union, think OR.}
+\par\par\begin{itemize}
+\setlength\itemsep{1em}
+\itemA OR B:
+\itemA AND B:
+\itemNOT A:
+\end{itemize}
+\par\end{column}
+\end{columns}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{column} The environment {column} is not defined.
+	at unit_01.tex; line 954 col 0 - line 954 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: 0.3\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{figures/dice}
+\end{center}
+\end{column}
+\par\begin{column}{0.7\textwidth}
+$A = \{1,2\}, B = \{2,4,6\}$
+\vspace{.5cm}
+\note[item]{Because events are sets, we can combine them with
+set operations to make new events. Let's think about what
+those operations mean.}
+\note[item]{Here's two events for the simple example of a die roll}
+\note[item]{First, think about how you would write down the
+event A OR B? that is, either A occurs or B occurs.}
+\note[item]{Well, that means that the outcome that occurs must
+be in at least one of A or B, so it must be in their union.
+When you see a union, think OR.}
+\par\par\begin{itemize}
+\setlength\itemsep{1em}
+\itemA OR B:
+\itemA AND B:
+\itemNOT A:
+\end{itemize}
+\par\end{column}
+\end{columns}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 954 col 0 - line 954 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more: 
+	\begin{center}
+	\includegraphics[width=\textwidth]{figures/dice}
+	\end{center}
+	\end{column}
+	\par\begin{column}{0.7\textwidth}
+	$A = \{1,2\}, B = \{2,4,6\}$
+	\vspace{.5cm}
+	\note[item]{Because events are sets, we can combine them with
+	set operations to make new events. Let's think about what
+	those operations mean.}
+	\note[item]{Here's two events for the simple example of a die roll}
+	\note[item]{First, think about how you would write down the
+	event A OR B? that is, either A occurs or B occurs.}
+	\note[item]{Well, that means that the outcome that occurs must
+	be in at least one of A or B, so it must be in their union.
+	When you see a union, think OR.}
+	\par\par\begin{itemize}
+	\setlength\itemsep{1em}
+	\itemA OR B:
+	\itemA AND B:
+	\itemNOT A:
+	\end{itemize}
+	\par\end{column}
+	\end{columns}
+	\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 954 col 0 to line 954 col 11
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 954 col 0 - line 954 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more: 
+	$A = \{1,2\}, B = \{2,4,6\}$
+	\vspace{.5cm}
+	\note[item]{Because events are sets, we can combine them with
+	set operations to make new events. Let's think about what
+	those operations mean.}
+	\note[item]{Here's two events for the simple example of a die roll}
+	\note[item]{First, think about how you would write down the
+	event A OR B? that is, either A occurs or B occurs.}
+	\note[item]{Well, that means that the outcome that occurs must
+	be in at least one of A or B, so it must be in their union.
+	When you see a union, think OR.}
+	\par\par\begin{itemize}
+	\setlength\itemsep{1em}
+	\itemA OR B:
+	\itemA AND B:
+	\itemNOT A:
+	\end{itemize}
+	\par\end{column}
+	\end{columns}
+	\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 954 col 0 to line 954 col 11
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 995 col 0 - line 995 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Intuition for an event space}
+\note[item]{Now we have a bunch of events, and we want to group them
+all together and call that an event space.}
+\note[item]{That seems like a simple idea, right? But when you read
+the textbook, you might have wondered, why is this so complicated?
+well, it gets fairly technical, but it turns out that there are
+sometimes sets of outcomes that we have to exclude from the event
+space. These are called non measurable.}
+\par\begin{itemize}
+\item$S$ represents all possible events
+\par\itemHowever, there are technical reasons that some sets of outcomes must be excluded (non-measurable).
+\par\end{itemize}
+\end{block}
+\par\par\note[item]{So Mathematicians said: we can't put all possible sets
+in the event space, let's just make sure that any set we need for
+a regular analysis is in there. So they came up with a list of
+guarantees and the technical term for these is a
+$\sigma$-algebra)}
+\par\note[item]{You can think of this as making sure that any way you
+can combine events together, the answer will always be an event,
+so it will have a probability. You can't accidentally fall out of
+the event space. }
+\par\textbf{Requirements for a $\sigma$-algebra}
+\begin{itemize}
+\itemNonempty: $S \neq\emptyset$
+\itemClosed under complements: If $A \inS$ then $A^C \inS$
+\itemClosed under countable unions: if $A_1,A_2,... \inS$ then $A_1 \cupA_2 \cup... \inS$
+\end{itemize}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1020 col 0 - line 1020 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Definition of a probability measure}
+A function $P: S \rightarrow\mathbb{R}$ is a
+probability measure if:
+\begin{itemize}
+\item\textbf{Axiom 1.} There are no negative probabilities:
+$\forallA \inS: P(A) \geq0$
+\item\textbf{Axiom 2.} The probability that \textit{some} outcome occurs is one:
+$P(\Omega) = 1$
+\item\textbf{Axiom 3.} Probabilities "add up": If $A_1,A_2,...$ is a countable set of disjoint events, then
+$P(A_1 \cupA_2 \cup... ) = \sum_{i} P(A_{i})$
+\end{itemize}
+\end{block}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1044 col 0 - line 1044 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Definition of a probability measure}
+A function $P: S \rightarrow\mathbb{R}$ is a
+probability measure if:
+\begin{itemize}
+\item\textbf{Axiom 1.} There are no negative probabilities:
+$\forallA \inS: P(A) \geq0$
+\item\textbf{Axiom 2.} The probability that \textit{some} outcome occurs is one:
+$P(\Omega) = 1$
+\item\textbf{Axiom 3.} Probabilities "add up": If $A_1,A_2,...$ is a countable set of disjoint events, then
+$P(A_1 \cupA_2 \cup... ) = \sum_{i} P(A_{i})$
+\end{itemize}
+\end{block}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{exampleblock} The environment {exampleblock} is not defined.
+	at unit_01.tex; line 1090 col 0 - line 1090 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: A fair coin}
+Suppose that a coin is fair. Then, let $H$ be the event that the
+coin comes up ``heads'' and $T$ be the event that it comes up
+``tails.''
+\begin{itemize}
+\itemWhat is the sample space, $\Omega$?
+\itemWhat is the probability measure for any single outcome,
+$\omega$?
+\itemHow many outcomes are in event $H$?
+\itemIf you apply the probability measure to each outcome in $H$, what do you compute for $P(H)$?
+\end{itemize}
+\end{exampleblock}
+\par\note[item]{\paul{bit messy here... we're defining events before defining outcomes, and there is flexibility in how outcomes are defined}}
+\note[item]{\paul{when we say a coin is fair, that's a constraint on the probabilities of certain events.}}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{exampleblock} The environment {exampleblock} is not defined.
+	at unit_01.tex; line 1108 col 0 - line 1108 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Two fair coins}
+Suppose that you have two coins, and both are fair. Then, let $H$
+be the event that when you toss both coins, at least one comes up
+heads.
+\begin{itemize}
+\itemWhat is the sample space, $\Omega$?
+\itemWhat is the probability measure for any particular outcome,
+$\omega$? Are any of these more likely than any other?
+\itemHow many outcomes are in
+event $H$?
+\itemIf you apply the probability measure to each outcome in $H$, what do you compute for $P(H)$?
+\end{itemize}
+\end{exampleblock}
+\note[item]{\paul{also having second thoughts about this one. It might be very intuitive, but we haven't given any machinery to solve for the probability of each outcome.}}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{alertblock} The environment {alertblock} is not defined.
+	at unit_01.tex; line 1224 col 0 - line 1224 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Basic Properties of Probability}
+\footnotesizeGiven a probability space $(\Omega, S, P)$, For all events $A, B \inS$ :
+\begin{align*}
+\tag{\textit{Monotonicity}}
+& \text{If } A \subseteqB\text{, then }P(A) \leqP(B) \\
+\tag{\textit{Subtraction}}
+& \text{If } A \subseteqB\text{, then the probability
+assigned to }B \\ & \text{\hspace{1em} but not }A,
+\text{written }P(B\textbackslashA) = P(B) - P(A) \\
+\tag{\textit{Probability Bounds}}
+& 0 \leqP(A) \leq1 \\
+\tag{\textit{Compliments}}
+& P(A^{C}) = 1 - P(A) \\
+\end{align*}
+\par\note[item]{Here's the theorem from the textbook, with a few extra
+results. You can see how we're starting to build up more tools
+we can use.}
+\note[item]{\paul{Possibly end with a statement of the addition
+rule, then "you'll see a proof for this in the next
+exercise."}}
+\par\end{alertblock}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1371 col 0 - line 1371 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Conditional probability}
+For events $A, B \in\Omega$ with $P(B) > 0$, define the \textit{conditional
+probability} of $A$ given $B$ to be
+\[
+P(A|B) = \frac{P(A \capB)}{P(B)}
+\]
+\end{block}
+\begin{center}
+\includegraphics[width = 0.5\linewidth]{./figures/a_and_b}
+\end{center}
+\note[item]{Here's the formal definition. the conditional probability of A given B is a ratio.}
+\note[item]{On the top we have the intersection. on the bottom we have all of B}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1386 col 0 - line 1386 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Conditional probability}
+For events $A, B \in\Omega$ with $P(B) > 0$, define the \textit{conditional
+probability} of $A$ given $B$ to be
+\[
+P(A|B) = \frac{P(A \capB)}{P(B)}
+\]
+\end{block}
+\begin{center}
+\includegraphics[width = 0.5\linewidth]{./figures/a_given_b}
+\end{center}
+\note[item]{The idea is we're dropping everything in the sample space outside of B - it's not relevant, and then we have to rescale the probability so everything adds up to 1.}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Multiplicative Law of Probability}
+Rearranging the conditional probability statement minimally
+produces the \textit{Multiplicative Law of Probability}.
+\parFor $A, B \in\Omega$ with $P(B) > 0$,
+\par\[
+P(A|B)P(B) = P(A \capB) \pause= P(B|A)P(A)
+\]
+\end{block}
+\note[item]{\paul{Suggest deleting the text and just talking through it, this one's pretty simple.}}
+\par\note[item]{This is an important relationship. It gives us an intuitive way to compute the probability that A AND B occur. }
+\note[item]{First, you write down the probability that A occurs. then, you assume that A has occurred, and you multiply by the probability, which is conditional, that B also occurs.}
+\note[item]{\paul{Also suggest handwriting the P(B|A)P(A). we're going to use that to prove a very famous rule, called Bayes' Rule}}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Multiplicative Law of Probability}
+Rearranging the conditional probability statement minimally
+produces the \textit{Multiplicative Law of Probability}.
+\parFor $A, B \in\Omega$ with $P(B) > 0$,
+\par\[
+P(A|B)P(B) = P(A \capB) \pause= P(B|A)P(A)
+\]
+\end{block}
+\note[item]{\paul{Suggest deleting the text and just talking through it, this one's pretty simple.}}
+\par\note[item]{This is an important relationship. It gives us an intuitive way to compute the probability that A AND B occur. }
+\note[item]{First, you write down the probability that A occurs. then, you assume that A has occurred, and you multiply by the probability, which is conditional, that B also occurs.}
+\note[item]{\paul{Also suggest handwriting the P(B|A)P(A). we're going to use that to prove a very famous rule, called Bayes' Rule}}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{2}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1455 col 0 - line 1455 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: The Law of Total Probability}
+If$\ A_{1}, A_{2}, \dots, A_{n}$ is a partition of $\Omega$, and
+if $B \in\Omega$, then
+\[
+P(B) = \sum_{i} P(B \capA_{i})
+\]
+If there is a positive probability for each partition $A_{i}$,
+then by the \textit{Multiplicative Law of Probability}
+\[
+P(B) = \sum_{i} P(B | A_{i})P(A_{i})
+\]
+\end{block}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1525 col 0 - line 1525 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: The Law of Total Probability}
+If$\ A_{1}, A_{2}, \dots, A_{n}$ is a partition of $\Omega$, and
+if $B \in\Omega$, then
+\[
+P(B) = \sum_{i} P(B \capA_{i})
+\]
+If there is a positive probability for each partition $A_{i}$,
+then by the \textit{Multiplicative Law of Probability}
+\[
+P(B) = \sum_{i} P(B | A_{i})P(A_{i})
+\]
+\end{block}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1696 col 0 - line 1696 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Independence of events}
+Events $A, B \inS$ are \textit{independent} if $P(A \capB) =
+P(A)P(B)$.
+\end{block}
+\par\vspace{1cm}
+\pause\note[item]{However, as long as the events have nonzero probability, you can also write independence in terms of conditional probabilities.}
+\begin{block}{Theorem: conditional probability and independence}
+For $A, B \inS$ and $P(B)>0$, $A$ and $B$ are
+independent if and only if $P(A|B) = P(A)$.
+\end{block}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1696 col 0 - line 1696 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Independence of events}
+Events $A, B \inS$ are \textit{independent} if $P(A \capB) =
+P(A)P(B)$.
+\end{block}
+\par\vspace{1cm}
+\pause\note[item]{However, as long as the events have nonzero probability, you can also write independence in terms of conditional probabilities.}
+\begin{block}{Theorem: conditional probability and independence}
+For $A, B \inS$ and $P(B)>0$, $A$ and $B$ are
+independent if and only if $P(A|B) = P(A)$.
+\end{block}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{2}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{columns} The environment {columns} is not defined.
+	at unit_01.tex; line 1723 col 0 - line 1723 col 11
+	Next token is T_SPACE[U+000a/LF] ( == T_SPACE[U+000a/LF]) more: \begin{column}{0.65\textwidth}
+\begin{itemize}
+\itemLet $C$ be event that our subscriber cancels.
+\itemLet $W$ be the event our subscriber waited 2 hours on the phone.
+\end{itemize}
+\par\par$$ P(C) < P(C | W) $$
+\par$W$ gives us \textit{information} about C.
+\end{column}
+\begin{column}{0.35\textwidth} \begin{center}
+\includegraphics[width=\textwidth]{figures/phone}
+\end{center}
+\end{column}
+\end{columns}
+\par\note[item]{This is what we usually expect, at least a little bit. one event will give us some information about another event. But it's not always the case.}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{column} The environment {column} is not defined.
+	at unit_01.tex; line 1723 col 0 - line 1723 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: 0.65\textwidth}
+\begin{itemize}
+\itemLet $C$ be event that our subscriber cancels.
+\itemLet $W$ be the event our subscriber waited 2 hours on the phone.
+\end{itemize}
+\par\par$$ P(C) < P(C | W) $$
+\par$W$ gives us \textit{information} about C.
+\end{column}
+\begin{column}{0.35\textwidth} \begin{center}
+\includegraphics[width=\textwidth]{figures/phone}
+\end{center}
+\end{column}
+\end{columns}
+\par\note[item]{This is what we usually expect, at least a little bit. one event will give us some information about another event. But it's not always the case.}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 1723 col 0 - line 1723 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more: 
+	\begin{itemize}
+	\itemLet $C$ be event that our subscriber cancels.
+	\itemLet $W$ be the event our subscriber waited 2 hours on the phone.
+	\end{itemize}
+	\par\par$$ P(C) < P(C | W) $$
+	\par$W$ gives us \textit{information} about C.
+	\end{column}
+	\begin{column}{0.35\textwidth} \begin{center}
+	\includegraphics[width=\textwidth]{figures/phone}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\par\note[item]{This is what we usually expect, at least a little bit. one event will give us some information about another event. But it's not always the case.}
+	\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1723 col 0 to line 1723 col 11
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 1723 col 0 - line 1723 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more:  \begin{center}
+	\includegraphics[width=\textwidth]{figures/phone}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\par\note[item]{This is what we usually expect, at least a little bit. one event will give us some information about another event. But it's not always the case.}
+	\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1723 col 0 to line 1723 col 11
+Error:undefined:{columns} The environment {columns} is not defined.
+	at unit_01.tex; line 1755 col 0 - line 1755 col 11
+	Next token is T_SPACE[U+000a/LF] ( == T_SPACE[U+000a/LF]) more: \begin{column}{0.65\textwidth}
+\begin{itemize}
+\itemLet $C$ be event that our subscriber cancels.
+\itemLet $H$ be the event our subscriber hates cilantro.
+\end{itemize}
+\parIs $P(C)$ different from $ P(C | H)$?
+\end{column}
+\begin{column}{0.35\textwidth} \begin{center}
+\includegraphics[width=\textwidth]{figures/cilantro}
+\end{center}
+\end{column}
+\end{columns}
+\par\par\par\par\note[item]{That's pretty farfetched, right? Unless you're actually sending cilantro to your subscribers - let's assume that's not the case - these events have nothing to do with each other. So $ P(C) = P(C|H) $. }
+\note[item]{Let's play with the math. $P(C|H) = P(C \capH)/P(H)$ }
+\note[item]{So $P(C \capH) = P(C)P(H)$. This is a really elegant formula.}
+\note[item]{Also, $P(H) = P(C \capH) / P(C) = P(H | C)$. So if H gives no info about C, C gives no info about H.}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{column} The environment {column} is not defined.
+	at unit_01.tex; line 1755 col 0 - line 1755 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: 0.65\textwidth}
+\begin{itemize}
+\itemLet $C$ be event that our subscriber cancels.
+\itemLet $H$ be the event our subscriber hates cilantro.
+\end{itemize}
+\parIs $P(C)$ different from $ P(C | H)$?
+\end{column}
+\begin{column}{0.35\textwidth} \begin{center}
+\includegraphics[width=\textwidth]{figures/cilantro}
+\end{center}
+\end{column}
+\end{columns}
+\par\par\par\par\note[item]{That's pretty farfetched, right? Unless you're actually sending cilantro to your subscribers - let's assume that's not the case - these events have nothing to do with each other. So $ P(C) = P(C|H) $. }
+\note[item]{Let's play with the math. $P(C|H) = P(C \capH)/P(H)$ }
+\note[item]{So $P(C \capH) = P(C)P(H)$. This is a really elegant formula.}
+\note[item]{Also, $P(H) = P(C \capH) / P(C) = P(H | C)$. So if H gives no info about C, C gives no info about H.}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 1755 col 0 - line 1755 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more: 
+	\begin{itemize}
+	\itemLet $C$ be event that our subscriber cancels.
+	\itemLet $H$ be the event our subscriber hates cilantro.
+	\end{itemize}
+	\parIs $P(C)$ different from $ P(C | H)$?
+	\end{column}
+	\begin{column}{0.35\textwidth} \begin{center}
+	\includegraphics[width=\textwidth]{figures/cilantro}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\par\par\par\par\note[item]{That's pretty farfetched, right? Unless you're actually sending cilantro to your subscribers - let's assume that's not the case - these events have nothing to do with each other. So $ P(C) = P(C|H) $. }
+	\note[item]{Let's play with the math. $P(C|H) = P(C \capH)/P(H)$ }
+	\note[item]{So $P(C \capH) = P(C)P(H)$. This is a really elegant formula.}
+	\note[item]{Also, $P(H) = P(C \capH) / P(C) = P(H | C)$. So if H gives no info about C, C gives no info about H.}
+	\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1755 col 0 to line 1755 col 11
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 1755 col 0 - line 1755 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more:  \begin{center}
+	\includegraphics[width=\textwidth]{figures/cilantro}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\par\par\par\par\note[item]{That's pretty farfetched, right? Unless you're actually sending cilantro to your subscribers - let's assume that's not the case - these events have nothing to do with each other. So $ P(C) = P(C|H) $. }
+	\note[item]{Let's play with the math. $P(C|H) = P(C \capH)/P(H)$ }
+	\note[item]{So $P(C \capH) = P(C)P(H)$. This is a really elegant formula.}
+	\note[item]{Also, $P(H) = P(C \capH) / P(C) = P(H | C)$. So if H gives no info about C, C gives no info about H.}
+	\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1755 col 0 to line 1755 col 11
+Error:undefined:{columns} The environment {columns} is not defined.
+	at unit_01.tex; line 1797 col 0 - line 1797 col 11
+	Next token is T_SPACE[U+000a/LF] ( == T_SPACE[U+000a/LF]) more: \begin{column}{0.65\textwidth}
+Survey Example:
+\par\begin{itemize}
+\itemLet $D_1$ be event that the first respondent has a dog.
+\itemLet $D_2$ be event that the second respondent has a dog.
+\item\dots\end{itemize}
+\par\end{column}
+\begin{column}{0.35\textwidth} \begin{center}
+\includegraphics[width=\textwidth]{figures/pug}
+\end{center}
+\end{column}
+\end{columns}
+\par\note[item]{Think of a survey. <read>}
+\note[item]{ if $D_1$ and $D_2$ are independent, you learn just as much from the second as you do from the first - that's good!}
+\note[item]{But what it they are family members? Then the responses of the first one probably does give you information about the second. This makes it much harder to analyze the data. Throughout this course, we always want to be skeptical about whether independence holds, but many of our techniques really will require it to work.}
+\par\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{column} The environment {column} is not defined.
+	at unit_01.tex; line 1797 col 0 - line 1797 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: 0.65\textwidth}
+Survey Example:
+\par\begin{itemize}
+\itemLet $D_1$ be event that the first respondent has a dog.
+\itemLet $D_2$ be event that the second respondent has a dog.
+\item\dots\end{itemize}
+\par\end{column}
+\begin{column}{0.35\textwidth} \begin{center}
+\includegraphics[width=\textwidth]{figures/pug}
+\end{center}
+\end{column}
+\end{columns}
+\par\note[item]{Think of a survey. <read>}
+\note[item]{ if $D_1$ and $D_2$ are independent, you learn just as much from the second as you do from the first - that's good!}
+\note[item]{But what it they are family members? Then the responses of the first one probably does give you information about the second. This makes it much harder to analyze the data. Throughout this course, we always want to be skeptical about whether independence holds, but many of our techniques really will require it to work.}
+\par\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 1797 col 0 - line 1797 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more: 
+	Survey Example:
+	\par\begin{itemize}
+	\itemLet $D_1$ be event that the first respondent has a dog.
+	\itemLet $D_2$ be event that the second respondent has a dog.
+	\item\dots\end{itemize}
+	\par\end{column}
+	\begin{column}{0.35\textwidth} \begin{center}
+	\includegraphics[width=\textwidth]{figures/pug}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\par\note[item]{Think of a survey. <read>}
+	\note[item]{ if $D_1$ and $D_2$ are independent, you learn just as much from the second as you do from the first - that's good!}
+	\note[item]{But what it they are family members? Then the responses of the first one probably does give you information about the second. This makes it much harder to analyze the data. Throughout this course, we always want to be skeptical about whether independence holds, but many of our techniques really will require it to work.}
+	\par\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1797 col 0 to line 1797 col 11
+Warning:expected:<number> Missing number (Dimension), treated as zero.
+	at unit_01.tex; line 1797 col 0 - line 1797 col 11
+	while processing \textwidth
+	Next token is T_END[}] ( == T_END[}]) more:  \begin{center}
+	\includegraphics[width=\textwidth]{figures/pug}
+	\end{center}
+	\end{column}
+	\end{columns}
+	\par\note[item]{Think of a survey. <read>}
+	\note[item]{ if $D_1$ and $D_2$ are independent, you learn just as much from the second as you do from the first - that's good!}
+	\note[item]{But what it they are family members? Then the responses of the first one probably does give you information about the second. This makes it much harder to analyze the data. Throughout this course, we always want to be skeptical about whether independence holds, but many of our techniques really will require it to work.}
+	\par\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Gullet[@0x115190548] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1797 col 0 to line 1797 col 11
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1872 col 0 - line 1872 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Johnson et al. (2019)}
+Are minority groups subjected to unfairly violent treatment
+by law enforcement?
+\begin{enumerate}
+\itemAre Black civilians overrepresented in FOIS?
+\itemIf so, is this because of racial discrimination by White
+officers?
+\end{enumerate}
+\end{block}
+\par\note[item]{\paul{This slide also feels out of place. Why not fully
+describe the question and the difficulty of defining fairness,
+then present the specific paper?}}
+\note[item]{\paul{Suggest deleting this, and replacing with a
+modified slide after the next one.}}
+\begin{itemize}
+\itemDevelop Database that is a near-total recording of all \textit{fatal officer
+involved shootings} (FOIS) in the US in 2015.
+\item``Model'' whether race of civilian is a factor that
+predicts being involved in a FOIS.
+\end{itemize}
+\par\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+Error:undefined:{block} The environment {block} is not defined.
+	at unit_01.tex; line 1884 col 0 - line 1884 col 11
+	Next token is T_BEGIN[{] ( == T_BEGIN[{]) more: Study conclusions}
+\begin{itemize}
+\item\textit{``We find no overall evidence of anti-Black or
+anti-Hispanic disparities in fatal shootings.''}
+\item\textit{``White officers are not more likely to shoot minority
+civilians than non-White officers.''}
+\end{itemize}
+\end{block}
+\beamer@slide@finalize\end{beamer@frame@slide}\beamer@slides@while{1}\end{beamer@frame}
+	In Core::Definition::Expandable[\begin {}] /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/Package/LaTeX.pool.ltxml; line 182
+	 <= Core::Gullet[@0x115190548] <= Core::Stomach[@0x114fa9ca8] <= Core::Definition::Constructor[\begin{... <= ...
+ 1.87 sec) 1.93 sec)
+(Building...
+(Loading compiled schema /opt/homebrew/Cellar/latexml/0.8.8_1/libexec/lib/perl5/LaTeXML/resources/RelaxNG/LaTeXML.model... 0.00 sec)
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered"/>
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[= Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[P Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[( Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[B Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[| Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[A Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[) Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[P Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[( Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[A Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex14" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex14.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[) Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMath Closing </ltx:XMath> whose open descendents do not auto-close
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Descendents are <ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_covered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Core::Definition::Constructor[$$] <= Whatsit[\@@BEGINDISPLAYMATH,Core::Lis... <= Core::Document[@0x12481aba0] <= ...
+Error:malformed:ltx:inline-block Attempt to close </ltx:inline-block>, which isn't open
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:section _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[serif,medium,upright,10,r..." inlist="toc" xml:id="S15" _ID_counter_frame_="5">...<ltx:slidesequence _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[serif,medium,upright,10,r..." xml:id="S15.frame5" _ID_counter_slide_="1">...<ltx:slide _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[serif,medium,upright,10,r..." overlay="1" xml:id="S15.frame5.slide1" _ID_counter_p_="4">...<ltx:para _autoopened="1" _box="LaTeXML::Core::List=HASH(0x106..." _font="Font[serif,medium,upright,10,r..." xml:id="S15.frame5.slide1.p4">...<ltx:p _autoopened="1" _box="LaTeXML::Core::List=HASH(0x112..." _font="Font[serif,medium,upright,10,r...">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Core::Definition::Constructor[\beamer... <= Whatsit[\beamer@covered@end] <= Core::Document[@0x12481aba0] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered"/>
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[= Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[P Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[( Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[B Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[| Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[A Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[) Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[P Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[( Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[A Font[italic,display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMTok <ltx:XMTok> isn't allowed in <ltx:inline-block>
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:equation _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." xml:id="S15.Ex15" _ID_counter_m_="1">...<ltx:Math _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." mode="display" xml:id="S15.Ex15.m1">...<ltx:XMath _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:XMText _autoopened="1" _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb...">...<ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Box[) Font[display]] <= Core::Document[@0x12481aba0] <= Core::Definition::Constructor[$$] <= ...
+Error:malformed:ltx:XMath Closing </ltx:XMath> whose open descendents do not auto-close
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Descendents are <ltx:inline-block _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[math,medium,italic,10,rgb..." class="ltx_uncovered">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Core::Definition::Constructor[$$] <= Whatsit[\@@BEGINDISPLAYMATH,Core::Lis... <= Core::Document[@0x12481aba0] <= ...
+Error:malformed:ltx:inline-block Attempt to close </ltx:inline-block>, which isn't open
+	at unit_01.tex; line 1406 col 0 - line 1406 col 11
+	Currently in ...<ltx:section _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[serif,medium,upright,10,r..." inlist="toc" xml:id="S15" _ID_counter_frame_="5">...<ltx:slidesequence _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[serif,medium,upright,10,r..." xml:id="S15.frame5" _ID_counter_slide_="2">...<ltx:slide _box="LaTeXML::Core::Whatsit=HASH(0x..." _font="Font[serif,medium,upright,10,r..." overlay="2" xml:id="S15.frame5.slide2" _ID_counter_p_="4">...<ltx:para _autoopened="1" _box="LaTeXML::Core::List=HASH(0x125..." _font="Font[serif,medium,upright,10,r..." xml:id="S15.frame5.slide2.p4">...<ltx:p _autoopened="1" _box="LaTeXML::Core::List=HASH(0x113..." _font="Font[serif,medium,upright,10,r...">...
+	In Core::Document[@0x12481aba0] /Users/rpuncel/Workspaces/slides/unit_01/unit_01.tex; from line 1406 col 0 to line 1406 col 11
+	 <= Core::Definition::Constructor[\beamer... <= Whatsit[\beamer@uncovered@end] <= Core::Document[@0x12481aba0] <= ...
+ 1.38 sec)
+(Rewriting... 0.02 sec)
+(Math Parsing 252 formulae ......
+Warning:not_parsed:ADDOP.UNKNOWN.CLOSE>METARELOP MathParser failed to match rule 'Anything'
+	at unit_01.tex; line 653 col 0 - line 653 col 11
+	In "$\Leftrightarrow x\in A\text{ OR }x\in(B\cup C)\Leftrightarrow x\in A\cup(B%
+	\cup C)$"
+	⇔[[METARELOP]] x[[UNKNOWN]] ∈[[RELOP]] A[[UNKNOWN]] \text{ OR }[[UNKNOWN]] x[[UNKNOWN]] ∈[[RELOP]] ([[OPEN]] B[[UNKNOWN]] ∪[[ADDOP]] C[[UNKNOWN]] )[[CLOSE]]
+	        > ⇔[[METARELOP]] x[[UNKNOWN]] ∈[[RELOP]] A[[UNKNOWN]] ∪[[ADDOP]] ([[OPEN]] B[[UNKNOWN]] ∪[[ADDOP]] C[[UNKNOWN]] )[[CLOSE]]
+Warning:not_parsed:UNKNOWN>OPEN MathParser failed to match rule 'Anything'
+	at unit_01.tex; line 1909 col 0 - line 1909 col 11
+	In "$\displaystyle P(\text{shot}$"
+	P[[UNKNOWN]]
+	        > ([[OPEN]] \text{shot}[[UNKNOWN]]
+Warning:not_parsed:>VERTBAR MathParser failed to match rule 'Anything'
+	at unit_01.tex; line 1909 col 0 - line 1909 col 11
+	In "$\displaystyle|\text{minority civilian, white officer},X)\leq$"
+	> |[[VERTBAR]] \text{minority civilian, white officer}[[UNKNOWN]] ,[[PUNCT]] X[[UNKNOWN]] )[[CLOSE]] ≤[[RELOP]]
+ 1.34 sec)
+Math parsing succeeded:
+   ltx:XMArg: 91/91
+   ltx:XMath: 249/252
+Symbols assumed as simple identifiers (with # of occurences):
+   'A{italic}' (234), 'B{italic}' (173), 'C{italic}' (37), 'D{italic}' (31), 'H{italic}' (27), 'Omega' (15), 'P{italic}' (178), 'R{blackboard}' (2), 'S{italic}' (26), 'T{italic}' (30), 'W{italic}' (1), 'X{italic}' (19), 'Y{italic}' (14), '\' (2), 'a{italic}' (1), 'b{italic}' (3), 'e{italic}' (1), 'n{italic}' (1), 'o{italic}' (1), 'r{italic}' (1), 's{italic}' (1), 't{italic}' (1), 'w{italic}' (6), 'x{italic}' (27), 'y{italic}' (4)
+Set MATHPARSER_SPECULATE to speculate on possible notations.
+(Finalizing... 0.17 sec)
+Conversion complete: 25 warnings; 63 errors; 11 undefined macros[{alertblock}, {block}, \metroset, {columns}, \institute, \setbeameroption, {column}, \note, \setbeamerfont, {exampleblock}, \subtitle]; 9 missing files[keyval.sty, kvdefinekeys.sty, ltxcmds.sty, refcount.sty, pgfpages.sty, bitset.sty, gettitlestring.sty, kvoptions.sty, kvsetkeys.sty] (See /Users/rpuncel/Workspaces/slides/unit_01/unit_01.latexml.log) (reqd. 4.97s)

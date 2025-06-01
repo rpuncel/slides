@@ -6,7 +6,13 @@ institute: "UC Berkeley, School of Information"
 format:
   revealjs:
     theme: default
-    slideNumber: true
+    slide-number: true
+    output-file: unit_02_slides.html
+  html:
+    toc: true
+    number-sections: false
+    theme: default
+    output-file: unit_02.html
 ---
 
 # Introduction
@@ -76,4 +82,79 @@ At the end of this week, you will be able to:
 - First, nature reaches in and selects one possible outcome. Remember this represents one possible arrangement of all the atoms in my roaster.
 - Use annotation, label outcome $\omega$, draw arrow to $T$, draw another arrow to 160.
 
-...
+## What Is a Random Variable (Formally)?
+
+![](figures/roaster4.png){width=100%}
+
+- Next, the thermometer (our random variable) does its thing. It takes the state of the roaster - the outcome $\omega$ - and transforms it into a temperature reading.
+- But wait, instead of a single reading, we get a range of possible readings, each with a different probability. This is the randomness we were talking about.
+- The random variable $T$ maps the outcome $\omega$ to this range of temperatures. It's not just a simple function anymore; it's a function that accounts for uncertainty.
+
+## What Is a Random Variable (Formally)?
+
+![](figures/roaster5.png){width=100%}
+
+- Finally, we take a look at the probability distribution of our random variable.
+- This distribution tells us the likelihood of each possible temperature reading.
+- It's like a map that shows us the landscape of possibilities for our random variable, $T$.
+- And that's the formal definition of a random variable. It's a function that not only depends on the outcome of a random process but also has a probability distribution that describes its behavior.
+
+# Part 2: Joint Distributions
+
+## What Is a Joint Distribution?
+
+**Intuition:**
+
+- A model for the relationship between two or more random variables.
+- Like a regular distribution but for multiple variables, showing how they co-vary.
+
+**Definition:**
+
+> Given a probability space and two random variables $X$ and $Y$ defined on that space, the *joint distribution* of $X$ and $Y$ is the probability distribution of the random vector $(X, Y)$.
+
+- Just as random variables are the building blocks of statistical models, joint distributions allow us to model and understand the relationships between multiple random variables.
+- Intuitively, if random variables are like single notes in a musical piece, joint distributions are like chords - they show how notes combine and interact.
+- Formally, the joint distribution is defined for a pair of random variables, but the concept extends to more variables. It's the probability distribution of the random vector formed by these variables.
+
+## What Is a Joint Distribution (Formally)?
+
+![](figures/joint_distribution1.png){width=100%}
+
+- Let's break down the formal definition of joint distribution using a similar story.
+- Imagine we have two coffee roasters this time, each with its own set of atoms and proteins. We'll call them Roaster 1 and Roaster 2.
+- Just like before, we have a thermometer for each roaster. But now, we're interested in how the readings from both thermometers relate to each other.
+- The joint distribution will help us understand the relationship between the temperatures $T_1$ and $T_2$ from Roaster 1 and Roaster 2, respectively.
+
+## What Is a Joint Distribution (Formally)?
+
+![](figures/joint_distribution2.png){width=100%}
+
+- First, we define a new probability space that covers all possible outcomes for both roasters.
+- Each outcome in this space represents a possible state for both Roaster 1 and Roaster 2.
+- Just like before, we have a probability function that tells us how probable different states are, but now it's for the combined system of both roasters.
+
+## What Is a Joint Distribution (Formally)?
+
+![](figures/joint_distribution3.png){width=100%}
+
+- Next, we have our random variables for each roaster, $T_1$ and $T_2$.
+- These random variables are like the thermometers from before, but now we have one for each roaster.
+- They take in the outcomes - the states of Roaster 1 and Roaster 2 - and transform them into temperature readings.
+- But remember, these readings come from a joint distribution, so they are not independent. The reading from one thermometer gives us information about the reading from the other.
+
+## What Is a Joint Distribution (Formally)?
+
+![](figures/joint_distribution4.png){width=100%}
+
+- Finally, we look at the joint probability distribution of our random variables.
+- This distribution tells us the likelihood of each possible pair of temperature readings $(T_1, T_2)$.
+- It's like a map that shows us the landscape of possibilities for our random variables, $T_1$ and $T_2$, and how they are related.
+- And that's the formal definition of a joint distribution. It's a probability distribution that covers multiple random variables, showing us the relationships and dependencies between them.
+
+## Conclusion
+
+- This week, we covered the basics of random variables and joint distributions.
+- We started with the intuition behind random variables as models for uncertainty in our data.
+- Then, we moved on to the formal definition of random variables and how they are used to describe random processes.
+- After that, we explored joint distributions, which allow us to model and understand the relationships between multiple random variables.
+- Finally, we looked at the formal definition of joint distributions and how they extend the concept of random variables to multiple dimensions.

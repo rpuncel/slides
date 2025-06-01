@@ -19,11 +19,11 @@ d <- data.frame(
   id = 1:5000
 )
 
-d <- d %>% 
+d <- d %>%
   mutate(
-    x = runif(n = n(), min = 0, max = 4*pi), 
-    y = runif(n = n(), min = 0, max = 4*pi)
-  ) %>%  
+    x = runif(n = n(), min = 0, max = 4 * pi),
+    y = runif(n = n(), min = 0, max = 4 * pi)
+  ) %>%
   mutate(
     z = pnorm(0 + .5 * x + sin(x) + sin(y))
   )
@@ -31,18 +31,19 @@ d <- d %>%
 
 ```{r}
 fig <- plot_ly(
-  data = d, 
-  x = ~x, y = ~y, z = ~z) %>%  
+  data = d,
+  x = ~x, y = ~y, z = ~z
+) %>%
   add_markers(
     size = 1,
-    color = I('grey40')
-  ) %>%  
+    color = I("grey40")
+  ) %>%
   layout(
-    title = 'Probability of Retaining Customer',   
+    title = "Probability of Retaining Customer",
     scene = list(
-      xaxis = list(title = 'Years'),
-      yaxis = list(title = 'Purchases'),
-      zaxis = list(title = 'P(Return)')
+      xaxis = list(title = "Years"),
+      yaxis = list(title = "Purchases"),
+      zaxis = list(title = "P(Return)")
     )
   )
 fig
@@ -52,16 +53,16 @@ fig
 
 
 
-```{r make data}
+```{r make data 2}
 d <- data.frame(
   id = 1:500
 )
 
-d <- d %>% 
+d <- d %>%
   mutate(
-    x = runif(n = n(), min = 0, max = 4*pi), 
-    y = runif(n = n(), min = 0, max = 4*pi)
-  ) %>%  
+    x = runif(n = n(), min = 0, max = 4 * pi),
+    y = runif(n = n(), min = 0, max = 4 * pi)
+  ) %>%
   mutate(
     z = pnorm(0 + .5 * x + sin(x) + sin(y))
   )
@@ -69,18 +70,19 @@ d <- d %>%
 
 ```{r}
 fig <- plot_ly(
-  data = d, 
-  x = ~x, y = ~y, z = ~z) %>%  
+  data = d,
+  x = ~x, y = ~y, z = ~z
+) %>%
   add_markers(
     size = 1,
-    color = I('grey40')
-  ) %>%  
+    color = I("grey40")
+  ) %>%
   layout(
-    title = 'Probability of Retaining Customer',   
+    title = "Probability of Retaining Customer",
     scene = list(
-      xaxis = list(title = 'Years'),
-      yaxis = list(title = 'Purchases'),
-      zaxis = list(title = 'P(Return)')
+      xaxis = list(title = "Years"),
+      yaxis = list(title = "Purchases"),
+      zaxis = list(title = "P(Return)")
     )
   )
 fig
