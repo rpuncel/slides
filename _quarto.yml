@@ -12,11 +12,13 @@ format:
     theme: default
     slide-number: true
     show-notes: true
-    output-ext: revealjs.html
   html:
+    default: true
     toc: true
     number-sections: false
     theme: [cosmo]
+  pdf:
+    prefer-html: true
 
 website:
   sidebar:
@@ -24,6 +26,19 @@ website:
       - index.qmd
       - unit_01/unit_01.qmd
       - unit_02/unit_02.qmd
+      - unit_03/unit_03.qmd
+      - unit_04/unit_04.qmd
+      - unit_05/unit_05.qmd
+      - unit_06/unit_06.qmd
+      - unit_07/unit_07.qmd
+      - unit_08/unit_08.qmd
+      - unit_07_and_unit_08/unit_07_and_unit_08.qmd
+      - unit_09/unit_09.qmd
+      - unit_10/unit_10.qmd
+      - unit_11/unit_11.qmd
+      - unit_12/unit_12.qmd
+      - unit_13/unit_13.qmd
+      - unit_14/unit_14.qmd
 
 # List of presentations (add more as needed)
 # - unit_01/unit_01.qmd
