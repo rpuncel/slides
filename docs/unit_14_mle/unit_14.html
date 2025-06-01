@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -118,6 +147,81 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Week 2</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_03/unit_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_04/unit_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_05/unit_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_06/unit_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_07/unit_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_08/unit_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_07_and_unit_08/unit_07_and_unit_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_09/unit_09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Regression</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_10/unit_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_11/unit_11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_12/unit_12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 12</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_13/unit_13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 13</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+ <span class="menu-text">unit_14/unit_14.qmd</span>
+  </li>
     </ul>
     </div>
 </nav>
@@ -128,12 +232,45 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-14-maximum-likelihood-estimation" id="toc-week-14-maximum-likelihood-estimation" class="nav-link active" data-scroll-target="#week-14-maximum-likelihood-estimation">Week 14: Maximum Likelihood Estimation</a>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#properties-of-maximum-likelihood-estimators" id="toc-properties-of-maximum-likelihood-estimators" class="nav-link" data-scroll-target="#properties-of-maximum-likelihood-estimators">Properties of Maximum Likelihood Estimators</a>
   <ul class="collapse">
-  <li><a href="#blah" id="toc-blah" class="nav-link" data-scroll-target="#blah">blah</a></li>
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
+  <li><a href="#mle-consistent-when-the-model-is-true" id="toc-mle-consistent-when-the-model-is-true" class="nav-link" data-scroll-target="#mle-consistent-when-the-model-is-true">MLE: Consistent when the Model is True</a></li>
+  <li><a href="#mle-close-when-the-model-is-false" id="toc-mle-close-when-the-model-is-false" class="nav-link" data-scroll-target="#mle-close-when-the-model-is-false">MLE: “Close” when the Model is False</a></li>
+  <li><a href="#extra-assumptions" id="toc-extra-assumptions" class="nav-link" data-scroll-target="#extra-assumptions">Extra Assumptions</a></li>
+  <li><a href="#mle-asymptotically-normal" id="toc-mle-asymptotically-normal" class="nav-link" data-scroll-target="#mle-asymptotically-normal">MLE: Asymptotically Normal</a></li>
+  <li><a href="#mle-asymptotically-efficient" id="toc-mle-asymptotically-efficient" class="nav-link" data-scroll-target="#mle-asymptotically-efficient">MLE: Asymptotically Efficient</a></li>
+  <li><a href="#summary-of-mle-properties" id="toc-summary-of-mle-properties" class="nav-link" data-scroll-target="#summary-of-mle-properties">Summary of MLE Properties</a></li>
+  </ul></li>
+  <li><a href="#handling-outliers" id="toc-handling-outliers" class="nav-link" data-scroll-target="#handling-outliers">Handling Outliers</a>
+  <ul class="collapse">
+  <li><a href="#outliers" id="toc-outliers" class="nav-link" data-scroll-target="#outliers">Outliers</a></li>
+  <li><a href="#where-is-the-outlier-part-i" id="toc-where-is-the-outlier-part-i" class="nav-link" data-scroll-target="#where-is-the-outlier-part-i">Where is the Outlier? Part I</a></li>
+  <li><a href="#where-is-the-outlier-part-ii" id="toc-where-is-the-outlier-part-ii" class="nav-link" data-scroll-target="#where-is-the-outlier-part-ii">Where is the Outlier? Part II</a></li>
+  <li><a href="#where-is-the-outlier-part-iii" id="toc-where-is-the-outlier-part-iii" class="nav-link" data-scroll-target="#where-is-the-outlier-part-iii">Where is the Outlier? Part III</a></li>
+  <li><a href="#where-is-the-outlier-part-iv" id="toc-where-is-the-outlier-part-iv" class="nav-link" data-scroll-target="#where-is-the-outlier-part-iv">Where is the Outlier? Part IV</a></li>
+  <li><a href="#lessons" id="toc-lessons" class="nav-link" data-scroll-target="#lessons">Lessons</a></li>
+  <li><a href="#how-to-handle-an-outlier" id="toc-how-to-handle-an-outlier" class="nav-link" data-scroll-target="#how-to-handle-an-outlier">How to Handle an Outlier</a></li>
+  <li><a href="#alternatives-to-removing-outliers" id="toc-alternatives-to-removing-outliers" class="nav-link" data-scroll-target="#alternatives-to-removing-outliers">Alternatives to Removing Outliers</a></li>
+  </ul></li>
+  <li><a href="#levels-of-measurement" id="toc-levels-of-measurement" class="nav-link" data-scroll-target="#levels-of-measurement">Levels of Measurement</a>
+  <ul class="collapse">
+  <li><a href="#measuring-soup" id="toc-measuring-soup" class="nav-link" data-scroll-target="#measuring-soup">Measuring Soup</a></li>
+  <li><a href="#the-random-variable-definition" id="toc-the-random-variable-definition" class="nav-link" data-scroll-target="#the-random-variable-definition">The Random Variable Definition</a></li>
+  <li><a href="#levels-of-measurement-1" id="toc-levels-of-measurement-1" class="nav-link" data-scroll-target="#levels-of-measurement-1">Levels of Measurement</a></li>
+  <li><a href="#nominal-variables" id="toc-nominal-variables" class="nav-link" data-scroll-target="#nominal-variables">Nominal Variables</a></li>
+  <li><a href="#what-can-you-do-with-nominal-variables" id="toc-what-can-you-do-with-nominal-variables" class="nav-link" data-scroll-target="#what-can-you-do-with-nominal-variables">What Can You Do with Nominal Variables?</a></li>
+  <li><a href="#ordinal-rank-variables" id="toc-ordinal-rank-variables" class="nav-link" data-scroll-target="#ordinal-rank-variables">Ordinal / Rank Variables</a></li>
+  <li><a href="#what-can-you-do-with-ordinal-variables" id="toc-what-can-you-do-with-ordinal-variables" class="nav-link" data-scroll-target="#what-can-you-do-with-ordinal-variables">What Can You Do with Ordinal Variables?</a></li>
+  <li><a href="#likert-scales" id="toc-likert-scales" class="nav-link" data-scroll-target="#likert-scales">Likert Scales</a></li>
+  <li><a href="#interval-metric-variables" id="toc-interval-metric-variables" class="nav-link" data-scroll-target="#interval-metric-variables">Interval / Metric Variables</a></li>
+  <li><a href="#what-can-you-do-with-interval-variables" id="toc-what-can-you-do-with-interval-variables" class="nav-link" data-scroll-target="#what-can-you-do-with-interval-variables">What Can You Do with Interval Variables?</a></li>
+  <li><a href="#ratio-variables" id="toc-ratio-variables" class="nav-link" data-scroll-target="#ratio-variables">Ratio Variables</a></li>
+  <li><a href="#levels-of-measurement-2" id="toc-levels-of-measurement-2" class="nav-link" data-scroll-target="#levels-of-measurement-2">Levels of Measurement</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="unit_14_slides.html.revealjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="unit_14.revealjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -171,11 +308,401 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="week-14-maximum-likelihood-estimation" class="level1">
-<h1>Week 14: Maximum Likelihood Estimation</h1>
-<section id="blah" class="level2">
-<h2 class="anchored" data-anchor-id="blah">blah</h2>
-<!-- Add your slides here -->
+<section id="section" class="level1">
+<h1></h1>
+</section>
+<section id="properties-of-maximum-likelihood-estimators" class="level1">
+<h1>Properties of Maximum Likelihood Estimators</h1>
+<section id="assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
+<ol type="1">
+<li><span class="math inline">\((X_1, X_2, X_3...)\)</span> is an infinite sequence of I.I.D. continuous random variables</li>
+<li><span class="math inline">\(f(X|\theta)\)</span> is a family of probability density functions, with parameter <span class="math inline">\(\theta\)</span> in a compact space</li>
+<li>if <span class="math inline">\(\theta_1 \neq \theta_2\)</span> , then the resulting distributions are different ( <span class="math inline">\(P\big(f(X|\theta_1)/f(X|\theta_1) \neq 1 \big) &gt;0\)</span> )</li>
+<li><span class="math inline">\(f\)</span> is continuous in <span class="math inline">\(\theta\)</span> .</li>
+<li>The log-likelihood is integrable ( <span class="math inline">\(\E \big[ | \ln f(X|\theta) | \big] &lt; \infty\)</span> for all <span class="math inline">\(\theta\)</span> )</li>
+</ol>
+</section>
+<section id="mle-consistent-when-the-model-is-true" class="level2">
+<h2 class="anchored" data-anchor-id="mle-consistent-when-the-model-is-true">MLE: Consistent when the Model is True</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: Consistency of MLE">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: Consistency of MLE
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If <span class="math inline">\((X_1, X_2, X_3...)\)</span> are drawn from <span class="math inline">\(f(X|\theta_t)\)</span> for some parameter <span class="math inline">\(\theta_t\)</span>, then under assumptions 1-5,</p>
+<p><span class="math inline">\(\theta_{MLE} \overset{p}{\rightarrow} \theta_t\)</span></p>
+</div>
+</div>
+</section>
+<section id="mle-close-when-the-model-is-false" class="level2">
+<h2 class="anchored" data-anchor-id="mle-close-when-the-model-is-false">MLE: “Close” when the Model is False</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: MLE and KL divergence">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: MLE and KL divergence
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If <span class="math inline">\((X_1, X_2, X_3...)\)</span> are drawn from some distribution <span class="math inline">\(g\)</span>, and <span class="math inline">\(\theta_c\)</span> minimizes the KL divergence,</p>
+<p><span class="math inline">\(\text{KL} \big[f(\cdot| \theta) \| g  \big] = \int_{-\infty}^\infty f( x | \theta) \log \frac{ f( x | \theta)}{g(x)}dx\)</span> Then under assumptions 1-5,</p>
+<p><span class="math inline">\(\theta_{MLE} \overset{p}{\rightarrow} \theta_c\)</span></p>
+</div>
+</div>
+</section>
+<section id="extra-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="extra-assumptions">Extra Assumptions</h2>
+<ol type="1">
+<li>The parameter <span class="math inline">\(\theta_0\)</span> that maximizes likelihood is in the interior of the parameter space.</li>
+<li>Likelihood is twice continuously differentiable.</li>
+<li>Intergration and differentiation operators are interchangeable for likelihood.</li>
+<li>The Fisher information, <span class="math inline">\(I(\theta_0) = - \E[ \frac{\partial^2 }{\partial \theta^2} \ln f(X|\theta) | \theta=\theta_0]\)</span> exists and is nonsingular.</li>
+</ol>
+</section>
+<section id="mle-asymptotically-normal" class="level2">
+<h2 class="anchored" data-anchor-id="mle-asymptotically-normal">MLE: Asymptotically Normal</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: MLE is asymptotically normal">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: MLE is asymptotically normal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Under assumptions 1-9,</p>
+<p><span class="math inline">\(\frac{\theta_{MLE} - \theta_0 }{\sqrt{n}} \overset{d}{\rightarrow} N\big(0,1/I(\theta_0)\big)\)</span></p>
+</div>
+</div>
+</section>
+<section id="mle-asymptotically-efficient" class="level2">
+<h2 class="anchored" data-anchor-id="mle-asymptotically-efficient">MLE: Asymptotically Efficient</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: MLE is asymptotically efficient">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: MLE is asymptotically efficient
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>  Under assumptions 1-9, $\theta_{MLE}$ is asymptotically efficient.</code></pre>
+</div>
+</div>
+</section>
+<section id="summary-of-mle-properties" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-mle-properties">Summary of MLE Properties</h2>
+<ul>
+<li>Consistent when the model is true</li>
+<li>As close as possible when the model is false</li>
+<li>Asymptotically normal</li>
+<li>Asymptotically efficient</li>
+</ul>
+</section>
+</section>
+<section id="handling-outliers" class="level1">
+<h1>Handling Outliers</h1>
+<section id="outliers" class="level2">
+<h2 class="anchored" data-anchor-id="outliers">Outliers</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Outlier definition">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Outlier definition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>An _outlier_ is:</code></pre>
+<ul>
+<li>A data point that is unusual (or unlikely) </li>
+<li>With respect to some statistical model </li>
+</ul>
+</div>
+</div>
+</section>
+<section id="where-is-the-outlier-part-i" class="level2">
+<h2 class="anchored" data-anchor-id="where-is-the-outlier-part-i">Where is the Outlier? Part I</h2>
+<p><embed src="figures/salary_no_summary.pdf" class="img-fluid"></p>
+</section>
+<section id="where-is-the-outlier-part-ii" class="level2">
+<h2 class="anchored" data-anchor-id="where-is-the-outlier-part-ii">Where is the Outlier? Part II</h2>
+<p><embed src="figures/salary_linear.pdf" class="img-fluid"></p>
+</section>
+<section id="where-is-the-outlier-part-iii" class="level2">
+<h2 class="anchored" data-anchor-id="where-is-the-outlier-part-iii">Where is the Outlier? Part III</h2>
+<p><embed src="figures/salary_exponential.pdf" class="img-fluid"></p>
+</section>
+<section id="where-is-the-outlier-part-iv" class="level2">
+<h2 class="anchored" data-anchor-id="where-is-the-outlier-part-iv">Where is the Outlier? Part IV</h2>
+<p><embed src="figures/salary_grad.pdf" class="img-fluid"></p>
+</section>
+<section id="lessons" class="level2">
+<h2 class="anchored" data-anchor-id="lessons">Lessons</h2>
+<ul>
+<li>Outliers are interesting.</li>
+<li>An outlier could be telling you something important.</li>
+<li><strong>Never</strong> remove a point just because it is an outlier. - This is altering the data to fit your idea of what the model is.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Every blockbuster movie is about an outlier. The jedi protected the galaxy until one day one of them turned to the dark side.</li>
+<li>Outliers might be telling you something important, they might guide you to a new model specification.</li>
+<li>The thing about altering your data to fit your model is that you never know for sure what the true model is - so you need to approach outliers with some modesty.</li>
+</ul>
+</div>
+</section>
+<section id="how-to-handle-an-outlier" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-handle-an-outlier">How to Handle an Outlier</h2>
+<p>Is the outlier a coding error, measurement error, or otherwise not a meaningful value from the distribution being studied?</p>
+<ul>
+<li><p>Then, remove the outlier and document your decision.</p>
+<p>Is the outlier a meaningful value?</p></li>
+<li><p>Do not remove the outlier.</p></li>
+</ul>
+<div class="notes">
+<ul>
+<li>This is where Alex and Paul can have a back and forth conversation about these pieces.</li>
+</ul>
+</div>
+</section>
+<section id="alternatives-to-removing-outliers" class="level2">
+<h2 class="anchored" data-anchor-id="alternatives-to-removing-outliers">Alternatives to Removing Outliers</h2>
+<p>What are our options if we do <em>not</em> remove outliers?</p>
+<ol type="1">
+<li>Apply a log or exponential transform to represent non-linearity.</li>
+<li>Adopt a more flexible functional form (e.g., polynomial terms).</li>
+<li>Use indicator variables to treat outlying points separately.</li>
+<li>Compute outlier robust statistics.</li>
+</ol>
+<div class="notes">
+<ul>
+<li>There are different modeling choices that you can make, and outliers relative to a single model might lead us to be careful and critical about refitting a different model.</li>
+<li>Or, you can change your data; but there is an artlessness to changing the data. ``I’m just going to put it into a different universe is a silly way of resolving the problem.’’</li>
+<li>You can see that the answer if complicated. there can be different models with strengths and weaknesses. This is something that you’ll get better at the more you dig into statistics.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="levels-of-measurement" class="level1">
+<h1>Levels of Measurement</h1>
+<section id="measuring-soup" class="level2">
+<h2 class="anchored" data-anchor-id="measuring-soup">Measuring Soup</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+
+</div><div class="column" style="width:60%;">
+<p><img src="figures/ramen.jpg" class="img-fluid"></p>
+</div>
+</div>
+<p><em>What is the average broth?</em></p>
+<div class="notes">
+<ul>
+<li>As we turn our attention to working with samples, we have to be think carefully about what operations are valid for our variables</li>
+<li>Here’s a simple example: You have a dataset that lists the type of broth ordered at a Ramen restaurant. You can see that each point is coded as a number. 1 represents Shoyu, 2 represents Shio, 3 represents Miso.</li>
+<li>Now the question: what is the average ramen broth?</li>
+<li>Is that a sensible question?</li>
+<li>You take take these numbers and average them. But would the result have any meaning?</li>
+<li>Well, not really, because these numbers are arbitrary. That means that the average is not a valid operation.</li>
+</ul>
+</div>
+</section>
+<section id="the-random-variable-definition" class="level2">
+<h2 class="anchored" data-anchor-id="the-random-variable-definition">The Random Variable Definition</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Random Variable">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Random Variable
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Given probability space <span class="math inline">\((\Omega, S, P)\)</span>, a <em>random variable</em> is a measurable function from <span class="math inline">\(\Omega\)</span> to <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+</div>
+<ul>
+<li><span class="math inline">\(\R\)</span> usually means real numbers with field operations ( <span class="math inline">\(+,-,\cdot,...\)</span> ).</li>
+<li>Some operations may not be sensible.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>This is something we glossed over earlier. Our definition of a random variable was a function from a sample space to R.</li>
+<li>When we say R, we usually mean the real numbers, but also all the operations that the numbers have. you can add them, multiply, and so forth.</li>
+<li>So we assumed up till now that a random variable can do all the same operations that real numbers have.</li>
+<li>That may not make sense, we may need to restrict the things we can do.</li>
+</ul>
+</div>
+</section>
+<section id="levels-of-measurement-1" class="level2">
+<h2 class="anchored" data-anchor-id="levels-of-measurement-1">Levels of Measurement</h2>
+<ul>
+<li>Stanley Smith Stevens</li>
+</ul>
+<div class="notes">
+<ul>
+<li>To make sense of this, statisticians have divided variables into classes.</li>
+<li>Another word for these is levels of measurement. They define the operations that are sensible for a random variable</li>
+<li>There are a lot of ways to do this, and a lot of classification schemes. I’m going to show you the most famous one, which was developed by pychologist Stanley Smith Stevens</li>
+<li>Stevens defined 4 types of variables. This is roughly hierarchy, a variable close to the bottom usually has all the operations above it. It doesn’t describe every possible structure that a variable could have. But it’s still useful 95</li>
+</ul>
+</div>
+</section>
+<section id="nominal-variables" class="level2">
+<h2 class="anchored" data-anchor-id="nominal-variables">Nominal Variables</h2>
+<p>A <em>nominal variable</em> defines categories</p>
+<ul>
+<li>Can check if two values are <strong>equal</strong> or <strong>not equal</strong></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>Other operations may not be defined- <span class="math inline">\(&lt;,&gt;\)</span> - <span class="math inline">\(+,-,\cdot, /\)</span></p>
+</div><div class="column" style="width:55%;">
+<p><img src="figures/ramen.jpg" class="img-fluid"></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>When you hear nominal, think about the ramen example. We had broths that aren’t related to each other. We couldn’t add them together, we can’t even compare them and say that miso is greater than Shoyu. All we can do is check if two broths are equal or not equal.</li>
+<li>So a bit more formally, nominal means that we have an equality operator that we can use to compare datapoint.</li>
+<li>But that may be the only operation. Often when we say nominal colloquially, that’s what we mean, no other operations.</li>
+<li>You can’t use less than or greater than. you can’t add, subtract, multiply.</li>
+</ul>
+</div>
+</section>
+<section id="what-can-you-do-with-nominal-variables" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-you-do-with-nominal-variables">What Can You Do with Nominal Variables?</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>Valid:- Value Counts - Mode Requires more structure:- Median - Mean - Variance</p>
+</div><div class="column" style="width:55%;">
+<p><img src="figures/ramen.jpg" class="img-fluid"></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>What can do you with nominal variables? One thing you can do is count. You can generate a table to see how many customers order each type of broth, and then you can analyze that table.</li>
+<li>Pretty much any analysis you do starts with counting.</li>
+</ul>
+</div>
+</section>
+<section id="ordinal-rank-variables" class="level2">
+<h2 class="anchored" data-anchor-id="ordinal-rank-variables">Ordinal / Rank Variables</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<pre><code>An_ordinal variable_ defines categories that have an order.- Can apply $&lt;,=,&gt;$</code></pre>
+<p>Intervals may not be meaningful.- No <span class="math inline">\(+,-,\cdot,/\)</span></p>
+</div><div class="column" style="width:53%;">
+<p><img src="figures/love_tester.jpg" class="img-fluid"></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>For an example, think of this vintage love meter.</li>
+<li>There are categories, and they have an order. Burning &gt; Wild, and Wild &gt; Mild.</li>
+<li>That means that we can use</li>
+<li>But an ordinal variable still doesn’t allow arithmetic - no</li>
+<li>Why not? You don’t know how big the intervals are between the categories</li>
+<li>If I ask you whether Burning - Wild is the same as Wild - Naughty but Nice, you can’t tell.</li>
+<li>You can guess, but there’s no scientific way to know which interval is bigger.</li>
+<li>Similarly, what’s the average of Wild and Mild? There’s no way to know</li>
+<li>What can you do with ordinal variables? One important thing is you can compute a median. The median only uses the rank properties, so it’s valid.</li>
+<li>You can compute other quantiles. you can compute probabilities of getting a Wild score on this machine.</li>
+</ul>
+</div>
+</section>
+<section id="what-can-you-do-with-ordinal-variables" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-you-do-with-ordinal-variables">What Can You Do with Ordinal Variables?</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>Valid:- Median, Quantiles - Probabilities that A &gt; B, etc. Requires more structure:- Mean - <span class="math inline">\(+,-,\cdot, /\)</span> - Notions of “shape” of distribution</p>
+</div><div class="column" style="width:53%;">
+<p><img src="figures/love_tester.jpg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="likert-scales" class="level2">
+<h2 class="anchored" data-anchor-id="likert-scales">Likert Scales</h2>
+<p><em>The interface was easy to navigate</em></p>
+<div class="notes">
+<ul>
+<li>Here’s a slightly controversial example: a Likert scale</li>
+<li>You’ve probably seen one: This is a type of survey instrument, in which a participant evaluates a statement.</li>
+<li>Most often the answers range from strongly disagree, to strongly agree</li>
+<li>What kind of variable is this? There’s an order, 5 is bigger than 4, 4 is bigger than 3.</li>
+<li>But what about the intervals? Is the difference between Strongly Agree and Agree, the same as between Agree and Neutral? Maybe, maybe not. We can guess, but there’s no scientific way to argue for that.</li>
+<li>So I would say that this is an ordinal variable.</li>
+<li>If you look at articles, you’ll that see a lot of people report means for Likert variables - not supposed to!</li>
+<li>Some people will argue that that’s ok, that we can believe the intervals are close enough.</li>
+<li>You can argue one way or the other, but for this class, we want you to be conservative. If you see a variable like this, it’s ordinal, so do not take the mean.</li>
+</ul>
+</div>
+</section>
+<section id="interval-metric-variables" class="level2">
+<h2 class="anchored" data-anchor-id="interval-metric-variables">Interval / Metric Variables</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<pre><code>An_interval variable_ defines categories with consistent intervals- Can apply $-$ , average</code></pre>
+<p>May have no notion of zero- No <span class="math inline">\(+,\cdot,/\)</span></p>
+</div><div class="column" style="width:53%;">
+<p><img src="figures/thermometer.jpg" class="img-fluid"></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Next, we have Interval Variables.</li>
+<li>For an example, think of a temperature scale.</li>
+<li>There is a rank order, but intervals can be compared. 20-10 = 10-0</li>
+<li>That means we can subtract. we can also average points together. This is what we call the affine structure of R.</li>
+<li>But the zero point isn’t really meaningful. (at least that’s true for Celsius. If you work with Kelvin, the zero has a meaning).</li>
+<li>If it’s 80 degrees one day and 85 the next, you can’t add them together - the result isn’t meaningful. that’s because if you move the zero point, you get a different result.</li>
+<li>Also no</li>
+</ul>
+</div>
+</section>
+<section id="what-can-you-do-with-interval-variables" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-you-do-with-interval-variables">What Can You Do with Interval Variables?</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>Valid:- Mean - Variance - Most common statistics Requires more structure:- Log - Root-Mean-Square</p>
+</div><div class="column" style="width:53%;">
+<p><img src="figures/thermometer.jpg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="ratio-variables" class="level2">
+<h2 class="anchored" data-anchor-id="ratio-variables">Ratio Variables</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>A_ratio variable_ defines categories with consistent intervals and a meaningful zero.- Can apply all arithmetic operations.</p>
+</div><div class="column" style="width:53%;">
+<p><img src="figures/money.jpg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="levels-of-measurement-2" class="level2">
+<h2 class="anchored" data-anchor-id="levels-of-measurement-2">Levels of Measurement</h2>
+<ul>
+<li>Stanley Smith Stevens</li>
+</ul>
+<div class="notes">
+<ul>
+<li>As we go forward, most of our statistical techniques will require one of these levels of measurement</li>
+<li>Those are important assumptions, and we’ll try to highlight them for you.</li>
+</ul>
+</div>
 
 
 </section>

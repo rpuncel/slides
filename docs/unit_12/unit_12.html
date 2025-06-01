@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Statistics for Data Science">
+
+<title>Week 12</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unit_12/unit_12.html">Week 12</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MIDS 203 Slides</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_01/unit_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_02/unit_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_03/unit_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_04/unit_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_05/unit_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_06/unit_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_07/unit_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_08/unit_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_07_and_unit_08/unit_07_and_unit_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_09/unit_09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Regression</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_10/unit_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_11/unit_11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_12/unit_12.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Week 12</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_13/unit_13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 13</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+ <span class="menu-text">unit_14/unit_14.qmd</span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#importance-of-the-classical-linear-model" id="toc-importance-of-the-classical-linear-model" class="nav-link" data-scroll-target="#importance-of-the-classical-linear-model">Importance of the Classical Linear Model</a>
+  <ul class="collapse">
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#why-cant-we-use-the-large-sample-model" id="toc-why-cant-we-use-the-large-sample-model" class="nav-link" data-scroll-target="#why-cant-we-use-the-large-sample-model">Why Can’t we use the Large-Sample Model?</a></li>
+  <li><a href="#twenty-noisy-questions" id="toc-twenty-noisy-questions" class="nav-link" data-scroll-target="#twenty-noisy-questions">Twenty (Noisy) Questions</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  <li><a href="#the-classical-linear-model-clm" id="toc-the-classical-linear-model-clm" class="nav-link" data-scroll-target="#the-classical-linear-model-clm">The Classical Linear Model (CLM)</a></li>
+  </ul></li>
+  <li><a href="#unit-plan" id="toc-unit-plan" class="nav-link" data-scroll-target="#unit-plan">Unit Plan</a>
+  <ul class="collapse">
+  <li><a href="#plan-for-the-week" id="toc-plan-for-the-week" class="nav-link" data-scroll-target="#plan-for-the-week">Plan for the Week</a></li>
+  <li><a href="#plan-for-the-week-contd" id="toc-plan-for-the-week-contd" class="nav-link" data-scroll-target="#plan-for-the-week-contd">Plan for the Week (cont’d)</a></li>
+  </ul></li>
+  <li><a href="#part-1-importance-of-the-classical-linear-model" id="toc-part-1-importance-of-the-classical-linear-model" class="nav-link" data-scroll-target="#part-1-importance-of-the-classical-linear-model">Part 1: Importance of the Classical Linear Model</a></li>
+  <li><a href="#reading-the-clm-assumptions" id="toc-reading-the-clm-assumptions" class="nav-link" data-scroll-target="#reading-the-clm-assumptions">Reading: The CLM Assumptions</a>
+  <ul class="collapse">
+  <li><a href="#reading-the-clm-assumptions-1" id="toc-reading-the-clm-assumptions-1" class="nav-link" data-scroll-target="#reading-the-clm-assumptions-1">Reading: The CLM Assumptions</a></li>
+  </ul></li>
+  <li><a href="#the-clm-assumptions-part-1" id="toc-the-clm-assumptions-part-1" class="nav-link" data-scroll-target="#the-clm-assumptions-part-1">The CLM Assumptions, Part 1</a>
+  <ul class="collapse">
+  <li><a href="#clm-assumption-1" id="toc-clm-assumption-1" class="nav-link" data-scroll-target="#clm-assumption-1">CLM Assumption 1</a></li>
+  <li><a href="#clm-assumption-2" id="toc-clm-assumption-2" class="nav-link" data-scroll-target="#clm-assumption-2">CLM Assumption 2</a></li>
+  <li><a href="#perfect-collinearity-example-1" id="toc-perfect-collinearity-example-1" class="nav-link" data-scroll-target="#perfect-collinearity-example-1">Perfect Collinearity Example 1</a></li>
+  <li><a href="#perfect-collinearity-example-2" id="toc-perfect-collinearity-example-2" class="nav-link" data-scroll-target="#perfect-collinearity-example-2">Perfect Collinearity Example 2</a></li>
+  </ul></li>
+  <li><a href="#the-clm-assumptions-part-2" id="toc-the-clm-assumptions-part-2" class="nav-link" data-scroll-target="#the-clm-assumptions-part-2">The CLM Assumptions, Part 2</a>
+  <ul class="collapse">
+  <li><a href="#clm-assumption-3" id="toc-clm-assumption-3" class="nav-link" data-scroll-target="#clm-assumption-3">CLM Assumption 3</a></li>
+  <li><a href="#clm-assumption-4" id="toc-clm-assumption-4" class="nav-link" data-scroll-target="#clm-assumption-4">CLM Assumption 4</a></li>
+  <li><a href="#understanding-homoskedasticity" id="toc-understanding-homoskedasticity" class="nav-link" data-scroll-target="#understanding-homoskedasticity">Understanding Homoskedasticity</a></li>
+  <li><a href="#clm-assumption-5" id="toc-clm-assumption-5" class="nav-link" data-scroll-target="#clm-assumption-5">CLM Assumption 5</a></li>
+  <li><a href="#common-clm-errors" id="toc-common-clm-errors" class="nav-link" data-scroll-target="#common-clm-errors">Common CLM Errors</a></li>
+  <li><a href="#clm-model-summary" id="toc-clm-model-summary" class="nav-link" data-scroll-target="#clm-model-summary">CLM Model Summary</a></li>
+  </ul></li>
+  <li><a href="#part-2-properties-of-the-clm" id="toc-part-2-properties-of-the-clm" class="nav-link" data-scroll-target="#part-2-properties-of-the-clm">Part 2: Properties of the CLM</a></li>
+  <li><a href="#ols-is-unbiased-under-the-clm" id="toc-ols-is-unbiased-under-the-clm" class="nav-link" data-scroll-target="#ols-is-unbiased-under-the-clm">OLS is Unbiased under the CLM</a>
+  <ul class="collapse">
+  <li><a href="#ols-is-unbiased-under-the-clm-1" id="toc-ols-is-unbiased-under-the-clm-1" class="nav-link" data-scroll-target="#ols-is-unbiased-under-the-clm-1">OLS is Unbiased under the CLM</a></li>
+  <li><a href="#ols-is-unbiased-under-the-clm-2" id="toc-ols-is-unbiased-under-the-clm-2" class="nav-link" data-scroll-target="#ols-is-unbiased-under-the-clm-2">OLS is Unbiased under the CLM</a></li>
+  </ul></li>
+  <li><a href="#classical-standard-errors" id="toc-classical-standard-errors" class="nav-link" data-scroll-target="#classical-standard-errors">Classical Standard Errors</a>
+  <ul class="collapse">
+  <li><a href="#standard-errors-under-the-clm" id="toc-standard-errors-under-the-clm" class="nav-link" data-scroll-target="#standard-errors-under-the-clm">Standard Errors under the CLM</a></li>
+  <li><a href="#classical-standard-errors-intuition" id="toc-classical-standard-errors-intuition" class="nav-link" data-scroll-target="#classical-standard-errors-intuition">Classical Standard Errors: Intuition</a></li>
+  <li><a href="#a-simple-equation-for-sampling-variance" id="toc-a-simple-equation-for-sampling-variance" class="nav-link" data-scroll-target="#a-simple-equation-for-sampling-variance">A Simple Equation for Sampling Variance</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
+  <li><a href="#should-you-use-classical-standard-errors" id="toc-should-you-use-classical-standard-errors" class="nav-link" data-scroll-target="#should-you-use-classical-standard-errors">Should you use Classical Standard Errors?</a></li>
+  </ul></li>
+  <li><a href="#sampling-distributions-under-the-clm" id="toc-sampling-distributions-under-the-clm" class="nav-link" data-scroll-target="#sampling-distributions-under-the-clm">Sampling Distributions under the CLM</a>
+  <ul class="collapse">
+  <li><a href="#clm-sampling-distributions" id="toc-clm-sampling-distributions" class="nav-link" data-scroll-target="#clm-sampling-distributions">CLM Sampling Distributions</a></li>
+  <li><a href="#testing-coefficients-under-the-clm" id="toc-testing-coefficients-under-the-clm" class="nav-link" data-scroll-target="#testing-coefficients-under-the-clm">Testing Coefficients under the CLM</a></li>
+  <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">Take-Aways</a></li>
+  </ul></li>
+  <li><a href="#efficiency-theorems-for-ols" id="toc-efficiency-theorems-for-ols" class="nav-link" data-scroll-target="#efficiency-theorems-for-ols">Efficiency Theorems for OLS</a>
+  <ul class="collapse">
+  <li><a href="#ols-and-alternative-estimators" id="toc-ols-and-alternative-estimators" class="nav-link" data-scroll-target="#ols-and-alternative-estimators">OLS and Alternative Estimators</a></li>
+  <li><a href="#understanding-efficiency" id="toc-understanding-efficiency" class="nav-link" data-scroll-target="#understanding-efficiency">Understanding Efficiency</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"></a></li>
+  </ul></li>
+  <li><a href="#reading-assignment" id="toc-reading-assignment" class="nav-link" data-scroll-target="#reading-assignment">Reading Assignment</a>
+  <ul class="collapse">
+  <li><a href="#reading-assignment-1" id="toc-reading-assignment-1" class="nav-link" data-scroll-target="#reading-assignment-1">Reading Assignment</a></li>
+  </ul></li>
+  <li><a href="#maximum-likelihood-estimation-of-the-clm" id="toc-maximum-likelihood-estimation-of-the-clm" class="nav-link" data-scroll-target="#maximum-likelihood-estimation-of-the-clm">Maximum Likelihood Estimation of the CLM</a>
+  <ul class="collapse">
+  <li><a href="#likelihood" id="toc-likelihood" class="nav-link" data-scroll-target="#likelihood">Likelihood</a></li>
+  <li><a href="#maximum-likelihood-estimators" id="toc-maximum-likelihood-estimators" class="nav-link" data-scroll-target="#maximum-likelihood-estimators">Maximum Likelihood Estimators</a></li>
+  <li><a href="#maximum-likelihood-estimation-of-the-clm-1" id="toc-maximum-likelihood-estimation-of-the-clm-1" class="nav-link" data-scroll-target="#maximum-likelihood-estimation-of-the-clm-1">Maximum Likelihood Estimation of the CLM</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"></a></li>
+  </ul></li>
+  <li><a href="#can-we-believe-the-clm" id="toc-can-we-believe-the-clm" class="nav-link" data-scroll-target="#can-we-believe-the-clm">Can We Believe the CLM?</a>
+  <ul class="collapse">
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7"></a></li>
+  <li><a href="#the-clm-assumptions" id="toc-the-clm-assumptions" class="nav-link" data-scroll-target="#the-clm-assumptions">The CLM Assumptions</a></li>
+  <li><a href="#clm-as-a-maximum-likelihood-estimator" id="toc-clm-as-a-maximum-likelihood-estimator" class="nav-link" data-scroll-target="#clm-as-a-maximum-likelihood-estimator">CLM as a Maximum Likelihood Estimator</a></li>
+  <li><a href="#can-we-believe-the-clm-1" id="toc-can-we-believe-the-clm-1" class="nav-link" data-scroll-target="#can-we-believe-the-clm-1">Can We Believe the CLM?</a></li>
+  </ul></li>
+  <li><a href="#assessing-the-clm-assumptions---software-demo" id="toc-assessing-the-clm-assumptions---software-demo" class="nav-link" data-scroll-target="#assessing-the-clm-assumptions---software-demo">Assessing the CLM assumptions - Software Demo</a>
+  <ul class="collapse">
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8"></a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="unit_12.revealjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 12</h1>
+<p class="subtitle lead">The Classical Linear Model</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Statistics for Data Science </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            UC Berkeley, School of Information
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="section" class="level1">
+<h1></h1>
+</section>
+<section id="importance-of-the-classical-linear-model" class="level1">
+<h1>Importance of the Classical Linear Model</h1>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<p>Small data still matters.</p>
+<ul>
+<li>Experimental data can be expensive</li>
+<li>Data may be aggregated - Policy regions</li>
+<li>Markets</li>
+<li>Prior studies</li>
+<li>Some units of observation are limited - Space shuttle launches</li>
+<li>Viral pandemics</li>
+<li>Elections</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Why are we devoting this unit to the classical linear model?</li>
+<li>Well, there’s one big reason and a bunch of small ones.</li>
+<li>The big reason is that, for all the talk about big data, small data still matters</li>
+<li>As a data scientist, you are very likely to work with small data at some point in your career. There’s a few reasons for that…</li>
+</ul>
+</div>
+</section>
+<section id="why-cant-we-use-the-large-sample-model" class="level2">
+<h2 class="anchored" data-anchor-id="why-cant-we-use-the-large-sample-model">Why Can’t we use the Large-Sample Model?</h2>
+<ul>
+<li>Coefficients may have high bias</li>
+<li>Standard error estimators have high variance</li>
+<li>Standard error estimates may have high bias</li>
+</ul>
+<p><span class="math inline">\(\implies\)</span> Our coefficients could be far from the truth</p>
+<p><span class="math inline">\(\implies\)</span> We can’t trust our estimates of uncertainty</p>
+<div class="notes">
+<ul>
+<li>First, let’s clearly say why we can’t just use the large-sample model for small data</li>
+<li>In the large sample model, we rely on consistency and asymptotic normality, but those require a large n.</li>
+<li>For small n, our coefficients naturally have higher variance, but they may also have high bias</li>
+<li>That’s a problem because standard errors only account for variance, they don’t recognize bias</li>
+<li>Furthermore, we have to estimate our standard errors, but those use consistent estimators.</li>
+<li>In small data, our standard error estimates have high variance, and they might be very biased as well.</li>
+<li>So we’re off but our instruments for understanding how far off we are don’t work!</li>
+</ul>
+</div>
+</section>
+<section id="twenty-noisy-questions" class="level2">
+<h2 class="anchored" data-anchor-id="twenty-noisy-questions">Twenty (Noisy) Questions</h2>
+<div class="columns">
+<div class="column" style="width:38%;">
+<ul>
+<li>Is it in a school?</li>
+<li>Is it bigger than a breadbox?</li>
+<li>Is it red?</li>
+<li>It is alive?</li>
+</ul>
+</div><div class="column" style="width:65%;">
+<p><img src="images/questions.jpg" class="img-fluid"></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Imagine a noisy game of 20 questions.</li>
+<li>I’m thinking of a secret object. You’re trying to guess it by asking yes or no questions.</li>
+<li>This is a noisy game, so my answers can be wrong with some probability - say 10</li>
+<li>To represent small data, imagine that you get just 5 questions.</li>
+<li>To represent biased coefficients, say that I can strategically choose when to give the wrong answer to try to direct you to a false target.</li>
+<li>To represent biased standard errors, imagine that you have no idea what fraction of the time I’m allowed to lie.</li>
+<li>The game doesn’t sound like very much fun, does it? This captures the problems that our asymptotic machinery faces in a small sample.</li>
+</ul>
+</div>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"></h2>
+<p>More assumptions</p>
+<p><span class="math inline">\(\downarrow\)</span></p>
+<p>Fewer unknowns</p>
+<p><span class="math inline">\(\downarrow\)</span></p>
+<p>More mileage from data</p>
+<div class="notes">
+<ul>
+<li>So how do fix this? The super short answer is this: we need more assumptions.</li>
+<li>More assumptions means fewer unknowns. Which means that we can get more mileage out of our data.</li>
+</ul>
+</div>
+</section>
+<section id="the-classical-linear-model-clm" class="level2">
+<h2 class="anchored" data-anchor-id="the-classical-linear-model-clm">The Classical Linear Model (CLM)</h2>
+<p>Key assumption: <span class="math inline">\(f_{Y|X}\)</span> belongs to a parametric family.</p>
+<p>Goal: Identify which member is the true one.</p>
+<div class="notes">
+<ul>
+<li>The enlarged set of assumptions we’re talking about is known as the Classical Linear Model.</li>
+<li>We’re going to assume that the conditional distribution of</li>
+<li>Then our job is much smaller. all we need to do is figure out which member of the family is the true one.</li>
+<li>The CLM Is extremely popular. It’s the traditional starting point for linear regression, and the centerpiece of most textbooks in statistics, econometrics, and machine learning.</li>
+<li>It’s also a basis for other statistical models. So it’s very important to know this model. let’s get started..</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="unit-plan" class="level1">
+<h1>Unit Plan</h1>
+<section id="plan-for-the-week" class="level2">
+<h2 class="anchored" data-anchor-id="plan-for-the-week">Plan for the Week</h2>
+<p>Three sections:</p>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</section>
+<section id="plan-for-the-week-contd" class="level2">
+<h2 class="anchored" data-anchor-id="plan-for-the-week-contd">Plan for the Week (cont’d)</h2>
+<p>At the end of this week, you will be able to:</p>
+<ul>
+<li>Understand statistical inference based on the classical linear model</li>
+<li>Use regression diagnostics to assess all CLM assumptions</li>
+<li>Understand how to leverage transformations to help meet CLM assumptions</li>
+</ul>
+</section>
+</section>
+<section id="part-1-importance-of-the-classical-linear-model" class="level1">
+<h1>Part 1: Importance of the Classical Linear Model</h1>
+</section>
+<section id="reading-the-clm-assumptions" class="level1">
+<h1>Reading: The CLM Assumptions</h1>
+<section id="reading-the-clm-assumptions-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-clm-assumptions-1">Reading: The CLM Assumptions</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> Chapter 5 through section 5.1.1.</p>
+<p>Pay attention to the discussion of the disturbance, and notice how the last paragraph seems to imply a particular causal model.</p>
+</section>
+</section>
+<section id="the-clm-assumptions-part-1" class="level1">
+<h1>The CLM Assumptions, Part 1</h1>
+<section id="clm-assumption-1" class="level2">
+<h2 class="anchored" data-anchor-id="clm-assumption-1">CLM Assumption 1</h2>
+<p><strong>I.I.D. Data.</strong> <span class="math inline">\((Y_1, \boldsymbol{X}_1), (Y_2, \boldsymbol{X}_2),...,(Y_n, \boldsymbol{X}_n)\)</span> are independent and identically distributed.</p>
+<p>Common violations:</p>
+<ul>
+<li><p>Clusters</p></li>
+<li><p>Dependencies among family members, competitors, geographic neighbors</p></li>
+<li><p>Dependencies from one time period to the next</p>
+<p>We denote a representative datapoint as <span class="math inline">\((Y, \boldsymbol{X})\)</span> .</p></li>
+</ul>
+<div class="notes">
+<ul>
+<li>First, just like before, we need an assumption of I.I.D. iid tells us that each datapoint is 100</li>
+<li>The model is this: you have a joint distribution and you draw a datapoint. then you reset, totally clear memory and draw the next datapoint.</li>
+<li>Real data generating processes very often don’t look like that. Here are some of the most common violations</li>
+<li>Some of these violations you can test for and model the dependency. for example, if you know what the clusters are, you can build them into a hierarchical model. but in general, you may now even know where all the dependencies are and have no way to model them.</li>
+<li>We usually don’t get a perfectly random sample. That usually doesn’t mean you throw away your data, but you should always assess the assumption honestly. and you may have to be skeptical about your standard errors.</li>
+<li>Since we assume our data is iid, we can drop the subscript, and just discuss a representative random vector, (Y,X).</li>
+</ul>
+</div>
+</section>
+<section id="clm-assumption-2" class="level2">
+<h2 class="anchored" data-anchor-id="clm-assumption-2">CLM Assumption 2</h2>
+<p><strong>No Perfect Collinearity.</strong> <span class="math inline">\(\E[X^TX]\)</span> exists and is invertible.</p>
+<p><span class="math inline">\(\implies\)</span> No <span class="math inline">\(X_i\)</span> can be written as a linear combination of the other <span class="math inline">\(X\)</span> ’s.</p>
+<div class="notes">
+<ul>
+<li>First, the mathematically precise definition…</li>
+<li>What does this mean? For this to be invertible, that tells us that no x variable can be written as an exact linear combination of the other X’s. It has to have some unique variation.</li>
+<li>That makes sense because we know ols works on unique variation. If we combine this assumption with the next one, we can prove that a unique BLP exists.</li>
+</ul>
+</div>
+</section>
+<section id="perfect-collinearity-example-1" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-collinearity-example-1">Perfect Collinearity Example 1</h2>
+<p><span class="math inline">\(\widehat{Price} =  .5\ Donuts + 0.0\ Dozens\)</span></p>
+<p>or</p>
+<p><span class="math inline">\(\widehat{Price} =  0.0\ Donuts + 6.0\ Dozens\)</span></p>
+<div class="notes">
+<ul>
+<li>Here’s an example to help understand why we need this assumption</li>
+<li>You regress the price on both number of donuts and number of dozens of donuts.</li>
+<li>it’s 50 cents per donut, so you can write the price as 50 cents times number of donuts</li>
+<li>But you can also write it as 6 dollars times number of dozens.</li>
+<li>Both are equivalent for predicting the price - this problem doesn’t affect prediction.</li>
+<li>But you can’t estimate coefficients, because they aren’t uniquely defined.</li>
+</ul>
+</div>
+</section>
+<section id="perfect-collinearity-example-2" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-collinearity-example-2">Perfect Collinearity Example 2</h2>
+<p><span class="math inline">\(\widehat{Voters} =  200\ Positive\_Ads + 100\ Negative\_Ads + 0\ Total\_Ads\)</span></p>
+<p>or</p>
+<p><span class="math inline">\(\widehat{Voters} =  100\ Positive\_Ads + 0\ Negative\_Ads + 100\ Total\_Ads\)</span></p>
+<div class="notes">
+<ul>
+<li>Here’s another example, to show you that multicollinearity isn’t always about pairs of variables, it might be more variables</li>
+<li>Here you have a regression with number of positive ads, number of negative ads, and the total number of ads.</li>
+<li>Once again, you can find multiple ways to write the same model.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="the-clm-assumptions-part-2" class="level1">
+<h1>The CLM Assumptions, Part 2</h1>
+<section id="clm-assumption-3" class="level2">
+<h2 class="anchored" data-anchor-id="clm-assumption-3">CLM Assumption 3</h2>
+<p><strong>Linear Conditional Expectation.</strong> The conditional expectation of <span class="math inline">\(Y\)</span> given <span class="math inline">\(\boldsymbol{X}\)</span> exists and has the linear form,</p>
+<p><span class="math inline">\(\E[Y|\boldsymbol{X}=\bs x]= \boldsymbol{x \beta}\)</span></p>
+<p>Where <span class="math inline">\(\boldsymbol{\beta}\)</span> is a vector of parameters, for all <span class="math inline">\(\boldsymbol{x} \in \text{Supp}[\boldsymbol{X}]\)</span></p>
+<div class="notes">
+<ul>
+<li>Next, we have linear conditional expectation.</li>
+<li>This is quite strong. It’s telling us that our joint distribution is essentially linear, although possible distributions around that line can still look very different.</li>
+<li>This makes the regression problem much easier - we know we have a line, we just need to figure out which line.</li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</section>
+<section id="clm-assumption-4" class="level2">
+<h2 class="anchored" data-anchor-id="clm-assumption-4">CLM Assumption 4</h2>
+<p><strong>Homoskedasticity.</strong> Letting <span class="math inline">\(\epsilon = Y - \boldsymbol{X \beta}\)</span> , the conditional variance <span class="math inline">\(\V[\epsilon | \boldsymbol{X}]\)</span> is a constant, which we label <span class="math inline">\(\sigma^2\)</span> .</p>
+<div class="notes">
+<ul>
+<li>We already assumed we have a linear CEF, now we also need to know that the spread around that line is constant.</li>
+<li>homo = same, skedasis = Greek for scattering</li>
+</ul>
+</div>
+</section>
+<section id="understanding-homoskedasticity" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-homoskedasticity">Understanding Homoskedasticity</h2>
+<p><img src="images/homoskedasticity.png" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li></li>
+<li>Here’s a picture to show you what this assumption looks like.</li>
+<li>To understand conditional variance, choose an X and then look at how wide the distribution is along the Y-axis.</li>
+<li>On the left, we have an example of homoskedasticity - for any X, the conditional variance in Y looks the same.</li>
+<li>On the right, we have heteroskedasticity, the conditional variance seems to increase towards the right.</li>
+<li>This will complicate the behavior of our coefficients in a small sample, so we require homoskedasticity in the CLM.</li>
+</ul>
+</div>
+</section>
+<section id="clm-assumption-5" class="level2">
+<h2 class="anchored" data-anchor-id="clm-assumption-5">CLM Assumption 5</h2>
+<p><strong>Normally Distributed Errors.</strong> Letting <span class="math inline">\(\epsilon = Y - \boldsymbol{X \beta}\)</span> , the conditional distribution of <span class="math inline">\(\epsilon\)</span> given <span class="math inline">\(\boldsymbol{X} = \boldsymbol{x}\)</span> is normal.</p>
+<ul>
+<li>Given previous assumptions, <span class="math inline">\(\epsilon \sim N(0, \sigma^2)\)</span> .</li>
+</ul>
+</section>
+<section id="common-clm-errors" class="level2">
+<h2 class="anchored" data-anchor-id="common-clm-errors">Common CLM Errors</h2>
+<p>NOT CLM Assumptions:</p>
+<ul>
+<li>Normality of <span class="math inline">\(X_i\)</span> or <span class="math inline">\(Y\)</span> </li>
+<li>No outliers </li>
+<li>No high Collinearity </li>
+</ul>
+<div class="notes">
+<ul>
+<li>Finally, it’s worth mentioning some common mistakes These are assumptions that are NOT part of the CLM.</li>
+</ul>
+</div>
+</section>
+<section id="clm-model-summary" class="level2">
+<h2 class="anchored" data-anchor-id="clm-model-summary">CLM Model Summary</h2>
+<ol type="1">
+<li>I.I.D. Data</li>
+<li>No Perfect Collinearity</li>
+<li>Linear Conditional Expectation</li>
+<li>Homoskedastic Errors</li>
+<li>Normally Distributed Errors</li>
+</ol>
+</section>
+</section>
+<section id="part-2-properties-of-the-clm" class="level1">
+<h1>Part 2: Properties of the CLM</h1>
+</section>
+<section id="ols-is-unbiased-under-the-clm" class="level1">
+<h1>OLS is Unbiased under the CLM</h1>
+<section id="ols-is-unbiased-under-the-clm-1" class="level2">
+<h2 class="anchored" data-anchor-id="ols-is-unbiased-under-the-clm-1">OLS is Unbiased under the CLM</h2>
+<p>Assume CLM 1-3.</p>
+</section>
+<section id="ols-is-unbiased-under-the-clm-2" class="level2">
+<h2 class="anchored" data-anchor-id="ols-is-unbiased-under-the-clm-2">OLS is Unbiased under the CLM</h2>
+<p>Assume CLM 1-3.<br>
+<span class="math inline">\(\E[Y|\bs X] = \bs X \bs \beta\)</span> <span class="math display">\[\begin{align*}
+\E[\bs Y | \X] &amp;= \left[ \begin{matrix} \E[Y_1|\X] \\ \E[Y_2|\X] \\ \vdots \\ \E[Y_n| \X] \end{matrix} \right]
+= \left[ \begin{matrix} X_1 \bs \beta \\ X_2 \bs \beta\\ \vdots \\ X_n \bs \beta \end{matrix} \right]
+= \X \bs \beta
+  \end{align*}\]</span> <span class="math display">\[\begin{align*}
+\E[\boldsymbol{ \hat \beta}] &amp;= \E[(\X^T\X)^{-1}\X^T\boldsymbol{Y}]  = \E\Big[ \E[(\X^T\X)^{-1}\X^T\boldsymbol{Y} | \X] \Big] \\
+&amp;= \E\Big[ (\X^T\X)^{-1}\X^T \E[ \boldsymbol{Y} | \X] \Big]   = \E\Big[ (\X^T\X)^{-1}\X^T  \X \bs \beta \Big] \\
+  &amp;= \E[\bs \beta] = \bs \beta
+  \end{align*}\]</span></p>
+<div class="notes">
+<ul>
+<li>First, we need to write CLM 3 in matrix form. CLM 3 says that a single data point is expected to fall on the line, and we need to say that all the points fall on the line.</li>
+<li>So you can see that the coefficients are unbiased, and for this we only needed CLM 1-3. The one strong assumption is linear conditional expectation.</li>
+<li>This results is important, because it eliminates one way that our estimates can be wrong. There’s no bias at any sample size. Next, we need a way to estimate variance in a small sample, and then we can start to understand our results.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="classical-standard-errors" class="level1">
+<h1>Classical Standard Errors</h1>
+<section id="standard-errors-under-the-clm" class="level2">
+<h2 class="anchored" data-anchor-id="standard-errors-under-the-clm">Standard Errors under the CLM</h2>
+<p>Two choices:</p>
+<ul>
+<li>Robust Standard Errors</li>
+<li>Classical Standard Errors</li>
+</ul>
+<div class="notes">
+<ul>
+<li>We already know that</li>
+<li>Let’s start with the most fundamental metric of uncertainty: standard errors.</li>
+<li>When working with the CLM, people use two different types of standard errors.</li>
+<li>You’ve already seen robust standard errros, let’s defines what classical standard errors are, and then talk about which of these you should use.</li>
+</ul>
+</div>
+</section>
+<section id="classical-standard-errors-intuition" class="level2">
+<h2 class="anchored" data-anchor-id="classical-standard-errors-intuition">Classical Standard Errors: Intuition</h2>
+<p><strong>Fewer unknowns <span class="math inline">\(\implies\)</span> more accurate estimates</strong> - All data points share a common variance <span class="math inline">\(\V[Y_i] = \sigma^2\)</span> . - Leverage all data points to estimate a single number.</p>
+<div class="notes">
+<ul>
+<li>The basic idea is that under the CLM, we have fewer unknowns, so we should be able to use our data to get more accuracy</li>
+<li>In particular, each datapoint has the same variance. Estimating n different variances would be hard.</li>
+<li>since there’s one variance, we can use every single datapoint to get more information about it</li>
+<li>Here’s a data point that’s high - that’s a signal that variance is high.</li>
+<li>We can use a good estimate for error variance to compute the variance of the betas.</li>
+</ul>
+</div>
+</section>
+<section id="a-simple-equation-for-sampling-variance" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-equation-for-sampling-variance">A Simple Equation for Sampling Variance</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: OLS variance under homoskedasticity">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: OLS variance under homoskedasticity
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Under CLM 1-4, the variance of the OLS coefficients is given by,</p>
+<pre><code>$\V[ \boldsymbol{ \hat \beta} ]  =  \sigma^2 \E[   \boldsymbol{X}^T\boldsymbol{X} ]^{-1}$</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Let me remind you that the general equation for variance of betas is really complicated</li>
+<li>But under homoskedasticity, we were able to simplify it a lot.</li>
+<li>Here’s the theorem we saw earlier. we just multiply the error variance by this matrix.</li>
+<li>How do we get an estimator for this. we just plug in sample analogues for variance and for the matrix</li>
+</ul>
+</div>
+</section>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3"></h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Classical Standard Errors">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Classical Standard Errors
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The classical variance estimator is <span class="math inline">\(\widehat{\V}_C[\boldsymbol{ \hat \beta}]  =  \hat \sigma^2 (   \X^T\X) ^{-1}\)</span> Where <span class="math inline">\(\hat \sigma^2\)</span> is the <em>residual variance</em>, given by <span class="math inline">\(\hat \sigma^2 = \frac{1}{n-k-1} \sum_{i=1}^n \hat \epsilon_i^2\)</span></p>
+</div>
+</div>
+<ul>
+<li>Consistent under CLM 1-4</li>
+<li>Unbiased if <span class="math inline">\(\X\)</span> is nonrandom.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>This is what we call classical standard errors.</li>
+<li>For us, these are consistent, but textbooks that use stronger assumptions list them as unbiased.</li>
+</ul>
+</div>
+</section>
+<section id="should-you-use-classical-standard-errors" class="level2">
+<h2 class="anchored" data-anchor-id="should-you-use-classical-standard-errors">Should you use Classical Standard Errors?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>YES- Classical standard errors are efficient. - If you transform variables to fit CLM, want to take advantage of extra precision. - t-Tests, other Wald tests are based on classical standard errors.</p>
+</div><div class="column" style="width:50%;">
+<p>NO- Without homoskedasticity, classical standard errors are inconsistent - Hard to assess homoskedasticity in small samples</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sampling-distributions-under-the-clm" class="level1">
+<h1>Sampling Distributions under the CLM</h1>
+<section id="clm-sampling-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="clm-sampling-distributions">CLM Sampling Distributions</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Normality of OLS Coefficients">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Normality of OLS Coefficients
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Under CLM 1-5, <span class="math inline">\(\boldsymbol{\hat \beta}\)</span> is distributed multivariate normal.</p>
+</div>
+</div>
+<p><span class="math inline">\(\boldsymbol{ \hat \beta} = \boldsymbol{\beta} +  (\X^T\X)^{-1} \X^T\boldsymbol{\epsilon}\)</span> - Each <span class="math inline">\(\hat{\beta}_i\)</span> is normal - Any linear combination (e.g.&nbsp;<span class="math inline">\(\hat{\beta}_i - \hat{\beta}_j\)</span> ) is normal</p>
+<div class="notes">
+<ul>
+<li>To do more precise inference, including confidence intervals and tests, we have to know what the sampling distribution of our beta hats is.</li>
+<li>We need the full CLM for this. The result is that under CLM 1-5, our beta hats are normal.</li>
+<li>Here’s how you know. remember this equation for beta hat…</li>
+<li></li>
+<li><span class="math inline">\(\epsilon\)</span></li>
+</ul>
+</div>
+</section>
+<section id="testing-coefficients-under-the-clm" class="level2">
+<h2 class="anchored" data-anchor-id="testing-coefficients-under-the-clm">Testing Coefficients under the CLM</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: t-statistics for OLS Coefficients">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: t-statistics for OLS Coefficients
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Assume CLM 1-5 and the null hypothesis:</p>
+<p><span class="math inline">\(H_0: \beta_i = \mu_0\)</span> Let <span class="math inline">\(\hat \sigma_i\)</span> be the classical standard error for <span class="math inline">\(\hat \beta_i\)</span>. <span class="math inline">\(t = \frac{\hat \beta_i - \mu_0}{\hat \sigma_i}\)</span> is distributed <span class="math inline">\(T\)</span> with <span class="math inline">\(n-k -1\)</span> degrees of freedom.</p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Now that we know that our sampling distribution is normal, we can derive a t-statistic</li>
+<li>The setup is very similar to a classic t-test for one variable.</li>
+<li>We have a null hypothesis, which is usually that our</li>
+<li>We standardize, by subtracting the hypothesized mean, and dividing by the standard error.</li>
+<li>Since we’re estimating the standard error, the statistic doesn’t follow a z-distribution, it follows a t-distribution.</li>
+<li>By the way, the degrees of freedom is n-k, we lose a degree of freedom for every beta we estimate.</li>
+<li>So this is why we always run t-tests instead of z-tests in a regression. T-tests are accurate in small samples under the CLM. Of course, your statistical software will run these tests automatically.</li>
+</ul>
+</div>
+</section>
+<section id="take-aways" class="level2">
+<h2 class="anchored" data-anchor-id="take-aways">Take-Aways</h2>
+<p>Under CLM 1-5</p>
+<ul>
+<li>t-tests based on classical standard errors are valid</li>
+<li>Confidence intervals based on classical standard errors are valid</li>
+</ul>
+</section>
+</section>
+<section id="efficiency-theorems-for-ols" class="level1">
+<h1>Efficiency Theorems for OLS</h1>
+<section id="ols-and-alternative-estimators" class="level2">
+<h2 class="anchored" data-anchor-id="ols-and-alternative-estimators">OLS and Alternative Estimators</h2>
+<p>OLS is one of many possible estimators for <span class="math inline">\(\boldsymbol{\beta}\)</span> :</p>
+<ul>
+<li>Should we weight some datapoints more than others?</li>
+<li>What is the right form for the cost function?</li>
+<li>Should we reduce influence of outliers?</li>
+</ul>
+<div class="notes">
+<ul>
+<li>I want to talk about efficiency, but first, let me remind you that there are many possible estimators out there.</li>
+<li>OLS is simple and elegant, but we should remember that it’s just one choice out of many</li>
+<li>If you take a step back and think about how you would design an algorithm to estimate the true betas, here are a few things you might consider.</li>
+<li>Should we weight some datapoints more than others - maybe those that appear least noisy…</li>
+<li>If you think about these choices, you could write different algorithms to take the place of ols - is that a good idea?</li>
+</ul>
+</div>
+</section>
+<section id="understanding-efficiency" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-efficiency">Understanding Efficiency</h2>
+<p>Desirable estimator properties</p>
+<ul>
+<li>Unbiased: <span class="math inline">\(\E[\boldsymbol{\hat \beta}] = \E[\boldsymbol{ \beta}]\)</span></li>
+<li>Efficient: <span class="math inline">\(\V[\boldsymbol{\hat \beta}]\)</span> is small.</li>
+</ul>
+<p>Efficiency: More precision with less data</p>
+<ul>
+<li>Is the OLS estimator efficient?</li>
+</ul>
+<div class="notes">
+<ul>
+<li>When you’re comparing estimators, it’s good to go back and review the properties that we want estimators to have. Here’s two…</li>
+<li>One is being unbiased, and we know ols is unbiased</li>
+<li>Another is what Statisticians call efficiency. An estimator is efficient if it has low variance.</li>
+<li>That really means efficient with data, getting more precision with less data.</li>
+<li>your standard errors will be small, you’ll have good precision, your hypothesis tests will be powerful…</li>
+<li>Is the OLS estimator efficient? There are some famous theorems about this. I’m going to give you a very brief overview of two.</li>
+</ul>
+</div>
+</section>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4"></h2>
+<div class="callout callout-style-default callout-note callout-titled" title="The Gauss-Markov Theorem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Gauss-Markov Theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Under CLM 1-4, out of all estimators that are 1. Unbiased 2. Linear (of the form <span class="math inline">\(\mathbb{M} \boldsymbol{Y}\)</span> for some random matrix <span class="math inline">\(\mathbb{M}\)</span> )</p>
+<p>OLS has the minimum variance.</p>
+</div>
+</div>
+<p>Remember the phrase: OLS is BLUE</p>
+<ul>
+<li>Best</li>
+<li>Linear</li>
+<li>Unbiased</li>
+<li>Estimator</li>
+</ul>
+<div class="notes">
+<ul>
+<li>First, we have the famous Gauss-Markov theorem. These guys looked at all estimators that are unbiased and also linear, meaning they can be written as some matrix times</li>
+<li>You need the first 4 CLM assumptions for this to be true, including homoskedasticity. Without homoskedasticity, a different algorithm, called weighted least squares is more efficient.</li>
+</ul>
+</div>
+</section>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5"></h2>
+<div class="callout callout-style-default callout-note callout-titled" title="The Rao-Blackwell Theorem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Rao-Blackwell Theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Under CLM 1-5, out of all estimators that are 1. Unbiased</p>
+<p>OLS has the minimum variance.</p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>There’s also the Rao-Blackwell theorem, that says that under all 5 CLM assumptions, if you look at unbiased estimators, ols has the minimum variance.</li>
+<li>You can take these as evidence that ols is efficient. As a data scientist, you probably don’t need more reasons to use ols, you just use it. But this is a peek at how statisticians think about estimators that can help you as you learn more statistics.</li>
+<li></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="reading-assignment" class="level1">
+<h1>Reading Assignment</h1>
+<section id="reading-assignment-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-assignment-1">Reading Assignment</h2>
+<p>Make sure you remember the material in section 5.2 through page 189.</p>
+<p>Then read the last paragraph of page 189 through 191.</p>
+</section>
+</section>
+<section id="maximum-likelihood-estimation-of-the-clm" class="level1">
+<h1>Maximum Likelihood Estimation of the CLM</h1>
+<section id="likelihood" class="level2">
+<h2 class="anchored" data-anchor-id="likelihood">Likelihood</h2>
+<p><strong>Likelihood:</strong> A function that takes values for a model’s parameter’s as inputs, and yields the probability of the (fixed) data as output.</p>
+</section>
+<section id="maximum-likelihood-estimators" class="level2">
+<h2 class="anchored" data-anchor-id="maximum-likelihood-estimators">Maximum Likelihood Estimators</h2>
+<p><strong>If the model is true:</strong> - Consistent and asymptotically efficient.</p>
+<p><strong>If the model is not true:</strong> - Consistently estimates the parameters that minimize KL divergence.</p>
+</section>
+<section id="maximum-likelihood-estimation-of-the-clm-1" class="level2">
+<h2 class="anchored" data-anchor-id="maximum-likelihood-estimation-of-the-clm-1">Maximum Likelihood Estimation of the CLM</h2>
+</section>
+<section id="section-6" class="level2">
+<h2 class="anchored" data-anchor-id="section-6"></h2>
+<p><span class="math display">\[\begin{align*}
+\text{Data } \boldsymbol{Y}, \X.  &amp;\text{ Find ML estimator for CLM}\\
+L(b,s |  \boldsymbol{Y}, \X) &amp;= \prod_{i=1}^n \phi\big( Y_i, (\boldsymbol{X_ib},s^2) \big) \\
+\ln(L) &amp;= \ln \prod_{i=1}^n \phi\big( ... \big) = \sum_{i=1}^n \ln \phi( ...) \\
+&amp;= \sum_{i=1}^n ln  \frac{1}{s \sqrt{2 \pi}}e^{\frac{-(Y_i - \boldsymbol{X_ib})^2}{2s^2}} \\
+&amp;= \sum_{i=1}^n \Bigg[ ln  \frac{1}{s \sqrt{2 \pi}} - \frac{(Y_i - \boldsymbol{X_ib})^2}{2s^2} \Bigg] \\
+\text{argmin} \ln(L) &amp;= \text{argmin} \sum_{i=1}^n (Y_i - \boldsymbol{X_ib})^2. \qquad \boldsymbol{\beta_{ML} }= \boldsymbol{\beta_{OLS}}
+\end{align*}\]</span></p>
+<div class="notes">
+<ul>
+<li>Conclusion: We get exactly the ols estimator. In this case, the ML estimator and the ols estimator are the same. This is another way that you can motivate the ols algorithm.</li>
+<li>By the way, remember one cool fact about ML estimators. even if the model is not true, ML will consistently find the model that’s as close as possible to the true distribution, where close is defined as KL-divergence. So that means that even if the CLM does hold, we’re estimating betas that give as good as approximation as possible.</li>
+<li>We usually prefer to use as few assumptions as possible, so this isn’t our favorite way to think about ols. But we want you to see it from this perspective, so you can connect it to the models you’ll see in ML or in your advanced statistics courses.</li>
+<li></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="can-we-believe-the-clm" class="level1">
+<h1>Can We Believe the CLM?</h1>
+<section id="section-7" class="level2">
+<h2 class="anchored" data-anchor-id="section-7"></h2>
+<p><em>All models are wrong, but some are useful.</em> George Box</p>
+<div class="notes">
+<ul>
+<li>If we assume the CLM, then we get a lot of great statistical guarantees - guarantees that let us work with small samples.</li>
+<li>But assumptions are not true because we want them to be true.</li>
+<li>the CLM in particular is a parametric model - a very strict set of assumptions. Can we really believe it?</li>
+<li>Clearly the textbook authors are skeptics. The repeatedly say that you can’t take the CLM literally.</li>
+<li>Alex and I think they make a good point. Of course you should be skeptical of any model. No model is actually TRUE - it’s a model. What’s important is to examine the model and see if it reminds us of the real world, or if we can find aspects of the real world that run counter to model assumptions</li>
+<li>But when you see strong parametric assumptions, there’s not enough flexibility in the model to account for the messiness we see in the world.</li>
+</ul>
+</div>
+</section>
+<section id="the-clm-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="the-clm-assumptions">The CLM Assumptions</h2>
+<ol type="1">
+<li>I.I.D. Data</li>
+<li>No Perfect Collinearity</li>
+<li>Linear Conditional Expectation</li>
+<li>Homoskedastic Errors</li>
+<li>Normally Distributed Errors</li>
+</ol>
+<div class="notes">
+<ul>
+<li>So we think that you should indeed be skeptical of the CLM. But it’s important to qualify that statement. First, we shouldn’t lump the entire CLM in together</li>
+<li>We provided 5 assumptions. and as you go from top to bottom, adding one at a time, the model gets more restrictive</li>
+<li>Remember that some guarantees require all 5 assumptions, and some don’t. unbiased coefficients only require 1-3. and you can usually transform your data so that the linear conditional expectation assumption looks plausible.</li>
+<li>t-Tests require all 5 assumptions, and we think that you should definitely be more skeptical about whether they’re valid.</li>
+</ul>
+</div>
+</section>
+<section id="clm-as-a-maximum-likelihood-estimator" class="level2">
+<h2 class="anchored" data-anchor-id="clm-as-a-maximum-likelihood-estimator">CLM as a Maximum Likelihood Estimator</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="OLS when the CLM is false">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+OLS when the CLM is false
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The OLS estimator is consistent for the parameter values that minimize KL divergence between the true distribution and the model distribution.</p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Another important point that the authors make, is that even if the CLM is not true, it’s a max likelihood estimator.</li>
+<li>So that means that it consistently estimates a distribution that’s as close to the true distribution as possible.</li>
+<li>So even if the CLM is false, OLS doesn’t totally give up. It still tries to get as close as possible. Of course, we need a somewhat large n for this to be meaningful.</li>
+</ul>
+</div>
+</section>
+<section id="can-we-believe-the-clm-1" class="level2">
+<h2 class="anchored" data-anchor-id="can-we-believe-the-clm-1">Can We Believe the CLM?</h2>
+<p>All models are wrong; they are, at best, approximations of reality. But, even without assuming that they are exactly true, when employed and interpreted correctly, they can nonetheless be useful for obtaining estimates of features of probability distributions.</p>
+<ul>
+<li>Aronow and Miller</li>
+</ul>
+</section>
+</section>
+<section id="assessing-the-clm-assumptions---software-demo" class="level1">
+<h1>Assessing the CLM assumptions - Software Demo</h1>
+<section id="section-8" class="level2">
+<h2 class="anchored" data-anchor-id="section-8"></h2>
+<p>This one will be a screenshare using R Studio</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

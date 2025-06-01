@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.43">
+
+  <meta name="author" content="Paul Laskowski and Alex Hughes">
+  <title>Week 10</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Week 10</h1>
+  <p class="subtitle">Questions of Description</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Paul Laskowski and Alex Hughes 
+</div>
+        <p class="quarto-title-affiliation">
+            UC Berkeley, School of Information
+          </p>
+    </div>
+</div>
+
+</section>
+<section>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+</section></section>
+<section>
+<section id="questions-of-description" class="title-slide slide level1 center">
+<h1>Questions of Description</h1>
+
+</section>
+<section id="questions-of-description-1" class="slide level2">
+<h2>Questions of Description</h2>
+
+<img data-src="images/gdp.jpg" class="r-stretch"><pre><code>What is the shape of the relationship between a country's
+economic output and Internet access?</code></pre>
+<aside class="notes">
+<ul>
+<li>Here are some questions that you might want to answer with a statistical analysis…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="questions-of-description-2" class="slide level2">
+<h2>Questions of Description</h2>
+<p><img data-src="images/equal_pay.jpg"> Image: Alarichall (CC SA 4.0)</p>
+<pre><code>How big is the pay gap in the United States? </code></pre>
+<aside class="notes">
+<ul>
+<li>That is, what is the difference in pay between workers of different genders?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="questions-of-description-3" class="slide level2">
+<h2>Questions of Description</h2>
+
+<img data-src="images/pay_age.jpg" class="r-stretch"><pre><code> How does the pay gap depend on the age of the worker?</code></pre>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p>standout</p>
+<p>Description</p>
+<aside class="notes">
+<ul>
+<li>One thing these questions have in common: They are questions of description.</li>
+<li>They are also questions that can be addressed using linear regression.</li>
+<li>You’ve learned the mechanics of how linear regression works. You know the nuts and bolts of interpreting coefficients and statistical guarantees.</li>
+<li>But how do you build a model, when the purpose is description. that’s a more strategic level of thinking</li>
+<li>There’s an entire set of concerns that goes into building models for description, and that’s going to be out topic in this unit.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="plan-for-the-week" class="slide level2">
+<h2>Plan for the Week</h2>
+<p>Preamble</p>
+<ul>
+<li><p>Three modes of model building</p>
+<p>Three sections about descriptive modeling</p></li>
+</ul>
+<ol type="1">
+<li>Capturing nonlinear relationships</li>
+<li>Measurement with controls</li>
+<li>Modeling conditional effects</li>
+</ol>
+</section>
+<section id="plan-for-the-week-cont." class="slide level2">
+<h2>Plan for the Week (cont.)</h2>
+<p>At the end of this week, you will be able to:</p>
+<ul>
+<li>Understand how three major modes of model building lead to very different models</li>
+<li>Balance design goals when creating a model for description</li>
+<li>Plan a set of model specifications for a regression table</li>
+</ul>
+</section></section>
+<section>
+<section id="what-is-linear-model-building" class="title-slide slide level1 center">
+<h1>What Is Linear Model Building?</h1>
+
+</section>
+<section id="what-is-linear" class="slide level2">
+<h2>What Is Linear?</h2>
+<aside class="notes">
+<ul>
+<li>Before we talk about model building, let’s review a basic definition. What makes a linear model linear?</li>
+<li>Here’s our classic linear model equation, you know this is linear, but why?</li>
+<li>You might answer,</li>
+<li>Here’s a model, where we’ve squared X. If you think about it, this is the equation for a parabola, not a line. But actually, you can run an ols regression on this, no problem, because</li>
+<li>Another example, where we’ve taken logs of Y and X. That’s no longer the equation for a line, but we’ve just created new variables, and we can run an ols regression on them.</li>
+<li>That’s not to say that everything in the world is linear. Here’s an example of an equation that’s not allowed in OLS</li>
+<li>But I’m hinting at the fact that there’s a lot more flexibility in the linear model than you might think at first.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-linear-model-building-1" class="slide level2">
+<h2>What Is Linear Model Building?</h2>
+<p>How do you select from all the possible linear models?</p>
+<ul>
+<li>Which variables to include, which to exclude</li>
+<li>Whether and how to transform each variable</li>
+<li>Whether to create new variables</li>
+<li>Whether to multiply variables together</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Once you recognize that there are actually a lot of different models that count as linear, you might wonder: how do you choose one?</li>
+<li>Here are some more specific questions that you face as a data scientist</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-model-building-process" class="slide level2">
+<h2>The Model-Building Process</h2>
+<p><embed data-src="images/propose_evaluate.pdf"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Modeling goals</li>
+<li>Observations from data</li>
+<li>Background knowledge</li>
+<li>Background theory</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Diagnostic plots</li>
+<li>Measures of fit</li>
+<li>Tests of model assumptions</li>
+</ul>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Here’s a very very rough schematic, just to emphasize that model building is usually an iteratie prcess. You propose a model, then evaluate it, then make adjustments and propose a new model</li>
+<li>When you are proposing a model, here are some of the factors that will guide your decision</li>
+<li>And when you are evaluating</li>
+<li>In the following segments, we’re going to dig into all of these components, and give you an idea of wha this process is like</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="modes-of-model-building" class="title-slide slide level1 center">
+<h1>Modes of Model Building</h1>
+
+</section>
+<section id="an-important-question-to-keep-in-mind" class="slide level2">
+<h2>An Important Question to Keep in Mind:</h2>
+<p>standout</p>
+<p>What are your goals?</p>
+<aside class="notes">
+<ul>
+<li>If I can give you one piece of advice as you start model building, it’s to keep this question in your mind: what are your goals?</li>
+<li></li>
+<li>Depending on what your modeling goals are, even if you have the same data, you may end up with very very different models.</li>
+<li>That’s true of linear regression specifically. A statistician, a political scientist, and a machine learning researcher can all use linear regression on the same data, but the models will look very differerent. Those differences can be traced to the different goals that each of those people have.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="three-modes-of-model-building" class="slide level2">
+<h2>Three Modes of Model Building</h2>
+<ol type="1">
+<li>Predictive modeling: What value can we expect for data we haven’t seen?</li>
+<li>Descriptive modeling: How can we make sense of the patterns in data?</li>
+<li>Explanatory modeling: How can we measure effects inside a causal theory?</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>So there is a large variety in the way that people in different fields build models.</li>
+<li>At the same time, we can identify three major modes of model building that account for most of the variety we see: predictive, descriptive, and explanatory. It’s important that you understand the differences between them, and the goals that are common in each one.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="predictive-modeling" class="slide level2">
+<h2>Predictive Modeling</h2>
+<p><strong>Prediction:</strong> making guesses for unknown values</p>
+<ul>
+<li><p>For new people, new pictures of cats, or other units</p></li>
+<li><p>For future time periods</p>
+<p>A key focus of machine learning and time series analysis</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Let’s start with predictive modeling. When we say prediction, we mean computing a guess for data we haven’t seen.</li>
+<li>It could be new people. Ex: you get data about a patient’s symptoms and you want to predict if they have an immune disorder.</li>
+<li>It could also be future values. Ex. given the last 3 years of data, how many waffle irons can we sell next december?</li>
+<li>When we think about predictive modeling, the field that immediately jumps to mind is machine learning, especially supervised machine learning. But a lot of time series analysis is also very focused on prediction.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="key-goals-of-predictive-modeling" class="slide level2">
+<h2>Key Goals of Predictive Modeling</h2>
+<ol type="1">
+<li>Accurately predict values </li>
+<li>Be interpretable by humans (usually less important)</li>
+</ol>
+<p>Implications for linear regression</p>
+<ul>
+<li>Hundreds of variables, or more </li>
+<li>Variable selection by algorithm - False discovery: Out of many variables, some will look important by chance. </li>
+<li>Coefficients usually don’t have meaning </li>
+</ul>
+</section>
+<section id="descriptive-modeling" class="slide level2">
+<h2>Descriptive Modeling</h2>
+<p><strong>Description:</strong> summarizing or representing data in a compact, human-understandable way</p>
+<ul>
+<li>Gain understanding by interpreting the model’s internal structure</li>
+<li>Popular in statistics, but ``not commonly used for theory building and testing in other disciplines’’ \ —Shmueli, Galit. _ To Explain or to Predict?_</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Descriptive modeling is really popular among statisticians, but not very popular outside of statistics. Why? Associations are not Causations</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="key-goals-of-descriptive-modeling" class="slide level2">
+<h2>Key Goals of Descriptive Modeling</h2>
+<ol type="1">
+<li>Measure complex concepts </li>
+<li>Capture features of the world </li>
+<li>Simplify phenomena to make them understandable</li>
+<li>Highlight associations</li>
+<li>Generate hypotheses</li>
+</ol>
+<p>Implications for linear regression</p>
+<ul>
+<li>Parsimonious models</li>
+<li>Use of logarithms and other transforms with clear interpretation</li>
+<li>Long build process relying on EDA</li>
+</ul>
+</section>
+<section id="explanatory-modeling" class="slide level2">
+<h2>Explanatory Modeling</h2>
+<p><strong>Explanation:</strong> using data to test or estimate parameters in a causal theory</p>
+<ul>
+<li>Explanation lets us reason about actions</li>
+<li>Common mode in economics, political science, epidemiology, psychology, environmental science…</li>
+<li>Causal assumptions are required to make causal claims</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Why is this important? Because we may want to learn something from a model and then DO something. Maybe we want to set a policy to improve public health. Maybe we want to change our prices to increase profits.</li>
+<li>Business problems are also usually causal. You want to know what will happen if the business changes its prices, or adopts a new policy. You don’t care if lower prices are associated with more profit, you want to know what will happen if you actually change the prices.</li>
+<li>I want to point out something in our definition - the causal theory is there first, then we combine it with data. It may not be a big Theory with a capital T. However: You always need to start with some causal background information. We’ll come back to this point in our unit on explanatory modeling.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="key-goals-of-explanatory-modeling" class="slide level2">
+<h2>Key Goals of Explanatory Modeling</h2>
+<ol type="1">
+<li>Measure a causal effect.</li>
+<li>Evaluate a theory.</li>
+<li>Predict the consequences of potential actions.</li>
+</ol>
+<p>Implications for linear regression</p>
+<ul>
+<li>Variable selection is guided by causal theory</li>
+<li>Models oriented to perform a specific measurement</li>
+<li>Key challenge is the operationalization gap between theoretical constructs and variables</li>
+</ul>
+</section>
+<section id="three-modes-of-model-building-1" class="slide level2">
+<h2>Three Modes of Model Building</h2>
+<ol type="1">
+<li>Predictive modeling: What value can we expect for data we haven’t seen?</li>
+<li>Descriptive modeling: How can we make sense of the patterns in data?</li>
+<li>Explanatory modeling: How can we measure effects inside a causal theory?</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>So there you have the three major modes of model building. We’ve seen that each of them has very different goals, which leads to quite different linear models. Let me also point out that the divisions aren’t always that clear. In descriptive modeling, a key goal is capturing features of the joint distribution. But of course, that can also help us to make sense of an explanatory model. In fact, trying to capture features of the joint distribution can sometimes lead you to more accurate machine learning models for prediction.<br>
+</li>
+<li>But as you keep learning, it can really help to pay attention to which of the three main modeling modes you’re working in..</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="introduction-to-descriptive-modeling" class="title-slide slide level1 center">
+<h1>Introduction to Descriptive Modeling</h1>
+
+</section>
+<section id="how-would-you-describe-these-data" class="slide level2">
+<h2>How Would You Describe These Data?</h2>
+<p><embed data-src="images/cars.pdf"></p>
+<aside class="notes">
+<ul>
+<li>If you had to describe this data over the phone, how would you do it? Take 10 seconds, and try to say a few words about it right now.</li>
+<li>What words are you using? Slope? Decreasing? Maybe hyperbolic or exponential?</li>
+<li>If you used any of those words, really, what you’re doing right now is descriptive model building</li>
+<li>You may be doing it very informally, or even subconsciously, but you’re probably imagining a smooth curve passing through these points and describing that curve.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="introduction-to-descriptive-modeling-1" class="slide level2">
+<h2>Introduction to Descriptive Modeling</h2>
+<p><strong>Description:</strong> summarizing or representing data in a compact, human-understandable way</p>
+<p>Linear regression is a tool that can help us answer:</p>
+<ul>
+<li>What patterns exist in a dataset?</li>
+<li>What is the shape of a specific relationship?</li>
+<li>What is the size of a feature or effect? </li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Let’s review what Description means.</li>
+<li>There are many tools we can use for describing data. There’s clustering algorithms, principle component analysis, and linear regression is also a description tool</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-does-it-take-to-build-a-descriptive-model" class="slide level2">
+<h2>What Does It Take to Build a Descriptive Model?</h2>
+<p>Skill, art, and a lot of iteration</p>
+<ul>
+<li>No causal theory to constrain model choice</li>
+<li>Often many ways to operationalize concepts</li>
+<li>Need to balance many competing goals</li>
+<li>Takes time to build intuition in many dimensions</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>All together this can be a very creative form of model building.</li>
+<li>It’s our main topic for today - I hope you’re excited to dive in.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="logarithms" class="title-slide slide level1 center">
+<h1>Logarithms</h1>
+
+</section>
+<section id="a-question-of-development" class="slide level2">
+<h2>A Question of Development</h2>
+<p>How does the economic productivity of a country relate to Internet access?</p>
+<p>Data taken from the World Bank</p>
+<ul>
+<li>GDP per capita</li>
+<li>Internet users per 100</li>
+</ul>
+</section>
+<section id="is-ols-regression-appropriate" class="slide level2">
+<h2>Is OLS Regression Appropriate?</h2>
+<p><embed data-src="images/gdp1.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Here’s a graph of our data.</li>
+<li>You can see it has this very interesting pattern - a very nonlinear pattern. Try taking your finger, and drawing a line to represent this data. Take a moment to think about this question: is it ok to run a linear regression? here?</li>
+<li></li>
+<li>The short answer is that you can absolutely run an ols regression. We know that OLS coefficients are consistent for the best linear predictor, as long as the best linear predictor exists and is unique. (there is another assumption to worry about, which is iid. Can you really believe that countries are independent from each other? I’m skeptical, but there are a lot of country-by-country studies out there, so let’s note the problem as a limitation but keep going.)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="interpreting-the-level-level-model" class="slide level2">
+<h2>Interpreting the Level-Level Model</h2>
+<p><span class="math inline">\(\widehat{users} = 2.4 + .0021\ GDP\)</span> <strong>Interpretation 1:</strong> A country with an extra $ 1 of GDP per capita is predicted to have another .0021 Internet users per 100.</p>
+<p><strong>Interpretation 2:</strong> A country with an extra $ 1,000 of GDP per capita is predicted to have another 2.1 Internet users per 100.</p>
+<aside class="notes">
+<ul>
+<li>Here’s are the results of fitting the ols regression</li>
+<li>Here’s how we would interpret the coefficient…</li>
+<li>Both of these numbers are really small. So we can improve this interpretation by choosing a bigger change…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="does-ols-regression-meet-our-goals" class="slide level2">
+<h2>Does OLS Regression Meet Our Goals?</h2>
+<p><embed data-src="images/gdp2.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Here’s what the regression line looks like. We know this is valid as far as ols assumptions.</li>
+<li>But does it meet our goals? In particular, one of the main goals of descriptive modeling is capturing features of the world.</li>
+<li>There’s a clear structure that is not reflected in our model.</li>
+<li>If you look in the middle section, you can see that the prediction is consistently too low. At the extremes, the prediction is too high.</li>
+<li>There’s one other small problem that’s worth mentioning. it’s only a minor problem, but notice that most of the data is clustered on the left side. The slope of the line is mostly determined by these few points on the right side. that’s ok, but there’s these points on the left potentially have important information that’s not really making it into the model.</li>
+<li>For all these reasons, we need to consider a variable transformation.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="variable-transformation" class="slide level2">
+<h2>Variable Transformation</h2>
+<div title="\textbf{Variable transformation}">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>Replace $X$ with $f(X)$ for some $f: \R \rightarrow \R$\note[item]{What function $f$ should you use?  Here are some of
+  the most common choices.}- $\ln(X)$</code></pre>
+<ul>
+<li><span class="math inline">\(\log_{10}(X)\)</span></li>
+<li>Indicator functions</li>
+<li><span class="math inline">\(X^a\)</span></li>
+<li>Polynomials(X) </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Transforming a variable, means that we’re replacing some X with a function f(X)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="taking-the-log-of-gdp" class="slide level2">
+<h2>Taking the Log of GDP</h2>
+<p><embed data-src="images/gdp3.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Here’s what the data looks like after you take a log of GDP per capita. Can you draw a line through it? Much easier!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="taking-the-log-of-gdp-1" class="slide level2">
+<h2>Taking the Log of GDP</h2>
+<p><embed data-src="images/gdp4.pdf"></p>
+<aside class="notes">
+<ul>
+<li>And here is the new regression line, which matches the shape of this relationship.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="model-widehatusers-beta_0-beta_1-ln-gdp-quadquad-r2-.68" class="slide level2">
+<h2>Model: <span class="math inline">\(\widehat{users} = \beta_0 + \beta_1 \ln GDP \quad\quad R^2 = .68\)</span></h2>
+<p><embed data-src="images/gdp5.pdf"></p>
+<aside class="notes">
+<ul>
+<li>There’s another way to view this model. Let’s go back to the original x-axis, without the log</li>
+<li>If we do that, this is what our model looks like</li>
+<li>This is a logarithmic curve. That makes sense. Our model says that predicted internet users is a linear function of the log of GDP.</li>
+<li>Think about it this way, we took the log of X and revealed a straight line in the scatterplot. That tells us that we have a logarithmic relationship.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="interpreting-and-applying-logarithms" class="title-slide slide level1 center">
+<h1>Interpreting and Applying Logarithms</h1>
+
+</section>
+<section id="interpreting-logarithms" class="slide level2">
+<h2>Interpreting Logarithms</h2>
+<p><strong>Base 10 log</strong> <span class="math inline">\(\widehat{users} = -66.5 + 32.0 \log_{10} GDP\)</span></p>
+<p>Interpretation: adding a 0 to GDP associated with 32 more Internet users per 100</p>
+<p><strong>Base <span class="math inline">\(e\)</span> log</strong> <span class="math inline">\(\widehat{users} = -66.5 + 13.9 \ln GDP\)</span></p>
+<p>Interpretation: multiplying GDP by a small <span class="math inline">\(1+\alpha\)</span> associated with</p>
+<p><span class="math inline">\(13.9 \alpha\)</span> more Internet users per 100</p>
+<aside class="notes">
+<ul>
+<li>There are actually two common choices for the logarithm, you can take a base 10 log, or a natural log</li>
+<li>A base 10 log is helpful when we want to think about a variable in powers of 10. We’re all used to powers of 10.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="interpreting-logarithms-cont." class="slide level2">
+<h2>Interpreting Logarithms (cont.)</h2>
+<p><span class="math inline">\(\frac{\partial \widehat{users}}{\partial GDP} =
+                                                    \frac{\partial}{\partial GDP}[ -66.5 + 13.9\ln GDP ]\)</span></p>
+<aside class="notes">
+<ul>
+<li><span class="math inline">\(\frac{\partial}{\partial x}\ln x = 1/x\)</span></li>
+<li></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="model" class="slide level2">
+<h2>Model:</h2>
+<pre><code>$\widehat{users} = \beta_0 + \beta_1 \ln GDP \quad\quad R^2 = .68$</code></pre>
+<p><embed data-src="images/gdp5.pdf"></p>
+<aside class="notes">
+<ul>
+<li><p>Let’s see what that rule of thumb looks like on the graph. Let’s choose some point on the curve, GDP = 10,000.</p></li>
+<li><p>I’m going to draw the tangent line at that point - it’s a good approximation for small changes in GDP.</p></li>
+<li><p>I know the slope of the tangent is 13.9/GDP</p></li>
+<li><p>Let’s say that I increase GDP by some proportion,</p></li>
+<li><p>What’s the change in Y? I multiple the change in X by the slope and I get</p></li>
+<li><p>If alpha is small, then the tangent line is close to the curve, so this is a good approximation.</p></li>
+<li><p>For example, if we increase GDP by 1</p></li>
+<li><p>But if you think about really big changes: 30</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="other-uses-of-logarithms" class="slide level2">
+<h2>Other Uses of Logarithms</h2>
+<p>Log-linear form: <span class="math inline">\(\ln Y = \beta_0 + \beta_1 X\)</span> - Interpretation: <span class="math inline">\(\frac{\Delta Y}{Y} \approx \beta_1 \Delta X\)</span> - Example: add 0.1 to <span class="math inline">\(X\)</span> <span class="math inline">\(\rightarrow\)</span> add <span class="math inline">\(0.1 \beta_1 \cdot Y\)</span> to <span class="math inline">\(Y\)</span></p>
+<p>Log-log form: <span class="math inline">\(\ln Y = \beta_0 + \beta_1 \ln X\)</span> - Constant elasticity model - Interpretation: <span class="math inline">\(\frac{\Delta Y}{Y} \approx \beta_1 \frac{\Delta X}{X}\)</span> - Example: increase <span class="math inline">\(X\)</span> by 1 % <span class="math inline">\(\rightarrow\)</span> increase <span class="math inline">\(Y\)</span> by <span class="math inline">\(\beta_1 \%\)</span></p>
+</section>
+<section id="when-to-apply-logs" class="slide level2">
+<h2>When to Apply Logs</h2>
+<p>What makes a variable a good candidate for a log transform?</p>
+<ul>
+<li>Always positive - Don’t add a constant to make variable positive</li>
+<li>Spans multiple orders of magnitude</li>
+<li>Clustered near zero with high outliers</li>
+<li>Percent changes are meaningful </li>
+</ul>
+</section>
+<section id="power-transformations" class="slide level2">
+<h2>Power Transformations</h2>
+<p><strong>Power transformation:</strong> Replace <span class="math inline">\(X\)</span> with <span class="math inline">\(X^\alpha\)</span> for some</p>
+<p><span class="math inline">\(\alpha \in \R\)</span> .</p>
+<ul>
+<li><p><span class="math inline">\(\sqrt{X}\)</span> behaves similarly to <span class="math inline">\(\ln X\)</span> .</p></li>
+<li><p><span class="math inline">\(X^2\)</span> , <span class="math inline">\(X^3\)</span> ,… spreads values far from zero further apart.</p>
+<p>Interpretation is more difficult than with logs.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li></li>
+<li>I want to very quickly mention a broader class of transformations, called the power transformations</li>
+<li>Here, we’re raising X to a power.</li>
+<li>For example, you might take the square root of X in situations where you can’t take the log, because a variable sometimes equals zero.</li>
+<li>However, these transformations make it much harder to interpret the results of a model, so they’re not used very often in descriptive modeling.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="when-to-apply-transformations" class="slide level2">
+<h2>When to Apply Transformations</h2>
+<p><strong>Question:</strong> Should you always transform your variables to make them normal?<br>
+- Normal variables are <strong>never</strong> a requirement for OLS regression. - Even in the classical linear model, <em>errors</em> are normal, not variables.</p>
+<p><span class="math inline">\(\implies\)</span> Don’t focus too much on normality. Capturing relationships is more important.</p>
+<aside class="notes">
+<ul>
+<li>Before we move on, I want to address one issue, a lot of websites will tell you to always transform your variables until they look normal. Is that a good idea?</li>
+<li>Well, first of all, normal variables are never a requirement for ols. Even in the classical linear model, the errors must be normal, not the variables. Of course if you’re in a large sample, there’s no assumption of normality at all.</li>
+<li>But I will say that normal variables are generally a good thing. Normal means that most of your data isn’t so clustered that it doesn’t affect the model. So it’s good to try for normal variables, but bad if that’s the only thing you’re thinking about</li>
+<li>Remember, your goals for descriptive modeling. In particular, transforms are great for the goal of capturing features of the world. that means looking at scatterplots, and trying to reveal linear patterns. If you can make your scatterplots look linear, that’s usually much more important than having nice normal distributions.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="polynomials" class="title-slide slide level1 center">
+<h1>Polynomials</h1>
+
+</section>
+<section id="how-can-we-improve-predictive-accuracy" class="slide level2">
+<h2>How Can We Improve Predictive Accuracy?</h2>
+<p><embed data-src="images/gdp1.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Here’s another look at our GDP and Internet User data. Previously, we used a log transform. That was good for capturing the shape and great for model interpretability.</li>
+<li>What if I tell you that your goals are little different. You still care about interpretation, but you really want more accuracy. You’d be willing to give up a little bit of interpretability to get a higher</li>
+<li>In that case, you might want to consider a polynomial regression.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="polynomial-regression" class="slide level2">
+<h2>Polynomial Regression</h2>
+<p>Motivation: Polynomials can approximate any continuous function (e.g.&nbsp;Weierstrass theorem)</p>
+<p>Quadratic:</p>
+<p><span class="math inline">\(\widehat{Users} = \beta_0 + \beta_1 GDP + \beta_2 GDP^2\)</span> - OLS finds the parabola that minimizes MSE.</p>
+<p>Cubic:</p>
+<p><span class="math inline">\(\widehat{Users} = \beta_0 + \beta_1 GDP + \beta_2 GDP^2 + \beta_3
+  GDP^3\)</span> - OLS finds the cubic function that minimizes MSE.</p>
+<aside class="notes">
+<ul>
+<li>First, why polynomials? well, polynomials are really flexible. They can approximate any continuous function.<br>
+</li>
+<li>The idea here is we’re going to run a regression with different powers of the same variable.</li>
+<li>Most of the time, we’ll use just a quadratic. So we’ll put in GDP and</li>
+<li>What will ols regression do? ols finds the beta’s that minimize MSE. If you change these betas, you get all the different parabolas in the X-Y plane.</li>
+<li>You can also put in the cubic term, though that’s much less common.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-parabolic-pattern" class="slide level2">
+<h2>A Parabolic Pattern?</h2>
+<p><embed data-src="images/gdp1.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Let’s try the quadratic form.</li>
+<li>Here’s the data again. I want you to imagine what you think the best fitting parabola looks like. try tracing it with your finger.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="model-1" class="slide level2">
+<h2>Model:</h2>
+<pre><code>$\widehat{users} = \beta_0 + \beta_1 GDP + \beta_2 GDP^2
+\quad\quad R^2 = .66$ </code></pre>
+<p><embed data-src="images/gdp6.pdf"></p>
+<aside class="notes">
+<ul>
+<li>There you have the best fitting parabola</li>
+<li>You can see that it definitely looks closer to the data than the line. The fit is actually slightly worse</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="interpreting-the-quadratic-specification" class="slide level2">
+<h2>Interpreting the Quadratic Specification</h2>
+<p><span class="math inline">\(\widehat{Users} = 18.5 + .0048\ GDP - 8.0\cdot 10^{-8}\ GDP^2\)</span> <span class="math inline">\(\frac{\partial \widehat{Users}}{\partial GDP} = .0048  - 1.6\cdot 10^{-7}\ GDP\)</span></p>
+<p>Example 1: If <span class="math inline">\(GDP = 10,000\)</span> , then</p>
+<p><span class="math inline">\(\frac{\partial \widehat{Users}}{\partial GDP} = .0032\)</span> .</p>
+<p>(Extra $ 1,000 in GDP associated with 3.2 extra users)</p>
+<p>Example 2: If <span class="math inline">\(GDP = 20,000\)</span> , then</p>
+<p><span class="math inline">\(\frac{\partial \widehat{Users}}{\partial GDP} = .0016\)</span> .</p>
+<p>(Extra $ 1,000 in GDP associated with 1.6 extra users)</p>
+<aside class="notes">
+<ul>
+<li>Here’s the equation with the fitted coefficients</li>
+<li>What’s the interpretation of this equation?</li>
+<li>Let’s look at the slope… we get a function - the partial depends on GDP</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="higher-order-polynomials" class="slide level2">
+<h2>Higher-Order Polynomials</h2>
+<p><embed data-src="images/gdp9.pdf"></p>
+<aside class="notes">
+<ul>
+<li>what happens if we increase the order of our polynomial?</li>
+<li>Here you can see the best fitting cubic function. Notice that the</li>
+<li>The curve looks a little better at the end, it doesn’t turn downwards.</li>
+<li>How far can we push this? can we keep increasing the order of the polynomial and keep getting better and better predictions?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="higher-order-polynomials-1" class="slide level2">
+<h2>Higher-Order Polynomials</h2>
+<p><embed data-src="images/gdp10.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Here, I tried to fit an order 30 polynomial. Indeed, the</li>
+<li>But the shape doesn’t make sense. Why would internet users go up and down with GDP?</li>
+<li>Especially on the right hand side, you can see that the curve traces from one point to the next.</li>
+<li>This is a situation called overfitting. We have a high</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="measurement-with-controls" class="title-slide slide level1 center">
+<h1>Measurement With Controls</h1>
+
+</section>
+<section id="measurement-with-controls-1" class="slide level2">
+<h2>Measurement With Controls</h2>
+<p><strong>Note:</strong> This is a placeholder slide for an introduction that we will provide to the section. We’re just placing it here for organization.</p>
+</section></section>
+<section>
+<section id="interpreting-indicator-variables" class="title-slide slide level1 center">
+<h1>Interpreting Indicator Variables</h1>
+
+</section>
+<section id="example-measuring-the-wage-gap" class="slide level2">
+<h2>Example: Measuring the Wage Gap</h2>
+<p><embed data-src="images/news.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Let’s take a look at an example measurement goal. The example we’ll use is the wage gap.</li>
+<li>You probably already know about the wage gap - newspapers in the US talk about it from time to time.</li>
+<li>In particular, you may have heard this figure: that a woman in the US earns 78 cents for every dollar that a man earns</li>
+<li>I hope you agree that this is an important topic - we would like to live in a country where people of all genders are paid equally</li>
+<li>But how can you actually measure the wage gap? Should we compare all men and all women? Or men and women in the same job? But is that a fair comparison if people of different genders don’t get the same job opportunities? There’s really no easy answer to these questions. But let’s at least try measuring the gender gap and see what linear regression techniques may help.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="example-measuring-the-wage-gap-cont." class="slide level2">
+<h2>Example: Measuring the Wage Gap (cont.)</h2>
+<p>Data: Current Population Survey, 2019 Annual Social and Economic Supplement (ASEC)</p>
+<p>Key variables:</p>
+<ul>
+<li>Status: full-/part-time work status - 1: not in labor force</li>
+<li>2: full-time hours (35 or more), usually full-time \ </li>
+<li>Pay: total wage and salary earnings</li>
+<li>Sex - 1: male</li>
+<li>2: female</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>In the survey, there is an income variable, and unlike most surveys, it’s not binned into ranges, it’s any integer.</li>
+<li>The survey has no variable for gender, and it has one variable labeled sex. You can see It only has two levels, male and female. This is not a best practice, because it means that transgender and non-binary people may feel like they don’t have an option. Unfortunately, I have to say that we’re filming this in 2020, and this is still what most big surveys are like.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="overall-comparison" class="slide level2">
+<h2>Overall Comparison</h2>
+<p><embed data-src="images/wage_hist.pdf"></p>
+<aside class="notes">
+<ul>
+<li>First, let’s try the simplest thing we can do: comparing all men against all women.</li>
+<li>Actually, we’ve seen this problem before. When we talked about t-tests, we had two groups, and we wanted to know if the means were the same.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="direct-application-of-t-test" class="slide level2">
+<h2>Direct Application of t-Test</h2>
+<p>Mean for men: $ 68,700</p>
+<p>Mean for women: $ 52,100</p>
+<p>Mean difference: $ 16,600</p>
+<p>(76 cents to the dollar)</p>
+<p><span class="math inline">\(t = 27.938, df = 61,733, p&lt; 2.2e-16\)</span></p>
+<aside class="notes">
+<ul>
+<li>Here are the results of that t-test analysis.</li>
+<li>You can see man pay for men about 69K, 52K for women,</li>
+<li>That corresponds to about 76 cents to the dollar</li>
+<li>The t statistic is giant - almost 30, so the null is overwhelmingly rejected</li>
+<li>Now, what about linear regression? Well, it’s important to realize that this exact analysis can be done in a regression framework.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-same-analysis-in-a-regression-framework-part-i" class="slide level2">
+<h2>The Same Analysis in a Regression Framework, Part I</h2>
+<p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 Female\)</span></p>
+<p>For men, <span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 (0) = \beta_0\)</span> .</p>
+<p>For women,</p>
+<p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 (1) = \beta_0 + \beta_1\)</span> .</p>
+<p><span class="math inline">\(\implies \beta_1\)</span> represents the difference between groups.</p>
+<aside class="notes">
+<ul>
+<li>This may seem like a strange view of regression - aren’t we supposed to be fitting a line?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-same-analysis-in-a-regression-framework-part-ii" class="slide level2">
+<h2>The Same Analysis in a Regression Framework, Part II</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><embed data-src="images/wage_slope.pdf"></p>
+</div><div class="column" style="width:40%;">
+<p><span class="math inline">\(\Delta Y = \frac{\text{slope}}{\Delta X}\)</span></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Well, there is a line. Here’s what the data looks like if we plot it, and here’s the regression line.<br>
+</li>
+<li>(I took a small subset and added a little jitter so you can see things better.)</li>
+<li>Since we have an indicator variable, the only x values are 0 and 1</li>
+<li>What’s the difference in in the predicted Y?…</li>
+<li>I can write:</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-same-analysis-in-a-regression-framework-part-iii" class="slide level2">
+<h2>The Same Analysis in a Regression Framework, Part III</h2>
+<aside class="notes">
+<ul>
+<li>When we look at our regression output, the coefficient for Female will have exactly the same difference in means that we say earlier.</li>
+<li>One more thing to note: we usually show a standard t-test for each coefficient. Here, we have 3 stars for Female. The null of that test is that the slope is zero, which we know means that men and women are the same. So this is exactly the same as the classic t-test for two groups.</li>
+<li>Here’s another question to think about: what do the stars on the intercept mean?</li>
+<li>Remember that the intercept represents the mean pay for men. This is the test to see if men earn 0 dollars. So that’s a very silly test to run. But we do put in the stars anyway, just to be consistent.</li>
+<li>How do you know if Women earn zero dollars? We don’t have that test here. we’d have to run a separate command to get that test.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="indicator-variables-as-controls" class="title-slide slide level1 center">
+<h1>Indicator Variables as Controls</h1>
+
+</section>
+<section id="controlling-for-occupation-part-i" class="slide level2">
+<h2>Controlling for Occupation, Part I</h2>
+<p>How can we compare men and women in the same occupation?</p>
+<aside class="notes">
+<ul>
+<li>So far, we’ve just been comparing men as a whole to women as a whole</li>
+<li>But part of the difference we see could be that men and women tend to be in different professions</li>
+<li>Now, you might argue, so what? If the main problem is that women are being locked out of high-paying professions, it’s the overall pay difference that we should be worried about.</li>
+<li>But at least from certain perspectives, it might be more fair to compare men and women in the same profession.</li>
+<li>I’m going to try it both ways, because I think we can learn from the results</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="controlling-for-occupation-part-ii" class="slide level2">
+<h2>Controlling for Occupation, Part II</h2>
+<p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 Female + \beta_2 Banker + \beta_3 Engineer + ...\)</span></p>
+<p><embed data-src="images/artists.pdf"></p>
+<aside class="notes">
+<ul>
+<li>What we need to do, is add an indicator variable for every possible occupation (we need a base category, let’s make it artist).</li>
+<li>What does this do? Here’s a picture of what the model looks like.</li>
+<li>If you want to know the predicted pay for a female Banker, you start with</li>
+<li>The thing to notice is that</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="controlling-for-occupation-part-iii" class="slide level2">
+<h2>Controlling for Occupation, Part III</h2>
+<aside class="notes">
+<ul>
+<li>Inside the survey data, we have an occupation code variable with 484 different values. If you just add it to the table directly, you have a problem.</li>
+<li>Of course there’s not enough room to list every occupation</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="controlling-for-occupation-part-iv" class="slide level2">
+<h2>Controlling for Occupation, Part IV</h2>
+<aside class="notes">
+<ul>
+<li>So instead we can put in a row to summarize all these indicators.</li>
+<li>You can see that actually, the effect for Female has shrunk by about 10 percent in this specification. That corresponds to about 78 cents to the dollar.</li>
+<li>Why is that? This suggests, that in part, there are more men in occupations with higher pay. But even within each occupation, men are earning more than women.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="metric-variables-as-controls" class="title-slide slide level1 center">
+<h1>Metric Variables as Controls</h1>
+
+</section>
+<section id="age-as-a-covariate" class="slide level2">
+<h2>Age as a Covariate</h2>
+<p>Ways to add age to a specification</p>
+<p>Linear effect:</p>
+<p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 Female + \beta_2 Age\)</span></p>
+<p>Polynomial effect:</p>
+<p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 Female + \beta_2 Age + \beta_3
+  Age^2\)</span></p>
+<aside class="notes">
+<ul>
+<li>We’re trying to measure the pay gap, and another variable that we might want to control for is age</li>
+<li>People tend to earn more as they get older, and you might wonder if this can explain part of the pay gap that we see.</li>
+<li>How should we enter age into the regression?</li>
+<li>You could put it in directly. That would make sense if you wanted to measure the age effect and wanted a single number to summarize the effect.</li>
+<li>If, on the other hand, age is really just a control variable, you might want a more flexible specification, just to soak up as much variation as you can. For example, a quadratic age term is a ver popular choice.</li>
+<li>Let’s use the linear age model to make the equations simpler.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="understanding-the-linear-age-effect" class="slide level2">
+<h2>Understanding the Linear Age Effect</h2>
+<p>For men:</p>
+<p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 (0) + \beta_2 Age = \beta_0 +
+  \beta_2 Age\)</span></p>
+<p>For women:</p>
+<p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 (1) + \beta_2 Age = \beta_0 +
+  \beta_1 + \beta_2 Age\)</span> </p>
+
+<img data-src="images/age.png" class="r-stretch"></section>
+<section id="controlling-for-age" class="slide level2">
+<h2>Controlling for Age</h2>
+<aside class="notes">
+<ul>
+<li><p>Here’s the regression table, with the new specification added in. You can see that each year of age is associated with</p></li>
+<li><p>Also, adding age didn’t change the gap between men and women at all.</p></li>
+<li><p>Does that mean we should take this specification out of the table?</p></li>
+<li><p>Well, no. This is all interesting information. We’re building up a table that shows how our estimate changes or doesn’t change depending on our choices.</p></li>
+<li><p>If we keep trying different specifications and the estimate for Female never changes much, we’ll say that it’s robust.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="measuring-with-more-categories" class="title-slide slide level1 center">
+<h1>Measuring With More Categories</h1>
+
+</section>
+<section id="national-transgender-discrimination-survey" class="slide level2">
+<h2>National Transgender Discrimination Survey</h2>
+
+<img data-src="images/gender_poverty.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>Because of our data source, we had two categories for gender - male and female.</li>
+<li>What if you could write your own survey - could you make it more inclusive by listing more options?</li>
+<li>How would you analyze the data?</li>
+<li>That could be an important question. I’m showing a graph from the National transgender discrimination survey. This is not a nationally representative survey, but out of the trans and nonconforming people they were able to reach, 15</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="example-of-a-more-inclusive-question" class="slide level2">
+<h2>Example of a More Inclusive Question</h2>
+<p>How would you describe yourself?</p>
+<ul>
+<li>Female</li>
+<li>Male</li>
+<li>Transgender female</li>
+<li>Transgender male</li>
+<li>Non-binary/nonconforming</li>
+<li>Prefer not to answer</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Here’s an example of a question with more options. We’re not claiming this is the best possible set of choices - but the intention is to provide options that more people identify with. We would like to see more surveys try to do this.</li>
+<li></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="analyzing-more-gender-categories" class="slide level2">
+<h2>Analyzing More Gender Categories</h2>
+<p><span class="math display">\[\begin{align*}
+       \widehat{Pay} = &amp;\beta_0 + \beta_1 Female + \beta_2 Transgender\_Male + \\
+                       &amp; \beta_3 Transgender\_Female +
+                         \beta_4 Nonbinary
+     \end{align*}\]</span> <span class="math inline">\(\implies\)</span> Report each <span class="math inline">\(\beta\)</span> to describe the pay gap for a different gender identity.</p>
+<aside class="notes">
+<ul>
+<li>Now we need to include each option as an indicator variable. In this case, I’m using male as a base category, because then each beta compares a gender against male, which is something we’re very interested in.</li>
+<li>Now what could happen here? It might be that you just don’t get enough data in some categories. That would make your standard error for those categories too high. So that means that you need to be careful about adding too many options.</li>
+<li>If you face this problem, you may be able to combine some categories together in order to gain accuracy.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reporting-overall-effect" class="slide level2">
+<h2>Reporting Overall Effect</h2>
+<p>Law of total variance:</p>
+<p><span class="math inline">\(V[Pay] = V\big[E[Pay|Gender]\big] + E\big[V[Pay|Gender]\big]\)</span></p>
+<p><span class="math inline">\(V[Pay] =\)</span> Gender-Explained Variance + Other Variance</p>
+<p><span class="math inline">\(\eta^2 = \frac{\text{Gender-Explained Variance}}{\text{Total Variance}}\)</span> <span class="math inline">\(\text{Gender-Explained Standard Deviation} = \sqrt{V\big[E[Pay|Gender]\big]}\)</span> F-test: Null is that all genders have equal pay.</p>
+<aside class="notes">
+<ul>
+<li>On the one hand, you may really be interested in each individual</li>
+<li>One idea is to break up the variation in pay and see how much of it can be tied to gender. remember the law of total variance from earlier…</li>
+<li>eta squared is defined as a fraction, of the gender-explained variance over the total variance. You can think of it as how much of the total variation can be explained through gender.</li>
+<li>Another idea is to take the gender-explained variance and take the square root, to give gender-explained standard deviation:</li>
+<li>This gives you a single number in dollars, that tells you, on the average, how far each gender is away from the overall mean pay.</li>
+<li>Finally, how do you test the statistical significance of gender when you have multiple categories? the right answer is the F-test.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="planning-multiple-specifications" class="title-slide slide level1 center">
+<h1>Planning Multiple Specifications</h1>
+
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:100%;">
+<p><img data-src="images/fatigue.png"></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>We’ve been building up a regression table for our study, and so far it has three models in it - we might say three specifications.</li>
+<li>That’s not at all unusual. Actually, if you write articles in some fields, it’s common to include many more specifications. Here’s a table from a paper on working hours and productivity..</li>
+<li>You can see that there are 8 specifications. Model 1 only has a single variable - that’s the effect that they want to measure. Then for the most part the models on the right have more and more variables.</li>
+<li>What’s the purpose of this?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-report-multiple-specifications" class="slide level2">
+<h2>Why Report Multiple Specifications?</h2>
+<p>Modeling decisions are tough.</p>
+<ul>
+<li><p>Is it worthwhile to control for education, even if standard errors increase?</p></li>
+<li><p>Is it worth switching from a log to a square root to get a much better fit?</p></li>
+<li><p>Should we include occupation, even if that absorbs some of the concept we want to measure?</p>
+<p>Would your results be different with different choices?</p></li>
+</ul>
+<p><span class="math inline">\(\implies\)</span> Try different paths to see if your results are</p>
+<p><strong>robust</strong> .</p>
+</section>
+<section id="why-report-multiple-specifications-cont." class="slide level2">
+<h2>Why Report Multiple Specifications? (cont.)</h2>
+<p><strong>Error rate inflation:</strong> a tendency for effects to appear large (and p-values small), especially when a researcher uses the same data for exploration and testing</p>
+<p><strong>p-Hacking:</strong> a deliberate attempt to generate significant results by altering the model specification and other researcher degrees of freedom</p>
+<p><span class="math inline">\(\implies\)</span> Report multiple specifications to guard against error rate inflation.</p>
+<aside class="notes">
+<ul>
+<li>There’s a deeper reason that we report multiple specifications, and it has to do with reproducibility.</li>
+<li>Let’s review two very important terms…</li>
+<li>If you have a lot of data, you may be able to hold out some of it, so you can get your final p-values from fresh data. But even if you do that, your audience may just expect to see multiple specifications, and may be more suspicious if they only see one.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-should-you-think-about-specifications" class="slide level2">
+<h2>How Should You Think About Specifications?</h2>
+<p><embed data-src="images/reasonable.pdf"></p>
+<aside class="notes">
+<ul>
+<li>With all that in mind, how should you think about your model specifications?</li>
+<li>Imagine a space that represents reasonable modeling choices</li>
+<li>They still have to reasonable - you shouldn’t consider models that can’t be defended</li>
+<li>Try to select your specifications to encircle that space, so your results can represent the larger set of choices.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="an-example-specification-table" class="slide level2">
+<h2>An Example Specification Table</h2>
+<aside class="notes">
+<ul>
+<li>Let’s take another look at our own specification table.</li>
+<li>A few things to remember. First, this is a measurement study, and our key variable is Female. So we place it on the first row, and of course it has to appear in every single specification.</li>
+<li>One thing you almost always want to do is start with a base model, that only has your key variable and nothing else. If you have a very strong reason to put in another variable, that’s ok, but you want this to be a very minimal model.</li>
+<li>It’s very common to add variables in blocks as you go left to right. If you do that, then your models will be nested, which means that you can run F-tests between them. But you don’t have to do that. if it makes more sense to replace one set of variables with another, do that instead.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="modeling-conditional-effects" class="title-slide slide level1 center">
+<h1>Modeling Conditional Effects</h1>
+
+</section>
+
+<section>
+<section id="conditional-effects" class="title-slide slide level1 center">
+<h1>Conditional Effects</h1>
+
+</section>
+<section id="conditional-effects-1" class="slide level2">
+<h2>Conditional Effects</h2>
+<p>Idea: The relationships we measure may be different for different people or units.</p>
+<ul>
+<li>A vaccine may reduce infection rates more in adults than in children.</li>
+<li>Network access may be more associated with loan availability in poor countries.</li>
+<li>The pay gap may be different for people of different ages.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Let’s take a closer look at that last example…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conditional-effects-of-age-part-i" class="slide level2">
+<h2>Conditional Effects of Age, Part I</h2>
+<p><strong>Interaction term:</strong> a variable in a regression formed by multiplying two other variables together</p>
+<p><span class="math inline">\(\widehat{Pay} = \beta_0 + \beta_1 Female + \beta_2 Age + \beta_3 Female \cdot Age\)</span></p>
+<p>For men:</p>
+<p><span class="math inline">\(\quad \widehat{Pay} =\)</span></p>
+<p>For women:</p>
+<p><span class="math inline">\(\quad \widehat{Pay} =\)</span></p>
+<aside class="notes">
+<ul>
+<li>There’s a simple technique for modeling heterogeneous effects. it’s called an interaction term. An interaction term is just two of your variables multiplied together.</li>
+<li>Let’s see what this equation looks like for men and for women.</li>
+<li><span class="math inline">\(beta_0 + \beta_1 (0) + \beta_2 Age + \beta_3 (0) Age =  \beta_0 + \beta_2 Age\)</span></li>
+<li><span class="math inline">\(\beta_0 + \beta_1 (1) + \beta_2 Age + \beta_3 (1) Age =
+\beta_0 + \beta_1 + (\beta_2 + \beta_3)Age\)</span></li>
+<li>Notice that these are again two different lines. once again, they have different intercepts. but this time, they also have different slopes.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conditional-effects-of-age-part-ii" class="slide level2">
+<h2>Conditional Effects of Age, Part II</h2>
+<p><embed data-src="images/age_interaction.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Here’s what that looks like. we’re fitting a very flexible model, with two different slopes and two different intercepts.</li>
+<li>by the way, how would you test whether the effect really is heterogeneous? that is, how can you test whether the slopes really are different?</li>
+<li>The answer is that the slopes are the same exactly if</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conditional-effects-of-age-part-iii" class="slide level2">
+<h2>Conditional Effects of Age, Part III</h2>
+<aside class="notes">
+<ul>
+<li>Here’s our result, and you can see it’s pretty interesting. The interaction term is negative and statistically significant. And the wage gap appears larger for older workers. With each year of age, the gap increases by about</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="interaction-terms" class="title-slide slide level1 center">
+<h1>Interaction Terms</h1>
+
+</section>
+<section id="interactions-for-indicator-variables" class="slide level2">
+<h2>Interactions for Indicator Variables</h2>
+<p>Use old content: 12.9 Interaction Terms for Indicator Variables, Part 1</p>
+<p>If there’s extra time, I would redo this using the wage gap example.</p>
+</section>
+<section id="guidelines-for-polynomial-and-interaction-terms" class="slide level2">
+<h2>Guidelines for Polynomial and Interaction Terms</h2>
+<p>Use old content: 12.12 Guidelines for Polynomial and Interaction Terms</p>
+<p>Could redo some of the discussion of goals if there is time.</p>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: true,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

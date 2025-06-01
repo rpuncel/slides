@@ -1,0 +1,2466 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Paul Laskowski and Alex Hughes">
+
+<title>Week 5</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unit_05/unit_05.html">Week 5</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MIDS 203 Slides</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_01/unit_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_02/unit_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_03/unit_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_04/unit_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_05/unit_05.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Week 5</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_06/unit_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_07/unit_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_08/unit_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_07_and_unit_08/unit_07_and_unit_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_09/unit_09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Regression</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_10/unit_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_11/unit_11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_12/unit_12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 12</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_13/unit_13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 13</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+ <span class="menu-text">unit_14/unit_14.qmd</span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#motivating-example" id="toc-motivating-example" class="nav-link" data-scroll-target="#motivating-example">Motivating Example</a>
+  <ul class="collapse">
+  <li><a href="#roasting-coffee-introduction" id="toc-roasting-coffee-introduction" class="nav-link" data-scroll-target="#roasting-coffee-introduction">Roasting Coffee: Introduction</a></li>
+  <li><a href="#roasting-coffee-field-trip" id="toc-roasting-coffee-field-trip" class="nav-link" data-scroll-target="#roasting-coffee-field-trip">Roasting Coffee: Field Trip</a></li>
+  </ul></li>
+  <li><a href="#statistics-parameters-and-estimators" id="toc-statistics-parameters-and-estimators" class="nav-link" data-scroll-target="#statistics-parameters-and-estimators">Statistics, Parameters, and Estimators</a></li>
+  <li><a href="#introduction-to-properties-of-estimators" id="toc-introduction-to-properties-of-estimators" class="nav-link" data-scroll-target="#introduction-to-properties-of-estimators">Introduction to Properties of Estimators</a>
+  <ul class="collapse">
+  <li><a href="#estimating-characteristics-of-populations" id="toc-estimating-characteristics-of-populations" class="nav-link" data-scroll-target="#estimating-characteristics-of-populations">Estimating Characteristics of Populations</a></li>
+  <li><a href="#estimating-characteristics-of-populations-cont." id="toc-estimating-characteristics-of-populations-cont." class="nav-link" data-scroll-target="#estimating-characteristics-of-populations-cont.">Estimating Characteristics of Populations (cont.)</a></li>
+  <li><a href="#overlinex-is-an-estimator" id="toc-overlinex-is-an-estimator" class="nav-link" data-scroll-target="#overlinex-is-an-estimator"><span class="math inline">\(\overline{X}\)</span> is an Estimator</a></li>
+  <li><a href="#introducing-estimators" id="toc-introducing-estimators" class="nav-link" data-scroll-target="#introducing-estimators">Introducing Estimators</a></li>
+  </ul></li>
+  <li><a href="#reading-core-estimation-theory" id="toc-reading-core-estimation-theory" class="nav-link" data-scroll-target="#reading-core-estimation-theory">Reading: Core Estimation Theory</a>
+  <ul class="collapse">
+  <li><a href="#reading-core-estimation-theory-1" id="toc-reading-core-estimation-theory-1" class="nav-link" data-scroll-target="#reading-core-estimation-theory-1">Reading: Core Estimation Theory</a></li>
+  </ul></li>
+  <li><a href="#desirable-properties-of-estimators" id="toc-desirable-properties-of-estimators" class="nav-link" data-scroll-target="#desirable-properties-of-estimators">Desirable Properties of Estimators</a>
+  <ul class="collapse">
+  <li><a href="#desirable-properties-of-estimators-1" id="toc-desirable-properties-of-estimators-1" class="nav-link" data-scroll-target="#desirable-properties-of-estimators-1">Desirable Properties of Estimators</a></li>
+  <li><a href="#desirable-properties-of-estimators-unbiasedness" id="toc-desirable-properties-of-estimators-unbiasedness" class="nav-link" data-scroll-target="#desirable-properties-of-estimators-unbiasedness">Desirable Properties of Estimators: Unbiasedness</a></li>
+  <li><a href="#desirable-properties-of-estimators-unbiasedness-cont." id="toc-desirable-properties-of-estimators-unbiasedness-cont." class="nav-link" data-scroll-target="#desirable-properties-of-estimators-unbiasedness-cont.">Desirable Properties of Estimators: Unbiasedness (cont.)</a></li>
+  <li><a href="#desirable-properties-of-estimators-unbiasedness-1" id="toc-desirable-properties-of-estimators-unbiasedness-1" class="nav-link" data-scroll-target="#desirable-properties-of-estimators-unbiasedness-1">Desirable Properties of Estimators: Unbiasedness</a></li>
+  <li><a href="#desirable-properties-of-estimators-efficiency" id="toc-desirable-properties-of-estimators-efficiency" class="nav-link" data-scroll-target="#desirable-properties-of-estimators-efficiency">Desirable Properties of Estimators: Efficiency</a></li>
+  <li><a href="#desirable-properties-of-estimators-efficiency-1" id="toc-desirable-properties-of-estimators-efficiency-1" class="nav-link" data-scroll-target="#desirable-properties-of-estimators-efficiency-1">Desirable Properties of Estimators: Efficiency</a></li>
+  <li><a href="#desirable-properties-of-estimators-consistency" id="toc-desirable-properties-of-estimators-consistency" class="nav-link" data-scroll-target="#desirable-properties-of-estimators-consistency">Desirable Properties of Estimators: Consistency</a></li>
+  <li><a href="#desirable-properties-of-estimators-consistency-1" id="toc-desirable-properties-of-estimators-consistency-1" class="nav-link" data-scroll-target="#desirable-properties-of-estimators-consistency-1">Desirable Properties of Estimators: Consistency</a></li>
+  </ul></li>
+  <li><a href="#applying-properties-of-estimators" id="toc-applying-properties-of-estimators" class="nav-link" data-scroll-target="#applying-properties-of-estimators">Applying Properties of Estimators</a>
+  <ul class="collapse">
+  <li><a href="#evaluating-estimators" id="toc-evaluating-estimators" class="nav-link" data-scroll-target="#evaluating-estimators">Evaluating Estimators</a></li>
+  <li><a href="#evaluating-estimators-cont." id="toc-evaluating-estimators-cont." class="nav-link" data-scroll-target="#evaluating-estimators-cont.">Evaluating Estimators (cont.)</a></li>
+  <li><a href="#desirable-properties-of-estimators-review" id="toc-desirable-properties-of-estimators-review" class="nav-link" data-scroll-target="#desirable-properties-of-estimators-review">Desirable Properties of Estimators: Review</a></li>
+  </ul></li>
+  <li><a href="#random-sampling" id="toc-random-sampling" class="nav-link" data-scroll-target="#random-sampling">Random Sampling</a></li>
+  <li><a href="#reading-independent-and-identically-distributed" id="toc-reading-independent-and-identically-distributed" class="nav-link" data-scroll-target="#reading-independent-and-identically-distributed">Reading: Independent and Identically Distributed</a>
+  <ul class="collapse">
+  <li><a href="#reading-independent-and-identically-distributed-1" id="toc-reading-independent-and-identically-distributed-1" class="nav-link" data-scroll-target="#reading-independent-and-identically-distributed-1">Reading: Independent and Identically Distributed</a></li>
+  </ul></li>
+  <li><a href="#independent-and-identically-distributed" id="toc-independent-and-identically-distributed" class="nav-link" data-scroll-target="#independent-and-identically-distributed">Independent and Identically Distributed</a>
+  <ul class="collapse">
+  <li><a href="#independent-and-identically-distributed-1" id="toc-independent-and-identically-distributed-1" class="nav-link" data-scroll-target="#independent-and-identically-distributed-1">Independent and Identically Distributed</a></li>
+  <li><a href="#independent-and-identically-distributed-cont." id="toc-independent-and-identically-distributed-cont." class="nav-link" data-scroll-target="#independent-and-identically-distributed-cont.">Independent and Identically Distributed (cont.)</a></li>
+  <li><a href="#making-assumptions" id="toc-making-assumptions" class="nav-link" data-scroll-target="#making-assumptions">Making Assumptions</a></li>
+  <li><a href="#making-predictions" id="toc-making-predictions" class="nav-link" data-scroll-target="#making-predictions">Making Predictions</a></li>
+  <li><a href="#what-is-a-population" id="toc-what-is-a-population" class="nav-link" data-scroll-target="#what-is-a-population">What Is a Population?</a></li>
+  </ul></li>
+  <li><a href="#learnosity-is-this-iid" id="toc-learnosity-is-this-iid" class="nav-link" data-scroll-target="#learnosity-is-this-iid">Learnosity: Is This IID?</a>
+  <ul class="collapse">
+  <li><a href="#is-this-iid" id="toc-is-this-iid" class="nav-link" data-scroll-target="#is-this-iid">Is This IID?</a></li>
+  <li><a href="#is-this-iid-cont." id="toc-is-this-iid-cont." class="nav-link" data-scroll-target="#is-this-iid-cont.">Is This IID? (cont.)</a></li>
+  </ul></li>
+  <li><a href="#reading-sample-statistics" id="toc-reading-sample-statistics" class="nav-link" data-scroll-target="#reading-sample-statistics">Reading: Sample Statistics</a>
+  <ul class="collapse">
+  <li><a href="#reading-sample-statistics-1" id="toc-reading-sample-statistics-1" class="nav-link" data-scroll-target="#reading-sample-statistics-1">Reading: Sample Statistics</a></li>
+  </ul></li>
+  <li><a href="#sample-statistics" id="toc-sample-statistics" class="nav-link" data-scroll-target="#sample-statistics">Sample Statistics</a>
+  <ul class="collapse">
+  <li><a href="#sample-statistics-1" id="toc-sample-statistics-1" class="nav-link" data-scroll-target="#sample-statistics-1">Sample Statistics</a></li>
+  </ul></li>
+  <li><a href="#conduct-sampling" id="toc-conduct-sampling" class="nav-link" data-scroll-target="#conduct-sampling">Conduct Sampling</a>
+  <ul class="collapse">
+  <li><a href="#conduct-sampling-1" id="toc-conduct-sampling-1" class="nav-link" data-scroll-target="#conduct-sampling-1">Conduct Sampling</a></li>
+  </ul></li>
+  <li><a href="#the-sample-mean-as-an-estimator" id="toc-the-sample-mean-as-an-estimator" class="nav-link" data-scroll-target="#the-sample-mean-as-an-estimator">The Sample Mean as an Estimator</a>
+  <ul class="collapse">
+  <li><a href="#the-sample-mean" id="toc-the-sample-mean" class="nav-link" data-scroll-target="#the-sample-mean">The Sample Mean</a></li>
+  <li><a href="#the-sample-mean-is-an-estimator" id="toc-the-sample-mean-is-an-estimator" class="nav-link" data-scroll-target="#the-sample-mean-is-an-estimator">The Sample Mean is an Estimator</a></li>
+  <li><a href="#evaluating-the-sample-mean-as-an-estimator" id="toc-evaluating-the-sample-mean-as-an-estimator" class="nav-link" data-scroll-target="#evaluating-the-sample-mean-as-an-estimator">Evaluating the Sample Mean as an Estimator</a></li>
+  <li><a href="#unbiasedness-of-the-sample-mean" id="toc-unbiasedness-of-the-sample-mean" class="nav-link" data-scroll-target="#unbiasedness-of-the-sample-mean">Unbiasedness of the Sample Mean</a></li>
+  <li><a href="#efficiency-of-the-sample-mean" id="toc-efficiency-of-the-sample-mean" class="nav-link" data-scroll-target="#efficiency-of-the-sample-mean">Efficiency of the Sample Mean</a></li>
+  <li><a href="#learnosity-sampling-variance-of-the-sample-mean" id="toc-learnosity-sampling-variance-of-the-sample-mean" class="nav-link" data-scroll-target="#learnosity-sampling-variance-of-the-sample-mean">Learnosity: Sampling Variance of the Sample Mean</a></li>
+  </ul></li>
+  <li><a href="#consistency-and-the-continuous-mapping-theorem" id="toc-consistency-and-the-continuous-mapping-theorem" class="nav-link" data-scroll-target="#consistency-and-the-continuous-mapping-theorem">Consistency and the Continuous Mapping Theorem</a>
+  <ul class="collapse">
+  <li><a href="#consistency" id="toc-consistency" class="nav-link" data-scroll-target="#consistency">Consistency</a></li>
+  <li><a href="#intuition-for-convergence-in-probability" id="toc-intuition-for-convergence-in-probability" class="nav-link" data-scroll-target="#intuition-for-convergence-in-probability">Intuition for Convergence in Probability</a></li>
+  <li><a href="#convergence-in-probability" id="toc-convergence-in-probability" class="nav-link" data-scroll-target="#convergence-in-probability">Convergence in Probability</a></li>
+  <li><a href="#continuous-mapping-intuition" id="toc-continuous-mapping-intuition" class="nav-link" data-scroll-target="#continuous-mapping-intuition">Continuous Mapping Intuition</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  </ul></li>
+  <li><a href="#reading-weak-law-of-large-numbers" id="toc-reading-weak-law-of-large-numbers" class="nav-link" data-scroll-target="#reading-weak-law-of-large-numbers">Reading: Weak Law of Large Numbers</a>
+  <ul class="collapse">
+  <li><a href="#reading-weak-law-of-large-numbers-1" id="toc-reading-weak-law-of-large-numbers-1" class="nav-link" data-scroll-target="#reading-weak-law-of-large-numbers-1">Reading: Weak Law of Large Numbers</a></li>
+  </ul></li>
+  <li><a href="#weak-law-of-large-numbers" id="toc-weak-law-of-large-numbers" class="nav-link" data-scroll-target="#weak-law-of-large-numbers">Weak Law of Large Numbers</a>
+  <ul class="collapse">
+  <li><a href="#the-weak-law-of-large-numbers" id="toc-the-weak-law-of-large-numbers" class="nav-link" data-scroll-target="#the-weak-law-of-large-numbers">The Weak Law of Large Numbers</a></li>
+  <li><a href="#consequences-of-wlln" id="toc-consequences-of-wlln" class="nav-link" data-scroll-target="#consequences-of-wlln">Consequences of WLLN</a></li>
+  <li><a href="#applying-the-wlln" id="toc-applying-the-wlln" class="nav-link" data-scroll-target="#applying-the-wlln">Applying the WLLN</a></li>
+  </ul></li>
+  <li><a href="#proof-of-the-weak-law-of-large-numbers" id="toc-proof-of-the-weak-law-of-large-numbers" class="nav-link" data-scroll-target="#proof-of-the-weak-law-of-large-numbers">Proof of the Weak Law of Large Numbers</a>
+  <ul class="collapse">
+  <li><a href="#proof-of-the-weak-law-of-large-numbers-1" id="toc-proof-of-the-weak-law-of-large-numbers-1" class="nav-link" data-scroll-target="#proof-of-the-weak-law-of-large-numbers-1">Proof of the Weak Law of Large Numbers</a></li>
+  <li><a href="#proof-of-the-weak-law-of-large-numbers-2" id="toc-proof-of-the-weak-law-of-large-numbers-2" class="nav-link" data-scroll-target="#proof-of-the-weak-law-of-large-numbers-2">Proof of the Weak Law of Large Numbers</a></li>
+  </ul></li>
+  <li><a href="#simulating-the-wlln" id="toc-simulating-the-wlln" class="nav-link" data-scroll-target="#simulating-the-wlln">Simulating the WLLN</a>
+  <ul class="collapse">
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  </ul></li>
+  <li><a href="#reading-estimating-population-variance" id="toc-reading-estimating-population-variance" class="nav-link" data-scroll-target="#reading-estimating-population-variance">Reading: Estimating Population Variance</a>
+  <ul class="collapse">
+  <li><a href="#reading-estimating-population-variance-1" id="toc-reading-estimating-population-variance-1" class="nav-link" data-scroll-target="#reading-estimating-population-variance-1">Reading: Estimating Population Variance</a></li>
+  </ul></li>
+  <li><a href="#estimating-population-variance" id="toc-estimating-population-variance" class="nav-link" data-scroll-target="#estimating-population-variance">Estimating Population Variance</a>
+  <ul class="collapse">
+  <li><a href="#why-estimate-variance" id="toc-why-estimate-variance" class="nav-link" data-scroll-target="#why-estimate-variance">Why Estimate Variance?</a></li>
+  <li><a href="#applying-the-plug-in-principle" id="toc-applying-the-plug-in-principle" class="nav-link" data-scroll-target="#applying-the-plug-in-principle">Applying the Plug-In Principle</a></li>
+  <li><a href="#consistency-of-the-plug-in-estimator" id="toc-consistency-of-the-plug-in-estimator" class="nav-link" data-scroll-target="#consistency-of-the-plug-in-estimator">Consistency of the Plug-In Estimator</a></li>
+  <li><a href="#bias-of-the-plug-in-variance-estimator" id="toc-bias-of-the-plug-in-variance-estimator" class="nav-link" data-scroll-target="#bias-of-the-plug-in-variance-estimator">Bias of the Plug-In Variance Estimator</a></li>
+  <li><a href="#a-better-variance-estimator" id="toc-a-better-variance-estimator" class="nav-link" data-scroll-target="#a-better-variance-estimator">A Better Variance Estimator</a></li>
+  </ul></li>
+  <li><a href="#standard-errors" id="toc-standard-errors" class="nav-link" data-scroll-target="#standard-errors">Standard Errors</a>
+  <ul class="collapse">
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
+  <li><a href="#importance-of-uncertainty" id="toc-importance-of-uncertainty" class="nav-link" data-scroll-target="#importance-of-uncertainty">Importance of Uncertainty</a></li>
+  <li><a href="#importance-of-uncertainty-1" id="toc-importance-of-uncertainty-1" class="nav-link" data-scroll-target="#importance-of-uncertainty-1">Importance of Uncertainty</a></li>
+  <li><a href="#importance-of-uncertainty-2" id="toc-importance-of-uncertainty-2" class="nav-link" data-scroll-target="#importance-of-uncertainty-2">Importance of Uncertainty</a></li>
+  <li><a href="#the-sampling-distribution-of-the-statistic" id="toc-the-sampling-distribution-of-the-statistic" class="nav-link" data-scroll-target="#the-sampling-distribution-of-the-statistic">The Sampling Distribution of the Statistic</a></li>
+  <li><a href="#reporting-standard-errors" id="toc-reporting-standard-errors" class="nav-link" data-scroll-target="#reporting-standard-errors">Reporting standard errors</a></li>
+  </ul></li>
+  <li><a href="#standard-errors-the-sample-variance-and-standard" id="toc-standard-errors-the-sample-variance-and-standard" class="nav-link" data-scroll-target="#standard-errors-the-sample-variance-and-standard">Standard Errors, The Sample Variance, and Standard</a>
+  <ul class="collapse">
+  <li><a href="#many-measures-of-dispersion" id="toc-many-measures-of-dispersion" class="nav-link" data-scroll-target="#many-measures-of-dispersion">Many Measures of Dispersion</a></li>
+  </ul></li>
+  <li><a href="#motivating-the-central-limit-theorem" id="toc-motivating-the-central-limit-theorem" class="nav-link" data-scroll-target="#motivating-the-central-limit-theorem">Motivating The Central Limit Theorem</a>
+  <ul class="collapse">
+  <li><a href="#capturing-uncertainty" id="toc-capturing-uncertainty" class="nav-link" data-scroll-target="#capturing-uncertainty">Capturing Uncertainty</a></li>
+  <li><a href="#uncertainty-example" id="toc-uncertainty-example" class="nav-link" data-scroll-target="#uncertainty-example">Uncertainty Example</a></li>
+  <li><a href="#the-importance-of-shape" id="toc-the-importance-of-shape" class="nav-link" data-scroll-target="#the-importance-of-shape">The Importance of Shape</a></li>
+  <li><a href="#the-central-limit-theorem" id="toc-the-central-limit-theorem" class="nav-link" data-scroll-target="#the-central-limit-theorem">The Central Limit Theorem</a></li>
+  </ul></li>
+  <li><a href="#reading-the-central-limit-theorem" id="toc-reading-the-central-limit-theorem" class="nav-link" data-scroll-target="#reading-the-central-limit-theorem">Reading: The Central Limit Theorem</a>
+  <ul class="collapse">
+  <li><a href="#reading-the-central-limit-theorem-1" id="toc-reading-the-central-limit-theorem-1" class="nav-link" data-scroll-target="#reading-the-central-limit-theorem-1">Reading: The Central Limit Theorem</a></li>
+  </ul></li>
+  <li><a href="#apply-the-central-limit-theorem" id="toc-apply-the-central-limit-theorem" class="nav-link" data-scroll-target="#apply-the-central-limit-theorem">Apply the Central Limit Theorem</a>
+  <ul class="collapse">
+  <li><a href="#apply-the-central-limit-theorem-1" id="toc-apply-the-central-limit-theorem-1" class="nav-link" data-scroll-target="#apply-the-central-limit-theorem-1">Apply the Central Limit Theorem</a></li>
+  </ul></li>
+  <li><a href="#central-limit-theorem" id="toc-central-limit-theorem" class="nav-link" data-scroll-target="#central-limit-theorem">Central Limit Theorem</a>
+  <ul class="collapse">
+  <li><a href="#reminder-of-context" id="toc-reminder-of-context" class="nav-link" data-scroll-target="#reminder-of-context">Reminder of Context</a></li>
+  <li><a href="#convergence-in-distribution" id="toc-convergence-in-distribution" class="nav-link" data-scroll-target="#convergence-in-distribution">Convergence in Distribution</a></li>
+  <li><a href="#convergence-in-distribution-1" id="toc-convergence-in-distribution-1" class="nav-link" data-scroll-target="#convergence-in-distribution-1">Convergence in Distribution</a></li>
+  <li><a href="#the-need-to-standardize" id="toc-the-need-to-standardize" class="nav-link" data-scroll-target="#the-need-to-standardize">The need to Standardize</a></li>
+  <li><a href="#standardizing-the-sample-mean" id="toc-standardizing-the-sample-mean" class="nav-link" data-scroll-target="#standardizing-the-sample-mean">Standardizing the Sample Mean</a></li>
+  <li><a href="#the-central-limit-theorem-1" id="toc-the-central-limit-theorem-1" class="nav-link" data-scroll-target="#the-central-limit-theorem-1">The Central Limit Theorem</a></li>
+  <li><a href="#generality-of-the-clt" id="toc-generality-of-the-clt" class="nav-link" data-scroll-target="#generality-of-the-clt">Generality of the CLT</a></li>
+  <li><a href="#what-sample-size-is-enough" id="toc-what-sample-size-is-enough" class="nav-link" data-scroll-target="#what-sample-size-is-enough">What Sample Size is Enough?</a></li>
+  </ul></li>
+  <li><a href="#learnosity-when-does-the-clt-apply" id="toc-learnosity-when-does-the-clt-apply" class="nav-link" data-scroll-target="#learnosity-when-does-the-clt-apply">Learnosity: When Does the CLT Apply?</a>
+  <ul class="collapse">
+  <li><a href="#where-and-when-does-the-clt-apply-part-iii" id="toc-where-and-when-does-the-clt-apply-part-iii" class="nav-link" data-scroll-target="#where-and-when-does-the-clt-apply-part-iii">Where and When Does the CLT Apply? Part III</a></li>
+  <li><a href="#where-and-when-does-the-clt-apply-part-iii-1" id="toc-where-and-when-does-the-clt-apply-part-iii-1" class="nav-link" data-scroll-target="#where-and-when-does-the-clt-apply-part-iii-1">Where and When Does the CLT Apply? Part III</a></li>
+  </ul></li>
+  <li><a href="#the-plug-in-principle" id="toc-the-plug-in-principle" class="nav-link" data-scroll-target="#the-plug-in-principle">The Plug-In Principle</a>
+  <ul class="collapse">
+  <li><a href="#the-plug-in-principle-1" id="toc-the-plug-in-principle-1" class="nav-link" data-scroll-target="#the-plug-in-principle-1">The Plug-In Principle</a></li>
+  <li><a href="#the-plug-in-principle-2" id="toc-the-plug-in-principle-2" class="nav-link" data-scroll-target="#the-plug-in-principle-2">The Plug-In Principle</a></li>
+  </ul></li>
+  <li><a href="#reading-assignment" id="toc-reading-assignment" class="nav-link" data-scroll-target="#reading-assignment">Reading Assignment</a>
+  <ul class="collapse">
+  <li><a href="#reading-assignment-1" id="toc-reading-assignment-1" class="nav-link" data-scroll-target="#reading-assignment-1">Reading Assignment</a></li>
+  </ul></li>
+  <li><a href="#asymptotic-theory" id="toc-asymptotic-theory" class="nav-link" data-scroll-target="#asymptotic-theory">Asymptotic Theory</a>
+  <ul class="collapse">
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  <li><a href="#reading-asymptotics" id="toc-reading-asymptotics" class="nav-link" data-scroll-target="#reading-asymptotics">Reading: Asymptotics</a></li>
+  <li><a href="#reading-the-plug-in-principle" id="toc-reading-the-plug-in-principle" class="nav-link" data-scroll-target="#reading-the-plug-in-principle">Reading: The Plug-In Principle</a></li>
+  <li><a href="#the-plug-in-principle-3" id="toc-the-plug-in-principle-3" class="nav-link" data-scroll-target="#the-plug-in-principle-3">The Plug-In Principle</a></li>
+  <li><a href="#the-plug-in-principle-cont." id="toc-the-plug-in-principle-cont." class="nav-link" data-scroll-target="#the-plug-in-principle-cont.">The Plug-In Principle (cont.)</a></li>
+  <li><a href="#example-of-the-plug-in-principle" id="toc-example-of-the-plug-in-principle" class="nav-link" data-scroll-target="#example-of-the-plug-in-principle">Example of the Plug-In Principle</a></li>
+  <li><a href="#example-of-the-plug-in-principle-contd" id="toc-example-of-the-plug-in-principle-contd" class="nav-link" data-scroll-target="#example-of-the-plug-in-principle-contd">Example of the Plug-In Principle, cont’d</a></li>
+  <li><a href="#reading-kernel-methods-esttimate-the-pdf" id="toc-reading-kernel-methods-esttimate-the-pdf" class="nav-link" data-scroll-target="#reading-kernel-methods-esttimate-the-pdf">Reading: Kernel Methods Esttimate the PDF</a></li>
+  <li><a href="#kernel-methods-part-i" id="toc-kernel-methods-part-i" class="nav-link" data-scroll-target="#kernel-methods-part-i">Kernel Methods, Part I</a></li>
+  <li><a href="#kernel-methods-part-ii" id="toc-kernel-methods-part-ii" class="nav-link" data-scroll-target="#kernel-methods-part-ii">Kernel Methods, Part II</a></li>
+  <li><a href="#kernel-methods-part-iii" id="toc-kernel-methods-part-iii" class="nav-link" data-scroll-target="#kernel-methods-part-iii">Kernel Methods, part III</a></li>
+  <li><a href="#kernel-methods-part-iv" id="toc-kernel-methods-part-iv" class="nav-link" data-scroll-target="#kernel-methods-part-iv">Kernel Methods, part IV</a></li>
+  <li><a href="#kernel-methods-part-v" id="toc-kernel-methods-part-v" class="nav-link" data-scroll-target="#kernel-methods-part-v">Kernel Methods, part V</a></li>
+  <li><a href="#apply-kernel-methods" id="toc-apply-kernel-methods" class="nav-link" data-scroll-target="#apply-kernel-methods">Apply Kernel Methods</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="unit_05.revealjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 5</h1>
+<p class="subtitle lead">Learning from Random Samples</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Paul Laskowski and Alex Hughes </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            UC Berkeley, School of Information
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="section" class="level1">
+<h1></h1>
+</section>
+<section id="motivating-example" class="level1">
+<h1>Motivating Example</h1>
+<section id="roasting-coffee-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="roasting-coffee-introduction">Roasting Coffee: Introduction</h2>
+<div class="notes">
+<ul>
+<li>This is the set shot</li>
+<li>Coffee is one of life’s innumerable joys. It is also the best of them.</li>
+<li>There are flavors, complexity, bitterness, sweetness – and caffiene.</li>
+<li>I’ve been roasting coffee at home, for several years, I’ll take you on a little tour. Don’t worry, there’s a reason.</li>
+</ul>
+</div>
+</section>
+<section id="roasting-coffee-field-trip" class="level2">
+<h2 class="anchored" data-anchor-id="roasting-coffee-field-trip">Roasting Coffee: Field Trip</h2>
+<div class="notes">
+<ul>
+<li>Introduce (a) green coffee (and its range of size and dryness); (b) the roaster; (c) the temperature scope; (d) the young gun; and (e) the tryer.</li>
+<li>Introduce the tryer,then show trying before drop.</li>
+<li>Within each of these ``trys’’ I’ve got a sample that has been jumbled up for 10 minutes. I’ve drawn about 30 beans, each from the same distribution.</li>
+<li>Ask students: In casual terms, would you say that the beans that I pull out are ``random’’?</li>
+<li>I sure would!</li>
+<li>But, for our statistics to work, we need something that is different, and more specific than ``random’’ – we will need independent and identically distributed.</li>
+<li>The jumbling of these beans means that each bean’s draw is independent of each other bean in the barrel.</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="statistics-parameters-and-estimators" class="level1">
+<h1>Statistics, Parameters, and Estimators</h1>
+</section>
+<section id="introduction-to-properties-of-estimators" class="level1">
+<h1>Introduction to Properties of Estimators</h1>
+<section id="estimating-characteristics-of-populations" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-characteristics-of-populations">Estimating Characteristics of Populations</h2>
+<ul>
+<li>Data scientists are not given the joint density distribution. </li>
+<li>One of our principle tasks is to produce <em>estimates</em> about the <em>universe</em> given only the limited information that we get from a sample of data. </li>
+</ul>
+</section>
+<section id="estimating-characteristics-of-populations-cont." class="level2">
+<h2 class="anchored" data-anchor-id="estimating-characteristics-of-populations-cont.">Estimating Characteristics of Populations (cont.)</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Parameters, Statistics, and Estimators">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Parameters, Statistics, and Estimators
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>A <strong>paramater</strong> , <span class="math inline">\(\theta\)</span> , is some summary of the joint distribution.</li>
+<li>A <strong>statistic</strong> is some function that maps data from <span class="math inline">\(\R^{n} \to \R\)</span> .</li>
+<li>An <strong>estimator</strong> , <span class="math inline">\(\hat{\theta}\)</span> , is some statistic of the data that we use to produce a guess for <span class="math inline">\(\theta\)</span> .</li>
+</ul>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li><p><embed src="images/estimator.pdf" class="img-fluid"></p></li>
+<li><p>We can’t observe the joint distribution directly, so we try to make guesses about it.</p></li>
+<li><p>An estimator could be any function of the statistic. Here, we’ll pass the data through function h and get estimator</p></li>
+</ul>
+</div>
+</section>
+<section id="overlinex-is-an-estimator" class="level2">
+<h2 class="anchored" data-anchor-id="overlinex-is-an-estimator"><span class="math inline">\(\overline{X}\)</span> is an Estimator</h2>
+<p>We refer to statistics that are ``good’’ guesses for a population parameter as</p>
+<p><strong>estimators</strong> .</p>
+<ul>
+<li><span class="math inline">\(\theta = \E[X]\)</span> is a parameter.</li>
+<li><span class="math inline">\(T_{(n)} = \text{choose the 30}^{th} \text{ percentile}\)</span> is a statistic</li>
+<li><span class="math inline">\(\hat \theta = \overline{X}\)</span> is an estimator for <span class="math inline">\(\theta\)</span> .</li>
+</ul>
+</section>
+<section id="introducing-estimators" class="level2">
+<h2 class="anchored" data-anchor-id="introducing-estimators">Introducing Estimators</h2>
+<p>In this section, you will learn about the properties that make estimators good guesses for a population parameter.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Properties of estimators">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Properties of estimators
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Consistency:</strong> As sample size grows, does the estimator converge in probability to the true value?</li>
+<li><strong>Bias</strong> and <strong>unbiasedness</strong> : Is the estimator systematically too low or too high?</li>
+<li><strong>Efficiency:</strong> Does an estimator have relatively <em>large or small</em> sampling variance, standard error, and MSE?</li>
+</ul>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li><strong>Consistency</strong></li>
+<li><strong>Bias</strong></li>
+<li><strong>Efficiency</strong></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="reading-core-estimation-theory" class="level1">
+<h1>Reading: Core Estimation Theory</h1>
+<section id="reading-core-estimation-theory-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-core-estimation-theory-1">Reading: Core Estimation Theory</h2>
+<p><strong>Note: This is a READING CALL, just placing it here for organization.</strong></p>
+<p>Read pages 102–105, stopping at 3.2.3, Variance Estimators.</p>
+</section>
+</section>
+<section id="desirable-properties-of-estimators" class="level1">
+<h1>Desirable Properties of Estimators</h1>
+<section id="desirable-properties-of-estimators-1" class="level2">
+<h2 class="anchored" data-anchor-id="desirable-properties-of-estimators-1">Desirable Properties of Estimators</h2>
+<p>Throughout, we refer to <span class="math inline">\(\theta\)</span> as a population <em>feature</em></p>
+<p>or <em>parameter</em> .</p>
+<ul>
+<li><span class="math inline">\(\theta\)</span> has a fixed, true value, but this value is not directly observable. </li>
+<li>Without ground truth, how can we know if our estimator is doing its job?</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Test-driven development, engineering, analogy – software teams imagine every scenario possible, write a testing suite – and conduct tests before releasing. That’s how they know it ``works’’. Because we don’t know</li>
+<li>Reasoning and evaluating these properties is one of the reasons that we have invested in probablity theory!</li>
+</ul>
+</div>
+</section>
+<section id="desirable-properties-of-estimators-unbiasedness" class="level2">
+<h2 class="anchored" data-anchor-id="desirable-properties-of-estimators-unbiasedness">Desirable Properties of Estimators: Unbiasedness</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Bias of an estimator">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bias of an estimator
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The bias of an estimator is the expected difference between the <em>true</em> population value and the estimator. - The <em>bias</em> of <span class="math inline">\(\hat{\theta}\)</span> is <span class="math inline">\(\E[\hat{\theta}] -
+      \theta\)</span> . - If <span class="math inline">\(\E[\hat{\theta}] = \theta\)</span> , then there is no bias, and the estimator is <em>unbiased</em> .</p>
+</div>
+</div>
+</section>
+<section id="desirable-properties-of-estimators-unbiasedness-cont." class="level2">
+<h2 class="anchored" data-anchor-id="desirable-properties-of-estimators-unbiasedness-cont.">Desirable Properties of Estimators: Unbiasedness (cont.)</h2>
+<p>If <span class="math inline">\(\hat{\theta}\)</span> is unbiased, does that mean that, for any sample taken, the estimate produced by <span class="math inline">\(\hat{\theta} = \theta\)</span> ?</p>
+<ul>
+<li><span class="math inline">\(\hat{\theta}\)</span> as an <em>estimator</em> is a random variable.</li>
+<li>The value that it takes on given a sample is the <em>estimate</em> .</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Draw an unbiased estimator!</li>
+<li>As a RV,</li>
+<li>The</li>
+<li>Draw a biased estimator!</li>
+<li><embed src="./images/unbiased_estimator.pdf" class="img-fluid"></li>
+</ul>
+</div>
+</section>
+<section id="desirable-properties-of-estimators-unbiasedness-1" class="level2">
+<h2 class="anchored" data-anchor-id="desirable-properties-of-estimators-unbiasedness-1">Desirable Properties of Estimators: Unbiasedness</h2>
+<pre><code>(cont.)</code></pre>
+</section>
+<section id="desirable-properties-of-estimators-efficiency" class="level2">
+<h2 class="anchored" data-anchor-id="desirable-properties-of-estimators-efficiency">Desirable Properties of Estimators: Efficiency</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Mean Squared Error of an Estimator">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mean Squared Error of an Estimator
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The MSE of an estimator <span class="math inline">\(\hat{\theta}\)</span> is [ E[( - )^{2}] = V[] + (E[] - )^{2} ]</li>
+</ul>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Suppose you are taking temperature, and have two methods: (1) back of hand; (2) under-tongue. Which would you prefer?</li>
+<li><embed src="./images/relative_efficiency.pdf" class="img-fluid"></li>
+</ul>
+</div>
+</section>
+<section id="desirable-properties-of-estimators-efficiency-1" class="level2">
+<h2 class="anchored" data-anchor-id="desirable-properties-of-estimators-efficiency-1">Desirable Properties of Estimators: Efficiency</h2>
+</section>
+<section id="desirable-properties-of-estimators-consistency" class="level2">
+<h2 class="anchored" data-anchor-id="desirable-properties-of-estimators-consistency">Desirable Properties of Estimators: Consistency</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Consistency">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Consistency
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>An estimator $\hat{\theta}$ is consistent for $\theta$ if
+$\hat{\theta} \overset{p}{\to} \theta$.
+\note[item]{If an estimator isn't consistent, then many times we
+  would say it isn't worth using.}</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li><embed src="./images/consistent_inconsistent.pdf" class="img-fluid"></li>
+</ul>
+</div>
+</section>
+<section id="desirable-properties-of-estimators-consistency-1" class="level2">
+<h2 class="anchored" data-anchor-id="desirable-properties-of-estimators-consistency-1">Desirable Properties of Estimators: Consistency</h2>
+</section>
+</section>
+<section id="applying-properties-of-estimators" class="level1">
+<h1>Applying Properties of Estimators</h1>
+<section id="evaluating-estimators" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-estimators">Evaluating Estimators</h2>
+<p>Which do you prefer?</p>
+<div class="notes">
+<ul>
+<li>Draw two estimators: (1) sine in n – wavvy; (2) typically converging</li>
+<li><embed src="images/evaluating_estimators_i.pdf" class="img-fluid"></li>
+</ul>
+</div>
+</section>
+<section id="evaluating-estimators-cont." class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-estimators-cont.">Evaluating Estimators (cont.)</h2>
+<div class="notes">
+<ul>
+<li>Draw two estimators</li>
+<li>Make both be consistent, one that is relatively more efficient.</li>
+<li><embed src="images/evaluating_estimators_ii.pdf" class="img-fluid"></li>
+</ul>
+</div>
+</section>
+<section id="desirable-properties-of-estimators-review" class="level2">
+<h2 class="anchored" data-anchor-id="desirable-properties-of-estimators-review">Desirable Properties of Estimators: Review</h2>
+<ul>
+<li>An <em>inconsistent</em> estimator is of little use.</li>
+<li>A <em>more efficient</em> is estimator is preferable to a <em>less efficient</em> estimator, all else equal.</li>
+<li>An <em>unbiased</em> estimator is preferable to a <em>biased</em> estimator, all else equal.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>For inconsistent estimators, perhaps there is some level of</li>
+<li>More efficient estimators are preferrable, all else equal. But, in a business context there</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="random-sampling" class="level1">
+<h1>Random Sampling</h1>
+</section>
+<section id="reading-independent-and-identically-distributed" class="level1">
+<h1>Reading: Independent and Identically Distributed</h1>
+<section id="reading-independent-and-identically-distributed-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-independent-and-identically-distributed-1">Reading: Independent and Identically Distributed</h2>
+<ul>
+<li>Read Section 3.0 and 3.1 in <em>Foundations of Agnostic Statistics</em> (pages 91–96 in our copy of the book.) - Work to place the formal math definition into plan understanding. We will discuss this when you come back.</li>
+<li>Notice how <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> are concepts that are immediately familiar, but they now represent population parameters.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>The mathematical formalism in</li>
+<li><em>Definition 3.1.2 – the Finite Population Mass Function shows how we could move from talking about actual people to random variables (but keep in mind that we will almost always assume an “infinite superpopulation”.) </em></li>
+<li>Notice how</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="independent-and-identically-distributed" class="level1">
+<h1>Independent and Identically Distributed</h1>
+<section id="independent-and-identically-distributed-1" class="level2">
+<h2 class="anchored" data-anchor-id="independent-and-identically-distributed-1">Independent and Identically Distributed</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definition: independent and identically distributed (IID)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: independent and identically distributed (IID)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Undertake some process an arbitrary number of times—call it <em>sampling</em> —to create a value from a phenomenon.</li>
+<li>If each instance of sampling draws from the same probability distribution, then we say the collection of values are <strong>identically distributed</strong> .</li>
+<li>If none of the instances of sampling provide information about other instances of sampling, then we say the collection of values are <strong>independent</strong> . </li>
+</ul>
+</div>
+</div>
+</section>
+<section id="independent-and-identically-distributed-cont." class="level2">
+<h2 class="anchored" data-anchor-id="independent-and-identically-distributed-cont.">Independent and Identically Distributed (cont.)</h2>
+<div class="notes">
+<ul>
+<li><p><embed src="./images/coffee_delicious.pdf" class="img-fluid"></p></li>
+<li><p>Each of the sets of</p></li>
+<li><p>Problem 1: We have a finite sample in this roaster – there are 10,243 beans in it. Paul counted! Ha! After we draw and look at one, there are only 10,242 left to draw, and we’ve changed the distribution of the beans by taking one out. So, technically, we have a dependent sampling process.</p></li>
+<li><p>But, subsequent ``trys’’ are not independent. When I know how roasted each bean in try (3) is, I know that each bean in try (4) is going to be more roasted.</p></li>
+<li><p>Problem 2: The beans only get</p></li>
+<li><p>Problem 3: Suppose you get one</p></li>
+<li><p>Problem 4: What if all the big beans ``float’’ to the top and so get less heat? Then we would have a non-independent distribution!</p></li>
+<li><p>Problem here is that I don’t think you can define a model where a very roasted bean in try 1 gives you information that beans in try 2 are likely to be more roasted, but not that the next bean in try 1 is likely to be more roasted. Any way I think of it, either both pairs are independent or not independent.</p></li>
+</ul>
+</div>
+</section>
+<section id="making-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="making-assumptions">Making Assumptions</h2>
+<ul>
+<li>What is a statistical assumption?</li>
+<li>When are they important?</li>
+<li>When can I violate them?</li>
+<li>What do I do if they are violated?</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Up until this point, all of our work has been axiomatic.</li>
+<li>We began with a principle, we looked at rules, and we observed what fell out.</li>
+<li>Now we’re stepping into the fun, but clumsy world that forces us to put these alabaster axioms to work.</li>
+</ul>
+</div>
+</section>
+<section id="making-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="making-predictions">Making Predictions</h2>
+<ul>
+<li>When data are independent and identically distributed (IID), it is possible to learn desirable things from a sample: - Accurate characterizations of the probability distribution function and values</li>
+<li>Reliable characterizations of certainty and uncertainty</li>
+<li>We can learn about unseen <em>population parameters</em> from a sample and then use our domain knowledge to evaluate whether these population parameters apply to some circumstance.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>As data scientists, we might sometimes posess the entire universe of data and want to characterize it – ``What is the sentiment of all the employees in</li>
+<li>Much more frequently we’re interested in something else – making a statement about a population from limited data.</li>
+<li>What sets statistics apart is that it attempmts to characterize how certain we are about these predictions.</li>
+<li>Without IID, we might be incorrectly confident – leading to unforseen events. Or, we might learn someting about a population that isn’t informative of our target.</li>
+</ul>
+</div>
+</section>
+<section id="what-is-a-population" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-population">What Is a Population?</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="U.S. Senator fundraising">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+U.S. Senator fundraising
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>There are 100 U.S. Senators.
+- One could reason about a finite population with 100
+    elements. \note[item]{Then, we \textit{know} the whole population, and
+    there is nothing to estimate.}</code></pre>
+<ul>
+<li>Or, one could assume a continuous distribution for fundraising. </li>
+</ul>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>When we model data as draws from a random variable</li>
+<li><span class="math inline">\(X\)</span></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="learnosity-is-this-iid" class="level1">
+<h1>Learnosity: Is This IID?</h1>
+<section id="is-this-iid" class="level2">
+<h2 class="anchored" data-anchor-id="is-this-iid">Is This IID?</h2>
+<p><strong>Note: This is a learnosity activity, just placing it here for organization.</strong></p>
+<p>For each of these, would you say that this sample is distributed IID? What do you understand about the process that brings you to your conclusion?</p>
+<ul>
+<li>Coffee - <strong>Goal:</strong> Understand how roasted a batch of coffee is.</li>
+<li><strong>Sampling process:</strong> Dip into a drum to pull a set of 30 beans.</li>
+<li>Conduct a draft - <strong>Goal:</strong> Randomly select people for military service.</li>
+<li><strong>Sampling process:</strong> Draw balls from an urn with a day of the year. Everybody born on that day goes to war.</li>
+<li>Produce training data for machine vision - <strong>Goal:</strong> Gather images of normal and abnormal cellular structures to train neural net to recognize cancerous cellular structures.</li>
+<li><strong>Sampling process:</strong> Randomly select 10 patients (with consent!) from the general outpatient population (unlikely to have the cancer), and randomly select 10 patients (with consent!) from the oncology department (that are likely to have the cancer).</li>
+</ul>
+</section>
+<section id="is-this-iid-cont." class="level2">
+<h2 class="anchored" data-anchor-id="is-this-iid-cont.">Is This IID? (cont.)</h2>
+<ul>
+<li>Teach a computer to <em>really</em> read - <strong>Goal:</strong> Teach a computer to understand theme and plot (the work of School of Information professor David Bamman).</li>
+<li><strong>Sampling process:</strong> Feed a neural network each word (in each sentence [ in each paragraph (in each chapter) ] ) of the English language literary canon.</li>
+<li>Any others? - <strong>Goal:</strong></li>
+<li><strong>Sampling process:</strong></li>
+</ul>
+</section>
+</section>
+<section id="reading-sample-statistics" class="level1">
+<h1>Reading: Sample Statistics</h1>
+<section id="reading-sample-statistics-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-sample-statistics-1">Reading: Sample Statistics</h2>
+<ul>
+<li>Read pages 96–98.</li>
+<li>Stop before theorem 3.2.5.</li>
+</ul>
+</section>
+</section>
+<section id="sample-statistics" class="level1">
+<h1>Sample Statistics</h1>
+<section id="sample-statistics-1" class="level2">
+<h2 class="anchored" data-anchor-id="sample-statistics-1">Sample Statistics</h2>
+<p>Sample statistics are:</p>
+<ul>
+<li>Functions that are applied to samples of random variables </li>
+<li><em>Themselves</em> random variables</li>
+</ul>
+<div class="notes">
+<ul>
+<li>At this point, we don’t have any guarantee about what the sample statistics will look like under repeated sampling. If you’ve taken a stats course before, though, you’ll recognize that we’re building towards sampling distribution of these statistics.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="conduct-sampling" class="level1">
+<h1>Conduct Sampling</h1>
+<section id="conduct-sampling-1" class="level2">
+<h2 class="anchored" data-anchor-id="conduct-sampling-1">Conduct Sampling</h2>
+<p><strong>Note: This is a learnosity activity, just placing it here for organization.</strong></p>
+<p>The goal is that this will solidify the understanding that students have from the reading and will move us forward into a conversation about expected value and the sample variance of the sample average.</p>
+<ul>
+<li>Students will be provided with data and starter code that produces a population.</li>
+<li>From this population, they will have sliders they can pull that will increase or decrease the number of samples that they take, the number of draws per sample, and the underlying population variation.</li>
+</ul>
+</section>
+</section>
+<section id="the-sample-mean-as-an-estimator" class="level1">
+<h1>The Sample Mean as an Estimator</h1>
+<section id="the-sample-mean" class="level2">
+<h2 class="anchored" data-anchor-id="the-sample-mean">The Sample Mean</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definition: Sample Mean">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: Sample Mean
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>For IID random variables, $X_1,..X_n$, the _sample mean_ is
+\[
+  \overline{X} = \frac{1}{n}\sum_{i = 1}^{n}X_{i}
+  \]</code></pre>
+</div>
+</div>
+<ul>
+<li>The sample mean is an <em>estimator</em> for <span class="math inline">\(\E[X]\)</span> .</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Let’s dive into out first example of an estimator: the sample mean.</li>
+<li>I’m sure you’ve taken thousands of means in your life, but you might not have thought of the sample mean as an estimator.</li>
+<li>First, what kind of object is this? It’s a statistic. It’s a function of a sample, which is made up of random variables, so it is a random variable. This is really our statistical model that describes how a sample mean you write down in your analysis gets there.</li>
+<li>As statisticians, we’re not really interested in the sample mean for its own sake. We’re interested in the population mean. We’re using the sample mean, because it’s an estimator for the population mean.</li>
+</ul>
+</div>
+</section>
+<section id="the-sample-mean-is-an-estimator" class="level2">
+<h2 class="anchored" data-anchor-id="the-sample-mean-is-an-estimator">The Sample Mean is an Estimator</h2>
+<p><embed src="./images/mean_estimator.pdf" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>Here’s a picture to clarify how the model works.</li>
+<li>There are three important objects to keep in mind.</li>
+<li>First, we have the population distribution, we don’t know what it is, but it’s fixed, and it has a fixed population mean.</li>
+<li>What happens when we run the model? nature reaches in and chooses datapoints. I’ll make a sample.</li>
+<li>From this sample, we compute the sample mean. Does it equal the population mean? of course not! well, in some cases we could get lucky, but generally no.</li>
+<li>what kind of object is the sample mean? it’s a random variable. if you could rewind time, we’d get a different mean.</li>
+<li>I’m not saying we can get two means, this is just a thought experiment.</li>
+<li>because the sample mean is a random variable, it has a sampling distribution. I’ll draw it here.</li>
+<li>There are two different distributions! don’t forget that, the population dist is not the same as the sampling distribution of the statistic.</li>
+</ul>
+</div>
+</section>
+<section id="evaluating-the-sample-mean-as-an-estimator" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-the-sample-mean-as-an-estimator">Evaluating the Sample Mean as an Estimator</h2>
+<p>First Questions:</p>
+<ol type="1">
+<li>Is the sample mean biased?</li>
+<li>How efficient is the sample mean?</li>
+</ol>
+<div class="notes">
+<ul>
+<li>Once you start thinking about the sample mean as an estimator, the next step is to think about whether it’s a good estimator. Are there any better estimators?</li>
+<li>What are the properties that we want our estimators to have?</li>
+<li>Let’s start in this segment with these two. <read></read></li>
+</ul>
+</div>
+</section>
+<section id="unbiasedness-of-the-sample-mean" class="level2">
+<h2 class="anchored" data-anchor-id="unbiasedness-of-the-sample-mean">Unbiasedness of the Sample Mean</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: The Sample Mean is Unbiased">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: The Sample Mean is Unbiased
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>For IID random variables, $X_1,..X_n$, the sample mean $\overline{X}$ is an unbiased estimator for the population mean $\E[X]$.</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li><span class="math inline">\(E[\overline{X}] =  E[\frac{1}{n}(X_1 + X_2 +...+X_n)  ]\)</span></li>
+<li><span class="math inline">\(= \frac{1}{n}(E[X_1] + ... + E[X_n]) = E[X]\)</span></li>
+</ul>
+</div>
+</section>
+<section id="efficiency-of-the-sample-mean" class="level2">
+<h2 class="anchored" data-anchor-id="efficiency-of-the-sample-mean">Efficiency of the Sample Mean</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: Sampling Variance of the Sample Mean">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: Sampling Variance of the Sample Mean
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>For IID random variables, $X_1,..X_n$, with population variance, $\V[X]$, the variance of the sample mean is
+ \[
+    \V\big[\overline{X}\big] = \frac{\V[X]}{n}
+  \]</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li><span class="math inline">\(\V\big[\overline{X}\big]  = \V[ \frac{1}{n} (X_1 + X_2 +...+X_n)]\)</span></li>
+<li><span class="math inline">\(= \frac{1}{n^2}( \V[X_1] + ... + \V[X_n]) = \frac{\V[X] }{n}\)</span></li>
+<li>Is this a good variance? It really depends on the population distribution. Depending on what the population looks like, there could be more efficient estimators. But at least the dependency on</li>
+<li>Soon, we’ll see that we can get a guarantee that the sample mean is actually close to the target.</li>
+</ul>
+</div>
+</section>
+<section id="learnosity-sampling-variance-of-the-sample-mean" class="level2">
+<h2 class="anchored" data-anchor-id="learnosity-sampling-variance-of-the-sample-mean">Learnosity: Sampling Variance of the Sample Mean</h2>
+<p><strong>Note: This is a learnosity activity, just placing it here for organization.</strong> - If you increase the sample size, does the sampling variance of the sample mean increase, decrease, or stay the same? - At what rate does this change? (Options include faster than the data, at the same rate at the data, slower than the data.) - If you increase the sample size, does the population variance, <span class="math inline">\(\V[X]\)</span> , change? (Hint: It is a population parameter.)</p>
+</section>
+</section>
+<section id="consistency-and-the-continuous-mapping-theorem" class="level1">
+<h1>Consistency and the Continuous Mapping Theorem</h1>
+<section id="consistency" class="level2">
+<h2 class="anchored" data-anchor-id="consistency">Consistency</h2>
+<em>“If you can’t get it right as <span class="math inline">\(n\)</span> goes to infinity, you shouldn’t be in this business.”</em>
+<p>How can we formalize “right as <span class="math inline">\(n\)</span> goes to infinity?”</p>
+<ul>
+<li>Estimators may converge at different rates.</li>
+<li>Deterministic guarantees are not possible.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>It’s no exaggeration to say that consistency is the most important property that an estimator can have.</li>
+<li>So what exactly does it mean?</li>
+<li>A quote from the Nobel-prize winning economist Clive Granger.</li>
+<li>We want to be correct as the sample size gets bigger and bigger - how can we write that into a mathematical property?</li>
+<li>it’s not obvious for at least two reasons.</li>
+<li>First, different estimators can converge at different rates. it may take</li>
+<li>Second, there’s no deterministic guarantee. There’s no law of physics that prevents a coin from landing heads over and over forever. all we can say is that the probability of that gets smaller and smaller as the number of flips increases.</li>
+</ul>
+</div>
+</section>
+<section id="intuition-for-convergence-in-probability" class="level2">
+<h2 class="anchored" data-anchor-id="intuition-for-convergence-in-probability">Intuition for Convergence in Probability</h2>
+<ul>
+<li>Let <span class="math inline">\(T_{(1)}\)</span> be the statistic with 1 datapoint.</li>
+<li>Let <span class="math inline">\(T_{(2)}\)</span> be the statistic with 2 datapoints.</li>
+<li>Let <span class="math inline">\(T_{(3)}\)</span> be the statistic with 3 datapoints.</li>
+</ul>
+<p></p>
+<p><embed src="./images/convergence_window.pdf" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>Here’s a stylize story to motivate the definition of consistency.</li>
+<li>Let’s start with a sequence of random variables <read></read></li>
+<li>Let</li>
+<li>You tell me you want to converge on the target. So I say, well give me some parameters, give me a window around the target that is acceptable. also, 100</li>
+<li>I guarantee, that eventually in this sequence, there is a T that is in that window with 90</li>
+<li>Is the guarantee not strong enough? feel free to increase it: let’s say 99</li>
+<li>Is the window actually too wide? make it narrower!…</li>
+</ul>
+</div>
+</section>
+<section id="convergence-in-probability" class="level2">
+<h2 class="anchored" data-anchor-id="convergence-in-probability">Convergence in Probability</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definition: Convergence in Probability">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: Convergence in Probability
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>Let $( T_{(1)}, T_{(2)}, T_{(3)},...)$ be a sequence of random variables and let $c\in \R$. $T_{(n)}$_converges in probability_ to $c$ if for all $\epsilon &gt; 0$, 
+$\lim_{n \rightarrow \infty} P\Big[ T_{(n)} \in(c-\epsilon, c+\epsilon) \Big] = 1$
+We write this as $T_{(n)} \overset{p}{\rightarrow} c$.
+  </code></pre>
+</div>
+</div>
+<ul>
+<li>An estimator <span class="math inline">\(\hat \theta\)</span> is <em>consistent</em> for <span class="math inline">\(\theta\)</span> , if <span class="math inline">\(\hat \theta \overset{p}{\rightarrow} \theta\)</span> .</li>
+</ul>
+</section>
+<section id="continuous-mapping-intuition" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-mapping-intuition">Continuous Mapping Intuition</h2>
+<p><embed src="./images/cmt.pdf" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>Consistency is really important. We’re going to design a lot of estimators and we’ll want to prove that they are consistent.</li>
+<li>There are different strategies you can use to prove that estimators are consistent. The book likes to use a very powerful result about the plug in principle, but you have to know a lot more math to apply it rigorously.</li>
+<li>We prefer to use a famous theorem called the continuous mapping theorem. It allows you to prove convergence in probability when you combine estimators together.</li>
+<li>Here’s a picture to show what we mean. we have two estimators S and T that each converge to some target. We have a function g that takes a,b to this point. As long as g is consistent, it turns out that g(S,T) is also consistent.</li>
+</ul>
+</div>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<div class="callout callout-style-default callout-note callout-titled" title="The Continuous Mapping Theorem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Continuous Mapping Theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>Let $( S_{(1)}, S_{(2)}, S_{(3)},...)$ and $( T_{(1)}, T_{(2)}, T_{(3)},...)$ be two sequences of random variables.  Let $g: \R^2 \rightarrow \R$ be a continuous function.  If $S_{(n)} \overset{p}{\rightarrow} a \in \R$ and $T_{(n)} \overset{p}{\rightarrow} b \in \R$, then $g(S_{(n)}, T_{(n)})  \overset{p}{\rightarrow} g(a,b)$</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Given</li>
+<li>Want</li>
+<li>Equivalent to: given probability</li>
+<li>By cont. of</li>
+<li>by convergence of S and T,</li>
+<li>let</li>
+<li>This implies<br>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="reading-weak-law-of-large-numbers" class="level1">
+<h1>Reading: Weak Law of Large Numbers</h1>
+<section id="reading-weak-law-of-large-numbers-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-weak-law-of-large-numbers-1">Reading: Weak Law of Large Numbers</h2>
+<p>Read page 100, beginning at theorem 3.2.8, through the end of page 102.</p>
+</section>
+</section>
+<section id="weak-law-of-large-numbers" class="level1">
+<h1>Weak Law of Large Numbers</h1>
+<section id="the-weak-law-of-large-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="the-weak-law-of-large-numbers">The Weak Law of Large Numbers</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: The Weak Law of Large Numbers">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: The Weak Law of Large Numbers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\((X_1,X_2,X_3,...)\)</span> be a sequence of i.i.d. random variables with finite variance. Let <span class="math inline">\(\overline{X}_{(n)} = \frac{1}{n} \sum_{i=1}^n X_i\)</span>. Then <span class="math inline">\(\overline{X}_{(n)} \overset{p}{\rightarrow} \E[X]\)</span></p>
+</div>
+</div>
+<ul>
+<li><strong>Equivalently:</strong> The sample mean is <em>consistent</em> for the population mean.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>We have all the pieces in place to present one of the most classic results in statistics.</li>
+<li>The WLLN states that as sample size increases, the sample mean converges in probability to the population mean.</li>
+<li>Or much more simply, the sample mean is consistent.</li>
+</ul>
+</div>
+</section>
+<section id="consequences-of-wlln" class="level2">
+<h2 class="anchored" data-anchor-id="consequences-of-wlln">Consequences of WLLN</h2>
+<p><strong>The sample mean is consistent.</strong> - The error converges in probability to zero. - The sample mean is accurate, as long as we can make <span class="math inline">\(n\)</span> large enough.</p>
+<p><strong>As a building block to study other estimators.</strong> - Combine WLLN with Continuous Mapping Theorem.</p>
+<div class="notes">
+<ul>
+<li>What do we take away from the WLLN?</li>
+<li>First, we learned that the sample mean is great. On top of being unbiased, we also have consistency.</li>
+<li>Whatever the variable is: wavelengths of cosmic rays, or how cranky people in Berkeley are. You never know the true population mean, but if you crank up n enough, you’ll can be accurate to any level.</li>
+<li>Now, honestly, you already knew the sample mean was great. you don’t need more reasons to use the mean. And we can write down more precise statements about the convergence of the sample mean. So why is the WLLN so important?</li>
+<li>But is a second reason WLLN is important. it is a building block we can use to study other estimators.</li>
+</ul>
+</div>
+</section>
+<section id="applying-the-wlln" class="level2">
+<h2 class="anchored" data-anchor-id="applying-the-wlln">Applying the WLLN</h2>
+<p><img src="./images/cdf2.png" class="img-fluid"></p>
+<p><strong>Objective:</strong> Estimate the cdf <span class="math inline">\(F\)</span> at a point <span class="math inline">\(x\)</span> .</p>
+<p><strong>Idea:</strong> Use empirical cdf</p>
+<div class="notes">
+<ul>
+<li>F(x) = P(X &lt; x)</li>
+<li><span class="math inline">\(T_{(n)}(x) = \frac{1}{n}\sum I(X_i \leq x)\)</span></li>
+<li><span class="math inline">\(T(x) \overset{p}{\rightarrow}\E[ I(X \leq x) ] = P(X \leq x) = F(x)\)</span></li>
+<li>So we can consistently estimate the CDF at any point.</li>
+<li>There are stronger convergence results for the cdf, so we don’t use this version too much</li>
+<li>But this is an example of how WLLN can help us with other estimators. we’ll use it again in the future.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="proof-of-the-weak-law-of-large-numbers" class="level1">
+<h1>Proof of the Weak Law of Large Numbers</h1>
+<section id="proof-of-the-weak-law-of-large-numbers-1" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-the-weak-law-of-large-numbers-1">Proof of the Weak Law of Large Numbers</h2>
+<p>Given random variable <span class="math inline">\(X\)</span> and <span class="math inline">\(\epsilon &gt; 0\)</span> .</p>
+</section>
+<section id="proof-of-the-weak-law-of-large-numbers-2" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-the-weak-law-of-large-numbers-2">Proof of the Weak Law of Large Numbers</h2>
+<p>Given random variable <span class="math inline">\(X\)</span> and <span class="math inline">\(\epsilon &gt; 0\)</span> .</p>
+<p>Let <span class="math inline">\(D = | \bar X - \E[X] |\)</span> <span class="math inline">\(\V[\bar X] = \E[D^2] = \V[X]/n\)</span> <span class="math inline">\(\V[\bar X] = \E[D^2] = \E[D^2 | D &lt; \epsilon] P(D &lt; \epsilon) + \E[D^2 | D \geq \epsilon]P(D \geq \epsilon)\)</span> <span class="math inline">\(\geq 0 + \epsilon^2 P(D \geq \epsilon)\)</span> <span class="math inline">\(P(D \geq \epsilon) \leq \frac{\V[X]}{ \epsilon^2 n} \overset{p}{\rightarrow} 0\)</span></p>
+<div class="notes">
+<ul>
+<li>The key to this proof is we have to get from a small variance to a statement about deviations.</li>
+<li>Why can’t we be outside this window? Let’s draw the probability distribution.</li>
+<li>The point is that if there’s some probability outside the window, that represents deviations that are large, and that has the effect of keeping variance up. that can’t happen.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="simulating-the-wlln" class="level1">
+<h1>Simulating the WLLN</h1>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"></h2>
+<p><strong>Note: This is a learnosity activity, we’re just including it here for organization.</strong></p>
+<p>Students will work through the notebook called </p>
+</section>
+</section>
+<section id="reading-estimating-population-variance" class="level1">
+<h1>Reading: Estimating Population Variance</h1>
+<section id="reading-estimating-population-variance-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-estimating-population-variance-1">Reading: Estimating Population Variance</h2>
+<ul>
+<li>Read pages 105–108, stopping before the beginning of the next section.</li>
+<li>You are going to use <em>the plug-in principle</em> , which is a general approach for designing estimators in a sample. </li>
+</ul>
+<div class="notes">
+<ul>
+<li><strong>Note: This is a READING CALL, just placing it here for organization.</strong></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="estimating-population-variance" class="level1">
+<h1>Estimating Population Variance</h1>
+<section id="why-estimate-variance" class="level2">
+<h2 class="anchored" data-anchor-id="why-estimate-variance">Why Estimate Variance?</h2>
+<p><img src="./images/coffee.jpg" class="img-fluid"></p>
+<ul>
+<li>How much coffee do students drink on average?</li>
+<li>How much does coffee intake differ from student to student?</li>
+</ul>
+<div class="notes">
+<ul>
+<li>So far, we’ve talked about estimating the population mean.</li>
+<li>The mean is really important, but there are other quantities that we might want to estimate.</li>
+<li>Let’s consider the variance - usually the second-most important feature you can learn.</li>
+<li>If you estimate mean coffee intake, that’s is helpful, but just one number, nothing about the shape of the distribution.</li>
+<li>IF you also know variance, you start to have at least some information about shape. That can really improve your understanding.</li>
+</ul>
+</div>
+</section>
+<section id="applying-the-plug-in-principle" class="level2">
+<h2 class="anchored" data-anchor-id="applying-the-plug-in-principle">Applying the Plug-In Principle</h2>
+<p>Population Variance: <span class="math inline">\(\V[X] = \E[X^{2}] - \E[X]^2\)</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="The Plug-In Variance Estimator">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Plug-In Variance Estimator
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Given a sample <span class="math inline">\(\bs X = (X_1,X_2,...,X_n)\)</span>, the <em>plug-in variance estimator</em> is, <span class="math display">\[\begin{align*}
+\tilde{\V}(\bs X) &amp;= \overline{X^{2}} - \overline{X}^{2}
+    \end{align*}\]</span></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>How do we come up with an estimator for variance?</li>
+<li>We use what we call the plug-in principle. All that means is that we just replace population quantities with sample analogues.</li>
+<li>In this case, we can write the variance as the difference of two expectations.</li>
+<li>We just replace each expectation with a sample mean.</li>
+</ul>
+</div>
+</section>
+<section id="consistency-of-the-plug-in-estimator" class="level2">
+<h2 class="anchored" data-anchor-id="consistency-of-the-plug-in-estimator">Consistency of the Plug-In Estimator</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Theorem: Consistency of the Plug-In Variance Estimator">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem: Consistency of the Plug-In Variance Estimator
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\((X_1,X_2,X_3,...)\)</span> be a sequence of i.i.d. random variables with finite variance <span class="math inline">\(\V[X]\)</span>. Then <span class="math inline">\(\tilde{\V}(\bs X)=\overline{X^{2}} - \overline{X}^{2}\)</span> is consistent for <span class="math inline">\(\V[X]\)</span>.</p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Proof:</li>
+<li><span class="math inline">\(\overline{X^2}\overset{p}{\rightarrow}\E[X^2]\)</span></li>
+<li>Let</li>
+<li><span class="math inline">\(g(\overline{X^2}, \overline{X}) = \tilde{\V}(\bs X)\)</span></li>
+<li>CMT</li>
+</ul>
+</div>
+</section>
+<section id="bias-of-the-plug-in-variance-estimator" class="level2">
+<h2 class="anchored" data-anchor-id="bias-of-the-plug-in-variance-estimator">Bias of the Plug-In Variance Estimator</h2>
+<p>Let <span class="math inline">\((X_1,X_2,X_3,...)\)</span> be a sequence of i.i.d. random variables with finite variance <span class="math inline">\(\V[X]\)</span> . Then</p>
+<p><span class="math inline">\(\E[\tilde{\V}(\bs X)] = \frac{n-1}{n} \V[X]\)</span></p>
+<div class="notes">
+<ul>
+<li>What about bias? Unfortunately, the plug-in estimator is biased. That’s pretty common, the plug-in principle often gives us consistent estimators, but doesn’t help with bias.</li>
+<li>You can compute the expectation of the estimator, and you can see that it’s almost what you want.</li>
+<li>There’s just an extra factor of</li>
+<li>If you think about it, if we knew the true population mean, we could measure deviations from it to get an unbiased estimator. But we have the sample mean, and the sample mean gets pulled towards where the most data is, pushing the estimate down.</li>
+</ul>
+</div>
+</section>
+<section id="a-better-variance-estimator" class="level2">
+<h2 class="anchored" data-anchor-id="a-better-variance-estimator">A Better Variance Estimator</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="The Unbiased Variance Estimator">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Unbiased Variance Estimator
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Given a sample <span class="math inline">\(\bs X = (X_1,X_2,...,X_n)\)</span>, the <em>unbiased sample variance estimator</em> is, <span class="math display">\[\begin{align*}
+\hat{\V}(\bs X) &amp;= \frac{n}{n-1} \Big( \overline{X^{2}} - \overline{X}^{2} \Big)
+    \end{align*}\]</span></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>So the plug-in estimator is biased, but we know exactly what the bias is so we can fix it.</li>
+<li>We just adjust it by adding a correction factor. It’s called a degrees of freedom correction.</li>
+<li>This makes the estimator unbiased, and it’s still consistent, because this fraction goes to 1.</li>
+<li>This estimator has really good properties, and it’s the standard formula you should remember.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="standard-errors" class="level1">
+<h1>Standard Errors</h1>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3"></h2>
+<p>standout</p>
+<p>Point Estimate <span class="math inline">\(\Leftrightarrow\)</span> Uncertainty</p>
+<div class="notes">
+<ul>
+<li>We’ve been talking about ways to generate a point estimate for a parameter.</li>
+<li>But the point estimate is really only half the story.</li>
+<li>That’s because the point estimate is not the same as the true parameter.</li>
+<li>If all you have is the point estimate, and no other way to judge how far off it might be, it may not be very valuable at all.</li>
+<li>If you’re just messing around with data for fun, you may not care, but when the stakes get high, you realize you really need a way to capture that uncertainty.</li>
+</ul>
+</div>
+</section>
+<section id="importance-of-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="importance-of-uncertainty">Importance of Uncertainty</h2>
+<p><img src="./images/vote.jpg" class="img-fluid"></p>
+<p><strong>Estimate:</strong> Our candidate has 52 % support.</p>
+</section>
+<section id="importance-of-uncertainty-1" class="level2">
+<h2 class="anchored" data-anchor-id="importance-of-uncertainty-1">Importance of Uncertainty</h2>
+<p><img src="./images/vaccine.jpg" class="img-fluid"></p>
+<p><strong>Estimate:</strong> The maximum dose of the medication is 26mg.</p>
+</section>
+<section id="importance-of-uncertainty-2" class="level2">
+<h2 class="anchored" data-anchor-id="importance-of-uncertainty-2">Importance of Uncertainty</h2>
+<p><img src="./images/tower.jpg" class="img-fluid"></p>
+<p><strong>Estimate:</strong> The angle of the tower is 90 degrees.</p>
+</section>
+<section id="the-sampling-distribution-of-the-statistic" class="level2">
+<h2 class="anchored" data-anchor-id="the-sampling-distribution-of-the-statistic">The Sampling Distribution of the Statistic</h2>
+<p><embed src="./images/sampling_distribution.pdf" class="img-fluid"></p>
+<p><strong>Standard Error:</strong> (Estimated) standard deviation of the sampling distribution</p>
+<div class="notes">
+<ul>
+<li>Remember that a statistic IS a random variable</li>
+<li>You get a single number. But the model says that there are other values that are possible.</li>
+<li>There is an entire probability distribution over possible values.</li>
+<li>If we could see this distribution, we could understand how representative our one value is.</li>
+<li>We could gauge how different it might be from the true parameter.</li>
+<li>We can’t see the sampling distribution, but if i.i.d. holds, we can still learn things about it.</li>
+<li>A good first question: how spread out is it? standard error = standard deviation of the sampling dist.</li>
+<li>You can think of the standard error as estimating, if you could run your study over and over, how far apart the values would be on average. that’s an important indicator of uncertainty.</li>
+</ul>
+</div>
+</section>
+<section id="reporting-standard-errors" class="level2">
+<h2 class="anchored" data-anchor-id="reporting-standard-errors">Reporting standard errors</h2>
+<ol type="1">
+<li>The mean number of mushrooms per pizza was 13.2 (SE 3.6).</li>
+<li>The time for mice to navigate the maze was 35 <span class="math inline">\(\pm 2\)</span> seconds.</li>
+<li></li>
+</ol>
+<div class="notes">
+<ul>
+<li>Really, whenever you report a statistic, you always want to include standard errors.</li>
+<li>unless you have another method of expressing uncertainty.</li>
+<li>There are a couple of ways to include them…</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="standard-errors-the-sample-variance-and-standard" class="level1">
+<h1>Standard Errors, The Sample Variance, and Standard</h1>
+<p>Deviation</p>
+<section id="many-measures-of-dispersion" class="level2">
+<h2 class="anchored" data-anchor-id="many-measures-of-dispersion">Many Measures of Dispersion</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="callout callout-style-default callout-note callout-titled" title="Sample Variance">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sample Variance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Sample Standard Deviation">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sample Standard Deviation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="callout callout-style-default callout-note callout-titled" title="Sampling Variance of the Sample Mean">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sampling Variance of the Sample Mean
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Standard Error of the Sample Mean">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Standard Error of the Sample Mean
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>It can seem like we’re just making a salad with all these concepts!</li>
+<li>I mean, I am a Berkeley vegetarian, but even I don’t like variance salads.</li>
+<li>The</li>
+<li>The</li>
+<li>The</li>
+<li>Finally, the</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="motivating-the-central-limit-theorem" class="level1">
+<h1>Motivating The Central Limit Theorem</h1>
+<section id="capturing-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="capturing-uncertainty">Capturing Uncertainty</h2>
+<p>Need tools to capture how far off our estimate may be.</p>
+<ul>
+<li>Standard Error: the (estimated) standard deviation of the sampling distribution of the estimator.</li>
+<li>But a standard error is just one number…</li>
+</ul>
+<div class="notes">
+<ul>
+<li>We’ve talked about how important uncertainty is.</li>
+<li>A point estimate by itself isn’t all that useful. we need a way to capture how far off it might be</li>
+<li>One answer to that is the standard error, which is an estimate for the standard deviation of the sampling distribution of a statistic.</li>
+<li>But the standard error doesn’t capture everything about the sampling distribution.</li>
+<li>It’s just one number. it can give you a general idea, but can’t help you make precise statements about what parameter values are plausible.</li>
+</ul>
+</div>
+</section>
+<section id="uncertainty-example" class="level2">
+<h2 class="anchored" data-anchor-id="uncertainty-example">Uncertainty Example</h2>
+<p><img src="./images/vitamin.jpg" class="img-fluid"></p>
+<ul>
+<li>Hidden fact: Population mean = 0</li>
+<li>Idea: Market if estimate is 2 standard errors above 0.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Here’s an example. You want to understand whether vitamin W improves performance on a statistics test.</li>
+<li>You don’t know this, but vitamin W doesn’t do anything</li>
+<li>You estimate the performance, and it’s positive, great!</li>
+<li>But you know that there’s uncertainty. So you’re not conviced the effect is really positive</li>
+<li>You decide on this rule: if the estimate is at least 2 standard errors away from zero, you’ll take the vitamin to market.</li>
+<li>That’s actually not a terrible rule of thumb. This is a very very simplified version of a hypothesis test , but I think there’s enough detail to make this point.</li>
+</ul>
+</div>
+</section>
+<section id="the-importance-of-shape" class="level2">
+<h2 class="anchored" data-anchor-id="the-importance-of-shape">The Importance of Shape</h2>
+<p><embed src="./images/equal_se.pdf" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>Here are three possible sampling distributions for the statistic. All 3 of them have a mean of 0 and a standard error of 1.</li>
+<li>So if you get an estimate of 2, you will take vitamin W to market. and that’s a mistake because the true effect is zero.</li>
+<li>The question is, how likely are you to make a mistake in each case?</li>
+<li>So the shape really matters when we want to express uncertainty more precisely. That seems like a problem, because there are so many possible shapes out there.</li>
+</ul>
+</div>
+</section>
+<section id="the-central-limit-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="the-central-limit-theorem">The Central Limit Theorem</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Central limit theorem (CLT): idea">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Central limit theorem (CLT): idea
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>For a __very broad__ class of population distributions, the sampling distribution of the mean becomes approximately normal as the sample size grows large.</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>It turns out that a very famous theorem can help us. It’s called the CLT.</li>
+<li>The CLT says that, yes, there are a lot of possible distributions out there. If you have a small sample size, the variety is a big problem</li>
+<li>But as the sample size grows large, the sampling distribution of the sample mean becomes more and more normal.</li>
+<li>This is great because it’s going to unlock a lot of important tools, including confidence interval and hypothesis tests.</li>
+<li>Because of that, this is often viewed as the most important theorem in all of classical statistics</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="reading-the-central-limit-theorem" class="level1">
+<h1>Reading: The Central Limit Theorem</h1>
+<section id="reading-the-central-limit-theorem-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-central-limit-theorem-1">Reading: The Central Limit Theorem</h2>
+<p><strong>Note: This is a reading call, we’re just placing it here for organization.</strong></p>
+<p>Read pages 108 and 109 of section 3.2.4. There’s no <em>need</em> to read through the demonstration of Slutsky’s theorem, but you can if you would like.</p>
+<ul>
+<li>Rather than proving the CLT, we are going to ask you to work through a short demonstration against data that we hope will convince you of the CLT’s effectiveness.</li>
+<li>The book is terse in its presentation of when and how the CLT applies. We will fill that out when we come back together.</li>
+</ul>
+</section>
+</section>
+<section id="apply-the-central-limit-theorem" class="level1">
+<h1>Apply the Central Limit Theorem</h1>
+<section id="apply-the-central-limit-theorem-1" class="level2">
+<h2 class="anchored" data-anchor-id="apply-the-central-limit-theorem-1">Apply the Central Limit Theorem</h2>
+<p><strong>Note: This is a learnosity activity, just placing it here for organization.</strong></p>
+</section>
+</section>
+<section id="central-limit-theorem" class="level1">
+<h1>Central Limit Theorem</h1>
+<section id="reminder-of-context" class="level2">
+<h2 class="anchored" data-anchor-id="reminder-of-context">Reminder of Context</h2>
+<ul>
+<li>The WLLN tells us what happens to the sample mean as <span class="math inline">\(n
+  \to \infty\)</span> : <span class="math inline">\(\overline{X} \overset{p}{\to} \E[X]\)</span></li>
+<li>We also know that, as <span class="math inline">\(n \to \infty\)</span> , we can generate an increasingly good estimate for <span class="math inline">\(\V[X]\)</span> because <span class="math inline">\(\overline{X^{2}} -
+  \overline{X}^{2} \overset{p}{\to} \V[X]\)</span></li>
+<li>For more precise statements about uncertainty, we need the sampling distribution of the statistic.</li>
+</ul>
+<div class="notes">
+<ul>
+<li><p>We were really glad when we saw the result of the WLLN.</p></li>
+<li><p>From weak assumptions, we can put together an estimator</p></li>
+<li><p>What if we want to know more information about this estimator?</p></li>
+</ul>
+</div>
+</section>
+<section id="convergence-in-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="convergence-in-distribution">Convergence in Distribution</h2>
+<p><embed src="images/convergence_in_d.pdf" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li><p>Let’s build out the idea of</p></li>
+<li><p>Suppse you have a sequence of random variables, for now, it will be a set of sample means.</p></li>
+<li><p>First, suppose that you take a sample of size 1, and return the average. What will you see?</p></li>
+<li><p>Then, suppose that you take a sample of size 2, and return the average. What will you see? Will this larger sample have a larger or a smaller sampling variance of the mean? (This is the WLLN claim).</p></li>
+<li><p>The idea of convergence in distribution, is that as you go along the sequence of distributions, the shape</p></li>
+<li><p>Convergence in distribution is much stronger than just a single point converging like we had for the WLLN.</p></li>
+<li><p>The whole distribution not just a central tendency for example, converges to the mean.</p></li>
+</ul>
+</div>
+</section>
+<section id="convergence-in-distribution-1" class="level2">
+<h2 class="anchored" data-anchor-id="convergence-in-distribution-1">Convergence in Distribution</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definition: Convergence in distribution">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: Convergence in distribution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\((T_{(1)}, T_{(2)}, T_{(3)}, ...)\)</span> be a sequence of random variables, with cdfs <span class="math inline">\((F_{(1)}, F_{(2)}, F_{(3)}, ...)\)</span>, and let <span class="math inline">\(T\)</span> be a random variable with cdf <span class="math inline">\(F\)</span>. Then <span class="math inline">\(T_{(n)}\)</span><em>converges in distribution</em> to <span class="math inline">\(T\)</span> if, for all <span class="math inline">\(t\in \R\)</span> at which <span class="math inline">\(F\)</span> is continuous, <span class="math inline">\(\lim_{n \rightarrow \infty} F_{(n)}(t) = F(t).\)</span> We denote this as <span class="math inline">\(T_{(n)} \overset{d}{\rightarrow} T.\)</span></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Here’s the statement, and the thing to notice is that the actual statement of convergence is in terms of the CDFs</li>
+<li>You might hope it was about pdfs, but that’s not possible. for example, if you have a discrete population, you can never have a continuous statistics</li>
+<li>Also, every random variable in the world has a cdf, so that makes this more universal.</li>
+</ul>
+</div>
+</section>
+<section id="the-need-to-standardize" class="level2">
+<h2 class="anchored" data-anchor-id="the-need-to-standardize">The need to Standardize</h2>
+<p><embed src="./images/standardizing_values.pdf" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>We want to say that the distribution of the sample mean converges in distribution to the normal, but there’s one more wrinkle.</li>
+<li>Remember that as n increases, the distribution gets thinner and thinner.</li>
+<li>The variance decreases as 1/n</li>
+<li>So we can’t just look at the raw distribution, which approaches a spike. We have to stretch it back out so that the width is a constant.</li>
+</ul>
+</div>
+</section>
+<section id="standardizing-the-sample-mean" class="level2">
+<h2 class="anchored" data-anchor-id="standardizing-the-sample-mean">Standardizing the Sample Mean</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definition: Standardized sample mean">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: Standardized sample mean
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>For IID random variables $(X_1,X_2,...,X_n)$ 
+with finite $\E[x] = \mu$ and finite $\V[X] = \sigma^2$,
+then __the standardized sample mean__ is:
+$Z = \frac{\left(\overline{X} - \E\big[\overline{X}\big]
+  \right)}{\sigma\big[\overline{X}\big]} =
+\frac{\sqrt{n}\big(\overline{X} - \mu\big)}{\sigma}.$</code></pre>
+</div>
+</div>
+<ul>
+<li>The standardized sample mean always has mean 0 and standard deviation 1.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Recall,</li>
+</ul>
+</div>
+</section>
+<section id="the-central-limit-theorem-1" class="level2">
+<h2 class="anchored" data-anchor-id="the-central-limit-theorem-1">The Central Limit Theorem</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="The Central Limit Theorem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Central Limit Theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>Let $(X_1,X_2,X_3,...)$ be a sequence of i.i.d. random variables with finite mean $\E[X] = \mu$ and finite variance $\V[X] = \sigma^2$,
+$Z =    \frac{\sqrt{n}\big(\overline{X} - \mu\big)}{\sigma} \overset{d}{\to} N(0,1)$% $$% which is the equivalent to% $$% \sqrt{n}(\overline{X} - \mu) \overset{d}{\to} N(0, \sigma^{2})% $$</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>With all that out of the way, we can finally state the CLT</li>
+<li>To summarize: As long as n is large enough, then the mean,</li>
+<li>It doesn’t matter what the population distribution looks like.</li>
+<li>This means that we can run hypothesis tests and make precise statements about uncertainty.</li>
+</ul>
+</div>
+</section>
+<section id="generality-of-the-clt" class="level2">
+<h2 class="anchored" data-anchor-id="generality-of-the-clt">Generality of the CLT</h2>
+<p>The CLT applies to:</p>
+<ul>
+<li>Continuous Random Variables</li>
+<li>Discrete Random Variables</li>
+<li>Symmetric Random Variables</li>
+<li>Asymmetric Random Variables</li>
+</ul>
+<p>Only Requirements:</p>
+<ul>
+<li>Data points are IID.</li>
+<li>Population has finite variance.</li>
+</ul>
+<p>Versions of the CLT exist for many other statistics.</p>
+</section>
+<section id="what-sample-size-is-enough" class="level2">
+<h2 class="anchored" data-anchor-id="what-sample-size-is-enough">What Sample Size is Enough?</h2>
+<p>The CLT works in the limit as</p>
+<p><span class="math inline">\(n\to \infty\)</span> . What can we say for a finite <span class="math inline">\(n &lt; \infty\)</span> ?</p>
+<ul>
+<li>Rule of Thumb: <span class="math inline">\(n=30\)</span> for CLT to “kick in.”</li>
+<li>Reality: Convergence depends on how non-normal population is. - A normal population requires <span class="math inline">\(n=1\)</span> .</li>
+<li>Highly skewed distributions may require <span class="math inline">\(n=100\)</span> , <span class="math inline">\(n=1000\)</span> , or more.</li>
+</ul>
+<div class="notes">
+<ul>
+<li><p>When you were working with a normal underlying distribution, how quickly with a sample average move</p></li>
+<li><p>If two distributions have the same</p></li>
+<li><p>There’s a general rule of thumb that for</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="learnosity-when-does-the-clt-apply" class="level1">
+<h1>Learnosity: When Does the CLT Apply?</h1>
+<section id="where-and-when-does-the-clt-apply-part-iii" class="level2">
+<h2 class="anchored" data-anchor-id="where-and-when-does-the-clt-apply-part-iii">Where and When Does the CLT Apply? Part III</h2>
+<p><strong>Which of these random variables has an approximately normal distribution because of the CLT?</strong> - <span class="math inline">\(X=\)</span> hours spent by one individual on a 203 homework assignment - <span class="math inline">\(X=\)</span> average hours spent by randomly assigned study groups of size 4 on the same 203 homework - <span class="math inline">\(X=\)</span> number of barks by a dog named Rex for a one-hour period at night</p>
+</section>
+<section id="where-and-when-does-the-clt-apply-part-iii-1" class="level2">
+<h2 class="anchored" data-anchor-id="where-and-when-does-the-clt-apply-part-iii-1">Where and When Does the CLT Apply? Part III</h2>
+<p><strong>Which of these random variables has an approximately normal distribution because of the CLT?</strong> - <span class="math inline">\(X=\)</span> total number of barks by a neighborhood of dogs for a one-hour period at night - <span class="math inline">\(X=\)</span> age of a randomly selected MIDS student - <span class="math inline">\(X=\)</span> average of sample of 10 randomly selected MIDS students - <span class="math inline">\(X=\)</span> VADER sentiment of a sample of 100 SMS messages</p>
+</section>
+</section>
+<section id="the-plug-in-principle" class="level1">
+<h1>The Plug-In Principle</h1>
+<section id="the-plug-in-principle-1" class="level2">
+<h2 class="anchored" data-anchor-id="the-plug-in-principle-1">The Plug-In Principle</h2>
+<ul>
+<li><p>Want mean of population <span class="math inline">\(\rightarrow\)</span> Mean of sample.</p></li>
+<li><p>Want variance of population <span class="math inline">\(\rightarrow\)</span> Variance of sample.</p></li>
+<li><p>Want <span class="math inline">\(f(E[X], V[X])\)</span> ? <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(f(\bar X, \hat V(X))\)</span></p>
+<p>See the Pattern?</p></li>
+</ul>
+<div class="notes">
+<ul>
+<li>I want to discuss this idea of the Plug-In principle</li>
+<li>The book uses it a lot, but it also glosses over the details</li>
+<li>Now you’ve seen a few estimators, and you may start to notice a pattern…</li>
+<li>If you want a function of the population variance, you can plug the sample variance into the function</li>
+<li>So statisticians started to notice, hey, if we just plug in these sample analogues, we seem to get good estimators.</li>
+<li>Is this just an accident? Or is there something deeper going on? Can we use this to find estimators for more parameters?</li>
+</ul>
+</div>
+</section>
+<section id="the-plug-in-principle-2" class="level2">
+<h2 class="anchored" data-anchor-id="the-plug-in-principle-2">The Plug-In Principle</h2>
+<p><embed src="./images/plug-in.pdf" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>It turns out, yes, there is something going on</li>
+<li>At the bottom, we have a population, represented as a CDF. We apply expectation to it, to get the population mean</li>
+<li>Now at the top, we have our sample of data, represented by the empirical CDF. Well, if you take the empirical distribution and apply expectation to it, you get the sample mean.</li>
+<li>What’s key here, is that these expectations are exactly the same operator! You really need to take measure theory to prove this, but hopefully that seems believable</li>
+<li>Now, what happens when</li>
+<li>We know the empirical CDF converges in distribution on the population CDF.</li>
+<li>We need the expectation operator to be continuous, and that’s not easy to define here. but if it’s smooth enough, as the empirical cdf approaches the true cdf, it makes sense that the sample mean approaches the population mean in probability.</li>
+<li>This works a lot of the time. For a really large class of operators, if you plug in the empirical cdf for the true one, you get a consistent estimator.</li>
+<li>But that’s not all. these estimators are consistent, and they are also asymptotically normal</li>
+<li>That’s harder to demonstrate, but here’s a hint. if you look at a point on the CDF function, you can write it as a sample mean - you add a 1 for every point to the left, an 0 for every point to the right. So the distribution of this point approaches the normal. So you can maybe believe that if the deviations are small enough, when you pass them through the expectation, you get another normal sampling distribution.</li>
+<li>So that’s the plug-in principle. It’s pretty important, because it’s also the basis for bootstrap theory. It does take some advanced math to check that it actually applies to your estimator. So we won’t prove things with it in this class, but it’s good to know that it exists, and we will use it to come up with ideas for estimators.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="reading-assignment" class="level1">
+<h1>Reading Assignment</h1>
+<section id="reading-assignment-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-assignment-1">Reading Assignment</h2>
+<p><strong>Only if you’re interested,</strong> read section 3.3 - 3.3.1 to learn more about the Plug-In Principle.</p>
+</section>
+</section>
+<section id="asymptotic-theory" class="level1">
+<h1>Asymptotic Theory</h1>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4"></h2>
+<p><strong>Across a range of applications, small samples are problems.</strong> - If we’ve got a <em>lot</em> of data, though, we can rely on weaker requirements - Asymptotic properties of estimators ask the question, <strong>What happens when we have a lot of data?</strong> - In general, as <span class="math inline">\(n\to \infty\)</span> , does <span class="math inline">\(\hat{\theta}\)</span> converge in distribution or probability to something that is useful or desirable? </p>
+<div class="notes">
+<ul>
+<li>Tie the problems back to the small-sample bias of the Plug-In Sampling Variance</li>
+</ul>
+</div>
+</section>
+<section id="reading-asymptotics" class="level2">
+<h2 class="anchored" data-anchor-id="reading-asymptotics">Reading: Asymptotics</h2>
+<p><strong>Note: This is a READING CALL. We’re placing it here for organization.</strong> - The interested student can read pages 111-114. - But, we might recommend skipping it if you’re constrained. - The take home is that there is an asymptotic statement of: - Being Normally Distributed - SE, MSE and Efficiency - Sampling Variance and Sampling Standard Error</p>
+</section>
+<section id="reading-the-plug-in-principle" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-plug-in-principle">Reading: The Plug-In Principle</h2>
+<ul>
+<li><span class="math inline">\(F(x)\)</span> is the cumulative distribution function, the <em>CDF</em></li>
+<li><span class="math inline">\(f(x)\)</span> is the probability distribution function, the <em>PDF</em></li>
+<li><span class="math inline">\(\hat{F}(x) \not= F(x)\)</span> and <span class="math inline">\(\hat{f}(x) \not= F(x)\)</span> </li>
+<li>As <span class="math inline">\(n\to \infty\)</span> we hope that <span class="math inline">\(\hat{F}(x)
+     \overset{d}{\to}F(x)\)</span> and <span class="math inline">\(\hat{f}(x)\overset{d}{\to}f(x)\)</span> . </li>
+</ul>
+<div class="notes">
+<ul>
+<li>We’re not going to lie to you… this is a challenging section to read.</li>
+<li>A couple of notes are in order.</li>
+</ul>
+</div>
+</section>
+<section id="the-plug-in-principle-3" class="level2">
+<h2 class="anchored" data-anchor-id="the-plug-in-principle-3">The Plug-In Principle</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Expectation and Variance Functionals">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expectation and Variance Functionals
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>You _know_ what the processes for calculating an expectation
+and variance are.
+\begin{align*}
+  E[X] &amp;= T_{E}(F) = \int x \cdot dF(x) \\
+  V[E] &amp;= T_{V}(F) = \int (x - E[X])^{2} \cdot dF(x)
+\end{align*}</code></pre>
+</div>
+</div>
+<p>These are the <em>statistical functionals</em> for expectation and variance.</p>
+<div class="notes">
+<ul>
+<li>You might be annoyed that we’re dealing with</li>
+<li></li>
+</ul>
+</div>
+</section>
+<section id="the-plug-in-principle-cont." class="level2">
+<h2 class="anchored" data-anchor-id="the-plug-in-principle-cont.">The Plug-In Principle (cont.)</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Plug-In Estimators">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Plug-In Estimators
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>For i.i.d. random variables $X_{1}, X_{2}, \dots, X_{n}$, with a
+common CDF $F$, the plug in estimator for $\theta = T(F)$ is just
+$\hat{\theta} = T(\hat{F})$.
+\begin{align*}
+  \hat{E}(X) &amp;= T_{E}(\hat{F}) \\
+             &amp; = \sum x \cdot \hat{f}(x) \\
+             &amp; = \sum x \cdot \frac{I(X_{i} = x)}{n} \\
+             &amp;= \frac{1}{n} \sum x \\ 
+             &amp;= \overline{X} \\ 
+\end{align*}</code></pre>
+</div>
+</div>
+</section>
+<section id="example-of-the-plug-in-principle" class="level2">
+<h2 class="anchored" data-anchor-id="example-of-the-plug-in-principle">Example of the Plug-In Principle</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Example with Discrete Data">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example with Discrete Data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>Suppose you there is some discrete process that places values into the
+random variable $X$.
+\note[item]{(You can't see equation process!)}</code></pre>
+<div class="columns">
+<div class="column" style="width:35%;">
+<ul>
+<li><span class="math inline">\(F_{X}(1) = 1/3\)</span></li>
+<li><span class="math inline">\(F_{X}(2) = 1/6\)</span></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<ul>
+<li><span class="math inline">\(F_{X}(3) = 0\)</span></li>
+<li><span class="math inline">\(F_{X}(4) = 1/2\)</span></li>
+</ul>
+</div>
+</div>
+<pre><code>But, you do get to produce i.i.d. random draws from the
+process. Of 1000 draws: \\\begin{tabular}{llll}
+  \textbf{1} &amp; \textbf{2} &amp; \textbf{3} &amp; \textbf{4} 
+
+  \hline
+  331 &amp; 156 &amp; 0 &amp; 513 
+
+\end{tabular}</code></pre>
+</div>
+</div>
+</section>
+<section id="example-of-the-plug-in-principle-contd" class="level2">
+<h2 class="anchored" data-anchor-id="example-of-the-plug-in-principle-contd">Example of the Plug-In Principle, cont’d</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Example with Discrete Data">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example with Discrete Data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\hat{E}(\bs X) = T_{E}(\hat{F})\)</span></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li><embed src="images/plug_in_discrete.pdf" class="img-fluid"></li>
+</ul>
+</div>
+</section>
+<section id="reading-kernel-methods-esttimate-the-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="reading-kernel-methods-esttimate-the-pdf">Reading: Kernel Methods Esttimate the PDF</h2>
+<p>Read pages 121 - 124.</p>
+</section>
+<section id="kernel-methods-part-i" class="level2">
+<h2 class="anchored" data-anchor-id="kernel-methods-part-i">Kernel Methods, Part I</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Kernel Density Estimator of PDF">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Kernel Density Estimator of PDF
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Cannot <em>directly</em> observe the joint PDF.</li>
+<li>For discrete RV, approximations come through frequency tables.</li>
+<li>For continuous RV, approximations come through kernel density estimates: [ <em>{K}(x) = </em>{i=1}^{n}K_{b}(x - X_{i}), x ]</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="kernel-methods-part-ii" class="level2">
+<h2 class="anchored" data-anchor-id="kernel-methods-part-ii">Kernel Methods, Part II</h2>
+<ul>
+<li>Kernel methods are smoothing methods</li>
+<li>The <em>kernel</em> is some weighting function</li>
+</ul>
+<p><embed src="./images/logit0.pdf" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li><embed src="./images/logit1.pdf" class="img-fluid"></li>
+</ul>
+</div>
+</section>
+<section id="kernel-methods-part-iii" class="level2">
+<h2 class="anchored" data-anchor-id="kernel-methods-part-iii">Kernel Methods, part III</h2>
+<p>As smoothing function, these permit plug in estimates that are directly analogous to the estimating functionals of the CDF.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Kernel Plug-In Estimator">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Kernel Plug-In Estimator
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>The _Kernel plug-in estimator_ of $\theta = T(F)$
+is \[\hat{\theta}_{k} = T\big(\hat{F}_{K}\big),\] where,
+$\hat{F}_{K} = \int_{-\infty}^{x} \hat{f}(u)du$. </code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li></li>
+</ul>
+</div>
+</section>
+<section id="kernel-methods-part-iv" class="level2">
+<h2 class="anchored" data-anchor-id="kernel-methods-part-iv">Kernel Methods, part IV</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Kernel Plug-In Estimator for Expected Value">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Kernel Plug-In Estimator for Expected Value
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>  We know the functional for the expected value has a specific
+  ``shape'' \[\E[Y] = \int y\cdot df(y).\] So, the feasible kernel method is
+\[\hat{\E}_{k}(\bs Y) = \int_{-\infty}^{\infty} y \cdot d\hat{f}_{K}(y)\]</code></pre>
+</div>
+</div>
+</section>
+<section id="kernel-methods-part-v" class="level2">
+<h2 class="anchored" data-anchor-id="kernel-methods-part-v">Kernel Methods, part V</h2>
+<ul>
+<li><span class="math inline">\(\E[Y]\)</span> and <span class="math inline">\(\E[Y|X]\)</span> are lowest MSE estimates of <span class="math inline">\(Y\)</span> </li>
+</ul>
+<p><span class="math display">\[\begin{align*}
+    \hat{\E}_{K}(\bs Y) &amp;= \int y\hat{f}(y) \\
+    \hat{\E}_{K}(\bs Y|X=x]) &amp;= \int y \hat{f}_{Y|X}(y|x) \\
+  \end{align*}\]</span> - If you can produce i.i.d. samples from <span class="math inline">\(f_{Y|X}\)</span> , you can produce estimates, <span class="math inline">\(\hat{f}_{K}(y|x)\)</span> that get ever closer to the true value</p>
+<div class="notes">
+<ul>
+<li>The next sections in the course combine these facts with the CLT distributional shapes so that we can make</li>
+</ul>
+</div>
+</section>
+<section id="apply-kernel-methods" class="level2">
+<h2 class="anchored" data-anchor-id="apply-kernel-methods">Apply Kernel Methods</h2>
+<p><strong>Note: This is a LEARNOSITY activity. We’re just placing it here for organization.</strong></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

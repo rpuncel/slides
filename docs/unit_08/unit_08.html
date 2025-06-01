@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Statistics for Data Science">
+
+<title>Week 8</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unit_08/unit_08.html">Week 8</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MIDS 203 Slides</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_01/unit_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_02/unit_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_03/unit_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_04/unit_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_05/unit_05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_06/unit_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_07/unit_07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_08/unit_08.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Week 8</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_07_and_unit_08/unit_07_and_unit_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_09/unit_09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Regression</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_10/unit_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_11/unit_11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_12/unit_12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 12</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit_13/unit_13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 13</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+ <span class="menu-text">unit_14/unit_14.qmd</span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#introduction-to-regression" id="toc-introduction-to-regression" class="nav-link" data-scroll-target="#introduction-to-regression">Introduction to Regression</a>
+  <ul class="collapse">
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
+  <li><a href="#the-regression-algorithm" id="toc-the-regression-algorithm" class="nav-link" data-scroll-target="#the-regression-algorithm">The Regression Algorithm</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  <li><a href="#the-mechanics-of-ols-regression" id="toc-the-mechanics-of-ols-regression" class="nav-link" data-scroll-target="#the-mechanics-of-ols-regression">The Mechanics of OLS Regression</a></li>
+  </ul></li>
+  <li><a href="#unit-plan" id="toc-unit-plan" class="nav-link" data-scroll-target="#unit-plan">Unit Plan</a>
+  <ul class="collapse">
+  <li><a href="#goals-of-this-week" id="toc-goals-of-this-week" class="nav-link" data-scroll-target="#goals-of-this-week">Goals of This Week</a></li>
+  </ul></li>
+  <li><a href="#reading-the-golem-of-prague" id="toc-reading-the-golem-of-prague" class="nav-link" data-scroll-target="#reading-the-golem-of-prague">Reading: The Golem of Prague</a>
+  <ul class="collapse">
+  <li><a href="#reading-the-golem-of-prague-1" id="toc-reading-the-golem-of-prague-1" class="nav-link" data-scroll-target="#reading-the-golem-of-prague-1">Reading: The Golem of Prague</a></li>
+  </ul></li>
+  <li><a href="#regression-a-statistical-golem" id="toc-regression-a-statistical-golem" class="nav-link" data-scroll-target="#regression-a-statistical-golem">Regression, a Statistical Golem</a>
+  <ul class="collapse">
+  <li><a href="#regression-a-statistical-golem-1" id="toc-regression-a-statistical-golem-1" class="nav-link" data-scroll-target="#regression-a-statistical-golem-1">Regression, a Statistical Golem</a></li>
+  <li><a href="#the-machinery-of-ols-regression" id="toc-the-machinery-of-ols-regression" class="nav-link" data-scroll-target="#the-machinery-of-ols-regression">The Machinery of OLS Regression</a></li>
+  <li><a href="#applications-of-ols-regression" id="toc-applications-of-ols-regression" class="nav-link" data-scroll-target="#applications-of-ols-regression">Applications of OLS Regression</a></li>
+  </ul></li>
+  <li><a href="#elements-of-a-linear-model" id="toc-elements-of-a-linear-model" class="nav-link" data-scroll-target="#elements-of-a-linear-model">Elements of a Linear Model</a>
+  <ul class="collapse">
+  <li><a href="#elements-in-a-linear-model" id="toc-elements-in-a-linear-model" class="nav-link" data-scroll-target="#elements-in-a-linear-model">Elements in a Linear Model</a></li>
+  <li><a href="#the-linear-model-formula" id="toc-the-linear-model-formula" class="nav-link" data-scroll-target="#the-linear-model-formula">The Linear Model Formula</a></li>
+  <li><a href="#a-linear-model-example" id="toc-a-linear-model-example" class="nav-link" data-scroll-target="#a-linear-model-example">A Linear Model Example</a></li>
+  </ul></li>
+  <li><a href="#review-outcome-prediction-and-error" id="toc-review-outcome-prediction-and-error" class="nav-link" data-scroll-target="#review-outcome-prediction-and-error">Review: Outcome, Prediction, and Error</a>
+  <ul class="collapse">
+  <li><a href="#review-outcome-prediction-and-error-1" id="toc-review-outcome-prediction-and-error-1" class="nav-link" data-scroll-target="#review-outcome-prediction-and-error-1">Review: Outcome, Prediction, and Error</a></li>
+  </ul></li>
+  <li><a href="#concept-check-making-predictions-with-a-linear-model" id="toc-concept-check-making-predictions-with-a-linear-model" class="nav-link" data-scroll-target="#concept-check-making-predictions-with-a-linear-model">Concept Check: Making Predictions with a Linear Model</a>
+  <ul class="collapse">
+  <li><a href="#concept-check-making-predictions-with-a-linear-model-1" id="toc-concept-check-making-predictions-with-a-linear-model-1" class="nav-link" data-scroll-target="#concept-check-making-predictions-with-a-linear-model-1">Concept Check: Making Predictions with a Linear Model</a></li>
+  </ul></li>
+  <li><a href="#metric-inputs" id="toc-metric-inputs" class="nav-link" data-scroll-target="#metric-inputs">Metric Inputs</a>
+  <ul class="collapse">
+  <li><a href="#interpreting-model-weights-coefficients" id="toc-interpreting-model-weights-coefficients" class="nav-link" data-scroll-target="#interpreting-model-weights-coefficients">Interpreting Model Weights (Coefficients)</a></li>
+  <li><a href="#interpreting-model-coefficients-example" id="toc-interpreting-model-coefficients-example" class="nav-link" data-scroll-target="#interpreting-model-coefficients-example">Interpreting Model Coefficients: Example</a></li>
+  </ul></li>
+  <li><a href="#categorical-inputs" id="toc-categorical-inputs" class="nav-link" data-scroll-target="#categorical-inputs">Categorical Inputs</a>
+  <ul class="collapse">
+  <li><a href="#categorial-inputs-part-i" id="toc-categorial-inputs-part-i" class="nav-link" data-scroll-target="#categorial-inputs-part-i">Categorial Inputs, Part I</a></li>
+  <li><a href="#categorical-inputs-part-ii" id="toc-categorical-inputs-part-ii" class="nav-link" data-scroll-target="#categorical-inputs-part-ii">Categorical Inputs, Part II</a></li>
+  <li><a href="#categorical-inputs-part-ii-1" id="toc-categorical-inputs-part-ii-1" class="nav-link" data-scroll-target="#categorical-inputs-part-ii-1">Categorical Inputs, Part II</a></li>
+  </ul></li>
+  <li><a href="#learnosity-interpreting-model-weights" id="toc-learnosity-interpreting-model-weights" class="nav-link" data-scroll-target="#learnosity-interpreting-model-weights">Learnosity: Interpreting Model Weights</a>
+  <ul class="collapse">
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"></a></li>
+  </ul></li>
+  <li><a href="#part-2-selecting-a-linear-model-with-ols" id="toc-part-2-selecting-a-linear-model-with-ols" class="nav-link" data-scroll-target="#part-2-selecting-a-linear-model-with-ols">Part 2: Selecting a Linear Model with OLS</a></li>
+  <li><a href="#ols-is-regression-for-estimating-the-blp" id="toc-ols-is-regression-for-estimating-the-blp" class="nav-link" data-scroll-target="#ols-is-regression-for-estimating-the-blp">OLS is Regression for Estimating the BLP</a>
+  <ul class="collapse">
+  <li><a href="#fitting-linear-models" id="toc-fitting-linear-models" class="nav-link" data-scroll-target="#fitting-linear-models">Fitting Linear Models</a></li>
+  <li><a href="#understanding-ols" id="toc-understanding-ols" class="nav-link" data-scroll-target="#understanding-ols">Understanding OLS</a></li>
+  <li><a href="#the-blp-minimizes-expected-squared-error" id="toc-the-blp-minimizes-expected-squared-error" class="nav-link" data-scroll-target="#the-blp-minimizes-expected-squared-error">The BLP Minimizes Expected Squared Error</a></li>
+  <li><a href="#the-best-linear-predictor" id="toc-the-best-linear-predictor" class="nav-link" data-scroll-target="#the-best-linear-predictor">The Best Linear Predictor</a></li>
+  <li><a href="#great-things-about-the-blp" id="toc-great-things-about-the-blp" class="nav-link" data-scroll-target="#great-things-about-the-blp">Great Things About the BLP</a></li>
+  <li><a href="#applying-the-plug-in-principle" id="toc-applying-the-plug-in-principle" class="nav-link" data-scroll-target="#applying-the-plug-in-principle">Applying the Plug-In Principle</a></li>
+  <li><a href="#ols-regression-is-the-blp-plug-in-estimator" id="toc-ols-regression-is-the-blp-plug-in-estimator" class="nav-link" data-scroll-target="#ols-regression-is-the-blp-plug-in-estimator">OLS Regression Is the BLP Plug-In Estimator</a></li>
+  <li><a href="#an-analogy-with-the-mean" id="toc-an-analogy-with-the-mean" class="nav-link" data-scroll-target="#an-analogy-with-the-mean">An Analogy with the Mean</a></li>
+  <li><a href="#coming-up-soon" id="toc-coming-up-soon" class="nav-link" data-scroll-target="#coming-up-soon">Coming Up Soon…</a></li>
+  </ul></li>
+  <li><a href="#learnosity-you-minimize-it" id="toc-learnosity-you-minimize-it" class="nav-link" data-scroll-target="#learnosity-you-minimize-it">Learnosity: You Minimize It!</a>
+  <ul class="collapse">
+  <li><a href="#learnosity-you-minimize-it-1" id="toc-learnosity-you-minimize-it-1" class="nav-link" data-scroll-target="#learnosity-you-minimize-it-1">Learnosity: You Minimize It!</a></li>
+  </ul></li>
+  <li><a href="#reading-ols-regression-estimates-the-blp" id="toc-reading-ols-regression-estimates-the-blp" class="nav-link" data-scroll-target="#reading-ols-regression-estimates-the-blp">Reading: OLS Regression Estimates the BLP</a>
+  <ul class="collapse">
+  <li><a href="#reading-linear-regression-is-a-plug-in-estimator-for-the-blp" id="toc-reading-linear-regression-is-a-plug-in-estimator-for-the-blp" class="nav-link" data-scroll-target="#reading-linear-regression-is-a-plug-in-estimator-for-the-blp">Reading: Linear Regression is a Plug-in Estimator for the BLP</a></li>
+  </ul></li>
+  <li><a href="#choosing-assumptions-for-ols-regression" id="toc-choosing-assumptions-for-ols-regression" class="nav-link" data-scroll-target="#choosing-assumptions-for-ols-regression">Choosing Assumptions for OLS Regression</a>
+  <ul class="collapse">
+  <li><a href="#when-does-ols-work" id="toc-when-does-ols-work" class="nav-link" data-scroll-target="#when-does-ols-work">When Does OLS “Work”?</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"></a></li>
+  <li><a href="#ols-in-a-large-sample" id="toc-ols-in-a-large-sample" class="nav-link" data-scroll-target="#ols-in-a-large-sample">OLS in a Large Sample</a></li>
+  <li><a href="#ols-in-a-small-sample" id="toc-ols-in-a-small-sample" class="nav-link" data-scroll-target="#ols-in-a-small-sample">OLS in a Small Sample</a></li>
+  <li><a href="#ols-in-very-small-samples" id="toc-ols-in-very-small-samples" class="nav-link" data-scroll-target="#ols-in-very-small-samples">OLS in Very Small Samples</a></li>
+  <li><a href="#rules-of-thumb-for-ols-assumptions" id="toc-rules-of-thumb-for-ols-assumptions" class="nav-link" data-scroll-target="#rules-of-thumb-for-ols-assumptions">Rules of Thumb for OLS Assumptions</a></li>
+  </ul></li>
+  <li><a href="#the-bivariate-ols-solution" id="toc-the-bivariate-ols-solution" class="nav-link" data-scroll-target="#the-bivariate-ols-solution">The Bivariate OLS Solution</a>
+  <ul class="collapse">
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7"></a></li>
+  </ul></li>
+  <li><a href="#consistency-of-bivariate-ols-under-the-large-sample-model" id="toc-consistency-of-bivariate-ols-under-the-large-sample-model" class="nav-link" data-scroll-target="#consistency-of-bivariate-ols-under-the-large-sample-model">Consistency of Bivariate OLS Under the Large-Sample Model</a>
+  <ul class="collapse">
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8"></a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9"></a></li>
+  </ul></li>
+  <li><a href="#the-matrix-formulation-of-a-linear-model" id="toc-the-matrix-formulation-of-a-linear-model" class="nav-link" data-scroll-target="#the-matrix-formulation-of-a-linear-model">The Matrix Formulation of a Linear Model</a>
+  <ul class="collapse">
+  <li><a href="#the-matrix-formulation-of-a-linear-model-1" id="toc-the-matrix-formulation-of-a-linear-model-1" class="nav-link" data-scroll-target="#the-matrix-formulation-of-a-linear-model-1">The Matrix Formulation of a Linear Model</a></li>
+  </ul></li>
+  <li><a href="#reading-the-matrix-solution-for-ols-regression" id="toc-reading-the-matrix-solution-for-ols-regression" class="nav-link" data-scroll-target="#reading-the-matrix-solution-for-ols-regression">Reading: The Matrix Solution For OLS Regression</a>
+  <ul class="collapse">
+  <li><a href="#reading-the-matrix-solution-for-ols-regression-1" id="toc-reading-the-matrix-solution-for-ols-regression-1" class="nav-link" data-scroll-target="#reading-the-matrix-solution-for-ols-regression-1">Reading: The Matrix Solution For OLS Regression</a></li>
+  </ul></li>
+  <li><a href="#the-multiple-ols-solution" id="toc-the-multiple-ols-solution" class="nav-link" data-scroll-target="#the-multiple-ols-solution">The Multiple OLS Solution</a>
+  <ul class="collapse">
+  <li><a href="#the-multiple-ols-solution-1" id="toc-the-multiple-ols-solution-1" class="nav-link" data-scroll-target="#the-multiple-ols-solution-1">The Multiple OLS Solution</a></li>
+  </ul></li>
+  <li><a href="#sample-moment-conditions" id="toc-sample-moment-conditions" class="nav-link" data-scroll-target="#sample-moment-conditions">Sample Moment Conditions</a>
+  <ul class="collapse">
+  <li><a href="#review-population-moment-conditions" id="toc-review-population-moment-conditions" class="nav-link" data-scroll-target="#review-population-moment-conditions">Review: Population Moment Conditions</a></li>
+  <li><a href="#sample-moment-conditions-1" id="toc-sample-moment-conditions-1" class="nav-link" data-scroll-target="#sample-moment-conditions-1">Sample Moment Conditions</a></li>
+  <li><a href="#sample-moment-conditions-2" id="toc-sample-moment-conditions-2" class="nav-link" data-scroll-target="#sample-moment-conditions-2">Sample Moment Conditions</a></li>
+  </ul></li>
+  <li><a href="#consistency-of-multiple-ols" id="toc-consistency-of-multiple-ols" class="nav-link" data-scroll-target="#consistency-of-multiple-ols">Consistency of Multiple OLS</a>
+  <ul class="collapse">
+  <li><a href="#consistency-of-multiple-ols-1" id="toc-consistency-of-multiple-ols-1" class="nav-link" data-scroll-target="#consistency-of-multiple-ols-1">Consistency of Multiple OLS</a></li>
+  <li><a href="#consistency-of-multiple-ols-2" id="toc-consistency-of-multiple-ols-2" class="nav-link" data-scroll-target="#consistency-of-multiple-ols-2">Consistency of Multiple OLS</a></li>
+  <li><a href="#consistency-of-ols" id="toc-consistency-of-ols" class="nav-link" data-scroll-target="#consistency-of-ols">Consistency of OLS</a></li>
+  </ul></li>
+  <li><a href="#unique-variation-and-regression-anatomy" id="toc-unique-variation-and-regression-anatomy" class="nav-link" data-scroll-target="#unique-variation-and-regression-anatomy">Unique Variation and Regression Anatomy</a>
+  <ul class="collapse">
+  <li><a href="#how-can-we-understand-a-specific-hat-beta_i" id="toc-how-can-we-understand-a-specific-hat-beta_i" class="nav-link" data-scroll-target="#how-can-we-understand-a-specific-hat-beta_i">How Can We Understand a Specific <span class="math inline">\(\hat \beta_i\)</span>?</a></li>
+  <li><a href="#partialling-out" id="toc-partialling-out" class="nav-link" data-scroll-target="#partialling-out">Partialling Out</a></li>
+  </ul></li>
+  <li><a href="#deriving-the-regression-anatomy-formula" id="toc-deriving-the-regression-anatomy-formula" class="nav-link" data-scroll-target="#deriving-the-regression-anatomy-formula">Deriving the Regression Anatomy Formula</a>
+  <ul class="collapse">
+  <li><a href="#deriving-the-regression-anatomy-formula-1" id="toc-deriving-the-regression-anatomy-formula-1" class="nav-link" data-scroll-target="#deriving-the-regression-anatomy-formula-1">Deriving the Regression Anatomy Formula</a></li>
+  </ul></li>
+  <li><a href="#segment-for-consideration-applying-the-regression-anatomy-formula" id="toc-segment-for-consideration-applying-the-regression-anatomy-formula" class="nav-link" data-scroll-target="#segment-for-consideration-applying-the-regression-anatomy-formula">Segment for Consideration: Applying the Regression Anatomy Formula</a>
+  <ul class="collapse">
+  <li><a href="#applying-the-regression-anatomy-formula" id="toc-applying-the-regression-anatomy-formula" class="nav-link" data-scroll-target="#applying-the-regression-anatomy-formula">Applying the Regression Anatomy Formula</a></li>
+  <li><a href="#interpreting-model-coefficients-warnings" id="toc-interpreting-model-coefficients-warnings" class="nav-link" data-scroll-target="#interpreting-model-coefficients-warnings">Interpreting Model Coefficients: Warnings</a></li>
+  </ul></li>
+  <li><a href="#evaluating-the-large-sample-linear-model" id="toc-evaluating-the-large-sample-linear-model" class="nav-link" data-scroll-target="#evaluating-the-large-sample-linear-model">Evaluating the Large-Sample Linear Model</a>
+  <ul class="collapse">
+  <li><a href="#the-large-sample-linear-model" id="toc-the-large-sample-linear-model" class="nav-link" data-scroll-target="#the-large-sample-linear-model">The Large-Sample Linear Model</a></li>
+  <li><a href="#what-does-i.i.d.-mean" id="toc-what-does-i.i.d.-mean" class="nav-link" data-scroll-target="#what-does-i.i.d.-mean">What Does I.I.D. Mean?</a></li>
+  <li><a href="#common-violations-of-independence" id="toc-common-violations-of-independence" class="nav-link" data-scroll-target="#common-violations-of-independence">Common Violations of Independence</a></li>
+  <li><a href="#a-unique-blp-exists" id="toc-a-unique-blp-exists" class="nav-link" data-scroll-target="#a-unique-blp-exists">A Unique BLP Exists</a></li>
+  <li><a href="#perfect-collinearity-example-1" id="toc-perfect-collinearity-example-1" class="nav-link" data-scroll-target="#perfect-collinearity-example-1">Perfect Collinearity Example 1</a></li>
+  <li><a href="#perfect-collinearity-example-2" id="toc-perfect-collinearity-example-2" class="nav-link" data-scroll-target="#perfect-collinearity-example-2">Perfect Collinearity Example 2</a></li>
+  </ul></li>
+  <li><a href="#goodness-of-fit" id="toc-goodness-of-fit" class="nav-link" data-scroll-target="#goodness-of-fit">Goodness of Fit</a>
+  <ul class="collapse">
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10"></a></li>
+  <li><a href="#breaking-down-variance" id="toc-breaking-down-variance" class="nav-link" data-scroll-target="#breaking-down-variance">Breaking Down Variance</a></li>
+  <li><a href="#defining-r2" id="toc-defining-r2" class="nav-link" data-scroll-target="#defining-r2">Defining <span class="math inline">\(R^2\)</span></a></li>
+  <li><a href="#r-is-correlation" id="toc-r-is-correlation" class="nav-link" data-scroll-target="#r-is-correlation">R is Correlation</a></li>
+  <li><a href="#understanding-sums-of-squares" id="toc-understanding-sums-of-squares" class="nav-link" data-scroll-target="#understanding-sums-of-squares">Understanding Sums of Squares</a></li>
+  <li><a href="#things-to-remember-about-r2" id="toc-things-to-remember-about-r2" class="nav-link" data-scroll-target="#things-to-remember-about-r2">Things to Remember About <span class="math inline">\(R^2\)</span></a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="unit_08.revealjs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 8</h1>
+<p class="subtitle lead">Ordinary Least Square Regression</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Statistics for Data Science </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            UC Berkeley, School of Information
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="section" class="level1">
+<h1></h1>
+</section>
+<section id="introduction-to-regression" class="level1">
+<h1>Introduction to Regression</h1>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<p><img src="images/regression_example_1.png" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>If you open any academic paper that uses data today - there’s a quite good chance that you’ll find a linear regression inside. If you don’t find a regression, you might find a technique that’s based on linear regression. Even the most cutting edge machine learning techniques - most still contain elements of linear regression.</li>
+</ul>
+</div>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"></h2>
+<p><img src="images/regression_example_2.png" class="img-fluid"></p>
+</section>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3"></h2>
+<p><img src="images/regression_example_3.png" class="img-fluid"></p>
+</section>
+<section id="the-regression-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="the-regression-algorithm">The Regression Algorithm</h2>
+<p><strong>Idea: Draw a line given a sample of data</strong></p>
+<div class="notes">
+<ul>
+<li>So regression is absolutely foundational to modern data science.</li>
+<li>And, in one sense it’s easy.</li>
+<li>The basic idea is quite simple</li>
+<li>The algorithm is quite simple - I can show you how to calculate the line in a few minutes. But just drawing a line isn’t statistics - anyone can draw a line, but a line is just a line.</li>
+<li>After you draw a line, there are two questions you need to ask…</li>
+</ul>
+</div>
+</section>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4"></h2>
+<p>standout</p>
+<p>What does this line <em>mean</em> ?</p>
+<p>Under what assumptions?</p>
+<div class="notes">
+<ul>
+<li>What’s interesting is that even though everyone agrees on how to compute a regression line, people have different answers to these questions.</li>
+<li>There’s a statistical perspective, a structural perspective, a machine learning perspective…</li>
+<li>Which do you need to learn? All of them. As a data scientist, you’ll need to converse with many types of people…</li>
+<li>But you have to start somewhere. We have a very strong opinion about this - we’re going to teach you what we think is the most fundamental perspective on regression.</li>
+</ul>
+</div>
+</section>
+<section id="the-mechanics-of-ols-regression" class="level2">
+<h2 class="anchored" data-anchor-id="the-mechanics-of-ols-regression">The Mechanics of OLS Regression</h2>
+<ul>
+<li>The OLS algorithm</li>
+<li>Statistical assumptions</li>
+<li>Statistical guarantees</li>
+</ul>
+<div class="notes">
+<ul>
+<li>You can think of this unit as covering the mechanics of linear regression. The algorithm itself, statistical assumptions, and statistical guarantees. This is a foundation, and later on, we’ll move on to applications. let’s get started.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="unit-plan" class="level1">
+<h1>Unit Plan</h1>
+<section id="goals-of-this-week" class="level2">
+<h2 class="anchored" data-anchor-id="goals-of-this-week">Goals of This Week</h2>
+<p>At the end of this week, you will:</p>
+<ol type="1">
+<li>Understand that regression is the plug-in estimator of the best linear predictor (BLP).</li>
+<li>Understand overall model fit and use an F-test to assess whether a candidate model is performing better than a baseline model.</li>
+<li>Understand how to appropriately interpret regression coefficients.</li>
+<li>Lay a foundation for careful interpretation.</li>
+</ol>
+<div class="notes">
+<ul>
+<li>When we discuss fitting, we’re going to reason from the closed-form solutions. But, we will also nod to how we might produce estimates through a brute-force, numeric optimization route.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="reading-the-golem-of-prague" class="level1">
+<h1>Reading: The Golem of Prague</h1>
+<section id="reading-the-golem-of-prague-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-golem-of-prague-1">Reading: The Golem of Prague</h2>
+<p><strong>This is a placeholder for a reading call. We’re just placing it here for organization.</strong> - Read Sections 1.0 and 1.1 of <em>Statistical Rethinking</em> , which we have provided a copy of in PDF form from the publisher. - <em>Statistical Rethinking</em> is a great book and reference that you should consider later in your data science and statistics path.</p>
+</section>
+</section>
+<section id="regression-a-statistical-golem" class="level1">
+<h1>Regression, a Statistical Golem</h1>
+<section id="regression-a-statistical-golem-1" class="level2">
+<h2 class="anchored" data-anchor-id="regression-a-statistical-golem-1">Regression, a Statistical Golem</h2>
+<ul>
+<li>Regression—like all models—is a tool.</li>
+<li>We put tools to use toward a data scientific purpose; however, tools are only tools.</li>
+<li>Use of a straight-edge, scale, and T-square doesn’t make one an architect any more than use of { } or { } makes one a data scientist.</li>
+</ul>
+<div class="notes">
+<ul>
+<li>A major point in 201, and again here in 203 is that we cannot, under any circumstance – whether question formation, ethics, data viz, model architecture – be unthinking as data scientists. Because our models</li>
+<li>In the case of regression, it is</li>
+<li>The tasks that we pursue require</li>
+<li>But, combined with how we</li>
+</ul>
+</div>
+</section>
+<section id="the-machinery-of-ols-regression" class="level2">
+<h2 class="anchored" data-anchor-id="the-machinery-of-ols-regression">The Machinery of OLS Regression</h2>
+<ul>
+<li>OLS regression is a plug-in estimator for the best linear predictor (BLP).</li>
+<li>The BLP is the lowest mean squared error (MSE) estimator, out of all linear functions.</li>
+</ul>
+<div class="notes">
+<ul>
+<li></li>
+<li>On the one hand, there is little special about regression.</li>
+<li>It is a simple formula, with a closed form solution that is both easy to fit (because of squared loss). It just so happens that minimizing MSE happens to be desirable in many cases.</li>
+<li>But this is quite literally the beginning and end of what it does. If we wanted to minimize quadratic squared error; or absolute deviations, we would derive another estimator.</li>
+<li>What if we wanted to make a model that was usefully understandable by a stakeholder for descriptive purposes? What if we wanted to identify a causal effect? There is no guarantee that minimizing MSE will accomplish these goals. We as scientists have to carefully define the question and task that we are undertaking.</li>
+</ul>
+</div>
+</section>
+<section id="applications-of-ols-regression" class="level2">
+<h2 class="anchored" data-anchor-id="applications-of-ols-regression">Applications of OLS Regression</h2>
+<p><strong>Regression is fantastically versatile</strong> - Under some circumstances, regression has explainable internal weights (coefficients) that are of interest. - Under other circumstances, regression identifies causal effects. - Under many circumstances, regression is the <em>de facto</em> baseline estimator.</p>
+<div class="notes">
+<ul>
+<li>But, on the other hand…</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="elements-of-a-linear-model" class="level1">
+<h1>Elements of a Linear Model</h1>
+<section id="elements-in-a-linear-model" class="level2">
+<h2 class="anchored" data-anchor-id="elements-in-a-linear-model">Elements in a Linear Model</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Linear model A.K.A. linear predictor">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Linear model A.K.A. linear predictor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>A __linear model__ is a representation of a random variable
+($Y$) as a linear function of other random variables
+$\bs X = (X_1,X_2,...,X_k)$.</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Before we dive into OLS regression, let’s discuss linear models more broadly.</li>
+<li>By a linear model, we mean that we have one random variable</li>
+<li>These variables go by many different names.</li>
+<li>In ML, Y is usually the target, X’s are features</li>
+<li>In classical stats, dependent and independent variables, or sometimes RHS and LHS are more popular</li>
+<li>Those are ok, but we don’t like that dependent variable sounds like a causal effect. As we’ll discuss, we can’t just assume that a linear model represents any kind of causal relationship. For that reason, we’ll try to stick with the more prediction-focused terms, like target and features</li>
+</ul>
+</div>
+</section>
+<section id="the-linear-model-formula" class="level2">
+<h2 class="anchored" data-anchor-id="the-linear-model-formula">The Linear Model Formula</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="The linear model formula">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The linear model formula
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align*}
+      \hat{Y} &amp;= g(X_1,X_2,...,X_k)\\
+              &amp;=\beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... + \beta_k X_k
+    \end{align*}\]</span></p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Here’s what the linear model looks like</li>
+<li>We may write g of the X’s to emphasize that this is a function</li>
+<li>The number that comes out of the function is called a prediction</li>
+<li>Since we’re putting random variables into the function, the output is also a random variable</li>
+<li>We’ll label the prediction</li>
+<li><span class="math inline">\(\beta_{k}\)</span></li>
+<li>Depending on the type of linear model building that you’re doing, either</li>
+</ul>
+</div>
+</section>
+<section id="a-linear-model-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-linear-model-example">A Linear Model Example</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Brunch in Berkeley">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Brunch in Berkeley
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>[ = 2 + 1 + 2 ]</p>
+</div>
+</div>
+</section>
+</section>
+<section id="review-outcome-prediction-and-error" class="level1">
+<h1>Review: Outcome, Prediction, and Error</h1>
+<section id="review-outcome-prediction-and-error-1" class="level2">
+<h2 class="anchored" data-anchor-id="review-outcome-prediction-and-error-1">Review: Outcome, Prediction, and Error</h2>
+<p><img src="images/linear_model.png" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>Here’s a picture of a joint distribution, with just one X and Y.</li>
+<li>And here’s a line representing a linear model.</li>
+<li>Is this a good model? Doesn’t look great to my eyes, but that’s actually intentional. We haven’t said anything about what makes a good model yet!</li>
+<li>If I imagine drawing a point</li>
+<li><embed src="images/linear_model_drawn.pdf" class="img-fluid"></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="concept-check-making-predictions-with-a-linear-model" class="level1">
+<h1>Concept Check: Making Predictions with a Linear Model</h1>
+<section id="concept-check-making-predictions-with-a-linear-model-1" class="level2">
+<h2 class="anchored" data-anchor-id="concept-check-making-predictions-with-a-linear-model-1">Concept Check: Making Predictions with a Linear Model</h2>
+<ul>
+<li>Students will be given a model and (x,y) and compute prediction and error.</li>
+</ul>
+</section>
+</section>
+<section id="metric-inputs" class="level1">
+<h1>Metric Inputs</h1>
+<section id="interpreting-model-weights-coefficients" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-model-weights-coefficients">Interpreting Model Weights (Coefficients)</h2>
+<p>[ =_0 + _1 X_1 + _2 X_2 + … + _k X_k ]</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Interpretation of coefficients">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Interpretation of coefficients
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>If <span class="math inline">\(X_{i}\)</span> changes by <span class="math inline">\(\Delta X_{i}\)</span> units, the predicted value of the target, <span class="math inline">\(\hat{Y}\)</span> changes by <span class="math inline">\(\beta_{i} \cdot \Delta X_{i}\)</span> units.</li>
+<li>If <span class="math inline">\(X_{i}\)</span> and <span class="math inline">\(X_{j}\)</span> change by <span class="math inline">\(\Delta X_{i}\)</span> and <span class="math inline">\(\Delta
+    X_{j}\)</span> respectively, then the predicted value of the target, <span class="math inline">\(\hat{Y}\)</span> changes by <span class="math inline">\((\beta_{i} \Delta X_{i}) + (\beta_{j} \Delta X_{j})\)</span> . <strong>Ceteris paribus:</strong> all else equal</li>
+</ul>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>How do we interpret the betas in a linear model?</li>
+<li>A linear model is a</li>
+<li>To get an idea, try taking the partial derivative of the predicted outcome, with respect to some</li>
+<li>This means that you can think of</li>
+</ul>
+</div>
+</section>
+<section id="interpreting-model-coefficients-example" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-model-coefficients-example">Interpreting Model Coefficients: Example</h2>
+<p>Does this model say peacocks with longer tails fly slower?</p>
+<p>[ = 4.3 - 1.2 + 0.8 ]</p>
+<p><img src="images/peacock.jpg" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>Here’s a model that we developed to describe the flying speed of male peacocks.</li>
+<li>Notice the coefficient on the tail length variable:</li>
+<li>Does this mean that peacocks with longer tails are slower flyers?</li>
+<li>The answer is no - we have to remember ceteris paribus</li>
+<li>The correct interpretation is that peacocks with1 unit longer tails, but the same muscle mass, are predicted to fly 1.2 units slower. But what about peacocks with longer tails as a whole? We just don’t know. You can imagine that peacocks with longer tails also tend to have more muscle mass. Maybe they fly faster.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="categorical-inputs" class="level1">
+<h1>Categorical Inputs</h1>
+<section id="categorial-inputs-part-i" class="level2">
+<h2 class="anchored" data-anchor-id="categorial-inputs-part-i">Categorial Inputs, Part I</h2>
+<p>What if, rather than <em>numeric</em> inputs, we had <em>categorical</em> inputs?</p>
+<ul>
+<li>Information that says it belongs to one category or another, but doesn’t provide a value to that category?</li>
+<li><strong>Reminder</strong> : There are four ``levels’’ of information – (1) Categorical; (2) Ordinal; (3) Interval; (4) Ratio</li>
+</ul>
+</section>
+<section id="categorical-inputs-part-ii" class="level2">
+<h2 class="anchored" data-anchor-id="categorical-inputs-part-ii">Categorical Inputs, Part II</h2>
+<p>How is this represented in a model?</p>
+<ul>
+<li>The model aims only to distinguish one category from another, and so switches from stacked <em>labels</em> to <em>one-hot encoded</em> , or <em>dummy</em> variables.</li>
+<li>Practically, in this model, one of the labels is identified as the <em>baseline</em> , <em>default</em> , or <em>omitted</em> category</li>
+<li>Indicators for <em>alternate</em> levels mark changes from the baseline to the alternate level.</li>
+</ul>
+</section>
+<section id="categorical-inputs-part-ii-1" class="level2">
+<h2 class="anchored" data-anchor-id="categorical-inputs-part-ii-1">Categorical Inputs, Part II</h2>
+</section>
+</section>
+<section id="learnosity-interpreting-model-weights" class="level1">
+<h1>Learnosity: Interpreting Model Weights</h1>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5"></h2>
+<p><strong>This is a placeholder for a Learnosity activity.</strong> - have to change this, so it’s about interpretation, not prediction - In this activity, students will be given a fitted model that conforms with the data that they have for the peacock - They will make predictions <em>first</em> from the data, and then - Second, from newly created data to see how the predictions change</p>
+</section>
+</section>
+<section id="part-2-selecting-a-linear-model-with-ols" class="level1">
+<h1>Part 2: Selecting a Linear Model with OLS</h1>
+</section>
+<section id="ols-is-regression-for-estimating-the-blp" class="level1">
+<h1>OLS is Regression for Estimating the BLP</h1>
+<section id="fitting-linear-models" class="level2">
+<h2 class="anchored" data-anchor-id="fitting-linear-models">Fitting Linear Models</h2>
+<p><strong>Linear regression:</strong> an algorithm for fitting a linear model given a sample of data</p>
+<ul>
+<li>Ordinary least squares (OLS) regression</li>
+<li>Quantile regression</li>
+<li>Regularized regression - Lasso</li>
+<li>Ridge regression</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Where do linear models come from? Up till now, we’ve just made up numbers.</li>
+<li>But what we really want to do is choose the model using data.</li>
+<li>There are a lot of different algorithms that you can use to choose a linear model. We’ve listed a few famous ones here, but there are many options.</li>
+<li>If you start with a different objective, you will design a different algorith..</li>
+<li>Out of these, the most foundational type of regression is OLS, so what is it designed to do?</li>
+</ul>
+</div>
+</section>
+<section id="understanding-ols" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-ols">Understanding OLS</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Ordinary least squares (OLS) regression">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ordinary least squares (OLS) regression
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The most well-known type of linear regression</li>
+<li>A foundation for many other types of regression</li>
+<li>Key goal: estimating the best linear predictor (BLP)</li>
+</ul>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>In this unit, our main topic is a type of regression called OLS</li>
+<li>A key goal is estimating the BLP. Let’s review what the BLP is and why it’s so great.</li>
+</ul>
+</div>
+</section>
+<section id="the-blp-minimizes-expected-squared-error" class="level2">
+<h2 class="anchored" data-anchor-id="the-blp-minimizes-expected-squared-error">The BLP Minimizes Expected Squared Error</h2>
+<p><embed src="images/mpg_lm.pdf" class="img-fluid"></p>
+</section>
+<section id="the-best-linear-predictor" class="level2">
+<h2 class="anchored" data-anchor-id="the-best-linear-predictor">The Best Linear Predictor</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="The BLP (population regression function)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The BLP (population regression function)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>The best linear predictor is defined by the function 
+\[g(\mathbf{X}) = \beta_{0} + \beta_{1}X_{1} + \beta_{2} X_{2} +
+  \dots + \beta_{k}X_{k}\] 
+where $\boldsymbol{\beta} = (\beta_0, \beta_1,...,\beta_k)$ are
+chosen to minimize the expected squared error.
+
+\[
+  \min_{(b_{0}, \dots, b_{k})}
+  \E\big[ (Y - (b_0  + b_1 X_1 + ... +b_k X_k))^2\big]
+\]</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>If we are working with a best linear predictor, then we know we have a function that must take the following form:</li>
+<li>Remember the formula for the BLP in the single variable case; it is a more complex now – complex enough that we can’t work through the statement, but it is just a bit more than</li>
+</ul>
+</div>
+</section>
+<section id="great-things-about-the-blp" class="level2">
+<h2 class="anchored" data-anchor-id="great-things-about-the-blp">Great Things About the BLP</h2>
+<p>The best linear predictor…</p>
+<ul>
+<li>minimizes MSE out of all linear models.</li>
+<li>captures an infinitely complex distribution in a few parameters.</li>
+<li>can be estimated with much less data compared to a probability density.</li>
+<li>is easy to reason about.</li>
+<li>is easy to communicate to others, helping knowledge advance.</li>
+<li>has a closed form solution that is relatively easy to work with.</li>
+</ul>
+</section>
+<section id="applying-the-plug-in-principle" class="level2">
+<h2 class="anchored" data-anchor-id="applying-the-plug-in-principle">Applying the Plug-In Principle</h2>
+<p><embed src="images/mpg_data.pdf" class="img-fluid"></p>
+<div class="notes">
+<ul>
+<li>We can’t see the joint distribution, so we can’t analyze the true error</li>
+<li>But we do have this data, so can use a plug-in estimate</li>
+<li>Instead of an expectation, we’ll look at the distance to each data point and take an average</li>
+<li>These distances are called residuals</li>
+</ul>
+</div>
+</section>
+<section id="ols-regression-is-the-blp-plug-in-estimator" class="level2">
+<h2 class="anchored" data-anchor-id="ols-regression-is-the-blp-plug-in-estimator">OLS Regression Is the BLP Plug-In Estimator</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Plug-in strategy">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Plug-in strategy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>The OLS regression line is given by
+\[
+  \hat{g}(\mathbf{X}) = \hat{\beta}_{0} + \hat{\beta}_{1}X_{1} + \hat{\beta}_{2}X_{2} +
+  \dots + \hat{\beta}_{k}X_{k} 
+\]
+where $\boldsymbol{\hat \beta} = (\hat \beta_0,\hat \beta_1,...,\hat \beta_k)$ are given by
+  \[
+  \min_{(b_{0}, \dots, b_{k})} \frac{1}{n}  \sum_{i=1}^n \big(Y_i
+  - (b_0 + b_1 X_{[1]i} + ... + b_k X_{[k]i}) \big)^2.     
+\]</code></pre>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>The general plug-in principle says that we write down the sample analogue for the population quantity that we’re interested in. Lets do just that.</li>
+<li>Basically, we had an expectation in the formula before, but now we replace that by taking an average over the n datapoints.</li>
+<li>Instead of minimizing squared error, we are now minimizing squared residuals</li>
+<li>The hope is that by doing this, we’ll get a good estimator. But we still have to prove it. we’ll do that soon.</li>
+</ul>
+</div>
+</section>
+<section id="an-analogy-with-the-mean" class="level2">
+<h2 class="anchored" data-anchor-id="an-analogy-with-the-mean">An Analogy with the Mean</h2>
+
+</section>
+<section id="coming-up-soon" class="level2">
+<h2 class="anchored" data-anchor-id="coming-up-soon">Coming Up Soon…</h2>
+<p>We still have to:</p>
+<ul>
+<li>solve the minimization problem</li>
+<li>show that OLS is <em>consistent</em> for the BLP</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Here’s what we have to do.</li>
+<li>First, we have to get the equation into a more useful form. We want to minimize the sum squared residuals. we have to actually solve that minimization problem and write down the solution.</li>
+<li>Second, we have to show that it really has good statistical properties</li>
+<li>Once we do all that, we’ll have a great justification for the OLS algorithm. it is a consistent estimator for the model that minimizes MSE.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="learnosity-you-minimize-it" class="level1">
+<h1>Learnosity: You Minimize It!</h1>
+<section id="learnosity-you-minimize-it-1" class="level2">
+<h2 class="anchored" data-anchor-id="learnosity-you-minimize-it-1">Learnosity: You Minimize It!</h2>
+<p><strong>Note: This is a Learnosity Activity. We’re just placing it here for organization.</strong></p>
+<p>This is the activity that is currently coded .</p>
+<p><strong>Note that we would like to expand this to ask students to work through several examples in a row. Presently we have a single example made; expanding this to a broader set is relatively easy. In the expanded set, we should ensure that we have some complexity in the data—e.g., a sine curve.</strong></p>
+</section>
+</section>
+<section id="reading-ols-regression-estimates-the-blp" class="level1">
+<h1>Reading: OLS Regression Estimates the BLP</h1>
+<section id="reading-linear-regression-is-a-plug-in-estimator-for-the-blp" class="level2">
+<h2 class="anchored" data-anchor-id="reading-linear-regression-is-a-plug-in-estimator-for-the-blp">Reading: Linear Regression is a Plug-in Estimator for the BLP</h2>
+<p><strong>Note: this is a reading call, we’re just placing it here for organization.</strong></p>
+<p>Read pages 143–147 of <em>Foundations of Agnostic Statistics.</em></p>
+</section>
+</section>
+<section id="choosing-assumptions-for-ols-regression" class="level1">
+<h1>Choosing Assumptions for OLS Regression</h1>
+<section id="when-does-ols-work" class="level2">
+<h2 class="anchored" data-anchor-id="when-does-ols-work">When Does OLS “Work”?</h2>
+<p>The OLS regression line is</p>
+<p>[ () = <em>{0} + </em>{1}X_{1} + <em>{2}X</em>{2} + + <em>{k}X</em>{k} ]</p>
+<p>where <span class="math inline">\(\boldsymbol{\hat{\beta}}\)</span> are chosen to minimize squared residuals.</p>
+<p>Different assumptions</p>
+<p><span class="math inline">\(\Downarrow\)</span></p>
+<p>Different statistical guarantees</p>
+<div class="notes">
+<ul>
+<li>You’ve already seen one definition of OLS regression.</li>
+<li>OLS is just an algorithm. No matter what the situation is, you can always run it and get some numbers out. (It is a Golem!)</li>
+<li>So you might want to know, ``What assumptions are needed for OLS regression to work?’’ It’s not so easy - there are different sets of assumptions out there.</li>
+<li>Depending on which assumptions you choose, you get different guarrantees.</li>
+<li>We’re going to teach you two main sets of assumptions.</li>
+</ul>
+</div>
+</section>
+<section id="section-6" class="level2">
+<h2 class="anchored" data-anchor-id="section-6"></h2>
+<p>standout - <strong>More data</strong> <span class="math inline">\(\implies\)</span> less restrictive assumptions - <strong>More data</strong> <span class="math inline">\(\implies\)</span> easier to assess assumptions</p>
+<div class="notes">
+<ul>
+<li>First, a very general point: the more data you have, the better off you are.</li>
+<li>More data helps in two major ways.</li>
+<li>First, we don’t need as many assumptions with more data. That’s because of asymptotics - statistics behave in predictable ways when</li>
+<li>Second, having more data helps you to assess your assumptions. It’s hard to defend an assumption of normality when you have 5 data points. if you have 100, you have an argument.</li>
+</ul>
+</div>
+</section>
+<section id="ols-in-a-large-sample" class="level2">
+<h2 class="anchored" data-anchor-id="ols-in-a-large-sample">OLS in a Large Sample</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="The large-sample model (not an official name)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The large-sample model (not an official name)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>Just two assumptions:
+- I.I.D.</code></pre>
+<ul>
+<li>Unique BLP exists</li>
+</ul>
+</div>
+</div>
+<p><strong>Asymptotic behavior as <span class="math inline">\(n\to\infty\)</span> provides considerable guarantees.</strong></p>
+<div class="notes">
+<ul>
+<li>With a lot of data,</li>
+<li>All we need is that the data is distributed i.i.d., and that there is a unique solution to the BLP.</li>
+<li>If there isn’t a unique solution, then we just can’t solve for it!</li>
+<li>When you package these two assumptions together, we’ll call them the large-sample model.</li>
+<li>That’s not an official name, so don’t use it outside of this class. But it will help us to give it a name.</li>
+</ul>
+</div>
+</section>
+<section id="ols-in-a-small-sample" class="level2">
+<h2 class="anchored" data-anchor-id="ols-in-a-small-sample">OLS in a Small Sample</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="The classical linear model">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The classical linear model
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>A parametric model—fully specifies <span class="math inline">\(f_{Y|X}\)</span></li>
+<li>Traditional starting point for regression</li>
+<li>Even with extensive transformations, may be hard to justify assumptions</li>
+</ul>
+</div>
+</div>
+<p><strong>Guarantees come from strict assumptions.</strong></p>
+<div class="notes">
+<ul>
+<li>We want to draw your attention to the fact that we’re presenting the large-sample (asymptotic) version of regression this week. In the future, we will talk about the smaller sample variant known as the</li>
+<li>Whereas we get</li>
+</ul>
+</div>
+</section>
+<section id="ols-in-very-small-samples" class="level2">
+<h2 class="anchored" data-anchor-id="ols-in-very-small-samples">OLS in Very Small Samples</h2>
+<p>Special difficulties when <span class="math inline">\(n &lt; \sim15\)</span> - No help from asymptotics - Not enough data to assess CLM</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Randomization inference">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Randomization inference
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>A framework for testing (restrictive) null hypotheses</li>
+</ul>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>I want to say a few words about very small samples.</li>
+<li>very small isn’t a technical phrase, but think</li>
+<li>First, should you</li>
+<li>The problems really compound in this range.</li>
+<li>First, you get no help from asymptotics, which means that you need to meet the CLM exactly.</li>
+<li>Second, you don’t have enough data to assess the CLM. even if things look ok, how can you convince someone when you only have 10 datapoints?</li>
+<li>One suggestion: if you need to work with very small data, especially from experiments, you should read up on a field called randomization inference. It can give you a principled way to test hypotheses (at least special types of hypotheses) without any distributional assumptions.</li>
+</ul>
+</div>
+</section>
+<section id="rules-of-thumb-for-ols-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="rules-of-thumb-for-ols-assumptions">Rules of Thumb for OLS Assumptions</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Rules of thumb">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rules of thumb
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In general, you might reason about data and regression models in the following way.</p>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li><p>These are our 3 main frameworks. I want to put down some numbers to help you choose a framework.</p></li>
+<li><p>These are ONLY rules of thumb.</p></li>
+<li><p>First, you can consider the large-sample model if</p></li>
+<li><p>It depends on how extreme the violations of the CLM are. In particular, if the error distribution has a really large skew, you may need</p></li>
+<li><p>from 15 to 60, we’re recommending the CLM as your framework.</p></li>
+<li><p>below 15, the CLM is no longer very credible. you can report your coefficients, and possibly use randomization inference to get p-values.</p></li>
+<li><p>Out of these models, we’re going to start with the large sample model. and we’re going to spend the most time on the large-sample model. That’s because we expect a data scientist to spend more time with with large samples, but we will come back and talk about the CLM later in the course.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="the-bivariate-ols-solution" class="level1">
+<h1>The Bivariate OLS Solution</h1>
+<section id="section-7" class="level2">
+<h2 class="anchored" data-anchor-id="section-7"></h2>
+<p>Existing Content (in distinct format)</p>
+<p>9.5 Deriving the Bivariate OLS Estimators</p>
+</section>
+</section>
+<section id="consistency-of-bivariate-ols-under-the-large-sample-model" class="level1">
+<h1>Consistency of Bivariate OLS Under the Large-Sample Model</h1>
+<section id="section-8" class="level2">
+<h2 class="anchored" data-anchor-id="section-8"></h2>
+<p><strong>Continuous mapping theorem:</strong> Let <span class="math inline">\((S^{(1)},
+S^{(2)},S^{(3)},...)\)</span> and <span class="math inline">\((T^{(1)}, T^{(2)},T^{(3)},...)\)</span> be sequences of random variables. Let <span class="math inline">\(g: \R^2 \rightarrow \R\)</span> be a function that is continuous at <span class="math inline">\((a,b)
+\in \R^2\)</span> . If <span class="math inline">\(S^{(n)} \overset{p}{\to}  a\)</span> and <span class="math inline">\(T^{(n)} \overset{p}{\to}  b\)</span> , then <span class="math inline">\(g(S^{(n)} ,T^{(n)})  \overset{p}{\to}
+g(a,b)\)</span></p>
+<p>Assumptions: 1) I.I.D. 2) Unique BLP exists ( <span class="math inline">\(\V(X) &gt; 0\)</span> )</p>
+<div class="notes">
+<ul>
+<li>In the last lightboard we derived that</li>
+<li>Here, we’ll prove that these estimates are consistent estimates in the large sample case.</li>
+</ul>
+</div>
+</section>
+<section id="section-9" class="level2">
+<h2 class="anchored" data-anchor-id="section-9"></h2>
+<p><strong>Continuous mapping theorem:</strong> Let <span class="math inline">\((S^{(1)},
+S^{(2)},S^{(3)},...)\)</span> and <span class="math inline">\((T^{(1)}, T^{(2)},T^{(3)},...)\)</span> be sequences of random variables. Let <span class="math inline">\(g: \R^2 \rightarrow \R\)</span> be a function that is continuous at <span class="math inline">\((a,b)
+\in \R^2\)</span> . If <span class="math inline">\(S^{(n)} \overset{p}{\to}  a\)</span> and <span class="math inline">\(T^{(n)} \overset{p}{\to}  b\)</span> , then <span class="math inline">\(g(S^{(n)} ,T^{(n)})  \overset{p}{\to}
+g(a,b)\)</span></p>
+<p>Assumptions: 1) I.I.D. 2) Unique BLP exists ( <span class="math inline">\(\V(X) &gt; 0\)</span> )</p>
+<p><span class="math display">\[\begin{align*}
+  \quad x^{(n)} &amp;= (x_1,x_2,...,x_n) \quad y^{(n)} = (y_1,y_2,...,y_n)\\
+  S^{(n)} &amp;= \widehat{\cov}(x^{(n)}, y^{(n)  }) \quad T^{(n)} = \widehat{\V}(x^{(n)})\\
+  \hat \beta^{(n)}_1 &amp;=  S^{(n)} / T^{(n)}\\
+  S^{(n)} &amp;   \overset{p}{\to} \cov[X,Y], \qquad
+            T^{(n)}    \overset{p}{\to} \V[X]\\
+  g(c,d) &amp;= c/d\text{ is continuous where } d \neq 0 \\
+  \hat \beta^{(n)}_1 &amp;= g(  S^{(n)}, T^{(n)})
+                       \overset{p}{\to}  
+                       g(  \cov[X,Y], \V[X,Y] ) = \beta_1
+\end{align*}\]</span></p>
+<div class="notes">
+<ul>
+<li>In the last lightboard we derived that</li>
+<li>Here, we’ll prove that these estimates are consistent estimates in the large sample case.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="the-matrix-formulation-of-a-linear-model" class="level1">
+<h1>The Matrix Formulation of a Linear Model</h1>
+<section id="the-matrix-formulation-of-a-linear-model-1" class="level2">
+<h2 class="anchored" data-anchor-id="the-matrix-formulation-of-a-linear-model-1">The Matrix Formulation of a Linear Model</h2>
+<ul>
+<li>Insert content from previous version of course: 10.7 Matrix Form of the Linear Model</li>
+<li>This content leads into the next lightboard of the derivation of the OLS normal equations</li>
+</ul>
+</section>
+</section>
+<section id="reading-the-matrix-solution-for-ols-regression" class="level1">
+<h1>Reading: The Matrix Solution For OLS Regression</h1>
+<section id="reading-the-matrix-solution-for-ols-regression-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-matrix-solution-for-ols-regression-1">Reading: The Matrix Solution For OLS Regression</h2>
+<p>Read section 4.1.3, which is on pages 147 - 151.</p>
+</section>
+</section>
+<section id="the-multiple-ols-solution" class="level1">
+<h1>The Multiple OLS Solution</h1>
+<section id="the-multiple-ols-solution-1" class="level2">
+<h2 class="anchored" data-anchor-id="the-multiple-ols-solution-1">The Multiple OLS Solution</h2>
+<ul>
+<li>Pull in the lightboard called <em>Matrix Derivation of the OLS Estimator</em> .</li>
+<li>In the next iteration of the course, pull in a geometric derivation of the OLS coefficients.</li>
+</ul>
+</section>
+</section>
+<section id="sample-moment-conditions" class="level1">
+<h1>Sample Moment Conditions</h1>
+<section id="review-population-moment-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="review-population-moment-conditions">Review: Population Moment Conditions</h2>
+<p><strong>Population:</strong> Let <span class="math inline">\(\epsilon\)</span> represent error from the BLP.</p>
+<p>Version 1: <span class="math inline">\(\E[\epsilon]=0, \E[X_j \epsilon] = 0\)</span> for all <span class="math inline">\(j\)</span> .</p>
+<p>Version 2: <span class="math inline">\(\E[\epsilon]=0, \cov[X_j,\epsilon]=0\)</span> for all <span class="math inline">\(j\)</span> .</p>
+</section>
+<section id="sample-moment-conditions-1" class="level2">
+<h2 class="anchored" data-anchor-id="sample-moment-conditions-1">Sample Moment Conditions</h2>
+<p><strong>Sample:</strong> Let <span class="math inline">\(\bs e = \left[ \begin{matrix} e_1 \\ \vdots \\ e_n \end{matrix} \right]\)</span> represent OLS residuals.</p>
+</section>
+<section id="sample-moment-conditions-2" class="level2">
+<h2 class="anchored" data-anchor-id="sample-moment-conditions-2">Sample Moment Conditions</h2>
+<p><strong>Sample:</strong> Let <span class="math inline">\(\bs e = \left[ \begin{matrix} e_1 \\ \vdots \\ e_n \end{matrix} \right]\)</span> represent OLS residuals.</p>
+<p><span class="math inline">\(\X^T \bs Y = \X^T \X \bs \beta\)</span> , <span class="math inline">\(\qquad 0 = \X^T ( \bs Y - \X \bs \beta) = \X^T \bs e\)</span> <span class="math inline">\(\left[ \begin{matrix} 1 &amp; 1 &amp; \hdots &amp; 1 \\
+X_{[1]1} &amp; X_{[1]2} &amp; \hdots &amp; X_{[1]n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+X_{[k]1} &amp; X_{[k]2} &amp; \hdots &amp; X_{[k]n} \\
+\end{matrix} \right]. \left[ \begin{matrix} e_1 \\ e_2 \\ \vdots \\ e_n \end{matrix} \right]\)</span> <span class="math inline">\(\sum e_i = 0\)</span> , <span class="math inline">\(\sum X_{[j]i} e_i = 0\)</span> . or <span class="math inline">\(\widehat{\cov}(\bs X_{[j]}, \bs e) = 0\)</span></p>
+</section>
+</section>
+<section id="consistency-of-multiple-ols" class="level1">
+<h1>Consistency of Multiple OLS</h1>
+<section id="consistency-of-multiple-ols-1" class="level2">
+<h2 class="anchored" data-anchor-id="consistency-of-multiple-ols-1">Consistency of Multiple OLS</h2>
+<p>Assumptions: 1) I.I.D. 2) Unique BLP exists</p>
+<p><span class="math inline">\(\text{In population: } \boldsymbol{  \beta } = \E[ X^TX]^{-1} \E[X^TY]\)</span></p>
+<div class="notes">
+<ul>
+<li>To apply the continuous mapping theorem, we need to know that</li>
+</ul>
+</div>
+</section>
+<section id="consistency-of-multiple-ols-2" class="level2">
+<h2 class="anchored" data-anchor-id="consistency-of-multiple-ols-2">Consistency of Multiple OLS</h2>
+<p>Assumptions: 1) I.I.D. 2) Unique BLP exists</p>
+<p><span class="math display">\[\begin{align*}
+    \text{In population: } \boldsymbol{  \beta } &amp;= \E[ X^TX]^{-1} \E[X^TY]
+  \end{align*}\]</span> <span class="math display">\[\begin{align*}
+    \boldsymbol{ \hat \beta }^{(n)} &amp;= (\frac{1}{n}  \X^{(n)T} \X^{(n)})^{-1} \frac{1}{n}  \X^{(n)T} \boldsymbol{Y^{(n)}} \\
+    \frac{1}{n}  \X^{(n)T} \boldsymbol{Y^{(n)}}  &amp;=
+                                     \frac{1}{n}   \left[
+                                          \begin{array}{cccc}
+                                            \vertbar &amp; \vertbar &amp;        &amp; \vertbar \\
+                                            x_{1}    &amp; x_{2}    &amp; \ldots &amp; x_{n}    \\
+                                            \vertbar &amp; \vertbar &amp;        &amp; \vertbar
+                                          \end{array}
+                                       \right]
+                                       \left[
+                                         \begin{array}{c}
+                                           y_1 \\
+                                           y_2  \\
+                                           \vdots \\
+                                           y_n
+                                         \end{array}
+                                           \right]
+    =\frac{1}{n}  \sum_{i=1}^n x_i^T y_i \\
+  \frac{1}{n}   \X^T\X &amp;= \frac{1}{n}
+             \left[
+             \begin{array}{cccc}
+               \vertbar &amp; \vertbar &amp;        &amp; \vertbar \\
+               x_{1}    &amp; x_{2}    &amp; \ldots &amp; x_{n}    \\
+               \vertbar &amp; \vertbar &amp;        &amp; \vertbar
+             \end{array}
+                                              \right]
+                                              \left[
+                                              \begin{array}{ccc}
+                                                \horzbar &amp; x_{1} &amp; \horzbar \\
+                                                \horzbar &amp; x_{2} &amp; \horzbar \\
+                                                         &amp; \vdots    &amp;          \\
+                                                \horzbar &amp; x_{n} &amp; \horzbar
+                                              \end{array}
+                                                                   \right]
+                                                                   = \frac{1}{n}  \sum_{i=1}^n x_i^T x_i
+  \end{align*}\]</span></p>
+<div class="notes">
+<ul>
+<li>Is this useful, or should we just do the bivariate case? it’s a lot of content for one lightboard and I think it’s too hard to actually prove continuity for the CMT</li>
+<li></li>
+<li>Can write</li>
+<li>First, here’s a useful way to write our vector of coefficients. as the true parameter plus a random error term.</li>
+<li>Next, we have to open up these matrices and think about what’s inside. Let the rows of</li>
+<li>To apply the continuous mapping theorem, we need to know that</li>
+</ul>
+</div>
+</section>
+<section id="consistency-of-ols" class="level2">
+<h2 class="anchored" data-anchor-id="consistency-of-ols">Consistency of OLS</h2>
+<p><span class="math display">\[\begin{align*}
+    \text{WLLN} &amp;\implies \frac{1}{n} \sum_{i=1}^n x_i^T x_i  \overset{p}{\to} \E[X^TX]  \qquad  
+                  \frac{1}{n} \sum x_i^T y_i  \overset{p}{\to} \E[X^T Y]  \\
+    \text{CMT} &amp;\implies \boldsymbol{ \hat \beta } = \beta + (\frac{1}{n} \sum_{i=1}^n x_i^T x_i) ^{-1} (\frac{1}{n}  \X^T \epsilon)
+                 \overset{p}{\to} \beta + 0 = \beta \\
+  \end{align*}\]</span></p>
+</section>
+</section>
+<section id="unique-variation-and-regression-anatomy" class="level1">
+<h1>Unique Variation and Regression Anatomy</h1>
+<section id="how-can-we-understand-a-specific-hat-beta_i" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-we-understand-a-specific-hat-beta_i">How Can We Understand a Specific <span class="math inline">\(\hat \beta_i\)</span>?</h2>
+<p>[ = (<sup>T)</sup>{-1}^TY ]</p>
+<div class="notes">
+<ul>
+<li><p>We’ve written before that OLS is a</p></li>
+<li><p>Another, very interesting consequence of the underlying geometry of OLS regression is that each of the coefficients are fitted only on the</p></li>
+<li><p>Agrist and Pichke (2009) term this the</p></li>
+<li><p>You’ve seen the matrix solution for ols regression, so you can now go and compute ols coefficients.</p></li>
+<li><p>But what if you want to understand a specific coefficient? what makes it go up and down? You could invert the matrix, but that’s really complicated</p></li>
+<li><p>You might wonder, can you write down a formula for a single coefficient, that will help you understand what’s going on.</p></li>
+<li><p>It turns out, yes. There is a helpful formula, which we call the regression anatomy formula.</p></li>
+</ul>
+</div>
+</section>
+<section id="partialling-out" class="level2">
+<h2 class="anchored" data-anchor-id="partialling-out">Partialling Out</h2>
+<p><span class="math inline">\(\hat Y = \hat \beta_0 + \hat \beta_1 X_1 + \hat \beta_2 X_2 + ... + \hat \beta_k X_k\)</span></p>
+<p>Step 1: Regress <span class="math inline">\(X_1\)</span> on other <span class="math inline">\(X\)</span> s</p>
+<p><span class="math inline">\(\hat X_1 = \hat \delta_0 + \hat \delta_2 X_2 + ... + \hat \delta_k X_k + r_1\)</span></p>
+<p>Step 2: Regress <span class="math inline">\(Y\)</span> on the residuals from Step 1</p>
+<p><span class="math inline">\(\hat Y = \hat \gamma_0 + \hat \beta_1 r_1\)</span></p>
+<p>Regression anatomy: <span class="math inline">\(\hat \beta_1 = \frac{\widehat{ \cov} ( \boldsymbol{Y}, \boldsymbol{r_1})}{\widehat{\V}(\boldsymbol{r_1})}\)</span></p>
+<div class="notes">
+<ul>
+<li>Let’s say we’re interested in computing</li>
+<li>It turns out that we can compute it in stages:</li>
+<li>First, regress</li>
+<li>We have some residuals from that regression,</li>
+<li>Next, we take those residuals and regress Y on them.</li>
+<li>It turns out that we get the same</li>
+<li>This is a powerful idea. ols works on unique variation in each X, variation that is collinear with the other variables doesn’t contribute, you may as well subtract it out. As we’ll see later, the more unique variation we have in X, the more precision we’ll have.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="deriving-the-regression-anatomy-formula" class="level1">
+<h1>Deriving the Regression Anatomy Formula</h1>
+<section id="deriving-the-regression-anatomy-formula-1" class="level2">
+<h2 class="anchored" data-anchor-id="deriving-the-regression-anatomy-formula-1">Deriving the Regression Anatomy Formula</h2>
+<p>Use content from old course:</p>
+<p>10.5 Regression Anatomy</p>
+</section>
+</section>
+<section id="segment-for-consideration-applying-the-regression-anatomy-formula" class="level1">
+<h1>Segment for Consideration: Applying the Regression Anatomy Formula</h1>
+<section id="applying-the-regression-anatomy-formula" class="level2">
+<h2 class="anchored" data-anchor-id="applying-the-regression-anatomy-formula">Applying the Regression Anatomy Formula</h2>
+<p>Consider using the old concept check: 10.6 Applying the Regression Anatomy Formula</p>
+</section>
+<section id="interpreting-model-coefficients-warnings" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-model-coefficients-warnings">Interpreting Model Coefficients: Warnings</h2>
+<p><span class="math inline">\(\widehat{Wage} = \beta_0 + \beta_1 Age + \beta_2 Birth\_Year\)</span></p>
+<p>What does it mean to hold <em>Age</em> constant while increasing <em>Birth_Year</em> ?</p>
+<div class="notes">
+<ul>
+<li>Ceteris paribus hints at some of the care we need when putting variables into a linear model.</li>
+<li>Here’s a model for wage, with two variables, Age and Birth Year, how do you interpret</li>
+<li>You can fit a model like this (many do), but is it telling you something about the joint distribution?</li>
+<li></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="evaluating-the-large-sample-linear-model" class="level1">
+<h1>Evaluating the Large-Sample Linear Model</h1>
+<section id="the-large-sample-linear-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-large-sample-linear-model">The Large-Sample Linear Model</h2>
+<ul>
+<li>I.I.D. data</li>
+<li>A unique BLP exists</li>
+</ul>
+<div class="notes">
+<ul>
+<li>The great thing about regression with large samples, is that you don’t need a lot of assumptions.</li>
+<li>A lot of books heavily stress the CLM, and people get the impression that regression takes a lot of assumptions</li>
+<li>Actually, if you’re seeing this for the first time, you might be really surprised that we are doing everything with just two assumptions, which we are calling the large sample linear model.</li>
+<li>But we do need these two assumptions, so it’s important that we stop to assess them.</li>
+<li>We can’t just blindly assume they’re true. we have to look at the situation we’re modeling and ask, are they plausible? or are they realistic.</li>
+</ul>
+</div>
+</section>
+<section id="what-does-i.i.d.-mean" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-i.i.d.-mean">What Does I.I.D. Mean?</h2>
+<p><img src="images/dory.jpg" class="img-fluid"></p>
+<p>Imagine selecting each new datapoint…</p>
+<ul>
+<li>from the same distribution</li>
+<li>with no memory of any past datapoints</li>
+</ul>
+<div class="notes">
+<ul>
+<li>This is a model, and we have to look at the real world and see how much it resembles this model</li>
+</ul>
+</div>
+</section>
+<section id="common-violations-of-independence" class="level2">
+<h2 class="anchored" data-anchor-id="common-violations-of-independence">Common Violations of Independence</h2>
+<ul>
+<li>Clustering - Geographic areas</li>
+<li>School cohorts</li>
+<li>Families</li>
+<li>Strategic Interaction - Competition among sellers</li>
+<li>Imitation of species</li>
+<li>Autocorrelation - One time period may affect the next <strong>How can observing one unit provide information about some other unit?</strong> </li>
+</ul>
+<div class="notes">
+<ul>
+<li>It helps to know some common violations so that you can watch out for them</li>
+</ul>
+</div>
+</section>
+<section id="a-unique-blp-exists" class="level2">
+<h2 class="anchored" data-anchor-id="a-unique-blp-exists">A Unique BLP Exists</h2>
+<p>A BLP exists:</p>
+<ul>
+<li><span class="math inline">\(\cov[X_i,X_j]\)</span> and <span class="math inline">\(\cov[X_i,Y]\)</span> are finite (no heavy tails)</li>
+</ul>
+<p>The BLP is unique:</p>
+<ul>
+<li>No perfect collinearity</li>
+<li><span class="math inline">\(\E[X^TX]\)</span> is invertible </li>
+</ul>
+<p><span class="math inline">\(\implies\)</span> No <span class="math inline">\(X_i\)</span> can be written as a linear combination of the other <span class="math inline">\(X\)</span> ’s.</p>
+<div class="notes">
+<ul>
+<li>What does it mean for the BLP to exist? we need all the covariances in the solution to be finite. that basically means that the random variables can’t have tails that are too heavy.</li>
+<li>This is usually true. actually, some textbooks don’t even mention this assumption.</li>
+<li>I think it’s good to mention it, because researchers do believe that some variables have heavy tails: wealth is one example. air emissions. financial returns…</li>
+</ul>
+</div>
+</section>
+<section id="perfect-collinearity-example-1" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-collinearity-example-1">Perfect Collinearity Example 1</h2>
+<p><span class="math inline">\(\widehat{Price} =  .5\ Donuts + 0.0\ Dozens\)</span></p>
+<p>or</p>
+<p><span class="math inline">\(\widehat{Price} =  0.0\ Donuts + 6.0\ Dozens\)</span></p>
+<div class="notes">
+<ul>
+<li>Here’s an example to help understand why we need this assumption</li>
+<li>You regress the price on both number of donuts and number of dozens of donuts.</li>
+<li>it’s 50 cents per donut, so you can write the price as 50 cents times number of donuts</li>
+<li>But you can also write it as 6 dollars times number of dozens.</li>
+<li>Both are equivalent for predicting the price - this problem doesn’t affect prediction.</li>
+<li>But you can’t estimate coefficients, because they aren’t uniquely defined.</li>
+</ul>
+</div>
+</section>
+<section id="perfect-collinearity-example-2" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-collinearity-example-2">Perfect Collinearity Example 2</h2>
+<p><span class="math inline">\(\widehat{Voters} =  200\ Positive\_Ads + 100\ Negative\_Ads + 0\ Total\_Ads\)</span></p>
+<p>or</p>
+<p><span class="math inline">\(\widehat{Voters} =  100\ Positive\_Ads + 0\ Negative\_Ads + 100\ Total\_Ads\)</span></p>
+<div class="notes">
+<ul>
+<li>Here’s another example, to show you that multicollinearity isn’t always about pairs of variables, it might be more variables</li>
+<li>Here you have a regression with number of positive ads, number of negative ads, and the total number of ads.</li>
+<li>Once again, you can find multiple ways to write the same model.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="goodness-of-fit" class="level1">
+<h1>Goodness of Fit</h1>
+<section id="section-10" class="level2">
+<h2 class="anchored" data-anchor-id="section-10"></h2>
+<p><strong>Goodness of fit:</strong> How well does a model fit the data?</p>
+<ul>
+<li><span class="math inline">\(R^2\)</span></li>
+<li>Adjusted <span class="math inline">\(R^2\)</span></li>
+<li>Akaike information criterion (AIC)</li>
+<li>Bayesian information criterion (BIC)</li>
+</ul>
+<div class="notes">
+<ul>
+<li>We’ve seen how to compute regression coefficients, and you know a little about interpreting them.</li>
+<li>But we sometimes you also want to step back and assess the model as a whole.</li>
+<li>One question you might ask is this: How well does a model fit the data?</li>
+<li>I know that’s a fuzzy question, but it seems important. Is there a really close match between model and data or are they far apart?</li>
+<li>Can we come up with a single number to capture that idea?</li>
+<li>There are a number of statistics for that purpose, and we can call them measures of fit.</li>
+<li>The most famous one is</li>
+</ul>
+</div>
+</section>
+<section id="breaking-down-variance" class="level2">
+<h2 class="anchored" data-anchor-id="breaking-down-variance">Breaking Down Variance</h2>
+<p>__ Total variance = explained variance + residual variance __</p>
+<div class="notes">
+<ul>
+<li><span class="math inline">\(R^2\)</span></li>
+<li>This may remind you of the law of total variance, but it’s a different decomposition, this only works for OLS</li>
+<li><span class="math inline">\(\hat V[Y] = \hat V[\hat Y + \hat\epsilon] = \hat V[\hat Y] + \hat V [\hat\epsilon] + 2 \widehat{cov}[\hat Y, \hat \epsilon]\)</span></li>
+<li><span class="math inline">\(\widehat{cov}[\hat Y, \hat \epsilon] =  \widehat{cov}[\beta_0 + \beta_1 X_1 + ...+\beta_k X_k, \hat \epsilon] =0\)</span></li>
+<li>One technical note: these are regular sample variances - so the denominator is n-1 everywhere. I’m saying that because when people say “residual variance” it usually includes a correction for the number of coefficients. If you do that, you get something called adjusted R squared. I want to talk about regular R squared so no corrections.</li>
+</ul>
+</div>
+</section>
+<section id="defining-r2" class="level2">
+<h2 class="anchored" data-anchor-id="defining-r2">Defining <span class="math inline">\(R^2\)</span></h2>
+<p><span class="math inline">\(R^2 = 1- \frac{\hat \V(\bs{\hat \epsilon}) }{ \hat \V (\bs{Y} )  } = 1 - \frac{\text{residual variance}}{\text{total variance}}\)</span> <span class="math inline">\(\text{For OLS: } R^2 =  \frac{\text{explained variance}}{\text{total variance}}\)</span></p>
+<p>_ How much of the variation in the outcome does the model explain?_</p>
+<div class="notes">
+<ul>
+<li>Now that you understand these components of variance, here’s the definition of</li>
+<li><span class="math inline">\(R^2\)</span></li>
+<li>You can think about variance as information. The independent variables are giving you some information about the outcome. If you could predict the outcome perfectly,</li>
+</ul>
+</div>
+</section>
+<section id="r-is-correlation" class="level2">
+<h2 class="anchored" data-anchor-id="r-is-correlation">R is Correlation</h2>
+<p><span class="math inline">\(R^2 = \frac{\hat \V( \bs{ \hat Y}) }{ \hat \V ( \bs Y )  }\)</span></p>
+<div class="notes">
+<ul>
+<li><p>Here’s another way to look at</p></li>
+<li><p>I can rewrite the numerator:</p></li>
+<li><p><span class="math inline">\(R^2 = \frac{\hat V(\hat Y) \hat V(\hat Y) }{ \hat V ( Y )  \hat V(\hat Y) }
+    = \frac{\widehat{cov}(\hat Y, Y)^2}{ \hat V ( Y )  \hat V(\hat Y)}  = \widehat{corr}(\hat Y, Y) ^2\)</span></p></li>
+<li><p>So we learned that</p></li>
+</ul>
+</div>
+</section>
+<section id="understanding-sums-of-squares" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-sums-of-squares">Understanding Sums of Squares</h2>
+<p>Total sum of squares: TSS <span class="math inline">\(= \sum_{i=1}^n (y_i - \bar y)^2\)</span></p>
+<p>Explained sum of squares: ESS <span class="math inline">\(= \sum_{i=1}^n (\hat y_i - \bar y)^2\)</span></p>
+<p>Residual sum of squares: RSS <span class="math inline">\(= \sum_{i=1}^n (\hat \epsilon_i)^2\)</span> <span class="math inline">\(\text{For OLS:  TSS} = \text{ESS} + \text{RSS}\)</span> <span class="math inline">\(R^2 =1 - \frac{\text{RSS}}{\text{TSS}}\)</span></p>
+<div class="notes">
+<ul>
+<li>I want to warn you that when you read about R-squared, the formula is usually different.</li>
+<li>Instead of variances, most people learn about these things called sums of squares</li>
+</ul>
+</div>
+</section>
+<section id="things-to-remember-about-r2" class="level2">
+<h2 class="anchored" data-anchor-id="things-to-remember-about-r2">Things to Remember About <span class="math inline">\(R^2\)</span></h2>
+<ul>
+<li>Adding variables always makes <span class="math inline">\(R^2\)</span> go up. </li>
+<li>With many variables, consider alternatives. - Adjusted <span class="math inline">\(R^2\)</span> %
+Akaike Information Criterion (AIC) %
+Bayesian Information Criterion (BIC) </li>
+<li><span class="math inline">\(R^2\)</span> is not a measure of practical significance. - For example, regress hospital admissions on being shot</li>
+<li>A low <span class="math inline">\(R^2\)</span> is a negative, but assess it in context. </li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.43">
+
+  <meta name="author" content="Paul Laskowski and Alex Hughes">
+  <title>Week 11</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Week 11</h1>
+  <p class="subtitle">Questions of Causation</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Paul Laskowski and Alex Hughes 
+</div>
+        <p class="quarto-title-affiliation">
+            UC Berkeley, School of Information
+          </p>
+    </div>
+</div>
+
+</section>
+<section>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+</section></section>
+<section>
+<section id="questions-of-causation" class="title-slide slide level1 center">
+<h1>Questions of Causation</h1>
+
+</section>
+<section id="some-business-questions" class="slide level2">
+<h2>Some Business Questions</h2>
+<ul>
+<li>What will happen to coffee sales if we buy a new roaster?</li>
+<li>Will profits be higher if we design a new jet or upgrade our existing one?</li>
+<li>Will more people visit our amusement park if we add a monorail? </li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Lets start this week by thinking about some business questions. here’s some…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="amusement-park-daily-visitors" class="slide level2">
+<h2>Amusement Park Daily Visitors</h2>
+<p><embed data-src="images/monorail.pdf"></p>
+<aside class="notes">
+<ul>
+<li><p>Here’s some data! You can clearly see that amusement parks with monorails get a lot more visitors than amusement parks without monorails. Does that answer your question?</p></li>
+<li><p>Well, not really. your question is not about the distribution of amusement parks, it’s about a single amusement park. Or about the process that leads amusement parks to have more or less visitors</p></li>
+<li><p>The question kind of sounds like a prediction problem; it kind of sounds like a description problem; but it is</p></li>
+<li><p>What happens if you change a feature of that one datapoint. Will we really see this huge increase in visitors? Maybe and maybe not.</p></li>
+<li><p>This data is certainly relevant, but it’s not enough to answer the question.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="amusement-park-daily-visitors-cont" class="slide level2">
+<h2>Amusement Park Daily Visitors (con’t)</h2>
+<p><embed data-src="images/dumpsters.pdf"></p>
+<aside class="notes">
+<ul>
+<li>If we were to work</li>
+<li>If we are willing to conclude that monorails increase visitors</li>
+<li>We must also accept that smelly fish guts increase visitors.</li>
+<li>Of corse this isn’t the case. There must be something else that is</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p>standout</p>
+<p>Correlation <span class="math inline">\(\neq\)</span> Causation</p>
+<aside class="notes">
+<ul>
+<li>Of course, the problem is that all we can see in our graphs and our tables is that a correlation exists.</li>
+<li>And as I know you’ve heard many many times…</li>
+<li>So just because monorails are correlated with visitors, that doesn’t mean that monorails cause visitors; the same with dumpsters.</li>
+<li>There could be many other explanations.</li>
+<li>I know this might seem really basic. But really it’s a mistake that many people and businesses make.</li>
+<li>Example 1: ``What if’’ analysis tool at</li>
+<li>Example 2: Every Dashboard.</li>
+<li>Test Prep services.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p><strong>Explanatory modeling:</strong> How can we test or estimate an effect in a causal theory?</p>
+<aside class="notes">
+<ul>
+<li>In this unit, we’re going to look at explanatory modeling, which is a branch of data science that attempts to answer causal questions.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="unit-plan" class="title-slide slide level1 center">
+<h1>Unit Plan</h1>
+
+</section>
+<section id="plan-for-the-week" class="slide level2">
+<h2>Plan for the Week</h2>
+<p>Three sections</p>
+<ol type="1">
+<li>What is explanatory modeling?</li>
+<li>The one-equation structural model</li>
+<li>Common violations of the one-equation model - Confounding, omitted variable bias</li>
+</ol>
+<ul>
+<li>Outcome on the RHS</li>
+<li>Simultaneity bias</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>None</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="plan-for-the-week-cont." class="slide level2">
+<h2>Plan for the Week (cont.)</h2>
+<p>At the end of this week, you will be able to:</p>
+<ul>
+<li>Recognize major strategies for estimating causal effects</li>
+<li>Understand the assumptions behind the one-equation structural model</li>
+<li>Reason about common violations of the one-equation structural model</li>
+</ul>
+</section></section>
+<section>
+<section id="what-is-explanatory-modeling" class="title-slide slide level1 center">
+<h1>What Is Explanatory Modeling?</h1>
+
+</section>
+<section id="toward-explanation" class="slide level2">
+<h2>Toward Explanation</h2>
+<p>What extra assumptions are needed for OLS regression coefficients to be causal?*</p>
+<ul>
+<li>Misleading question</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Let’s discuss what explanatory modeling is.</li>
+<li>We know that we want to measure causal effects.</li>
+<li>There’s a question that a lot of students have at this point, and it goes like this</li>
+<li>Well, I’m here to tell you that this isn’t the best question.</li>
+<li>It’s not technically wrong, but it makes it sound like you can transform a descriptive model into a causal model.</li>
+<li>It’s a little like asking: What extra assumptions do I need for this parachute to work? The parachute must be designed from the very beginning to slow your descent.</li>
+<li>A lot of econometrics textbooks sound like this. You start from an OLS regression and guess what! You’re modeling causality! Now you might have to fix a few issues before you can publish.</li>
+<li>This type of narrative blurs the distinction between descriptive and explanatory modeling. But as a data scientist, you need a very clear understanding of both modes – because there is a tendency for descriptive models to be read as causal.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-explanatory-modeling-workflow" class="slide level2">
+<h2>The Explanatory Modeling Workflow</h2>
+
+<img data-src="images/explanatory_workflow/explanatory_workflow_001.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>So what’s a better narrative to have in mind? In this diagram, we’ve tried to distill four steps that go into an explanatory exercise.</li>
+<li>This is a simplified view.</li>
+<li>There is a lot of variety out there - a lab experiment is very different than estimating rates of disease transmission - but I still think this picture can help you make sense of things</li>
+<li>First, we have to define a causal theory. That’s always the starting point, our analysis takes place inside a theory.</li>
+<li>Some theories may be widely accepted, but often we have to justify our theory, or parts of it.</li>
+<li>Next, we identify a technique for estimation</li>
+<li>OLS regression is just one possible technique. we may need a different technique or maybe no technique can work. it depends on the causal theory</li>
+<li>Finally, we can estimate parameters, or we can test the theory</li>
+<li>Next, let’s take a closer look at each of these steps</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-explanatory-modeling-workflow-1" class="slide level2">
+<h2>The Explanatory Modeling Workflow</h2>
+
+<img data-src="images/explanatory_workflow/explanatory_workflow_002.png" class="r-stretch"></section>
+<section id="what-is-causal-theory" class="slide level2">
+<h2>What Is Causal Theory?</h2>
+<div title="Causal theory">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Causal theory</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>A _causal theory_ is a statement of beliefs about what
+concepts _do_ and what concepts _do not_ cause other
+concepts.
+% \textbf{Causal theory} - a set of starting assumptions regarding% causal relationships.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Objective: narrow the range of causal explanations for associations we find in data.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>First to do any explanatory modeling you have to start with causal theory. The word theory might sound scary, but here’s what we mean</li>
+<li>This can come in many forms. sometimes it’s really a Theory with a capital ‘T’. other times, it’s really just what we call background knowledge</li>
+<li>You’re an engineer, so you know that more horsepower causes a car go faster. You don’t need a fancy theory, you don’t even have to stop and think about it, you can just start measuring.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-causal-theory-cont." class="slide level2">
+<h2>What is Causal Theory? (cont.)</h2>
+<ul>
+<li>Joint distributions and cumulative density functions cannot identify causal information</li>
+<li>If we begin with causal statements, we can use logic to reach causal conclusions</li>
+</ul>
+
+<img data-src="images/assoc_to_causal.png" class="r-stretch"><aside class="notes">
+<ul>
+<li><p>Fundamentally, we need some statement about causality to begin with, because we can’t get from only statements about the distribution to statements about causality.</p></li>
+<li><p>Suppose that you are a part of a data science team that is working together with a product team to change the purchase flow.</p></li>
+<li><p>You can observe information about your customers, where they browse, what they’re interested in; and you can</p></li>
+<li><p>You might have arrived at this idea inductively; you might have heard it from the product team; but now you’ve got to ask, ``How can I evaluate whether this theory is useful for predicting behavior.’’ This is where the experiments come in.</p></li>
+<li><p>You might have noticed that there are seemling byzantine tests that are conducted in science – do we</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-to-reason-about-a-causal-theory" class="slide level2">
+<h2>How to Reason About a Causal Theory</h2>
+
+<img data-src="images/explanatory_workflow/explanatory_workflow_003.png" class="r-stretch"></section>
+<section id="how-to-reason-about-a-causal-theory-cont." class="slide level2">
+<h2>How to Reason About A Causal Theory (cont.)</h2>
+<p>Creating and eliminating possible causal paths</p>
+<ul>
+<li><em>Time structure</em> - If <span class="math inline">\(X\)</span> happens after <span class="math inline">\(Y\)</span> , then <span class="math inline">\(X\)</span> cannot have caused <span class="math inline">\(Y\)</span> .</li>
+<li><em>Domain Knowledge</em> - Germ theory of infections disease</li>
+<li>Often formed through past experiments</li>
+<li><em>Effectively “random” events</em> - Coin flips</li>
+<li>Tropical storms</li>
+<li>pseudorandom generators</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Just like we never are</li>
+<li>When we start, our default belief will be that</li>
+<li>Remember that we need to narrow down the range of possible causal explanations.</li>
+<li>That means we have to eliminate some causal paths. how do we do that?</li>
+<li>You might use a coin flip in an experiment to decide who gets a treatment and who gets a placebo. How do you know that a patient being sick doesn’t somehow cause the coin to land heads? If you change the velocity of the coin by even a microscopic amount, it might land a totally different way. So we believe that the coin is effectively random, nothing else can really cause it to land heads.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-to-identify-an-identification-strategy-part-i" class="slide level2">
+<h2>How to Identify an Identification Strategy, Part I</h2>
+
+<img data-src="images/explanatory_workflow/explanatory_workflow_004.png" class="r-stretch"></section>
+<section id="how-to-identify-an-identification-strategy-part-ii" class="slide level2">
+<h2>How to Identify an Identification Strategy, Part II</h2>
+<dl>
+<dt><strong>Goal</strong></dt>
+<dd>
+Produce a consistent estimate of the strength of the causal relationship given:
+</dd>
+</dl>
+<ol type="1">
+<li>Causal theory</li>
+<li>Data</li>
+</ol>
+<p>No estimator provides estimates that <em>always</em> have a causal interpretation</p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<ul>
+<li>OLS Regression</li>
+<li>Diff-in-Diff</li>
+</ul>
+</div><div class="column" style="width:65%;">
+<ul>
+<li>Regression discontinuity</li>
+<li>Two-Stage Least Squares</li>
+</ul>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Hopefully this shows you how OLS is not really at the center of explanatory modeling. The causal theory is central, and points you toward data and toward an estimation technique.</li>
+<li>If you have a true experiment, yes, ols regression will be the right technique.</li>
+<li>If you have observational data, you have to be somewhat lucky to have a credible estimation technique at all. And OLS is only one out of several possible techniques.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-to-identify-an-identification-strategy-part-iii" class="slide level2">
+<h2>How to Identify an Identification Strategy, Part III</h2>
+
+<img data-src="images/explanatory_workflow/explanatory_workflow_005.png" class="r-stretch"></section>
+<section id="how-to-estimate-parameters" class="slide level2">
+<h2>How to Estimate Parameters</h2>
+<ul>
+<li>Estimate model and interpret coefficients</li>
+<li>Return to reasoning about the causal model and possible violations</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>In explanatory analysis, like other points in the course to this point, the estimation is actually very straightforward.</li>
+<li>For example, with experimental data, estimate an OLS.</li>
+<li>However, it is the thinking, designing and interpreting that is both (a) important; and (b) hard.</li>
+<li>Standard errors which tell you about statistical uncertainty. But what if your causal theory isn’t quite right? We don’t have an uncertainty measure on our theory.</li>
+<li>At this point, you may have to think through possible ways it could be wrong. This is a kind of sensitivity analysis. If you think there might be an omitted causal pathway, for example, you’ll try to think through how it would change your coefficients. You may try to invent a way to correct for the problem, or run an additional analysis to provide evidence for whether it really is a problem.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-explanatory-modeling-workflow-2" class="slide level2">
+<h2>The Explanatory Modeling Workflow</h2>
+
+<img data-src="images/explanatory_workflow/explanatory_workflow_001.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>So there’s the very high level view of what explanatory modeling is.</li>
+<li>I hope that gives you some idea of how it’s very distinct from what we’ve done before. Explanatory modeling is its own specialized field. Now let’s see some more details.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="we-should-have-an-activity-here" class="slide level2">
+<h2>WE SHOULD HAVE AN ACTIVITY HERE</h2>
+<p><strong>Note: We should either have a reading, or applied activity here.</strong> - Reading activity</p>
+</section></section>
+<section>
+<section id="pearl-and-structural-equation-models" class="title-slide slide level1 center">
+<h1>Pearl and Structural Equation Models</h1>
+
+</section>
+<section id="toward-a-flexible-causal-framework" class="slide level2">
+<h2>Toward a Flexible Causal Framework</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><embed data-src="images/sprinklers.pdf"><em>Causality</em>(2000, 2009)</p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/pearl.jpg"> Judea Pearl</p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>I’m going to tell you about a specific line of causal models, which uses graphs to describe causal pathways.</li>
+<li>The core elements of this field were actually written by a computer scientist at UCLA, Judea Pearl. This is an ad-hominem attack, but he is</li>
+<li>Judea Pearl was working at UCLA on expert systems and became interested in modeling causality as a tool for machines to make decisions or to understand the world.</li>
+<li>This would normally be considered an advanced topic. We chose this as a starting point we want to equip you to recognize all the causal assumptions that go into an analysis – we don’t want some of those assumptions to be hidden or implicit.</li>
+<li>This mode of reasoning will give us a visual way to make our assumptions very explicit.</li>
+<li>However, and we will cover this at the end of this section, we never get to directly</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-to-reason-about-a-causal-theory-1" class="slide level2">
+<h2>How to Reason About a Causal Theory</h2>
+
+<img data-src="images/psych_structural_model.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>If there are no limitations on your causal graph, incredible complexity is possible.</li>
+<li>This graph contains only two sets of variables – one set of``controls’’ (age, sex), and another set of confounders. Data is measured through time, so some are repeated; and the authors have estimated relationships through time.</li>
+<li>The point that we want to bring home here is that without structure, these quickly reflect the complexity of of the world.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="structural-equation-model-sem-basics" class="slide level2">
+<h2>Structural Equation Model (SEM) Basics</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<strong>Endogenous variables</strong>- <span class="math inline">\(V\)</span> : Vaccine - <span class="math inline">\(A\)</span> : Antibodies - <span class="math inline">\(I\)</span> : Infection__Background variables__- <span class="math inline">\(\epsilon\)</span> : Outside causes %
+<p>Often hidden__Structural equations__- <span class="math inline">\(V = f_V(\epsilon_1)\)</span> - <span class="math inline">\(A = f_A(V, \epsilon_2)\)</span> - <span class="math inline">\(I = f_I(A, \epsilon_3)\)</span></p>
+</div><div class="column" style="width:40%;">
+<p><embed data-src="images/vaccine_graph.pdf"></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li></li>
+<li></li>
+<li>Here’s what one of these models might look like</li>
+<li>Suppose that we focus on a subset of the variables on the directed graph. Each link is a causal effect</li>
+<li>For discussion we can think of two types of variables – those that are in focus, and those that we’re ``blurring’’ out – but in fact, they’re all the same. Those that are</li>
+<li>Finally, we have the structural equations. These tell us how each endogenous variable responds to its parents in the causal graph</li>
+<li>For example,</li>
+<li>These functions encode what we call counterfactuals. Each patient either has the vaccine or does not have the vaccine. But the function</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reading-alleged-dangers-of-cigarette-smoking" class="slide level2">
+<h2>Reading: Alleged Dangers of Cigarette Smoking</h2>
+<p><strong>Note: This is a reading call. We’re just placing it here for organization.</strong></p>
+<div class="columns">
+<div class="column" style="width:70%;">
+<pre><code>Read the two-page article, published in the BMJ in 1957 written by
+Ronald A. Fisher. Some context. R.A. Fisher is- Perhaps the most influential statistician _of all time_</code></pre>
+<ul>
+<li>At the very least, up there with Bayes, Neyman, and the canon.</li>
+<li>The student interested in a longer-form profile of this content can read the following article written by Pricenomics. .</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="images/fisher.png"> Of course, smoking causes lung cancer – Fisher was dogmatic.</p>
+</div></div>
+</section>
+<section id="example-execution-of-an-sem" class="slide level2">
+<h2>Example: Execution of an SEM</h2>
+<p><strong>Note: This is a whiteboard, we’re just placing it here for organization.</strong> - What causes lung cancer? - Coffee <span class="math inline">\(\rightarrow\)</span> Alertness <span class="math inline">\(\rightarrow\)</span> Work - Interest <span class="math inline">\(\rightarrow\)</span> Awareness <span class="math inline">\(\rightarrow\)</span> Purchase</p>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+</section>
+<section id="execution-of-an-sem" class="slide level2">
+<h2>Execution of an SEM</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>Step one</strong>- Draw values of <span class="math inline">\(\epsilon_1, \epsilon_2, \epsilon_3\)</span> . - Assume <span class="math inline">\(\epsilon_{1} \dots \epsilon_{k}\)</span> are independent__Step two__- Assign endogenous variables their values<span class="math display">\[\begin{align*}
+        V &amp;= f_V(\epsilon_1)
+        A &amp;= f_A(V, \epsilon_2)
+        I &amp;= F_I(A, \epsilon_3)
+
+      \end{align*}\]</span>% % {Note: If there are cycles, we assume the% equations have a unique solution}</p>
+</div><div class="column" style="width:40%;">
+<p><embed data-src="images/vaccine_graph.pdf"></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>How do the variables in an SEM get their values?</li>
+<li>First step, the background variables have their values drawn.</li>
+<li>Next, we have to follow the causal pathways and see what values each of the endogenous variables gets. Here, we can start with V…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="statistical-implications-of-a-causal-graph" class="title-slide slide level1 center">
+<h1>Statistical Implications of a Causal Graph</h1>
+
+</section>
+<section id="how-to-apply-an-sem" class="slide level2">
+<h2>How to Apply an SEM</h2>
+<p>Causal models require that we write down, clearly, the assumptions about the causal process <em>in the data generating process</em> .</p>
+<ul>
+<li>Evaluate how closely our data matches our <em>theory</em> about the world</li>
+<li>Choose an appropriate estimator for the data and theory</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Now you know a little bit about SEMS, but how do you apply them?</li>
+<li>One idea is to choose functional forms for each structural equation, then fit to data to estimate parameters.<br>
+</li>
+<li>This is actually done in some areas. One classic example is estimating supply curves and demand curves.</li>
+<li>But on the whole, these type of models aren’t very common. And the reason is that they are so highly specified. How can you convince somebody that the functions you chose are accurate depictions of reality?</li>
+<li>There’s another approach though, which is to use the causal graph to derive statistical assumptions. So it doesn’t matter what the functions are! we just need to make sure we get the graph right.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="causal-graph-definition" class="slide level2">
+<h2>Causal Graph Definition</h2>
+<div title="Causal graph">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Causal graph</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>A __causal graph__ is a graph that describes the causal
+pathways among a subset of all variables.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Causal graphs encode our theory about the causal structure:</p>
+<ol type="1">
+<li>If there is an arrow from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span> , then <span class="math inline">\(X\)</span> has a direct causal effect on <span class="math inline">\(Y\)</span> .</li>
+<li>If there is <strong>no</strong> arrow from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span> , <span class="math inline">\(X\)</span> has <strong>no</strong> direct causal effect on <span class="math inline">\(Y\)</span> .</li>
+<li>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> have a common cause <span class="math inline">\(Z\)</span> , then <span class="math inline">\(Z\)</span> must be in the diagram, even if we cannot measure it.</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>I put in the word subset, which means that we normally don’t put in background variables, and we don’t have to put in every possible variable in the world. But there are two rules:</li>
+<li>This last condition – that it go in the diagram even if we cannot measure it is a fail-safe that keeps us from being lazy, or missing connections that we should be worried about.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="examples-of-causal-graphs" class="slide level2">
+<h2>Examples of Causal Graphs</h2>
+<div title="Example: Direct and indirect effects">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example: Direct and indirect effects</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><span class="math inline">\(V \rightarrow A \rightarrow I\)</span> . Vaccines have a direct causal effect on Antibodies, but no direct effect on Infection.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div title="Example: Common Causes">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example: Common Causes</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Education <span class="math inline">\(\rightarrow\)</span> Wage. Do we need to include motivation?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="statistical-implications-of-a-causal-graph-1" class="slide level2">
+<h2>Statistical Implications of a Causal Graph</h2>
+<div title="Theorem: independence">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Theorem: independence</strong></p>
+</div>
+<div class="callout-content">
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> have no common ancestors in an acyclic SEM, they are independent.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:70%;">
+
+</div><div class="column" style="width:40%;">
+<p><embed data-src="images/independence_graph.pdf"></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>A causal graph is a causal model, but it has statistical implications.</li>
+<li>What is this telling us? In an SEM, associations don’t happen by accident. The reason that variables are dependent is because of common causes. The randomness in</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="the-one-equation-structural-model" class="title-slide slide level1 center">
+<h1>The One-Equation Structural Model</h1>
+
+</section>
+<section id="the-simplest-causal-graph" class="slide level2">
+<h2>The Simplest Causal Graph</h2>
+<p>One causal relationship:</p>
+<ul>
+<li>A single outcome: <span class="math inline">\(Max\_Speed\)</span></li>
+<li>A set of background variables that have a causal effect on the outcome: <span class="math inline">\(HP\)</span> , <span class="math inline">\(Weight\)</span></li>
+<li>An error term that also has a causal effect on the outcome: <span class="math inline">\(\epsilon\)</span></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Let’s take a look at the simplest possible causal graph. A lot of econometrics textbooks start off like this, but without making the assumptions explicit.</li>
+<li>We’ll say more about the error term in just a moment.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-one-equation-structural-model-1" class="slide level2">
+<h2>The One-Equation Structural Model</h2>
+
+<img data-src="images/causal_graph_base.png" class="r-stretch"><p><span class="math display">\[\begin{align*}
+    Max\_Speed  &amp;= \beta_0 + \beta_1 HP + \beta_2  Weight + \epsilon
+                  \tag{S} \\
+    \text{Where } E[\epsilon] &amp;= 0
+  \end{align*}\]</span></p>
+<aside class="notes">
+<ul>
+<li>We can express this theory as a causal graph. The only arrows are from the inputs to the outcome.</li>
+<li>If we assume the relationship is linear, we can also express it as a structural equation.</li>
+<li>This might look like any other linear equation, but it’s not. We’re inside a causal model, and we’re saying this equation represents the response of max speed to the inputs.</li>
+<li>If you put in different values of HP and Weight, you get a different max speed as a result. That’s what the causal model says</li>
+<li>We’ll place an S next to structural equations to make them clear.</li>
+<li>Now if I manipulate this equation - say I solve for HP - it’s still a valid equality, but it stops holding any causal interpretation.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-error-term-in-structural-equations" class="slide level2">
+<h2>The Error Term in Structural Equations</h2>
+<p><strong>To a statistician:</strong> <span class="math inline">\(\epsilon\)</span> is the difference between the target and the prediction</p>
+<p><strong>To an explanatory modeler:</strong> <span class="math inline">\(\epsilon\)</span> is unmeasured factors that have a causal effect on the outcome</p>
+<aside class="notes">
+<ul>
+<li>While we were doing pure statistics, we had an error term, and it represented the difference between our prediction and the target. It had no special meaning beyond that.</li>
+<li>But that’s not how econometricians, or political scientists, or epidemiologists look at</li>
+<li>To them</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-error-term-in-structural-equations-cont." class="slide level2">
+<h2>The Error Term in Structural Equations (cont.)</h2>
+<p><strong>Thought experiment:</strong> Write down any missing variable that can affect the outcome.</p>
+<p><span class="math display">\[\begin{align*}
+    Max\_Speed  = &amp;\beta_0 + \beta_1 HP + \beta_2  Weight \\
+                  &amp;+ \underbrace{\beta_3 Air\_Resistance + \beta_4 Tires + ...}_{\mathlarger{\mathlarger{\epsilon}}}
+  \end{align*}\]</span></p>
+<aside class="notes">
+<ul>
+<li>Think about the car. We know that HP and Weight aren’t the only things that make a car faster or slower. That’s why HP and Weight don’t predict speed perfectly with zero error.</li>
+<li>Choose some other factor and write it down. If you still can’t predict speed perfectly, choose yet another factor and write it down. Keep going an infinite number of times if you have to.</li>
+<li>If we could actually write down every possible factor that affects the outcome, maybe there would be no error left.</li>
+<li>However, we can’t possibly measure all of these factors. So we write down</li>
+<li>What does this mean? We can’t just assume the error term behaves the way we want. we have to think about what factors might be inside it, and where they actually go in the causal graph.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="assessing-the-causal-graph" class="slide level2">
+<h2>Assessing the Causal Graph</h2>
+
+<img data-src="images/causal_graph_base.png" class="r-stretch"><p>Two things we look for:</p>
+<ol type="1">
+<li>Are there any causal pathways back from <span class="math inline">\(Max\_Speed\)</span> to <span class="math inline">\(HP\)</span> and <span class="math inline">\(Weight\)</span> ?</li>
+<li>Are there any common ancestors of <span class="math inline">\(HP\)</span> and <span class="math inline">\(Max\_Speed\)</span> or of <span class="math inline">\(Weight\)</span> and <span class="math inline">\(Max\_Speed\)</span> ?</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>Here’s what our causal graph looks like again. Now let’s think about exactly what we’re assuming here. Remember we have two rules.</li>
+<li>First, if there’s no arrow somewhere, there’s no direct effect. So in particular, we’re assuming that there’s no path from Max speed back to HP</li>
+<li>And if there was any common cause of HP and Max speed, we would have to add it. What if we were wrong about air resistance, we thought it only had an effect on max speed, but what if it also has an effect on HP? We’re assuming there’s no variable like that.</li>
+<li></li>
+<li>If we believe that this graph is valid, that’s really good news for estimation.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="estimation-in-the-one-equation-model" class="slide level2">
+<h2>Estimation in the One-Equation Model</h2>
+
+<img data-src="images/causal_graph_base.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>Ok, we’ve done all this work, so that we can write down exactly what the one-equation structural model is.</li>
+<li>Now we’re ready to estimate its coefficients. and the way we do that is with OLS regression.</li>
+<li>The proof that OLS works is really quick with all the machinery we’ve built…</li>
+<li><span class="math inline">\(\epsilon\)</span></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="applications-for-the-one-equation-model" class="title-slide slide level1 center">
+<h1>Applications for the One-Equation Model</h1>
+
+</section>
+<section id="an-important-question" class="slide level2">
+<h2>An Important Question</h2>
+<p>standout</p>
+<p>When is the one-equation structural model valid?</p>
+<aside class="notes">
+<ul>
+<li>We’ve seen how useful the one-equation structural model is.</li>
+<li>The elephant in the room is that our theory has to be true – a supposition that we will</li>
+<li>There was a time, when researchers believed in the one-equation model a lot - or at least they behaved like they did. Running OLS regressions, made small tweaks and supposed their results held a causal interpretation.</li>
+<li>But, this is a bit like Emperor Nero fiddling while Rome burns or putting a finger in a dike.</li>
+<li>Over time, and with better methods, we’ve been discovering that those old regressions were often far off the mark.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="confounding-variables-in-observational-data" class="slide level2">
+<h2>Confounding Variables in Observational Data</h2>
+<p>b</p>
+
+<img data-src="images/education_wage.png" class="r-stretch"><aside class="notes">
+<ul>
+<li><p>Let’s talk through one example. A lot of labor economists are interested in this relationship. From education to wage. Suppose you decide to get an extra year of education, will that cause your wage to go up, and by how much?</p></li>
+<li><p>Is this a valid causal graph? For it to be valid, education and wage can’t have any common causes. If they have common causes, we’d need to include them in the graph.</p></li>
+<li><p>You can see that the list gets big really quickly:</p></li>
+<li><p>Now it’s true, if we could measure all these factors and put them into the regression, we could the problem.</p></li>
+<li><p>The problem is that we can’t possibly measure all of the possible factors. I’m not sure we could even think of them all. And some of these may be impossible to measure.</p></li>
+<li><p>Nowadays, if you try to measure this effect with an ols regression, it’s just not credible. you could never publish work like that.</p></li>
+<li><p>This is really the common case with observational data. your default assumption should be that the one-equation model does not hold</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="when-is-the-one-equation-model-credible" class="slide level2">
+<h2>When Is the One-Equation Model Credible?</h2>
+<ul>
+<li>True experiments</li>
+<li>Some natural experiments</li>
+<li>Differenced panels</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>So when CAN you believe the one-sample model?</li>
+<li>A few situations make it easy.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-true-experiment" class="slide level2">
+<h2>The True Experiment</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Treatment <span class="math inline">\(T\)</span> is randomly assigned (e.g.&nbsp;coin flip) <span class="math inline">\(\implies\)</span> no incoming paths <em>other than the coin</em> .</li>
+<li>Controls <span class="math inline">\(C_1, C_2, C_3\)</span> are either measured or determined before treatment - No paths from <span class="math inline">\(T\)</span> to controls, or controls to <span class="math inline">\(T\)</span></li>
+<li>Outcome <span class="math inline">\(Y\)</span> measured after <span class="math inline">\(T\)</span></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/experiment.png"></p>
+</div></div>
+<p><span class="math inline">\(\implies\)</span> OLS consistent estimates effect of <span class="math inline">\(T\)</span> on <span class="math inline">\(Y\)</span> .</p>
+<aside class="notes">
+<ul>
+<li>A true experiment is considered the gold standard for measuring causal effects.</li>
+<li>One way to think about it, is you’re using randomness to break links in the causal graph</li>
+<li>In a true experiment, you can divide variables into three classes.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="some-natural-experiments" class="slide level2">
+<h2>Some Natural Experiments</h2>
+<p><strong>Natural experiment:</strong> A scenario in which we can exploit naturally occurring variation to estimate structural parameters</p>
+<ul>
+<li>Often through instrumental variables, regression discontinuity, or other advanced techniques</li>
+<li>May enable OLS to <em>identify</em> causal quantities if treatment is random - The Vietnam War lottery</li>
+<li>Tropical cyclones</li>
+<li>Forest fires</li>
+<li>Network outages</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>There could be general trends, but if we stick to one cross section, and compare areas hit by a cyclone against areas that aren’t hit, we may argue that there can’t be many confounding variables.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="differenced-panels" class="slide level2">
+<h2>Differenced Panels</h2>
+<p><embed data-src="images/motivation_productivity.pdf"></p>
+<p><span class="math display">\[\begin{align*}
+    Production_1 &amp;= \beta_0 + \beta_1 Work\_Hours_1 + \beta_2 Motivation + \epsilon_1\\
+    -\Bigg[ Production_2 &amp;= \beta_0 + \beta_1 Work\_Hours_2 + \beta_2 Motivation + \epsilon_2 \Bigg]\\
+    \hline
+    \Delta Production &amp;=  \qquad \beta_1 \Delta Work\_Hours \qquad
+                          \qquad + (\epsilon_{1} - \epsilon_{2})
+  \end{align*}\]</span></p>
+<aside class="notes">
+<ul>
+<li>This is what we call a diff-in-diff design. our outcome is differences in productivity, and we’re looking at the differences in that variable across people. diff-in-diff.</li>
+<li>Confounding variables may be constant over time</li>
+<li>Suppose that we have data for</li>
+<li>Note: Cannot eliminate non-constant confounders</li>
+<li>But: what if Motivation in period 2 changes, depending on the work hours in period 1?</li>
+<li>So cannot help if the confounders change</li>
+<li>and it cannot help if there is reverse causality.</li>
+<li>But still, this design can be reasonably convincing in some scenarios.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="violations-of-the-one-equation-structural-model" class="title-slide slide level1 center">
+<h1>Violations of the One-Equation Structural Model</h1>
+
+</section>
+
+<section>
+<section id="omitted-variables" class="title-slide slide level1 center">
+<h1>Omitted Variables</h1>
+
+</section>
+<section id="omitted-variables-1" class="slide level2">
+<h2>Omitted Variables</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div title="Assumed Model">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Assumed Model</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>  Education causes wages</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p><embed data-src="images/education_assumed.pdf"></p>
+</div><div class="column" style="width:50%;">
+<div title="True Model">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>True Model</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>  Motivation causes both education and wages</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p><embed data-src="images/education_true.pdf"></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>When you do explanatory modeling, you work inside a causal theory. You want your theory to be right, but you always worry that it may not be exactly right. In particular, there could be causal pathways that you should have included, that you didn’t include.</li>
+<li>That means that there’s an extra step in your analysis. you need to consider what the most likely errors in your causal graph might be. and reason about how they might bias your estimates.</li>
+<li>In the case of the one-sample model, there are a couple of common violations that you need to watch out for. The violation is what we call an omitted variable.</li>
+<li>It turns out that when we have an omitted variable, ols regression will not estimate the correct target!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="omitted-variables-2" class="slide level2">
+<h2>Omitted Variables</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div title="We fit">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>We fit</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(W  = \tilde{\beta}_0 + \tilde{\beta}_1  E + \tilde \epsilon\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:55%;">
+<div title="True structural equation">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>True structural equation</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(W = \beta_0 + \beta_1 E + \beta_2 M + \epsilon\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<ul>
+<li>We are interested in <span class="math inline">\(\beta_1\)</span> .</li>
+<li>What is the bias, <span class="math inline">\(E[\tilde \beta_1 - \beta_1]\)</span> ?</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>We want to know this bias. I’ll show you how to calculate it.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="omitted-variable-bias-in-simple-regression" class="slide level2">
+<h2>Omitted Variable Bias in Simple Regression</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div title="We fit">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>We fit</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(W  = \tilde{\beta}_0 + \tilde{\beta}_1  E + \tilde \epsilon\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:55%;">
+<div title="True structural equation">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>True structural equation</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(W = \beta_0 + \beta_1 E + \beta_2 M + \epsilon\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<p>Regress <span class="math inline">\(M\)</span> on <span class="math inline">\(E\)</span> :</p>
+<p><span class="math inline">\(M = \delta_0 + \delta_1 E + \nu\)</span></p>
+<p>Consider two quantities</p>
+<ul>
+<li><span class="math inline">\(\beta_2\)</span> is the effect of <span class="math inline">\(M\)</span> on <span class="math inline">\(W\)</span> .</li>
+<li><span class="math inline">\(\delta_1\)</span> represents how related <span class="math inline">\(M\)</span> and <span class="math inline">\(E\)</span> are.</li>
+</ul>
+<p><strong>Omitted Variable Bias:</strong> <span class="math inline">\(\tilde{\beta}_{1}  - \beta_{1} = \beta_{2} \delta_{1}\)</span></p>
+</section>
+<section id="omitted-variable-bias-in-multiple-regression" class="slide level2">
+<h2>Omitted Variable Bias in Multiple Regression</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div title="We fit">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>We fit</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(Y = \tilde{\beta}_0 + \tilde{\beta}_1 X_1 + \tilde{\beta}_2 X_2  + ...\)</span><span class="math inline">\(\qquad + \tilde{\beta}_{k-1} X_{k-1}   + \tilde \epsilon\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:55%;">
+<div title="True structural equation">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>True structural equation</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(Y  = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ...\)</span><span class="math inline">\(\qquad +\tilde{\beta}_{k-1} X_{k-1} +  \beta_k X_k + \epsilon\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<p>Regress <span class="math inline">\(X_k\)</span> on other <span class="math inline">\(X\)</span> ’s:</p>
+<p><span class="math inline">\(X_k = \delta_0 + \delta_1 X_1 + ... + \delta_{k-1} X_{k-1} + \nu\)</span> <strong>Omitted Variable Bias:</strong> <span class="math inline">\(\tilde{\beta}_{1} -  \beta_1 =  \beta_{k} \delta_1\)</span></p>
+<aside class="notes">
+<ul>
+<li>The fit model omits</li>
+<li>As you can see, the formula for OVB is the same. Once again, you should think about</li>
+<li>But I should qualify that a little bit.<br>
+</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="estimating-omitted-variable-bias" class="slide level2">
+<h2>Estimating Omitted Variable Bias</h2>
+<p><embed data-src="images/ovb_2.pdf"></p>
+<p>We fit:<br>
+<span class="math inline">\(\widehat{Wage} = \tilde{\beta}_0 + \tilde{\beta}_1 Education\)</span> ; Omitted: <span class="math inline">\(Motivation\)</span></p>
+<aside class="notes">
+<ul>
+<li>By definition, we never know what our omitted variable bias is - the omitted variable is omitted.</li>
+<li>But actually, you can sometimes use your background knowledge to estimate the bias</li>
+<li>Not very accurately. But at the least, you can estimate whether the bias is positive or negative, and that’s actually pretty helpful. You especially want to know if its pushing your coefficient towards zero or away from zero.</li>
+<li>In the wage equation, we mivght estimate the</li>
+<li>The coefficient</li>
+<li>Take a moment and think about this. which is worse, bias towards zero or away from zero.</li>
+<li>The answer is, it’s usually worse to have bias away from zero. That’s because the true effect is closer to zero, so we don’t know how much of the relationship we see is real and how much is bias. it might even be that the real effect is zero, or in the other direction.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="assessing-omitted-variable-bias" class="slide level2">
+<h2>Assessing Omitted Variable Bias</h2>
+<p>Which is worse: Bias toward zero or bias away from zero?</p>
+</section></section>
+<section>
+<section id="proof-of-omitted-variable-bias" class="title-slide slide level1 center">
+<h1>Proof of Omitted Variable Bias</h1>
+
+</section>
+<section id="the-omitted-variable-bias-in-simple-regression" class="slide level2">
+<h2>The Omitted Variable Bias in Simple Regression</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div title="We fit">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>We fit</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(W  = \tilde{\beta}_0 + \tilde{\beta}_1  E + \tilde \epsilon\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:55%;">
+<div title="True structural equation">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>True structural equation</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(W = \beta_0 + \beta_1 E + \beta_2 M + \epsilon\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Draw each of the following</li>
+<li><span class="math inline">\(E[\epsilon] = 0\)</span></li>
+<li><span class="math inline">\(cov[E,\epsilon] = 0\)</span></li>
+<li><span class="math inline">\(cov(M,\epsilon) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{\beta}_1 = \frac{cov[W,E]}{var[E]} =  \frac{cov[\beta_0 + \beta_1 E + \beta_2 M + \epsilon,E]}{var[E]}\)</span></li>
+<li><span class="math inline">\(\frac{\beta_1 var[E]  + \beta_2 cov[M,E]}{var[E]}  = \beta_1 +  \frac{ \beta_2 cov[M,E]}{var[E]}\)</span></li>
+<li>What is the second term? it looks like the formula for a regression coefficient. But what regression?</li>
+<li><span class="math inline">\(M = \delta_0 + \delta_1 E + v\)</span></li>
+<li><span class="math inline">\(\tilde\beta_1 = \beta_1 + \beta_2 \delta_1\)</span></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="reverse-causality" class="title-slide slide level1 center">
+<h1>Reverse Causality</h1>
+
+</section>
+<section id="reverse-causality-1" class="slide level2">
+<h2>Reverse Causality</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div title="Assumed model">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Assumed model</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>  Education causes wages</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p><embed data-src="images/education_assumed.pdf"></p>
+</div><div class="column" style="width:50%;">
+<div title="True model">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>True model</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>  Education causes wages _and_ wages cause education</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p><embed data-src="images/reverse_causality.pdf"></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>What if having a higher wage allows people to pay for more education.</li>
+<li>Feedback</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="an-sem-version" class="slide level2">
+<h2>An SEM Version</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<pre><code>  True structural equations:\begin{align}
+    W &amp;= \beta_0 + \beta_1 E + \epsilon_1
+
+    E &amp;= \gamma_0 + \gamma_1 W + \epsilon_2
+  \end{align}</code></pre>
+</div><div class="column" style="width:50%;">
+<p><embed data-src="images/reverse_causality.pdf"></p>
+</div></div>
+<p>Observations</p>
+<ul>
+<li><p>E is a descendant of <span class="math inline">\(\epsilon_1\)</span> .</p></li>
+<li><p><span class="math inline">\(\implies\)</span> <span class="math inline">\(E\)</span> and <span class="math inline">\(\epsilon_1\)</span> are dependent.</p></li>
+<li><p><span class="math inline">\(\implies\)</span> (1) is not the BLP.</p>
+<p>Since OLS estimates the BLP, it can’t estimate (1).</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>If we additionally assume that all the responses are linear, we get an SEM that looks like this.</li>
+<li>In our previous model, the structural equation always coincided with the BLP. But that’s not true here.</li>
+<li>That’s because</li>
+<li>So what is the BLP? We have to solve this system of equations…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="understanding-feedback" class="slide level2">
+<h2>Understanding Feedback</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<pre><code>  True structural equations:\begin{align*}
+    W &amp;= \beta_0 + \beta_1 E + \epsilon_1
+
+    E &amp;= \gamma_0 + \gamma_1 W + \epsilon_2
+  \end{align*}</code></pre>
+</div><div class="column" style="width:50%;">
+<p><embed data-src="images/reverse_causality.pdf"></p>
+</div></div>
+<p>Suppose <span class="math inline">\(\beta_1 &gt; 0\)</span> - Positive feedback <span class="math inline">\(\gamma_1 &gt; 0\)</span> - <span class="math inline">\(\tilde \beta_1 &gt; \beta_1\)</span> - Negative feedback <span class="math inline">\(\gamma_1 &lt; 0\)</span> - <span class="math inline">\(\tilde \beta_1 &lt; \beta_1\)</span></p>
+</section>
+<section id="understanding-the-sem-equilibrium" class="slide level2">
+<h2>Understanding the SEM Equilibrium</h2>
+<p><embed data-src="images/reverse_1.pdf"></p>
+<aside class="notes">
+<ul>
+<li>As we’re talking through this, we need to highlight the following:</li>
+<li>Our theory suspects that these functions are related to one another. But, we</li>
+<li>This means that we have to look for circumstances where we have a random shock to the system where we can look at the consequences. For example, suppose that we gave out</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="understanding-the-sem-equilibrium-1" class="slide level2">
+<h2>Understanding the SEM Equilibrium</h2>
+<p><embed data-src="images/reverse_2.pdf"></p>
+</section>
+<section id="understanding-the-sem-equilibrium-2" class="slide level2">
+<h2>Understanding the SEM Equilibrium</h2>
+<p><embed data-src="images/reverse_3.pdf"></p>
+</section></section>
+<section>
+<section id="outcome-variables-on-right-hand-side" class="title-slide slide level1 center">
+<h1>Outcome Variables on Right-Hand Side</h1>
+
+</section>
+<section id="outcome-variables-on-the-right-hand-side" class="slide level2">
+<h2>Outcome Variables on the Right-Hand Side</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div title="Assumed model">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Assumed model</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Education causes wages</li>
+<li>Contacts in industry cause wages</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div title="True Model">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>True Model</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Education causes wages</li>
+<li>Contacts in industry cause wages</li>
+<li>Education creates contacts in industry</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<p><embed data-src="images/assumed_right_hand_side.pdf"></p>
+<p><embed data-src="images/true_right_hand_side.pdf"></p>
+<aside class="notes">
+<ul>
+<li>This last violation, is not actually a violation. But it is a tricky situation that you need to be careful with.</li>
+<li>Let’s say you record E and W as before, and you also have a third variable,</li>
+<li>Here’s the issue. We assume that the causal graph looks like the left one, but what if education causes you to have more contacts. One of the main reasons for going to grad school is to build up your network.</li>
+<li>Can we use OLS to estimate the structural parameters?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="estimating-the-structural-parameters" class="slide level2">
+<h2>Estimating the Structural Parameters</h2>
+<p><embed data-src="images/true_right_hand_side.pdf"></p>
+<p>Structural Equation: <span class="math inline">\(W = \beta_0 + \beta_1 E + \beta_2 C + \epsilon \qquad(S)\)</span> <span class="math inline">\(\epsilon\)</span> and <span class="math inline">\(E\)</span> have no common ancestors. <span class="math inline">\(\implies \epsilon\)</span> and <span class="math inline">\(E\)</span> are independent. <span class="math inline">\(\implies cov(E,\epsilon) = 0\)</span> <span class="math inline">\(\implies\)</span> OLS is consistent for <span class="math inline">\(\beta_1\)</span></p>
+<aside class="notes">
+<ul>
+<li>The answer is yes. The same proof as before. I can draw in W’s background variable</li>
+<li>OLS is consistent for</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="interpreting-the-structural-coefficient" class="slide level2">
+<h2>Interpreting the Structural Coefficient</h2>
+<p><span class="math inline">\(\beta_1\)</span> - The expected increase in Wage, from getting an extra year of eduction, holding the number of industry contacts constant.</p>
+<aside class="notes">
+<ul>
+<li>Let’s think about what the interpretation is</li>
+<li>But that’s strange formulation, right? Go to school for a year, but don’t make any contacts? Of course, that would probably limit wages, but why would you do that? The research question we’re interested in isn’t about specific parts of education, it’s about a year of education as a whole. So this is probably a bad idea.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="take-away" class="slide level2">
+<h2>Take Away</h2>
+<p>standout</p>
+<p>Do not put outcome variables on the right hand side.</p>
+</section></section>
+<section>
+<section id="explanatory-modeling-wrap-up" class="title-slide slide level1 center">
+<h1>Explanatory Modeling Wrap-Up</h1>
+
+</section>
+<section id="take-aways" class="slide level2">
+<h2>Take Aways</h2>
+<ul>
+<li>Explanatory modeling takes place inside a causal theory.</li>
+<li>The one-equation structural model is usually wrong.</li>
+<li>In special circumstances, advanced techniques can overcome omitted variables and reverse causality. - To learn more, try the instrumental variables and simultaneous equations chapters in <em>Introductory Econometrics</em> (Wooldridge).</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>First, let me remind you that to do any explanatory modeling, you have to work inside a causal theory. You could rush in, linear regressions blazing, but if you don’t start with a causal theory, it’s hard to know what your results mean. At the least, it’s worth your while to draw your causal graph, see if you can decide what your assumptions are. It might tell you that you can use ols, it might require an advanced method like instrumental variables, or it might tell you that estimation is impossible, but at least you’ll know.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: true,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

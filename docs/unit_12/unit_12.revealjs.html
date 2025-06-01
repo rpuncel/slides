@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.43">
+
+  <meta name="author" content="Statistics for Data Science">
+  <title>Week 12</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Week 12</h1>
+  <p class="subtitle">The Classical Linear Model</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Statistics for Data Science 
+</div>
+        <p class="quarto-title-affiliation">
+            UC Berkeley, School of Information
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+
+</section>
+
+<section>
+<section id="importance-of-the-classical-linear-model" class="title-slide slide level1 center">
+<h1>Importance of the Classical Linear Model</h1>
+
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p>Small data still matters.</p>
+<ul>
+<li>Experimental data can be expensive</li>
+<li>Data may be aggregated - Policy regions</li>
+<li>Markets</li>
+<li>Prior studies</li>
+<li>Some units of observation are limited - Space shuttle launches</li>
+<li>Viral pandemics</li>
+<li>Elections</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Why are we devoting this unit to the classical linear model?</li>
+<li>Well, there’s one big reason and a bunch of small ones.</li>
+<li>The big reason is that, for all the talk about big data, small data still matters</li>
+<li>As a data scientist, you are very likely to work with small data at some point in your career. There’s a few reasons for that…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-cant-we-use-the-large-sample-model" class="slide level2">
+<h2>Why Can’t we use the Large-Sample Model?</h2>
+<ul>
+<li>Coefficients may have high bias</li>
+<li>Standard error estimators have high variance</li>
+<li>Standard error estimates may have high bias</li>
+</ul>
+<p><span class="math inline">\(\implies\)</span> Our coefficients could be far from the truth</p>
+<p><span class="math inline">\(\implies\)</span> We can’t trust our estimates of uncertainty</p>
+<aside class="notes">
+<ul>
+<li>First, let’s clearly say why we can’t just use the large-sample model for small data</li>
+<li>In the large sample model, we rely on consistency and asymptotic normality, but those require a large n.</li>
+<li>For small n, our coefficients naturally have higher variance, but they may also have high bias</li>
+<li>That’s a problem because standard errors only account for variance, they don’t recognize bias</li>
+<li>Furthermore, we have to estimate our standard errors, but those use consistent estimators.</li>
+<li>In small data, our standard error estimates have high variance, and they might be very biased as well.</li>
+<li>So we’re off but our instruments for understanding how far off we are don’t work!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="twenty-noisy-questions" class="slide level2">
+<h2>Twenty (Noisy) Questions</h2>
+<div class="columns">
+<div class="column" style="width:38%;">
+<ul>
+<li>Is it in a school?</li>
+<li>Is it bigger than a breadbox?</li>
+<li>Is it red?</li>
+<li>It is alive?</li>
+</ul>
+</div><div class="column" style="width:65%;">
+<p><img data-src="images/questions.jpg"></p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Imagine a noisy game of 20 questions.</li>
+<li>I’m thinking of a secret object. You’re trying to guess it by asking yes or no questions.</li>
+<li>This is a noisy game, so my answers can be wrong with some probability - say 10</li>
+<li>To represent small data, imagine that you get just 5 questions.</li>
+<li>To represent biased coefficients, say that I can strategically choose when to give the wrong answer to try to direct you to a false target.</li>
+<li>To represent biased standard errors, imagine that you have no idea what fraction of the time I’m allowed to lie.</li>
+<li>The game doesn’t sound like very much fun, does it? This captures the problems that our asymptotic machinery faces in a small sample.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p>More assumptions</p>
+<p><span class="math inline">\(\downarrow\)</span></p>
+<p>Fewer unknowns</p>
+<p><span class="math inline">\(\downarrow\)</span></p>
+<p>More mileage from data</p>
+<aside class="notes">
+<ul>
+<li>So how do fix this? The super short answer is this: we need more assumptions.</li>
+<li>More assumptions means fewer unknowns. Which means that we can get more mileage out of our data.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-classical-linear-model-clm" class="slide level2">
+<h2>The Classical Linear Model (CLM)</h2>
+<p>Key assumption: <span class="math inline">\(f_{Y|X}\)</span> belongs to a parametric family.</p>
+<p>Goal: Identify which member is the true one.</p>
+<aside class="notes">
+<ul>
+<li>The enlarged set of assumptions we’re talking about is known as the Classical Linear Model.</li>
+<li>We’re going to assume that the conditional distribution of</li>
+<li>Then our job is much smaller. all we need to do is figure out which member of the family is the true one.</li>
+<li>The CLM Is extremely popular. It’s the traditional starting point for linear regression, and the centerpiece of most textbooks in statistics, econometrics, and machine learning.</li>
+<li>It’s also a basis for other statistical models. So it’s very important to know this model. let’s get started..</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="unit-plan" class="title-slide slide level1 center">
+<h1>Unit Plan</h1>
+
+</section>
+<section id="plan-for-the-week" class="slide level2">
+<h2>Plan for the Week</h2>
+<p>Three sections:</p>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</section>
+<section id="plan-for-the-week-contd" class="slide level2">
+<h2>Plan for the Week (cont’d)</h2>
+<p>At the end of this week, you will be able to:</p>
+<ul>
+<li>Understand statistical inference based on the classical linear model</li>
+<li>Use regression diagnostics to assess all CLM assumptions</li>
+<li>Understand how to leverage transformations to help meet CLM assumptions</li>
+</ul>
+</section></section>
+<section id="part-1-importance-of-the-classical-linear-model" class="title-slide slide level1 center">
+<h1>Part 1: Importance of the Classical Linear Model</h1>
+
+</section>
+
+<section>
+<section id="reading-the-clm-assumptions" class="title-slide slide level1 center">
+<h1>Reading: The CLM Assumptions</h1>
+
+</section>
+<section id="reading-the-clm-assumptions-1" class="slide level2">
+<h2>Reading: The CLM Assumptions</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> Chapter 5 through section 5.1.1.</p>
+<p>Pay attention to the discussion of the disturbance, and notice how the last paragraph seems to imply a particular causal model.</p>
+</section></section>
+<section>
+<section id="the-clm-assumptions-part-1" class="title-slide slide level1 center">
+<h1>The CLM Assumptions, Part 1</h1>
+
+</section>
+<section id="clm-assumption-1" class="slide level2">
+<h2>CLM Assumption 1</h2>
+<p><strong>I.I.D. Data.</strong> <span class="math inline">\((Y_1, \boldsymbol{X}_1), (Y_2, \boldsymbol{X}_2),...,(Y_n, \boldsymbol{X}_n)\)</span> are independent and identically distributed.</p>
+<p>Common violations:</p>
+<ul>
+<li><p>Clusters</p></li>
+<li><p>Dependencies among family members, competitors, geographic neighbors</p></li>
+<li><p>Dependencies from one time period to the next</p>
+<p>We denote a representative datapoint as <span class="math inline">\((Y, \boldsymbol{X})\)</span> .</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>First, just like before, we need an assumption of I.I.D. iid tells us that each datapoint is 100</li>
+<li>The model is this: you have a joint distribution and you draw a datapoint. then you reset, totally clear memory and draw the next datapoint.</li>
+<li>Real data generating processes very often don’t look like that. Here are some of the most common violations</li>
+<li>Some of these violations you can test for and model the dependency. for example, if you know what the clusters are, you can build them into a hierarchical model. but in general, you may now even know where all the dependencies are and have no way to model them.</li>
+<li>We usually don’t get a perfectly random sample. That usually doesn’t mean you throw away your data, but you should always assess the assumption honestly. and you may have to be skeptical about your standard errors.</li>
+<li>Since we assume our data is iid, we can drop the subscript, and just discuss a representative random vector, (Y,X).</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clm-assumption-2" class="slide level2">
+<h2>CLM Assumption 2</h2>
+<p><strong>No Perfect Collinearity.</strong> <span class="math inline">\(\E[X^TX]\)</span> exists and is invertible.</p>
+<p><span class="math inline">\(\implies\)</span> No <span class="math inline">\(X_i\)</span> can be written as a linear combination of the other <span class="math inline">\(X\)</span> ’s.</p>
+<aside class="notes">
+<ul>
+<li>First, the mathematically precise definition…</li>
+<li>What does this mean? For this to be invertible, that tells us that no x variable can be written as an exact linear combination of the other X’s. It has to have some unique variation.</li>
+<li>That makes sense because we know ols works on unique variation. If we combine this assumption with the next one, we can prove that a unique BLP exists.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="perfect-collinearity-example-1" class="slide level2">
+<h2>Perfect Collinearity Example 1</h2>
+<p><span class="math inline">\(\widehat{Price} =  .5\ Donuts + 0.0\ Dozens\)</span></p>
+<p>or</p>
+<p><span class="math inline">\(\widehat{Price} =  0.0\ Donuts + 6.0\ Dozens\)</span></p>
+<aside class="notes">
+<ul>
+<li>Here’s an example to help understand why we need this assumption</li>
+<li>You regress the price on both number of donuts and number of dozens of donuts.</li>
+<li>it’s 50 cents per donut, so you can write the price as 50 cents times number of donuts</li>
+<li>But you can also write it as 6 dollars times number of dozens.</li>
+<li>Both are equivalent for predicting the price - this problem doesn’t affect prediction.</li>
+<li>But you can’t estimate coefficients, because they aren’t uniquely defined.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="perfect-collinearity-example-2" class="slide level2">
+<h2>Perfect Collinearity Example 2</h2>
+<p><span class="math inline">\(\widehat{Voters} =  200\ Positive\_Ads + 100\ Negative\_Ads + 0\ Total\_Ads\)</span></p>
+<p>or</p>
+<p><span class="math inline">\(\widehat{Voters} =  100\ Positive\_Ads + 0\ Negative\_Ads + 100\ Total\_Ads\)</span></p>
+<aside class="notes">
+<ul>
+<li>Here’s another example, to show you that multicollinearity isn’t always about pairs of variables, it might be more variables</li>
+<li>Here you have a regression with number of positive ads, number of negative ads, and the total number of ads.</li>
+<li>Once again, you can find multiple ways to write the same model.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="the-clm-assumptions-part-2" class="title-slide slide level1 center">
+<h1>The CLM Assumptions, Part 2</h1>
+
+</section>
+<section id="clm-assumption-3" class="slide level2">
+<h2>CLM Assumption 3</h2>
+<p><strong>Linear Conditional Expectation.</strong> The conditional expectation of <span class="math inline">\(Y\)</span> given <span class="math inline">\(\boldsymbol{X}\)</span> exists and has the linear form,</p>
+<p><span class="math inline">\(\E[Y|\boldsymbol{X}=\bs x]= \boldsymbol{x \beta}\)</span></p>
+<p>Where <span class="math inline">\(\boldsymbol{\beta}\)</span> is a vector of parameters, for all <span class="math inline">\(\boldsymbol{x} \in \text{Supp}[\boldsymbol{X}]\)</span></p>
+<aside class="notes">
+<ul>
+<li>Next, we have linear conditional expectation.</li>
+<li>This is quite strong. It’s telling us that our joint distribution is essentially linear, although possible distributions around that line can still look very different.</li>
+<li>This makes the regression problem much easier - we know we have a line, we just need to figure out which line.</li>
+<li></li>
+<li></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clm-assumption-4" class="slide level2">
+<h2>CLM Assumption 4</h2>
+<p><strong>Homoskedasticity.</strong> Letting <span class="math inline">\(\epsilon = Y - \boldsymbol{X \beta}\)</span> , the conditional variance <span class="math inline">\(\V[\epsilon | \boldsymbol{X}]\)</span> is a constant, which we label <span class="math inline">\(\sigma^2\)</span> .</p>
+<aside class="notes">
+<ul>
+<li>We already assumed we have a linear CEF, now we also need to know that the spread around that line is constant.</li>
+<li>homo = same, skedasis = Greek for scattering</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="understanding-homoskedasticity" class="slide level2">
+<h2>Understanding Homoskedasticity</h2>
+
+<img data-src="images/homoskedasticity.png" class="r-stretch"><aside class="notes">
+<ul>
+<li></li>
+<li>Here’s a picture to show you what this assumption looks like.</li>
+<li>To understand conditional variance, choose an X and then look at how wide the distribution is along the Y-axis.</li>
+<li>On the left, we have an example of homoskedasticity - for any X, the conditional variance in Y looks the same.</li>
+<li>On the right, we have heteroskedasticity, the conditional variance seems to increase towards the right.</li>
+<li>This will complicate the behavior of our coefficients in a small sample, so we require homoskedasticity in the CLM.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clm-assumption-5" class="slide level2">
+<h2>CLM Assumption 5</h2>
+<p><strong>Normally Distributed Errors.</strong> Letting <span class="math inline">\(\epsilon = Y - \boldsymbol{X \beta}\)</span> , the conditional distribution of <span class="math inline">\(\epsilon\)</span> given <span class="math inline">\(\boldsymbol{X} = \boldsymbol{x}\)</span> is normal.</p>
+<ul>
+<li>Given previous assumptions, <span class="math inline">\(\epsilon \sim N(0, \sigma^2)\)</span> .</li>
+</ul>
+</section>
+<section id="common-clm-errors" class="slide level2">
+<h2>Common CLM Errors</h2>
+<p>NOT CLM Assumptions:</p>
+<ul>
+<li>Normality of <span class="math inline">\(X_i\)</span> or <span class="math inline">\(Y\)</span> </li>
+<li>No outliers </li>
+<li>No high Collinearity </li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Finally, it’s worth mentioning some common mistakes These are assumptions that are NOT part of the CLM.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clm-model-summary" class="slide level2">
+<h2>CLM Model Summary</h2>
+<ol type="1">
+<li>I.I.D. Data</li>
+<li>No Perfect Collinearity</li>
+<li>Linear Conditional Expectation</li>
+<li>Homoskedastic Errors</li>
+<li>Normally Distributed Errors</li>
+</ol>
+</section></section>
+<section id="part-2-properties-of-the-clm" class="title-slide slide level1 center">
+<h1>Part 2: Properties of the CLM</h1>
+
+</section>
+
+<section>
+<section id="ols-is-unbiased-under-the-clm" class="title-slide slide level1 center">
+<h1>OLS is Unbiased under the CLM</h1>
+
+</section>
+<section id="ols-is-unbiased-under-the-clm-1" class="slide level2">
+<h2>OLS is Unbiased under the CLM</h2>
+<p>Assume CLM 1-3.</p>
+</section>
+<section id="ols-is-unbiased-under-the-clm-2" class="slide level2">
+<h2>OLS is Unbiased under the CLM</h2>
+<p>Assume CLM 1-3.<br>
+<span class="math inline">\(\E[Y|\bs X] = \bs X \bs \beta\)</span> <span class="math display">\[\begin{align*}
+\E[\bs Y | \X] &amp;= \left[ \begin{matrix} \E[Y_1|\X] \\ \E[Y_2|\X] \\ \vdots \\ \E[Y_n| \X] \end{matrix} \right]
+= \left[ \begin{matrix} X_1 \bs \beta \\ X_2 \bs \beta\\ \vdots \\ X_n \bs \beta \end{matrix} \right]
+= \X \bs \beta
+  \end{align*}\]</span> <span class="math display">\[\begin{align*}
+\E[\boldsymbol{ \hat \beta}] &amp;= \E[(\X^T\X)^{-1}\X^T\boldsymbol{Y}]  = \E\Big[ \E[(\X^T\X)^{-1}\X^T\boldsymbol{Y} | \X] \Big] \\
+&amp;= \E\Big[ (\X^T\X)^{-1}\X^T \E[ \boldsymbol{Y} | \X] \Big]   = \E\Big[ (\X^T\X)^{-1}\X^T  \X \bs \beta \Big] \\
+  &amp;= \E[\bs \beta] = \bs \beta
+  \end{align*}\]</span></p>
+<aside class="notes">
+<ul>
+<li>First, we need to write CLM 3 in matrix form. CLM 3 says that a single data point is expected to fall on the line, and we need to say that all the points fall on the line.</li>
+<li>So you can see that the coefficients are unbiased, and for this we only needed CLM 1-3. The one strong assumption is linear conditional expectation.</li>
+<li>This results is important, because it eliminates one way that our estimates can be wrong. There’s no bias at any sample size. Next, we need a way to estimate variance in a small sample, and then we can start to understand our results.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="classical-standard-errors" class="title-slide slide level1 center">
+<h1>Classical Standard Errors</h1>
+
+</section>
+<section id="standard-errors-under-the-clm" class="slide level2">
+<h2>Standard Errors under the CLM</h2>
+<p>Two choices:</p>
+<ul>
+<li>Robust Standard Errors</li>
+<li>Classical Standard Errors</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>We already know that</li>
+<li>Let’s start with the most fundamental metric of uncertainty: standard errors.</li>
+<li>When working with the CLM, people use two different types of standard errors.</li>
+<li>You’ve already seen robust standard errros, let’s defines what classical standard errors are, and then talk about which of these you should use.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="classical-standard-errors-intuition" class="slide level2">
+<h2>Classical Standard Errors: Intuition</h2>
+<p><strong>Fewer unknowns <span class="math inline">\(\implies\)</span> more accurate estimates</strong> - All data points share a common variance <span class="math inline">\(\V[Y_i] = \sigma^2\)</span> . - Leverage all data points to estimate a single number.</p>
+<aside class="notes">
+<ul>
+<li>The basic idea is that under the CLM, we have fewer unknowns, so we should be able to use our data to get more accuracy</li>
+<li>In particular, each datapoint has the same variance. Estimating n different variances would be hard.</li>
+<li>since there’s one variance, we can use every single datapoint to get more information about it</li>
+<li>Here’s a data point that’s high - that’s a signal that variance is high.</li>
+<li>We can use a good estimate for error variance to compute the variance of the betas.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-simple-equation-for-sampling-variance" class="slide level2">
+<h2>A Simple Equation for Sampling Variance</h2>
+<div title="Theorem: OLS variance under homoskedasticity">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Theorem: OLS variance under homoskedasticity</strong></p>
+</div>
+<div class="callout-content">
+<p>Under CLM 1-4, the variance of the OLS coefficients is given by,</p>
+<pre><code>$\V[ \boldsymbol{ \hat \beta} ]  =  \sigma^2 \E[   \boldsymbol{X}^T\boldsymbol{X} ]^{-1}$</code></pre>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Let me remind you that the general equation for variance of betas is really complicated</li>
+<li>But under homoskedasticity, we were able to simplify it a lot.</li>
+<li>Here’s the theorem we saw earlier. we just multiply the error variance by this matrix.</li>
+<li>How do we get an estimator for this. we just plug in sample analogues for variance and for the matrix</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<div title="Classical Standard Errors">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Classical Standard Errors</strong></p>
+</div>
+<div class="callout-content">
+<p>The classical variance estimator is <span class="math inline">\(\widehat{\V}_C[\boldsymbol{ \hat \beta}]  =  \hat \sigma^2 (   \X^T\X) ^{-1}\)</span> Where <span class="math inline">\(\hat \sigma^2\)</span> is the <em>residual variance</em>, given by <span class="math inline">\(\hat \sigma^2 = \frac{1}{n-k-1} \sum_{i=1}^n \hat \epsilon_i^2\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Consistent under CLM 1-4</li>
+<li>Unbiased if <span class="math inline">\(\X\)</span> is nonrandom.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>This is what we call classical standard errors.</li>
+<li>For us, these are consistent, but textbooks that use stronger assumptions list them as unbiased.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="should-you-use-classical-standard-errors" class="slide level2">
+<h2>Should you use Classical Standard Errors?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>YES- Classical standard errors are efficient. - If you transform variables to fit CLM, want to take advantage of extra precision. - t-Tests, other Wald tests are based on classical standard errors.</p>
+</div><div class="column" style="width:50%;">
+<p>NO- Without homoskedasticity, classical standard errors are inconsistent - Hard to assess homoskedasticity in small samples</p>
+</div></div>
+</section></section>
+<section>
+<section id="sampling-distributions-under-the-clm" class="title-slide slide level1 center">
+<h1>Sampling Distributions under the CLM</h1>
+
+</section>
+<section id="clm-sampling-distributions" class="slide level2">
+<h2>CLM Sampling Distributions</h2>
+<div title="Normality of OLS Coefficients">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Normality of OLS Coefficients</strong></p>
+</div>
+<div class="callout-content">
+<p>Under CLM 1-5, <span class="math inline">\(\boldsymbol{\hat \beta}\)</span> is distributed multivariate normal.</p>
+</div>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(\boldsymbol{ \hat \beta} = \boldsymbol{\beta} +  (\X^T\X)^{-1} \X^T\boldsymbol{\epsilon}\)</span> - Each <span class="math inline">\(\hat{\beta}_i\)</span> is normal - Any linear combination (e.g.&nbsp;<span class="math inline">\(\hat{\beta}_i - \hat{\beta}_j\)</span> ) is normal</p>
+<aside class="notes">
+<ul>
+<li>To do more precise inference, including confidence intervals and tests, we have to know what the sampling distribution of our beta hats is.</li>
+<li>We need the full CLM for this. The result is that under CLM 1-5, our beta hats are normal.</li>
+<li>Here’s how you know. remember this equation for beta hat…</li>
+<li></li>
+<li><span class="math inline">\(\epsilon\)</span></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="testing-coefficients-under-the-clm" class="slide level2">
+<h2>Testing Coefficients under the CLM</h2>
+<div title="Theorem: t-statistics for OLS Coefficients">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Theorem: t-statistics for OLS Coefficients</strong></p>
+</div>
+<div class="callout-content">
+<p>Assume CLM 1-5 and the null hypothesis:</p>
+<p><span class="math inline">\(H_0: \beta_i = \mu_0\)</span> Let <span class="math inline">\(\hat \sigma_i\)</span> be the classical standard error for <span class="math inline">\(\hat \beta_i\)</span>. <span class="math inline">\(t = \frac{\hat \beta_i - \mu_0}{\hat \sigma_i}\)</span> is distributed <span class="math inline">\(T\)</span> with <span class="math inline">\(n-k -1\)</span> degrees of freedom.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Now that we know that our sampling distribution is normal, we can derive a t-statistic</li>
+<li>The setup is very similar to a classic t-test for one variable.</li>
+<li>We have a null hypothesis, which is usually that our</li>
+<li>We standardize, by subtracting the hypothesized mean, and dividing by the standard error.</li>
+<li>Since we’re estimating the standard error, the statistic doesn’t follow a z-distribution, it follows a t-distribution.</li>
+<li>By the way, the degrees of freedom is n-k, we lose a degree of freedom for every beta we estimate.</li>
+<li>So this is why we always run t-tests instead of z-tests in a regression. T-tests are accurate in small samples under the CLM. Of course, your statistical software will run these tests automatically.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="take-aways" class="slide level2">
+<h2>Take-Aways</h2>
+<p>Under CLM 1-5</p>
+<ul>
+<li>t-tests based on classical standard errors are valid</li>
+<li>Confidence intervals based on classical standard errors are valid</li>
+</ul>
+</section></section>
+<section>
+<section id="efficiency-theorems-for-ols" class="title-slide slide level1 center">
+<h1>Efficiency Theorems for OLS</h1>
+
+</section>
+<section id="ols-and-alternative-estimators" class="slide level2">
+<h2>OLS and Alternative Estimators</h2>
+<p>OLS is one of many possible estimators for <span class="math inline">\(\boldsymbol{\beta}\)</span> :</p>
+<ul>
+<li>Should we weight some datapoints more than others?</li>
+<li>What is the right form for the cost function?</li>
+<li>Should we reduce influence of outliers?</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>I want to talk about efficiency, but first, let me remind you that there are many possible estimators out there.</li>
+<li>OLS is simple and elegant, but we should remember that it’s just one choice out of many</li>
+<li>If you take a step back and think about how you would design an algorithm to estimate the true betas, here are a few things you might consider.</li>
+<li>Should we weight some datapoints more than others - maybe those that appear least noisy…</li>
+<li>If you think about these choices, you could write different algorithms to take the place of ols - is that a good idea?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="understanding-efficiency" class="slide level2">
+<h2>Understanding Efficiency</h2>
+<p>Desirable estimator properties</p>
+<ul>
+<li>Unbiased: <span class="math inline">\(\E[\boldsymbol{\hat \beta}] = \E[\boldsymbol{ \beta}]\)</span></li>
+<li>Efficient: <span class="math inline">\(\V[\boldsymbol{\hat \beta}]\)</span> is small.</li>
+</ul>
+<p>Efficiency: More precision with less data</p>
+<ul>
+<li>Is the OLS estimator efficient?</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>When you’re comparing estimators, it’s good to go back and review the properties that we want estimators to have. Here’s two…</li>
+<li>One is being unbiased, and we know ols is unbiased</li>
+<li>Another is what Statisticians call efficiency. An estimator is efficient if it has low variance.</li>
+<li>That really means efficient with data, getting more precision with less data.</li>
+<li>your standard errors will be small, you’ll have good precision, your hypothesis tests will be powerful…</li>
+<li>Is the OLS estimator efficient? There are some famous theorems about this. I’m going to give you a very brief overview of two.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<div title="The Gauss-Markov Theorem">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The Gauss-Markov Theorem</strong></p>
+</div>
+<div class="callout-content">
+<p>Under CLM 1-4, out of all estimators that are 1. Unbiased 2. Linear (of the form <span class="math inline">\(\mathbb{M} \boldsymbol{Y}\)</span> for some random matrix <span class="math inline">\(\mathbb{M}\)</span> )</p>
+<p>OLS has the minimum variance.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Remember the phrase: OLS is BLUE</p>
+<ul>
+<li>Best</li>
+<li>Linear</li>
+<li>Unbiased</li>
+<li>Estimator</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>First, we have the famous Gauss-Markov theorem. These guys looked at all estimators that are unbiased and also linear, meaning they can be written as some matrix times</li>
+<li>You need the first 4 CLM assumptions for this to be true, including homoskedasticity. Without homoskedasticity, a different algorithm, called weighted least squares is more efficient.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<div title="The Rao-Blackwell Theorem">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The Rao-Blackwell Theorem</strong></p>
+</div>
+<div class="callout-content">
+<p>Under CLM 1-5, out of all estimators that are 1. Unbiased</p>
+<p>OLS has the minimum variance.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>There’s also the Rao-Blackwell theorem, that says that under all 5 CLM assumptions, if you look at unbiased estimators, ols has the minimum variance.</li>
+<li>You can take these as evidence that ols is efficient. As a data scientist, you probably don’t need more reasons to use ols, you just use it. But this is a peek at how statisticians think about estimators that can help you as you learn more statistics.</li>
+<li></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="reading-assignment" class="title-slide slide level1 center">
+<h1>Reading Assignment</h1>
+
+</section>
+<section id="reading-assignment-1" class="slide level2">
+<h2>Reading Assignment</h2>
+<p>Make sure you remember the material in section 5.2 through page 189.</p>
+<p>Then read the last paragraph of page 189 through 191.</p>
+</section></section>
+<section>
+<section id="maximum-likelihood-estimation-of-the-clm" class="title-slide slide level1 center">
+<h1>Maximum Likelihood Estimation of the CLM</h1>
+
+</section>
+<section id="likelihood" class="slide level2">
+<h2>Likelihood</h2>
+<p><strong>Likelihood:</strong> A function that takes values for a model’s parameter’s as inputs, and yields the probability of the (fixed) data as output.</p>
+</section>
+<section id="maximum-likelihood-estimators" class="slide level2">
+<h2>Maximum Likelihood Estimators</h2>
+<p><strong>If the model is true:</strong> - Consistent and asymptotically efficient.</p>
+<p><strong>If the model is not true:</strong> - Consistently estimates the parameters that minimize KL divergence.</p>
+</section>
+<section id="maximum-likelihood-estimation-of-the-clm-1" class="slide level2">
+<h2>Maximum Likelihood Estimation of the CLM</h2>
+</section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<p><span class="math display">\[\begin{align*}
+\text{Data } \boldsymbol{Y}, \X.  &amp;\text{ Find ML estimator for CLM}\\
+L(b,s |  \boldsymbol{Y}, \X) &amp;= \prod_{i=1}^n \phi\big( Y_i, (\boldsymbol{X_ib},s^2) \big) \\
+\ln(L) &amp;= \ln \prod_{i=1}^n \phi\big( ... \big) = \sum_{i=1}^n \ln \phi( ...) \\
+&amp;= \sum_{i=1}^n ln  \frac{1}{s \sqrt{2 \pi}}e^{\frac{-(Y_i - \boldsymbol{X_ib})^2}{2s^2}} \\
+&amp;= \sum_{i=1}^n \Bigg[ ln  \frac{1}{s \sqrt{2 \pi}} - \frac{(Y_i - \boldsymbol{X_ib})^2}{2s^2} \Bigg] \\
+\text{argmin} \ln(L) &amp;= \text{argmin} \sum_{i=1}^n (Y_i - \boldsymbol{X_ib})^2. \qquad \boldsymbol{\beta_{ML} }= \boldsymbol{\beta_{OLS}}
+\end{align*}\]</span></p>
+<aside class="notes">
+<ul>
+<li>Conclusion: We get exactly the ols estimator. In this case, the ML estimator and the ols estimator are the same. This is another way that you can motivate the ols algorithm.</li>
+<li>By the way, remember one cool fact about ML estimators. even if the model is not true, ML will consistently find the model that’s as close as possible to the true distribution, where close is defined as KL-divergence. So that means that even if the CLM does hold, we’re estimating betas that give as good as approximation as possible.</li>
+<li>We usually prefer to use as few assumptions as possible, so this isn’t our favorite way to think about ols. But we want you to see it from this perspective, so you can connect it to the models you’ll see in ML or in your advanced statistics courses.</li>
+<li></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="can-we-believe-the-clm" class="title-slide slide level1 center">
+<h1>Can We Believe the CLM?</h1>
+
+</section>
+<section id="section-7" class="slide level2">
+<h2></h2>
+<p><em>All models are wrong, but some are useful.</em> George Box</p>
+<aside class="notes">
+<ul>
+<li>If we assume the CLM, then we get a lot of great statistical guarantees - guarantees that let us work with small samples.</li>
+<li>But assumptions are not true because we want them to be true.</li>
+<li>the CLM in particular is a parametric model - a very strict set of assumptions. Can we really believe it?</li>
+<li>Clearly the textbook authors are skeptics. The repeatedly say that you can’t take the CLM literally.</li>
+<li>Alex and I think they make a good point. Of course you should be skeptical of any model. No model is actually TRUE - it’s a model. What’s important is to examine the model and see if it reminds us of the real world, or if we can find aspects of the real world that run counter to model assumptions</li>
+<li>But when you see strong parametric assumptions, there’s not enough flexibility in the model to account for the messiness we see in the world.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-clm-assumptions" class="slide level2">
+<h2>The CLM Assumptions</h2>
+<ol type="1">
+<li>I.I.D. Data</li>
+<li>No Perfect Collinearity</li>
+<li>Linear Conditional Expectation</li>
+<li>Homoskedastic Errors</li>
+<li>Normally Distributed Errors</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>So we think that you should indeed be skeptical of the CLM. But it’s important to qualify that statement. First, we shouldn’t lump the entire CLM in together</li>
+<li>We provided 5 assumptions. and as you go from top to bottom, adding one at a time, the model gets more restrictive</li>
+<li>Remember that some guarantees require all 5 assumptions, and some don’t. unbiased coefficients only require 1-3. and you can usually transform your data so that the linear conditional expectation assumption looks plausible.</li>
+<li>t-Tests require all 5 assumptions, and we think that you should definitely be more skeptical about whether they’re valid.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clm-as-a-maximum-likelihood-estimator" class="slide level2">
+<h2>CLM as a Maximum Likelihood Estimator</h2>
+<div title="OLS when the CLM is false">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>OLS when the CLM is false</strong></p>
+</div>
+<div class="callout-content">
+<p>The OLS estimator is consistent for the parameter values that minimize KL divergence between the true distribution and the model distribution.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Another important point that the authors make, is that even if the CLM is not true, it’s a max likelihood estimator.</li>
+<li>So that means that it consistently estimates a distribution that’s as close to the true distribution as possible.</li>
+<li>So even if the CLM is false, OLS doesn’t totally give up. It still tries to get as close as possible. Of course, we need a somewhat large n for this to be meaningful.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="can-we-believe-the-clm-1" class="slide level2">
+<h2>Can We Believe the CLM?</h2>
+<p>All models are wrong; they are, at best, approximations of reality. But, even without assuming that they are exactly true, when employed and interpreted correctly, they can nonetheless be useful for obtaining estimates of features of probability distributions.</p>
+<ul>
+<li>Aronow and Miller</li>
+</ul>
+</section></section>
+<section>
+<section id="assessing-the-clm-assumptions---software-demo" class="title-slide slide level1 center">
+<h1>Assessing the CLM assumptions - Software Demo</h1>
+
+</section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<p>This one will be a screenshare using R Studio</p>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: true,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.43">
+
+  <meta name="author" content="Paul Laskowski and Alex Hughes">
+  <title>Week 2</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Week 2</h1>
+  <p class="subtitle">Introduction to Probability</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Paul Laskowski and Alex Hughes 
+</div>
+        <p class="quarto-title-affiliation">
+            UC Berkeley, School of Information
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+
+</section>
+
+<section>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
+
+</section>
+<section id="plan-for-the-week" class="slide level2">
+<h2>Plan for the Week</h2>
+<p>Two sections:</p>
+<ol type="1">
+<li>Defining random variables</li>
+<li>Joint distributions</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>This is a foundation week.</li>
+<li>Random Variables are building blocks of statistical models.</li>
+<li>Thinking of the analogy with Jazz music, you’ll want your understanding of them to be rock solid.</li>
+<li>So we’re going to be very mathematically precise in defining what these are.</li>
+<li>We’ll have three sections…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="plan-for-the-week-cont." class="slide level2">
+<h2>Plan for the Week (cont.)</h2>
+<p>At the end of this week, you will be able to:</p>
+<ul>
+<li>Understand how random variables fit as a part of statistical modeling</li>
+<li>Apply the mathematical tools we have for characterizing random variables</li>
+<li>Solve problems by applying properties of expectation and variance</li>
+</ul>
+</section></section>
+<section>
+<section id="part-1-introducing-random-variables" class="title-slide slide level1 center">
+<h1>Part 1: Introducing Random Variables</h1>
+
+</section>
+<section id="what-is-a-random-variable" class="slide level2">
+<h2>What Is a Random Variable?</h2>
+<p>Intuition:</p>
+<ul>
+<li>A model for where the numbers in data come from.</li>
+<li>Like a regular variable but with uncertainty about its value. </li>
+</ul>
+<div title="Random Variable">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Random Variable</strong></p>
+</div>
+<div class="callout-content">
+<p>Given probability space <span class="math inline">\((\Omega, S, P)\)</span>, a <em>random variable</em> is a measurable function from <span class="math inline">\(\Omega\)</span> to <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>A Random Variable is the fundamental building block of a statistical model, but what is it?</li>
+<li>Intuitively, we’re used to variables in our datasets. They have one value. But as statisticians we need a way to model variables acknowledging that different values are possible</li>
+<li>Finally, we have the formal definition that you’ll see in your textbook. A random variable is a function from a probability space to R. This one, unfortunately, leaves students scratching their heads. It doesn’t seem to capture the intuition.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-a-random-variable-formally" class="slide level2">
+<h2>What Is a Random Variable (Formally)?</h2>
+<p><embed data-src="figures/roaster1.pdf"></p>
+<aside class="notes">
+<ul>
+<li>I’m going to try to make the formal definition make more sense. And I’ll do it by telling a very stylized story about how a variable gets the value it has.</li>
+<li>This story is about something I do in my spare time, which is roast coffee. It has three characters.</li>
+<li>The first character is my coffee roaster. This is in the actual real world. It has some state: the atoms are moving with some velocity, the proteins in the beans are in some configuration - hopefully the proteins aren’t burnt.</li>
+<li>Because I’m serious about my roasting, I want some data. So the second character is this thermometer. It represents measurement or observation. Think of the state of the roaster as an input to the thermometer</li>
+<li>The final character is the output of the thermometer: a regular old variable. 160 degrees.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-a-random-variable-formally-1" class="slide level2">
+<h2>What Is a Random Variable (Formally)?</h2>
+<p><embed data-src="figures/roaster2.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Now as statisticians, we think that there must be some randomness in that number. In other words, if you could magically rewind time and start roasting again, you might get a different number. You might not actually believe this - if we could recreate the start of the experiment EXACTLY, down to the location of atoms, maybe you think you’d get the same number. But at least as statisticians, we want a model for how this number was created that involves randomness. Here’s how we do it…</li>
+<li>First, we need a probability space. Each outcome in this space represents one possible state of my coffee roaster. There is a probability function that tells you how probable different states are.</li>
+<li>Next, we have the random variable. this is like the thermometer, but it doesn’t give us a single number. it’s a function that takes in any outcome - any state of the coffee roaster.</li>
+<li>Finally, the last character is the real numbers. The random variable is a function from omega to the reals.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-a-random-variable-formally-2" class="slide level2">
+<h2>What Is a Random Variable (Formally)?</h2>
+<p><embed data-src="figures/roaster3.pdf"></p>
+<aside class="notes">
+<ul>
+<li>That’s the setup. Let’s see what happens when the experiment runs.</li>
+<li>First nature reaches in and selects one possible outcome. remember this represents one possible arrangement of all the atoms in my roaster.</li>
+<li>Use Annotation, label outcome w, draw arrow to T, draw another arrow to 160.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="probabilities-of-real-numbers" class="slide level2">
+<h2>Probabilities of Real Numbers</h2>
+
+<img data-src="figures/prob_space.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>Let me give you one more way to think about random variables.</li>
+<li>Here is our outcome space and the real number line. The RV maps each outcome to a real number.</li>
+<li>Remember that we have a probability measure on Omega. It turns out that the RV creates a new probability measure on R. Here’s how: For any Set S of real numbers…</li>
+<li>If you know measure theory, you know that I wasn’t 100</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reading-assignment" class="slide level2">
+<h2>Reading Assignment</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.2.0–1.2.1.</p>
+</section>
+<section id="functions-of-a-random-variable" class="slide level2">
+<h2>Functions of a Random Variable</h2>
+<p><embed data-src="figures/roaster1.pdf"></p>
+<ul>
+<li>Random variable <span class="math inline">\(T\)</span> represents temperature in Fahrenheit, but you need Celsius.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Random variables are building blocks. we don’t just create them, we analyze them, which means we put them into equations and apply operations to them. We create new random variables, and we create other types of mathematical objects.</li>
+<li>Let’s go over three basic examples, and we’ll develop some vocabulary that will help us stay organized in the future.<br>
+</li>
+<li>We have the temperature in Fahrenheit, but need celsius</li>
+<li><span class="math inline">\(f(t) = \frac{5}{9}(t-32)\)</span></li>
+<li>We take the random variable T and put it into f,</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="creating-events-from-a-random-variable" class="slide level2">
+<h2>Creating Events from a Random Variable</h2>
+<p><embed data-src="figures/roaster1.pdf"></p>
+<p>You want to know whether the temperature is below 150.</p>
+<aside class="notes">
+<ul>
+<li>You want to know if the temperature is below 150. you write down T &lt; 150. what kind of thing is this? It’s an event! Let’s draw the picture…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="operators-applied-to-a-random-variable" class="slide level2">
+<h2>Operators Applied to a Random Variable</h2>
+<p><embed data-src="figures/roaster1.pdf"></p>
+<p>You want to know the minimum possible temperature.</p>
+<aside class="notes">
+<ul>
+<li>you write down min</li>
+<li><span class="math inline">\(min[T] = min_{\omega \in \Omega} T(\omega)\)</span></li>
+<li>min is a function, but it’s not a function from R to R like we had earlier. it takes any random variable as input and outputs a number. We have a special name for this: Operator. We use square brackets for operators</li>
+<li><pre><code>The min is not a very useful operator, but soon we'll see a very</code></pre>
+important operator, the expectation, which is like the mean for random variables.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="learnosity-roaster-temperature" class="slide level2">
+<h2>Learnosity: Roaster Temperature</h2>
+<p><embed data-src="figures/roaster1.pdf"></p>
+<p>Suppose <span class="math inline">\(T\)</span> is a random variable representing the temperature of a roaster.</p>
+<p>What kind of object is each of the following?</p>
+<ol type="1">
+<li><span class="math inline">\(g(T)\)</span> where</li>
+</ol>
+<p><span class="math inline">\(g(t) = \begin{cases} 1, &amp; t&lt;150\\ 0,
+    &amp;\text{otherwise} \end{cases}\)</span> . Answer: random variable</p>
+<ol start="2" type="1">
+<li><p><span class="math inline">\(R\)</span> such that <span class="math inline">\(R[T] = P(T&gt;150)\)</span> . Answer: operator</p></li>
+<li><p><span class="math inline">\(T &lt; (5/9)(T-32)\)</span> . Answer: event</p></li>
+</ol>
+<aside class="notes">
+<ul>
+<li>Three questions, each with three MC answers: (Event, Random Variable, Operator).</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reading-assignment-1" class="slide level2">
+<h2>Reading Assignment</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.2.2.</p>
+</section>
+<section id="introducing-discrete-random-variables" class="slide level2">
+<h2>Introducing Discrete Random Variables</h2>
+<p>A random variable <span class="math inline">\(X\)</span> is <em>discrete</em> if its range,</p>
+<p><span class="math inline">\(X(\Omega) \in \R\)</span> , is a countable set.</p>
+<ul>
+<li><span class="math inline">\(X(\Omega)\)</span> can be finite. - A roll of a die: <span class="math inline">\(\{1,2,3,4,5,6\}\)</span></li>
+<li><span class="math inline">\(X(\Omega)\)</span> can be countably infinite. - Edits to an article: <span class="math inline">\(\{0,1,2,3...\}\)</span></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Random variables are quite flexible objects.</li>
+<li>We’ve been using the full definition based on a probability measure, and that’s a powerful idea - it can model many different things, but it’s not the easiest definition to work with.</li>
+<li>Luckily, as statisticians, we usually don’t need all that power. That’s because the random variables we care about normally belong to two special classes: discrete and continuous.</li>
+<li>You might guess the range is a discrete set in</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-bernoulli-distribution" class="slide level2">
+<h2>The Bernoulli Distribution</h2>
+<p>A Bernoulli trial is a simple (but important) discrete random variable.</p>
+<ul>
+<li>It can represent: - a coin flip</li>
+<li>a decision to buy or not to buy</li>
+<li>success or failure of experiment</li>
+<li>Convention: 1 represents success, 0 failure</li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span class="math inline">\(\Omega = {H,T}\)</span></li>
+<li><span class="math inline">\(P(H) = p\)</span></li>
+<li>Let</li>
+<li><span class="math inline">\(P(X=1) = p\)</span></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-probability-mass-function-pmf" class="slide level2">
+<h2>The Probability Mass Function (PMF)</h2>
+<p>A function that gives the probability that a discrete random variable equals each number in <span class="math inline">\(\R\)</span> - <span class="math inline">\(f_X(x) = P(X = x)\)</span></p>
+<p><embed data-src="figures/axes.pdf"></p>
+<aside class="notes">
+<ul>
+<li>sketch the probability distribution for the Bernoulli trial</li>
+<li>write out pdf with cases</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="key-properties-of-the-pmf" class="slide level2">
+<h2>Key Properties of the PMF</h2>
+<div title="Theorem">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Theorem</strong></p>
+</div>
+<div class="callout-content">
+<p>For a discrete random variable <span class="math inline">\(X\)</span> with pmf <span class="math inline">\(f\)</span>,</p>
+<ol type="1">
+<li>For all <span class="math inline">\(x \in \R\)</span> , <span class="math inline">\(f(x) \geq 0\)</span> .</li>
+<li><span class="math inline">\(\sum_{x \in X(\Omega)} f(x) = 1\)</span> .</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li><span class="math inline">\(f(x) = P(X=x)\)</span></li>
+<li><span class="math inline">\(\sum_{x \in X(\Omega)} P(X=x) = P( \cup_{x \in X(\Omega)}(x = X) ) = P(x \in X(\Omega)) = 1\)</span></li>
+<li>Hopefully you find these intuitive. The values of</li>
+<li>So not surprising, but these are great sanity checks. My advice is that when you need to answer a question with a pmf, you check these two things.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="computing-other-event-probabilities-from-the-pmf" class="slide level2">
+<h2>Computing Other Event Probabilities from the PMF</h2>
+<div title="Theorem: The PMF fully characterizes a discrete RV">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Theorem: The PMF fully characterizes a discrete RV</strong></p>
+</div>
+<div class="callout-content">
+<p>For a discrete random variable <span class="math inline">\(X\)</span> with pmf <span class="math inline">\(f\)</span>, if <span class="math inline">\(D \subseteq \R\)</span>, <span class="math inline">\(P(X \in D) = \sum_{x \in X(\Omega) \cap D } f(x).\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<p><embed data-src="figures/pmf_to_events.pdf"></p>
+<p>Take-away: The pmf contains <em>all</em> the information about the probability distribution of <span class="math inline">\(X\)</span> .</p>
+</section>
+<section id="reading-assignment-2" class="slide level2">
+<h2>Reading Assignment</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.2.3.</p>
+</section>
+<section id="the-cumulative-distribution-function" class="slide level2">
+<h2>The Cumulative Distribution Function</h2>
+
+<img data-src="figures/cdf_axes.png" class="r-stretch"></section>
+<section id="the-cumulative-distribution-function-solution" class="slide level2">
+<h2>The Cumulative Distribution Function (Solution)</h2>
+<p><embed data-src="figures/cdf_axes_key.pdf"></p>
+<aside class="notes">
+<ul>
+<li>You already know that a PMF fully describes the distribution of a discrete random variable.</li>
+<li>There is another tool that’s really important for describing distributions, and that’s the CDF</li>
+<li>I have to admit, when you’re learning, the CDF is less intuitive than the PMF. but there is one big advantage.</li>
+<li>The CDF completely specifies the distribution of ANY RV, not just a discrete one. It doesn’t place any assumptions on the random variable. so we like to write theorems that use the CDF, because those are as general as possible.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="motivation-for-continuous-random-variables" class="slide level2">
+<h2>Motivation for Continuous Random Variables</h2>
+
+<img data-src="figures/squid.jpg" class="r-stretch"><aside class="notes">
+<ul>
+<li>Let’s say you’re studying a rare species of giant squid. I ask you, what’s the probability that a specimen is exactly 6 meters long?</li>
+<li>You might estimate that maybe 20</li>
+<li>But my question is what’s the probability that a squid is exactly 6 meters.</li>
+<li>To within 1 mm? to within 1 nanometer?</li>
+<li>You can quickly see that the probability of 6 meters with zero error is actually
+<ol start="0" type="1">
+<li></li>
+</ol></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="motivation-for-continuous-random-variables-1" class="slide level2">
+<h2>Motivation for Continuous Random Variables</h2>
+<aside class="notes">
+<ul>
+<li>There are a lot of other variables that also take on a continuum of values.</li>
+<li>force until a piece of equipment breaks,</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="motivation-for-continuous-random-variables-2" class="slide level2">
+<h2>Motivation for Continuous Random Variables</h2>
+<aside class="notes">
+<ul>
+<li>time between customer visits</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="motivation-for-continuous-random-variables-3" class="slide level2">
+<h2>Motivation for Continuous Random Variables</h2>
+<aside class="notes">
+<ul>
+<li>temperature of a coffee roaster…</li>
+<li>How do we model these situations as statisticians?</li>
+<li>We could pretend that they are discrete. Or we could focus on what we measure with our instrument. Since we have finite precision, the set of numbers we can write down is countable. But that might feel like cheating, and in any cse, it actually makes the math really complicated. Instead, we prefer to use what we call continuous random variables..</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-probability-density-function" class="slide level2">
+<h2>The Probability Density Function</h2>
+<p><embed data-src="figures/density.pdf"></p>
+<aside class="notes">
+<ul>
+<li>The core idea behind continuous random variables is a probability density function</li>
+<li>The purpose is to show how probability is spread out over the range of possible values</li>
+<li>The probability of any one point is zero</li>
+<li>But if you have a range, what you do is you integrate under the density to get the probability</li>
+<li>Draw interval and indicate area….</li>
+<li>This gives us a principled way to talk about probabilities over a continuum of values</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reading-continuous-random-variables" class="slide level2">
+<h2>Reading: Continuous Random Variables</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.2.4.</p>
+</section>
+<section id="continuous-random-variables" class="slide level2">
+<h2>Continuous Random Variables</h2>
+<div title="Definition">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>A random variable <span class="math inline">\(X\)</span> is <em>continuous</em> if there exists a non-negative function <span class="math inline">\(f:\R \rightarrow \R\)</span> such that the cdf of <span class="math inline">\(X\)</span> is <span class="math inline">\(F(x) = \int_{-\infty}^x f(u) du \text{, for all } x \in \R\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<p><embed data-src="figures/density.pdf"></p>
+<aside class="notes">
+<ul>
+<li>How do we define a continuous random variable? It’s a random variable that has a probability density function</li>
+<li>We know that every random variable has a CDF. for a continuous random variable, the pdf determines the cdf. How do you get the CDF from the pdf?</li>
+<li>The CDF at some point x, is the probability the RV is less than or equal to x.</li>
+<li>How do we get that? we integrate from -infinity to x</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="characterizing-continuous-random-variables" class="slide level2">
+<h2>Characterizing Continuous Random Variables</h2>
+<div title="Deriving the PDF from the CDF">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Deriving the PDF from the CDF</strong></p>
+</div>
+<div class="callout-content">
+<p>For a continuous random variable with cdf <span class="math inline">\(F\)</span>, the probability density function of <span class="math inline">\(X\)</span> is <span class="math inline">\(f(x) = \frac{dF(u)}{du} \Bigg|_{u=x} \text{, for all } x \in \R\)</span></p>
+</div>
+</div>
+</div>
+</div>
+
+<img data-src="figures/cdf.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>If you take an integral to get from the pdf to CDF, how do you go the other way?</li>
+<li>This is really just the fundamental theorem of calculus: take a derivative.</li>
+<li>think about the the cdf at some point x, this is</li>
+<li>Then move to the right by some tiny dx. the cdf now represents</li>
+<li>So the difference is just</li>
+<li>That’s how quickly we’re adding in probability. If we divide by the width of the rectangle, we get the slope, and that’s exactly the probability density.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="characterizing-continuous-random-variables-cont." class="slide level2">
+<h2>Characterizing Continuous Random Variables (cont.)</h2>
+<div title="Properties of Probability Density Functions">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Properties of Probability Density Functions</strong></p>
+</div>
+<div class="callout-content">
+<p>For a continuous random variable <span class="math inline">\(X\)</span> with pdf <span class="math inline">\(f\)</span>, 1. For all <span class="math inline">\(x\in \R\)</span> , <span class="math inline">\(f(x) \geq 0\)</span> . 2. <span class="math inline">\(\int_{-\infty}^\infty f(x)dx = 1\)</span> .</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Here are two important properties of pdfs.</li>
+<li>Use these as sanity checks. when you write down a pdf, see if these properties hold.</li>
+<li>If they don’t, you’ve done something wrong.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="support" class="slide level2">
+<h2>Support</h2>
+<div title="Definition">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>For a random variable <span class="math inline">\(X\)</span> with pmf or pdf <span class="math inline">\(f\)</span>, the <em>support</em> of <span class="math inline">\(X\)</span> is <span class="math inline">\(\text{Supp}[X] = \{x \in \R : f(x) &gt; 0 \}\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>This will be helpful when we discuss continuous distributions. we’ll usually assume we’re in the support, because we don’t want to divide by zero.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="uniform-random-variables" class="slide level2">
+<h2>Uniform Random Variables</h2>
+<p><strong>Note: This is a placeholder for a video that we’re going to re-use from:</strong> Use the old video 3.9 Uniform Random Variables - only the start through 6.12, before I start talking about expectation.</p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p>Use the old video 3.10 The Normal Distribution</p>
+</section>
+<section id="the-normal-distribution" class="slide level2">
+<h2>The Normal Distribution</h2>
+<p><strong>The most important distribution in statistics</strong> - The variables measured don’t always come directly from a normal distribution - Human height has a close-to-normal distribution–so do anthropometric measurements on fossils, reaction times in psychological experiments, etc. - Most variables deviate from a normal distribution - We’ll see how the normal distribution pops up as a consequence of basic mathematical laws - A famous theorem is the <strong>Central Limit Theorem</strong> . Many of our statistical tests depend on this theorem, and it tells us when certain distributions will approach a normal distribution</p>
+</section>
+<section id="the-normal-distribution-equation" class="slide level2">
+<h2>The Normal Distribution equation</h2>
+<p>A continuous rv <span class="math inline">\(X\)</span> is said to have a <strong>normal distribution</strong> with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> (or <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> ), where <span class="math inline">\(-\infty &lt; \mu &lt; \infty\)</span> and <span class="math inline">\(0 &lt; \sigma\)</span> , if the pdf of <span class="math inline">\(X\)</span> is:</p>
+<p><span class="math display">\[\begin{equation}
+     f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}}
+     e^{-(x-\mu)^{2}/(2\sigma^{2})},
+     -\infty &lt; x &lt; \infty
+  \end{equation}\]</span></p>
+<p>This is the equation for the density function of a normal distribution</p>
+</section>
+<section id="the-normal-distribution-equation-1" class="slide level2">
+<h2>The Normal Distribution equation</h2>
+<p><span class="math display">\[\begin{equation}
+     f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}}
+     e^{-(x-\mu)^{2}/(2\sigma^{2})},
+     -\infty &lt; x &lt; \infty
+  \end{equation}\]</span> - There are two parameters, <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> - There is an entire family of normal distributions - It can be shown that <span class="math inline">\(E(x)=\mu\)</span> and <span class="math inline">\(V(X)=\sigma^{2}\)</span> , so the parameters are the mean and the standard deviation of <span class="math inline">\(X\)</span> - The statement that <span class="math inline">\(X\)</span> is normally distributed with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> is often abbreviated <span class="math inline">\(X \sim N(\mu, \sigma^{2})\)</span></p>
+</section>
+<section id="normal-curve-examples" class="slide level2">
+<h2>Normal Curve Examples</h2>
+<p><img data-src="figures/normal_curve.png"> - These are normal curves with different <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> - Each curve is symmetric around its mean - <span class="math inline">\(\mu\)</span> is both the mean and the median, changing it moves the curve left or right - <span class="math inline">\(\sigma\)</span> is also called the scale parameter, since it stretches the curve horizontally</p>
+</section>
+<section id="the-standard-normal-distribution" class="slide level2">
+<h2>The Standard Normal Distribution</h2>
+<ul>
+<li>Often, we need to select one representative distribution out of the normal family</li>
+<li>Typically, we choose <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span> - This is called the <em>standard normal distribution</em> , also called a <em>z-distribution</em></li>
+<li>It is also denoted by a capital Z</li>
+<li>We can write the pdf of Z:</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+      f(z; 0, 1)= \frac{1}{\sqrt{2\pi}}e^{-z^{2}/2},
+      -\infty &lt; X &lt; \infty
+  \end{equation}\]</span> - The cumulative distribution of Z is often written as <span class="math inline">\(\phi(z)\)</span></p>
+</section>
+<section id="standardizing-a-normal-variable" class="slide level2">
+<h2>Standardizing a Normal Variable</h2>
+<ul>
+<li>Suppose we have a normal variable that is not standard normal <span class="math inline">\(X \sim N(\mu, \sigma^{2})\)</span> - We want to simplify our computations</li>
+<li>We can compute the random variable <span class="math inline">\((X-\mu) / \sigma\)</span> - This new variable has a standard normal distribution</li>
+<li>This can make it easier to perform tests using the variable</li>
+<li>Any probabilities involving <span class="math inline">\(X\)</span> can be expressed in terms of areas under the z-distribution</li>
+</ul>
+</section>
+<section id="standardizing-a-normal-variable-cont." class="slide level2">
+<h2>Standardizing a Normal Variable (cont.)</h2>
+<p>These are easy to compute in statistical software</p>
+
+<img data-src="figures/standardizing_normal_variable.png" class="r-stretch"></section>
+<section id="properties-of-the-normal-distribution" class="slide level2">
+<h2>Properties of the Normal Distribution</h2>
+
+<img data-src="figures/properties_normal_distribution.png" class="r-stretch"><p>This picture shows certain areas under a normal curve</p>
+<ul>
+<li>68 % of the area is within 1 standard deviation of the mean</li>
+<li>95 % is within 2 standard deviations</li>
+<li>99.7 % is within 3 standard deviations</li>
+</ul>
+</section>
+<section id="properties-of-the-normal-distribution-cont." class="slide level2">
+<h2>Properties of the Normal Distribution (cont.)</h2>
+
+</section></section>
+<section>
+<section id="part-2-joint-distributions" class="title-slide slide level1 center">
+<h1>Part 2: Joint Distributions</h1>
+
+</section>
+<section id="introducing-joint-distributions" class="slide level2">
+<h2>Introducing Joint Distributions</h2>
+<p><embed data-src="figures/sample_space.pdf"></p>
+<aside class="notes">
+<ul>
+<li><ul>
+<li>Suppose that you’re consulting for a car dealer to build a statistical model of a customer – ``Will <em>this</em> customer buy a car?</li>
+</ul></li>
+<li>You begin by defining a random variable <span class="math inline">\(B\)</span> , that takes the value <span class="math inline">\(B=1\)</span> if the customer buys, and <span class="math inline">\(B=0\)</span> if they don’t.</li>
+<li>Without any additional informaiton, your best guess is no better than the historical average sales – and the dealer already has that! You need to do <em>better</em> to be valuable. - Number of test drives</li>
+<li>Size of family</li>
+<li>No problem! Just make new random variables!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="introducing-joint-distributions-1" class="slide level2">
+<h2>Introducing Joint Distributions</h2>
+<p><embed data-src="figures/sample_space.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Because we have this separate probabiliity space, it’s easy to define a new random variable D, that maps from</li>
+<li>One way to look at this is we have Probability Measure P over the sample space. Through these random variables, you could show that this induces a probability measure over</li>
+<li>We’re going to spend a lot of time working with sets of random variables to do a variety of useful things. But right now, we’re really starting with just the basics - what are ways of defining and describing joint distributions?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reading-assignment-3" class="slide level2">
+<h2>Reading Assignment</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.3–1.3.1.</p>
+</section>
+<section id="equality-of-random-variables" class="slide level2">
+<h2>Equality of Random Variables</h2>
+<div title="Equality of random variables">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Equality of random variables</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>Let $X$ and $Y$ be random variables. Then, $X = Y$ if, for all
+$\omega \in \Omega, X(\omega) = Y(\omega)$.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Don’t assume <span class="math inline">\(X=Y\)</span> just because:</p>
+<ol type="1">
+<li><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> have the same distribution - <span class="math inline">\(X=1\)</span> if Paul’s coin lands heads, 0 otherwise</li>
+</ol>
+<ul>
+<li><span class="math inline">\(Y=1\)</span> if Alex’s coin lands heads, 0 otherwise</li>
+<li><span class="math inline">\(f_X = f_Y\)</span> but <span class="math inline">\(X \neq Y\)</span> </li>
+</ul>
+<ol start="2" type="1">
+<li><span class="math inline">\(P(X=Y) = 1\)</span> - <span class="math inline">\(X=1\)</span> if Paul climbs Half Dome, 0 otherwise</li>
+</ol>
+<ul>
+<li><span class="math inline">\(Y=1\)</span> if Alex climbs El Capitan, 0 otherwise</li>
+<li><span class="math inline">\(P(X=Y) = 1\)</span> but <span class="math inline">\(X \neq Y\)</span></li>
+</ul>
+<aside class="notes">
+<ul>
+<li></li>
+<li>Before the book gets to joint distributions, it starts with a bit of a tangent - when are two random variables equal?</li>
+<li></li>
+<li>This is really a warning. It’s easy to be careless and write down</li>
+<li>For example, two variables are not equal just because they have the same distribution.</li>
+<li>Say X is a Bernoulli representing fair coin number 1, and Y is a Bernoulli representing fair coin number 2. They have the same distribution, but they are not equal because for some outcomes one will be 1 and one will be 0.</li>
+<li>EVEN if</li>
+<li>Let’s say you and I get identical contracts to go hunt for a new specimen of giant squid. But I get an extra contract that said I get a million dollars extra if the squid we discover is exactly 6 meters. the probability that that happens is zero, but as a technical matter, the random variables are not equal.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-joint-pmf-and-car-dealers" class="slide level2">
+<h2>The Joint PMF and Car Dealers</h2>
+<p><span class="math inline">\(f(b,d) = P(B=b, D=d)\)</span></p>
+<aside class="notes">
+<ul>
+<li>Let’s go back to our car dealer example. Remember that B represents whether the customer buys and D the number of cars the customer test drives</li>
+<li>The joint pmf is a function that tells us the probability of every possible combination of B and D.</li>
+<li>If we have just a few outcomes, it can be convenient to list the probabilities in a table</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-joint-pmf-and-car-dealers-cont." class="slide level2">
+<h2>The Joint PMF and Car Dealers (cont.)</h2>
+<p>% \alex{Does 2U course services have a nice 3d set of axes with a% transparent background?} <embed data-src="figures/joint_axes.pdf"></p>
+<aside class="notes">
+<ul>
+<li>Here’s one example of what that table might look like.</li>
+<li>What does the pmf look like? if this is the B-D plane, the pmf is zero almost everywhere.</li>
+<li>I can mark a set of points, which are the outcome set, where there is a spike that comes out of the plane. For example, there is some probability that the customer buys after 2 test drives.</li>
+<li>This type of graph is not very helpful to use, I just want you to get the picture in your mind</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-joint-cumulative-probability-function" class="slide level2">
+<h2>The Joint Cumulative Probability Function</h2>
+<p><span class="math inline">\(F(b,d) = P(B \leq b, D \leq d)\)</span> - Recall that <span class="math inline">\(F_{X}(x) = \int_{-\infty}^{x}f(x)\)</span> relates the CDF and PDF for the single variable case. - In a similar way: <span class="math inline">\(F_{Y,X} = \int_{-\infty}^{x} \int_{-\infty}^{y}f(y,x) dy dx\)</span> - This can be hard to work with but can describe <em>any</em> random variables.</p>
+<aside class="notes">
+<ul>
+<li>Just like for one random variable, we can define a cumulative probability function for 2 or more random variables.</li>
+<li>For almost everything, this is an inconvenient way to work with random variables</li>
+<li>There is one giant advantage - this works to describe any random variables, discrete, continuous, or mixed.</li>
+<li>So probability theorists want to prove things using CDFs because that makes the results universal.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="learnosity-the-probability-mass-function" class="slide level2">
+<h2>Learnosity: The Probability Mass Function</h2>
+<p>Suppose that <span class="math inline">\(X_1\)</span> is a Bernoulli random variable representing a fair coin. Suppose that <span class="math inline">\(X_2\)</span> is a Bernoulli random variable representing a second fair coin. Let <span class="math inline">\(Y = X_1 + X_2\)</span> .</p>
+<p>Fill in the following table for the PMF of <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> .</p>
+</section>
+<section id="reading-assignment-4" class="slide level2">
+<h2>Reading Assignment</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.3.2.</p>
+</section>
+<section id="marginal-vs.-joint-distributions" class="slide level2">
+<h2>Marginal vs.&nbsp;Joint Distributions</h2>
+<p><embed data-src="figures/sample_space.pdf"></p>
+<aside class="notes">
+<ul>
+<li><p><embed data-src="figures/two_random_vars.pdf"></p></li>
+<li><p>Let’s go back again to our car dealer example</p></li>
+<li><p>You’ve created a customer model with two random variables: B for the Buy decision and D for number of cars taken for a test drive.</p></li>
+<li><p>If you think about it, you already have three ways to view this model</p></li>
+<li><p>These are discrete random variables, so you can fully describe their joint distribution with a joint pmf</p></li>
+<li><p>But also, you may want to look at each one individually</p></li>
+<li><p>Suppose that the inventory department comes to you and says they need to understand just the buy decision, B</p></li>
+<li><p>Well, there’s no reason you can’t study B by itself. We know from earlier that we can describe B with a one dimensional probability mass function</p></li>
+<li><p>In this context, we would call that B’s marginal distribution.</p></li>
+<li><p>So we have three pmf’s, and it’s important to understand how they are related to each other.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-joint-to-marginal-distributions" class="slide level2">
+<h2>From Joint to Marginal Distributions</h2>
+<span class="math inline">\(f_B(b) = P(B=b) = \sum_{d \in \text{Supp}[D]} f(b,d) \text{ for all } b \in \R\)</span>
+<aside class="notes">
+<ul>
+<li>The book has this theorem that tell us how to go from a joint distribution to a marginal distribution</li>
+<li>The first thing to notice is that to get the marginal distribution of B, we take a sum over all values of D</li>
+<li>Let’s see how that works in this table. We want the probability that the customer buys a car,</li>
+<li>What do we do? we have to sum up all the table cells that correspond to</li>
+<li>I’ll write the sum down here - in the margin (that’s why this is called the marginal distribution!)</li>
+<li>similarly, we can find the probability that the customer doesn’t buy,</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-marginal-to-joint-distributions" class="slide level2">
+<h2>From Marginal to Joint Distributions?</h2>
+Is it possible to compute the joint distribution, <span class="math inline">\(f\)</span> , given the marginals <span class="math inline">\(f_B\)</span> and <span class="math inline">\(f_D\)</span> ?<br>
+
+<aside class="notes">
+<ul>
+<li>Let me do the first, then take 30 seconds to think about it, then click play again. (unless it’s worth turning into a learnosity quiz? but really just a brain teaser, we haven’t taught students how to think about this.</li>
+<li>the answer is no. there is much more information in the joint distribution.</li>
+<li>In statistics, we have what are called degrees of freedom, which are like the dimensions along which the numbers can change. If you look at</li>
+<li>If you need more convincing, here are two different joint distributions that have the same marginals.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-marginal-to-joint-distributions-cont." class="slide level2">
+<h2>From Marginal to Joint Distributions? (cont.)</h2>
+<p>Two joint distributions with the same marginals:</p>
+<aside class="notes">
+<ul>
+<li></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-conditional-pmf" class="slide level2">
+<h2>The Conditional PMF</h2>
+<ul>
+<li>Given two test drives ( <span class="math inline">\(D = 2\)</span> ), what does the model say about buying behavior ( <span class="math inline">\(B\)</span> )?</li>
+<li>What is the conditional pmf, <span class="math inline">\(f_{B|D}\)</span> ?</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Let’s go back again to the car dealer example. You have modeled the joint distribution of the Buy decision B and the number of test drives D.</li>
+<li>Now a dealer comes to you and says that they have a customer that test drove 2 cars. They want to know, according to your model, what probabilities to assign to buy and not buy.</li>
+<li>Since we know</li>
+<li>but there’s a problem. this is not a probability distribution, because the sum is not 1.</li>
+<li>So, the solution is that we remember that probabilities are ratios, so we have to divide these by their total. by the way, their total is exactly the marginal probability here - 0.3. when we divide then, we get 1/3 and 2/3.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-conditional-pmf-cont." class="slide level2">
+<h2>The Conditional PMF (cont.)</h2>
+<div title="Conditional expectation, car dealers">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Conditional expectation, car dealers</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math display">\[\begin{align*}
+      f_{B|D}(b|d) &amp; = P(B=b | D=d) \\
+                   &amp;= \frac{P(B=b, D=d)}{P(D=d)} = \frac{f(b,d)}{f_D(d)}
+    \end{align*}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(\text{conditional} = \frac{\text{joint}}{\text{marginal}} \Leftrightarrow \pause \text{joint} = \text{marginal} \cdot \text{conditional}\)</span></p>
+<aside class="notes">
+<ul>
+<li>Here’s the theorem from the book</li>
+<li>We want the conditional distribution at some point b, given little d. This is a conditional probability, that B=b, given D = d.&nbsp;we use the definition of conditional prob to write this as a fraction. then notice that we have the joint distribution over the marginal.</li>
+<li>These are really just distributional versions of the multiplication rule we saw for events</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reading-assignment-5" class="slide level2">
+<h2>Reading Assignment</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.3.3.</p>
+</section>
+<section id="the-joint-density-function" class="slide level2">
+<h2>The Joint Density Function</h2>
+
+<img data-src="figures/surface.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>Let’s take a look at joint distributions for continuous random variables</li>
+<li>Before we saw that when random variables are discrete, we can describe them with a joint pmf. now we need a joint density function</li>
+<li>When you imagine a joint density, think about a surface.</li>
+<li>The higher the surface in an area, the more probability you have there</li>
+<li>Working with densities is a little less intuitive, but luckily, most of what we have to do is remember what we did for discrete random variables, and turn the sums into integral</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="probabilities-of-events" class="slide level2">
+<h2>Probabilities of Events</h2>
+<aside class="notes">
+<ul>
+<li>The first thing we might want to do is compute the probability that (X,Y) is in some set. - Let’s draw some set D on the X-Y plane</li>
+<li>When we had discrete random variables, we summed up the pmf for all points in that set.</li>
+<li>Now we have to take an integral over that area</li>
+<li><span class="math inline">\(P((X,Y) \in D) = \int\int_{(x,y) \in D}
+  f(x,y) dx dy\)</span></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="continuous-marginal-distributions" class="slide level2">
+<h2>Continuous Marginal Distributions</h2>
+<aside class="notes">
+<ul>
+<li><p>Next, how do we compute a marginal distribution?</p></li>
+<li><p>Let’s choose a specific X,</p></li>
+<li><p>Now that X defines a slice through this surface</p></li>
+<li><p>Instead of a sum, now we take an integral of that slice..</p></li>
+<li><p>That will give us the value of the marginal density of X at that x.</p></li>
+<li><p><span class="math inline">\(f_X(x) = \int_{-\infty}^\infty f(x,y) dy\)</span></p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="continuous-conditional-distributions" class="slide level2">
+<h2>Continuous Conditional Distributions</h2>
+<p><span class="math inline">\(\text{conditional} = \frac{\text{joint}}{\text{marginal}}\)</span></p>
+<aside class="notes">
+<ul>
+<li>Finally, how do we compute a conditional distribution?</li>
+<li>Let’s choose a specific X,</li>
+<li>So the shape of the slice tells us exactly how probable one value of y is compared to another</li>
+<li>But just like for discrete random variables, we have to scale things to make sure the total probability is 1.</li>
+<li><span class="math inline">\(f_{B|D}(b|d) = \frac{f(b,d)}{f_D(d)}\)</span></li>
+<li>So this equation is exactly the same as before! but now these are densities instead of probability masses.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reading-assignment-6" class="slide level2">
+<h2>Reading Assignment</h2>
+<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.3.4.</p>
+</section>
+<section id="independence" class="slide level2">
+<h2>Independence</h2>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, <span class="math inline">\(X \indep Y\)</span> .</p>
+<ol type="1">
+<li>The marginals fully describe the distribution: <span class="math inline">\(f(x,y) = f_X(x)f_Y(y)\)</span> </li>
+<li>Knowing X tells you nothing about Y: <span class="math inline">\(f_{Y|X}(y|x) =\)</span> </li>
+</ol>
+<aside class="notes">
+<ul>
+<li>Independence is a key property that we will use again and again in this course</li>
+<li>First, let’s look at the definition…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="drawing-independent-continuous-rv" class="slide level2">
+<h2>Drawing Independent Continuous RV</h2>
+<aside class="notes">
+<ul>
+<li>Draw a normal curve in two dimensions, but linear in one.</li>
+<li><embed data-src="figures/independent_rv.pdf"></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="drawing-non-independent-continuous-rv" class="slide level2">
+<h2>Drawing Non-Independent Continuous RV</h2>
+<aside class="notes">
+<ul>
+<li>Draw a normal curve in two dimensions</li>
+<li><embed data-src="figures/non-independent_rv.pdf"></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="importance-of-independence" class="slide level2">
+<h2>Importance of Independence</h2>
+<p><span class="math inline">\(B_1\)</span> represents blood pressure of patient 1.</p>
+<p><span class="math inline">\(B_2\)</span> represents blood pressure of patient 2.</p>
+<p></p>
+<p>Without simplifying assumptions, the joint distribution of</p>
+<p><span class="math inline">\(B_1, B_2,...\)</span> is too complex to estimate with limited data.</p>
+<p>Independence <span class="math inline">\(\implies\)</span> only need to estimate the marginals</p>
+<aside class="notes">
+<ul>
+<li>The reason independence is so important will come when we try to fit our models to data</li>
+<li>we’ll see how this process works when we get to estimators.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="assessing-independence-in-practice" class="slide level2">
+<h2>Assessing Independence in Practice</h2>
+<p>Independence is rarely (if ever) perfectly met.</p>
+<p>What if:</p>
+<ul>
+<li><p>Patient 1 and patient 2 are related</p></li>
+<li><p>Technicians trade off every 10 patients</p></li>
+<li><p>After seeing an unusually high blood pressure, the technician adjusts their mannerisms</p>
+<p>These are potential <em>dependencies</em> .</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Remember, there will almost always be some. It’s important to identify them. But you must exercise judgement about which are really important and which are minor.</li>
+<li></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: true,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
