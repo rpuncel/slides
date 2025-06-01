@@ -1,0 +1,4 @@
+# MIDS 203 Slides
+
+This site hosts the slide decks for UC Berkeley's DATASCI 203 course.
+

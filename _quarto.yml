@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "**/*.qmd"
+    - "!*.Rmd"
+    - "!**/*.Rmd"
+
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    show-notes: true
+    output-ext: revealjs.html
+  html:
+    toc: true
+    number-sections: false
+    theme: [cosmo]
+
+website:
+  sidebar:
+    contents:
+      - index.qmd
+      - unit_01/unit_01.qmd
+      - unit_02/unit_02.qmd
+
+# List of presentations (add more as needed)
+# - unit_01/unit_01.qmd
+# - unit_02/unit_02.qmd
+# ...
+# - unit_14_mle/unit_14.qmd
