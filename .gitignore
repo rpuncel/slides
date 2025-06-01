@@ -4,3 +4,6 @@ Icon*
 .auctex-auto
 unit_02/unit_02_files/
 unit_03/unit_03_files/
+
+/.quarto/
+renv/
