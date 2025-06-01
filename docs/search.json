@@ -1,0 +1,1430 @@
+[
+  {
+    "objectID": "unit_14_mle/unit_14_slides.html#blah",
+    "href": "unit_14_mle/unit_14_slides.html#blah",
+    "title": "Week 14",
+    "section": "blah",
+    "text": "blah"
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#plan-for-the-week",
+    "href": "unit_02/unit_02_slides.html#plan-for-the-week",
+    "title": "Week 2",
+    "section": "Plan for the Week",
+    "text": "Plan for the Week\nTwo sections:\n\nDefining random variables\nJoint distributions\n\n\nThis is a foundation week.\nRandom Variables are building blocks of statistical models.\nThinking of the analogy with Jazz music, you’ll want your understanding of them to be rock solid.\nSo we’re going to be very mathematically precise in defining what these are."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#plan-for-the-week-cont.",
+    "href": "unit_02/unit_02_slides.html#plan-for-the-week-cont.",
+    "title": "Week 2",
+    "section": "Plan for the Week (cont.)",
+    "text": "Plan for the Week (cont.)\nAt the end of this week, you will be able to:\n\nUnderstand how random variables fit as a part of statistical modeling\nApply the mathematical tools we have for characterizing random variables\nSolve problems by applying properties of expectation and variance"
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-random-variable",
+    "href": "unit_02/unit_02_slides.html#what-is-a-random-variable",
+    "title": "Week 2",
+    "section": "What Is a Random Variable?",
+    "text": "What Is a Random Variable?\nIntuition:\n\nA model for where the numbers in data come from.\nLike a regular variable but with uncertainty about its value (with some probability of taking on different values).\n\nDefinition:\n\nGiven probability space \\((\\Omega, S, P)\\), a random variable is a measurable function from \\(\\Omega\\) to \\(\\mathbb{R}\\).\n\n\nA Random Variable is the fundamental building block of a statistical model, but what is it?\nIntuitively, we’re used to variables in our datasets. They have one value. But as statisticians, we need a way to model variables acknowledging that different values are possible.\nFinally, we have the formal definition that you’ll see in your textbook. A random variable is a function from a probability space to \\(\\mathbb{R}\\). This one, unfortunately, leaves students scratching their heads. It doesn’t seem to capture the intuition."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally",
+    "href": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nI’m going to try to make the formal definition make more sense. And I’ll do it by telling a very stylized story about how a variable gets the value it has.\nThis story is about something I do in my spare time, which is roast coffee. It has three characters.\nThe first character is my coffee roaster. This is in the actual real world. It has some state: the atoms are moving with some velocity, the proteins in the beans are in some configuration - hopefully the proteins aren’t burnt.\nBecause I’m serious about my roasting, I want some data. So the second character is this thermometer. It represents measurement or observation. Think of the state of the roaster as an input to the thermometer.\nThe final character is the output of the thermometer: a regular old variable. 160 degrees."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally-1",
+    "href": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally-1",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nNow as statisticians, we think that there must be some randomness in that number. In other words, if you could magically rewind time and start roasting again, you might get a different number.\nYou might not actually believe this - if we could recreate the start of the experiment EXACTLY, down to the location of atoms, maybe you think you’d get the same number. But at least as statisticians, we want a model for how this number was created that involves randomness. Here’s how we do it…\nFirst, we need a probability space. Each outcome in this space represents one possible state of my coffee roaster. There is a probability function that tells you how probable different states are.\nNext, we have the random variable. This is like the thermometer, but it doesn’t give us a single number. It’s a function that takes in any outcome - any state of the coffee roaster.\nFinally, the last character is the real numbers. The random variable is a function from \\(\\Omega\\) to the reals."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally-2",
+    "href": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally-2",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nThat’s the setup. Let’s see what happens when the experiment runs.\nFirst, nature reaches in and selects one possible outcome. Remember this represents one possible arrangement of all the atoms in my roaster.\nUse annotation, label outcome \\(\\omega\\), draw arrow to \\(T\\), draw another arrow to 160."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally-3",
+    "href": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally-3",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nNext, the thermometer (our random variable) does its thing. It takes the state of the roaster - the outcome \\(\\omega\\) - and transforms it into a temperature reading.\nBut wait, instead of a single reading, we get a range of possible readings, each with a different probability. This is the randomness we were talking about.\nThe random variable \\(T\\) maps the outcome \\(\\omega\\) to this range of temperatures. It’s not just a simple function anymore; it’s a function that accounts for uncertainty."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally-4",
+    "href": "unit_02/unit_02_slides.html#what-is-a-random-variable-formally-4",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nFinally, we take a look at the probability distribution of our random variable.\nThis distribution tells us the likelihood of each possible temperature reading.\nIt’s like a map that shows us the landscape of possibilities for our random variable, \\(T\\).\nAnd that’s the formal definition of a random variable. It’s a function that not only depends on the outcome of a random process but also has a probability distribution that describes its behavior."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-joint-distribution",
+    "href": "unit_02/unit_02_slides.html#what-is-a-joint-distribution",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution?",
+    "text": "What Is a Joint Distribution?\nIntuition:\n\nA model for the relationship between two or more random variables.\nLike a regular distribution but for multiple variables, showing how they co-vary.\n\nDefinition:\n\nGiven a probability space and two random variables \\(X\\) and \\(Y\\) defined on that space, the joint distribution of \\(X\\) and \\(Y\\) is the probability distribution of the random vector \\((X, Y)\\).\n\n\nJust as random variables are the building blocks of statistical models, joint distributions allow us to model and understand the relationships between multiple random variables.\nIntuitively, if random variables are like single notes in a musical piece, joint distributions are like chords - they show how notes combine and interact.\nFormally, the joint distribution is defined for a pair of random variables, but the concept extends to more variables. It’s the probability distribution of the random vector formed by these variables."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-joint-distribution-formally",
+    "href": "unit_02/unit_02_slides.html#what-is-a-joint-distribution-formally",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution (Formally)?",
+    "text": "What Is a Joint Distribution (Formally)?\n\n\nLet’s break down the formal definition of joint distribution using a similar story.\nImagine we have two coffee roasters this time, each with its own set of atoms and proteins. We’ll call them Roaster 1 and Roaster 2.\nJust like before, we have a thermometer for each roaster. But now, we’re interested in how the readings from both thermometers relate to each other.\nThe joint distribution will help us understand the relationship between the temperatures \\(T_1\\) and \\(T_2\\) from Roaster 1 and Roaster 2, respectively."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-joint-distribution-formally-1",
+    "href": "unit_02/unit_02_slides.html#what-is-a-joint-distribution-formally-1",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution (Formally)?",
+    "text": "What Is a Joint Distribution (Formally)?\n\n\nFirst, we define a new probability space that covers all possible outcomes for both roasters.\nEach outcome in this space represents a possible state for both Roaster 1 and Roaster 2.\nJust like before, we have a probability function that tells us how probable different states are, but now it’s for the combined system of both roasters."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-joint-distribution-formally-2",
+    "href": "unit_02/unit_02_slides.html#what-is-a-joint-distribution-formally-2",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution (Formally)?",
+    "text": "What Is a Joint Distribution (Formally)?\n\n\nNext, we have our random variables for each roaster, \\(T_1\\) and \\(T_2\\).\nThese random variables are like the thermometers from before, but now we have one for each roaster.\nThey take in the outcomes - the states of Roaster 1 and Roaster 2 - and transform them into temperature readings.\nBut remember, these readings come from a joint distribution, so they are not independent. The reading from one thermometer gives us information about the reading from the other."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#what-is-a-joint-distribution-formally-3",
+    "href": "unit_02/unit_02_slides.html#what-is-a-joint-distribution-formally-3",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution (Formally)?",
+    "text": "What Is a Joint Distribution (Formally)?\n\n\nFinally, we look at the joint probability distribution of our random variables.\nThis distribution tells us the likelihood of each possible pair of temperature readings \\((T_1, T_2)\\).\nIt’s like a map that shows us the landscape of possibilities for our random variables, \\(T_1\\) and \\(T_2\\), and how they are related.\nAnd that’s the formal definition of a joint distribution. It’s a probability distribution that covers multiple random variables, showing us the relationships and dependencies between them."
+  },
+  {
+    "objectID": "unit_02/unit_02_slides.html#conclusion",
+    "href": "unit_02/unit_02_slides.html#conclusion",
+    "title": "Week 2",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nThis week, we covered the basics of random variables and joint distributions.\nWe started with the intuition behind random variables as models for uncertainty in our data.\nThen, we moved on to the formal definition of random variables and how they are used to describe random processes.\nAfter that, we explored joint distributions, which allow us to model and understand the relationships between multiple random variables.\nFinally, we looked at the formal definition of joint distributions and how they extend the concept of random variables to multiple dimensions."
+  },
+  {
+    "objectID": "unit_02/unit_02.html",
+    "href": "unit_02/unit_02.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Two sections:\n\nDefining random variables\nJoint distributions\n\n\nThis is a foundation week.\nRandom Variables are building blocks of statistical models.\nThinking of the analogy with Jazz music, you’ll want your understanding of them to be rock solid.\nSo we’re going to be very mathematically precise in defining what these are.\n\n\n\n\nAt the end of this week, you will be able to:\n\nUnderstand how random variables fit as a part of statistical modeling\nApply the mathematical tools we have for characterizing random variables\nSolve problems by applying properties of expectation and variance"
+  },
+  {
+    "objectID": "unit_02/unit_02.html#plan-for-the-week",
+    "href": "unit_02/unit_02.html#plan-for-the-week",
+    "title": "Week 2",
+    "section": "",
+    "text": "Two sections:\n\nDefining random variables\nJoint distributions\n\n\nThis is a foundation week.\nRandom Variables are building blocks of statistical models.\nThinking of the analogy with Jazz music, you’ll want your understanding of them to be rock solid.\nSo we’re going to be very mathematically precise in defining what these are."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#plan-for-the-week-cont.",
+    "href": "unit_02/unit_02.html#plan-for-the-week-cont.",
+    "title": "Week 2",
+    "section": "",
+    "text": "At the end of this week, you will be able to:\n\nUnderstand how random variables fit as a part of statistical modeling\nApply the mathematical tools we have for characterizing random variables\nSolve problems by applying properties of expectation and variance"
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-random-variable",
+    "href": "unit_02/unit_02.html#what-is-a-random-variable",
+    "title": "Week 2",
+    "section": "What Is a Random Variable?",
+    "text": "What Is a Random Variable?\nIntuition:\n\nA model for where the numbers in data come from.\nLike a regular variable but with uncertainty about its value (with some probability of taking on different values).\n\nDefinition:\n\nGiven probability space \\((\\Omega, S, P)\\), a random variable is a measurable function from \\(\\Omega\\) to \\(\\mathbb{R}\\).\n\n\nA Random Variable is the fundamental building block of a statistical model, but what is it?\nIntuitively, we’re used to variables in our datasets. They have one value. But as statisticians, we need a way to model variables acknowledging that different values are possible.\nFinally, we have the formal definition that you’ll see in your textbook. A random variable is a function from a probability space to \\(\\mathbb{R}\\). This one, unfortunately, leaves students scratching their heads. It doesn’t seem to capture the intuition."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-random-variable-formally",
+    "href": "unit_02/unit_02.html#what-is-a-random-variable-formally",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nI’m going to try to make the formal definition make more sense. And I’ll do it by telling a very stylized story about how a variable gets the value it has.\nThis story is about something I do in my spare time, which is roast coffee. It has three characters.\nThe first character is my coffee roaster. This is in the actual real world. It has some state: the atoms are moving with some velocity, the proteins in the beans are in some configuration - hopefully the proteins aren’t burnt.\nBecause I’m serious about my roasting, I want some data. So the second character is this thermometer. It represents measurement or observation. Think of the state of the roaster as an input to the thermometer.\nThe final character is the output of the thermometer: a regular old variable. 160 degrees."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-random-variable-formally-1",
+    "href": "unit_02/unit_02.html#what-is-a-random-variable-formally-1",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nNow as statisticians, we think that there must be some randomness in that number. In other words, if you could magically rewind time and start roasting again, you might get a different number.\nYou might not actually believe this - if we could recreate the start of the experiment EXACTLY, down to the location of atoms, maybe you think you’d get the same number. But at least as statisticians, we want a model for how this number was created that involves randomness. Here’s how we do it…\nFirst, we need a probability space. Each outcome in this space represents one possible state of my coffee roaster. There is a probability function that tells you how probable different states are.\nNext, we have the random variable. This is like the thermometer, but it doesn’t give us a single number. It’s a function that takes in any outcome - any state of the coffee roaster.\nFinally, the last character is the real numbers. The random variable is a function from \\(\\Omega\\) to the reals."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-random-variable-formally-2",
+    "href": "unit_02/unit_02.html#what-is-a-random-variable-formally-2",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nThat’s the setup. Let’s see what happens when the experiment runs.\nFirst, nature reaches in and selects one possible outcome. Remember this represents one possible arrangement of all the atoms in my roaster.\nUse annotation, label outcome \\(\\omega\\), draw arrow to \\(T\\), draw another arrow to 160."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-random-variable-formally-3",
+    "href": "unit_02/unit_02.html#what-is-a-random-variable-formally-3",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nNext, the thermometer (our random variable) does its thing. It takes the state of the roaster - the outcome \\(\\omega\\) - and transforms it into a temperature reading.\nBut wait, instead of a single reading, we get a range of possible readings, each with a different probability. This is the randomness we were talking about.\nThe random variable \\(T\\) maps the outcome \\(\\omega\\) to this range of temperatures. It’s not just a simple function anymore; it’s a function that accounts for uncertainty."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-random-variable-formally-4",
+    "href": "unit_02/unit_02.html#what-is-a-random-variable-formally-4",
+    "title": "Week 2",
+    "section": "What Is a Random Variable (Formally)?",
+    "text": "What Is a Random Variable (Formally)?\n\n\nFinally, we take a look at the probability distribution of our random variable.\nThis distribution tells us the likelihood of each possible temperature reading.\nIt’s like a map that shows us the landscape of possibilities for our random variable, \\(T\\).\nAnd that’s the formal definition of a random variable. It’s a function that not only depends on the outcome of a random process but also has a probability distribution that describes its behavior."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-joint-distribution",
+    "href": "unit_02/unit_02.html#what-is-a-joint-distribution",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution?",
+    "text": "What Is a Joint Distribution?\nIntuition:\n\nA model for the relationship between two or more random variables.\nLike a regular distribution but for multiple variables, showing how they co-vary.\n\nDefinition:\n\nGiven a probability space and two random variables \\(X\\) and \\(Y\\) defined on that space, the joint distribution of \\(X\\) and \\(Y\\) is the probability distribution of the random vector \\((X, Y)\\).\n\n\nJust as random variables are the building blocks of statistical models, joint distributions allow us to model and understand the relationships between multiple random variables.\nIntuitively, if random variables are like single notes in a musical piece, joint distributions are like chords - they show how notes combine and interact.\nFormally, the joint distribution is defined for a pair of random variables, but the concept extends to more variables. It’s the probability distribution of the random vector formed by these variables."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-joint-distribution-formally",
+    "href": "unit_02/unit_02.html#what-is-a-joint-distribution-formally",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution (Formally)?",
+    "text": "What Is a Joint Distribution (Formally)?\n\n\nLet’s break down the formal definition of joint distribution using a similar story.\nImagine we have two coffee roasters this time, each with its own set of atoms and proteins. We’ll call them Roaster 1 and Roaster 2.\nJust like before, we have a thermometer for each roaster. But now, we’re interested in how the readings from both thermometers relate to each other.\nThe joint distribution will help us understand the relationship between the temperatures \\(T_1\\) and \\(T_2\\) from Roaster 1 and Roaster 2, respectively."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-joint-distribution-formally-1",
+    "href": "unit_02/unit_02.html#what-is-a-joint-distribution-formally-1",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution (Formally)?",
+    "text": "What Is a Joint Distribution (Formally)?\n\n\nFirst, we define a new probability space that covers all possible outcomes for both roasters.\nEach outcome in this space represents a possible state for both Roaster 1 and Roaster 2.\nJust like before, we have a probability function that tells us how probable different states are, but now it’s for the combined system of both roasters."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-joint-distribution-formally-2",
+    "href": "unit_02/unit_02.html#what-is-a-joint-distribution-formally-2",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution (Formally)?",
+    "text": "What Is a Joint Distribution (Formally)?\n\n\nNext, we have our random variables for each roaster, \\(T_1\\) and \\(T_2\\).\nThese random variables are like the thermometers from before, but now we have one for each roaster.\nThey take in the outcomes - the states of Roaster 1 and Roaster 2 - and transform them into temperature readings.\nBut remember, these readings come from a joint distribution, so they are not independent. The reading from one thermometer gives us information about the reading from the other."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#what-is-a-joint-distribution-formally-3",
+    "href": "unit_02/unit_02.html#what-is-a-joint-distribution-formally-3",
+    "title": "Week 2",
+    "section": "What Is a Joint Distribution (Formally)?",
+    "text": "What Is a Joint Distribution (Formally)?\n\n\nFinally, we look at the joint probability distribution of our random variables.\nThis distribution tells us the likelihood of each possible pair of temperature readings \\((T_1, T_2)\\).\nIt’s like a map that shows us the landscape of possibilities for our random variables, \\(T_1\\) and \\(T_2\\), and how they are related.\nAnd that’s the formal definition of a joint distribution. It’s a probability distribution that covers multiple random variables, showing us the relationships and dependencies between them."
+  },
+  {
+    "objectID": "unit_02/unit_02.html#conclusion",
+    "href": "unit_02/unit_02.html#conclusion",
+    "title": "Week 2",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nThis week, we covered the basics of random variables and joint distributions.\nWe started with the intuition behind random variables as models for uncertainty in our data.\nThen, we moved on to the formal definition of random variables and how they are used to describe random processes.\nAfter that, we explored joint distributions, which allow us to model and understand the relationships between multiple random variables.\nFinally, we looked at the formal definition of joint distributions and how they extend the concept of random variables to multiple dimensions."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#what-is-a-model",
+    "href": "unit_01/unit_01_slides.html#what-is-a-model",
+    "title": "Week 1",
+    "section": "What is a Model?",
+    "text": "What is a Model?\n\n\n\nThis course is about statistical modeling. So let’s start by asking, what is a model?\nHere’s a model, built out of lego bricks.\nSome of you might have played with legos growing up, I definitely did.\nThe thing with legos is you learn some basic rules: the ways that legos can fit together.\nThen you can build something that resembles something in the real world, that captures important behavior.\nWhen you’re starting out with legos for the first time, you don’t immediately try to build a giant machine.\nMaybe you take two legos, test them to see how they fit together. Once you’re familiar with the pieces, you can then try to create something that you see in the world."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#what-is-a-statistical-model",
+    "href": "unit_01/unit_01_slides.html#what-is-a-statistical-model",
+    "title": "Week 1",
+    "section": "What is a Statistical Model?",
+    "text": "What is a Statistical Model?\n\n\n\nA statistical model is also a representation of something in the world.\nWhen you have data, it comes from a real-world system.\nBut we don’t just care about this data, we have questions: what data is coming next? what other data could have plausibly come up? what features of the world are consistent with this data?\nFor those questions, we can’t interrogate the world directly, we need a statistical model.\nThis is a representation that also creates data.\nWe have to pretend that this data actually came from the model. Then we can start to answer these questions."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#course-plan",
+    "href": "unit_01/unit_01_slides.html#course-plan",
+    "title": "Week 1",
+    "section": "Course Plan",
+    "text": "Course Plan\n\n\nPutting together statistical models\nFitting models to data\n\n\n\n\nWhen we designed this course, we decided to follow a very strict narrative.\nAt the highest level of abstraction, here’s our plan…\nMost courses jump around, looking at data, then building models, then back.\nWe believe it’s better to really commit to understanding models, then apply them.\nBecause of that, we’re actually not going to touch any data for several weeks.\nBut don’t worry, there will be a LOT of application in the second half of the course."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#first-models",
+    "href": "unit_01/unit_01_slides.html#first-models",
+    "title": "Week 1",
+    "section": "First Models",
+    "text": "First Models\n\n\n\nWhen we start out, our models are not going to resemble the world at all.\nThey will be brittle - with no flexibility to make them look like the real world.\nActually, just like this tower of legos, they may be very rectangular.\nYou may ask, where did this rectangular distribution come from?\nThe answer is we made it up! and we just want to build something simple to understand how the bricks fit together."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#useful-models",
+    "href": "unit_01/unit_01_slides.html#useful-models",
+    "title": "Week 1",
+    "section": "Useful Models",
+    "text": "Useful Models\n\n\n\nBut the key is not to worry about those problems at the beginning. As we learn more, we’ll see that our models can be more flexible, to represent a wide range of real-world systems.\nWe’ll also learn how to fit our models to data, and that’s going to make them really useful."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#necessary-foundation",
+    "href": "unit_01/unit_01_slides.html#necessary-foundation",
+    "title": "Week 1",
+    "section": "Necessary Foundation",
+    "text": "Necessary Foundation\n\nA precise definition of probability\nHow mathematicians build from a set of axioms to useful properties\nHow to connect these properties to problems that we want to solve"
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#reading-assignment-1",
+    "href": "unit_01/unit_01_slides.html#reading-assignment-1",
+    "title": "Week 1",
+    "section": "Reading Assignment",
+    "text": "Reading Assignment\nThroughout this course, we intersperse reading, lectures, and work that you complete as a bundled async. This way, you can very quickly move from :\n\nAn introduction to a concept\nAn explanation of its use\nA proof of that concept\nAn application using data or problem solving\n\nWe have designed the course so that you can complete the async, reading, and lecture activity components over a few self-contained study sessions."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#reading-assignment-cont.",
+    "href": "unit_01/unit_01_slides.html#reading-assignment-cont.",
+    "title": "Week 1",
+    "section": "Reading Assignment (cont.)",
+    "text": "Reading Assignment (cont.)\n\nIntroduction, page xv - xviii\n\n\n\nWhat do we actually say in this?"
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#probability-is-a-system-of-reasoning",
+    "href": "unit_01/unit_01_slides.html#probability-is-a-system-of-reasoning",
+    "title": "Week 1",
+    "section": "Probability is A System of Reasoning",
+    "text": "Probability is A System of Reasoning\n\n\n“Essentially, the theory of probability is nothing but good common sense reduced to mathematics. It provides an exact appreciation of what sound minds feel with a kind of instinct, frequently without being able to account for it.”\n- Pierre-Simon Laplace\n\n\n\n\n\nHow would you define probability? Is it something that you encounter in your day-to-day life? A measure of randomness in the world?\nLaplace was a famous mathematician, who developed what we call the Bayesian interpretation of probability. Let’s read what he said in 1814.\nLaplace believed that, as humans, we are natural processors of probability. We think in probabilities, we use probability when we speak to each other.\nSo of course we think of probability as existing out in the natural world.\nBut, I’m here to tell you that probability is actually a model.\nThat’s right, the randomness that we perceive around us is a model that we use to make sense of the world.\nLet me try to convince you with a few examples."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#probability-is-a-model-of-the-world",
+    "href": "unit_01/unit_01_slides.html#probability-is-a-model-of-the-world",
+    "title": "Week 1",
+    "section": "Probability is A Model of the World",
+    "text": "Probability is A Model of the World\n\n\n\n\n\n\nNote\n\n\n“All models are wrong; some are useful.”\n—George Box\n\n\n\nProbability is:\n\nA mathematical construct\nA model or abstraction of the world\n\n\n\nBut I’m here to tell you that probability is just a model. It’s a very useful model - one that we can make mathematically precise. But it’s a model of the world.\nLet me try to convince you with a few examples.\nNot sure how to fit the Box quote into the narrative - wonder if there’s something more specific to probability."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#why-take-an-axiomatic-approach",
+    "href": "unit_01/unit_01_slides.html#why-take-an-axiomatic-approach",
+    "title": "Week 1",
+    "section": "Why take an axiomatic approach?",
+    "text": "Why take an axiomatic approach?\n\nDefine a minimal set of statements that are consistent with the world we observe.\nDeduce statements that must then be logically entailed.\n\n\n\nWe already have an intuitive model for probability in our heads, but that’s not enough to build statistical models - we need a mathematically precise system.\nHow do we create one? We distill our intuition into a small set of axioms. This is what mathematicians do…\nSuppose that you’re rolling dice – you could observe that the P(1|2) is just P(1) + P(2). You could write that down as a fact.\nIf you kept doing that, you’d end up with a huge pile of facts, and you still would not be able to predict the probability of a new event. You would have no logical way to move from one fact to another.\nInstead, we need to identify axioms that explain the probabilities of many different events. Induct up to a higher set of principles – the pieces of the model that we need, that are used to predict events.\nYou might find this frustrating – you might want to study this like it is an observational science; counting lions or cosmic rays. But, it isn’t!\nProbability is a model, so we’re inventing the rules, not discovering them. But if our system reminds us enough of the real world, it can be useful."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#set-theory",
+    "href": "unit_01/unit_01_slides.html#set-theory",
+    "title": "Week 1",
+    "section": "Set Theory",
+    "text": "Set Theory\nIf you already understand the following notation and can solve the problem, we recommend that you skip this sequence and go straight to the next segment about partitions.\nNotation:\n\n\\(A\\) and \\(B\\) are sets.\n\n\n\n\nOperation\nNotation\n\n\n\n\nUnion\n\\(A \\cup B\\)\n\n\nIntersection\n\\(A \\cap B\\)\n\n\nSet Difference\n\\(A \\setminus B\\)\n\n\nComplement\n\\(A^C\\)\n\n\nEmpty Set\n\\(\\emptyset\\)\n\n\n\nSimplify the expression:\n\\[(A \\cap B) \\cup (B \\setminus A)\\]\n\n\nTo understand the upcoming definitions, you will need to be familiar with basic set theory. This sequence is a quick review of the set operations we will be using most.\nIf you already understand the following notation and can solve the problem, we recommend that you skip this sequence and go straight to the next segment about partitions."
+  },
+  {
+    "objectID": "unit_01/unit_01_slides.html#visualizing-a-set",
+    "href": "unit_01/unit_01_slides.html#visualizing-a-set",
+    "title": "Week 1",
+    "section": "Visualizing a Set",
+    "text": "Visualizing a Set\n\n\n\n\n\nA set contains objects.\nitem Items don’t have an order.\nItems can’t repeat.\n\n\n\n\nWhat is a set? I’m not going to give a precise definition, set theory is interesting but it’s pretty far down into the foundations of mathematics.\nWhat you need to know is that sets contain objects.\nImagine a bag, so there’s no order inside the set.\nAn object is either in the set or outside.\nAlso, an object can’t be in the set twice. No repetition - you’re in or you’re out."
+  },
+  {
+    "objectID": "unit_01/unit_01.html",
+    "href": "unit_01/unit_01.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "This course is about statistical modeling. So let’s start by asking, what is a model?\nHere’s a model, built out of lego bricks.\nSome of you might have played with legos growing up, I definitely did.\nThe thing with legos is you learn some basic rules: the ways that legos can fit together.\nThen you can build something that resembles something in the real world, that captures important behavior.\nWhen you’re starting out with legos for the first time, you don’t immediately try to build a giant machine.\nMaybe you take two legos, test them to see how they fit together. Once you’re familiar with the pieces, you can then try to create something that you see in the world.\n\n\n\n\n\n\n\n\nA statistical model is also a representation of something in the world.\nWhen you have data, it comes from a real-world system.\nBut we don’t just care about this data, we have questions: what data is coming next? what other data could have plausibly come up? what features of the world are consistent with this data?\nFor those questions, we can’t interrogate the world directly, we need a statistical model.\nThis is a representation that also creates data.\nWe have to pretend that this data actually came from the model. Then we can start to answer these questions.\n\n\n\n\n\n\n\nPutting together statistical models\nFitting models to data\n\n\n\n\nWhen we designed this course, we decided to follow a very strict narrative.\nAt the highest level of abstraction, here’s our plan…\nMost courses jump around, looking at data, then building models, then back.\nWe believe it’s better to really commit to understanding models, then apply them.\nBecause of that, we’re actually not going to touch any data for several weeks.\nBut don’t worry, there will be a LOT of application in the second half of the course.\n\n\n\n\n\n\n\n\nWhen we start out, our models are not going to resemble the world at all.\nThey will be brittle - with no flexibility to make them look like the real world.\nActually, just like this tower of legos, they may be very rectangular.\nYou may ask, where did this rectangular distribution come from?\nThe answer is we made it up! and we just want to build something simple to understand how the bricks fit together.\n\n\n\n\n\n\n\n\nBut the key is not to worry about those problems at the beginning. As we learn more, we’ll see that our models can be more flexible, to represent a wide range of real-world systems.\nWe’ll also learn how to fit our models to data, and that’s going to make them really useful."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#what-is-a-model",
+    "href": "unit_01/unit_01.html#what-is-a-model",
+    "title": "Week 1",
+    "section": "",
+    "text": "This course is about statistical modeling. So let’s start by asking, what is a model?\nHere’s a model, built out of lego bricks.\nSome of you might have played with legos growing up, I definitely did.\nThe thing with legos is you learn some basic rules: the ways that legos can fit together.\nThen you can build something that resembles something in the real world, that captures important behavior.\nWhen you’re starting out with legos for the first time, you don’t immediately try to build a giant machine.\nMaybe you take two legos, test them to see how they fit together. Once you’re familiar with the pieces, you can then try to create something that you see in the world."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#what-is-a-statistical-model",
+    "href": "unit_01/unit_01.html#what-is-a-statistical-model",
+    "title": "Week 1",
+    "section": "",
+    "text": "A statistical model is also a representation of something in the world.\nWhen you have data, it comes from a real-world system.\nBut we don’t just care about this data, we have questions: what data is coming next? what other data could have plausibly come up? what features of the world are consistent with this data?\nFor those questions, we can’t interrogate the world directly, we need a statistical model.\nThis is a representation that also creates data.\nWe have to pretend that this data actually came from the model. Then we can start to answer these questions."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#course-plan",
+    "href": "unit_01/unit_01.html#course-plan",
+    "title": "Week 1",
+    "section": "",
+    "text": "Putting together statistical models\nFitting models to data\n\n\n\n\nWhen we designed this course, we decided to follow a very strict narrative.\nAt the highest level of abstraction, here’s our plan…\nMost courses jump around, looking at data, then building models, then back.\nWe believe it’s better to really commit to understanding models, then apply them.\nBecause of that, we’re actually not going to touch any data for several weeks.\nBut don’t worry, there will be a LOT of application in the second half of the course."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#first-models",
+    "href": "unit_01/unit_01.html#first-models",
+    "title": "Week 1",
+    "section": "",
+    "text": "When we start out, our models are not going to resemble the world at all.\nThey will be brittle - with no flexibility to make them look like the real world.\nActually, just like this tower of legos, they may be very rectangular.\nYou may ask, where did this rectangular distribution come from?\nThe answer is we made it up! and we just want to build something simple to understand how the bricks fit together."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#useful-models",
+    "href": "unit_01/unit_01.html#useful-models",
+    "title": "Week 1",
+    "section": "",
+    "text": "But the key is not to worry about those problems at the beginning. As we learn more, we’ll see that our models can be more flexible, to represent a wide range of real-world systems.\nWe’ll also learn how to fit our models to data, and that’s going to make them really useful."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#necessary-foundation",
+    "href": "unit_01/unit_01.html#necessary-foundation",
+    "title": "Week 1",
+    "section": "Necessary Foundation",
+    "text": "Necessary Foundation\n\nA precise definition of probability\nHow mathematicians build from a set of axioms to useful properties\nHow to connect these properties to problems that we want to solve"
+  },
+  {
+    "objectID": "unit_01/unit_01.html#reading-assignment-1",
+    "href": "unit_01/unit_01.html#reading-assignment-1",
+    "title": "Week 1",
+    "section": "Reading Assignment",
+    "text": "Reading Assignment\nThroughout this course, we intersperse reading, lectures, and work that you complete as a bundled async. This way, you can very quickly move from :\n\nAn introduction to a concept\nAn explanation of its use\nA proof of that concept\nAn application using data or problem solving\n\nWe have designed the course so that you can complete the async, reading, and lecture activity components over a few self-contained study sessions."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#reading-assignment-cont.",
+    "href": "unit_01/unit_01.html#reading-assignment-cont.",
+    "title": "Week 1",
+    "section": "Reading Assignment (cont.)",
+    "text": "Reading Assignment (cont.)\n\nIntroduction, page xv - xviii\n\n\n\nWhat do we actually say in this?"
+  },
+  {
+    "objectID": "unit_01/unit_01.html#probability-is-a-system-of-reasoning",
+    "href": "unit_01/unit_01.html#probability-is-a-system-of-reasoning",
+    "title": "Week 1",
+    "section": "Probability is A System of Reasoning",
+    "text": "Probability is A System of Reasoning\n\n\n“Essentially, the theory of probability is nothing but good common sense reduced to mathematics. It provides an exact appreciation of what sound minds feel with a kind of instinct, frequently without being able to account for it.”\n- Pierre-Simon Laplace\n\n\n\n\n\n\nHow would you define probability? Is it something that you encounter in your day-to-day life? A measure of randomness in the world?\nLaplace was a famous mathematician, who developed what we call the Bayesian interpretation of probability. Let’s read what he said in 1814.\nLaplace believed that, as humans, we are natural processors of probability. We think in probabilities, we use probability when we speak to each other.\nSo of course we think of probability as existing out in the natural world.\nBut, I’m here to tell you that probability is actually a model.\nThat’s right, the randomness that we perceive around us is a model that we use to make sense of the world.\nLet me try to convince you with a few examples."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#probability-is-a-model-of-the-world",
+    "href": "unit_01/unit_01.html#probability-is-a-model-of-the-world",
+    "title": "Week 1",
+    "section": "Probability is A Model of the World",
+    "text": "Probability is A Model of the World\n\n\n\n\n\n\nNote\n\n\n\n“All models are wrong; some are useful.”\n—George Box\n\n\nProbability is:\n\nA mathematical construct\nA model or abstraction of the world\n\n\n\nBut I’m here to tell you that probability is just a model. It’s a very useful model - one that we can make mathematically precise. But it’s a model of the world.\nLet me try to convince you with a few examples.\nNot sure how to fit the Box quote into the narrative - wonder if there’s something more specific to probability."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#why-take-an-axiomatic-approach",
+    "href": "unit_01/unit_01.html#why-take-an-axiomatic-approach",
+    "title": "Week 1",
+    "section": "Why take an axiomatic approach?",
+    "text": "Why take an axiomatic approach?\n\nDefine a minimal set of statements that are consistent with the world we observe.\nDeduce statements that must then be logically entailed.\n\n\n\nWe already have an intuitive model for probability in our heads, but that’s not enough to build statistical models - we need a mathematically precise system.\nHow do we create one? We distill our intuition into a small set of axioms. This is what mathematicians do…\nSuppose that you’re rolling dice – you could observe that the P(1|2) is just P(1) + P(2). You could write that down as a fact.\nIf you kept doing that, you’d end up with a huge pile of facts, and you still would not be able to predict the probability of a new event. You would have no logical way to move from one fact to another.\nInstead, we need to identify axioms that explain the probabilities of many different events. Induct up to a higher set of principles – the pieces of the model that we need, that are used to predict events.\nYou might find this frustrating – you might want to study this like it is an observational science; counting lions or cosmic rays. But, it isn’t!\nProbability is a model, so we’re inventing the rules, not discovering them. But if our system reminds us enough of the real world, it can be useful."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#set-theory",
+    "href": "unit_01/unit_01.html#set-theory",
+    "title": "Week 1",
+    "section": "Set Theory",
+    "text": "Set Theory\nIf you already understand the following notation and can solve the problem, we recommend that you skip this sequence and go straight to the next segment about partitions.\n\nNotation:\n\n\\(A\\) and \\(B\\) are sets.\n\n\n\n\nOperation\nNotation\n\n\n\n\nUnion\n\\(A \\cup B\\)\n\n\nIntersection\n\\(A \\cap B\\)\n\n\nSet Difference\n\\(A \\setminus B\\)\n\n\nComplement\n\\(A^C\\)\n\n\nEmpty Set\n\\(\\emptyset\\)\n\n\n\n\nSimplify the expression:\n\\[(A \\cap B) \\cup (B \\setminus A)\\]\n\n\nTo understand the upcoming definitions, you will need to be familiar with basic set theory. This sequence is a quick review of the set operations we will be using most.\nIf you already understand the following notation and can solve the problem, we recommend that you skip this sequence and go straight to the next segment about partitions."
+  },
+  {
+    "objectID": "unit_01/unit_01.html#visualizing-a-set",
+    "href": "unit_01/unit_01.html#visualizing-a-set",
+    "title": "Week 1",
+    "section": "Visualizing a Set",
+    "text": "Visualizing a Set\n\n\n\n\n\nA set contains objects.\nitem Items don’t have an order.\nItems can’t repeat.\n\n\n\n\n\nWhat is a set? I’m not going to give a precise definition, set theory is interesting but it’s pretty far down into the foundations of mathematics.\nWhat you need to know is that sets contain objects.\nImagine a bag, so there’s no order inside the set.\nAn object is either in the set or outside.\nAlso, an object can’t be in the set twice. No repetition - you’re in or you’re out."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#introduction",
+    "href": "unit_01/unit_01_converted.html#introduction",
+    "title": "Week 6",
+    "section": "Introduction",
+    "text": "Introduction\n\nHypothesis, H, is a model for how the world might work\nIn practice, evidence is rarely conclusive\nWe want \\(Pr(H|D)\\) , or the probability of the event that our hypothesis is true"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#the-dilemma",
+    "href": "unit_01/unit_01_converted.html#the-dilemma",
+    "title": "Week 6",
+    "section": "The Dilemma",
+    "text": "The Dilemma\nWhether our hypothesis is true is something we can never know\n\nThe world is not a perfectly controlled lab\nEvidence collected contains information but does not begin to identify a unique model out of all the possible models\nWe do not know how to weight all the possibilities out there"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#example-1",
+    "href": "unit_01/unit_01_converted.html#example-1",
+    "title": "Week 6",
+    "section": "Example 1",
+    "text": "Example 1\nIs there enough information to answer this? - How did the coin get there? - The context is missing: - How do we choose between the different models? - How do we weight all the alternatives? - Even with more information, you can never know the context completely"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#example-2",
+    "href": "unit_01/unit_01_converted.html#example-2",
+    "title": "Week 6",
+    "section": "Example 2",
+    "text": "Example 2\n\nWhat is the probability that Newton’s theory of gravity is correct?\n Newton’s second theory seemed to work up to the precision of 17th-century instruments\nOnly later were instruments developed that were precise enough to show Newton’s laws were incorrect"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#example-2-cont.",
+    "href": "unit_01/unit_01_converted.html#example-2-cont.",
+    "title": "Week 6",
+    "section": "Example 2 (cont.)",
+    "text": "Example 2 (cont.)\n\nHow could Newton decide how probable his model was compared to general relativity (not imagined yet)?\nIf he could have imagined another theory, would we be equipped to compare two very different ideas?\nWe could never write down the infinite number of models consistent with observations of the planet in order to assign each a probability\nIt may not even make sense to assign a probability to Newton’s gravity (eg. true state of world or not)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#example-3",
+    "href": "unit_01/unit_01_converted.html#example-3",
+    "title": "Week 6",
+    "section": "Example 3",
+    "text": "Example 3\nYou discover three specimens of a new species of squid that measure 3.2, 3.3, and 4.0 feet long\n\nWhat is the probability that the average length amount the entire species is 3.5 feet? - Probability zero for a single number (point estimate) probability that the average length is between 3 and 4 feet?\nPositive number for length\nNo new numbers that have not been imagined\nA better grasp of the possibilities"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#example-3-cont.",
+    "href": "unit_01/unit_01_converted.html#example-3-cont.",
+    "title": "Week 6",
+    "section": "Example 3 (cont.)",
+    "text": "Example 3 (cont.)\n\nHowever, we don’t know how representative the specimens are - We still don’t know all the relevant information\nExamples: deep water pressure, amount of light"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#two-branches-of-statistics",
+    "href": "unit_01/unit_01_converted.html#two-branches-of-statistics",
+    "title": "Week 6",
+    "section": "Two Branches of Statistics",
+    "text": "Two Branches of Statistics"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#the-birth-of-modern-statistics",
+    "href": "unit_01/unit_01_converted.html#the-birth-of-modern-statistics",
+    "title": "Week 6",
+    "section": "The Birth of Modern Statistics",
+    "text": "The Birth of Modern Statistics\n - Before the 1930’s, there were lots of statistical procedures but no coherent account of how to choose the right one - Neyman and Pearson published articles that added a rigorous mathematical treatment, forming the basis of frequentist statistics"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#the-central-dilemma",
+    "href": "unit_01/unit_01_converted.html#the-central-dilemma",
+    "title": "Week 6",
+    "section": "The Central Dilemma",
+    "text": "The Central Dilemma\n\nWe observe data, \\(D\\)\nGiven that this data occurs, we want the probability that our hypothesis \\(P(H|D)\\) is \nTo a strict frequentist:\nNot just impossible to compute\nDoes not even make sense to assign a probability to a hypothesis"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#objective-probability",
+    "href": "unit_01/unit_01_converted.html#objective-probability",
+    "title": "Week 6",
+    "section": "Objective Probability",
+    "text": "Objective Probability\nA frequentist defines probability as a matter of long-run frequencies\n\nWe need to specify a collective of elements - Eg. throws of a dice\n a frame of observations that can happen over and over\nAs number of observations approaches infinity, proportion of throws of the die that show a 3 is 1/6\nThe probability is the long-run frequency of the event relative to all observations (or of 3’s relative to all throws) - Called"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#objective-probability-and-hypothesis",
+    "href": "unit_01/unit_01_converted.html#objective-probability-and-hypothesis",
+    "title": "Week 6",
+    "section": "Objective Probability and Hypothesis",
+    "text": "Objective Probability and Hypothesis\n\nIf you view probability as objective, you cannot talk about the probability of a hypothesis\nit is just true or false\n The probability of a hypothesis - Allows for disagreement about what it is\nReflects our lack of information\n\n - We need a long-run collective"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#prdh",
+    "href": "unit_01/unit_01_converted.html#prdh",
+    "title": "Week 6",
+    "section": "\\(PR(D|H)\\)",
+    "text": "\\(PR(D|H)\\)\n\n\\(H\\) = hypothesis\n\\(D\\) = data\nAssume H is true and call it the null hypothesis\nHas to be quite specific (the only extra assumption we’re making)\nIs the basis for predictions we need to make about what data should come out of the experiment\nGoverns how the experiment behaves as we run it over and over"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#prdh-cont.",
+    "href": "unit_01/unit_01_converted.html#prdh-cont.",
+    "title": "Week 6",
+    "section": "\\(PR(D|H)\\) (cont.)",
+    "text": "\\(PR(D|H)\\) (cont.)\nNow we have a meaningful collective\n\nCan look at the relative frequencies of different outcomes\nCan specifically look at the number of hypothetical experiments in which we would get data at least as extreme as D - Captured by \\(p\\) -value\n The probability of getting data as extreme as our observations, assuming the null hypothesis is true"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#notes-while-screensharing",
+    "href": "unit_01/unit_01_converted.html#notes-while-screensharing",
+    "title": "Week 6",
+    "section": "Notes while Screensharing",
+    "text": "Notes while Screensharing\nt [\n\\[\\begin{aligned}\n    & g(x_{1}, X_{2}, \\dots, X_{n}) \\rightarrow S \\in \\mathbb{R} \\\\\n    H_{0} &= 0\n  \\end{aligned}\\]\n]"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#hypothesis-test-example",
+    "href": "unit_01/unit_01_converted.html#hypothesis-test-example",
+    "title": "Week 6",
+    "section": "Hypothesis Test Example",
+    "text": "Hypothesis Test Example\n\n\nLet’s use a stylized example to motivate the hypothesis testing framework."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#two-possible-states-of-the-world",
+    "href": "unit_01/unit_01_converted.html#two-possible-states-of-the-world",
+    "title": "Week 6",
+    "section": "Two Possible States of the World",
+    "text": "Two Possible States of the World\n Begin with a reasonable default supposition; leave this supposition behind if data provides compelling evidence\n\n\n\n\n\n\n\nWith compelling evidence, we leave the specific null hypothesis ( \\(H_{\\varnothing}\\) ) for the alternative ( \\(H_{a}\\) )"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#a-hypothesis-test",
+    "href": "unit_01/unit_01_converted.html#a-hypothesis-test",
+    "title": "Week 6",
+    "section": "A Hypothesis Test",
+    "text": "A Hypothesis Test\nA hypothesis test is a procedure.\n ::: {.notes} - This is very strict: you might want your hypothesis test to do more, to give you fine-grained information about the world. but statistics doesn’t work like that. All we can do, is set up a specific null hypothesis and make this binary decision: reject or not reject. :::"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#false-positive-and-false-negative-errors",
+    "href": "unit_01/unit_01_converted.html#false-positive-and-false-negative-errors",
+    "title": "Week 6",
+    "section": "False Positive and False Negative Errors",
+    "text": "False Positive and False Negative Errors"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#false-positive-and-false-negative-errors-cont.",
+    "href": "unit_01/unit_01_converted.html#false-positive-and-false-negative-errors-cont.",
+    "title": "Week 6",
+    "section": "False Positive and False Negative Errors (cont.)",
+    "text": "False Positive and False Negative Errors (cont.)\n - Typically the most destructive - Error rate, denoted \\(\\alpha\\) , is the probability of rejecting the null hypothesis when we should not; \\(P(\\text{Reject } H_\\varnothing |\n    H_\\varnothing)\\) - Starting with Ronald Fisher: set \\(\\alpha = 0.05\\)\nA hypothesis test is a procedure for rejecting or not rejecting a null, such that the false positive error rate is controlled ( \\(\\alpha = 0.05\\) )."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#breaking-down-a-test-procedure",
+    "href": "unit_01/unit_01_converted.html#breaking-down-a-test-procedure",
+    "title": "Week 6",
+    "section": "Breaking Down a Test Procedure",
+    "text": "Breaking Down a Test Procedure\n - A function of our sample - Measures deviations from the null hypothesis - Distribution must be completely determined by the null\n - A set of values for which we will reject the null - Chosen to be contrary to the null - Total probability must be \\(\\alpha = 0.05\\)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#what-a-hypothesis-test-doesnt-do",
+    "href": "unit_01/unit_01_converted.html#what-a-hypothesis-test-doesnt-do",
+    "title": "Week 6",
+    "section": "What a Hypothesis Test Doesn’t Do",
+    "text": "What a Hypothesis Test Doesn’t Do\n - We control Type 1 error rates - We cannot control Type 2 error rates - How can you be sure the real B is not 0.01? Or 0.00001? \n - The valid decisions are reject and fail to reject."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#section-2",
+    "href": "unit_01/unit_01_converted.html#section-2",
+    "title": "Week 6",
+    "section": "",
+    "text": "t\n\n\nWe want to know if Vitamin W has an effect. so we write \\(H_0: \\mu = 0\\).\nWe need a statistic, and a rejection region\nFor our statistic, we usually want to find something that follows a famous distribution.\nCan use the standardized mean. \\(z = \\frac{\\bar{B}}{2} \\sim N(0,1)\\)\nFor our rejection region , we need to choose a subset of the real numbers. I’ll show you the most common choice, above 1.96 and below -1.96.\nWhy these numbers? If you integrate, you get a probability of 0.05.\nEx: \\(\\overline{B} = -5\\). then \\(z = 2.5\\) REJECT"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#the-two-tailed-z-test",
+    "href": "unit_01/unit_01_converted.html#the-two-tailed-z-test",
+    "title": "Week 6",
+    "section": "The Two-Tailed z-Test",
+    "text": "The Two-Tailed z-Test\n - : \\(\\mu = 0\\) - : \\(\\mu \\neq 0\\)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#the-one-tailed-z-test",
+    "href": "unit_01/unit_01_converted.html#the-one-tailed-z-test",
+    "title": "Week 6",
+    "section": "The One-Tailed z-Test",
+    "text": "The One-Tailed z-Test\n - : \\(\\mu = 0\\) - : \\(\\mu &gt; 0\\) - : \\(\\mu &lt; 0\\)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#choosing-one-or-two-tails",
+    "href": "unit_01/unit_01_converted.html#choosing-one-or-two-tails",
+    "title": "Week 6",
+    "section": "Choosing One or Two Tails",
+    "text": "Choosing One or Two Tails\n \nSwitching your test after you see the statistic is cheating.\n\n\nOne-tailed and two-tailed tests ask different questions, and are interchangeable.\nIt is kind of like being ID when you’re buy a beer – they’re not asking, Is this person different from 21?'' They're     asking,Is this person older than 21?’’"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#one-tailed-test-things-to-consider",
+    "href": "unit_01/unit_01_converted.html#one-tailed-test-things-to-consider",
+    "title": "Week 6",
+    "section": "One-Tailed Test: Things to Consider",
+    "text": "One-Tailed Test: Things to Consider\nBefore using a one-tailed test, ask yourself these questions:\n\nWill the audience believe that I started with one tail before I saw the data?\nWill the audience share my opinion of which tail is interesting?\nAm I really 100 % committed to only this tail? - What if the effect turns out to be huge, but in the other direction?\n\n\nWould I be willing to call that a negative result?\nCan I convince my audience I have this much commitment?\n\n\n\n``Do you feel lucky, punk? Well do ya?’’"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#t-test-assumptions-part-i",
+    "href": "unit_01/unit_01_converted.html#t-test-assumptions-part-i",
+    "title": "Week 6",
+    "section": "T-Test Assumptions, Part I",
+    "text": "T-Test Assumptions, Part I\n\n\n\n\n\n\nAssumptions of t-test\n\n\n\nThe textbook assumptions\n\n- $X$ is a metric variable.\n\n\\(\\{X_1,X_2,...,X_n\\}\\) is a random sample.\n\\(X\\) has a normal distribution.\n\n\n\nVariables are almost never normal.\n\n\nAnd so, these assumptions are nearly never met in practice"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#t-test-assumptions-part-ii",
+    "href": "unit_01/unit_01_converted.html#t-test-assumptions-part-ii",
+    "title": "Week 6",
+    "section": "T-Test Assumptions, Part II",
+    "text": "T-Test Assumptions, Part II\nBut, in the large sample case, this is more plausible.\n\n\n\n\n\n\nLarge sample t-test assumptions\n\n\n\n: - \\(X\\) is a metric variable - \\(\\{X_1,X_2,...,X_n\\}\\) is a random sample - \\(n\\) is large enough that the CLT implies a normal distribution of mean : The t-test is asymptotically valid"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#t-test-assumptions-part-iii",
+    "href": "unit_01/unit_01_converted.html#t-test-assumptions-part-iii",
+    "title": "Week 6",
+    "section": "T-Test Assumptions, Part III",
+    "text": "T-Test Assumptions, Part III"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#t-test-assumptions-part-iv",
+    "href": "unit_01/unit_01_converted.html#t-test-assumptions-part-iv",
+    "title": "Week 6",
+    "section": "T-Test Assumptions, Part IV",
+    "text": "T-Test Assumptions, Part IV\nThe t-test is considered “reasonably robust,” even when \\(n&lt;30\\) , as long as deviations from normality are moderate.\nHowever, watch out for strong skewness, especially when \\(n&lt;30\\) .\n\n\nDAH: We’ve got to give students more to work with than this; I think that this might end up being unsatisfying for many folks."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#t-test-assumptions-1",
+    "href": "unit_01/unit_01_converted.html#t-test-assumptions-1",
+    "title": "Week 6",
+    "section": "T-Test Assumptions",
+    "text": "T-Test Assumptions\nMore practical guidance:\n\n\\(X\\) is a metric variable.\n\\(\\{X_1,X_2,...,X_n\\}\\) is a random sample.\nThe distribution is not too non-normal, considering \\(n\\) .\nWhen the t-test is not valid, consider using a non-parametric test instead."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#introducing-p-values",
+    "href": "unit_01/unit_01_converted.html#introducing-p-values",
+    "title": "Week 6",
+    "section": "Introducing P-Values",
+    "text": "Introducing P-Values\n\n\nLet’s note 2 things right away: just like in hypothesis testing.\nWe’re going to assume the null is true.\nWe’re measuring the probability of data - We may be interested in the probability that the null is correct - but statistics doesn’t let us calculate that."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#z-distribution",
+    "href": "unit_01/unit_01_converted.html#z-distribution",
+    "title": "Week 6",
+    "section": "Z-Distribution",
+    "text": "Z-Distribution"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#the-p-value-for-a-z-test",
+    "href": "unit_01/unit_01_converted.html#the-p-value-for-a-z-test",
+    "title": "Week 6",
+    "section": "The P-Value for a Z-Test",
+    "text": "The P-Value for a Z-Test\n\n\n\\(= 3 - 0 / ( 20 / \\sqrt{100} ) = 1.5\\)\n\\(p =\n  2*( 1- pnorm(1.5)) = 0.13\\)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#the-p-value-and-decision-rules-part-i",
+    "href": "unit_01/unit_01_converted.html#the-p-value-and-decision-rules-part-i",
+    "title": "Week 6",
+    "section": "The P-Value and Decision Rules, Part I",
+    "text": "The P-Value and Decision Rules, Part I\nNeyman-Pearson hypothesis testing: rules to make a decision and usually be right ( \\(\\alpha = 0.05\\) )\n\nStrict frequentist with a dichotomous decision rule: treat \\(z=2\\) and \\(z=10\\) identically.\nBut is there value in knowing how contrary the data is to the null?"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#the-p-value-and-decision-rules-part-ii",
+    "href": "unit_01/unit_01_converted.html#the-p-value-and-decision-rules-part-ii",
+    "title": "Week 6",
+    "section": "The P-Value and Decision Rules, Part II",
+    "text": "The P-Value and Decision Rules, Part II\n\\[\\begin{align*}\n    |z| & &gt; \\text{critical value} \\Rightarrow \\text{reject } H_{0} \\\\\n    |z| & &lt; \\text{critical value} \\Rightarrow \\text{fail to reject } H_{0}\n  \\end{align*}\\]"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#the-p-value-and-decision-rules-part-iii",
+    "href": "unit_01/unit_01_converted.html#the-p-value-and-decision-rules-part-iii",
+    "title": "Week 6",
+    "section": "The P-Value and Decision Rules, Part III",
+    "text": "The P-Value and Decision Rules, Part III\n\\[\\begin{align*}\n    |z| & &gt; \\text{critical value} \\Rightarrow \\text{reject } H_{0} \\\\\n    |z| & &lt; \\text{critical value} \\Rightarrow \\text{fail to reject } H_{0}\n  \\end{align*}\\]"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#an-equivalent-decision-procedure",
+    "href": "unit_01/unit_01_converted.html#an-equivalent-decision-procedure",
+    "title": "Week 6",
+    "section": "An Equivalent Decision Procedure",
+    "text": "An Equivalent Decision Procedure\nCompute p-value.\n\nIf \\(p&lt;.05 \\Rightarrow \\text{reject } H_0\\)\nIf \\(p\\geq.05 \\Rightarrow \\text{do not reject } H_0\\)\nBut, can you justify making such a bright-line statement after reducing information so much?\n\n\nConcept\nMeasurement\nStatistic\nAssumptions about distribution\n\nReject/fail to reject"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#p-value-convention",
+    "href": "unit_01/unit_01_converted.html#p-value-convention",
+    "title": "Week 6",
+    "section": "P-Value Convention",
+    "text": "P-Value Convention"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#reporting-test-results",
+    "href": "unit_01/unit_01_converted.html#reporting-test-results",
+    "title": "Week 6",
+    "section": "Reporting Test Results",
+    "text": "Reporting Test Results\n\nA t-test for the effect of Vitamin W on blood pressure was highly significant ( \\(t=3.1\\) , \\(p=.008\\) ).\nWe found evidence that Vitamin W decreases blood pressure ( \\(t=2.3\\) , \\(p=.04\\) ).\nThe effect of Vitamin X on blood pressure was not statistically significant ( \\(t=1.2\\) , \\(p=.23\\) ).\n\nThis is half the story; next, you’ll need to describe practical significance."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#variable-importance-and-p-values",
+    "href": "unit_01/unit_01_converted.html#variable-importance-and-p-values",
+    "title": "Week 6",
+    "section": "Variable Importance and P-Values",
+    "text": "Variable Importance and P-Values\nt\nDoes a small p-value mean that a variable is ``important’’?\n\nStatistical significance\nPractical significance"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#a-warning",
+    "href": "unit_01/unit_01_converted.html#a-warning",
+    "title": "Week 6",
+    "section": "A Warning",
+    "text": "A Warning\nA very common mistake is to assume a p-value is the chance the null hypothesis is true.\nFrequentist statistics cannot tell you the probability of a hypothesis!"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#a-warning-cont.",
+    "href": "unit_01/unit_01_converted.html#a-warning-cont.",
+    "title": "Week 6",
+    "section": "A Warning (cont.)",
+    "text": "A Warning (cont.)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#false-positive-and-false-negative-errors-1",
+    "href": "unit_01/unit_01_converted.html#false-positive-and-false-negative-errors-1",
+    "title": "Week 6",
+    "section": "False Positive and False Negative Errors",
+    "text": "False Positive and False Negative Errors\n\nFalse Positive (I) errors are jumping without cause\nFalse Negative (II) errors are failing to jump when you should - Failing to detect a real effect\nMissed opportunity to create a product, publish a paper, or advance knowledge"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#statistical-power-part-i",
+    "href": "unit_01/unit_01_converted.html#statistical-power-part-i",
+    "title": "Week 6",
+    "section": "Statistical Power, Part I",
+    "text": "Statistical Power, Part I\n\nFalse Negative Error Rate: \\(\\beta = P(\\text{not rejecting }H_0 | H_a)\\)\nStatistical power: \\(1-\\beta\\)\nStatistical power is the probability of supporting the alternate hypothesis, assuming it is true"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#statistical-power-part-ii",
+    "href": "unit_01/unit_01_converted.html#statistical-power-part-ii",
+    "title": "Week 6",
+    "section": "Statistical Power, Part II",
+    "text": "Statistical Power, Part II"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#statistical-power-part-ii-1",
+    "href": "unit_01/unit_01_converted.html#statistical-power-part-ii-1",
+    "title": "Week 6",
+    "section": "Statistical Power, Part II",
+    "text": "Statistical Power, Part II"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#statistical-power-part-iii",
+    "href": "unit_01/unit_01_converted.html#statistical-power-part-iii",
+    "title": "Week 6",
+    "section": "Statistical Power, Part III",
+    "text": "Statistical Power, Part III\nHow to increase power\n\nIncrease sample size.\nChoose a powerful test (if you can justify its assumptions)."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#practical-significance-1",
+    "href": "unit_01/unit_01_converted.html#practical-significance-1",
+    "title": "Week 6",
+    "section": "Practical significance",
+    "text": "Practical significance\n\n\n\n\n\n\nStatistical significance\n\n\n\n\nHow much does the data support the existence of an effect?\n\n\n\n\n\n\n\n\n\nPractical significance\n\n\n\n\nIs the size of this effect important?\nWhat is the magnitude of the effect?\nShould we care about this effect?\n\n\n\n\n\nIn many cases, statistical significance is little more than a statement of how large a sample was used to test a question."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#example",
+    "href": "unit_01/unit_01_converted.html#example",
+    "title": "Week 6",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#practical-significance-context",
+    "href": "unit_01/unit_01_converted.html#practical-significance-context",
+    "title": "Week 6",
+    "section": "Practical Significance: Context",
+    "text": "Practical Significance: Context\n\n\n\nProvide context for your audience to reason about results.\n\n\n\nWho is your audience?\nWhat action might be taken based on these results?\nHow does this result alter how you would run the business?\nWhat is the cost-benefit for implementing a change based on this result?\nHow does this result ``stack up’’ to other effects?\n\n\n\nUnderstanding and communicating the business context is what separates good analysts from great data scientists.\nOne might be very certain of a very small increase in a desirable metric; one might be less certain of a very large increase in a desirable metric.\nIn many places, every relationship examined is significant. But, what do they ?\nWe should directly tie this in to the machine learning conversation they’re going to have in 207 about feature importance."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#practical-significance-model-explainability",
+    "href": "unit_01/unit_01_converted.html#practical-significance-model-explainability",
+    "title": "Week 6",
+    "section": "Practical Significance: Model Explainability",
+    "text": "Practical Significance: Model Explainability\n\nSome tasks require explainable models.\nFinance, healthcare, insurance, and other regulated industries stipulate specific model forms .\nHumans reason in linear hypotheses— higher-dimensional and conditional hypotheses are too much to keep in mind."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#practical-significance-effect-sizes",
+    "href": "unit_01/unit_01_converted.html#practical-significance-effect-sizes",
+    "title": "Week 6",
+    "section": "Practical Significance: Effect Sizes",
+    "text": "Practical Significance: Effect Sizes\n\n\n\n\n\n\nEffect sizes\n\n\n\n\nSingle-number metrics that characterize the magnitude of an effect\nPopulation parameters that we estimate— do not vary based on sample size\n\n\n\n\n\n\n\n\n\n\n\n\nThis headline test feels out of place relative to the other content on this section."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#standard-effect-size-measures",
+    "href": "unit_01/unit_01_converted.html#standard-effect-size-measures",
+    "title": "Week 6",
+    "section": "Standard Effect Size Measures",
+    "text": "Standard Effect Size Measures\nStandardized effect sizes are designed to be flexible and apply in many scenarios:\n\nCohen’s \\(d\\)\nCorrelation \\(\\rho\\)\nCramer’s \\(V\\)\nGeneral metrics ignore the specific context around your research or business question.\n\n\n\nThese provide general guidance about whether an effect is small, medium, or large."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#cohens-d",
+    "href": "unit_01/unit_01_converted.html#cohens-d",
+    "title": "Week 6",
+    "section": "Cohen’s d",
+    "text": "Cohen’s d\nSometimes, a mean (or difference in means) is hard to assess because the units are unfamiliar.\n\n : The effect of angled bristles on tooth decay is 5 millicaviparsecs per brushstroke %% TO THE REVIEWERS: Yes, we know this isn’t a word\n\n\n\n\n\n\n\nCohen’s d\n\n\n\nCompare effect size relative to the underlying natural variation\nin the outcome.\n\\[\n  \\text{Cohen's } d = \\frac{\\text{mean difference}}{\\text{standard\n      deviation}}\n\\]"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#cohens-d-cont.",
+    "href": "unit_01/unit_01_converted.html#cohens-d-cont.",
+    "title": "Week 6",
+    "section": "Cohen’s d (cont.)",
+    "text": "Cohen’s d (cont.)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#section-3",
+    "href": "unit_01/unit_01_converted.html#section-3",
+    "title": "Week 6",
+    "section": "",
+    "text": "Rules of thumb (according to Cohen)\n\n\n\n\n\n\n\nApplicable across a huge number of contexts\nIgnores any important differences between context\nSaving dollars or saving lives are the same to Cohen’s d"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#takeaways",
+    "href": "unit_01/unit_01_converted.html#takeaways",
+    "title": "Week 6",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nAfter a statistical test, it’s important to assess both statistical significance and practical significance.\nStandard effect size measures can help in a wide variety of situations.\nBut don’t get carried away and reach for them automatically.\nThe main objective is to clearly explain how important the magnitude of the effect is."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#guidelines-for-statistical-reporting-1",
+    "href": "unit_01/unit_01_converted.html#guidelines-for-statistical-reporting-1",
+    "title": "Week 6",
+    "section": "Guidelines for Statistical Reporting",
+    "text": "Guidelines for Statistical Reporting\n\nCommunicating your results is a key part of statistical analysis\nIn this class (and other classes in the program) we’ll ask you to submit your analysis as a written report\nNext are some guidelines to keep in mind when writing a report\n\nIn this case, the guidelines are specific to exploratory analysis"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#guideline-one",
+    "href": "unit_01/unit_01_converted.html#guideline-one",
+    "title": "Week 6",
+    "section": "Guideline One",
+    "text": "Guideline One"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#guideline-two",
+    "href": "unit_01/unit_01_converted.html#guideline-two",
+    "title": "Week 6",
+    "section": "Guideline Two",
+    "text": "Guideline Two"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#guideline-three",
+    "href": "unit_01/unit_01_converted.html#guideline-three",
+    "title": "Week 6",
+    "section": "Guideline Three",
+    "text": "Guideline Three"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#guideline-four",
+    "href": "unit_01/unit_01_converted.html#guideline-four",
+    "title": "Week 6",
+    "section": "Guideline Four",
+    "text": "Guideline Four"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#guideline-five",
+    "href": "unit_01/unit_01_converted.html#guideline-five",
+    "title": "Week 6",
+    "section": "Guideline Five",
+    "text": "Guideline Five"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#guideline-five-cont.",
+    "href": "unit_01/unit_01_converted.html#guideline-five-cont.",
+    "title": "Week 6",
+    "section": "Guideline Five (cont.)",
+    "text": "Guideline Five (cont.)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#guideline-six",
+    "href": "unit_01/unit_01_converted.html#guideline-six",
+    "title": "Week 6",
+    "section": "Guideline Six",
+    "text": "Guideline Six"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted.html#guideline-six-cont.",
+    "href": "unit_01/unit_01_converted.html#guideline-six-cont.",
+    "title": "Week 6",
+    "section": "Guideline Six (cont.)",
+    "text": "Guideline Six (cont.)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#introduction",
+    "href": "unit_01/unit_01_converted_slides.html#introduction",
+    "title": "Week 6",
+    "section": "Introduction",
+    "text": "Introduction\n\nHypothesis, H, is a model for how the world might work\nIn practice, evidence is rarely conclusive\nWe want \\(Pr(H|D)\\) , or the probability of the event that our hypothesis is true"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#the-dilemma",
+    "href": "unit_01/unit_01_converted_slides.html#the-dilemma",
+    "title": "Week 6",
+    "section": "The Dilemma",
+    "text": "The Dilemma\nWhether our hypothesis is true is something we can never know\n\nThe world is not a perfectly controlled lab\nEvidence collected contains information but does not begin to identify a unique model out of all the possible models\nWe do not know how to weight all the possibilities out there"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#example-1",
+    "href": "unit_01/unit_01_converted_slides.html#example-1",
+    "title": "Week 6",
+    "section": "Example 1",
+    "text": "Example 1\nIs there enough information to answer this? - How did the coin get there? - The context is missing: - How do we choose between the different models? - How do we weight all the alternatives? - Even with more information, you can never know the context completely"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#example-2",
+    "href": "unit_01/unit_01_converted_slides.html#example-2",
+    "title": "Week 6",
+    "section": "Example 2",
+    "text": "Example 2\n\nWhat is the probability that Newton’s theory of gravity is correct?\n Newton’s second theory seemed to work up to the precision of 17th-century instruments\nOnly later were instruments developed that were precise enough to show Newton’s laws were incorrect"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#example-2-cont.",
+    "href": "unit_01/unit_01_converted_slides.html#example-2-cont.",
+    "title": "Week 6",
+    "section": "Example 2 (cont.)",
+    "text": "Example 2 (cont.)\n\nHow could Newton decide how probable his model was compared to general relativity (not imagined yet)?\nIf he could have imagined another theory, would we be equipped to compare two very different ideas?\nWe could never write down the infinite number of models consistent with observations of the planet in order to assign each a probability\nIt may not even make sense to assign a probability to Newton’s gravity (eg. true state of world or not)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#example-3",
+    "href": "unit_01/unit_01_converted_slides.html#example-3",
+    "title": "Week 6",
+    "section": "Example 3",
+    "text": "Example 3\nYou discover three specimens of a new species of squid that measure 3.2, 3.3, and 4.0 feet long\n\nWhat is the probability that the average length amount the entire species is 3.5 feet? - Probability zero for a single number (point estimate) probability that the average length is between 3 and 4 feet?\nPositive number for length\nNo new numbers that have not been imagined\nA better grasp of the possibilities"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#example-3-cont.",
+    "href": "unit_01/unit_01_converted_slides.html#example-3-cont.",
+    "title": "Week 6",
+    "section": "Example 3 (cont.)",
+    "text": "Example 3 (cont.)\n\nHowever, we don’t know how representative the specimens are - We still don’t know all the relevant information\nExamples: deep water pressure, amount of light"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#two-branches-of-statistics",
+    "href": "unit_01/unit_01_converted_slides.html#two-branches-of-statistics",
+    "title": "Week 6",
+    "section": "Two Branches of Statistics",
+    "text": "Two Branches of Statistics"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#the-birth-of-modern-statistics",
+    "href": "unit_01/unit_01_converted_slides.html#the-birth-of-modern-statistics",
+    "title": "Week 6",
+    "section": "The Birth of Modern Statistics",
+    "text": "The Birth of Modern Statistics\n - Before the 1930’s, there were lots of statistical procedures but no coherent account of how to choose the right one - Neyman and Pearson published articles that added a rigorous mathematical treatment, forming the basis of frequentist statistics"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#the-central-dilemma",
+    "href": "unit_01/unit_01_converted_slides.html#the-central-dilemma",
+    "title": "Week 6",
+    "section": "The Central Dilemma",
+    "text": "The Central Dilemma\n\nWe observe data, \\(D\\)\nGiven that this data occurs, we want the probability that our hypothesis \\(P(H|D)\\) is \nTo a strict frequentist:\nNot just impossible to compute\nDoes not even make sense to assign a probability to a hypothesis"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#objective-probability",
+    "href": "unit_01/unit_01_converted_slides.html#objective-probability",
+    "title": "Week 6",
+    "section": "Objective Probability",
+    "text": "Objective Probability\nA frequentist defines probability as a matter of long-run frequencies\n\nWe need to specify a collective of elements - Eg. throws of a dice\n a frame of observations that can happen over and over\nAs number of observations approaches infinity, proportion of throws of the die that show a 3 is 1/6\nThe probability is the long-run frequency of the event relative to all observations (or of 3’s relative to all throws) - Called"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#objective-probability-and-hypothesis",
+    "href": "unit_01/unit_01_converted_slides.html#objective-probability-and-hypothesis",
+    "title": "Week 6",
+    "section": "Objective Probability and Hypothesis",
+    "text": "Objective Probability and Hypothesis\n\nIf you view probability as objective, you cannot talk about the probability of a hypothesis\nit is just true or false\n The probability of a hypothesis - Allows for disagreement about what it is\nReflects our lack of information\n\n - We need a long-run collective"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#prdh",
+    "href": "unit_01/unit_01_converted_slides.html#prdh",
+    "title": "Week 6",
+    "section": "\\(PR(D|H)\\)",
+    "text": "\\(PR(D|H)\\)\n\n\\(H\\) = hypothesis\n\\(D\\) = data\nAssume H is true and call it the null hypothesis\nHas to be quite specific (the only extra assumption we’re making)\nIs the basis for predictions we need to make about what data should come out of the experiment\nGoverns how the experiment behaves as we run it over and over"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#prdh-cont.",
+    "href": "unit_01/unit_01_converted_slides.html#prdh-cont.",
+    "title": "Week 6",
+    "section": "\\(PR(D|H)\\) (cont.)",
+    "text": "\\(PR(D|H)\\) (cont.)\nNow we have a meaningful collective\n\nCan look at the relative frequencies of different outcomes\nCan specifically look at the number of hypothetical experiments in which we would get data at least as extreme as D - Captured by \\(p\\) -value\n The probability of getting data as extreme as our observations, assuming the null hypothesis is true"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#notes-while-screensharing",
+    "href": "unit_01/unit_01_converted_slides.html#notes-while-screensharing",
+    "title": "Week 6",
+    "section": "Notes while Screensharing",
+    "text": "Notes while Screensharing\nt [\n\\[\\begin{aligned}\n    & g(x_{1}, X_{2}, \\dots, X_{n}) \\rightarrow S \\in \\mathbb{R} \\\\\n    H_{0} &= 0\n  \\end{aligned}\\]\n]"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#hypothesis-test-example",
+    "href": "unit_01/unit_01_converted_slides.html#hypothesis-test-example",
+    "title": "Week 6",
+    "section": "Hypothesis Test Example",
+    "text": "Hypothesis Test Example\n\n\nLet’s use a stylized example to motivate the hypothesis testing framework."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#two-possible-states-of-the-world",
+    "href": "unit_01/unit_01_converted_slides.html#two-possible-states-of-the-world",
+    "title": "Week 6",
+    "section": "Two Possible States of the World",
+    "text": "Two Possible States of the World\n Begin with a reasonable default supposition; leave this supposition behind if data provides compelling evidence\n\n\n\n\n\n\nWith compelling evidence, we leave the specific null hypothesis ( \\(H_{\\varnothing}\\) ) for the alternative ( \\(H_{a}\\) )"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#a-hypothesis-test",
+    "href": "unit_01/unit_01_converted_slides.html#a-hypothesis-test",
+    "title": "Week 6",
+    "section": "A Hypothesis Test",
+    "text": "A Hypothesis Test\nA hypothesis test is a procedure.\n ::: {.notes} - This is very strict: you might want your hypothesis test to do more, to give you fine-grained information about the world. but statistics doesn’t work like that. All we can do, is set up a specific null hypothesis and make this binary decision: reject or not reject. :::"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#false-positive-and-false-negative-errors",
+    "href": "unit_01/unit_01_converted_slides.html#false-positive-and-false-negative-errors",
+    "title": "Week 6",
+    "section": "False Positive and False Negative Errors",
+    "text": "False Positive and False Negative Errors"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#false-positive-and-false-negative-errors-cont.",
+    "href": "unit_01/unit_01_converted_slides.html#false-positive-and-false-negative-errors-cont.",
+    "title": "Week 6",
+    "section": "False Positive and False Negative Errors (cont.)",
+    "text": "False Positive and False Negative Errors (cont.)\n - Typically the most destructive - Error rate, denoted \\(\\alpha\\) , is the probability of rejecting the null hypothesis when we should not; \\(P(\\text{Reject } H_\\varnothing |\n    H_\\varnothing)\\) - Starting with Ronald Fisher: set \\(\\alpha = 0.05\\)\nA hypothesis test is a procedure for rejecting or not rejecting a null, such that the false positive error rate is controlled ( \\(\\alpha = 0.05\\) )."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#breaking-down-a-test-procedure",
+    "href": "unit_01/unit_01_converted_slides.html#breaking-down-a-test-procedure",
+    "title": "Week 6",
+    "section": "Breaking Down a Test Procedure",
+    "text": "Breaking Down a Test Procedure\n - A function of our sample - Measures deviations from the null hypothesis - Distribution must be completely determined by the null\n - A set of values for which we will reject the null - Chosen to be contrary to the null - Total probability must be \\(\\alpha = 0.05\\)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#what-a-hypothesis-test-doesnt-do",
+    "href": "unit_01/unit_01_converted_slides.html#what-a-hypothesis-test-doesnt-do",
+    "title": "Week 6",
+    "section": "What a Hypothesis Test Doesn’t Do",
+    "text": "What a Hypothesis Test Doesn’t Do\n - We control Type 1 error rates - We cannot control Type 2 error rates - How can you be sure the real B is not 0.01? Or 0.00001? \n - The valid decisions are reject and fail to reject."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#section-2",
+    "href": "unit_01/unit_01_converted_slides.html#section-2",
+    "title": "Week 6",
+    "section": "",
+    "text": "t\n\n\nWe want to know if Vitamin W has an effect. so we write \\(H_0: \\mu = 0\\).\nWe need a statistic, and a rejection region\nFor our statistic, we usually want to find something that follows a famous distribution.\nCan use the standardized mean. \\(z = \\frac{\\bar{B}}{2} \\sim N(0,1)\\)\nFor our rejection region , we need to choose a subset of the real numbers. I’ll show you the most common choice, above 1.96 and below -1.96.\nWhy these numbers? If you integrate, you get a probability of 0.05.\nEx: \\(\\overline{B} = -5\\). then \\(z = 2.5\\) REJECT"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#the-two-tailed-z-test",
+    "href": "unit_01/unit_01_converted_slides.html#the-two-tailed-z-test",
+    "title": "Week 6",
+    "section": "The Two-Tailed z-Test",
+    "text": "The Two-Tailed z-Test\n - : \\(\\mu = 0\\) - : \\(\\mu \\neq 0\\)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#the-one-tailed-z-test",
+    "href": "unit_01/unit_01_converted_slides.html#the-one-tailed-z-test",
+    "title": "Week 6",
+    "section": "The One-Tailed z-Test",
+    "text": "The One-Tailed z-Test\n - : \\(\\mu = 0\\) - : \\(\\mu &gt; 0\\) - : \\(\\mu &lt; 0\\)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#choosing-one-or-two-tails",
+    "href": "unit_01/unit_01_converted_slides.html#choosing-one-or-two-tails",
+    "title": "Week 6",
+    "section": "Choosing One or Two Tails",
+    "text": "Choosing One or Two Tails\n \nSwitching your test after you see the statistic is cheating.\n\n\nOne-tailed and two-tailed tests ask different questions, and are interchangeable.\nIt is kind of like being ID when you’re buy a beer – they’re not asking, Is this person different from 21?'' They're     asking,Is this person older than 21?’’"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#one-tailed-test-things-to-consider",
+    "href": "unit_01/unit_01_converted_slides.html#one-tailed-test-things-to-consider",
+    "title": "Week 6",
+    "section": "One-Tailed Test: Things to Consider",
+    "text": "One-Tailed Test: Things to Consider\nBefore using a one-tailed test, ask yourself these questions:\n\nWill the audience believe that I started with one tail before I saw the data?\nWill the audience share my opinion of which tail is interesting?\nAm I really 100 % committed to only this tail? - What if the effect turns out to be huge, but in the other direction?\n\n\nWould I be willing to call that a negative result?\nCan I convince my audience I have this much commitment?\n\n\n\n``Do you feel lucky, punk? Well do ya?’’"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#t-test-assumptions-part-i",
+    "href": "unit_01/unit_01_converted_slides.html#t-test-assumptions-part-i",
+    "title": "Week 6",
+    "section": "T-Test Assumptions, Part I",
+    "text": "T-Test Assumptions, Part I\n\n\n\n\n\n\n\nAssumptions of t-test\n\n\nThe textbook assumptions\n\n- $X$ is a metric variable.\n\n\\(\\{X_1,X_2,...,X_n\\}\\) is a random sample.\n\\(X\\) has a normal distribution.\n\n\n\n\n\nVariables are almost never normal.\n\n\nAnd so, these assumptions are nearly never met in practice"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#t-test-assumptions-part-ii",
+    "href": "unit_01/unit_01_converted_slides.html#t-test-assumptions-part-ii",
+    "title": "Week 6",
+    "section": "T-Test Assumptions, Part II",
+    "text": "T-Test Assumptions, Part II\nBut, in the large sample case, this is more plausible.\n\n\n\n\n\n\n\nLarge sample t-test assumptions\n\n\n: - \\(X\\) is a metric variable - \\(\\{X_1,X_2,...,X_n\\}\\) is a random sample - \\(n\\) is large enough that the CLT implies a normal distribution of mean : The t-test is asymptotically valid"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#t-test-assumptions-part-iii",
+    "href": "unit_01/unit_01_converted_slides.html#t-test-assumptions-part-iii",
+    "title": "Week 6",
+    "section": "T-Test Assumptions, Part III",
+    "text": "T-Test Assumptions, Part III"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#t-test-assumptions-part-iv",
+    "href": "unit_01/unit_01_converted_slides.html#t-test-assumptions-part-iv",
+    "title": "Week 6",
+    "section": "T-Test Assumptions, Part IV",
+    "text": "T-Test Assumptions, Part IV\nThe t-test is considered “reasonably robust,” even when \\(n&lt;30\\) , as long as deviations from normality are moderate.\nHowever, watch out for strong skewness, especially when \\(n&lt;30\\) .\n\n\nDAH: We’ve got to give students more to work with than this; I think that this might end up being unsatisfying for many folks."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#t-test-assumptions-1",
+    "href": "unit_01/unit_01_converted_slides.html#t-test-assumptions-1",
+    "title": "Week 6",
+    "section": "T-Test Assumptions",
+    "text": "T-Test Assumptions\nMore practical guidance:\n\n\\(X\\) is a metric variable.\n\\(\\{X_1,X_2,...,X_n\\}\\) is a random sample.\nThe distribution is not too non-normal, considering \\(n\\) .\nWhen the t-test is not valid, consider using a non-parametric test instead."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#introducing-p-values",
+    "href": "unit_01/unit_01_converted_slides.html#introducing-p-values",
+    "title": "Week 6",
+    "section": "Introducing P-Values",
+    "text": "Introducing P-Values\n\n\nLet’s note 2 things right away: just like in hypothesis testing.\nWe’re going to assume the null is true.\nWe’re measuring the probability of data - We may be interested in the probability that the null is correct - but statistics doesn’t let us calculate that."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#z-distribution",
+    "href": "unit_01/unit_01_converted_slides.html#z-distribution",
+    "title": "Week 6",
+    "section": "Z-Distribution",
+    "text": "Z-Distribution"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#the-p-value-for-a-z-test",
+    "href": "unit_01/unit_01_converted_slides.html#the-p-value-for-a-z-test",
+    "title": "Week 6",
+    "section": "The P-Value for a Z-Test",
+    "text": "The P-Value for a Z-Test\n\n\n\\(= 3 - 0 / ( 20 / \\sqrt{100} ) = 1.5\\)\n\\(p =\n  2*( 1- pnorm(1.5)) = 0.13\\)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#the-p-value-and-decision-rules-part-i",
+    "href": "unit_01/unit_01_converted_slides.html#the-p-value-and-decision-rules-part-i",
+    "title": "Week 6",
+    "section": "The P-Value and Decision Rules, Part I",
+    "text": "The P-Value and Decision Rules, Part I\nNeyman-Pearson hypothesis testing: rules to make a decision and usually be right ( \\(\\alpha = 0.05\\) )\n\nStrict frequentist with a dichotomous decision rule: treat \\(z=2\\) and \\(z=10\\) identically.\nBut is there value in knowing how contrary the data is to the null?"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#the-p-value-and-decision-rules-part-ii",
+    "href": "unit_01/unit_01_converted_slides.html#the-p-value-and-decision-rules-part-ii",
+    "title": "Week 6",
+    "section": "The P-Value and Decision Rules, Part II",
+    "text": "The P-Value and Decision Rules, Part II\n\\[\\begin{align*}\n    |z| & &gt; \\text{critical value} \\Rightarrow \\text{reject } H_{0} \\\\\n    |z| & &lt; \\text{critical value} \\Rightarrow \\text{fail to reject } H_{0}\n  \\end{align*}\\]"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#the-p-value-and-decision-rules-part-iii",
+    "href": "unit_01/unit_01_converted_slides.html#the-p-value-and-decision-rules-part-iii",
+    "title": "Week 6",
+    "section": "The P-Value and Decision Rules, Part III",
+    "text": "The P-Value and Decision Rules, Part III\n\\[\\begin{align*}\n    |z| & &gt; \\text{critical value} \\Rightarrow \\text{reject } H_{0} \\\\\n    |z| & &lt; \\text{critical value} \\Rightarrow \\text{fail to reject } H_{0}\n  \\end{align*}\\]"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#an-equivalent-decision-procedure",
+    "href": "unit_01/unit_01_converted_slides.html#an-equivalent-decision-procedure",
+    "title": "Week 6",
+    "section": "An Equivalent Decision Procedure",
+    "text": "An Equivalent Decision Procedure\nCompute p-value.\n\nIf \\(p&lt;.05 \\Rightarrow \\text{reject } H_0\\)\nIf \\(p\\geq.05 \\Rightarrow \\text{do not reject } H_0\\)\nBut, can you justify making such a bright-line statement after reducing information so much?\n\n\nConcept\nMeasurement\nStatistic\nAssumptions about distribution\n\nReject/fail to reject"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#p-value-convention",
+    "href": "unit_01/unit_01_converted_slides.html#p-value-convention",
+    "title": "Week 6",
+    "section": "P-Value Convention",
+    "text": "P-Value Convention"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#reporting-test-results",
+    "href": "unit_01/unit_01_converted_slides.html#reporting-test-results",
+    "title": "Week 6",
+    "section": "Reporting Test Results",
+    "text": "Reporting Test Results\n\nA t-test for the effect of Vitamin W on blood pressure was highly significant ( \\(t=3.1\\) , \\(p=.008\\) ).\nWe found evidence that Vitamin W decreases blood pressure ( \\(t=2.3\\) , \\(p=.04\\) ).\nThe effect of Vitamin X on blood pressure was not statistically significant ( \\(t=1.2\\) , \\(p=.23\\) ).\n\nThis is half the story; next, you’ll need to describe practical significance."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#variable-importance-and-p-values",
+    "href": "unit_01/unit_01_converted_slides.html#variable-importance-and-p-values",
+    "title": "Week 6",
+    "section": "Variable Importance and P-Values",
+    "text": "Variable Importance and P-Values\nt\nDoes a small p-value mean that a variable is ``important’’?\n\nStatistical significance\nPractical significance"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#a-warning",
+    "href": "unit_01/unit_01_converted_slides.html#a-warning",
+    "title": "Week 6",
+    "section": "A Warning",
+    "text": "A Warning\nA very common mistake is to assume a p-value is the chance the null hypothesis is true.\nFrequentist statistics cannot tell you the probability of a hypothesis!"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#a-warning-cont.",
+    "href": "unit_01/unit_01_converted_slides.html#a-warning-cont.",
+    "title": "Week 6",
+    "section": "A Warning (cont.)",
+    "text": "A Warning (cont.)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#false-positive-and-false-negative-errors-1",
+    "href": "unit_01/unit_01_converted_slides.html#false-positive-and-false-negative-errors-1",
+    "title": "Week 6",
+    "section": "False Positive and False Negative Errors",
+    "text": "False Positive and False Negative Errors\n\nFalse Positive (I) errors are jumping without cause\nFalse Negative (II) errors are failing to jump when you should - Failing to detect a real effect\nMissed opportunity to create a product, publish a paper, or advance knowledge"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#statistical-power-part-i",
+    "href": "unit_01/unit_01_converted_slides.html#statistical-power-part-i",
+    "title": "Week 6",
+    "section": "Statistical Power, Part I",
+    "text": "Statistical Power, Part I\n\nFalse Negative Error Rate: \\(\\beta = P(\\text{not rejecting }H_0 | H_a)\\)\nStatistical power: \\(1-\\beta\\)\nStatistical power is the probability of supporting the alternate hypothesis, assuming it is true"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#statistical-power-part-ii",
+    "href": "unit_01/unit_01_converted_slides.html#statistical-power-part-ii",
+    "title": "Week 6",
+    "section": "Statistical Power, Part II",
+    "text": "Statistical Power, Part II"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#statistical-power-part-ii-1",
+    "href": "unit_01/unit_01_converted_slides.html#statistical-power-part-ii-1",
+    "title": "Week 6",
+    "section": "Statistical Power, Part II",
+    "text": "Statistical Power, Part II"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#statistical-power-part-iii",
+    "href": "unit_01/unit_01_converted_slides.html#statistical-power-part-iii",
+    "title": "Week 6",
+    "section": "Statistical Power, Part III",
+    "text": "Statistical Power, Part III\nHow to increase power\n\nIncrease sample size.\nChoose a powerful test (if you can justify its assumptions)."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#practical-significance-1",
+    "href": "unit_01/unit_01_converted_slides.html#practical-significance-1",
+    "title": "Week 6",
+    "section": "Practical significance",
+    "text": "Practical significance\n\n\n\n\n\n\n\nStatistical significance\n\n\n\nHow much does the data support the existence of an effect?\n\n\n\n\n\n\n\n\n\n\n\n\nPractical significance\n\n\n\nIs the size of this effect important?\nWhat is the magnitude of the effect?\nShould we care about this effect?\n\n\n\n\n\n\n\nIn many cases, statistical significance is little more than a statement of how large a sample was used to test a question."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#example",
+    "href": "unit_01/unit_01_converted_slides.html#example",
+    "title": "Week 6",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#practical-significance-context",
+    "href": "unit_01/unit_01_converted_slides.html#practical-significance-context",
+    "title": "Week 6",
+    "section": "Practical Significance: Context",
+    "text": "Practical Significance: Context\n\n\n\nProvide context for your audience to reason about results.\n\n\n\nWho is your audience?\nWhat action might be taken based on these results?\nHow does this result alter how you would run the business?\nWhat is the cost-benefit for implementing a change based on this result?\nHow does this result ``stack up’’ to other effects?\n\n\n\nUnderstanding and communicating the business context is what separates good analysts from great data scientists.\nOne might be very certain of a very small increase in a desirable metric; one might be less certain of a very large increase in a desirable metric.\nIn many places, every relationship examined is significant. But, what do they ?\nWe should directly tie this in to the machine learning conversation they’re going to have in 207 about feature importance."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#practical-significance-model-explainability",
+    "href": "unit_01/unit_01_converted_slides.html#practical-significance-model-explainability",
+    "title": "Week 6",
+    "section": "Practical Significance: Model Explainability",
+    "text": "Practical Significance: Model Explainability\n\nSome tasks require explainable models.\nFinance, healthcare, insurance, and other regulated industries stipulate specific model forms .\nHumans reason in linear hypotheses— higher-dimensional and conditional hypotheses are too much to keep in mind."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#practical-significance-effect-sizes",
+    "href": "unit_01/unit_01_converted_slides.html#practical-significance-effect-sizes",
+    "title": "Week 6",
+    "section": "Practical Significance: Effect Sizes",
+    "text": "Practical Significance: Effect Sizes\n\n\n\n\n\n\n\nEffect sizes\n\n\n\nSingle-number metrics that characterize the magnitude of an effect\nPopulation parameters that we estimate— do not vary based on sample size\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis headline test feels out of place relative to the other content on this section."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#standard-effect-size-measures",
+    "href": "unit_01/unit_01_converted_slides.html#standard-effect-size-measures",
+    "title": "Week 6",
+    "section": "Standard Effect Size Measures",
+    "text": "Standard Effect Size Measures\nStandardized effect sizes are designed to be flexible and apply in many scenarios:\n\nCohen’s \\(d\\)\nCorrelation \\(\\rho\\)\nCramer’s \\(V\\)\nGeneral metrics ignore the specific context around your research or business question.\n\n\n\nThese provide general guidance about whether an effect is small, medium, or large."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#cohens-d",
+    "href": "unit_01/unit_01_converted_slides.html#cohens-d",
+    "title": "Week 6",
+    "section": "Cohen’s d",
+    "text": "Cohen’s d\nSometimes, a mean (or difference in means) is hard to assess because the units are unfamiliar.\n\n : The effect of angled bristles on tooth decay is 5 millicaviparsecs per brushstroke %% TO THE REVIEWERS: Yes, we know this isn’t a word\n\n\n\n\n\n\n\n\nCohen’s d\n\n\nCompare effect size relative to the underlying natural variation\nin the outcome.\n\\[\n  \\text{Cohen's } d = \\frac{\\text{mean difference}}{\\text{standard\n      deviation}}\n\\]"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#cohens-d-cont.",
+    "href": "unit_01/unit_01_converted_slides.html#cohens-d-cont.",
+    "title": "Week 6",
+    "section": "Cohen’s d (cont.)",
+    "text": "Cohen’s d (cont.)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#section-3",
+    "href": "unit_01/unit_01_converted_slides.html#section-3",
+    "title": "Week 6",
+    "section": "",
+    "text": "Rules of thumb (according to Cohen)\n\n\n\n\n\n\n\n\nApplicable across a huge number of contexts\nIgnores any important differences between context\nSaving dollars or saving lives are the same to Cohen’s d"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#takeaways",
+    "href": "unit_01/unit_01_converted_slides.html#takeaways",
+    "title": "Week 6",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nAfter a statistical test, it’s important to assess both statistical significance and practical significance.\nStandard effect size measures can help in a wide variety of situations.\nBut don’t get carried away and reach for them automatically.\nThe main objective is to clearly explain how important the magnitude of the effect is."
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#guidelines-for-statistical-reporting-1",
+    "href": "unit_01/unit_01_converted_slides.html#guidelines-for-statistical-reporting-1",
+    "title": "Week 6",
+    "section": "Guidelines for Statistical Reporting",
+    "text": "Guidelines for Statistical Reporting\n\nCommunicating your results is a key part of statistical analysis\nIn this class (and other classes in the program) we’ll ask you to submit your analysis as a written report\nNext are some guidelines to keep in mind when writing a report\n\nIn this case, the guidelines are specific to exploratory analysis"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#guideline-one",
+    "href": "unit_01/unit_01_converted_slides.html#guideline-one",
+    "title": "Week 6",
+    "section": "Guideline One",
+    "text": "Guideline One"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#guideline-two",
+    "href": "unit_01/unit_01_converted_slides.html#guideline-two",
+    "title": "Week 6",
+    "section": "Guideline Two",
+    "text": "Guideline Two"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#guideline-three",
+    "href": "unit_01/unit_01_converted_slides.html#guideline-three",
+    "title": "Week 6",
+    "section": "Guideline Three",
+    "text": "Guideline Three"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#guideline-four",
+    "href": "unit_01/unit_01_converted_slides.html#guideline-four",
+    "title": "Week 6",
+    "section": "Guideline Four",
+    "text": "Guideline Four"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#guideline-five",
+    "href": "unit_01/unit_01_converted_slides.html#guideline-five",
+    "title": "Week 6",
+    "section": "Guideline Five",
+    "text": "Guideline Five"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#guideline-five-cont.",
+    "href": "unit_01/unit_01_converted_slides.html#guideline-five-cont.",
+    "title": "Week 6",
+    "section": "Guideline Five (cont.)",
+    "text": "Guideline Five (cont.)"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#guideline-six",
+    "href": "unit_01/unit_01_converted_slides.html#guideline-six",
+    "title": "Week 6",
+    "section": "Guideline Six",
+    "text": "Guideline Six"
+  },
+  {
+    "objectID": "unit_01/unit_01_converted_slides.html#guideline-six-cont.",
+    "href": "unit_01/unit_01_converted_slides.html#guideline-six-cont.",
+    "title": "Week 6",
+    "section": "Guideline Six (cont.)",
+    "text": "Guideline Six (cont.)"
+  },
+  {
+    "objectID": "unit_03/unit_03.html",
+    "href": "unit_03/unit_03.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Probability distributions are really flexible objects. That’s a great strength because they can represent a lot of different things.\n\n\n\n\n\n\n\n\n\n\nAll of these examples only use one random variable, and their distributions have very different shapes.\nTo represent all of these, we need a flexible mathematical object. We can change a distribution in an infinite number of ways. Move it up a bit in one place, move it down in another. That’s what we need to represent the rich variety of phenomena that we want to model.\nBut there’s a downside to all this flexibility…\n\n\n\n\n\nHighly flexible objects present obstacles:\n\nCannot specify density for every value: We can’t select a density for every possible point - that’s an infinite number of choices. And how could I ever communicate those choices to you?\nCannot communicate or reason about every value: Even if I could somehow transmit that information to you, what could you do with it? You can’t really compare each point of one density against another.\nCannot estimate density at every value given data: With finite data, you can’t estimate density at every point.\n\nWhy not restrict to distributions in a parametric family?\n\nThe real world isn’t that neat!\n“Agnostic” approach: minimal assumptions on the model.\n\n\n\n\n\nSummary tools are the hooks we use to estimate, reason about, and communicate about random variables.\n\n\n\n\n\n\n\nExpectation: Represents the center of a distribution.\nVariance: Represents the dispersion of a distribution.\n\n\n\n\n\nCovariance: A generalization of variance.\nCorrelation: An intuitive measure of linear association.\nIn this unit, we’re going to cover a few of the most foundational summary tools out there.\nWe’ll start with a single random variable.\nExpectation, as we’ll see, is like a mean, but a version of the mean for random variables. Variance is about how spread out a distribution is.\nThen we’ll move on to pairs of random variables - how do we summarize relationships?\nCovariance and correlation are tools that capture the strength of a linear relationship in a single number.\nAt the end of this unit, you’ll be much better placed to study, and communicate about random variables."
+  },
+  {
+    "objectID": "unit_03/unit_03.html#examples-of-distributions",
+    "href": "unit_03/unit_03.html#examples-of-distributions",
+    "title": "Week 3",
+    "section": "",
+    "text": "Probability distributions are really flexible objects. That’s a great strength because they can represent a lot of different things.\n\n\n\n\n\n\n\n\n\n\nAll of these examples only use one random variable, and their distributions have very different shapes.\nTo represent all of these, we need a flexible mathematical object. We can change a distribution in an infinite number of ways. Move it up a bit in one place, move it down in another. That’s what we need to represent the rich variety of phenomena that we want to model.\nBut there’s a downside to all this flexibility…"
+  },
+  {
+    "objectID": "unit_03/unit_03.html#the-downside-of-flexibility",
+    "href": "unit_03/unit_03.html#the-downside-of-flexibility",
+    "title": "Week 3",
+    "section": "",
+    "text": "Highly flexible objects present obstacles:\n\nCannot specify density for every value: We can’t select a density for every possible point - that’s an infinite number of choices. And how could I ever communicate those choices to you?\nCannot communicate or reason about every value: Even if I could somehow transmit that information to you, what could you do with it? You can’t really compare each point of one density against another.\nCannot estimate density at every value given data: With finite data, you can’t estimate density at every point.\n\nWhy not restrict to distributions in a parametric family?\n\nThe real world isn’t that neat!\n“Agnostic” approach: minimal assumptions on the model."
+  },
+  {
+    "objectID": "unit_03/unit_03.html#why-summarize",
+    "href": "unit_03/unit_03.html#why-summarize",
+    "title": "Week 3",
+    "section": "",
+    "text": "Summary tools are the hooks we use to estimate, reason about, and communicate about random variables."
+  },
+  {
+    "objectID": "unit_03/unit_03.html#foundational-summary-tools",
+    "href": "unit_03/unit_03.html#foundational-summary-tools",
+    "title": "Week 3",
+    "section": "",
+    "text": "Expectation: Represents the center of a distribution.\nVariance: Represents the dispersion of a distribution.\n\n\n\n\n\nCovariance: A generalization of variance.\nCorrelation: An intuitive measure of linear association.\nIn this unit, we’re going to cover a few of the most foundational summary tools out there.\nWe’ll start with a single random variable.\nExpectation, as we’ll see, is like a mean, but a version of the mean for random variables. Variance is about how spread out a distribution is.\nThen we’ll move on to pairs of random variables - how do we summarize relationships?\nCovariance and correlation are tools that capture the strength of a linear relationship in a single number.\nAt the end of this unit, you’ll be much better placed to study, and communicate about random variables."
+  },
+  {
+    "objectID": "unit_03/unit_03.html#review-of-operators-and-functions-1",
+    "href": "unit_03/unit_03.html#review-of-operators-and-functions-1",
+    "title": "Week 3",
+    "section": "Review of Operators and Functions",
+    "text": "Review of Operators and Functions\n\n\nAs you start reading about expectation, it’s good to be reminded that expectation is an example of an operator. Actually, all the summary tools we’re going to cover are operators, so let’s quickly review what that word means. What’s the difference between a function and an operator?\nWhen we say a function of a random variable, we mean a function from \\(\\mathbb{R}\\) to \\(\\mathbb{R}\\).\nA function takes the output of a random variable as input and maps it to a new real number.\nPutting a random variable into a function gives you another random variable.\nExpectation is an operator, which means it takes an entire random variable as input.\nSo, for example, \\(\\mathbb{E}[X]\\) is a real number."
+  },
+  {
+    "objectID": "unit_03/unit_03_slides.html#examples-of-distributions",
+    "href": "unit_03/unit_03_slides.html#examples-of-distributions",
+    "title": "Week 3",
+    "section": "Examples of Distributions",
+    "text": "Examples of Distributions\nThe number of friends on a social network\n\n\nProbability distributions are really flexible objects. That’s a great strength because they can represent a lot of different things.\n\nThe location of photons in a physics experiment\n\nThe liberal or conservative lean of members of congress\n\n\nAll of these examples only use one random variable, and their distributions have very different shapes.\nTo represent all of these, we need a flexible mathematical object. We can change a distribution in an infinite number of ways. Move it up a bit in one place, move it down in another. That’s what we need to represent the rich variety of phenomena that we want to model.\nBut there’s a downside to all this flexibility…"
+  },
+  {
+    "objectID": "unit_03/unit_03_slides.html#the-downside-of-flexibility",
+    "href": "unit_03/unit_03_slides.html#the-downside-of-flexibility",
+    "title": "Week 3",
+    "section": "The Downside of Flexibility",
+    "text": "The Downside of Flexibility\nHighly flexible objects present obstacles:\n\nCannot specify density for every value: We can’t select a density for every possible point - that’s an infinite number of choices. And how could I ever communicate those choices to you?\nCannot communicate or reason about every value: Even if I could somehow transmit that information to you, what could you do with it? You can’t really compare each point of one density against another.\nCannot estimate density at every value given data: With finite data, you can’t estimate density at every point.\n\nWhy not restrict to distributions in a parametric family?\n\nThe real world isn’t that neat!\n“Agnostic” approach: minimal assumptions on the model."
+  },
+  {
+    "objectID": "unit_03/unit_03_slides.html#why-summarize",
+    "href": "unit_03/unit_03_slides.html#why-summarize",
+    "title": "Week 3",
+    "section": "Why Summarize?",
+    "text": "Why Summarize?\n\nSummary tools are the hooks we use to estimate, reason about, and communicate about random variables."
+  },
+  {
+    "objectID": "unit_03/unit_03_slides.html#foundational-summary-tools",
+    "href": "unit_03/unit_03_slides.html#foundational-summary-tools",
+    "title": "Week 3",
+    "section": "Foundational Summary Tools",
+    "text": "Foundational Summary Tools\nOne Random Variable\n\nExpectation: Represents the center of a distribution.\nVariance: Represents the dispersion of a distribution.\n\nTwo Random Variables\n\nCovariance: A generalization of variance.\nCorrelation: An intuitive measure of linear association.\nIn this unit, we’re going to cover a few of the most foundational summary tools out there.\nWe’ll start with a single random variable.\nExpectation, as we’ll see, is like a mean, but a version of the mean for random variables. Variance is about how spread out a distribution is.\nThen we’ll move on to pairs of random variables - how do we summarize relationships?\nCovariance and correlation are tools that capture the strength of a linear relationship in a single number.\nAt the end of this unit, you’ll be much better placed to study, and communicate about random variables."
+  },
+  {
+    "objectID": "unit_03/unit_03_slides.html#review-of-operators-and-functions-1",
+    "href": "unit_03/unit_03_slides.html#review-of-operators-and-functions-1",
+    "title": "Week 3",
+    "section": "Review of Operators and Functions",
+    "text": "Review of Operators and Functions\n\n\nAs you start reading about expectation, it’s good to be reminded that expectation is an example of an operator. Actually, all the summary tools we’re going to cover are operators, so let’s quickly review what that word means. What’s the difference between a function and an operator?\nWhen we say a function of a random variable, we mean a function from \\(\\mathbb{R}\\) to \\(\\mathbb{R}\\).\nA function takes the output of a random variable as input and maps it to a new real number.\nPutting a random variable into a function gives you another random variable.\nExpectation is an operator, which means it takes an entire random variable as input.\nSo, for example, \\(\\mathbb{E}[X]\\) is a real number."
+  }
+]
