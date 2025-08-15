@@ -6535,8 +6535,8 @@
     "objectID": "unit_01/unit_01.html#what-is-a-model",
     "href": "unit_01/unit_01.html#what-is-a-model",
     "title": "Week 1",
-    "section": "What is a Model?",
-    "text": "What is a Model?\n\nImage: www.flickr.com/photos/brickset/ (CC BY 2.0)\n\n\nThis course is about statistical modeling. So let’s start by asking, what is a model?\nHere’s a model, built out of lego bricks.\nSome of you might have played with legos growing up, I definitely did.\nThe thing with legos is you learn some basic rules: the ways that legos can fit together.\nThen you can build something that resembles something in the real world, that captures important behavior.\nWhen you’re starting out with legos for the first time, you don’t immediately try to build a giant machine.\nMaybe you take two legos, test them to see how they fit together. Once you’re familiar with the pieces, you can then try to create something that you see in the world.",
+    "section": "",
+    "text": "Image: www.flickr.com/photos/brickset/ (CC BY 2.0)\n\n\nThis course is about statistical modeling. So let’s start by asking, what is a model?\nHere’s a model, built out of lego bricks.\nSome of you might have played with legos growing up, I definitely did.\nThe thing with legos is you learn some basic rules: the ways that legos can fit together.\nThen you can build something that resembles something in the real world, that captures important behavior.\nWhen you’re starting out with legos for the first time, you don’t immediately try to build a giant machine.\nMaybe you take two legos, test them to see how they fit together. Once you’re familiar with the pieces, you can then try to create something that you see in the world.",
     "crumbs": [
       "Week 1"
     ]
@@ -6545,8 +6545,8 @@
     "objectID": "unit_01/unit_01.html#what-is-a-statistical-model",
     "href": "unit_01/unit_01.html#what-is-a-statistical-model",
     "title": "Week 1",
-    "section": "What is a Statistical Model?",
-    "text": "What is a Statistical Model?\n\n\n\nA statistical model is also a representation of something in the world.\nWhen you have data, it comes from a real-world system.\nBut we don’t just care about this data, we have questions: what data is coming next? what other data could have plausible come up? what features of the world are consistent with this data?\nFor those questions, we can’t interrogate the world directly, we need a statistical model.\nThis is a representation that also creates data.\nWe have to pretend that this data actually came from the model. Then we can start to answer these questions.",
+    "section": "",
+    "text": "A statistical model is also a representation of something in the world.\nWhen you have data, it comes from a real-world system.\nBut we don’t just care about this data, we have questions: what data is coming next? what other data could have plausible come up? what features of the world are consistent with this data?\nFor those questions, we can’t interrogate the world directly, we need a statistical model.\nThis is a representation that also creates data.\nWe have to pretend that this data actually came from the model. Then we can start to answer these questions.",
     "crumbs": [
       "Week 1"
     ]
@@ -6555,8 +6555,8 @@
     "objectID": "unit_01/unit_01.html#course-plan",
     "href": "unit_01/unit_01.html#course-plan",
     "title": "Week 1",
-    "section": "Course Plan",
-    "text": "Course Plan\n\nPutting together statistical models\nFitting models to data\n\n\n\nWhen we designed this course, we decided to follow a very strict narrative.\nAt the highest level of abstraction, here’s our plan…\nMost courses jump around, looking at data, then building models, then back.\nWe believe it’s better to really commit to understanding models, then apply them.\nBecause of that, we’re actually not going to touch any data for several weeks.\nBut don’t worry, there will be a LOT of application in the second half of the course.",
+    "section": "",
+    "text": "Putting together statistical models\nFitting models to data\n\n\n\nWhen we designed this course, we decided to follow a very strict narrative.\nAt the highest level of abstraction, here’s our plan…\nMost courses jump around, looking at data, then building models, then back.\nWe believe it’s better to really commit to understanding models, then apply them.\nBecause of that, we’re actually not going to touch any data for several weeks.\nBut don’t worry, there will be a LOT of application in the second half of the course.",
     "crumbs": [
       "Week 1"
     ]
@@ -6565,8 +6565,8 @@
     "objectID": "unit_01/unit_01.html#first-models",
     "href": "unit_01/unit_01.html#first-models",
     "title": "Week 1",
-    "section": "First Models",
-    "text": "First Models\n\nImage: Hans Schou (CC BY-SA 3.0)\n\n\nWhen we start out, our models are not going to resemble the world at all\nThey will be brittle - with no flexibility to make them look like the real world\nActually, just like this tower of legos, they may be very rectangle.\nYou may ask, where did this rectangular distribution come from?\nThe answer is we made it up! and we just want to build something simple to understand how the bricks fit together",
+    "section": "",
+    "text": "Image: Hans Schou (CC BY-SA 3.0)\n\n\nWhen we start out, our models are not going to resemble the world at all\nThey will be brittle - with no flexibility to make them look like the real world\nActually, just like this tower of legos, they may be very rectangle.\nYou may ask, where did this rectangular distribution come from?\nThe answer is we made it up! and we just want to build something simple to understand how the bricks fit together",
     "crumbs": [
       "Week 1"
     ]
@@ -6575,8 +6575,8 @@
     "objectID": "unit_01/unit_01.html#useful-models",
     "href": "unit_01/unit_01.html#useful-models",
     "title": "Week 1",
-    "section": "Useful Models",
-    "text": "Useful Models\n\nImage: www.flickr.com/photos/brickset/ (CC BY 2.0)\n\n\nBut the key is not to worry about those problems at the beginning. as we learn more, we’ll see that our models can be more flexible, to represent a wide range of real world systems\nWe’ll also learn how to fit our models to data, and that’s going to make them really useful.",
+    "section": "",
+    "text": "Image: www.flickr.com/photos/brickset/ (CC BY 2.0)\n\n\nBut the key is not to worry about those problems at the beginning. as we learn more, we’ll see that our models can be more flexible, to represent a wide range of real world systems\nWe’ll also learn how to fit our models to data, and that’s going to make them really useful.",
     "crumbs": [
       "Week 1"
     ]
@@ -6585,8 +6585,8 @@
     "objectID": "unit_01/unit_01.html#probability-is-rules-for-putting-pieces-together",
     "href": "unit_01/unit_01.html#probability-is-rules-for-putting-pieces-together",
     "title": "Week 1",
-    "section": "Probability is Rules for Putting Pieces Together",
-    "text": "Probability is Rules for Putting Pieces Together\n\nImage: www.flickr.com/photos/billward/ (CC BY 2.0)\n\n\nThis week, we’re starting with the foundation. probability theory\nThis is really the nuts and bolts, how do the pieces of statistical models fit together.\nA strong understanding of probability will be useful to you through this course and through your career as a data scientist.",
+    "section": "",
+    "text": "Image: www.flickr.com/photos/billward/ (CC BY 2.0)\n\n\nThis week, we’re starting with the foundation. probability theory\nThis is really the nuts and bolts, how do the pieces of statistical models fit together.\nA strong understanding of probability will be useful to you through this course and through your career as a data scientist.",
     "crumbs": [
       "Week 1"
     ]
@@ -6626,7 +6626,7 @@
     "href": "unit_01/unit_01.html#probablity-is-a-system-of-reasoning",
     "title": "Week 1",
     "section": "Probablity is A System of Reasoning",
-    "text": "Probablity is A System of Reasoning\n\n\n  \"Essentially, the theory of probability is nothing but good common\n  sense reduced to mathematics. It provides an exact appreciation of\n  what sound minds feel with a kind of instinct, frequently without\n  being able to account for it.”\n\n  - Pierre-Simon Laplace\n\n\n\n\n\n\nHow would you define probability? Is it something that you encounter in your day-to-day life? A measure of randomness in the world?\nLaplace was a famous mathematician, who developed what we call the Bayesian interpretation of probability. Let’s read what he said in 1814.\nLaplace believed that, as humans, we are natural processors of probability. We think in probabilities, we use probability when we speak to each other.\nSo of course we think of probability as existing out in the natural world.\nBut, I’m here to tell you that probability is actually a model.\nThat’s right, the randomness that we perceive around us is a model that we use to make sense of the world.\nLet me try to convince you with a few examples.",
+    "text": "Probablity is A System of Reasoning\n\n\n\n“Essentially, the theory of probability is nothing but good common sense reduced to mathematics. It provides an exact appreciation of what sound minds feel with a kind of instinct, frequently without being able to account for it.”\n- Pierre-Simon Laplace\n\n\n\n\n\n\n\nHow would you define probability? Is it something that you encounter in your day-to-day life? A measure of randomness in the world?\nLaplace was a famous mathematician, who developed what we call the Bayesian interpretation of probability. Let’s read what he said in 1814.\nLaplace believed that, as humans, we are natural processors of probability. We think in probabilities, we use probability when we speak to each other.\nSo of course we think of probability as existing out in the natural world.\nBut, I’m here to tell you that probability is actually a model.\nThat’s right, the randomness that we perceive around us is a model that we use to make sense of the world.\nLet me try to convince you with a few examples.",
     "crumbs": [
       "Week 1"
     ]
@@ -6636,7 +6636,7 @@
     "href": "unit_01/unit_01.html#probability-is-a-model-of-the-world",
     "title": "Week 1",
     "section": "Probability is A Model of the World",
-    "text": "Probability is A Model of the World\n\n\n\n\n\n\nApocryphal quotations\n\n\n\n``_All models are wrong; some are useful._'' \\\\\\hspace{1em} —George Box\n\n\nProbability is:\n\nA mathematical construct\nA model or abstraction of the world\n\n\n\nBut I’m here to tell you that probability is just a model. It’s a very useful model - one that we can make mathematically precise. But it’s a model of the world.\nLet me try to convince you with a few examples.",
+    "text": "Probability is A Model of the World\n\n\n\n\n\n\nApocryphal quotations\n\n\n\n\n\nAll models are wrong; some are useful.’’\n\n— George Box\n\n\n\nProbability is:\n\nA mathematical construct\nA model or abstraction of the world\n\n\n\nBut I’m here to tell you that probability is just a model. It’s a very useful model - one that we can make mathematically precise. But it’s a model of the world.\nLet me try to convince you with a few examples.",
     "crumbs": [
       "Week 1"
     ]
@@ -6676,7 +6676,7 @@
     "href": "unit_01/unit_01.html#probability-is-a-model---example-3",
     "title": "Week 1",
     "section": "Probability is a Model - Example 3",
-    "text": "Probability is a Model - Example 3\n\n\n\nFinally, what about the most classic random event of all\n\nthe coin flip.\n\nEveryone knows that a coin lands heads 50\nBut is that true? What if you could flip the coin in exactly the same way each time.\nAnd make sure every single atom in the air was moving in exactly the same way.\nYou would probably find that it lands on the same side each time.\nReally, the only people who work with true randomness are quantum physicists. The rest of us are using probability as a model.",
+    "text": "Probability is a Model - Example 3\n\n\n\nFinally, what about the most classic random event of all: the coin flip.\nEveryone knows that a coin lands heads 50 percent of the time.\nBut is that true? What if you could flip the coin in exactly the same way each time.\nAnd make sure every single atom in the air was moving in exactly the same way.\nYou would probably find that it lands on the same side each time.\nReally, the only people who work with true randomness are quantum physicists. The rest of us are using probability as a model.",
     "crumbs": [
       "Week 1"
     ]
@@ -6686,7 +6686,7 @@
     "href": "unit_01/unit_01.html#an-axiomatic-approach",
     "title": "Week 1",
     "section": "An Axiomatic Approach",
-    "text": "An Axiomatic Approach\nWhy take an axiomatic approach?\n\nDefine a minimal set of statements that are consistent with the world we observe\nDeduce statements that must then be logically entailed\n\nThomas Kuhn’s Philosophy of Science\n\n&lt;1-&gt; Axiomatic statements\n&lt;1-&gt; Intermediate theories\n&lt;1-&gt; Testable hypotheses\n\n\n\nWe already have an intuitive model for probability in our heads, but that’s not enough to build statistical models - we need a mathematically precise system.\nHow do we create one? We distill our intuition into a small set of axioms. This is what mathematicians do…\nSuppose that you’re rolling die – you could observe that the P(1|2) is just P(1) + P(2). You could write that down as a fact.\n\nInstead, we need to identify axioms that explain the probabilities of many different events. induct up to a higher set of principles – the pieces of the model that we need, that are used to repredict to events.\nYou might find this frustrating – you might want to study this like it is an observational science; counting lions or cosmic rays. But, it isn’t!\nProbability is a model, so we’re inventing the rules, not discovering them. But if our system reminds us enough of the real world, it can be useful.",
+    "text": "An Axiomatic Approach\nWhy take an axiomatic approach?\n\nDefine a minimal set of statements that are consistent with the world we observe\nDeduce statements that must then be logically entailed\n\nThomas Kuhn’s Philosophy of Science\n1.Axiomatic statements 2. Intermediate theories 3. Testable hypotheses\n\n\nWe already have an intuitive model for probability in our heads, but that’s not enough to build statistical models - we need a mathematically precise system.\nHow do we create one? We distill our intuition into a small set of axioms. This is what mathematicians do…\nSuppose that you’re rolling die – you could observe that the \\(P(1|2)\\) is just \\(P(1)\\) + \\(P(2)\\). You could write that down as a fact.\nInstead, we need to identify axioms that explain the probabilities of many different events. induct up to a higher set of principles – the pieces of the model that we need, that are used to repredict to events.\nYou might find this frustrating – you might want to study this like it is an observational science; counting lions or cosmic rays. But, it isn’t!\nProbability is a model, so we’re inventing the rules, not discovering them. But if our system reminds us enough of the real world, it can be useful.",
     "crumbs": [
       "Week 1"
     ]
@@ -6716,7 +6716,7 @@
     "href": "unit_01/unit_01.html#elements-of-sets",
     "title": "Week 1",
     "section": "Elements of Sets",
-    "text": "Elements of Sets\nDefining a new set:\n\nElements go in curly braces. \nA colon means “such that”. \nSpecifying elements:\n’ \\(\\in\\) ’ means ’“is an element of.”\n’ \\(\\notin\\) ’ means “is not an element of.”\n’ \\(\\emptyset\\) ’ means the empty set. \n\n\n\nHow do you write down what elements are in a set?\nTo start with, there are two common techniques for building a brand new set\nFirst, we can just make a list of all the elements inside curly braces.",
+    "text": "Elements of Sets\nDefining a new set:\n\nElements go in curly braces. \nA colon means “such that”. \nSpecifying elements:\n\\(\\in\\) means “is an element of”\n\\(\\notin\\) means “is not an element of”\n\\(\\emptyset\\) means “the empty set”\n\n\n\nHow do you write down what elements are in a set?\nTo start with, there are two common techniques for building a brand new set\nFirst, we can just make a list of all the elements inside curly braces.",
     "crumbs": [
       "Week 1"
     ]
@@ -6816,7 +6816,7 @@
     "href": "unit_01/unit_01.html#set-partitions-1",
     "title": "Week 1",
     "section": "Set Partitions",
-    "text": "Set Partitions\n\n\n\n\n\n\nDefinition 1.1.12: partition\n\n\n\nA set of sets $A_{1}, A_{2}, \\dots, A_{n}$ is a _partition_ of set $S$, if $A_{1}, A_{2}, \\dots, A_{n}$ are nonempty and\npairwise disjoint, and if $S = A_{1} \\cup A_{2} \\cup \\cdots \\cup A_{n}$.\n\n\n\n\n\nWhile we’re talking about sets, there’s an idea that’s really useful, which is dividing a set up into a partition. Let’s read exactly what a partition is…\nHere’s a set",
+    "text": "Set Partitions\n\n\n\n\n\n\nDefinition 1.1.12: partition\n\n\n\nA set of sets \\(A_{1}, A_{2}, \\dots, A_{n}\\) is a partition of set \\(S\\), if \\(A_{1}, A_{2}, \\dots, A_{n}\\) are nonempty and pairwise disjoint, and if \\(S = A_{1} \\cup A_{2} \\cup \\cdots \\cup A_{n}\\).\n\n\n\n\n\nWhile we’re talking about sets, there’s an idea that’s really useful, which is dividing a set up into a partition. Let’s read exactly what a partition is…\nHere’s a set",
     "crumbs": [
       "Week 1"
     ]
@@ -6826,7 +6826,7 @@
     "href": "unit_01/unit_01.html#partition-rule-1",
     "title": "Week 1",
     "section": "Partition Rule 1",
-    "text": "Partition Rule 1\nGiven a set \\(A\\) and another set \\(B\\) , a partition of \\(A\\) is…\n\n\n\nCan you see the partition? Here’s one piece, and here’s the other.\nThis one is A minus B, this one is the intersection. Let’s quickly prove it…\n\\(A  = A \\cap(B \\cup B^C) = (A \\cap B) \\cup(A \\cap B^C)  = (A \\cap B) \\cup(A \\setminus B)\\)",
+    "text": "Partition Rule 1\nGiven a set \\(A\\) and another set \\(B\\), a partition of \\(A\\) is…\n\n\n\nCan you see the partition? Here’s one piece, and here’s the other.\nThis one is A minus B, this one is the intersection. Let’s quickly prove it…\n\\(A  = A \\cap(B \\cup B^C) = (A \\cap B) \\cup(A \\cap B^C)  = (A \\cap B) \\cup(A \\setminus B)\\)",
     "crumbs": [
       "Week 1"
     ]
@@ -6836,7 +6836,7 @@
     "href": "unit_01/unit_01.html#partition-rule-2",
     "title": "Week 1",
     "section": "Partition Rule 2",
-    "text": "Partition Rule 2\nGiven a set \\(A\\) and another set \\(B\\) , a partition of \\(A \\cup B\\) is…\n\n\n\nHere’s a slightly harder problem, what if we want to partition the entire union?\nThis time, we can break it apart into 3 pieces. Same as last time, plus also B minus A.\nLet’s quickly prove it…\nLet’s just apply the previous relationship twice!\n\\(A \\cup B   = (A \\cap B) \\cup(A \\setminus B) \\cup(A \\cap B) \\cup(B \\setminus A)\\)\nGuess what, A intersect B is in there twice. if you take a union of a set with itself, you get the same set, so we can just remove one of them and we’re done.",
+    "text": "Partition Rule 2\nGiven a set \\(A\\) and another set \\(B\\), a partition of \\(A \\cup B\\)is…\n\n\n\nHere’s a slightly harder problem, what if we want to partition the entire union?\nThis time, we can break it apart into 3 pieces. Same as last time, plus also B minus A.\nLet’s quickly prove it…\nLet’s just apply the previous relationship twice!\n\\(A \\cup B   = (A \\cap B) \\cup(A \\setminus B) \\cup(A \\cap B) \\cup(B \\setminus A)\\)\nGuess what, A intersect B is in there twice. if you take a union of a set with itself, you get the same set, so we can just remove one of them and we’re done.",
     "crumbs": [
       "Week 1"
     ]
@@ -6856,7 +6856,7 @@
     "href": "unit_01/unit_01.html#fundamental-components-of-probability-space",
     "title": "Week 1",
     "section": "Fundamental Components of Probability Space",
-    "text": "Fundamental Components of Probability Space\n\n\n\n\n\n\nA Probability Space\n\n\n\n\nA sample space , denoted as \\(\\Omega\\) , is the collection of all possible outcomes.\nAn event space , denoted as \\(S\\) , is made up of sets of outcomes.\nA probability measure is a function that maps events to numbers in \\([0,1]\\) . % include squiggly picture\n\n\n\n\n\nTo build statistical models, we need a mathematical description of probability.\nWe need to take our intuition for what a system with uncertainty means, and encode it into a mathematical object. that object will be what we call a probability space.",
+    "text": "Fundamental Components of Probability Space\n\n\n\n\n\n\nA Probability Space\n\n\n\n\nA sample space , denoted as \\(\\Omega\\) , is the collection of all possible outcomes.\nAn event space , denoted as \\(S\\) , is made up of sets of outcomes.\nA probability measure is a function that maps events to numbers in \\([0,1]\\) .\n\n\n\n\n\nTo build statistical models, we need a mathematical description of probability.\nWe need to take our intuition for what a system with uncertainty means, and encode it into a mathematical object. that object will be what we call a probability space.\ninclude squiggly picture",
     "crumbs": [
       "Week 1"
     ]
@@ -6866,7 +6866,7 @@
     "href": "unit_01/unit_01.html#sample-spaces",
     "title": "Week 1",
     "section": "Sample Spaces",
-    "text": "Sample Spaces\nChoosing sample space \\(\\Omega\\) to represent…\n\nA die % which is discrete\nA dartboard % which is continuous\nA survey of 5 U.S. senators\nA spoken conversation\n\n\n\nLet’s start with the sample space. where do we get the sample space? well we have to design it to represent the real world. Let’s give some examples.\nA die –\nA dartboard –\nA survey of 5 U.S. senators –\nSuppose you’re doing language translation –\n\nQuestion: can you apply a probability measure directly to the set of outcomes? unfortunately, no. for simple ones you can, but what about the dartboard. there are an infinite number of locations, and the probability of each one is just zero. but a function that’s zero everywhere doesn’t help us model this.",
+    "text": "Sample Spaces\nChoosing sample space \\(\\Omega\\) to represent…\n\nA die % which is discrete\nA dartboard % which is continuous\nA survey of 5 U.S. senators\nA spoken conversation\n\n\n\nLet’s start with the sample space. where do we get the sample space? well we have to design it to represent the real world. Let’s give some examples.\n\nA die –\nA dartboard –\nA survey of 5 U.S. senators –\nSuppose you’re doing language translation –\n\n\nQuestion: can you apply a probability measure directly to the set of outcomes? unfortunately, no. for simple ones you can, but what about the dartboard. there are an infinite number of locations, and the probability of each one is just zero. but a function that’s zero everywhere doesn’t help us model this.",
     "crumbs": [
       "Week 1"
     ]
@@ -6886,7 +6886,7 @@
     "href": "unit_01/unit_01.html#forming-new-events",
     "title": "Week 1",
     "section": "Forming New Events",
-    "text": "Forming New Events\n\n\n\n\n\\(A = \\{1,2\\}, B = \\{2,4,6\\}\\)- A OR B: - A AND B: - NOT A:",
+    "text": "Forming New Events\n\n\n\n\n$A = {1,2}, B = {2,4,6}\n\nA OR B:\nA AND B:\nNOT A:\n\n\n\n\n\nBecause events are sets, we can combine them with set operations to make new events. Let’s think about what those operations mean.\nHere’s two events for the simple example of a die roll\nFirst, think about how you would write down the event A OR B? that is, either A occurs or B occurs.\nWell, that means that the outcome that occurs must be in at least one of A or B, so it must be in their union. When you see a union, think OR.",
     "crumbs": [
       "Week 1"
     ]
@@ -6896,7 +6896,7 @@
     "href": "unit_01/unit_01.html#event-spaces",
     "title": "Week 1",
     "section": "Event Spaces",
-    "text": "Event Spaces\n\n\n\n\n\n\nIntuition for an event space\n\n\n\n- \\(S\\) represents all possible events - However, there are technical reasons that some sets of outcomes must be excluded (non-measurable).\n\n\nRequirements for a \\(\\sigma\\)-algebra - Nonempty: \\(S \\neq \\emptyset\\) - Closed under complements: If \\(A \\in S\\) then \\(A^C \\in S\\) - Closed under countable unions: if \\(A_1,A_2,... \\in S\\) then \\(A_1 \\cup A_2 \\cup ... \\in S\\)\n\n\nSo Mathematicians said: we can’t put all possible sets in the event space, let’s just make sure that any set we need for a regular analysis is in there. So they came up with a list of guarantees and the technical term for these is a\nYou can think of this as making sure that any way you can combine events together, the answer will always be an event, so it will have a probability. You can’t accidentally fall out of the event space.",
+    "text": "Event Spaces\n\n\n\n\n\n\nIntuition for an event space\n\n\n\n\nWe have a bunch of events, and we want to group them all together and call that an event space.\nSeems like a simple idea, right?\n\nBut when you read the textbook, you might have wondered, why is this so complicated? well, it gets fairly technical, but it turns out that there are sometimes sets of outcomes that we have to exclude from the event space. These are called non measurable.}- \\(S\\) represents all possible events\nHowever, there are technical reasons that some sets of outcomes must be excluded (non-measurable).\n\n\n\nRequirements for a \\(\\sigma\\)-algebra\n\nNonempty: \\(S \\neq \\emptyset\\)\nClosed under complements: If \\(A \\in S\\) then \\(A^C \\in S\\)\nClosed under countable unions: if \\(A_1,A_2,... \\in S\\) then \\(A_1 \\cup A_2 \\cup ... \\in S\\)\n\n\n\nSo Mathematicians said: we can’t put all possible sets in the event space, let’s just make sure that any set we need for a regular analysis is in there. So they came up with a list of guarantees and the technical term for these is a\nYou can think of this as making sure that any way you can combine events together, the answer will always be an event, so it will have a probability. You can’t accidentally fall out of the event space.",
     "crumbs": [
       "Week 1"
     ]
@@ -6906,7 +6906,7 @@
     "href": "unit_01/unit_01.html#probability-measure",
     "title": "Week 1",
     "section": "Probability Measure",
-    "text": "Probability Measure\n\n\n\n\n\n\nDefinition of a probability measure\n\n\n\nA function $P: S \\rightarrow \\mathbb{R}$ is a\nprobability measure if:\n- __Axiom 1.__ There are no negative probabilities: $\\forall A \\in S: P(A) \\geq 0$\n\nAxiom 2. The probability that some outcome occurs is one: \\(P(\\Omega) = 1\\)\nAxiom 3. Probabilities “add up”: If \\(A_1,A_2,...\\) is a countable set of disjoint events, then \\(P(A_1 \\cup A_2 \\cup ... ) = \\sum_{i} P(A_{i})\\)\n\n\n\n\n\nFinally, the last element is the probability measure itself. To be a valid probability measure, a function has to satisfy three properties.\nWhere do these come from? We’re building a model here. we’re taking properties from our intuition and trying to write them down using math.\nFirst, there are no negative probabilities. that just makes sense to us, right? what would a negative probability mean?\nNext, the probability of the entire outcome space is 1. That should make sense too, because some outcome must happen. the state of the world will be something.\nFinally, the addition rule. Probabilities add up when we combine events, as long as they are disjoint. The probability of rolling a 1 or a 2 is the probability of rolling a 1 plus the probability of rolling a 2. But in standard probability theory that even works for a countably infinite set of disjoint events.\nWhat’s the probability that the sun goes supernova someday? well, you can add the probability for today, plus the probability for tomorrow, and on forever.",
+    "text": "Probability Measure\n\n\n\n\n\n\nDefinition of a probability measure\n\n\n\nA function \\(P: S \\rightarrow \\mathbb{R}\\) is a probability measure if:\n\nAxiom 1. There are no negative probabilities: \\(\\forall A \\in S: P(A) \\geq 0\\)\nAxiom 2. The probability that some outcome occurs is one: \\(P(\\Omega) = 1\\)\nAxiom 3. Probabilities “add up”: If \\(A_1,A_2,...\\) is a countable set of disjoint events, then \\(P(A_1 \\cup A_2 \\cup ... ) = \\sum_{i} P(A_{i})\\)\n\n\n\n\n\nFinally, the last element is the probability measure itself. To be a valid probability measure, a function has to satisfy three properties.\nWhere do these come from? We’re building a model here. we’re taking properties from our intuition and trying to write them down using math.\nFirst, there are no negative probabilities. that just makes sense to us, right? what would a negative probability mean?\nNext, the probability of the entire outcome space is 1. That should make sense too, because some outcome must happen. the state of the world will be something.\nFinally, the addition rule. Probabilities add up when we combine events, as long as they are disjoint. The probability of rolling a 1 or a 2 is the probability of rolling a 1 plus the probability of rolling a 2. But in standard probability theory that even works for a countably infinite set of disjoint events.\nWhat’s the probability that the sun goes supernova someday? well, you can add the probability for today, plus the probability for tomorrow, and on forever.",
     "crumbs": [
       "Week 1"
     ]
@@ -6916,7 +6916,7 @@
     "href": "unit_01/unit_01.html#probability-measure-1",
     "title": "Week 1",
     "section": "Probability Measure",
-    "text": "Probability Measure\n\n\n\n\n\n\nDefinition of a probability measure\n\n\n\nA function $P: S \\rightarrow \\mathbb{R}$ is a\nprobability measure if:\n- __Axiom 1.__ There are no negative probabilities: $\\forall A \\in S: P(A) \\geq 0$\n\nAxiom 2. The probability that some outcome occurs is one: \\(P(\\Omega) = 1\\)\nAxiom 3. Probabilities “add up”: If \\(A_1,A_2,...\\) is a countable set of disjoint events, then \\(P(A_1 \\cup A_2 \\cup ... ) = \\sum_{i} P(A_{i})\\)\n\n\n\n\n\nLooking back at this list of axioms, you might wonder, why only 3?\nWhat happens if we take a union, but events aren’t disjoint? Don’t we need a property about that?\nThat is an important property, but we don’t need it here, because we can derive it from just these three. That’s what we’ll do next.",
+    "text": "Probability Measure\n\n\n\n\n\n\nDefinition of a probability measure\n\n\n\nA function \\(P: S \\rightarrow \\mathbb{R}\\) is a probability measure if:\n\nAxiom 1. There are no negative probabilities: \\(\\forall A \\in S: P(A) \\geq 0\\)\nAxiom 2. The probability that some outcome occurs is one: \\(P(\\Omega) = 1\\)\nAxiom 3. Probabilities “add up”: If \\(A_1,A_2,...\\) is a countable set of disjoint events, then \\(P(A_1 \\cup A_2 \\cup ... ) = \\sum_{i} P(A_{i})\\)\n\n\n\n\n\nLooking back at this list of axioms, you might wonder, why only 3?\nWhat happens if we take a union, but events aren’t disjoint? Don’t we need a property about that?\nThat is an important property, but we don’t need it here, because we can derive it from just these three. That’s what we’ll do next.",
     "crumbs": [
       "Week 1"
     ]
@@ -6966,7 +6966,7 @@
     "href": "unit_01/unit_01.html#a-helpful-analogy",
     "title": "Week 1",
     "section": "A Helpful Analogy",
-    "text": "A Helpful Analogy\nProbability \\(\\Longleftrightarrow\\) Area\n\n\n\nThe amazing thing about probability is that with just 3 axioms, you can prove all the other properties that you expect based on your intuition. But it can be tough to find a solution just by staring at equations.\nHere’s an analogy that may help you.\nProbabilities are a lot like areas. Actually, area is also a type of measure in mathematics - most of the structure is the same.\nIf you just have a few events, it can help to draw them as areas. That’s not a proof, but it can give you an idea of how they behave.\nLet’s think about the sample space as a square dartboard. We’ll define its area to be 1. I’m really bad at darts so every point is just as likely as any other point.\nAn event is some shape on the dartboard. so the probability that the dart lands in the shape is its area. A picture like this can help you figure out a tricky proof.",
+    "text": "A Helpful Analogy\nProbability \\(\\Longleftrightarrow\\) Area\n\n\n\nThe amazing thing about probability is that with just 3 axioms, you can prove all the other properties that you expect based on your intuition. But it can be tough to find a solution just by staring at equations.\nHere’s an analogy that may help you.\nProbabilities are a lot like areas. Actually, area is also a type of measure in mathematics - most of the structure is the same.\nIf you just have a few events, it can help to draw them as areas. That’s not a proof, but it can give you an idea of how they behave.\nLet’s think about the sample space as a square dartboard. We’ll define its area to be 1. I’m really bad at darts so every point is just as likely as any other point.\nAn event is some shape on the dartboard. So the probability that the dart lands in the shape is its area. A picture like this can help you figure out a tricky proof.",
     "crumbs": [
       "Week 1"
     ]
@@ -6976,7 +6976,7 @@
     "href": "unit_01/unit_01.html#the-subset-subtraction-rule",
     "title": "Week 1",
     "section": "The Subset Subtraction Rule",
-    "text": "The Subset Subtraction Rule\nGiven \\(A,B \\in S\\) , \\(A \\subseteq B\\) . Compute \\(P(B\\setminus A)\\) .\nEx: A = being over 7’, B = being over 6’.\n\n\n\nLet’s start with a simple property, if we assume that event A is a subset of event B, what’s the probability if we subtract A from B.\nFor example, if A is the event of being over 7 foot tall, and B is the event of being over 6 foot tall. how do you get the probability of being between 6 and 7 foot tall?\nI’ll draw a circle for B and a circle for A. To apply the probability axioms, we need disjoint sets. A and B are not disjoint, but we know how to partition\n\\(B = (B\\setminus A) \\cup( A \\cap B) =  (B\\setminus A) \\cup  A  \\implies P(B) = P(B\\setminus A)+ P(A)\\)\nAlso, by axiom 1,",
+    "text": "The Subset Subtraction Rule\nGiven\n\\(A,B \\in S\\), \\(A \\subseteq B\\). Compute \\(P(B\\setminus A)\\).\nFor example: \\(A\\) = being over 7’, \\(B\\) = being over 6’.\n\n\n\nLet’s start with a simple property, if we assume that event A is a subset of event B, what’s the probability if we subtract A from B.\nFor example, if A is the event of being over 7 foot tall, and B is the event of being over 6 foot tall. how do you get the probability of being between 6 and 7 foot tall?\nI’ll draw a circle for B and a circle for A. To apply the probability axioms, we need disjoint sets. A and B are not disjoint, but we know how to partition\n\\(B = (B\\setminus A) \\cup( A \\cap B) =  (B\\setminus A) \\cup  A  \\implies P(B) = P(B\\setminus A)+ P(A)\\)\nAlso, by axiom 1,",
     "crumbs": [
       "Week 1"
     ]
@@ -6986,7 +6986,7 @@
     "href": "unit_01/unit_01.html#the-complement-rule",
     "title": "Week 1",
     "section": "The Complement Rule",
-    "text": "The Complement Rule\nGiven \\(A \\in S\\) . Compute \\(P(A^C)\\) .\n\n\nGiven the subtraction rule, you can very quickly solve for the complement rule\nNote\nsubtraction rule\nAxiom 2:\n\\(P(A^C) = 1 - P(A)\\)",
+    "text": "The Complement Rule\nGiven \\(A \\in S\\). Compute \\(P(A^C)\\).\n\n\nGiven the subtraction rule, you can very quickly solve for the complement rule\nNote\nsubtraction rule\nAxiom 2:\n\\(P(A^C) = 1 - P(A)\\)",
     "crumbs": [
       "Week 1"
     ]
@@ -7016,7 +7016,7 @@
     "href": "unit_01/unit_01.html#conditional-probability-part-i",
     "title": "Week 1",
     "section": "Conditional Probability, Part I",
-    "text": "Conditional Probability, Part I\nConditional probability is a rescoping of the sample space from\n\\(\\Omega\\) —every possible outcome—to a smaller set called the\nconditioning set - What is the probability that a student on campus is a volleyball player ( \\(V\\) )? - What is the probability that a student on campus is a volleyball player ( \\(V\\) ), given that they are 6’3’ ( \\(T\\) )’?\nUses information to produce a better statement of the likelihood of an event",
+    "text": "Conditional Probability, Part I\nConditional probability is a rescoping of the sample space from \\(\\Omega\\) —every possible outcome—to a smaller set called the conditioning set\n\nWhat is the probability that a student on campus is a volleyball player \\((V)\\)?\nWhat is the probability that a student on campus is a volleyball player \\((V)\\), given that they are 6’3’ \\((T)\\)?\n\nUses information to produce a better statement of the likelihood of an event",
     "crumbs": [
       "Week 1"
     ]
@@ -7026,7 +7026,7 @@
     "href": "unit_01/unit_01.html#think-of-a-dartboard",
     "title": "Week 1",
     "section": "Think of a Dartboard…",
-    "text": "Think of a Dartboard…\n\n\n\nLet’s build up some intuition by thinking about the dartboard analogy.\nEvent V for volleyball player is an area on the board.\nIf all you know is that the dart hit the board randomly, the probability that it’s in V is the area of V divided by the area of the entire sample space (which we assume to be 1).\nNow what if I tell you that the dart landed somewhere in T, meaning tall? What does your intuition say?\nWell, now you don’t care about the rest of",
+    "text": "Think of a Dartboard…\n ::: {.notes}\n\nLet’s build up some intuition by thinking about the dartboard analogy.\nEvent V for volleyball player is an area on the board.\nIf all you know is that the dart hit the board randomly, the probability that it’s in V is the area of V divided by the area of the entire sample space (which we assume to be 1).\nNow what if I tell you that the dart landed somewhere in T, meaning tall? What does your intuition say?\nWell, now you don’t care about the rest of\n\n:::",
     "crumbs": [
       "Week 1"
     ]
@@ -7036,7 +7036,7 @@
     "href": "unit_01/unit_01.html#conditional-probability-part-ii",
     "title": "Week 1",
     "section": "Conditional Probability, Part II",
-    "text": "Conditional Probability, Part II\n\n\n\n\n\n\nConditional probability\n\n\n\nFor events $A, B \\in \\Omega$ with $P(B) &gt; 0$, define the _conditional\n  probability_ of $A$ given $B$ to be\n\\[\n  P(A|B) = \\frac{P(A \\cap B)}{P(B)}\n  \\]\n\n\n\n\n\nHere’s the formal definition. the conditional probability of A given B is a ratio.\nOn the top we have the intersection. on the bottom we have all of B",
+    "text": "Conditional Probability, Part II\n\n\n\n\n\n\nConditional probability\n\n\n\nFor events \\(A, B \\in \\Omega\\) with \\(P(B) &gt; 0\\), define the conditional probability of \\(A\\) given \\(B\\) to be\n[ P(A|B) = ]\n\n\n ::: {.notes}\n\nHere’s the formal definition. the conditional probability of A given B is a ratio.\nOn the top we have the intersection. on the bottom we have all of B\n\n:::",
     "crumbs": [
       "Week 1"
     ]
@@ -7046,7 +7046,7 @@
     "href": "unit_01/unit_01.html#conditional-probability-part-iii",
     "title": "Week 1",
     "section": "Conditional Probability, Part III",
-    "text": "Conditional Probability, Part III\n\n\n\n\n\n\nConditional probability\n\n\n\nFor events $A, B \\in \\Omega$ with $P(B) &gt; 0$, define the _conditional\n  probability_ of $A$ given $B$ to be\n\\[\n  P(A|B) = \\frac{P(A \\cap B)}{P(B)}\n  \\]\n\n\n\n\n\nThe idea is we’re dropping everything in the sample space outside of B - it’s not relevant, and then we have to rescale the probability so everything adds up to 1.",
+    "text": "Conditional Probability, Part III\n\n\n\n\n\n\nConditional probability\n\n\n\nFor events \\(A, B \\in \\Omega\\) with \\(P(B) &gt; 0\\), define the conditional probability of \\(A\\) given \\(B\\) to be\n[ P(A|B) = ]\n\n\n\n\n\nThe idea is we’re dropping everything in the sample space outside of B - it’s not relevant, and then we have to rescale the probability so everything adds up to 1.",
     "crumbs": [
       "Week 1"
     ]
@@ -7056,7 +7056,7 @@
     "href": "unit_01/unit_01.html#conditional-probability-part-iv",
     "title": "Week 1",
     "section": "Conditional Probability, Part IV",
-    "text": "Conditional Probability, Part IV\n\n\n\n\n\n\nMultiplicative Law of Probability\n\n\n\n  Rearranging the conditional probability statement minimally\n  produces the _Multiplicative Law of Probability_.\n\n  For $A, B \\in \\Omega$ with $P(B) &gt; 0$,\n\n  \\[\n    P(A|B)P(B) = P(A \\cap B) \\pause = P(B|A)P(A)\n  \\]\n\n\n\n\n\nThis is an important relationship. It gives us an intuitive way to compute the probability that A AND B occur.\nFirst, you write down the probability that A occurs. then, you assume that A has occurred, and you multiply by the probability, which is conditional, that B also occurs.",
+    "text": "Conditional Probability, Part IV\n\n\n\n\n\n\nMultiplicative Law of Probability\n\n\n\nRearranging the conditional probability statement minimally produces the Multiplicative Law of Probability.\nFor \\(A, B \\in \\Omega\\) with \\(P(B) &gt; 0\\),\n[ P(A|B)P(B) = P(A B) = P(B|A)P(A) ]\n\n\n\n\nThis is an important relationship. It gives us an intuitive way to compute the probability that A AND B occur.\nFirst, you write down the probability that A occurs. then, you assume that A has occurred, and you multiply by the probability, which is conditional, that B also occurs.",
     "crumbs": [
       "Week 1"
     ]
@@ -7086,7 +7086,7 @@
     "href": "unit_01/unit_01.html#total-probability-part-i",
     "title": "Week 1",
     "section": "Total Probability, Part I",
-    "text": "Total Probability, Part I\n\n\n\n\n\n\nThe Law of Total Probability\n\n\n\nIf$\\ A_{1}, A_{2}, \\dots, A_{n}$ is a partition of $\\Omega$, and\nif $B \\in \\Omega$, then\n\\[\n  P(B) = \\sum_{i} P(B \\cap A_{i})\n\\]\nIf there is a positive probability for each partition $A_{i}$,\nthen by the _Multiplicative Law of Probability_\\[\n  P(B) = \\sum_{i} P(B | A_{i})P(A_{i})\n\\]\n\n\n\n\nIn a lot of probability problems, you need to compute the probability of some complicated event.\nThat can be hard to do directly, and you want some way to break down the problem.\nThere is a famous technique that helps in a lot of cases. it’s called the law of total probability.\nThe idea is we can use a partition of\nLet’s see a picture and then read the law carefully…",
+    "text": "Total Probability, Part I\n\n\n\n\n\n\nThe Law of Total Probability\n\n\n\nIf \\(\\ A_{1}, A_{2}, \\dots, A_{n}\\) is a partition of \\(\\Omega\\), and if \\(B \\in \\Omega\\), then\n[ P(B) = {i} P(B A{i}) ]\nIf there is a positive probability for each partition \\(A_{i}\\), then by the Multiplicative Law of Probability\n[ P(B) = {i} P(B | A{i})P(A_{i}) ]\n\n\n\n\nIn a lot of probability problems, you need to compute the probability of some complicated event.\nThat can be hard to do directly, and you want some way to break down the problem.\nThere is a famous technique that helps in a lot of cases. it’s called the law of total probability.\nThe idea is we can use a partition of\nLet’s see a picture and then read the law carefully…",
     "crumbs": [
       "Week 1"
     ]
@@ -7116,7 +7116,7 @@
     "href": "unit_01/unit_01.html#total-probability-part-iv",
     "title": "Week 1",
     "section": "Total Probability, Part IV",
-    "text": "Total Probability, Part IV",
+    "text": "Total Probability, Part IV\n ## Total Probability, Part V\n ## Total Probability, Part VI\n ## Total Probability, Part VII",
     "crumbs": [
       "Week 1"
     ]
@@ -7166,7 +7166,7 @@
     "href": "unit_01/unit_01.html#total-probability-part-i-1",
     "title": "Week 1",
     "section": "Total Probability, Part I",
-    "text": "Total Probability, Part I\n\n\n\n\n\n\nThe Law of Total Probability\n\n\n\nIf$\\ A_{1}, A_{2}, \\dots, A_{n}$ is a partition of $\\Omega$, and\nif $B \\in \\Omega$, then\n\\[\n  P(B) = \\sum_{i} P(B \\cap A_{i})\n\\]\nIf there is a positive probability for each partition $A_{i}$,\nthen by the _Multiplicative Law of Probability_\\[\n  P(B) = \\sum_{i} P(B | A_{i})P(A_{i})\n\\]\n\n\n\n\nNow let’s carefully read the law of total probability.\nThe probability of B is a sum, if you look inside the sum, what we do is we intersect B with some\nTo finish the law, we can then apply the multiplication rule. we write each of these joint probabilities as a product. First, we take the probability we’re inside\nThat’s the law of total probability. It can be quite useful, if you can think of a good partition.",
+    "text": "Total Probability, Part I\n\n\n\n\n\n\nThe Law of Total Probability\n\n\n\nIf \\(\\ A_{1}, A_{2}, \\dots, A_{n}\\) is a partition of \\(\\Omega\\), and if \\(B \\in \\Omega\\), then\n[ P(B) = {i} P(B A{i}) ]\nIf there is a positive probability for each partition \\(A_{i}\\), then by the Multiplicative Law of Probability\n[ P(B) = {i} P(B | A{i})P(A_{i}) ]\n\n\n\n\nNow let’s carefully read the law of total probability.\nThe probability of B is a sum, if you look inside the sum, what we do is we intersect B with some\nTo finish the law, we can then apply the multiplication rule. we write each of these joint probabilities as a product. First, we take the probability we’re inside\nThat’s the law of total probability. It can be quite useful, if you can think of a good partition.",
     "crumbs": [
       "Week 1"
     ]
@@ -7176,7 +7176,7 @@
     "href": "unit_01/unit_01.html#conditional-inverses",
     "title": "Week 1",
     "section": "Conditional Inverses",
-    "text": "Conditional Inverses\nDoes\\(P(X|Y) = P(Y|X)\\)? \nExample:\n\n\\(X =\\) Visited Berkeley\n\\(Y =\\) Attend MIDS\n\n\n\nWe know about conditional probability. Let’s say we have two events X and Y. Are these two conditional probabilities the same?\nIn fact, the answer is usually no. here’s an example to convince you. \nThere is an easy way to get from one of these probabilities to the other. it’s the famous theorem known as Bayes’ Rule.",
+    "text": "Conditional Inverses\nDoes \\(P(X|Y) = P(Y|X)\\)?\nExample:\n\n\\(X =\\) Visited Berkeley\n\\(Y =\\) Attend MIDS\n\n\n\nWe know about conditional probability. Let’s say we have two events X and Y. Are these two conditional probabilities the same?\nIn fact, the answer is usually no. here’s an example to convince you. \nThere is an easy way to get from one of these probabilities to the other. it’s the famous theorem known as Bayes’ Rule.",
     "crumbs": [
       "Week 1"
     ]
@@ -7206,7 +7206,7 @@
     "href": "unit_01/unit_01.html#bayes-rule-example-cont.",
     "title": "Week 1",
     "section": "Bayes’ Rule Example Cont.",
-    "text": "Bayes’ Rule Example Cont.\nWe know:\n\\(P(D) = .0002,  P(D^C) = .9998\\) \\(\\qquad \\qquad\\ \\  P(T|D)=1, P(T|D^C) = .01\\)\nWe want: \\(P(D|T)\\)\n\n\n\\(P(D|T) = \\frac{P(T|D)P(D)}{P(T)}\\)\nStill missing\n\\(P(T) = P(D)P(T|D) + P(D^C)P(T|D^C)\\)\n\\(P(D|T) = \\frac{P(T|D)P(D)}{P(T)} =  \\frac{P(T|D)P(D)}{ P(D)P(T|D) + P(D^C)P(T|D^C) = .0196}\\)\nEven though the test is 99",
+    "text": "Bayes’ Rule Example Cont.\nWe know:\n[\n\\[\\begin{aligned}\n    P(D) = 0.0002, & P(D^{C}) = 0.9998 \\\\\n    P(T|D) = 1 & P(T|D^{C}) = 0.01\n  \\end{aligned}\\]\n]\nWe want:\n\\(P(D|T)\\)\n\n\n\\(P(D|T) = \\frac{P(T|D)P(D)}{P(T)}\\)\nStill missing\n\\(P(T) = P(D)P(T|D) + P(D^C)P(T|D^C)\\)\n\\(P(D|T) = \\frac{P(T|D)P(D)}{P(T)} =  \\frac{P(T|D)P(D)}{ P(D)P(T|D) + P(D^C)P(T|D^C) = .0196}\\)\nEven though the test is 99",
     "crumbs": [
       "Week 1"
     ]
@@ -7216,7 +7216,7 @@
     "href": "unit_01/unit_01.html#bayesian-statistics",
     "title": "Week 1",
     "section": "Bayesian Statistics",
-    "text": "Bayesian Statistics\nLet H be the event a hypothesis is true.\n\nWe begin with prior (subjective) belief \\(P(H)\\)\nLet D be the data we collect\nUse Bayes’ Rule to compute posterior belief, \\(P(H|D)\\) .\n\n\n\nBayes’ Rule is the foundation of an entire school of stats.\nLet me try to compress an entire school into 60 seconds.\nIn bayesian stats, we may be interested in some hypothesis. Let H be the event that it’s true.\nTo a mainstream statistician, that doesn’t make any sense, a hypothesis is true or false.\nTo a bayesian, probability is used to represent your personal subjective belief. before you see the data, you give the hypothesis a prior probability, P(H)\nThen you see data, D. you can use bayes rule to update your probability to\nThere’s your 60 second crash course on Bayesian stats.",
+    "text": "Bayesian Statistics\nLet \\(H\\) be the event a hypothesis is true.\n\nWe begin with prior (subjective) belief \\(P(H)\\)\n\nLet D be the data we collect\n\nUse Bayes’ Rule to compute posterior belief, \\(P(H|D)\\) .\n\n\n\nBayes’ Rule is the foundation of an entire school of stats.\nLet me try to compress an entire school into 60 seconds.\nIn bayesian stats, we may be interested in some hypothesis. Let H be the event that it’s true.\nTo a mainstream statistician, that doesn’t make any sense, a hypothesis is true or false.\nTo a bayesian, probability is used to represent your personal subjective belief. before you see the data, you give the hypothesis a prior probability, P(H)\nThen you see data, D. you can use bayes rule to update your probability to\nThere’s your 60 second crash course on Bayesian stats.",
     "crumbs": [
       "Week 1"
     ]
@@ -7236,7 +7236,7 @@
     "href": "unit_01/unit_01.html#independence-1",
     "title": "Week 1",
     "section": "Independence",
-    "text": "Independence\n\n\n\n\n\n\nIndependence of events\n\n\n\nEvents $A, B \\in S$ are _independent_ if $P(A \\cap B) =\nP(A)P(B)$. \n\n\n\n\n\n\n\n\nTheorem: conditional probability and independence\n\n\n\nFor $A, B \\in S$ and $P(B)&gt;0$, $A$ and $B$ are\nindependent if and only if $P(A|B) = P(A)$.\n\n\n\n\nLet’s take a look at the formal definition of independence. Notice that we use the elegant product equation. This version is a bit more universal. If event have probability zero, there may not be a good way to define conditional probability.\nHowever, as long as the events have nonzero probability, you can also write independence in terms of conditional probabilities.",
+    "text": "Independence\n\n\n\n\n\n\nIndependence of events\n\n\n\nEvents \\(A, B \\in S\\) are independent if \\(P(A \\cap B) = P(A)P(B)\\).\n\n\n\n\n\n\n\n\nTheorem: conditional probability and independence\n\n\n\nFor \\(A, B \\in S\\) and \\(P(B)&gt;0\\), \\(A\\) and \\(B\\) are independent if and only if \\(P(A|B) = P(A)\\).\n\n\n\n\nLet’s take a look at the formal definition of independence. Notice that we use the elegant product equation. This version is a bit more universal. If event have probability zero, there may not be a good way to define conditional probability.\nHowever, as long as the events have nonzero probability, you can also write independence in terms of conditional probabilities.",
     "crumbs": [
       "Week 1"
     ]
@@ -7246,7 +7246,7 @@
     "href": "unit_01/unit_01.html#conditional-probability-and-information",
     "title": "Week 1",
     "section": "Conditional Probability and Information",
-    "text": "Conditional Probability and Information\n\n\n\nLet \\(C\\) be event that our subscriber cancels.\nLet \\(W\\) be the event our subscriber waited 2 hours on the phone.\\(P(C) &lt; P(C | W)\\)\\(W\\) gives us_information_ about C.\n\n\n%%&lt;— here \n\n\n\n\nWe introduced conditional probability, and we can think about it in terms of information.\nThis is what we usually expect, at least a little bit. one event will give us some information about another event. But it’s not always the case.",
+    "text": "Conditional Probability and Information\n\n\n\nLet \\(C\\) be event that our subscriber cancels.\nLet \\(W\\) be the event our subscriber waited 2 hours on the phone.\\(P(C) &lt; P(C | W)\\)\\(W\\) gives us_information_ about C.\n\n\n\n\n\n\n\nWe introduced conditional probability, and we can think about it in terms of information.\nThis is what we usually expect, at least a little bit. one event will give us some information about another event. But it’s not always the case.",
     "crumbs": [
       "Week 1"
     ]
@@ -7256,7 +7256,7 @@
     "href": "unit_01/unit_01.html#understanding-independence",
     "title": "Week 1",
     "section": "Understanding Independence",
-    "text": "Understanding Independence\n\n\n\nLet \\(C\\) be event that our subscriber cancels.\nLet \\(H\\) be the event our subscriber hates cilantro. Is\\(P(C)\\) different from\\(P(C | H)\\)?\n\n\n%%&lt;— here \n\n\n\n\nSame situation, but now let H be the event the subscriber hates cilantro.\nNow, does knowing that the subscriber hates cilantro give us any information about whether they cancel?\nThat’s pretty farfetched, right? Unless you’re actually sending cilantro to your subscribers - let’s assume that’s not the case - these events have nothing to do with each other. So\nLet’s play with the math.\n\nSo\nAlso,",
+    "text": "Understanding Independence\n\n\n\nLet \\(C\\) be event that our subscriber cancels.\nLet \\(H\\) be the event our subscriber hates cilantro. Is\\(P(C)\\) different from\\(P(C | H)\\)?\n\n\n\n\n\n\n\nSame situation, but now let H be the event the subscriber hates cilantro.\nNow, does knowing that the subscriber hates cilantro give us any information about whether they cancel?\nThat’s pretty farfetched, right? Unless you’re actually sending cilantro to your subscribers - let’s assume that’s not the case - these events have nothing to do with each other. So\nLet’s play with the math.\n\nSo\nAlso,",
     "crumbs": [
       "Week 1"
     ]
@@ -7266,7 +7266,7 @@
     "href": "unit_01/unit_01.html#importance-of-independence",
     "title": "Week 1",
     "section": "Importance of Independence",
-    "text": "Importance of Independence\nLater in the course: In a random sample every unit is independent of every other unit.\n\n\nSurvey Example:- Let \\(D_1\\) be event that the first respondent has a dog. - Let \\(D_2\\) be event that the second respondent has a dog. - \n\n%%&lt;— here \n\n\n\n\nMy cilantro example is pretty silly. So why do we need independence?\nIt’s going to become very important when we talk about sampling.\nThink of a survey. \nif\nBut what it they are family members? Then the responses of the first one probably does give you information about the second. This makes it much harder to analyze the data. Throughout this course, we always want to be skeptical about whether independence holds, but many of our techniques really will require it to work.",
+    "text": "Importance of Independence\nLater in the course: In a random sample every unit is independent of every other unit.\n\n\nSurvey Example:- Let \\(D_1\\) be event that the first respondent has a dog.\n\nLet \\(D_2\\) be event that the second respondent has a dog.\n\n\n\n\n\n\n\n\nMy cilantro example is pretty silly. So why do we need independence?\nIt’s going to become very important when we talk about sampling.\nThink of a survey. \nif\nBut what it they are family members? Then the responses of the first one probably does give you information about the second. This makes it much harder to analyze the data. Throughout this course, we always want to be skeptical about whether independence holds, but many of our techniques really will require it to work.",
     "crumbs": [
       "Week 1"
     ]
@@ -7306,7 +7306,7 @@
     "href": "unit_01/unit_01.html#johnson-et-al.-2019",
     "title": "Week 1",
     "section": "Johnson et al. (2019)",
-    "text": "Johnson et al. (2019)\n\n\n\n\n\n\nJohnson et al. (2019)\n\n\n\nAre minority groups subjected to unfairly violent treatment\nby law enforcement?  \n\nAre Black civilians overrepresented in FOIS?\nIf so, is this because of racial discrimination by White officers?\n\n\n\n\nDevelop Database that is a near-total recording of all fatal officer involved shootings (FOIS) in the US in 2015.\n``Model’’ whether race of civilian is a factor that predicts being involved in a FOIS.",
+    "text": "Johnson et al. (2019)\n\n\n\n\n\n\nJohnson et al. (2019)\n\n\n\nAre minority groups subjected to unfairly violent treatment by law enforcement?\n\nAre Black civilians overrepresented in FOIS?\nIf so, is this because of racial discrimination by White officers?\n\n\n\n\nDevelop Database that is a near-total recording of all fatal officer involved shootings (FOIS) in the US in 2015.\n``Model’’ whether race of civilian is a factor that predicts being involved in a FOIS.",
     "crumbs": [
       "Week 1"
     ]
@@ -7326,7 +7326,7 @@
     "href": "unit_01/unit_01.html#probability-translation",
     "title": "Week 1",
     "section": "Probability Translation",
-    "text": "Probability Translation\nCrystal clear probability statement about officer race:\n\\[\\begin{align*}\n    P(\\text{shot} &| \\text{minority civilian, white officer}, X) \\leq\\\\\n                  & P(\\text{shot} | \\text{minority civilian, minority officer}, X)\n  \\end{align*}\\]\nQuestion: Is it possible to justify this statement using only data of officer shootings?\n\n\nThe answer to this probability statement informs policy: If true, then take proactive measures in hiring",
+    "text": "Probability Translation\nCrystal clear probability statement about officer race:\n\\[\\begin{aligned}\n    P(\\text{shot} &| \\text{minority civilian, white officer}, X) \\leq\\\\\n                  & P(\\text{shot} | \\text{minority civilian, minority officer}, X)\n\\end{aligned}\\]\nQuestion: Is it possible to justify this statement using only data of officer shootings?\n\n\nThe answer to this probability statement informs policy: If true, then take proactive measures in hiring",
     "crumbs": [
       "Week 1"
     ]
@@ -7409,14 +7409,14 @@
     "href": "unit_01/unit_01.revealjs.html#probablity-is-a-system-of-reasoning",
     "title": "Week 1",
     "section": "Probablity is A System of Reasoning",
-    "text": "Probablity is A System of Reasoning\n\n\n  \"Essentially, the theory of probability is nothing but good common\n  sense reduced to mathematics. It provides an exact appreciation of\n  what sound minds feel with a kind of instinct, frequently without\n  being able to account for it.”\n\n  - Pierre-Simon Laplace\n\n\n\n\n\nHow would you define probability? Is it something that you encounter in your day-to-day life? A measure of randomness in the world?\nLaplace was a famous mathematician, who developed what we call the Bayesian interpretation of probability. Let’s read what he said in 1814.\nLaplace believed that, as humans, we are natural processors of probability. We think in probabilities, we use probability when we speak to each other.\nSo of course we think of probability as existing out in the natural world.\nBut, I’m here to tell you that probability is actually a model.\nThat’s right, the randomness that we perceive around us is a model that we use to make sense of the world.\nLet me try to convince you with a few examples."
+    "text": "Probablity is A System of Reasoning\n\n\n\n“Essentially, the theory of probability is nothing but good common sense reduced to mathematics. It provides an exact appreciation of what sound minds feel with a kind of instinct, frequently without being able to account for it.”\n- Pierre-Simon Laplace\n\n\n\n\n\n\nHow would you define probability? Is it something that you encounter in your day-to-day life? A measure of randomness in the world?\nLaplace was a famous mathematician, who developed what we call the Bayesian interpretation of probability. Let’s read what he said in 1814.\nLaplace believed that, as humans, we are natural processors of probability. We think in probabilities, we use probability when we speak to each other.\nSo of course we think of probability as existing out in the natural world.\nBut, I’m here to tell you that probability is actually a model.\nThat’s right, the randomness that we perceive around us is a model that we use to make sense of the world.\nLet me try to convince you with a few examples."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#probability-is-a-model-of-the-world",
     "href": "unit_01/unit_01.revealjs.html#probability-is-a-model-of-the-world",
     "title": "Week 1",
     "section": "Probability is A Model of the World",
-    "text": "Probability is A Model of the World\n\n\n\n\n\n\n\nApocryphal quotations\n\n\n``_All models are wrong; some are useful._'' \\\\\\hspace{1em} —George Box\n\n\n\n\nProbability is:\n\nA mathematical construct\nA model or abstraction of the world\n\n\n\nBut I’m here to tell you that probability is just a model. It’s a very useful model - one that we can make mathematically precise. But it’s a model of the world.\nLet me try to convince you with a few examples."
+    "text": "Probability is A Model of the World\n\n\n\n\n\n\n\nApocryphal quotations\n\n\n\n\n\nAll models are wrong; some are useful.’’\n\n— George Box\n\n\n\n\n\n\nProbability is:\n\nA mathematical construct\nA model or abstraction of the world\n\n\n\nBut I’m here to tell you that probability is just a model. It’s a very useful model - one that we can make mathematically precise. But it’s a model of the world.\nLet me try to convince you with a few examples."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#probability-is-a-model---example-1",
@@ -7444,14 +7444,14 @@
     "href": "unit_01/unit_01.revealjs.html#probability-is-a-model---example-3",
     "title": "Week 1",
     "section": "Probability is a Model - Example 3",
-    "text": "Probability is a Model - Example 3\n\n\n\nFinally, what about the most classic random event of all\n\nthe coin flip.\n\nEveryone knows that a coin lands heads 50\nBut is that true? What if you could flip the coin in exactly the same way each time.\nAnd make sure every single atom in the air was moving in exactly the same way.\nYou would probably find that it lands on the same side each time.\nReally, the only people who work with true randomness are quantum physicists. The rest of us are using probability as a model."
+    "text": "Probability is a Model - Example 3\n\n\n\nFinally, what about the most classic random event of all: the coin flip.\nEveryone knows that a coin lands heads 50 percent of the time.\nBut is that true? What if you could flip the coin in exactly the same way each time.\nAnd make sure every single atom in the air was moving in exactly the same way.\nYou would probably find that it lands on the same side each time.\nReally, the only people who work with true randomness are quantum physicists. The rest of us are using probability as a model."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#an-axiomatic-approach",
     "href": "unit_01/unit_01.revealjs.html#an-axiomatic-approach",
     "title": "Week 1",
     "section": "An Axiomatic Approach",
-    "text": "An Axiomatic Approach\nWhy take an axiomatic approach?\n\nDefine a minimal set of statements that are consistent with the world we observe\nDeduce statements that must then be logically entailed\n\nThomas Kuhn’s Philosophy of Science\n\n&lt;1-&gt; Axiomatic statements\n&lt;1-&gt; Intermediate theories\n&lt;1-&gt; Testable hypotheses\n\n\n\nWe already have an intuitive model for probability in our heads, but that’s not enough to build statistical models - we need a mathematically precise system.\nHow do we create one? We distill our intuition into a small set of axioms. This is what mathematicians do…\nSuppose that you’re rolling die – you could observe that the P(1|2) is just P(1) + P(2). You could write that down as a fact.\n\nInstead, we need to identify axioms that explain the probabilities of many different events. induct up to a higher set of principles – the pieces of the model that we need, that are used to repredict to events.\nYou might find this frustrating – you might want to study this like it is an observational science; counting lions or cosmic rays. But, it isn’t!\nProbability is a model, so we’re inventing the rules, not discovering them. But if our system reminds us enough of the real world, it can be useful."
+    "text": "An Axiomatic Approach\nWhy take an axiomatic approach?\n\nDefine a minimal set of statements that are consistent with the world we observe\nDeduce statements that must then be logically entailed\n\nThomas Kuhn’s Philosophy of Science\n1.Axiomatic statements 2. Intermediate theories 3. Testable hypotheses\n\n\nWe already have an intuitive model for probability in our heads, but that’s not enough to build statistical models - we need a mathematically precise system.\nHow do we create one? We distill our intuition into a small set of axioms. This is what mathematicians do…\nSuppose that you’re rolling die – you could observe that the \\(P(1|2)\\) is just \\(P(1)\\) + \\(P(2)\\). You could write that down as a fact.\nInstead, we need to identify axioms that explain the probabilities of many different events. induct up to a higher set of principles – the pieces of the model that we need, that are used to repredict to events.\nYou might find this frustrating – you might want to study this like it is an observational science; counting lions or cosmic rays. But, it isn’t!\nProbability is a model, so we’re inventing the rules, not discovering them. But if our system reminds us enough of the real world, it can be useful."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#set-theory",
@@ -7472,7 +7472,7 @@
     "href": "unit_01/unit_01.revealjs.html#elements-of-sets",
     "title": "Week 1",
     "section": "Elements of Sets",
-    "text": "Elements of Sets\nDefining a new set:\n\nElements go in curly braces. \nA colon means “such that”. \nSpecifying elements:\n’ \\(\\in\\) ’ means ’“is an element of.”\n’ \\(\\notin\\) ’ means “is not an element of.”\n’ \\(\\emptyset\\) ’ means the empty set. \n\n\n\nHow do you write down what elements are in a set?\nTo start with, there are two common techniques for building a brand new set\nFirst, we can just make a list of all the elements inside curly braces."
+    "text": "Elements of Sets\nDefining a new set:\n\nElements go in curly braces. \nA colon means “such that”. \nSpecifying elements:\n\\(\\in\\) means “is an element of”\n\\(\\notin\\) means “is not an element of”\n\\(\\emptyset\\) means “the empty set”\n\n\n\nHow do you write down what elements are in a set?\nTo start with, there are two common techniques for building a brand new set\nFirst, we can just make a list of all the elements inside curly braces."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#subsets-and-supersets",
@@ -7542,21 +7542,21 @@
     "href": "unit_01/unit_01.revealjs.html#set-partitions-1",
     "title": "Week 1",
     "section": "Set Partitions",
-    "text": "Set Partitions\n\n\n\n\n\n\n\nDefinition 1.1.12: partition\n\n\nA set of sets $A_{1}, A_{2}, \\dots, A_{n}$ is a _partition_ of set $S$, if $A_{1}, A_{2}, \\dots, A_{n}$ are nonempty and\npairwise disjoint, and if $S = A_{1} \\cup A_{2} \\cup \\cdots \\cup A_{n}$.\n\n\n\n\n\n\n\nWhile we’re talking about sets, there’s an idea that’s really useful, which is dividing a set up into a partition. Let’s read exactly what a partition is…\nHere’s a set"
+    "text": "Set Partitions\n\n\n\n\n\n\n\nDefinition 1.1.12: partition\n\n\nA set of sets \\(A_{1}, A_{2}, \\dots, A_{n}\\) is a partition of set \\(S\\), if \\(A_{1}, A_{2}, \\dots, A_{n}\\) are nonempty and pairwise disjoint, and if \\(S = A_{1} \\cup A_{2} \\cup \\cdots \\cup A_{n}\\).\n\n\n\n\n\n\n\nWhile we’re talking about sets, there’s an idea that’s really useful, which is dividing a set up into a partition. Let’s read exactly what a partition is…\nHere’s a set"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#partition-rule-1",
     "href": "unit_01/unit_01.revealjs.html#partition-rule-1",
     "title": "Week 1",
     "section": "Partition Rule 1",
-    "text": "Partition Rule 1\nGiven a set \\(A\\) and another set \\(B\\) , a partition of \\(A\\) is…\n\n\n\nCan you see the partition? Here’s one piece, and here’s the other.\nThis one is A minus B, this one is the intersection. Let’s quickly prove it…\n\\(A  = A \\cap(B \\cup B^C) = (A \\cap B) \\cup(A \\cap B^C)  = (A \\cap B) \\cup(A \\setminus B)\\)"
+    "text": "Partition Rule 1\nGiven a set \\(A\\) and another set \\(B\\), a partition of \\(A\\) is…\n\n\n\nCan you see the partition? Here’s one piece, and here’s the other.\nThis one is A minus B, this one is the intersection. Let’s quickly prove it…\n\\(A  = A \\cap(B \\cup B^C) = (A \\cap B) \\cup(A \\cap B^C)  = (A \\cap B) \\cup(A \\setminus B)\\)"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#partition-rule-2",
     "href": "unit_01/unit_01.revealjs.html#partition-rule-2",
     "title": "Week 1",
     "section": "Partition Rule 2",
-    "text": "Partition Rule 2\nGiven a set \\(A\\) and another set \\(B\\) , a partition of \\(A \\cup B\\) is…\n\n\n\nHere’s a slightly harder problem, what if we want to partition the entire union?\nThis time, we can break it apart into 3 pieces. Same as last time, plus also B minus A.\nLet’s quickly prove it…\nLet’s just apply the previous relationship twice!\n\\(A \\cup B   = (A \\cap B) \\cup(A \\setminus B) \\cup(A \\cap B) \\cup(B \\setminus A)\\)\nGuess what, A intersect B is in there twice. if you take a union of a set with itself, you get the same set, so we can just remove one of them and we’re done."
+    "text": "Partition Rule 2\nGiven a set \\(A\\) and another set \\(B\\), a partition of \\(A \\cup B\\)is…\n\n\n\nHere’s a slightly harder problem, what if we want to partition the entire union?\nThis time, we can break it apart into 3 pieces. Same as last time, plus also B minus A.\nLet’s quickly prove it…\nLet’s just apply the previous relationship twice!\n\\(A \\cup B   = (A \\cap B) \\cup(A \\setminus B) \\cup(A \\cap B) \\cup(B \\setminus A)\\)\nGuess what, A intersect B is in there twice. if you take a union of a set with itself, you get the same set, so we can just remove one of them and we’re done."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#call-to-reading",
@@ -7570,14 +7570,14 @@
     "href": "unit_01/unit_01.revealjs.html#fundamental-components-of-probability-space",
     "title": "Week 1",
     "section": "Fundamental Components of Probability Space",
-    "text": "Fundamental Components of Probability Space\n\n\n\n\n\n\n\nA Probability Space\n\n\n\nA sample space , denoted as \\(\\Omega\\) , is the collection of all possible outcomes.\nAn event space , denoted as \\(S\\) , is made up of sets of outcomes.\nA probability measure is a function that maps events to numbers in \\([0,1]\\) . % include squiggly picture\n\n\n\n\n\n\n\nTo build statistical models, we need a mathematical description of probability.\nWe need to take our intuition for what a system with uncertainty means, and encode it into a mathematical object. that object will be what we call a probability space."
+    "text": "Fundamental Components of Probability Space\n\n\n\n\n\n\n\nA Probability Space\n\n\n\nA sample space , denoted as \\(\\Omega\\) , is the collection of all possible outcomes.\nAn event space , denoted as \\(S\\) , is made up of sets of outcomes.\nA probability measure is a function that maps events to numbers in \\([0,1]\\) .\n\n\n\n\n\n\n\nTo build statistical models, we need a mathematical description of probability.\nWe need to take our intuition for what a system with uncertainty means, and encode it into a mathematical object. that object will be what we call a probability space.\ninclude squiggly picture"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#sample-spaces",
     "href": "unit_01/unit_01.revealjs.html#sample-spaces",
     "title": "Week 1",
     "section": "Sample Spaces",
-    "text": "Sample Spaces\nChoosing sample space \\(\\Omega\\) to represent…\n\nA die % which is discrete\nA dartboard % which is continuous\nA survey of 5 U.S. senators\nA spoken conversation\n\n\n\nLet’s start with the sample space. where do we get the sample space? well we have to design it to represent the real world. Let’s give some examples.\nA die –\nA dartboard –\nA survey of 5 U.S. senators –\nSuppose you’re doing language translation –\n\nQuestion: can you apply a probability measure directly to the set of outcomes? unfortunately, no. for simple ones you can, but what about the dartboard. there are an infinite number of locations, and the probability of each one is just zero. but a function that’s zero everywhere doesn’t help us model this."
+    "text": "Sample Spaces\nChoosing sample space \\(\\Omega\\) to represent…\n\nA die % which is discrete\nA dartboard % which is continuous\nA survey of 5 U.S. senators\nA spoken conversation\n\n\n\nLet’s start with the sample space. where do we get the sample space? well we have to design it to represent the real world. Let’s give some examples.\n\nA die –\nA dartboard –\nA survey of 5 U.S. senators –\nSuppose you’re doing language translation –\n\n\nQuestion: can you apply a probability measure directly to the set of outcomes? unfortunately, no. for simple ones you can, but what about the dartboard. there are an infinite number of locations, and the probability of each one is just zero. but a function that’s zero everywhere doesn’t help us model this."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#events",
@@ -7591,28 +7591,28 @@
     "href": "unit_01/unit_01.revealjs.html#forming-new-events",
     "title": "Week 1",
     "section": "Forming New Events",
-    "text": "Forming New Events\n\n\n\n\n\\(A = \\{1,2\\}, B = \\{2,4,6\\}\\)- A OR B: - A AND B: - NOT A:"
+    "text": "Forming New Events\n\n\n\n\n$A = {1,2}, B = {2,4,6}\n\nA OR B:\nA AND B:\nNOT A:\n\n\n\n\nBecause events are sets, we can combine them with set operations to make new events. Let’s think about what those operations mean.\nHere’s two events for the simple example of a die roll\nFirst, think about how you would write down the event A OR B? that is, either A occurs or B occurs.\nWell, that means that the outcome that occurs must be in at least one of A or B, so it must be in their union. When you see a union, think OR."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#event-spaces",
     "href": "unit_01/unit_01.revealjs.html#event-spaces",
     "title": "Week 1",
     "section": "Event Spaces",
-    "text": "Event Spaces\n\n\n\n\n\n\n\nIntuition for an event space\n\n\n- \\(S\\) represents all possible events - However, there are technical reasons that some sets of outcomes must be excluded (non-measurable).\n\n\n\n\nRequirements for a \\(\\sigma\\)-algebra - Nonempty: \\(S \\neq \\emptyset\\) - Closed under complements: If \\(A \\in S\\) then \\(A^C \\in S\\) - Closed under countable unions: if \\(A_1,A_2,... \\in S\\) then \\(A_1 \\cup A_2 \\cup ... \\in S\\)\n\n\nSo Mathematicians said: we can’t put all possible sets in the event space, let’s just make sure that any set we need for a regular analysis is in there. So they came up with a list of guarantees and the technical term for these is a\nYou can think of this as making sure that any way you can combine events together, the answer will always be an event, so it will have a probability. You can’t accidentally fall out of the event space."
+    "text": "Event Spaces\n\n\n\n\n\n\n\nIntuition for an event space\n\n\n\nWe have a bunch of events, and we want to group them all together and call that an event space.\nSeems like a simple idea, right?\n\nBut when you read the textbook, you might have wondered, why is this so complicated? well, it gets fairly technical, but it turns out that there are sometimes sets of outcomes that we have to exclude from the event space. These are called non measurable.}- \\(S\\) represents all possible events\nHowever, there are technical reasons that some sets of outcomes must be excluded (non-measurable).\n\n\n\n\n\nRequirements for a \\(\\sigma\\)-algebra\n\nNonempty: \\(S \\neq \\emptyset\\)\nClosed under complements: If \\(A \\in S\\) then \\(A^C \\in S\\)\nClosed under countable unions: if \\(A_1,A_2,... \\in S\\) then \\(A_1 \\cup A_2 \\cup ... \\in S\\)\n\n\n\nSo Mathematicians said: we can’t put all possible sets in the event space, let’s just make sure that any set we need for a regular analysis is in there. So they came up with a list of guarantees and the technical term for these is a\nYou can think of this as making sure that any way you can combine events together, the answer will always be an event, so it will have a probability. You can’t accidentally fall out of the event space."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#probability-measure",
     "href": "unit_01/unit_01.revealjs.html#probability-measure",
     "title": "Week 1",
     "section": "Probability Measure",
-    "text": "Probability Measure\n\n\n\n\n\n\n\nDefinition of a probability measure\n\n\nA function $P: S \\rightarrow \\mathbb{R}$ is a\nprobability measure if:\n- __Axiom 1.__ There are no negative probabilities: $\\forall A \\in S: P(A) \\geq 0$\n\nAxiom 2. The probability that some outcome occurs is one: \\(P(\\Omega) = 1\\)\nAxiom 3. Probabilities “add up”: If \\(A_1,A_2,...\\) is a countable set of disjoint events, then \\(P(A_1 \\cup A_2 \\cup ... ) = \\sum_{i} P(A_{i})\\)\n\n\n\n\n\n\n\nFinally, the last element is the probability measure itself. To be a valid probability measure, a function has to satisfy three properties.\nWhere do these come from? We’re building a model here. we’re taking properties from our intuition and trying to write them down using math.\nFirst, there are no negative probabilities. that just makes sense to us, right? what would a negative probability mean?\nNext, the probability of the entire outcome space is 1. That should make sense too, because some outcome must happen. the state of the world will be something.\nFinally, the addition rule. Probabilities add up when we combine events, as long as they are disjoint. The probability of rolling a 1 or a 2 is the probability of rolling a 1 plus the probability of rolling a 2. But in standard probability theory that even works for a countably infinite set of disjoint events.\nWhat’s the probability that the sun goes supernova someday? well, you can add the probability for today, plus the probability for tomorrow, and on forever."
+    "text": "Probability Measure\n\n\n\n\n\n\n\nDefinition of a probability measure\n\n\nA function \\(P: S \\rightarrow \\mathbb{R}\\) is a probability measure if:\n\nAxiom 1. There are no negative probabilities: \\(\\forall A \\in S: P(A) \\geq 0\\)\nAxiom 2. The probability that some outcome occurs is one: \\(P(\\Omega) = 1\\)\nAxiom 3. Probabilities “add up”: If \\(A_1,A_2,...\\) is a countable set of disjoint events, then \\(P(A_1 \\cup A_2 \\cup ... ) = \\sum_{i} P(A_{i})\\)\n\n\n\n\n\n\n\nFinally, the last element is the probability measure itself. To be a valid probability measure, a function has to satisfy three properties.\nWhere do these come from? We’re building a model here. we’re taking properties from our intuition and trying to write them down using math.\nFirst, there are no negative probabilities. that just makes sense to us, right? what would a negative probability mean?\nNext, the probability of the entire outcome space is 1. That should make sense too, because some outcome must happen. the state of the world will be something.\nFinally, the addition rule. Probabilities add up when we combine events, as long as they are disjoint. The probability of rolling a 1 or a 2 is the probability of rolling a 1 plus the probability of rolling a 2. But in standard probability theory that even works for a countably infinite set of disjoint events.\nWhat’s the probability that the sun goes supernova someday? well, you can add the probability for today, plus the probability for tomorrow, and on forever."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#probability-measure-1",
     "href": "unit_01/unit_01.revealjs.html#probability-measure-1",
     "title": "Week 1",
     "section": "Probability Measure",
-    "text": "Probability Measure\n\n\n\n\n\n\n\nDefinition of a probability measure\n\n\nA function $P: S \\rightarrow \\mathbb{R}$ is a\nprobability measure if:\n- __Axiom 1.__ There are no negative probabilities: $\\forall A \\in S: P(A) \\geq 0$\n\nAxiom 2. The probability that some outcome occurs is one: \\(P(\\Omega) = 1\\)\nAxiom 3. Probabilities “add up”: If \\(A_1,A_2,...\\) is a countable set of disjoint events, then \\(P(A_1 \\cup A_2 \\cup ... ) = \\sum_{i} P(A_{i})\\)\n\n\n\n\n\n\n\nLooking back at this list of axioms, you might wonder, why only 3?\nWhat happens if we take a union, but events aren’t disjoint? Don’t we need a property about that?\nThat is an important property, but we don’t need it here, because we can derive it from just these three. That’s what we’ll do next."
+    "text": "Probability Measure\n\n\n\n\n\n\n\nDefinition of a probability measure\n\n\nA function \\(P: S \\rightarrow \\mathbb{R}\\) is a probability measure if:\n\nAxiom 1. There are no negative probabilities: \\(\\forall A \\in S: P(A) \\geq 0\\)\nAxiom 2. The probability that some outcome occurs is one: \\(P(\\Omega) = 1\\)\nAxiom 3. Probabilities “add up”: If \\(A_1,A_2,...\\) is a countable set of disjoint events, then \\(P(A_1 \\cup A_2 \\cup ... ) = \\sum_{i} P(A_{i})\\)\n\n\n\n\n\n\n\nLooking back at this list of axioms, you might wonder, why only 3?\nWhat happens if we take a union, but events aren’t disjoint? Don’t we need a property about that?\nThat is an important property, but we don’t need it here, because we can derive it from just these three. That’s what we’ll do next."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#section-1",
@@ -7647,21 +7647,21 @@
     "href": "unit_01/unit_01.revealjs.html#a-helpful-analogy",
     "title": "Week 1",
     "section": "A Helpful Analogy",
-    "text": "A Helpful Analogy\nProbability \\(\\Longleftrightarrow\\) Area\n\n\n\nThe amazing thing about probability is that with just 3 axioms, you can prove all the other properties that you expect based on your intuition. But it can be tough to find a solution just by staring at equations.\nHere’s an analogy that may help you.\nProbabilities are a lot like areas. Actually, area is also a type of measure in mathematics - most of the structure is the same.\nIf you just have a few events, it can help to draw them as areas. That’s not a proof, but it can give you an idea of how they behave.\nLet’s think about the sample space as a square dartboard. We’ll define its area to be 1. I’m really bad at darts so every point is just as likely as any other point.\nAn event is some shape on the dartboard. so the probability that the dart lands in the shape is its area. A picture like this can help you figure out a tricky proof."
+    "text": "A Helpful Analogy\nProbability \\(\\Longleftrightarrow\\) Area\n\n\n\nThe amazing thing about probability is that with just 3 axioms, you can prove all the other properties that you expect based on your intuition. But it can be tough to find a solution just by staring at equations.\nHere’s an analogy that may help you.\nProbabilities are a lot like areas. Actually, area is also a type of measure in mathematics - most of the structure is the same.\nIf you just have a few events, it can help to draw them as areas. That’s not a proof, but it can give you an idea of how they behave.\nLet’s think about the sample space as a square dartboard. We’ll define its area to be 1. I’m really bad at darts so every point is just as likely as any other point.\nAn event is some shape on the dartboard. So the probability that the dart lands in the shape is its area. A picture like this can help you figure out a tricky proof."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#the-subset-subtraction-rule",
     "href": "unit_01/unit_01.revealjs.html#the-subset-subtraction-rule",
     "title": "Week 1",
     "section": "The Subset Subtraction Rule",
-    "text": "The Subset Subtraction Rule\nGiven \\(A,B \\in S\\) , \\(A \\subseteq B\\) . Compute \\(P(B\\setminus A)\\) .\nEx: A = being over 7’, B = being over 6’.\n\n\n\nLet’s start with a simple property, if we assume that event A is a subset of event B, what’s the probability if we subtract A from B.\nFor example, if A is the event of being over 7 foot tall, and B is the event of being over 6 foot tall. how do you get the probability of being between 6 and 7 foot tall?\nI’ll draw a circle for B and a circle for A. To apply the probability axioms, we need disjoint sets. A and B are not disjoint, but we know how to partition\n\\(B = (B\\setminus A) \\cup( A \\cap B) =  (B\\setminus A) \\cup  A  \\implies P(B) = P(B\\setminus A)+ P(A)\\)\nAlso, by axiom 1,"
+    "text": "The Subset Subtraction Rule\nGiven\n\\(A,B \\in S\\), \\(A \\subseteq B\\). Compute \\(P(B\\setminus A)\\).\nFor example: \\(A\\) = being over 7’, \\(B\\) = being over 6’.\n\n\n\nLet’s start with a simple property, if we assume that event A is a subset of event B, what’s the probability if we subtract A from B.\nFor example, if A is the event of being over 7 foot tall, and B is the event of being over 6 foot tall. how do you get the probability of being between 6 and 7 foot tall?\nI’ll draw a circle for B and a circle for A. To apply the probability axioms, we need disjoint sets. A and B are not disjoint, but we know how to partition\n\\(B = (B\\setminus A) \\cup( A \\cap B) =  (B\\setminus A) \\cup  A  \\implies P(B) = P(B\\setminus A)+ P(A)\\)\nAlso, by axiom 1,"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#the-complement-rule",
     "href": "unit_01/unit_01.revealjs.html#the-complement-rule",
     "title": "Week 1",
     "section": "The Complement Rule",
-    "text": "The Complement Rule\nGiven \\(A \\in S\\) . Compute \\(P(A^C)\\) .\n\n\nGiven the subtraction rule, you can very quickly solve for the complement rule\nNote\nsubtraction rule\nAxiom 2:\n\\(P(A^C) = 1 - P(A)\\)"
+    "text": "The Complement Rule\nGiven \\(A \\in S\\). Compute \\(P(A^C)\\).\n\n\nGiven the subtraction rule, you can very quickly solve for the complement rule\nNote\nsubtraction rule\nAxiom 2:\n\\(P(A^C) = 1 - P(A)\\)"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#section-3",
@@ -7682,35 +7682,35 @@
     "href": "unit_01/unit_01.revealjs.html#conditional-probability-part-i",
     "title": "Week 1",
     "section": "Conditional Probability, Part I",
-    "text": "Conditional Probability, Part I\nConditional probability is a rescoping of the sample space from\n\\(\\Omega\\) —every possible outcome—to a smaller set called the\nconditioning set - What is the probability that a student on campus is a volleyball player ( \\(V\\) )? - What is the probability that a student on campus is a volleyball player ( \\(V\\) ), given that they are 6’3’ ( \\(T\\) )’?\nUses information to produce a better statement of the likelihood of an event"
+    "text": "Conditional Probability, Part I\nConditional probability is a rescoping of the sample space from \\(\\Omega\\) —every possible outcome—to a smaller set called the conditioning set\n\nWhat is the probability that a student on campus is a volleyball player \\((V)\\)?\nWhat is the probability that a student on campus is a volleyball player \\((V)\\), given that they are 6’3’ \\((T)\\)?\n\nUses information to produce a better statement of the likelihood of an event"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#think-of-a-dartboard",
     "href": "unit_01/unit_01.revealjs.html#think-of-a-dartboard",
     "title": "Week 1",
     "section": "Think of a Dartboard…",
-    "text": "Think of a Dartboard…\n\n\n\nLet’s build up some intuition by thinking about the dartboard analogy.\nEvent V for volleyball player is an area on the board.\nIf all you know is that the dart hit the board randomly, the probability that it’s in V is the area of V divided by the area of the entire sample space (which we assume to be 1).\nNow what if I tell you that the dart landed somewhere in T, meaning tall? What does your intuition say?\nWell, now you don’t care about the rest of"
+    "text": "Think of a Dartboard…\n ::: {.notes}\n\nLet’s build up some intuition by thinking about the dartboard analogy.\nEvent V for volleyball player is an area on the board.\nIf all you know is that the dart hit the board randomly, the probability that it’s in V is the area of V divided by the area of the entire sample space (which we assume to be 1).\nNow what if I tell you that the dart landed somewhere in T, meaning tall? What does your intuition say?\nWell, now you don’t care about the rest of :::"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#conditional-probability-part-ii",
     "href": "unit_01/unit_01.revealjs.html#conditional-probability-part-ii",
     "title": "Week 1",
     "section": "Conditional Probability, Part II",
-    "text": "Conditional Probability, Part II\n\n\n\n\n\n\n\nConditional probability\n\n\nFor events $A, B \\in \\Omega$ with $P(B) &gt; 0$, define the _conditional\n  probability_ of $A$ given $B$ to be\n\\[\n  P(A|B) = \\frac{P(A \\cap B)}{P(B)}\n  \\]\n\n\n\n\n\n\n\nHere’s the formal definition. the conditional probability of A given B is a ratio.\nOn the top we have the intersection. on the bottom we have all of B"
+    "text": "Conditional Probability, Part II\n\n\n\n\n\n\n\nConditional probability\n\n\nFor events \\(A, B \\in \\Omega\\) with \\(P(B) &gt; 0\\), define the conditional probability of \\(A\\) given \\(B\\) to be\n[ P(A|B) = ]\n\n\n\n\n ::: {.notes}\n\nHere’s the formal definition. the conditional probability of A given B is a ratio.\nOn the top we have the intersection. on the bottom we have all of B :::"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#conditional-probability-part-iii",
     "href": "unit_01/unit_01.revealjs.html#conditional-probability-part-iii",
     "title": "Week 1",
     "section": "Conditional Probability, Part III",
-    "text": "Conditional Probability, Part III\n\n\n\n\n\n\n\nConditional probability\n\n\nFor events $A, B \\in \\Omega$ with $P(B) &gt; 0$, define the _conditional\n  probability_ of $A$ given $B$ to be\n\\[\n  P(A|B) = \\frac{P(A \\cap B)}{P(B)}\n  \\]\n\n\n\n\n\n\n\nThe idea is we’re dropping everything in the sample space outside of B - it’s not relevant, and then we have to rescale the probability so everything adds up to 1."
+    "text": "Conditional Probability, Part III\n\n\n\n\n\n\n\nConditional probability\n\n\nFor events \\(A, B \\in \\Omega\\) with \\(P(B) &gt; 0\\), define the conditional probability of \\(A\\) given \\(B\\) to be\n[ P(A|B) = ]\n\n\n\n\n\n\n\nThe idea is we’re dropping everything in the sample space outside of B - it’s not relevant, and then we have to rescale the probability so everything adds up to 1."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#conditional-probability-part-iv",
     "href": "unit_01/unit_01.revealjs.html#conditional-probability-part-iv",
     "title": "Week 1",
     "section": "Conditional Probability, Part IV",
-    "text": "Conditional Probability, Part IV\n\n\n\n\n\n\n\nMultiplicative Law of Probability\n\n\n  Rearranging the conditional probability statement minimally\n  produces the _Multiplicative Law of Probability_.\n\n  For $A, B \\in \\Omega$ with $P(B) &gt; 0$,\n\n  \\[\n    P(A|B)P(B) = P(A \\cap B) \\pause = P(B|A)P(A)\n  \\]\n\n\n\n\n\n\n\nThis is an important relationship. It gives us an intuitive way to compute the probability that A AND B occur.\nFirst, you write down the probability that A occurs. then, you assume that A has occurred, and you multiply by the probability, which is conditional, that B also occurs."
+    "text": "Conditional Probability, Part IV\n\n\n\n\n\n\n\nMultiplicative Law of Probability\n\n\nRearranging the conditional probability statement minimally produces the Multiplicative Law of Probability.\nFor \\(A, B \\in \\Omega\\) with \\(P(B) &gt; 0\\),\n[ P(A|B)P(B) = P(A B) = P(B|A)P(A) ]\n\n\n\n\n\n\nThis is an important relationship. It gives us an intuitive way to compute the probability that A AND B occur.\nFirst, you write down the probability that A occurs. then, you assume that A has occurred, and you multiply by the probability, which is conditional, that B also occurs."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#section-4",
@@ -7731,7 +7731,7 @@
     "href": "unit_01/unit_01.revealjs.html#total-probability-part-i",
     "title": "Week 1",
     "section": "Total Probability, Part I",
-    "text": "Total Probability, Part I\n\n\n\n\n\n\n\nThe Law of Total Probability\n\n\nIf$\\ A_{1}, A_{2}, \\dots, A_{n}$ is a partition of $\\Omega$, and\nif $B \\in \\Omega$, then\n\\[\n  P(B) = \\sum_{i} P(B \\cap A_{i})\n\\]\nIf there is a positive probability for each partition $A_{i}$,\nthen by the _Multiplicative Law of Probability_\\[\n  P(B) = \\sum_{i} P(B | A_{i})P(A_{i})\n\\]\n\n\n\n\n\n\nIn a lot of probability problems, you need to compute the probability of some complicated event.\nThat can be hard to do directly, and you want some way to break down the problem.\nThere is a famous technique that helps in a lot of cases. it’s called the law of total probability.\nThe idea is we can use a partition of\nLet’s see a picture and then read the law carefully…"
+    "text": "Total Probability, Part I\n\n\n\n\n\n\n\nThe Law of Total Probability\n\n\nIf \\(\\ A_{1}, A_{2}, \\dots, A_{n}\\) is a partition of \\(\\Omega\\), and if \\(B \\in \\Omega\\), then\n[ P(B) = {i} P(B A{i}) ]\nIf there is a positive probability for each partition \\(A_{i}\\), then by the Multiplicative Law of Probability\n[ P(B) = {i} P(B | A{i})P(A_{i}) ]\n\n\n\n\n\n\nIn a lot of probability problems, you need to compute the probability of some complicated event.\nThat can be hard to do directly, and you want some way to break down the problem.\nThere is a famous technique that helps in a lot of cases. it’s called the law of total probability.\nThe idea is we can use a partition of\nLet’s see a picture and then read the law carefully…"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#total-probability-part-ii",
@@ -7752,7 +7752,7 @@
     "href": "unit_01/unit_01.revealjs.html#total-probability-part-iv",
     "title": "Week 1",
     "section": "Total Probability, Part IV",
-    "text": "Total Probability, Part IV"
+    "text": "Total Probability, Part IV\n ## Total Probability, Part V\n ## Total Probability, Part VI\n ## Total Probability, Part VII"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#total-probability-part-v",
@@ -7787,14 +7787,14 @@
     "href": "unit_01/unit_01.revealjs.html#total-probability-part-i-1",
     "title": "Week 1",
     "section": "Total Probability, Part I",
-    "text": "Total Probability, Part I\n\n\n\n\n\n\n\nThe Law of Total Probability\n\n\nIf$\\ A_{1}, A_{2}, \\dots, A_{n}$ is a partition of $\\Omega$, and\nif $B \\in \\Omega$, then\n\\[\n  P(B) = \\sum_{i} P(B \\cap A_{i})\n\\]\nIf there is a positive probability for each partition $A_{i}$,\nthen by the _Multiplicative Law of Probability_\\[\n  P(B) = \\sum_{i} P(B | A_{i})P(A_{i})\n\\]\n\n\n\n\n\n\nNow let’s carefully read the law of total probability.\nThe probability of B is a sum, if you look inside the sum, what we do is we intersect B with some\nTo finish the law, we can then apply the multiplication rule. we write each of these joint probabilities as a product. First, we take the probability we’re inside\nThat’s the law of total probability. It can be quite useful, if you can think of a good partition."
+    "text": "Total Probability, Part I\n\n\n\n\n\n\n\nThe Law of Total Probability\n\n\nIf \\(\\ A_{1}, A_{2}, \\dots, A_{n}\\) is a partition of \\(\\Omega\\), and if \\(B \\in \\Omega\\), then\n[ P(B) = {i} P(B A{i}) ]\nIf there is a positive probability for each partition \\(A_{i}\\), then by the Multiplicative Law of Probability\n[ P(B) = {i} P(B | A{i})P(A_{i}) ]\n\n\n\n\n\n\nNow let’s carefully read the law of total probability.\nThe probability of B is a sum, if you look inside the sum, what we do is we intersect B with some\nTo finish the law, we can then apply the multiplication rule. we write each of these joint probabilities as a product. First, we take the probability we’re inside\nThat’s the law of total probability. It can be quite useful, if you can think of a good partition."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#conditional-inverses",
     "href": "unit_01/unit_01.revealjs.html#conditional-inverses",
     "title": "Week 1",
     "section": "Conditional Inverses",
-    "text": "Conditional Inverses\nDoes\\(P(X|Y) = P(Y|X)\\)? \nExample:\n\n\\(X =\\) Visited Berkeley\n\\(Y =\\) Attend MIDS\n\n\n\nWe know about conditional probability. Let’s say we have two events X and Y. Are these two conditional probabilities the same?\nIn fact, the answer is usually no. here’s an example to convince you. \nThere is an easy way to get from one of these probabilities to the other. it’s the famous theorem known as Bayes’ Rule."
+    "text": "Conditional Inverses\nDoes \\(P(X|Y) = P(Y|X)\\)?\nExample:\n\n\\(X =\\) Visited Berkeley\n\\(Y =\\) Attend MIDS\n\n\n\nWe know about conditional probability. Let’s say we have two events X and Y. Are these two conditional probabilities the same?\nIn fact, the answer is usually no. here’s an example to convince you. \nThere is an easy way to get from one of these probabilities to the other. it’s the famous theorem known as Bayes’ Rule."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#deriving-bayes-rule",
@@ -7815,14 +7815,14 @@
     "href": "unit_01/unit_01.revealjs.html#bayes-rule-example-cont.",
     "title": "Week 1",
     "section": "Bayes’ Rule Example Cont.",
-    "text": "Bayes’ Rule Example Cont.\nWe know:\n\\(P(D) = .0002,  P(D^C) = .9998\\) \\(\\qquad \\qquad\\ \\  P(T|D)=1, P(T|D^C) = .01\\)\nWe want: \\(P(D|T)\\)\n\n\n\\(P(D|T) = \\frac{P(T|D)P(D)}{P(T)}\\)\nStill missing\n\\(P(T) = P(D)P(T|D) + P(D^C)P(T|D^C)\\)\n\\(P(D|T) = \\frac{P(T|D)P(D)}{P(T)} =  \\frac{P(T|D)P(D)}{ P(D)P(T|D) + P(D^C)P(T|D^C) = .0196}\\)\nEven though the test is 99"
+    "text": "Bayes’ Rule Example Cont.\nWe know:\n[\n\\[\\begin{aligned}\n    P(D) = 0.0002, & P(D^{C}) = 0.9998 \\\\\n    P(T|D) = 1 & P(T|D^{C}) = 0.01\n  \\end{aligned}\\]\n]\nWe want:\n\\(P(D|T)\\)\n\n\n\\(P(D|T) = \\frac{P(T|D)P(D)}{P(T)}\\)\nStill missing\n\\(P(T) = P(D)P(T|D) + P(D^C)P(T|D^C)\\)\n\\(P(D|T) = \\frac{P(T|D)P(D)}{P(T)} =  \\frac{P(T|D)P(D)}{ P(D)P(T|D) + P(D^C)P(T|D^C) = .0196}\\)\nEven though the test is 99"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#bayesian-statistics",
     "href": "unit_01/unit_01.revealjs.html#bayesian-statistics",
     "title": "Week 1",
     "section": "Bayesian Statistics",
-    "text": "Bayesian Statistics\nLet H be the event a hypothesis is true.\n\nWe begin with prior (subjective) belief \\(P(H)\\)\nLet D be the data we collect\nUse Bayes’ Rule to compute posterior belief, \\(P(H|D)\\) .\n\n\n\nBayes’ Rule is the foundation of an entire school of stats.\nLet me try to compress an entire school into 60 seconds.\nIn bayesian stats, we may be interested in some hypothesis. Let H be the event that it’s true.\nTo a mainstream statistician, that doesn’t make any sense, a hypothesis is true or false.\nTo a bayesian, probability is used to represent your personal subjective belief. before you see the data, you give the hypothesis a prior probability, P(H)\nThen you see data, D. you can use bayes rule to update your probability to\nThere’s your 60 second crash course on Bayesian stats."
+    "text": "Bayesian Statistics\nLet \\(H\\) be the event a hypothesis is true.\n\nWe begin with prior (subjective) belief \\(P(H)\\)\n\nLet D be the data we collect\n\nUse Bayes’ Rule to compute posterior belief, \\(P(H|D)\\) .\n\n\n\nBayes’ Rule is the foundation of an entire school of stats.\nLet me try to compress an entire school into 60 seconds.\nIn bayesian stats, we may be interested in some hypothesis. Let H be the event that it’s true.\nTo a mainstream statistician, that doesn’t make any sense, a hypothesis is true or false.\nTo a bayesian, probability is used to represent your personal subjective belief. before you see the data, you give the hypothesis a prior probability, P(H)\nThen you see data, D. you can use bayes rule to update your probability to\nThere’s your 60 second crash course on Bayesian stats."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#reading-independence-1",
@@ -7836,28 +7836,28 @@
     "href": "unit_01/unit_01.revealjs.html#independence-1",
     "title": "Week 1",
     "section": "Independence",
-    "text": "Independence\n\n\n\n\n\n\n\nIndependence of events\n\n\nEvents $A, B \\in S$ are _independent_ if $P(A \\cap B) =\nP(A)P(B)$. \n\n\n\n\n\n\n\n\n\n\n\nTheorem: conditional probability and independence\n\n\nFor $A, B \\in S$ and $P(B)&gt;0$, $A$ and $B$ are\nindependent if and only if $P(A|B) = P(A)$.\n\n\n\n\n\n\nLet’s take a look at the formal definition of independence. Notice that we use the elegant product equation. This version is a bit more universal. If event have probability zero, there may not be a good way to define conditional probability.\nHowever, as long as the events have nonzero probability, you can also write independence in terms of conditional probabilities."
+    "text": "Independence\n\n\n\n\n\n\n\nIndependence of events\n\n\nEvents \\(A, B \\in S\\) are independent if \\(P(A \\cap B) = P(A)P(B)\\).\n\n\n\n\n\n\n\n\n\n\n\nTheorem: conditional probability and independence\n\n\nFor \\(A, B \\in S\\) and \\(P(B)&gt;0\\), \\(A\\) and \\(B\\) are independent if and only if \\(P(A|B) = P(A)\\).\n\n\n\n\n\n\nLet’s take a look at the formal definition of independence. Notice that we use the elegant product equation. This version is a bit more universal. If event have probability zero, there may not be a good way to define conditional probability.\nHowever, as long as the events have nonzero probability, you can also write independence in terms of conditional probabilities."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#conditional-probability-and-information",
     "href": "unit_01/unit_01.revealjs.html#conditional-probability-and-information",
     "title": "Week 1",
     "section": "Conditional Probability and Information",
-    "text": "Conditional Probability and Information\n\n\n\nLet \\(C\\) be event that our subscriber cancels.\nLet \\(W\\) be the event our subscriber waited 2 hours on the phone.\\(P(C) &lt; P(C | W)\\)\\(W\\) gives us_information_ about C.\n\n\n%%&lt;— here \n\n\n\nWe introduced conditional probability, and we can think about it in terms of information.\nThis is what we usually expect, at least a little bit. one event will give us some information about another event. But it’s not always the case."
+    "text": "Conditional Probability and Information\n\n\n\nLet \\(C\\) be event that our subscriber cancels.\nLet \\(W\\) be the event our subscriber waited 2 hours on the phone.\\(P(C) &lt; P(C | W)\\)\\(W\\) gives us_information_ about C.\n\n\n\n\n\n\nWe introduced conditional probability, and we can think about it in terms of information.\nThis is what we usually expect, at least a little bit. one event will give us some information about another event. But it’s not always the case."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#understanding-independence",
     "href": "unit_01/unit_01.revealjs.html#understanding-independence",
     "title": "Week 1",
     "section": "Understanding Independence",
-    "text": "Understanding Independence\n\n\n\nLet \\(C\\) be event that our subscriber cancels.\nLet \\(H\\) be the event our subscriber hates cilantro. Is\\(P(C)\\) different from\\(P(C | H)\\)?\n\n\n%%&lt;— here \n\n\n\nSame situation, but now let H be the event the subscriber hates cilantro.\nNow, does knowing that the subscriber hates cilantro give us any information about whether they cancel?\nThat’s pretty farfetched, right? Unless you’re actually sending cilantro to your subscribers - let’s assume that’s not the case - these events have nothing to do with each other. So\nLet’s play with the math.\n\nSo\nAlso,"
+    "text": "Understanding Independence\n\n\n\nLet \\(C\\) be event that our subscriber cancels.\nLet \\(H\\) be the event our subscriber hates cilantro. Is\\(P(C)\\) different from\\(P(C | H)\\)?\n\n\n\n\n\n\nSame situation, but now let H be the event the subscriber hates cilantro.\nNow, does knowing that the subscriber hates cilantro give us any information about whether they cancel?\nThat’s pretty farfetched, right? Unless you’re actually sending cilantro to your subscribers - let’s assume that’s not the case - these events have nothing to do with each other. So\nLet’s play with the math.\n\nSo\nAlso,"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#importance-of-independence",
     "href": "unit_01/unit_01.revealjs.html#importance-of-independence",
     "title": "Week 1",
     "section": "Importance of Independence",
-    "text": "Importance of Independence\nLater in the course: In a random sample every unit is independent of every other unit.\n\n\nSurvey Example:- Let \\(D_1\\) be event that the first respondent has a dog. - Let \\(D_2\\) be event that the second respondent has a dog. - \n\n%%&lt;— here \n\n\n\nMy cilantro example is pretty silly. So why do we need independence?\nIt’s going to become very important when we talk about sampling.\nThink of a survey. \nif\nBut what it they are family members? Then the responses of the first one probably does give you information about the second. This makes it much harder to analyze the data. Throughout this course, we always want to be skeptical about whether independence holds, but many of our techniques really will require it to work."
+    "text": "Importance of Independence\nLater in the course: In a random sample every unit is independent of every other unit.\n\n\nSurvey Example:- Let \\(D_1\\) be event that the first respondent has a dog.\n\nLet \\(D_2\\) be event that the second respondent has a dog.\n\n\n\n\n\n\n\nMy cilantro example is pretty silly. So why do we need independence?\nIt’s going to become very important when we talk about sampling.\nThink of a survey. \nif\nBut what it they are family members? Then the responses of the first one probably does give you information about the second. This makes it much harder to analyze the data. Throughout this course, we always want to be skeptical about whether independence holds, but many of our techniques really will require it to work."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#fatal-officer-involved-shootings",
@@ -7885,7 +7885,7 @@
     "href": "unit_01/unit_01.revealjs.html#johnson-et-al.-2019",
     "title": "Week 1",
     "section": "Johnson et al. (2019)",
-    "text": "Johnson et al. (2019)\n\n\n\n\n\n\n\nJohnson et al. (2019)\n\n\nAre minority groups subjected to unfairly violent treatment\nby law enforcement?  \n\nAre Black civilians overrepresented in FOIS?\nIf so, is this because of racial discrimination by White officers?\n\n\n\n\n\n\nDevelop Database that is a near-total recording of all fatal officer involved shootings (FOIS) in the US in 2015.\n``Model’’ whether race of civilian is a factor that predicts being involved in a FOIS."
+    "text": "Johnson et al. (2019)\n\n\n\n\n\n\n\nJohnson et al. (2019)\n\n\nAre minority groups subjected to unfairly violent treatment by law enforcement?\n\nAre Black civilians overrepresented in FOIS?\nIf so, is this because of racial discrimination by White officers?\n\n\n\n\n\n\nDevelop Database that is a near-total recording of all fatal officer involved shootings (FOIS) in the US in 2015.\n``Model’’ whether race of civilian is a factor that predicts being involved in a FOIS."
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#johnson-et-al.-2019-conclusions",
@@ -7899,7 +7899,7 @@
     "href": "unit_01/unit_01.revealjs.html#probability-translation",
     "title": "Week 1",
     "section": "Probability Translation",
-    "text": "Probability Translation\nCrystal clear probability statement about officer race:\n\\[\\begin{align*}\n    P(\\text{shot} &| \\text{minority civilian, white officer}, X) \\leq\\\\\n                  & P(\\text{shot} | \\text{minority civilian, minority officer}, X)\n  \\end{align*}\\]\nQuestion: Is it possible to justify this statement using only data of officer shootings?\n\n\nThe answer to this probability statement informs policy: If true, then take proactive measures in hiring"
+    "text": "Probability Translation\nCrystal clear probability statement about officer race:\n\\[\\begin{aligned}\n    P(\\text{shot} &| \\text{minority civilian, white officer}, X) \\leq\\\\\n                  & P(\\text{shot} | \\text{minority civilian, minority officer}, X)\n\\end{aligned}\\]\nQuestion: Is it possible to justify this statement using only data of officer shootings?\n\n\nThe answer to this probability statement informs policy: If true, then take proactive measures in hiring"
   },
   {
     "objectID": "unit_01/unit_01.revealjs.html#measuring-fairness",
@@ -8509,7 +8509,7 @@
     "href": "unit_02/unit_02.html#learnosity-roaster-temperature",
     "title": "Week 2",
     "section": "Learnosity: Roaster Temperature",
-    "text": "Learnosity: Roaster Temperature\n\nSuppose \\(T\\) is a random variable representing the temperature of a roaster.\nWhat kind of object is each of the following?\n\n\\(g(T)\\) where\n\n\\(g(t) = \\begin{cases} 1, & t&lt;150\\\\ 0,\n    &\\text{otherwise} \\end{cases}\\) . Answer: random variable\n\n\\(R\\) such that \\(R[T] = P(T&gt;150)\\) . Answer: operator\n\\(T &lt; (5/9)(T-32)\\) . Answer: event\n\n\n\nThree questions, each with three MC answers: (Event, Random Variable, Operator).",
+    "text": "Learnosity: Roaster Temperature\n\nSuppose \\(T\\) is a random variable representing the temperature of a roaster.\nWhat kind of object is each of the following?\n\n\\(g(T)\\) where\n\n\\[\n  g(t) =\n    \\begin{cases}\n        1,  & t&lt;150\\\\ 0,\n            & \\text{otherwise}\n    \\end{cases}\n  \\].\nAnswer: random variable\n\n\\(R\\) such that\n\n\\[\n    R[T] = P(T&gt;150)\n  \\].\nAnswer: operator\n\n\\(T &lt; (5/9)(T-32)\\).\n\nAnswer: event\n\n\nThree questions, each with three MC answers: (Event, Random Variable, Operator).",
     "crumbs": [
       "Week 2"
     ]
@@ -8519,7 +8519,7 @@
     "href": "unit_02/unit_02.html#reading-assignment-1",
     "title": "Week 2",
     "section": "Reading Assignment",
-    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics , section 1.2.2.",
+    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics, section 1.2.2.",
     "crumbs": [
       "Week 2"
     ]
@@ -8529,7 +8529,7 @@
     "href": "unit_02/unit_02.html#introducing-discrete-random-variables",
     "title": "Week 2",
     "section": "Introducing Discrete Random Variables",
-    "text": "Introducing Discrete Random Variables\nA random variable \\(X\\) is discrete if its range,\n\\(X(\\Omega) \\in \\R\\) , is a countable set.\n\n\\(X(\\Omega)\\) can be finite. - A roll of a die: \\(\\{1,2,3,4,5,6\\}\\)\n\\(X(\\Omega)\\) can be countably infinite. - Edits to an article: \\(\\{0,1,2,3...\\}\\)\n\n\n\nRandom variables are quite flexible objects.\nWe’ve been using the full definition based on a probability measure, and that’s a powerful idea - it can model many different things, but it’s not the easiest definition to work with.\nLuckily, as statisticians, we usually don’t need all that power. That’s because the random variables we care about normally belong to two special classes: discrete and continuous.\nYou might guess the range is a discrete set in",
+    "text": "Introducing Discrete Random Variables\nA random variable \\(X\\) is discrete if its range, \\(X(\\Omega) \\in \\mathbb{R}\\), is a countable set.\n\n\\(X(\\Omega)\\) can be finite. - A roll of a die: \\(\\{1,2,3,4,5,6\\}\\)\n\\(X(\\Omega)\\) can be countably infinite. - Edits to an article: \\(\\{0,1,2,3...\\}\\)\n\n\n\nRandom variables are quite flexible objects.\nWe’ve been using the full definition based on a probability measure, and that’s a powerful idea - it can model many different things, but it’s not the easiest definition to work with.\nLuckily, as statisticians, we usually don’t need all that power. That’s because the random variables we care about normally belong to two special classes: discrete and continuous.\nYou might guess the range is a discrete set in",
     "crumbs": [
       "Week 2"
     ]
@@ -8549,7 +8549,7 @@
     "href": "unit_02/unit_02.html#the-probability-mass-function-pmf",
     "title": "Week 2",
     "section": "The Probability Mass Function (PMF)",
-    "text": "The Probability Mass Function (PMF)\nA function that gives the probability that a discrete random variable equals each number in \\(\\R\\) - \\(f_X(x) = P(X = x)\\)\n\n\n\nsketch the probability distribution for the Bernoulli trial\nwrite out pdf with cases",
+    "text": "The Probability Mass Function (PMF)\nA function that gives the probability that a discrete rando variable equals each number in \\(\\mathbb{R}\\)\n\n\\(f_X(x) = P(X = x)\\)\n\n\n\n\nsketch the probability distribution for the Bernoulli trial\nwrite out pdf with cases",
     "crumbs": [
       "Week 2"
     ]
@@ -8559,7 +8559,7 @@
     "href": "unit_02/unit_02.html#key-properties-of-the-pmf",
     "title": "Week 2",
     "section": "Key Properties of the PMF",
-    "text": "Key Properties of the PMF\n\n\n\n\n\n\nTheorem\n\n\n\nFor a discrete random variable \\(X\\) with pmf \\(f\\),\n\nFor all \\(x \\in \\R\\) , \\(f(x) \\geq 0\\) .\n\\(\\sum_{x \\in X(\\Omega)} f(x) = 1\\) .\n\n\n\n\n\n\\(f(x) = P(X=x)\\)\n\\(\\sum_{x \\in X(\\Omega)} P(X=x) = P( \\cup_{x \\in X(\\Omega)}(x = X) ) = P(x \\in X(\\Omega)) = 1\\)\nHopefully you find these intuitive. The values of\nSo not surprising, but these are great sanity checks. My advice is that when you need to answer a question with a pmf, you check these two things.",
+    "text": "Key Properties of the PMF\n\n\n\n\n\n\nTheorem\n\n\n\nFor a discrete random variable \\(X\\) with pmf \\(f\\),\n\nFor all \\(x \\in \\mathbb{R}\\) , \\(f(x) \\geq 0\\) .\n\\(\\sum_{x \\in X(\\Omega)} f(x) = 1\\) .\n\n\n\n\n\n\\(f(x) = P(X=x)\\)\n\\(\\sum_{x \\in X(\\Omega)} P(X=x) = P( \\cup_{x \\in X(\\Omega)}(x = X) ) = P(x \\in X(\\Omega)) = 1\\)\nHopefully you find these intuitive. The values of\nSo not surprising, but these are great sanity checks. My advice is that when you need to answer a question with a pmf, you check these two things.",
     "crumbs": [
       "Week 2"
     ]
@@ -8569,7 +8569,7 @@
     "href": "unit_02/unit_02.html#computing-other-event-probabilities-from-the-pmf",
     "title": "Week 2",
     "section": "Computing Other Event Probabilities from the PMF",
-    "text": "Computing Other Event Probabilities from the PMF\n\n\n\n\n\n\nTheorem: The PMF fully characterizes a discrete RV\n\n\n\nFor a discrete random variable \\(X\\) with pmf \\(f\\), if \\(D \\subseteq \\R\\), \\(P(X \\in D) = \\sum_{x \\in X(\\Omega) \\cap D } f(x).\\)\n\n\n\nTake-away: The pmf contains all the information about the probability distribution of \\(X\\) .",
+    "text": "Computing Other Event Probabilities from the PMF\n\n\n\n\n\n\nTheorem: The PMF fully characterizes a discrete RV\n\n\n\nFor a discrete random variable \\(X\\) with pmf \\(f\\), if \\(D \\subseteq \\mathbb{R}\\),\n\\[\n  P(X \\in D) = \\sum_{x \\in X(\\Omega) \\cap D } f(x).\n  \\]\n\n\n\nTake-away: The pmf contains all the information about the probability distribution of \\(X\\).",
     "crumbs": [
       "Week 2"
     ]
@@ -8579,7 +8579,7 @@
     "href": "unit_02/unit_02.html#reading-assignment-2",
     "title": "Week 2",
     "section": "Reading Assignment",
-    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics , section 1.2.3.",
+    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics, section 1.2.3.",
     "crumbs": [
       "Week 2"
     ]
@@ -8609,7 +8609,7 @@
     "href": "unit_02/unit_02.html#motivation-for-continuous-random-variables",
     "title": "Week 2",
     "section": "Motivation for Continuous Random Variables",
-    "text": "Motivation for Continuous Random Variables\n\n\n\nLet’s say you’re studying a rare species of giant squid. I ask you, what’s the probability that a specimen is exactly 6 meters long?\nYou might estimate that maybe 20\nBut my question is what’s the probability that a squid is exactly 6 meters.\nTo within 1 mm? to within 1 nanometer?\nYou can quickly see that the probability of 6 meters with zero error is actually",
+    "text": "Motivation for Continuous Random Variables\n\n\n\nLet’s say you’re studying a rare species of giant squid. I ask you, what’s the probability that a specimen is exactly 6 meters long?\nYou might estimate that maybe 20\nBut my question is what’s the probability that a squid is exactly 6 meters.\nTo within 1 mm? to within 1 nanometer?\nYou can quickly see that the probability of 6 meters with zero error is actually 0.",
     "crumbs": [
       "Week 2"
     ]
@@ -8659,7 +8659,7 @@
     "href": "unit_02/unit_02.html#reading-continuous-random-variables",
     "title": "Week 2",
     "section": "Reading: Continuous Random Variables",
-    "text": "Reading: Continuous Random Variables\nRead Foundations of Agnostic Statistics , section 1.2.4.",
+    "text": "Reading: Continuous Random Variables\nRead Foundations of Agnostic Statistics, section 1.2.4.",
     "crumbs": [
       "Week 2"
     ]
@@ -8669,7 +8669,7 @@
     "href": "unit_02/unit_02.html#continuous-random-variables",
     "title": "Week 2",
     "section": "Continuous Random Variables",
-    "text": "Continuous Random Variables\n\n\n\n\n\n\nDefinition\n\n\n\nA random variable \\(X\\) is continuous if there exists a non-negative function \\(f:\\R \\rightarrow \\R\\) such that the cdf of \\(X\\) is \\(F(x) = \\int_{-\\infty}^x f(u) du \\text{, for all } x \\in \\R\\)\n\n\n\n\n\nHow do we define a continuous random variable? It’s a random variable that has a probability density function\nWe know that every random variable has a CDF. for a continuous random variable, the pdf determines the cdf. How do you get the CDF from the pdf?\nThe CDF at some point x, is the probability the RV is less than or equal to x.\nHow do we get that? we integrate from -infinity to x",
+    "text": "Continuous Random Variables\n\n\n\n\n\n\nDefinition\n\n\n\nA random variable \\(X\\) is continuous if there exists a non-negative function \\(f:\\mathbb{R} \\mathbb{R}ightarrow \\mathbb{R\\) such that the cdf of \\(X\\) is \\(F(x) = \\int_{-\\infty}^x f(u) du \\text{, for all } x \\in \\mathbb{R\\)\n\n\n\n\n\nHow do we define a continuous random variable? It’s a random variable that has a probability density function\nWe know that every random variable has a CDF. for a continuous random variable, the pdf determines the cdf. How do you get the CDF from the pdf?\nThe CDF at some point x, is the probability the RV is less than or equal to x.\nHow do we get that? we integrate from -infinity to x",
     "crumbs": [
       "Week 2"
     ]
@@ -8679,7 +8679,7 @@
     "href": "unit_02/unit_02.html#characterizing-continuous-random-variables",
     "title": "Week 2",
     "section": "Characterizing Continuous Random Variables",
-    "text": "Characterizing Continuous Random Variables\n\n\n\n\n\n\nDeriving the PDF from the CDF\n\n\n\nFor a continuous random variable with cdf \\(F\\), the probability density function of \\(X\\) is \\(f(x) = \\frac{dF(u)}{du} \\Bigg|_{u=x} \\text{, for all } x \\in \\R\\)\n\n\n\n\n\nIf you take an integral to get from the pdf to CDF, how do you go the other way?\nThis is really just the fundamental theorem of calculus: take a derivative.\nthink about the the cdf at some point x, this is\nThen move to the right by some tiny dx. the cdf now represents\nSo the difference is just\nThat’s how quickly we’re adding in probability. If we divide by the width of the rectangle, we get the slope, and that’s exactly the probability density.",
+    "text": "Characterizing Continuous Random Variables\n\n\n\n\n\n\nDeriving the PDF from the CDF\n\n\n\nFor a continuous random variable with cdf \\(F\\), the probability density function of \\(X\\) is \\(f(x) = \\frac{dF(u)}{du} \\Bigg|_{u=x} \\text{, for all } x \\in \\mathbb{R\\)\n\n\n\n\n\nIf you take an integral to get from the pdf to CDF, how do you go the other way?\nThis is really just the fundamental theorem of calculus: take a derivative.\nthink about the the cdf at some point x, this is\nThen move to the right by some tiny dx. the cdf now represents\nSo the difference is just\nThat’s how quickly we’re adding in probability. If we divide by the width of the rectangle, we get the slope, and that’s exactly the probability density.",
     "crumbs": [
       "Week 2"
     ]
@@ -8689,7 +8689,7 @@
     "href": "unit_02/unit_02.html#characterizing-continuous-random-variables-cont.",
     "title": "Week 2",
     "section": "Characterizing Continuous Random Variables (cont.)",
-    "text": "Characterizing Continuous Random Variables (cont.)\n\n\n\n\n\n\nProperties of Probability Density Functions\n\n\n\nFor a continuous random variable \\(X\\) with pdf \\(f\\), 1. For all \\(x\\in \\R\\) , \\(f(x) \\geq 0\\) . 2. \\(\\int_{-\\infty}^\\infty f(x)dx = 1\\) .\n\n\n\n\nHere are two important properties of pdfs.\nUse these as sanity checks. when you write down a pdf, see if these properties hold.\nIf they don’t, you’ve done something wrong.",
+    "text": "Characterizing Continuous Random Variables (cont.)\n\n\n\n\n\n\nProperties of Probability Density Functions\n\n\n\nFor a continuous random variable \\(X\\) with pdf \\(f\\),\n\nFor all \\(x\\in \\mathbb{R\\) , \\(f(x) \\geq 0\\).\n\\(\\int_{-\\infty}^\\infty f(x)dx = 1\\).\n\n\n\n\n\nHere are two important properties of pdfs.\nUse these as sanity checks. when you write down a pdf, see if these properties hold.\nIf they don’t, you’ve done something wrong.",
     "crumbs": [
       "Week 2"
     ]
@@ -8699,7 +8699,7 @@
     "href": "unit_02/unit_02.html#support",
     "title": "Week 2",
     "section": "Support",
-    "text": "Support\n\n\n\n\n\n\nDefinition\n\n\n\nFor a random variable \\(X\\) with pmf or pdf \\(f\\), the support of \\(X\\) is \\(\\text{Supp}[X] = \\{x \\in \\R : f(x) &gt; 0 \\}\\)\n\n\n\n\nThis will be helpful when we discuss continuous distributions. we’ll usually assume we’re in the support, because we don’t want to divide by zero.",
+    "text": "Support\n\n\n\n\n\n\nDefinition\n\n\n\nFor a random variable \\(X\\) with pmf or pdf \\(f\\), the support of \\(X\\) is \\(\\text{Supp}[X] = \\{x \\in \\mathbb{R : f(x) &gt; 0 \\}\\)\n\n\n\n\nThis will be helpful when we discuss continuous distributions. we’ll usually assume we’re in the support, because we don’t want to divide by zero.",
     "crumbs": [
       "Week 2"
     ]
@@ -8709,7 +8709,7 @@
     "href": "unit_02/unit_02.html#uniform-random-variables",
     "title": "Week 2",
     "section": "Uniform Random Variables",
-    "text": "Uniform Random Variables\nNote: This is a placeholder for a video that we’re going to re-use from: Use the old video 3.9 Uniform Random Variables - only the start through 6.12, before I start talking about expectation.",
+    "text": "Uniform Random Variables\nNote: This is a placeholder for a video that we’re going to re-use from:\nUse the old video 3.9 Uniform Random Variables - only the start through 6.12, before I start talking abou expectation.",
     "crumbs": [
       "Week 2"
     ]
@@ -8729,7 +8729,7 @@
     "href": "unit_02/unit_02.html#the-normal-distribution",
     "title": "Week 2",
     "section": "The Normal Distribution",
-    "text": "The Normal Distribution\nThe most important distribution in statistics - The variables measured don’t always come directly from a normal distribution - Human height has a close-to-normal distribution–so do anthropometric measurements on fossils, reaction times in psychological experiments, etc. - Most variables deviate from a normal distribution - We’ll see how the normal distribution pops up as a consequence of basic mathematical laws - A famous theorem is the Central Limit Theorem . Many of our statistical tests depend on this theorem, and it tells us when certain distributions will approach a normal distribution",
+    "text": "The Normal Distribution\nThe most important distribution in statistics\n\nThe variables measured don’t always come directly from a normal distribution - Human height has a close-to-normal distribution–so do anthropometric measurements on fossils, reaction times in psychological experiments, etc.\nMost variables deviate from a normal distribution\nWe’ll see how the normal distribution pops up as a consequence of basic mathematical laws\nA famous theorem is the Central Limit Theorem . Many of our statistical tests depend on this theorem, and it tells us when certain distributions will approach a normal distribution",
     "crumbs": [
       "Week 2"
     ]
@@ -8739,7 +8739,7 @@
     "href": "unit_02/unit_02.html#the-normal-distribution-equation",
     "title": "Week 2",
     "section": "The Normal Distribution equation",
-    "text": "The Normal Distribution equation\nA continuous rv \\(X\\) is said to have a normal distribution with parameters \\(\\mu\\) and \\(\\sigma\\) (or \\(\\mu\\) and \\(\\sigma^{2}\\) ), where \\(-\\infty &lt; \\mu &lt; \\infty\\) and \\(0 &lt; \\sigma\\) , if the pdf of \\(X\\) is:\n\\[\\begin{equation}\n     f(x; \\mu, \\sigma) = \\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}\n     e^{-(x-\\mu)^{2}/(2\\sigma^{2})},\n     -\\infty &lt; x &lt; \\infty\n  \\end{equation}\\]\nThis is the equation for the density function of a normal distribution",
+    "text": "The Normal Distribution equation\nA continuous rv \\(X\\) is said to have a normal distribution with parameters \\(\\mu\\) and \\(\\sigma\\) (or \\(\\mu\\) and \\(\\sigma^{2}\\)), where \\(-\\infty &lt; \\mu &lt; \\infty\\) and \\(0 &lt; \\sigma\\), if the pdf of \\(X\\) is:\n\\[\n    f(x; \\mu, \\sigma) = \\frac{1}{\\sqrt{2\\pi\\sigma^{2}}} e^{-(x-\\mu)^{2}/(2\\sigma^{2})},\n     -\\infty &lt; x &lt; \\infty\n\\]\nThis is the equation for the density function of a normal distribution",
     "crumbs": [
       "Week 2"
     ]
@@ -8749,7 +8749,7 @@
     "href": "unit_02/unit_02.html#the-normal-distribution-equation-1",
     "title": "Week 2",
     "section": "The Normal Distribution equation",
-    "text": "The Normal Distribution equation\n\\[\\begin{equation}\n     f(x; \\mu, \\sigma) = \\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}\n     e^{-(x-\\mu)^{2}/(2\\sigma^{2})},\n     -\\infty &lt; x &lt; \\infty\n  \\end{equation}\\] - There are two parameters, \\(\\mu\\) and \\(\\sigma\\) - There is an entire family of normal distributions - It can be shown that \\(E(x)=\\mu\\) and \\(V(X)=\\sigma^{2}\\) , so the parameters are the mean and the standard deviation of \\(X\\) - The statement that \\(X\\) is normally distributed with parameters \\(\\mu\\) and \\(\\sigma^{2}\\) is often abbreviated \\(X \\sim N(\\mu, \\sigma^{2})\\)",
+    "text": "The Normal Distribution equation\n\\[\n    f(x; \\mu, \\sigma) = \\frac{1}{\\sqrt{2\\pi\\sigma^{2}}} e^{-(x-\\mu)^{2}/(2\\sigma^{2})},\n     -\\infty &lt; x &lt; \\infty\n\\]\n\nThere are two parameters, \\(\\mu\\) and \\(\\sigma\\) - There is an entire family of normal distributions\nIt can be shown that \\(E(x)=\\mu\\) and \\(V(X)=\\sigma^{2}\\) , so the parameters are the mean and the standard deviation of \\(X\\)\nThe statement that \\(X\\) is normally distributed with parameters \\(\\mu\\) and \\(\\sigma^{2}\\) is often abbreviated \\(X \\sim N(\\mu, \\sigma^{2})\\)",
     "crumbs": [
       "Week 2"
     ]
@@ -8769,7 +8769,7 @@
     "href": "unit_02/unit_02.html#the-standard-normal-distribution",
     "title": "Week 2",
     "section": "The Standard Normal Distribution",
-    "text": "The Standard Normal Distribution\n\nOften, we need to select one representative distribution out of the normal family\nTypically, we choose \\(\\mu=0\\) and \\(\\sigma=1\\) - This is called the standard normal distribution , also called a z-distribution\nIt is also denoted by a capital Z\nWe can write the pdf of Z:\n\n\\[\\begin{equation}\n      f(z; 0, 1)= \\frac{1}{\\sqrt{2\\pi}}e^{-z^{2}/2},\n      -\\infty &lt; X &lt; \\infty\n  \\end{equation}\\] - The cumulative distribution of Z is often written as \\(\\phi(z)\\)",
+    "text": "The Standard Normal Distribution\n\nOften, we need to select one representative distribution out of the normal family\nTypically, we choose \\(\\mu=0\\) and \\(\\sigma=1\\) - This is called the standard normal distribution , also called a z-distribution\nIt is also denoted by a capital Z\nWe can write the pdf of Z:\n\n\\[\n      f(z; 0, 1)= \\frac{1}{\\sqrt{2\\pi}}e^{-z^{2}/2},\n      -\\infty &lt; X &lt; \\infty\n\\]\n\nThe cumulative distribution of Z is often written as \\(\\phi(z)\\)",
     "crumbs": [
       "Week 2"
     ]
@@ -8829,7 +8829,7 @@
     "href": "unit_02/unit_02.html#introducing-joint-distributions-1",
     "title": "Week 2",
     "section": "Introducing Joint Distributions",
-    "text": "Introducing Joint Distributions\n\n\n\nBecause we have this separate probabiliity space, it’s easy to define a new random variable D, that maps from\nOne way to look at this is we have Probability Measure P over the sample space. Through these random variables, you could show that this induces a probability measure over\nWe’re going to spend a lot of time working with sets of random variables to do a variety of useful things. But right now, we’re really starting with just the basics - what are ways of defining and describing joint distributions?",
+    "text": "Introducing Joint Distributions\n\n\n\nBecause we have this separate probabiliity space, it’s easy to define a new random variable D, that maps from\nOne way to look at this is we have Probability Measure P over the sample space. Through these random variables, you could show that this induces a probability measure over\nWe’re going to spend a lot of time working with sets of random variables to do a variety of useful things. But right now, we’re really starting with just the basics\nWhat are ways of defining and describing joint distributions?",
     "crumbs": [
       "Week 2"
     ]
@@ -8839,7 +8839,7 @@
     "href": "unit_02/unit_02.html#reading-assignment-3",
     "title": "Week 2",
     "section": "Reading Assignment",
-    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics , section 1.3–1.3.1.",
+    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics, section 1.3–1.3.1.",
     "crumbs": [
       "Week 2"
     ]
@@ -8849,7 +8849,7 @@
     "href": "unit_02/unit_02.html#equality-of-random-variables",
     "title": "Week 2",
     "section": "Equality of Random Variables",
-    "text": "Equality of Random Variables\n\n\n\n\n\n\nEquality of random variables\n\n\n\nLet $X$ and $Y$ be random variables. Then, $X = Y$ if, for all\n$\\omega \\in \\Omega, X(\\omega) = Y(\\omega)$.\n\n\nDon’t assume \\(X=Y\\) just because:\n\n\\(X\\) and \\(Y\\) have the same distribution - \\(X=1\\) if Paul’s coin lands heads, 0 otherwise\n\n\n\\(Y=1\\) if Alex’s coin lands heads, 0 otherwise\n\\(f_X = f_Y\\) but \\(X \\neq Y\\) \n\n\n\\(P(X=Y) = 1\\) - \\(X=1\\) if Paul climbs Half Dome, 0 otherwise\n\n\n\\(Y=1\\) if Alex climbs El Capitan, 0 otherwise\n\\(P(X=Y) = 1\\) but \\(X \\neq Y\\)\n\n\n\n\nBefore the book gets to joint distributions, it starts with a bit of a tangent - when are two random variables equal?\n\nThis is really a warning. It’s easy to be careless and write down\nFor example, two variables are not equal just because they have the same distribution.\nSay X is a Bernoulli representing fair coin number 1, and Y is a Bernoulli representing fair coin number 2. They have the same distribution, but they are not equal because for some outcomes one will be 1 and one will be 0.\nEVEN if\nLet’s say you and I get identical contracts to go hunt for a new specimen of giant squid. But I get an extra contract that said I get a million dollars extra if the squid we discover is exactly 6 meters. the probability that that happens is zero, but as a technical matter, the random variables are not equal.",
+    "text": "Equality of Random Variables\n\n\n\n\n\n\nEquality of random variables\n\n\n\nLet \\(X\\) and \\(Y\\) be random variables. Then, \\(X = Y\\) if, for all \\(\\omega \\in \\Omega, X(\\omega) = Y(\\omega)\\).\n\n\nDon’t assume \\(X=Y\\) just because:\n\n\\(X\\) and \\(Y\\) have the same distribution - \\(X=1\\) if Paul’s coin lands heads, 0 otherwise\n\n\\(Y=1\\) if Alex’s coin lands heads, 0 otherwise\n\\(f_X = f_Y\\) but \\(X \\neq Y\\) \n\n\\(P(X=Y) = 1\\) - \\(X=1\\) if Paul climbs Half Dome, 0 otherwise\n\n\\(Y=1\\) if Alex climbs El Capitan, 0 otherwise\n\\(P(X=Y) = 1\\) but \\(X \\neq Y\\)\n\n\n\n\nBefore the book gets to joint distributions, it starts with a bit of a tangent - when are two random variables equal?\nThis is really a warning. It’s easy to be careless and write down\nFor example, two variables are not equal just because they have the same distribution.\nSay X is a Bernoulli representing fair coin number 1, and Y is a Bernoulli representing fair coin number 2. They have the same distribution, but they are not equal because for some outcomes one will be 1 and one will be 0.\nEVEN if\nLet’s say you and I get identical contracts to go hunt for a new specimen of giant squid. But I get an extra contract that said I get a million dollars extra if the squid we discover is exactly 6 meters. the probability that that happens is zero, but as a technical matter, the random variables are not equal.",
     "crumbs": [
       "Week 2"
     ]
@@ -8879,7 +8879,7 @@
     "href": "unit_02/unit_02.html#the-joint-cumulative-probability-function",
     "title": "Week 2",
     "section": "The Joint Cumulative Probability Function",
-    "text": "The Joint Cumulative Probability Function\n\\(F(b,d) = P(B \\leq b, D \\leq d)\\) - Recall that \\(F_{X}(x) = \\int_{-\\infty}^{x}f(x)\\) relates the CDF and PDF for the single variable case. - In a similar way: \\(F_{Y,X} = \\int_{-\\infty}^{x} \\int_{-\\infty}^{y}f(y,x) dy dx\\) - This can be hard to work with but can describe any random variables.\n\n\nJust like for one random variable, we can define a cumulative probability function for 2 or more random variables.\nFor almost everything, this is an inconvenient way to work with random variables\nThere is one giant advantage - this works to describe any random variables, discrete, continuous, or mixed.\nSo probability theorists want to prove things using CDFs because that makes the results universal.",
+    "text": "The Joint Cumulative Probability Function\n\\(F(b,d) = P(B \\leq b, D \\leq d)\\)\n\nRecall that \\(F_{X}(x) = \\int_{-\\infty}^{x}f(x)\\) relates the CDF and PDF for the single variable case.\nIn a similar way: \\(F_{Y,X} = \\int_{-\\infty}^{x} \\int_{-\\infty}^{y}f(y,x) dy dx\\)\nThis can be hard to work with but can describe any random variables.\n\n\n\nJust like for one random variable, we can define a cumulative probability function for 2 or more random variables.\nFor almost everything, this is an inconvenient way to work with random variables\nThere is one giant advantage - this works to describe any random variables, discrete, continuous, or mixed.\nSo probability theorists want to prove things using CDFs because that makes the results universal.",
     "crumbs": [
       "Week 2"
     ]
@@ -8889,7 +8889,7 @@
     "href": "unit_02/unit_02.html#learnosity-the-probability-mass-function",
     "title": "Week 2",
     "section": "Learnosity: The Probability Mass Function",
-    "text": "Learnosity: The Probability Mass Function\nSuppose that \\(X_1\\) is a Bernoulli random variable representing a fair coin. Suppose that \\(X_2\\) is a Bernoulli random variable representing a second fair coin. Let \\(Y = X_1 + X_2\\) .\nFill in the following table for the PMF of \\(X_1\\) and \\(Y\\) .",
+    "text": "Learnosity: The Probability Mass Function\nSuppose that \\(X_1\\) is a Bernoulli random variable representing a fair coin. Suppose that \\(X_2\\) is a Bernoulli random variable representing a second fair coin. Let \\(Y = X_1 + X_2\\).\nFill in the following table for the PMF of \\(X_1\\) and \\(Y\\) .",
     "crumbs": [
       "Week 2"
     ]
@@ -8899,7 +8899,7 @@
     "href": "unit_02/unit_02.html#reading-assignment-4",
     "title": "Week 2",
     "section": "Reading Assignment",
-    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics , section 1.3.2.",
+    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics, section 1.3.2.",
     "crumbs": [
       "Week 2"
     ]
@@ -8929,7 +8929,7 @@
     "href": "unit_02/unit_02.html#from-marginal-to-joint-distributions",
     "title": "Week 2",
     "section": "From Marginal to Joint Distributions?",
-    "text": "From Marginal to Joint Distributions?\nIs it possible to compute the joint distribution, \\(f\\) , given the marginals \\(f_B\\) and \\(f_D\\) ?\n\n\n\nLet me do the first, then take 30 seconds to think about it, then click play again. (unless it’s worth turning into a learnosity quiz? but really just a brain teaser, we haven’t taught students how to think about this.\nthe answer is no. there is much more information in the joint distribution.\nIn statistics, we have what are called degrees of freedom, which are like the dimensions along which the numbers can change. If you look at\nIf you need more convincing, here are two different joint distributions that have the same marginals.",
+    "text": "From Marginal to Joint Distributions?\nIs it possible to compute the joint distribution, \\(f\\), given the marginals \\(f_B\\) and \\(f_D\\)?\n\n\nLet me do the first, then hink about it, then click play again. (unless it’s worth turning into a learnosity quiz? but really just a brain teaser, we haven’t taught students how to think about this.\nthe answer is no. there is much more information in the joint distribution.\nIn statistics, we have what are called degrees of freedom, which are like the dimensions along which the numbers can change.\nIf you need more convincing, here are two different joint distributions that have the same marginals.",
     "crumbs": [
       "Week 2"
     ]
@@ -8949,7 +8949,7 @@
     "href": "unit_02/unit_02.html#the-conditional-pmf",
     "title": "Week 2",
     "section": "The Conditional PMF",
-    "text": "The Conditional PMF\n\nGiven two test drives ( \\(D = 2\\) ), what does the model say about buying behavior ( \\(B\\) )?\nWhat is the conditional pmf, \\(f_{B|D}\\) ?\n\n\n\nLet’s go back again to the car dealer example. You have modeled the joint distribution of the Buy decision B and the number of test drives D.\nNow a dealer comes to you and says that they have a customer that test drove 2 cars. They want to know, according to your model, what probabilities to assign to buy and not buy.\nSince we know\nbut there’s a problem. this is not a probability distribution, because the sum is not 1.\nSo, the solution is that we remember that probabilities are ratios, so we have to divide these by their total. by the way, their total is exactly the marginal probability here - 0.3. when we divide then, we get 1/3 and 2/3.",
+    "text": "The Conditional PMF\n\nGiven two test drives ( \\(D = 2\\) ), what does the model say about buying behavior ( \\(B\\) )?\nWhat is the conditional pmf, \\(f_{B|D}\\) ?\n\n\n\nLet’s go back again to the car dealer example. You have modeled the joint distribution of the Buy decision B and the number of test drives D.\nNow a dealer comes to you and says that they have a customer that test drove 2 cars. They want to know, according to your model, what probabilities to assign to buy and not buy.\nSince we know\nBut there’s a problem. this is not a probability distribution, because the sum is not 1.\nSo, the solution is that we remember that probabilities are ratios, so we have to divide these by their total. by the way, their total is exactly the marginal probability here - 0.3. when we divide then, we get 1/3 and 2/3.",
     "crumbs": [
       "Week 2"
     ]
@@ -8959,7 +8959,7 @@
     "href": "unit_02/unit_02.html#the-conditional-pmf-cont.",
     "title": "Week 2",
     "section": "The Conditional PMF (cont.)",
-    "text": "The Conditional PMF (cont.)\n\n\n\n\n\n\nConditional expectation, car dealers\n\n\n\n\\[\\begin{align*}\n      f_{B|D}(b|d) & = P(B=b | D=d) \\\\\n                   &= \\frac{P(B=b, D=d)}{P(D=d)} = \\frac{f(b,d)}{f_D(d)}\n    \\end{align*}\\]\n\n\n\\(\\text{conditional} = \\frac{\\text{joint}}{\\text{marginal}} \\Leftrightarrow \\pause \\text{joint} = \\text{marginal} \\cdot \\text{conditional}\\)\n\n\nHere’s the theorem from the book\nWe want the conditional distribution at some point b, given little d. This is a conditional probability, that B=b, given D = d. we use the definition of conditional prob to write this as a fraction. then notice that we have the joint distribution over the marginal.\nThese are really just distributional versions of the multiplication rule we saw for events",
+    "text": "The Conditional PMF (cont.)\n\n\n\n\n\n\nConditional expectation, car dealers\n\n\n\n\\[\\begin{aligned}\n      f_{B|D}(b|d) & = P(B=b | D=d) \\\\\n                   &= \\frac{P(B=b, D=d)}{P(D=d)} = \\frac{f(b,d)}{f_D(d)}\n    \\end{aligned}\\]\n\n\n\\(\\text{conditional} = \\frac{\\text{joint}}{\\text{marginal}} \\Leftrightarrow \\pause \\text{joint} = \\text{marginal} \\cdot \\text{conditional}\\)\n\n\nHere’s the theorem from the book\nWe want the conditional distribution at some point b, given little d. This is a conditional probability, that B=b, given D = d. We use the definition of conditional prob to write this as a fraction. then notice that we have the joint distribution over the marginal.\nThese are really just distributional versions of the multiplication rule we saw for events",
     "crumbs": [
       "Week 2"
     ]
@@ -8969,7 +8969,7 @@
     "href": "unit_02/unit_02.html#reading-assignment-5",
     "title": "Week 2",
     "section": "Reading Assignment",
-    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics , section 1.3.3.",
+    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics, section 1.3.3.",
     "crumbs": [
       "Week 2"
     ]
@@ -8989,7 +8989,7 @@
     "href": "unit_02/unit_02.html#probabilities-of-events",
     "title": "Week 2",
     "section": "Probabilities of Events",
-    "text": "Probabilities of Events\n\n\nThe first thing we might want to do is compute the probability that (X,Y) is in some set. - Let’s draw some set D on the X-Y plane\nWhen we had discrete random variables, we summed up the pmf for all points in that set.\nNow we have to take an integral over that area\n\\(P((X,Y) \\in D) = \\int\\int_{(x,y) \\in D}\n  f(x,y) dx dy\\)",
+    "text": "Probabilities of Events\n\n\nThe first thing we might want to do is compute the probability that (X,Y) is in some set.\nLet’s draw some set D on the X-Y plane\nWhen we had discrete random variables, we summed up the pmf for all points in that set.\nNow we have to take an integral over that area\n\\(P((X,Y) \\in D) = \\int\\int_{(x,y) \\in D} f(x,y) dx dy\\)",
     "crumbs": [
       "Week 2"
     ]
@@ -9019,7 +9019,7 @@
     "href": "unit_02/unit_02.html#reading-assignment-6",
     "title": "Week 2",
     "section": "Reading Assignment",
-    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics , section 1.3.4.",
+    "text": "Reading Assignment\nRead Foundations of Agnostic Statistics, section 1.3.4.",
     "crumbs": [
       "Week 2"
     ]
@@ -9029,7 +9029,7 @@
     "href": "unit_02/unit_02.html#independence",
     "title": "Week 2",
     "section": "Independence",
-    "text": "Independence\nIf \\(X\\) and \\(Y\\) are independent, \\(X \\indep Y\\) .\n\nThe marginals fully describe the distribution: \\(f(x,y) = f_X(x)f_Y(y)\\) \nKnowing X tells you nothing about Y: \\(f_{Y|X}(y|x) =\\) \n\n\n\nIndependence is a key property that we will use again and again in this course\nFirst, let’s look at the definition…",
+    "text": "Independence\nIf \\(X\\) and \\(Y\\) are independent, \\(X \\indep Y\\).\n\nThe marginals fully describe the distribution: \\(f(x,y) = f_X(x)f_Y(y)\\) \nKnowing X tells you nothing about Y: \\(f_{Y|X}(y|x) =\\) \n\n\n\nIndependence is a key property that we will use again and again in this course\nFirst, let’s look at the definition…",
     "crumbs": [
       "Week 2"
     ]
@@ -9069,7 +9069,7 @@
     "href": "unit_02/unit_02.html#assessing-independence-in-practice",
     "title": "Week 2",
     "section": "Assessing Independence in Practice",
-    "text": "Assessing Independence in Practice\nIndependence is rarely (if ever) perfectly met.\nWhat if:\n\nPatient 1 and patient 2 are related\nTechnicians trade off every 10 patients\nAfter seeing an unusually high blood pressure, the technician adjusts their mannerisms\nThese are potential dependencies .\n\n\n\nRemember, there will almost always be some. It’s important to identify them. But you must exercise judgement about which are really important and which are minor.",
+    "text": "Assessing Independence in Practice\nIndependence is rarely (if ever) perfectly met.\nWhat if:\n\nPatient 1 and patient 2 are related\nTechnicians trade off every 10 patients\nAfter seeing an unusually high blood pressure, the technician adjusts their mannerisms\n\nThese are potential dependencies.\n\n\nRemember, there will almost always be some. It’s important to identify them. But you must exercise judgement about which are really important and which are minor.",
     "crumbs": [
       "Week 2"
     ]
@@ -16155,5 +16155,83 @@
     "crumbs": [
       "Week 13"
     ]
+  },
+  {
+    "objectID": "unit_01/unit_01.html",
+    "href": "unit_01/unit_01.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "Image: www.flickr.com/photos/brickset/ (CC BY 2.0)\n\n\nThis course is about statistical modeling. So let’s start by asking, what is a model?\nHere’s a model, built out of lego bricks.\nSome of you might have played with legos growing up, I definitely did.\nThe thing with legos is you learn some basic rules: the ways that legos can fit together.\nThen you can build something that resembles something in the real world, that captures important behavior.\nWhen you’re starting out with legos for the first time, you don’t immediately try to build a giant machine.\nMaybe you take two legos, test them to see how they fit together. Once you’re familiar with the pieces, you can then try to create something that you see in the world.\n\n\n\n\n\n\n\n\nA statistical model is also a representation of something in the world.\nWhen you have data, it comes from a real-world system.\nBut we don’t just care about this data, we have questions: what data is coming next? what other data could have plausible come up? what features of the world are consistent with this data?\nFor those questions, we can’t interrogate the world directly, we need a statistical model.\nThis is a representation that also creates data.\nWe have to pretend that this data actually came from the model. Then we can start to answer these questions.\n\n\n\n\n\n\nPutting together statistical models\nFitting models to data\n\n\n\nWhen we designed this course, we decided to follow a very strict narrative.\nAt the highest level of abstraction, here’s our plan…\nMost courses jump around, looking at data, then building models, then back.\nWe believe it’s better to really commit to understanding models, then apply them.\nBecause of that, we’re actually not going to touch any data for several weeks.\nBut don’t worry, there will be a LOT of application in the second half of the course.\n\n\n\n\n\n\nImage: Hans Schou (CC BY-SA 3.0)\n\n\nWhen we start out, our models are not going to resemble the world at all\nThey will be brittle - with no flexibility to make them look like the real world\nActually, just like this tower of legos, they may be very rectangle.\nYou may ask, where did this rectangular distribution come from?\nThe answer is we made it up! and we just want to build something simple to understand how the bricks fit together\n\n\n\n\n\n\nImage: www.flickr.com/photos/brickset/ (CC BY 2.0)\n\n\nBut the key is not to worry about those problems at the beginning. as we learn more, we’ll see that our models can be more flexible, to represent a wide range of real world systems\nWe’ll also learn how to fit our models to data, and that’s going to make them really useful.\n\n\n\n\n\n\nImage: www.flickr.com/photos/billward/ (CC BY 2.0)\n\n\nThis week, we’re starting with the foundation. probability theory\nThis is really the nuts and bolts, how do the pieces of statistical models fit together.\nA strong understanding of probability will be useful to you through this course and through your career as a data scientist.",
+    "crumbs": [
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "unit_01/unit_01.html#section",
+    "href": "unit_01/unit_01.html#section",
+    "title": "Week 1",
+    "section": "",
+    "text": "You run an experiment in which you flip 3 coins, and each one lands heads or tails. Your sample space can be written:\n\\(\\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}\\).\nAssume all outcomes have equal probability.\n\n(Assuming that you include all possible sets) what is the size of the event space?\nHow many outcomes are in the event that the first coin lands heads?\nIf A is the event that the first coin lands heads, and B is the event that the second and third coin land the same way, what is the probability of \\(A \\cup B\\)",
+    "crumbs": [
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "unit_01/unit_01.html#section-2",
+    "href": "unit_01/unit_01.html#section-2",
+    "title": "Week 1",
+    "section": "",
+    "text": "Here is a proof of the addition rule, select the best justification for each line.\n\\[\\begin{align*}\nA \\cup B &=  (A \\setminus B) \\cup (A \\cap B) \\cup (B \\setminus A) \\\\\nP(A \\cup B) &= P(A \\setminus B) + P(A \\cap B) +  P(B \\setminus A) \\\\\n&= P(A \\setminus B) + P(A \\cap B) +  P(B \\setminus A) + P(A \\cap B) - P(A \\cap B) \\\\\n&=  P\\big( (A \\setminus B) \\cup( A \\cap B) \\big) +  P\\big( (B \\setminus A) \\cup (A \\cap B) \\big) - P(A \\cap B)\\\\\n&= P(A) + P(B)  - P(A \\cap B)\n\\end{align*}\\]\nOptions (to be scrambled):\n\nPartition Rule 2\nAxiom 3, countable additivity.\nBecause adding something and also subtracting it doesn’t change anything.\nAxiom 3, countable additivity.\nPartition Rule 1.",
+    "crumbs": [
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "unit_01/unit_01.html#check",
+    "href": "unit_01/unit_01.html#check",
+    "title": "Week 1",
+    "section": "Check:",
+    "text": "Check:\nSuppose that the probability that a student plays volleyball is .4, the probability that the student is tall is .5, and the probability that the student is both tall and plays volleyball is .3.\nWhat is the conditional probability that the student plays volleyball, given that they are tall?\nAnswer: .6",
+    "crumbs": [
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "unit_01/unit_01.revealjs.html#section",
+    "href": "unit_01/unit_01.revealjs.html#section",
+    "title": "Week 1",
+    "section": "",
+    "text": "You run an experiment in which you flip 3 coins, and each one lands heads or tails. Your sample space can be written:\n\\(\\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}\\).\nAssume all outcomes have equal probability.\n\n(Assuming that you include all possible sets) what is the size of the event space?\nHow many outcomes are in the event that the first coin lands heads?\nIf A is the event that the first coin lands heads, and B is the event that the second and third coin land the same way, what is the probability of \\(A \\cup B\\)"
+  },
+  {
+    "objectID": "unit_01/unit_01.revealjs.html#section-2",
+    "href": "unit_01/unit_01.revealjs.html#section-2",
+    "title": "Week 1",
+    "section": "",
+    "text": "Here is a proof of the addition rule, select the best justification for each line.\n\\[\\begin{align*}\nA \\cup B &=  (A \\setminus B) \\cup (A \\cap B) \\cup (B \\setminus A) \\\\\nP(A \\cup B) &= P(A \\setminus B) + P(A \\cap B) +  P(B \\setminus A) \\\\\n&= P(A \\setminus B) + P(A \\cap B) +  P(B \\setminus A) + P(A \\cap B) - P(A \\cap B) \\\\\n&=  P\\big( (A \\setminus B) \\cup( A \\cap B) \\big) +  P\\big( (B \\setminus A) \\cup (A \\cap B) \\big) - P(A \\cap B)\\\\\n&= P(A) + P(B)  - P(A \\cap B)\n\\end{align*}\\]\nOptions (to be scrambled):\n\nPartition Rule 2\nAxiom 3, countable additivity.\nBecause adding something and also subtracting it doesn’t change anything.\nAxiom 3, countable additivity.\nPartition Rule 1."
+  },
+  {
+    "objectID": "unit_01/unit_01.revealjs.html#check",
+    "href": "unit_01/unit_01.revealjs.html#check",
+    "title": "Week 1",
+    "section": "Check:",
+    "text": "Check:\nSuppose that the probability that a student plays volleyball is .4, the probability that the student is tall is .5, and the probability that the student is both tall and plays volleyball is .3.\nWhat is the conditional probability that the student plays volleyball, given that they are tall?\nAnswer: .6"
+  },
+  {
+    "objectID": "unit_01/unit_01.html#addition-rule",
+    "href": "unit_01/unit_01.html#addition-rule",
+    "title": "Week 1",
+    "section": "Addition Rule",
+    "text": "Addition Rule\nHere is a proof of the addition rule, select the best justification for each line.\n\\[\\begin{aligned}\nA \\cup B &=  (A \\setminus B) \\cup (A \\cap B) \\cup (B \\setminus A) \\\\\nP(A \\cup B) &= P(A \\setminus B) + P(A \\cap B) +  P(B \\setminus A) \\\\\n&= P(A \\setminus B) + P(A \\cap B) +  P(B \\setminus A) + P(A \\cap B) - P(A \\cap B) \\\\\n&=  P\\big( (A \\setminus B) \\cup( A \\cap B) \\big) +  P\\big( (B \\setminus A) \\cup (A \\cap B) \\big) - P(A \\cap B)\\\\\n&= P(A) + P(B)  - P(A \\cap B)\n\\end{aligned}\\]\nOptions (to be scrambled):\n\nPartition Rule 2\nAxiom 3, countable additivity.\nBecause adding something and also subtracting it doesn’t change anything.\nAxiom 3, countable additivity.\nPartition Rule 1.",
+    "crumbs": [
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "unit_01/unit_01.revealjs.html#addition-rule",
+    "href": "unit_01/unit_01.revealjs.html#addition-rule",
+    "title": "Week 1",
+    "section": "Addition Rule",
+    "text": "Addition Rule\nHere is a proof of the addition rule, select the best justification for each line.\n\\[\\begin{aligned}\nA \\cup B &=  (A \\setminus B) \\cup (A \\cap B) \\cup (B \\setminus A) \\\\\nP(A \\cup B) &= P(A \\setminus B) + P(A \\cap B) +  P(B \\setminus A) \\\\\n&= P(A \\setminus B) + P(A \\cap B) +  P(B \\setminus A) + P(A \\cap B) - P(A \\cap B) \\\\\n&=  P\\big( (A \\setminus B) \\cup( A \\cap B) \\big) +  P\\big( (B \\setminus A) \\cup (A \\cap B) \\big) - P(A \\cap B)\\\\\n&= P(A) + P(B)  - P(A \\cap B)\n\\end{aligned}\\]\nOptions (to be scrambled):\n\nPartition Rule 2\nAxiom 3, countable additivity.\nBecause adding something and also subtracting it doesn’t change anything.\nAxiom 3, countable additivity.\nPartition Rule 1."
   }
 ]

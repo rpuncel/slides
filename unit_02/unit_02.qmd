@@ -287,30 +287,34 @@ _Foundations of Agnostic Statistics_
 ![](figures/roaster1.png)
 
 
-  Suppose 
-$T$
- is a random variable representing the temperature of a
+  Suppose  $T$ is a random variable representing the temperature of a
   roaster.
   
   What kind of object is each of the following?
 
-  1. 
-$g(T)$
- where
+  1. $g(T)$ where 
   
-$g(t) = \begin{cases} 1, & t<150\\ 0,
-    &\text{otherwise} \end{cases}$
-. Answer: random variable
+  $$
+  g(t) = 
+    \begin{cases} 
+        1,  & t<150\\ 0,
+            & \text{otherwise} 
+    \end{cases}
+  $$. 
   
-  2. 
-$R$
- such that 
-$R[T] = P(T>150)$
-. Answer: operator
+  Answer: random variable
   
-  3. 
-$T < (5/9)(T-32)$
-. Answer: event
+  2. $R$ such that 
+
+  $$
+    R[T] = P(T>150)
+  $$. 
+  
+  Answer: operator
+  
+  3. $T < (5/9)(T-32)$. 
+  
+  Answer: event
   
   
 
@@ -325,31 +329,15 @@ $T < (5/9)(T-32)$
 
 
 ## Reading Assignment
-Read 
-_Foundations of Agnostic Statistics_
-, section 1.2.2.
-
-
-
-
-
+Read _Foundations of Agnostic Statistics_, section 1.2.2.
 
 
 ## Introducing Discrete Random Variables
-A random variable 
-$X$
- is 
-_discrete_
- if its range,
-  
-$X(\Omega) \in \R$
-, is a countable set.
+
+A random variable $X$ is _discrete_ if its range, $X(\Omega) \in \mathbb{R}$, is a countable set.
    
-  
 - $X(\Omega)$ can be finite. - A roll of a die: $\{1,2,3,4,5,6\}$
 - $X(\Omega)$ can be countably infinite. - Edits to an article: $\{0,1,2,3...\}$
-
-
 
 ::: {.notes}
 
@@ -359,12 +347,8 @@ $X(\Omega) \in \R$
 - You might guess the range is a discrete set in 
 :::
 
-
-
-
 ## The Bernoulli Distribution
-A Bernoulli trial is a simple (but important) discrete random
-  variable.
+A Bernoulli trial is a simple (but important) discrete random variable.
   
 - It can represent: - a coin flip
 - a decision to buy or not to buy
@@ -372,56 +356,40 @@ A Bernoulli trial is a simple (but important) discrete random
     failure of experiment
 - Convention: 1 represents success, 0 failure
 
-
-
 ::: {.notes}
 
 - $\Omega = {H,T}$
 - $P(H) = p$
 - Let 
 - $P(X=1) = p$
+
 :::
 
-
-
-
 ## The Probability Mass Function (PMF)
-A function that gives the probability that a discrete random
-  variable equals each number in 
-$\R$
+A function that gives the probability that a discrete rando variable equals each number in $\mathbb{R}$
+
 - $f_X(x) = P(X = x)$
 
-
-
 ![](figures/axes.png)
-
-
 
 ::: {.notes}
 
 - sketch the probability distribution for the Bernoulli
     trial
 - write out pdf with cases
+
 :::
-
-
-
 
 ## Key Properties of the PMF
 
-
 ::: {.callout-note title="Theorem"}
-
 
   For a discrete random variable $X$ with pmf $f$, 
   
-  1. For all $x \in \R$ , $f(x) \geq 0$ .
-2. $\sum_{x \in X(\Omega)} f(x) = 1$ .
+  1. For all $x \in \mathbb{R}$ , $f(x) \geq 0$ .
+  2. $\sum_{x \in X(\Omega)} f(x) = 1$ .
 
 :::
-
-
-
 
 ::: {.notes}
 
@@ -433,67 +401,34 @@ $\R$
   surprising, but these are great sanity checks.  My advice is that
   when you need to answer a question with a pmf, you check these two
   things.
+
 :::
-
-
-
 
 ## Computing Other Event Probabilities from the PMF
 
-
 ::: {.callout-note title="Theorem: The PMF fully characterizes a discrete RV"}
+  For a discrete random variable $X$ with pmf $f$, if $D \subseteq \mathbb{R}$, 
+  
+  $$
+  P(X \in D) = \sum_{x \in X(\Omega) \cap D } f(x).
+  $$
 
-
-  For a discrete random variable $X$ with pmf $f$, if $D \subseteq \R$,
-  $P(X \in D) = \sum_{x \in X(\Omega) \cap D } f(x).$
 :::
-
-
 
 ![](figures/pmf_to_events.png)
 
- Take-away:
-The pmf contains 
-_all_
- the information about the probability
-distribution of 
-$X$
-.
-
-
-
-
-
-
+ Take-away: The pmf contains _all_ the information about the probability distribution of $X$.
 
 ## Reading Assignment
-Read 
-_Foundations of Agnostic Statistics_
-, section 1.2.3.
-
-
-
-
-
-
+Read _Foundations of Agnostic Statistics_, section 1.2.3.
 
 ## The Cumulative Distribution Function
 
-
 ![](figures/cdf_axes.png)
-
-
-
-
-
-
 
 ## The Cumulative Distribution Function (Solution)
 
-
 ![](figures/cdf_axes_key.png)
-
-
 
 ::: {.notes}
 
@@ -503,42 +438,28 @@ _Foundations of Agnostic Statistics_
     there is one big advantage. 
 -  The CDF completely specifies the
     distribution of ANY RV, not just a discrete one.  It doesn't place any assumptions on the random variable.  so we like to write theorems that use the CDF, because those are as general as possible.
+
 :::
-
-
-
 
 ## Motivation for Continuous Random Variables
 
-
 ![](figures/squid.jpg)
-
-
 
 ::: {.notes}
 
-- Let's
-    say you're studying a rare species of giant squid.  I ask you,
-    what's the probability that a specimen is exactly 6 meters long?
+- Let's say you're studying a rare species of giant squid.  I ask you, what's the probability that a specimen is exactly 6 meters long?
 - You might estimate that maybe 20
-- But my question is what's the
-    probability that a squid is exactly 6 meters.
-- To
-    within 1 mm?  to within 1 nanometer?
-- You can quickly
-    see that the probability of 6 meters with zero error is actually
-    0.
+- But my question is what's the probability that a squid is exactly 6 meters.
+- To within 1 mm?  to within 1 nanometer?
+- You can quickly see that the probability of 6 meters with zero error is actually 0.
+
 :::
-
-
-
 
 ## Motivation for Continuous Random Variables
 
 \begin{tabularx}{\textwidth}{ *{6}{X} }
     \includegraphics[width=  .3  \textwidth]{figures/toaster}   &   &  \\
   \end{tabularx}
-
 
 ::: {.notes}
 
@@ -547,9 +468,6 @@ _Foundations of Agnostic Statistics_
 - force until a piece of
     equipment breaks,
 :::
-
-
-
 
 ## Motivation for Continuous Random Variables
 
@@ -565,9 +483,6 @@ _Foundations of Agnostic Statistics_
 -  time between customer visits
 :::
 
-
-
-
 ## Motivation for Continuous Random Variables
 
 \begin{tabularx}{\textwidth}{ *{6}{X} }
@@ -575,7 +490,6 @@ _Foundations of Agnostic Statistics_
                                                                   \includegraphics[width=  .3 \textwidth ]{figures/clock}  & 
                                                                                                                              \includegraphics[width=  .3  \textwidth ]{figures/roaster} \\
   \end{tabularx}
-
 
 ::: {.notes}
 
@@ -591,62 +505,31 @@ _Foundations of Agnostic Statistics_
     continuous random variables..
 :::
 
-
-
-
 ## The Probability Density Function
 
-
 ![](figures/density.png)
-
-
 
 ::: {.notes}
 
-- The
-    core idea behind continuous random variables is a probability
-    density function
-- The purpose is to show how
-    probability is spread out over the range of possible values
+- The core idea behind continuous random variables is a probability density function
+- The purpose is to show how probability is spread out over the range of possible values
 - The probability of any one point is zero
-- But if you have a range, what you do is you integrate
-    under the density to get the probability
-- Draw
-    interval and indicate area....
-- This gives us a
-    principled way to talk about probabilities over a continuum of
-    values
+- But if you have a range, what you do is you integrate under the density to get the probability
+- Draw interval and indicate area....
+- This gives us a principled way to talk about probabilities over a continuum of values
 :::
 
-
-
-
 ## Reading: Continuous Random Variables
-Read 
-_Foundations of Agnostic Statistics_
-, section 1.2.4.
-
-
-
-
-
-
+Read _Foundations of Agnostic Statistics_, section 1.2.4.
 
 ## Continuous Random Variables
 
-
 ::: {.callout-note title="Definition"}
 
-
-  A random variable $X$ is _continuous_ if there exists a non-negative function $f:\R \rightarrow \R$ such that the cdf of $X$ is
-  $F(x) = \int_{-\infty}^x f(u) du \text{, for all } x \in \R$
+  A random variable $X$ is _continuous_ if there exists a non-negative function $f:\mathbb{R} \mathbb{R}ightarrow \mathbb{R$ such that the cdf of $X$ is $F(x) = \int_{-\infty}^x f(u) du \text{, for all } x \in \mathbb{R$
 :::
 
-
-
 ![](figures/density.png)
-
-
 
 ::: {.notes}
 
@@ -656,24 +539,15 @@ _Foundations of Agnostic Statistics_
 - How do we get that?  we integrate from -infinity to x
 :::
 
-
-
-
 ## Characterizing Continuous Random Variables
-
 
 ::: {.callout-note title="Deriving the PDF from the CDF"}
 
 
-  For a continuous random variable with cdf $F$, the probability density function of $X$ is
-  $f(x) = \frac{dF(u)}{du} \Bigg|_{u=x} \text{, for all } x \in \R$
+  For a continuous random variable with cdf $F$, the probability density function of $X$ is $f(x) = \frac{dF(u)}{du} \Bigg|_{u=x} \text{, for all } x \in \mathbb{R$
 :::
 
-
-
 ![](figures/cdf.png)
-
-
 
 ::: {.notes}
 
@@ -683,160 +557,85 @@ _Foundations of Agnostic Statistics_
 - Then move to the right by some tiny dx.  the cdf now represents 
 - So the difference is just 
 - That's how quickly we're adding in probability.  If we divide by the width of the rectangle, we get the slope, and that's exactly the probability density.
+
 :::
-
-
-
 
 ## Characterizing Continuous Random Variables (cont.)
 
-
 ::: {.callout-note title="Properties of Probability Density Functions"}
 
-
   For a continuous random variable $X$ with pdf $f$,
-  1. For all $x\in \R$ , $f(x) \geq 0$ .
-2. $\int_{-\infty}^\infty f(x)dx = 1$ .
+  
+  1. For all $x\in \mathbb{R$ , $f(x) \geq 0$.
+  2. $\int_{-\infty}^\infty f(x)dx = 1$.
 
 :::
-
-
-
 
 ::: {.notes}
 
 - Here are two important properties of pdfs.
 - Use these as sanity checks.  when you write down a pdf, see if these properties hold.
 - If they don't, you've done something wrong.
+
 :::
-
-
-
 
 ## Support
 
-
 ::: {.callout-note title="Definition"}
-
-
-  For a random variable $X$ with pmf or pdf $f$, the _support_ of $X$ is
-  $\text{Supp}[X] = \{x \in \R : f(x) > 0 \}$
+  For a random variable $X$ with pmf or pdf $f$, the _support_ of $X$ is $\text{Supp}[X] = \{x \in \mathbb{R : f(x) > 0 \}$
 :::
-
-
-
 
 ::: {.notes}
 
 - This will be helpful when we discuss continuous distributions.  we'll usually assume we're in the support, because we don't want to divide by zero.
 :::
 
-
-
-
 ## Uniform Random Variables
-__Note: This is a placeholder for a video that we're going to
-    re-use from:__
- Use the old video 3.9 Uniform Random Variables -
-  only the start through 6.12, before I start talking about
-  expectation.
+__Note: This is a placeholder for a video that we're going to re-use from:__ 
 
-
-
-
-
-
-
+Use the old video 3.9 Uniform Random Variables - only the start through 6.12, before I start talking abou expectation.
 
 ## 
 Use the old video 3.10 The Normal Distribution
 
-
-
-
-
-
-
 ## The Normal Distribution
+
 __The most important distribution in statistics__
+
 - The variables measured don't always come directly from a normal distribution - Human height has a close-to-normal distribution--so do anthropometric measurements on fossils, reaction times in psychological experiments, etc.
 - Most variables deviate from a normal distribution
 - We'll see how the normal distribution pops up as a consequence of basic mathematical laws
 - A famous theorem is the __Central Limit Theorem__ . Many of our statistical tests depend on this theorem, and it tells us when certain distributions will approach a normal distribution
 
-
-
-
-
-
-
 ## The Normal Distribution equation
-A continuous rv 
-$X$
- is said to have a 
-__normal distribution__
- with parameters 
-$\mu$
- and 
-$\sigma$
-(or 
-$\mu$
- and 
-$\sigma^{2}$
-), where 
-$-\infty < \mu < \infty$
- and 
-$0 < \sigma$
-, if the pdf of 
-$X$
- is:
+A continuous rv  $X$ is said to have a *normal distribution* with parameters $\mu$ and $\sigma$ (or $\mu$ and $\sigma^{2}$), where $-\infty < \mu < \infty$ and $0 < \sigma$, if the pdf of $X$ is:
   
   
-\begin{equation}
-     f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}}
-     e^{-(x-\mu)^{2}/(2\sigma^{2})},
+$$
+    f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}} e^{-(x-\mu)^{2}/(2\sigma^{2})},
      -\infty < x < \infty
-  \end{equation}
+$$
 
   This is the equation for the density function of a normal distribution
 
-
-
-
-
-
-
 ## The Normal Distribution equation
 
-\begin{equation}
-     f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}}
-     e^{-(x-\mu)^{2}/(2\sigma^{2})},
+$$
+    f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}} e^{-(x-\mu)^{2}/(2\sigma^{2})},
      -\infty < x < \infty
-  \end{equation}
+$$ 
+
 - There are two parameters, $\mu$ and $\sigma$ - There is an entire family of normal distributions
 - It can be shown that $E(x)=\mu$ and $V(X)=\sigma^{2}$ , so the parameters are the mean and the standard deviation of $X$
 - The statement that $X$ is normally distributed with parameters $\mu$ and $\sigma^{2}$ is often abbreviated $X \sim N(\mu, \sigma^{2})$
 
-
-
-
-
-
-
 ## Normal Curve Examples
-
 
 ![](figures/normal_curve.png)
 - These are normal curves with different $\mu$ and $\sigma$
 - Each curve is symmetric around its mean
 - $\mu$ is both the mean and the median, changing it moves the curve left or right
 - $\sigma$ is also called the scale parameter, since it stretches the curve horizontally
-
-
-
-
-
-
 
 ## The Standard Normal Distribution
 
@@ -845,17 +644,12 @@ $X$
 - It is also denoted by a capital Z
 - We can write the pdf of Z:
 
-\begin{equation}
+$$
       f(z; 0, 1)= \frac{1}{\sqrt{2\pi}}e^{-z^{2}/2},
       -\infty < X < \infty
-  \end{equation}
+$$ 
+
 - The cumulative distribution of Z is often written as $\phi(z)$
-
-
-
-
-
-
 
 ## Standardizing a Normal Variable
 
@@ -864,25 +658,12 @@ $X$
 - This can make it easier to perform tests using the variable
 - Any probabilities involving $X$ can be expressed in terms of areas under the z-distribution
 
-
-
-
-
-
-
 ## Standardizing a Normal Variable (cont.)
 These are easy to compute in statistical software
   
-
 ![](figures/standardizing_normal_variable.png)
 
-
-
-
-
-
 ## Properties of the Normal Distribution
-
 
 ![](figures/properties_normal_distribution.png)
 
@@ -891,12 +672,6 @@ These are easy to compute in statistical software
 - 68 \% of the area is within 1 standard deviation of the mean
 - 95 \% is within 2 standard deviations
 - 99.7 \% is within 3 standard deviations
-
-
-
-
-
-
 
 ## Properties of the Normal Distribution (cont.)
 
@@ -908,129 +683,66 @@ These are easy to compute in statistical software
     \end{enumerate}
   \end{exampleblock}
 
-
-
-
-
-
 # Part 2: Joint Distributions
 
 ## Introducing Joint Distributions
 
-
 ![](figures/sample_space.png)
-
-
 
 ::: {.notes}
 
-- - Suppose that you're consulting for a car dealer to build a
-      statistical model of a customer -- ``Will _this_ customer
-      buy a car?
-- You begin by defining a random variable $B$ , that takes the
-      value $B=1$ if the customer buys, and $B=0$ if they don't.
-- Without any additional informaiton, your best guess is no
-      better than the historical average sales -- and the dealer
-      already has that! You need to do _better_ to be valuable. - Number of test drives
+- - Suppose that you're consulting for a car dealer to build a statistical model of a customer -- ``Will _this_ customer buy a car?
+- You begin by defining a random variable $B$ , that takes the value $B=1$ if the customer buys, and $B=0$ if they don't.
+- Without any additional informaiton, your best guess is no better than the historical average sales -- and the dealer already has that! You need to do _better_ to be valuable. - Number of test drives
 - Size of family
 - No problem! Just make new random variables!
 
 :::
 
-
-
-
 ## Introducing Joint Distributions
-
 
 ![](figures/sample_space.png)
 
-
-
 ::: {.notes}
 
-- Because we have this separate probabiliity space, it's
-    easy to define a new random variable D, that maps from 
-- One way to look at this is we have Probability Measure P
-    over the sample space.  Through these random variables, you could
-    show that this induces a probability measure over 
-- We're going to spend a lot of time working with sets of
-    random variables to do a variety of useful things.  But right now,
-    we're really starting with just the basics - what are ways of
-    defining and describing joint distributions? 
+- Because we have this separate probabiliity space, it's easy to define a new random variable D, that maps from 
+- One way to look at this is we have Probability Measure P over the sample space.  Through these random variables, you could show that this induces a probability measure over 
+- We're going to spend a lot of time working with sets of random variables to do a variety of useful things.  But right now, we're really starting with just the basics 
+- What are ways of defining and describing joint distributions? 
+
 :::
 
-
-
-
 ## Reading Assignment
-Read 
-_Foundations of Agnostic Statistics_
-, section 1.3–1.3.1.
-
-
-
-
-
-
+Read _Foundations of Agnostic Statistics_, section 1.3–1.3.1.
 
 ## Equality of Random Variables
 
-
 ::: {.callout-note title="Equality of random variables"}
 
-
-    Let $X$ and $Y$ be random variables. Then, $X = Y$ if, for all
-    $\omega \in \Omega, X(\omega) = Y(\omega)$.
+Let $X$ and $Y$ be random variables. Then, $X = Y$ if, for all $\omega \in \Omega, X(\omega) = Y(\omega)$.
   
 :::
 
-
 \pause
- Don't assume 
-$X=Y$
- just because:
+ 
+Don't assume $X=Y$ just because:
 
-  
 1. $X$ and $Y$ have the same distribution - $X=1$ if Paul's coin lands heads, 0 otherwise
-- $Y=1$ if Alex's coin lands heads, 0 otherwise
-- $f_X = f_Y$ but $X \neq Y$ \pause
+    - $Y=1$ if Alex's coin lands heads, 0 otherwise
+    - $f_X = f_Y$ but $X \neq Y$ \pause
 2. $P(X=Y) = 1$ - $X=1$ if Paul climbs Half Dome, 0 otherwise
-- $Y=1$ if Alex climbs El Capitan, 0 otherwise
-- $P(X=Y) = 1$ but $X \neq Y$
-
-
+    - $Y=1$ if Alex climbs El Capitan, 0 otherwise
+    - $P(X=Y) = 1$ but $X \neq Y$
 
 ::: {.notes}
 
-- \alex{I wonder if the second point is important enough
-      to cover?  Or, if we can make it more clearly? Let $X$ be the
-      probability Paul climbs El Capitan. Let $Y$ be the probability
-      Alex climbs Half Dome. Both are zero, but they're differently
-      zero.}
-- Before the book gets to joint distributions, it starts
-    with a bit of a tangent - when are two random variables equal?
-- 
-- This is really a warning.  It's easy
-    to be careless and write down 
-- For example, two variables are not equal just
-    because they have the same distribution.
-- Say X is a
-    Bernoulli representing fair coin number 1, and Y is a Bernoulli
-    representing fair coin number 2.  They have the same distribution,
-    but they are not equal because for some outcomes one will be 1 and
-    one will be 0.
+- Before the book gets to joint distributions, it starts with a bit of a tangent - when are two random variables equal?
+- This is really a warning.  It's easy to be careless and write down 
+- For example, two variables are not equal just because they have the same distribution.
+- Say X is a Bernoulli representing fair coin number 1, and Y is a Bernoulli representing fair coin number 2.  They have the same distribution, but they are not equal because for some outcomes one will be 1 and one will be 0.
 - EVEN if 
-- Let's say you and I
-    get identical contracts to go hunt for a new specimen of giant
-    squid.  But I get an extra contract that said I get a million
-    dollars extra if the squid we discover is exactly 6 meters.  the
-    probability that that happens is zero, but as a technical matter,
-    the random variables are not equal.
+- Let's say you and I get identical contracts to go hunt for a new specimen of giant squid.  But I get an extra contract that said I get a million dollars extra if the squid we discover is exactly 6 meters.  the probability that that happens is zero, but as a technical matter, the random variables are not equal.
 :::
-
-
-
 
 ## The Joint PMF and Car Dealers
 
@@ -1039,7 +751,6 @@ $X=Y$
     $D:$ & $\Omega \rightarrow \{0,1,2\}$, & Number of test drives
   \end{tabular}
 $f(b,d) = P(B=b, D=d)$
-
 
 ::: {.notes}
 
@@ -1052,9 +763,6 @@ $f(b,d) = P(B=b, D=d)$
 - If we have just a few outcomes, it can be
     convenient to list the probabilities in a table
 :::
-
-
-
 
 ## The Joint PMF and Car Dealers (cont.)
 
@@ -1074,203 +782,107 @@ $f(b,d) = P(B=b, D=d)$
 ::: {.notes}
 
 - Here's one example of what that table might look like.
-- What does the pmf look like?  if this is the B-D plane,
-    the pmf is zero almost everywhere.
-- I can mark a set
-    of points, which are the outcome set, where there is a spike that
-    comes out of the plane.  For example, there is some probability
-    that the customer buys after 2 test drives.
-- This
-    type of graph is not very helpful to use, I just want you to get
-    the picture in your mind
+- What does the pmf look like?  if this is the B-D plane, the pmf is zero almost everywhere.
+- I can mark a set of points, which are the outcome set, where there is a spike that comes out of the plane.  For example, there is some probability that the customer buys after 2 test drives.
+- This type of graph is not very helpful to use, I just want you to get the picture in your mind
 :::
 
-
-
-
 ## The Joint Cumulative Probability Function
+
 $F(b,d) = P(B \leq b, D \leq d)$
-- Recall that $F_{X}(x) = \int_{-\infty}^{x}f(x)$ relates the CDF
-    and PDF for the single variable case.
+
+- Recall that $F_{X}(x) = \int_{-\infty}^{x}f(x)$ relates the CDF and PDF for the single variable case.
 - In a similar way: $F_{Y,X} = \int_{-\infty}^{x} \int_{-\infty}^{y}f(y,x) dy dx$
 - This can be hard to work with but can describe _any_ random variables.
 
-
-
 ::: {.notes}
 
-- Just like for one random variable, we can define a
-    cumulative probability function for 2 or more random variables.
-- For almost everything, this is an inconvenient way to
-    work with random variables
-- There is one giant
-    advantage - this works to describe any random variables, discrete,
-    continuous, or mixed.
-- So probability theorists want
-    to prove things using CDFs because that makes the results
-    universal.
+- Just like for one random variable, we can define a cumulative probability function for 2 or more random variables.
+- For almost everything, this is an inconvenient way to work with random variables
+- There is one giant advantage - this works to describe any random variables, discrete, continuous, or mixed.
+- So probability theorists want to prove things using CDFs because that makes the results universal.
 :::
 
-
-
-
 ## Learnosity: The Probability Mass Function
-Suppose that 
-$X_1$
- is a Bernoulli random variable representing a
-  fair coin.  Suppose that 
-$X_2$
- is a Bernoulli random variable
-  representing a second fair coin.  Let 
-$Y = X_1 + X_2$
-.
+Suppose that  $X_1$ is a Bernoulli random variable representing a fair coin.  Suppose that $X_2$ is a Bernoulli random variable representing a second fair coin.  Let $Y = X_1 + X_2$.
   
-  Fill in the following table for the PMF of 
-$X_1$
- and 
-$Y$
-.
-  
+  Fill in the following table for the PMF of $X_1$ and $Y$ .
   
 \begin{tabular}{c|c|c}
     & $X_1 = 0$ & $X_1 = 1$ \\
     $Y=0$ & &  \\  
     $Y=1$ &  & \\  
     $Y=2$ & & \\
-  \end{tabular}
-
-
-
-
-
+\end{tabular}
 
 ## Reading Assignment
-Read 
-_Foundations of Agnostic Statistics_
-, section 1.3.2.
-
-
-
-
-
-
+Read _Foundations of Agnostic Statistics_, section 1.3.2.
 
 ## Marginal vs. Joint Distributions
 
-
 ![](figures/sample_space.png)
 
-
-
 ::: {.notes}
-
-- 
+ 
 ![](figures/two_random_vars.png)
 
 - Let's go back again to our car dealer example
-- You've created a customer model with two random
-    variables: B for the Buy decision and D for number of cars taken
-    for a test drive.
-- If you think about it, you already
-    have three ways to view this model
-- These are discrete
-    random variables, so you can fully describe their joint
-    distribution with a joint pmf
-- But also, you may want
-    to look at each one individually
-- Suppose that the
-    inventory department comes to you and says they need to understand
-    just the buy decision, B
-- Well, there's no reason you
-    can't study B by itself.  We know from earlier that we can
-    describe B with a one dimensional probability mass function
-- In this context, we would call that B's marginal
-    distribution.
-- So we have three pmf's, and it's
-    important to understand how they are related to each other.
+- You've created a customer model with two random variables: B for the Buy decision and D for number of cars taken for a test drive.
+- If you think about it, you already have three ways to view this model
+- These are discrete random variables, so you can fully describe their joint distribution with a joint pmf
+- But also, you may want to look at each one individually
+- Suppose that the inventory department comes to you and says they need to understand just the buy decision, B
+- Well, there's no reason you can't study B by itself.  We know from earlier that we can describe B with a one dimensional probability mass function
+- In this context, we would call that B's marginal distribution.
+- So we have three pmf's, and it's important to understand how they are related to each other.
 :::
-
-
-
 
 ## From Joint to Marginal Distributions
 $f_B(b) = P(B=b) = \sum_{d \in \text{Supp}[D]} f(b,d) \text{ for all } b \in \R$
+
 \begin{tabular}[t]{c | c | c}
     & $B = 0$ & $B = 1$ \\
     \hline
     $D=0$ & .1   & .1  \\  
     $D=1$ &  .4  &  .1 \\  
     $D=2$ &  .1  &  .2 \\
-  \end{tabular}
+\end{tabular}
 
 
 ::: {.notes}
 
-- The book has this theorem that tell us how to go from a
-    joint distribution to a marginal distribution
-- The first thing to notice is that to get the marginal
-    distribution of B, we take a sum over all values of D
-- Let's see how that works in this table.  We want the
-    probability that the customer buys a car, 
-- What do we do?  we have to sum up all the table cells
-    that correspond to 
-- I'll write the sum down
-    here - in the margin (that's why this is called the marginal
-    distribution!)
-- similarly, we can find the
-    probability that the customer doesn't buy, 
+- The book has this theorem that tell us how to go from a joint distribution to a marginal distribution
+- The first thing to notice is that to get the marginal distribution of B, we take a sum over all values of D
+- Let's see how that works in this table.  We want the probability that the customer buys a car, 
+- What do we do?  we have to sum up all the table cells that correspond to 
+- I'll write the sum down here - in the margin (that's why this is called the marginal distribution!)
+- similarly, we can find the probability that the customer doesn't buy, 
 :::
 
-
-
-
 ## From Marginal to Joint Distributions?
-Is it possible to compute the joint distribution, 
-$f$
-, given the
-  marginals 
-$f_B$
- and 
-$f_D$
-?  
+Is it possible to compute the joint distribution, $f$, given the marginals $f_B$ and $f_D$?  
+
 \begin{tabular}[t]{c | c | c |c}
       & $B = 0$ & $B = 1$  & $F_D$ 
-
       \hline
-      $D=0$ &    &  & 0.2  
-  
-      $D=1$ &    &   & 0.5 
-
-      $D=2$ &   &   & 0.3  
-
+      $D=0$ &     &     & 0.2    
+      $D=1$ &     &     & 0.5 
+      $D=2$ &     &     & 0.3  
       \hline
-      $F_B$    & 0.6 & 0.4  &     
+      $F_B$ & 0.6 & 0.4 &     
     \end{tabular}
 
 
 ::: {.notes}
 
-- Let me do the first, then
-    take 30 seconds to think about it, then click play again.  (unless
-    it's worth turning into a learnosity quiz? but really just a brain
-    teaser, we haven't taught students how to think about this.
-- the answer is no.  there is much more information in the
-    joint distribution.
-- In statistics, we have what are
-    called degrees of freedom, which are like the dimensions along
-    which the numbers can change.  If you look at 
-- If
-    you need more convincing, here are two different joint
-    distributions that have the same marginals.
+- Let me do the first, then hink about it, then click play again.  (unless it's worth turning into a learnosity quiz? but really just a brain teaser, we haven't taught students how to think about this.
+- the answer is no.  there is much more information in the joint distribution.
+- In statistics, we have what are called degrees of freedom, which are like the dimensions along which the numbers can change.
+- If you need more convincing, here are two different joint distributions that have the same marginals.
 :::
 
-
-
-
 ## From Marginal to Joint Distributions? (cont.)
-Two joint distributions with the same marginals:
-    
-    
+Two joint distributions with the same marginals: 
 
 \begin{tabular}{c c}
     \begin{tabular}[t]{c | c | c |c}
@@ -1305,129 +917,72 @@ Two joint distributions with the same marginals:
     }
   \end{tabular}
 
-
 ::: {.notes}
 
-- \alex{What if we fill in the table while we talk about
-      this, rather than providing it to the students filled out?}
 :::
-
-
-
 
 ## The Conditional PMF
 
-- Given two test drives ( $D = 2$ ), what does the model say about
-    buying behavior ( $B$ )?
+- Given two test drives ( $D = 2$ ), what does the model say about buying behavior ( $B$ )?
 - What is the conditional pmf, $f_{B|D}$ ?
 
 \begin{tabular}[t]{c | c | c |c}
       & $B = 0$ & $B = 1$  & $F_D$ 
-
       \hline
-      $D=0$ & 0.1   & 0.1  & 0.2  
-  
-      $D=1$ & 0.4   & 0.1  & 0.5 
-
-      $D=2$ & 0.1  & 0.2  & 0.3  
-
+      $D=0$ & 0.1 & 0.1  & 0.2  
+      $D=1$ & 0.4 & 0.1  & 0.5 
+      $D=2$ & 0.1 & 0.2  & 0.3  
       \hline
-      $F_B$    & 0.6 & 0.4  & 
-
+      $F_B$ & 0.6 & 0.4  & 
     \end{tabular}
-
 
 ::: {.notes}
 
-- Let's go back again to the car dealer example.  You have
-    modeled the joint distribution of the Buy decision B and the
-    number of test drives D.
-- Now a dealer comes to you
-    and says that they have a customer that test drove 2 cars.  They
-    want to know, according to your model, what probabilities to
-    assign to buy and not buy.
+- Let's go back again to the car dealer example.  You have modeled the joint distribution of the Buy decision B and the number of test drives D.
+- Now a dealer comes to you and says that they have a customer that test drove 2 cars.  They want to know, according to your model, what probabilities to assign to buy and not buy.
 - Since we know 
-- but there's a problem.
-    this is not a probability distribution, because the sum is not 1.
-- So, the solution is that we remember that probabilities
-    are ratios, so we have to divide these by their total.  by the
-    way, their total is exactly the marginal probability here - 0.3.
-    when we divide then, we get 1/3 and 2/3.
+- But there's a problem. this is not a probability distribution, because the sum is not 1.
+- So, the solution is that we remember that probabilities are ratios, so we have to divide these by their total.  by the way, their total is exactly the marginal probability here - 0.3. when we divide then, we get 1/3 and 2/3.
+
 :::
-
-
-
 
 ## The Conditional PMF (cont.)
 
 
 ::: {.callout-note title="Conditional expectation, car dealers"}
 
-\begin{align*}
+\begin{aligned}
       f_{B|D}(b|d) & = P(B=b | D=d) \\
                    &= \frac{P(B=b, D=d)}{P(D=d)} = \frac{f(b,d)}{f_D(d)}
-    \end{align*}
+    \end{aligned}
 :::
-
 
 \pause
 
 $\text{conditional} = \frac{\text{joint}}{\text{marginal}} \Leftrightarrow \pause \text{joint} = \text{marginal} \cdot \text{conditional}$
 
-
 ::: {.notes}
 
 - Here's the theorem from the book
-- We want
-    the conditional distribution at some point b, given little d.
-    This is a conditional probability, that B=b, given D = d.  we use
-    the definition of conditional prob to write this as a fraction.
-    then notice that we have the joint distribution over the
-    marginal.
-- These are really just distributional versions of the
-    multiplication rule we saw for events
+- We want the conditional distribution at some point b, given little d. This is a conditional probability, that B=b, given D = d.  We use the definition of conditional prob to write this as a fraction. then notice that we have the joint distribution over the marginal.
+- These are really just distributional versions of the multiplication rule we saw for events
 :::
 
-
-
-
 ## Reading Assignment
-Read 
-_Foundations of Agnostic Statistics_
-, section 1.3.3.
-
-
-
-
-
-
+Read _Foundations of Agnostic Statistics_, section 1.3.3.
 
 ## The Joint Density Function
 
-
 ![](figures/surface.png)
-
-
 
 ::: {.notes}
 
-- Let's take a look at joint distributions for continuous
-    random variables
-- Before we saw that when random
-    variables are discrete, we can describe them with a joint pmf.
-    now we need a joint density function
-- When you imagine
-    a joint density, think about a surface.
-- The higher the surface in
-    an area, the more probability you have there
-- Working with densities is a little less intuitive, but
-    luckily, most of what we have to do is remember what we did for
-    discrete random variables, and turn the sums into integral
+- Let's take a look at joint distributions for continuous random variables
+- Before we saw that when random variables are discrete, we can describe them with a joint pmf. now we need a joint density function
+- When you imagine a joint density, think about a surface.
+- The higher the surface in an area, the more probability you have there
+- Working with densities is a little less intuitive, but luckily, most of what we have to do is remember what we did for discrete random variables, and turn the sums into integral
 :::
-
-
-
-
 ## Probabilities of Events
 
 \hskip
@@ -1438,22 +993,14 @@ _Foundations of Agnostic Statistics_
     & \vspace{15pt} How to compute: $P((X,Y) \in A)$
   \end{tabular}
 
-
 ::: {.notes}
 
-- The first thing we might want to do is
-    compute the probability that (X,Y) is in some set. -
-    Let's draw some set D on the X-Y plane
-- When we had discrete random variables, we
-    summed up the pmf for all points in that set.
-- Now we have to take an integral over that
-    area
-- $P((X,Y) \in D) = \int\int_{(x,y) \in D}
-    f(x,y) dx dy$
+- The first thing we might want to do is compute the probability that (X,Y) is in some set. 
+- Let's draw some set D on the X-Y plane
+- When we had discrete random variables, we summed up the pmf for all points in that set.
+- Now we have to take an integral over that area
+- $P((X,Y) \in D) = \int\int_{(x,y) \in D} f(x,y) dx dy$
 :::
-
-
-
 
 ## Continuous Marginal Distributions
 
@@ -1465,24 +1012,15 @@ _Foundations of Agnostic Statistics_
     & \vspace{15pt} How to compute: $f_X(x)$
   \end{tabular}
 
-
 ::: {.notes}
 
-- Next, how do we compute a marginal
-    distribution?
+- Next, how do we compute a marginal distribution?
 - Let's choose a specific X,
-    
-- Now
-    that X defines a slice through this surface
-- Instead of a sum, now we take an integral of
-    that slice..
-- That will give us the value
-    of the marginal density of X at that x.
+- Now that X defines a slice through this surface
+- Instead of a sum, now we take an integral of that slice..
+- That will give us the value of the marginal density of X at that x.
 - $f_X(x) = \int_{-\infty}^\infty f(x,y) dy$
 :::
-
-
-
 
 ## Continuous Conditional Distributions
 
@@ -1496,66 +1034,33 @@ _Foundations of Agnostic Statistics_
  \end{tabular}
 $\text{conditional} = \frac{\text{joint}}{\text{marginal}}$
 
-
 ::: {.notes}
 
 - Finally, how do we compute a conditional distribution?
 - Let's choose a specific X, 
-- So the shape of the slice tells us exactly how
-    probable one value of y is compared to another
-- But just
-    like for discrete random variables, we have to scale things to make
-    sure the total probability is 1.
+- So the shape of the slice tells us exactly how probable one value of y is compared to another
+- But just like for discrete random variables, we have to scale things to make sure the total probability is 1.
 - $f_{B|D}(b|d) = \frac{f(b,d)}{f_D(d)}$
-- So
-    this equation is exactly the same as before! but now these are
-    densities instead of probability masses.
+- So this equation is exactly the same as before! but now these are densities instead of probability masses.
 :::
 
-
-
-
 ## Reading Assignment
-Read 
-_Foundations of Agnostic Statistics_
-, section 1.3.4.
-
-
-
-
-
-
+Read _Foundations of Agnostic Statistics_, section 1.3.4.
 
 ## Independence
-If 
-$X$
- and 
-$Y$
- are independent, 
-$X \indep Y$
-.
-  
+If $X$ and $Y$ are independent, $X \indep Y$.
   
 1. The marginals fully describe the distribution: $f(x,y) = f_X(x)f_Y(y)$ \pause
 2. Knowing X tells you nothing about Y: $f_{Y|X}(y|x) =$ \note[item]{
       $ \frac{f(x,y)}{f_X(x)} = \frac{f_X(x)f_Y(y)}{f_X(x)} = f_Y(y)$ }
 
-
-
 ::: {.notes}
 
-- Independence is a key property that we will use again
-    and again in this course
-- First, let's look at the
-    definition...
+- Independence is a key property that we will use again and again in this course
+- First, let's look at the definition...
 :::
 
-
-
-
 ## Drawing Independent Continuous RV
-
-
 
 ::: {.notes}
 
@@ -1566,12 +1071,7 @@ $X \indep Y$
 
 :::
 
-
-
-
 ## Drawing Non-Independent Continuous RV
-
-
 
 ::: {.notes}
 
@@ -1581,67 +1081,38 @@ $X \indep Y$
 
 :::
 
-
-
-
 ## Importance of Independence
-$B_1$
- represents blood pressure
-  of patient 1.
+$B_1$ represents blood pressure of patient 1.
 
-  
-$B_2$
- represents blood pressure of patient 2.
+$B_2$ represents blood pressure of patient 2.
 
-  
 \vdots
 
-  Without simplifying assumptions, the joint distribution of
+Without simplifying assumptions, the joint distribution of
   
-$B_1, B_2,...$
- is too complex to estimate with limited data.
+$B_1, B_2,...$ is too complex to estimate with limited data.
 
-  Independence 
-$\implies$
- only need to estimate the marginals
-
-  
-
+Independence $\implies$ only need to estimate the marginals
 
 ::: {.notes}
 
-- The reason independence is so important will come when
-    we try to fit our models to data
-- we'll see how this process works when we get to
-    estimators.
+- The reason independence is so important will come when we try to fit our models to data
+- we'll see how this process works when we get to estimators.
 :::
-
-
-
 
 ## Assessing Independence in Practice
 Independence is rarely (if ever) perfectly met.
   
-  What if:
+What if:
   
 - Patient 1 and patient 2 are related
 - Technicians trade off every 10 patients
-- After seeing an unusually high blood pressure, the technician
-    adjusts their mannerisms
+- After seeing an unusually high blood pressure, the technician adjusts their mannerisms
 
-
-  These are potential 
-_dependencies_
-.  
-
+These are potential _dependencies_.  
 
 ::: {.notes}
 
-- Remember,
-    there will almost always be some.  It's important to identify
-    them.  But you must exercise judgement about which are really
-    important and which are minor.
-- 
+- Remember, there will almost always be some.  It's important to identify them.  But you must exercise judgement about which are really important and which are minor.
+
 :::
-
-

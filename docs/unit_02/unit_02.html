@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.43">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -512,12 +512,25 @@ important operator, the expectation, which is like the mean for random variables
 <ol type="1">
 <li><span class="math inline">\(g(T)\)</span> where</li>
 </ol>
-<p><span class="math inline">\(g(t) = \begin{cases} 1, &amp; t&lt;150\\ 0,
-    &amp;\text{otherwise} \end{cases}\)</span> . Answer: random variable</p>
+<p><span class="math display">\[
+  g(t) =
+    \begin{cases}
+        1,  &amp; t&lt;150\\ 0,
+            &amp; \text{otherwise}
+    \end{cases}
+  \]</span>.</p>
+<p>Answer: random variable</p>
 <ol start="2" type="1">
-<li><p><span class="math inline">\(R\)</span> such that <span class="math inline">\(R[T] = P(T&gt;150)\)</span> . Answer: operator</p></li>
-<li><p><span class="math inline">\(T &lt; (5/9)(T-32)\)</span> . Answer: event</p></li>
+<li><span class="math inline">\(R\)</span> such that</li>
 </ol>
+<p><span class="math display">\[
+    R[T] = P(T&gt;150)
+  \]</span>.</p>
+<p>Answer: operator</p>
+<ol start="3" type="1">
+<li><span class="math inline">\(T &lt; (5/9)(T-32)\)</span>.</li>
+</ol>
+<p>Answer: event</p>
 <div class="notes">
 <ul>
 <li>Three questions, each with three MC answers: (Event, Random Variable, Operator).</li>
@@ -526,12 +539,11 @@ important operator, the expectation, which is like the mean for random variables
 </section>
 <section id="reading-assignment-1" class="level2">
 <h2 class="anchored" data-anchor-id="reading-assignment-1">Reading Assignment</h2>
-<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.2.2.</p>
+<p>Read <em>Foundations of Agnostic Statistics</em>, section 1.2.2.</p>
 </section>
 <section id="introducing-discrete-random-variables" class="level2">
 <h2 class="anchored" data-anchor-id="introducing-discrete-random-variables">Introducing Discrete Random Variables</h2>
-<p>A random variable <span class="math inline">\(X\)</span> is <em>discrete</em> if its range,</p>
-<p><span class="math inline">\(X(\Omega) \in \R\)</span> , is a countable set.</p>
+<p>A random variable <span class="math inline">\(X\)</span> is <em>discrete</em> if its range, <span class="math inline">\(X(\Omega) \in \mathbb{R}\)</span>, is a countable set.</p>
 <ul>
 <li><span class="math inline">\(X(\Omega)\)</span> can be finite. - A roll of a die: <span class="math inline">\(\{1,2,3,4,5,6\}\)</span></li>
 <li><span class="math inline">\(X(\Omega)\)</span> can be countably infinite. - Edits to an article: <span class="math inline">\(\{0,1,2,3...\}\)</span></li>
@@ -565,7 +577,10 @@ important operator, the expectation, which is like the mean for random variables
 </section>
 <section id="the-probability-mass-function-pmf" class="level2">
 <h2 class="anchored" data-anchor-id="the-probability-mass-function-pmf">The Probability Mass Function (PMF)</h2>
-<p>A function that gives the probability that a discrete random variable equals each number in <span class="math inline">\(\R\)</span> - <span class="math inline">\(f_X(x) = P(X = x)\)</span></p>
+<p>A function that gives the probability that a discrete rando variable equals each number in <span class="math inline">\(\mathbb{R}\)</span></p>
+<ul>
+<li><span class="math inline">\(f_X(x) = P(X = x)\)</span></li>
+</ul>
 <p><img src="figures/axes.png" class="img-fluid"></p>
 <div class="notes">
 <ul>
@@ -588,7 +603,7 @@ Theorem
 <div class="callout-body-container callout-body">
 <p>For a discrete random variable <span class="math inline">\(X\)</span> with pmf <span class="math inline">\(f\)</span>,</p>
 <ol type="1">
-<li>For all <span class="math inline">\(x \in \R\)</span> , <span class="math inline">\(f(x) \geq 0\)</span> .</li>
+<li>For all <span class="math inline">\(x \in \mathbb{R}\)</span> , <span class="math inline">\(f(x) \geq 0\)</span> .</li>
 <li><span class="math inline">\(\sum_{x \in X(\Omega)} f(x) = 1\)</span> .</li>
 </ol>
 </div>
@@ -614,15 +629,18 @@ Theorem: The PMF fully characterizes a discrete RV
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For a discrete random variable <span class="math inline">\(X\)</span> with pmf <span class="math inline">\(f\)</span>, if <span class="math inline">\(D \subseteq \R\)</span>, <span class="math inline">\(P(X \in D) = \sum_{x \in X(\Omega) \cap D } f(x).\)</span></p>
+<p>For a discrete random variable <span class="math inline">\(X\)</span> with pmf <span class="math inline">\(f\)</span>, if <span class="math inline">\(D \subseteq \mathbb{R}\)</span>,</p>
+<p><span class="math display">\[
+  P(X \in D) = \sum_{x \in X(\Omega) \cap D } f(x).
+  \]</span></p>
 </div>
 </div>
 <p><img src="figures/pmf_to_events.png" class="img-fluid"></p>
-<p>Take-away: The pmf contains <em>all</em> the information about the probability distribution of <span class="math inline">\(X\)</span> .</p>
+<p>Take-away: The pmf contains <em>all</em> the information about the probability distribution of <span class="math inline">\(X\)</span>.</p>
 </section>
 <section id="reading-assignment-2" class="level2">
 <h2 class="anchored" data-anchor-id="reading-assignment-2">Reading Assignment</h2>
-<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.2.3.</p>
+<p>Read <em>Foundations of Agnostic Statistics</em>, section 1.2.3.</p>
 </section>
 <section id="the-cumulative-distribution-function" class="level2">
 <h2 class="anchored" data-anchor-id="the-cumulative-distribution-function">The Cumulative Distribution Function</h2>
@@ -649,10 +667,7 @@ Theorem: The PMF fully characterizes a discrete RV
 <li>You might estimate that maybe 20</li>
 <li>But my question is what’s the probability that a squid is exactly 6 meters.</li>
 <li>To within 1 mm? to within 1 nanometer?</li>
-<li>You can quickly see that the probability of 6 meters with zero error is actually
-<ol start="0" type="1">
-<li></li>
-</ol></li>
+<li>You can quickly see that the probability of 6 meters with zero error is actually 0.</li>
 </ul>
 </div>
 </section>
@@ -699,7 +714,7 @@ Theorem: The PMF fully characterizes a discrete RV
 </section>
 <section id="reading-continuous-random-variables" class="level2">
 <h2 class="anchored" data-anchor-id="reading-continuous-random-variables">Reading: Continuous Random Variables</h2>
-<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.2.4.</p>
+<p>Read <em>Foundations of Agnostic Statistics</em>, section 1.2.4.</p>
 </section>
 <section id="continuous-random-variables" class="level2">
 <h2 class="anchored" data-anchor-id="continuous-random-variables">Continuous Random Variables</h2>
@@ -713,7 +728,7 @@ Definition
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A random variable <span class="math inline">\(X\)</span> is <em>continuous</em> if there exists a non-negative function <span class="math inline">\(f:\R \rightarrow \R\)</span> such that the cdf of <span class="math inline">\(X\)</span> is <span class="math inline">\(F(x) = \int_{-\infty}^x f(u) du \text{, for all } x \in \R\)</span></p>
+<p>A random variable <span class="math inline">\(X\)</span> is <em>continuous</em> if there exists a non-negative function <span class="math inline">\(f:\mathbb{R} \mathbb{R}ightarrow \mathbb{R\)</span> such that the cdf of <span class="math inline">\(X\)</span> is <span class="math inline">\(F(x) = \int_{-\infty}^x f(u) du \text{, for all } x \in \mathbb{R\)</span></p>
 </div>
 </div>
 <p><img src="figures/density.png" class="img-fluid"></p>
@@ -738,7 +753,7 @@ Deriving the PDF from the CDF
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For a continuous random variable with cdf <span class="math inline">\(F\)</span>, the probability density function of <span class="math inline">\(X\)</span> is <span class="math inline">\(f(x) = \frac{dF(u)}{du} \Bigg|_{u=x} \text{, for all } x \in \R\)</span></p>
+<p>For a continuous random variable with cdf <span class="math inline">\(F\)</span>, the probability density function of <span class="math inline">\(X\)</span> is <span class="math inline">\(f(x) = \frac{dF(u)}{du} \Bigg|_{u=x} \text{, for all } x \in \mathbb{R\)</span></p>
 </div>
 </div>
 <p><img src="figures/cdf.png" class="img-fluid"></p>
@@ -765,7 +780,11 @@ Properties of Probability Density Functions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For a continuous random variable <span class="math inline">\(X\)</span> with pdf <span class="math inline">\(f\)</span>, 1. For all <span class="math inline">\(x\in \R\)</span> , <span class="math inline">\(f(x) \geq 0\)</span> . 2. <span class="math inline">\(\int_{-\infty}^\infty f(x)dx = 1\)</span> .</p>
+<p>For a continuous random variable <span class="math inline">\(X\)</span> with pdf <span class="math inline">\(f\)</span>,</p>
+<ol type="1">
+<li>For all <span class="math inline">\(x\in \mathbb{R\)</span> , <span class="math inline">\(f(x) \geq 0\)</span>.</li>
+<li><span class="math inline">\(\int_{-\infty}^\infty f(x)dx = 1\)</span>.</li>
+</ol>
 </div>
 </div>
 <div class="notes">
@@ -788,7 +807,7 @@ Definition
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For a random variable <span class="math inline">\(X\)</span> with pmf or pdf <span class="math inline">\(f\)</span>, the <em>support</em> of <span class="math inline">\(X\)</span> is <span class="math inline">\(\text{Supp}[X] = \{x \in \R : f(x) &gt; 0 \}\)</span></p>
+<p>For a random variable <span class="math inline">\(X\)</span> with pmf or pdf <span class="math inline">\(f\)</span>, the <em>support</em> of <span class="math inline">\(X\)</span> is <span class="math inline">\(\text{Supp}[X] = \{x \in \mathbb{R : f(x) &gt; 0 \}\)</span></p>
 </div>
 </div>
 <div class="notes">
@@ -799,7 +818,8 @@ Definition
 </section>
 <section id="uniform-random-variables" class="level2">
 <h2 class="anchored" data-anchor-id="uniform-random-variables">Uniform Random Variables</h2>
-<p><strong>Note: This is a placeholder for a video that we’re going to re-use from:</strong> Use the old video 3.9 Uniform Random Variables - only the start through 6.12, before I start talking about expectation.</p>
+<p><strong>Note: This is a placeholder for a video that we’re going to re-use from:</strong></p>
+<p>Use the old video 3.9 Uniform Random Variables - only the start through 6.12, before I start talking abou expectation.</p>
 </section>
 <section id="section-1" class="level2">
 <h2 class="anchored" data-anchor-id="section-1"></h2>
@@ -807,25 +827,34 @@ Definition
 </section>
 <section id="the-normal-distribution" class="level2">
 <h2 class="anchored" data-anchor-id="the-normal-distribution">The Normal Distribution</h2>
-<p><strong>The most important distribution in statistics</strong> - The variables measured don’t always come directly from a normal distribution - Human height has a close-to-normal distribution–so do anthropometric measurements on fossils, reaction times in psychological experiments, etc. - Most variables deviate from a normal distribution - We’ll see how the normal distribution pops up as a consequence of basic mathematical laws - A famous theorem is the <strong>Central Limit Theorem</strong> . Many of our statistical tests depend on this theorem, and it tells us when certain distributions will approach a normal distribution</p>
+<p><strong>The most important distribution in statistics</strong></p>
+<ul>
+<li>The variables measured don’t always come directly from a normal distribution - Human height has a close-to-normal distribution–so do anthropometric measurements on fossils, reaction times in psychological experiments, etc.</li>
+<li>Most variables deviate from a normal distribution</li>
+<li>We’ll see how the normal distribution pops up as a consequence of basic mathematical laws</li>
+<li>A famous theorem is the <strong>Central Limit Theorem</strong> . Many of our statistical tests depend on this theorem, and it tells us when certain distributions will approach a normal distribution</li>
+</ul>
 </section>
 <section id="the-normal-distribution-equation" class="level2">
 <h2 class="anchored" data-anchor-id="the-normal-distribution-equation">The Normal Distribution equation</h2>
-<p>A continuous rv <span class="math inline">\(X\)</span> is said to have a <strong>normal distribution</strong> with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> (or <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> ), where <span class="math inline">\(-\infty &lt; \mu &lt; \infty\)</span> and <span class="math inline">\(0 &lt; \sigma\)</span> , if the pdf of <span class="math inline">\(X\)</span> is:</p>
-<p><span class="math display">\[\begin{equation}
-     f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}}
-     e^{-(x-\mu)^{2}/(2\sigma^{2})},
+<p>A continuous rv <span class="math inline">\(X\)</span> is said to have a <em>normal distribution</em> with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> (or <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span>), where <span class="math inline">\(-\infty &lt; \mu &lt; \infty\)</span> and <span class="math inline">\(0 &lt; \sigma\)</span>, if the pdf of <span class="math inline">\(X\)</span> is:</p>
+<p><span class="math display">\[
+    f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}} e^{-(x-\mu)^{2}/(2\sigma^{2})},
      -\infty &lt; x &lt; \infty
-  \end{equation}\]</span></p>
+\]</span></p>
 <p>This is the equation for the density function of a normal distribution</p>
 </section>
 <section id="the-normal-distribution-equation-1" class="level2">
 <h2 class="anchored" data-anchor-id="the-normal-distribution-equation-1">The Normal Distribution equation</h2>
-<p><span class="math display">\[\begin{equation}
-     f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}}
-     e^{-(x-\mu)^{2}/(2\sigma^{2})},
+<p><span class="math display">\[
+    f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^{2}}} e^{-(x-\mu)^{2}/(2\sigma^{2})},
      -\infty &lt; x &lt; \infty
-  \end{equation}\]</span> - There are two parameters, <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> - There is an entire family of normal distributions - It can be shown that <span class="math inline">\(E(x)=\mu\)</span> and <span class="math inline">\(V(X)=\sigma^{2}\)</span> , so the parameters are the mean and the standard deviation of <span class="math inline">\(X\)</span> - The statement that <span class="math inline">\(X\)</span> is normally distributed with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> is often abbreviated <span class="math inline">\(X \sim N(\mu, \sigma^{2})\)</span></p>
+\]</span></p>
+<ul>
+<li>There are two parameters, <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> - There is an entire family of normal distributions</li>
+<li>It can be shown that <span class="math inline">\(E(x)=\mu\)</span> and <span class="math inline">\(V(X)=\sigma^{2}\)</span> , so the parameters are the mean and the standard deviation of <span class="math inline">\(X\)</span></li>
+<li>The statement that <span class="math inline">\(X\)</span> is normally distributed with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> is often abbreviated <span class="math inline">\(X \sim N(\mu, \sigma^{2})\)</span></li>
+</ul>
 </section>
 <section id="normal-curve-examples" class="level2">
 <h2 class="anchored" data-anchor-id="normal-curve-examples">Normal Curve Examples</h2>
@@ -839,10 +868,13 @@ Definition
 <li>It is also denoted by a capital Z</li>
 <li>We can write the pdf of Z:</li>
 </ul>
-<p><span class="math display">\[\begin{equation}
+<p><span class="math display">\[
       f(z; 0, 1)= \frac{1}{\sqrt{2\pi}}e^{-z^{2}/2},
       -\infty &lt; X &lt; \infty
-  \end{equation}\]</span> - The cumulative distribution of Z is often written as <span class="math inline">\(\phi(z)\)</span></p>
+\]</span></p>
+<ul>
+<li>The cumulative distribution of Z is often written as <span class="math inline">\(\phi(z)\)</span></li>
+</ul>
 </section>
 <section id="standardizing-a-normal-variable" class="level2">
 <h2 class="anchored" data-anchor-id="standardizing-a-normal-variable">Standardizing a Normal Variable</h2>
@@ -897,13 +929,14 @@ Definition
 <ul>
 <li>Because we have this separate probabiliity space, it’s easy to define a new random variable D, that maps from</li>
 <li>One way to look at this is we have Probability Measure P over the sample space. Through these random variables, you could show that this induces a probability measure over</li>
-<li>We’re going to spend a lot of time working with sets of random variables to do a variety of useful things. But right now, we’re really starting with just the basics - what are ways of defining and describing joint distributions?</li>
+<li>We’re going to spend a lot of time working with sets of random variables to do a variety of useful things. But right now, we’re really starting with just the basics</li>
+<li>What are ways of defining and describing joint distributions?</li>
 </ul>
 </div>
 </section>
 <section id="reading-assignment-3" class="level2">
 <h2 class="anchored" data-anchor-id="reading-assignment-3">Reading Assignment</h2>
-<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.3–1.3.1.</p>
+<p>Read <em>Foundations of Agnostic Statistics</em>, section 1.3–1.3.1.</p>
 </section>
 <section id="equality-of-random-variables" class="level2">
 <h2 class="anchored" data-anchor-id="equality-of-random-variables">Equality of Random Variables</h2>
@@ -917,30 +950,25 @@ Equality of random variables
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<pre><code>Let $X$ and $Y$ be random variables. Then, $X = Y$ if, for all
-$\omega \in \Omega, X(\omega) = Y(\omega)$.</code></pre>
+<p>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be random variables. Then, <span class="math inline">\(X = Y\)</span> if, for all <span class="math inline">\(\omega \in \Omega, X(\omega) = Y(\omega)\)</span>.</p>
 </div>
 </div>
 <p>Don’t assume <span class="math inline">\(X=Y\)</span> just because:</p>
 <ol type="1">
-<li><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> have the same distribution - <span class="math inline">\(X=1\)</span> if Paul’s coin lands heads, 0 otherwise</li>
-</ol>
+<li><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> have the same distribution - <span class="math inline">\(X=1\)</span> if Paul’s coin lands heads, 0 otherwise
 <ul>
 <li><span class="math inline">\(Y=1\)</span> if Alex’s coin lands heads, 0 otherwise</li>
 <li><span class="math inline">\(f_X = f_Y\)</span> but <span class="math inline">\(X \neq Y\)</span> </li>
-</ul>
-<ol start="2" type="1">
-<li><span class="math inline">\(P(X=Y) = 1\)</span> - <span class="math inline">\(X=1\)</span> if Paul climbs Half Dome, 0 otherwise</li>
-</ol>
+</ul></li>
+<li><span class="math inline">\(P(X=Y) = 1\)</span> - <span class="math inline">\(X=1\)</span> if Paul climbs Half Dome, 0 otherwise
 <ul>
 <li><span class="math inline">\(Y=1\)</span> if Alex climbs El Capitan, 0 otherwise</li>
 <li><span class="math inline">\(P(X=Y) = 1\)</span> but <span class="math inline">\(X \neq Y\)</span></li>
-</ul>
+</ul></li>
+</ol>
 <div class="notes">
 <ul>
-<li></li>
 <li>Before the book gets to joint distributions, it starts with a bit of a tangent - when are two random variables equal?</li>
-<li></li>
 <li>This is really a warning. It’s easy to be careless and write down</li>
 <li>For example, two variables are not equal just because they have the same distribution.</li>
 <li>Say X is a Bernoulli representing fair coin number 1, and Y is a Bernoulli representing fair coin number 2. They have the same distribution, but they are not equal because for some outcomes one will be 1 and one will be 0.</li>
@@ -974,7 +1002,12 @@ $\omega \in \Omega, X(\omega) = Y(\omega)$.</code></pre>
 </section>
 <section id="the-joint-cumulative-probability-function" class="level2">
 <h2 class="anchored" data-anchor-id="the-joint-cumulative-probability-function">The Joint Cumulative Probability Function</h2>
-<p><span class="math inline">\(F(b,d) = P(B \leq b, D \leq d)\)</span> - Recall that <span class="math inline">\(F_{X}(x) = \int_{-\infty}^{x}f(x)\)</span> relates the CDF and PDF for the single variable case. - In a similar way: <span class="math inline">\(F_{Y,X} = \int_{-\infty}^{x} \int_{-\infty}^{y}f(y,x) dy dx\)</span> - This can be hard to work with but can describe <em>any</em> random variables.</p>
+<p><span class="math inline">\(F(b,d) = P(B \leq b, D \leq d)\)</span></p>
+<ul>
+<li>Recall that <span class="math inline">\(F_{X}(x) = \int_{-\infty}^{x}f(x)\)</span> relates the CDF and PDF for the single variable case.</li>
+<li>In a similar way: <span class="math inline">\(F_{Y,X} = \int_{-\infty}^{x} \int_{-\infty}^{y}f(y,x) dy dx\)</span></li>
+<li>This can be hard to work with but can describe <em>any</em> random variables.</li>
+</ul>
 <div class="notes">
 <ul>
 <li>Just like for one random variable, we can define a cumulative probability function for 2 or more random variables.</li>
@@ -986,34 +1019,34 @@ $\omega \in \Omega, X(\omega) = Y(\omega)$.</code></pre>
 </section>
 <section id="learnosity-the-probability-mass-function" class="level2">
 <h2 class="anchored" data-anchor-id="learnosity-the-probability-mass-function">Learnosity: The Probability Mass Function</h2>
-<p>Suppose that <span class="math inline">\(X_1\)</span> is a Bernoulli random variable representing a fair coin. Suppose that <span class="math inline">\(X_2\)</span> is a Bernoulli random variable representing a second fair coin. Let <span class="math inline">\(Y = X_1 + X_2\)</span> .</p>
+<p>Suppose that <span class="math inline">\(X_1\)</span> is a Bernoulli random variable representing a fair coin. Suppose that <span class="math inline">\(X_2\)</span> is a Bernoulli random variable representing a second fair coin. Let <span class="math inline">\(Y = X_1 + X_2\)</span>.</p>
 <p>Fill in the following table for the PMF of <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> .</p>
 </section>
 <section id="reading-assignment-4" class="level2">
 <h2 class="anchored" data-anchor-id="reading-assignment-4">Reading Assignment</h2>
-<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.3.2.</p>
+<p>Read <em>Foundations of Agnostic Statistics</em>, section 1.3.2.</p>
 </section>
 <section id="marginal-vs.-joint-distributions" class="level2">
 <h2 class="anchored" data-anchor-id="marginal-vs.-joint-distributions">Marginal vs.&nbsp;Joint Distributions</h2>
 <p><img src="figures/sample_space.png" class="img-fluid"></p>
 <div class="notes">
+<p><img src="figures/two_random_vars.png" class="img-fluid"></p>
 <ul>
-<li><p><img src="figures/two_random_vars.png" class="img-fluid"></p></li>
-<li><p>Let’s go back again to our car dealer example</p></li>
-<li><p>You’ve created a customer model with two random variables: B for the Buy decision and D for number of cars taken for a test drive.</p></li>
-<li><p>If you think about it, you already have three ways to view this model</p></li>
-<li><p>These are discrete random variables, so you can fully describe their joint distribution with a joint pmf</p></li>
-<li><p>But also, you may want to look at each one individually</p></li>
-<li><p>Suppose that the inventory department comes to you and says they need to understand just the buy decision, B</p></li>
-<li><p>Well, there’s no reason you can’t study B by itself. We know from earlier that we can describe B with a one dimensional probability mass function</p></li>
-<li><p>In this context, we would call that B’s marginal distribution.</p></li>
-<li><p>So we have three pmf’s, and it’s important to understand how they are related to each other.</p></li>
+<li>Let’s go back again to our car dealer example</li>
+<li>You’ve created a customer model with two random variables: B for the Buy decision and D for number of cars taken for a test drive.</li>
+<li>If you think about it, you already have three ways to view this model</li>
+<li>These are discrete random variables, so you can fully describe their joint distribution with a joint pmf</li>
+<li>But also, you may want to look at each one individually</li>
+<li>Suppose that the inventory department comes to you and says they need to understand just the buy decision, B</li>
+<li>Well, there’s no reason you can’t study B by itself. We know from earlier that we can describe B with a one dimensional probability mass function</li>
+<li>In this context, we would call that B’s marginal distribution.</li>
+<li>So we have three pmf’s, and it’s important to understand how they are related to each other.</li>
 </ul>
 </div>
 </section>
 <section id="from-joint-to-marginal-distributions" class="level2">
 <h2 class="anchored" data-anchor-id="from-joint-to-marginal-distributions">From Joint to Marginal Distributions</h2>
-<span class="math inline">\(f_B(b) = P(B=b) = \sum_{d \in \text{Supp}[D]} f(b,d) \text{ for all } b \in \R\)</span>
+<p><span class="math inline">\(f_B(b) = P(B=b) = \sum_{d \in \text{Supp}[D]} f(b,d) \text{ for all } b \in \R\)</span></p>
 <div class="notes">
 <ul>
 <li>The book has this theorem that tell us how to go from a joint distribution to a marginal distribution</li>
@@ -1027,13 +1060,12 @@ $\omega \in \Omega, X(\omega) = Y(\omega)$.</code></pre>
 </section>
 <section id="from-marginal-to-joint-distributions" class="level2">
 <h2 class="anchored" data-anchor-id="from-marginal-to-joint-distributions">From Marginal to Joint Distributions?</h2>
-Is it possible to compute the joint distribution, <span class="math inline">\(f\)</span> , given the marginals <span class="math inline">\(f_B\)</span> and <span class="math inline">\(f_D\)</span> ?<br>
-
+<p>Is it possible to compute the joint distribution, <span class="math inline">\(f\)</span>, given the marginals <span class="math inline">\(f_B\)</span> and <span class="math inline">\(f_D\)</span>?</p>
 <div class="notes">
 <ul>
-<li>Let me do the first, then take 30 seconds to think about it, then click play again. (unless it’s worth turning into a learnosity quiz? but really just a brain teaser, we haven’t taught students how to think about this.</li>
+<li>Let me do the first, then hink about it, then click play again. (unless it’s worth turning into a learnosity quiz? but really just a brain teaser, we haven’t taught students how to think about this.</li>
 <li>the answer is no. there is much more information in the joint distribution.</li>
-<li>In statistics, we have what are called degrees of freedom, which are like the dimensions along which the numbers can change. If you look at</li>
+<li>In statistics, we have what are called degrees of freedom, which are like the dimensions along which the numbers can change.</li>
 <li>If you need more convincing, here are two different joint distributions that have the same marginals.</li>
 </ul>
 </div>
@@ -1042,9 +1074,7 @@ Is it possible to compute the joint distribution, <span class="math inline">\(f\
 <h2 class="anchored" data-anchor-id="from-marginal-to-joint-distributions-cont.">From Marginal to Joint Distributions? (cont.)</h2>
 <p>Two joint distributions with the same marginals:</p>
 <div class="notes">
-<ul>
-<li></li>
-</ul>
+
 </div>
 </section>
 <section id="the-conditional-pmf" class="level2">
@@ -1058,7 +1088,7 @@ Is it possible to compute the joint distribution, <span class="math inline">\(f\
 <li>Let’s go back again to the car dealer example. You have modeled the joint distribution of the Buy decision B and the number of test drives D.</li>
 <li>Now a dealer comes to you and says that they have a customer that test drove 2 cars. They want to know, according to your model, what probabilities to assign to buy and not buy.</li>
 <li>Since we know</li>
-<li>but there’s a problem. this is not a probability distribution, because the sum is not 1.</li>
+<li>But there’s a problem. this is not a probability distribution, because the sum is not 1.</li>
 <li>So, the solution is that we remember that probabilities are ratios, so we have to divide these by their total. by the way, their total is exactly the marginal probability here - 0.3. when we divide then, we get 1/3 and 2/3.</li>
 </ul>
 </div>
@@ -1075,24 +1105,24 @@ Conditional expectation, car dealers
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[\begin{align*}
+<span class="math display">\[\begin{aligned}
       f_{B|D}(b|d) &amp; = P(B=b | D=d) \\
                    &amp;= \frac{P(B=b, D=d)}{P(D=d)} = \frac{f(b,d)}{f_D(d)}
-    \end{align*}\]</span></p>
+    \end{aligned}\]</span>
 </div>
 </div>
 <p><span class="math inline">\(\text{conditional} = \frac{\text{joint}}{\text{marginal}} \Leftrightarrow \pause \text{joint} = \text{marginal} \cdot \text{conditional}\)</span></p>
 <div class="notes">
 <ul>
 <li>Here’s the theorem from the book</li>
-<li>We want the conditional distribution at some point b, given little d. This is a conditional probability, that B=b, given D = d.&nbsp;we use the definition of conditional prob to write this as a fraction. then notice that we have the joint distribution over the marginal.</li>
+<li>We want the conditional distribution at some point b, given little d.&nbsp;This is a conditional probability, that B=b, given D = d.&nbsp;We use the definition of conditional prob to write this as a fraction. then notice that we have the joint distribution over the marginal.</li>
 <li>These are really just distributional versions of the multiplication rule we saw for events</li>
 </ul>
 </div>
 </section>
 <section id="reading-assignment-5" class="level2">
 <h2 class="anchored" data-anchor-id="reading-assignment-5">Reading Assignment</h2>
-<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.3.3.</p>
+<p>Read <em>Foundations of Agnostic Statistics</em>, section 1.3.3.</p>
 </section>
 <section id="the-joint-density-function" class="level2">
 <h2 class="anchored" data-anchor-id="the-joint-density-function">The Joint Density Function</h2>
@@ -1111,11 +1141,11 @@ Conditional expectation, car dealers
 <h2 class="anchored" data-anchor-id="probabilities-of-events">Probabilities of Events</h2>
 <div class="notes">
 <ul>
-<li>The first thing we might want to do is compute the probability that (X,Y) is in some set. - Let’s draw some set D on the X-Y plane</li>
+<li>The first thing we might want to do is compute the probability that (X,Y) is in some set.</li>
+<li>Let’s draw some set D on the X-Y plane</li>
 <li>When we had discrete random variables, we summed up the pmf for all points in that set.</li>
 <li>Now we have to take an integral over that area</li>
-<li><span class="math inline">\(P((X,Y) \in D) = \int\int_{(x,y) \in D}
-  f(x,y) dx dy\)</span></li>
+<li><span class="math inline">\(P((X,Y) \in D) = \int\int_{(x,y) \in D} f(x,y) dx dy\)</span></li>
 </ul>
 </div>
 </section>
@@ -1123,12 +1153,12 @@ Conditional expectation, car dealers
 <h2 class="anchored" data-anchor-id="continuous-marginal-distributions">Continuous Marginal Distributions</h2>
 <div class="notes">
 <ul>
-<li><p>Next, how do we compute a marginal distribution?</p></li>
-<li><p>Let’s choose a specific X,</p></li>
-<li><p>Now that X defines a slice through this surface</p></li>
-<li><p>Instead of a sum, now we take an integral of that slice..</p></li>
-<li><p>That will give us the value of the marginal density of X at that x.</p></li>
-<li><p><span class="math inline">\(f_X(x) = \int_{-\infty}^\infty f(x,y) dy\)</span></p></li>
+<li>Next, how do we compute a marginal distribution?</li>
+<li>Let’s choose a specific X,</li>
+<li>Now that X defines a slice through this surface</li>
+<li>Instead of a sum, now we take an integral of that slice..</li>
+<li>That will give us the value of the marginal density of X at that x.</li>
+<li><span class="math inline">\(f_X(x) = \int_{-\infty}^\infty f(x,y) dy\)</span></li>
 </ul>
 </div>
 </section>
@@ -1148,11 +1178,11 @@ Conditional expectation, car dealers
 </section>
 <section id="reading-assignment-6" class="level2">
 <h2 class="anchored" data-anchor-id="reading-assignment-6">Reading Assignment</h2>
-<p>Read <em>Foundations of Agnostic Statistics</em> , section 1.3.4.</p>
+<p>Read <em>Foundations of Agnostic Statistics</em>, section 1.3.4.</p>
 </section>
 <section id="independence" class="level2">
 <h2 class="anchored" data-anchor-id="independence">Independence</h2>
-<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, <span class="math inline">\(X \indep Y\)</span> .</p>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, <span class="math inline">\(X \indep Y\)</span>.</p>
 <ol type="1">
 <li>The marginals fully describe the distribution: <span class="math inline">\(f(x,y) = f_X(x)f_Y(y)\)</span> </li>
 <li>Knowing X tells you nothing about Y: <span class="math inline">\(f_{Y|X}(y|x) =\)</span> </li>
@@ -1202,15 +1232,14 @@ Conditional expectation, car dealers
 <p>Independence is rarely (if ever) perfectly met.</p>
 <p>What if:</p>
 <ul>
-<li><p>Patient 1 and patient 2 are related</p></li>
-<li><p>Technicians trade off every 10 patients</p></li>
-<li><p>After seeing an unusually high blood pressure, the technician adjusts their mannerisms</p>
-<p>These are potential <em>dependencies</em> .</p></li>
+<li>Patient 1 and patient 2 are related</li>
+<li>Technicians trade off every 10 patients</li>
+<li>After seeing an unusually high blood pressure, the technician adjusts their mannerisms</li>
 </ul>
+<p>These are potential <em>dependencies</em>.</p>
 <div class="notes">
 <ul>
 <li>Remember, there will almost always be some. It’s important to identify them. But you must exercise judgement about which are really important and which are minor.</li>
-<li></li>
 </ul>
 </div>
 

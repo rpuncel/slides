@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.43">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
 
   <meta name="author" content="Paul Laskowski and Alex Hughes">
   <title>Week 1</title>
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -142,11 +142,6 @@ Paul Laskowski and Alex Hughes
 </div>
 
 </section>
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
-
-</section>
-
 <section>
 <section id="the-nature-of-statistical-models" class="title-slide slide level1 center">
 <h1>The Nature of Statistical Models</h1>
@@ -356,12 +351,10 @@ Paul Laskowski and Alex Hughes
 <h2>Probablity is A System of Reasoning</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<pre><code>  "Essentially, the theory of probability is nothing but good common
-  sense reduced to mathematics. It provides an exact appreciation of
-  what sound minds feel with a kind of instinct, frequently without
-  being able to account for it.”
-
-  - Pierre-Simon Laplace</code></pre>
+<blockquote>
+<p>“Essentially, the theory of probability is nothing but good common sense reduced to mathematics. It provides an exact appreciation of what sound minds feel with a kind of instinct, frequently without being able to account for it.”</p>
+<p>- Pierre-Simon Laplace</p>
+</blockquote>
 </div><div class="column" style="width:40%;">
 <p><img data-src="figures/Laplace.jpg"></p>
 </div></div>
@@ -399,7 +392,14 @@ Paul Laskowski and Alex Hughes
 <p><strong>Apocryphal quotations</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>``_All models are wrong; some are useful._'' \\\hspace{1em} —George Box</code></pre>
+<blockquote>
+
+<ul>
+<li>All models are wrong; some are useful.’’</li>
+</ul>
+<p>— George Box</p>
+
+</blockquote>
 </div>
 </div>
 </div>
@@ -413,7 +413,6 @@ Paul Laskowski and Alex Hughes
 <ul>
 <li>But I’m here to tell you that probability is just a model. It’s a very useful model - one that we can make mathematically precise. But it’s a model of the world.</li>
 <li>Let me try to convince you with a few examples.</li>
-<li></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -497,11 +496,8 @@ Paul Laskowski and Alex Hughes
 
 <img data-src="figures/coin.jpg" class="r-stretch"><aside class="notes">
 <ul>
-<li>Finally, what about the most classic random event of all
-<ul>
-<li>the coin flip.</li>
-</ul></li>
-<li>Everyone knows that a coin lands heads 50</li>
+<li>Finally, what about the most classic random event of all: <strong>the coin flip.</strong></li>
+<li>Everyone knows that a coin lands heads 50 percent of the time.</li>
 <li>But is that true? What if you could flip the coin in exactly the same way each time.</li>
 <li>And make sure every single atom in the air was moving in exactly the same way.</li>
 <li>You would probably find that it lands on the same side each time.</li>
@@ -527,17 +523,12 @@ Paul Laskowski and Alex Hughes
 <li>Deduce statements that must then be logically entailed</li>
 </ul>
 <p><em>Thomas Kuhn’s</em> Philosophy of Science</p>
-<ul>
-<li>&lt;1-&gt; Axiomatic statements</li>
-<li>&lt;1-&gt; Intermediate theories</li>
-<li>&lt;1-&gt; Testable hypotheses</li>
-</ul>
+<p>1.Axiomatic statements 2. Intermediate theories 3. Testable hypotheses</p>
 <aside class="notes">
 <ul>
 <li>We already have an intuitive model for probability in our heads, but that’s not enough to build statistical models - we need a mathematically precise system.</li>
 <li>How do we create one? We distill our intuition into a small set of axioms. This is what mathematicians do…</li>
-<li>Suppose that you’re rolling die – you could observe that the P(1|2) is just P(1) + P(2). You could write that down as a fact.</li>
-<li></li>
+<li>Suppose that you’re rolling die – you could observe that the <span class="math inline">\(P(1|2)\)</span> is just <span class="math inline">\(P(1)\)</span> + <span class="math inline">\(P(2)\)</span>. You could write that down as a fact.</li>
 <li>Instead, we need to identify axioms that explain the probabilities of many different events. induct up to a higher set of principles – the pieces of the model that we need, that are used to repredict to events.</li>
 <li>You might find this frustrating – you might want to study this like it is an observational science; counting lions or cosmic rays. But, it isn’t!</li>
 <li>Probability is a model, so we’re inventing the rules, not discovering them. But if our system reminds us enough of the real world, it can be useful.</li>
@@ -626,9 +617,9 @@ Paul Laskowski and Alex Hughes
 <li><p>Elements go in curly braces. </p></li>
 <li><p>A colon means “such that”. </p>
 <p>Specifying elements:</p></li>
-<li><p>’ <span class="math inline">\(\in\)</span> ’ means ’“is an element of.”</p></li>
-<li><p>’ <span class="math inline">\(\notin\)</span> ’ means “is not an element of.”</p></li>
-<li><p>’ <span class="math inline">\(\emptyset\)</span> ’ means the empty set. </p></li>
+<li><p><span class="math inline">\(\in\)</span> means “is an element of”</p></li>
+<li><p><span class="math inline">\(\notin\)</span> means “is not an element of”</p></li>
+<li><p><span class="math inline">\(\emptyset\)</span> means “the empty set”</p></li>
 </ul>
 <aside class="notes">
 <ul>
@@ -842,8 +833,7 @@ Paul Laskowski and Alex Hughes
 <p><strong>Definition 1.1.12: <em>partition</em></strong></p>
 </div>
 <div class="callout-content">
-<pre><code>A set of sets $A_{1}, A_{2}, \dots, A_{n}$ is a _partition_ of set $S$, if $A_{1}, A_{2}, \dots, A_{n}$ are nonempty and
-pairwise disjoint, and if $S = A_{1} \cup A_{2} \cup \cdots \cup A_{n}$.</code></pre>
+<p>A set of sets <span class="math inline">\(A_{1}, A_{2}, \dots, A_{n}\)</span> is a <em>partition</em> of set <span class="math inline">\(S\)</span>, if <span class="math inline">\(A_{1}, A_{2}, \dots, A_{n}\)</span> are nonempty and pairwise disjoint, and if <span class="math inline">\(S = A_{1} \cup A_{2} \cup \cdots \cup A_{n}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -868,7 +858,7 @@ pairwise disjoint, and if $S = A_{1} \cup A_{2} \cup \cdots \cup A_{n}$.</code><
 </section>
 <section id="partition-rule-1" class="slide level2">
 <h2>Partition Rule 1</h2>
-<p>Given a set <span class="math inline">\(A\)</span> and another set <span class="math inline">\(B\)</span> , a partition of <span class="math inline">\(A\)</span> is…</p>
+<p>Given a set <span class="math inline">\(A\)</span> and another set <span class="math inline">\(B\)</span>, a partition of <span class="math inline">\(A\)</span> is…</p>
 
 <img data-src="./figures/ab.png" class="r-stretch"><aside class="notes">
 <ul>
@@ -890,7 +880,7 @@ pairwise disjoint, and if $S = A_{1} \cup A_{2} \cup \cdots \cup A_{n}$.</code><
 </section>
 <section id="partition-rule-2" class="slide level2">
 <h2>Partition Rule 2</h2>
-<p>Given a set <span class="math inline">\(A\)</span> and another set <span class="math inline">\(B\)</span> , a partition of <span class="math inline">\(A \cup B\)</span> is…</p>
+<p>Given a set <span class="math inline">\(A\)</span> and another set <span class="math inline">\(B\)</span>, a partition of <span class="math inline">\(A \cup B\)</span>is…</p>
 
 <img data-src="./figures/ab.png" class="r-stretch"><aside class="notes">
 <ul>
@@ -939,7 +929,7 @@ pairwise disjoint, and if $S = A_{1} \cup A_{2} \cup \cdots \cup A_{n}$.</code><
 <ul>
 <li>A <strong>sample space</strong> , denoted as <span class="math inline">\(\Omega\)</span> , is the collection of <em>all</em> possible outcomes.</li>
 <li>An <strong>event space</strong> , denoted as <span class="math inline">\(S\)</span> , is made up of sets of outcomes.</li>
-<li>A <strong>probability measure</strong> is a function that maps events to numbers in <span class="math inline">\([0,1]\)</span> . % include squiggly picture</li>
+<li>A <strong>probability measure</strong> is a function that maps events to numbers in <span class="math inline">\([0,1]\)</span> .</li>
 </ul>
 </div>
 </div>
@@ -949,6 +939,7 @@ pairwise disjoint, and if $S = A_{1} \cup A_{2} \cup \cdots \cup A_{n}$.</code><
 <ul>
 <li>To build statistical models, we need a mathematical description of probability.</li>
 <li>We need to take our intuition for what a system with uncertainty means, and encode it into a mathematical object. that object will be what we call a probability space.</li>
+<li>include squiggly picture</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -973,12 +964,14 @@ pairwise disjoint, and if $S = A_{1} \cup A_{2} \cup \cdots \cup A_{n}$.</code><
 </ul>
 <aside class="notes">
 <ul>
-<li>Let’s start with the sample space. where do we get the sample space? well we have to design it to represent the real world. Let’s give some examples.</li>
+<li>Let’s start with the sample space. where do we get the sample space? well we have to design it to represent the real world. Let’s give some examples.
+<ul>
 <li>A die –</li>
 <li>A dartboard –</li>
 <li>A survey of 5 U.S. senators –</li>
 <li>Suppose you’re doing language translation –<br>
 </li>
+</ul></li>
 <li>Question: can you apply a probability measure directly to the set of outcomes? unfortunately, no. for simple ones you can, but what about the dartboard. there are an infinite number of locations, and the probability of each one is just zero. but a function that’s zero everywhere doesn’t help us model this.</li>
 </ul>
 <style type="text/css">
@@ -1010,8 +1003,31 @@ Getting five dirty hippies in your survey: ${ {}, $ % <span class="math inline">
 <div class="column" style="width:30%;">
 <p><img data-src="figures/dice.jpg"></p>
 </div><div class="column" style="width:70%;">
-<p><span class="math inline">\(A = \{1,2\}, B = \{2,4,6\}\)</span>- A OR B: - A AND B: - NOT A:</p>
+<p>$A = {1,2}, B = {2,4,6}</p>
+<ul>
+<li>A OR B:</li>
+<li>A AND B:</li>
+<li>NOT A:</li>
+</ul>
 </div></div>
+<aside class="notes">
+<ul>
+<li>Because events are sets, we can combine them with set operations to make new events. Let’s think about what those operations mean.</li>
+<li>Here’s two events for the simple example of a die roll</li>
+<li>First, think about how you would write down the event A OR B? that is, either A occurs or B occurs.</li>
+<li>Well, that means that the outcome that occurs must be in at least one of A or B, so it must be in their union. When you see a union, think OR.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="event-spaces" class="slide level2">
 <h2>Event Spaces</h2>
@@ -1025,12 +1041,23 @@ Getting five dirty hippies in your survey: ${ {}, $ % <span class="math inline">
 <p><strong>Intuition for an event space</strong></p>
 </div>
 <div class="callout-content">
-<p>- <span class="math inline">\(S\)</span> represents all possible events - However, there are technical reasons that some sets of outcomes must be excluded (non-measurable).</p>
+<ul>
+<li>We have a bunch of events, and we want to group them all together and call that an event space.</li>
+<li>Seems like a simple idea, right?<br>
+</li>
+<li>But when you read the textbook, you might have wondered, why is this so complicated? well, it gets fairly technical, but it turns out that there are sometimes sets of outcomes that we have to exclude from the event space. These are called non measurable.}- <span class="math inline">\(S\)</span> represents all possible events</li>
+<li>However, there are technical reasons that some sets of outcomes must be excluded (non-measurable).</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-<p><strong>Requirements for a <span class="math inline">\(\sigma\)</span>-algebra</strong> - Nonempty: <span class="math inline">\(S \neq \emptyset\)</span> - Closed under complements: If <span class="math inline">\(A \in S\)</span> then <span class="math inline">\(A^C \in S\)</span> - Closed under countable unions: if <span class="math inline">\(A_1,A_2,... \in S\)</span> then <span class="math inline">\(A_1 \cup A_2 \cup ... \in S\)</span></p>
+<p><strong>Requirements for a <span class="math inline">\(\sigma\)</span>-algebra</strong></p>
+<ul>
+<li>Nonempty: <span class="math inline">\(S \neq \emptyset\)</span></li>
+<li>Closed under complements: If <span class="math inline">\(A \in S\)</span> then <span class="math inline">\(A^C \in S\)</span></li>
+<li>Closed under countable unions: if <span class="math inline">\(A_1,A_2,... \in S\)</span> then <span class="math inline">\(A_1 \cup A_2 \cup ... \in S\)</span></li>
+</ul>
 <aside class="notes">
 <ul>
 <li><p>So Mathematicians said: we can’t put all possible sets in the event space, let’s just make sure that any set we need for a regular analysis is in there. So they came up with a list of guarantees and the technical term for these is a</p></li>
@@ -1060,10 +1087,9 @@ Getting five dirty hippies in your survey: ${ {}, $ % <span class="math inline">
 <p><strong>Definition of a probability measure</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>A function $P: S \rightarrow \mathbb{R}$ is a
-probability measure if:
-- __Axiom 1.__ There are no negative probabilities: $\forall A \in S: P(A) \geq 0$</code></pre>
+<p>A function <span class="math inline">\(P: S \rightarrow \mathbb{R}\)</span> is a probability measure if:</p>
 <ul>
+<li><strong>Axiom 1.</strong> There are no negative probabilities: <span class="math inline">\(\forall A \in S: P(A) \geq 0\)</span></li>
 <li><strong>Axiom 2.</strong> The probability that <em>some</em> outcome occurs is one: <span class="math inline">\(P(\Omega) = 1\)</span></li>
 <li><strong>Axiom 3.</strong> Probabilities “add up”: If <span class="math inline">\(A_1,A_2,...\)</span> is a countable set of disjoint events, then <span class="math inline">\(P(A_1 \cup A_2 \cup ... ) = \sum_{i} P(A_{i})\)</span></li>
 </ul>
@@ -1104,10 +1130,9 @@ probability measure if:
 <p><strong>Definition of a probability measure</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>A function $P: S \rightarrow \mathbb{R}$ is a
-probability measure if:
-- __Axiom 1.__ There are no negative probabilities: $\forall A \in S: P(A) \geq 0$</code></pre>
+<p>A function <span class="math inline">\(P: S \rightarrow \mathbb{R}\)</span> is a probability measure if:</p>
 <ul>
+<li><strong>Axiom 1.</strong> There are no negative probabilities: <span class="math inline">\(\forall A \in S: P(A) \geq 0\)</span></li>
 <li><strong>Axiom 2.</strong> The probability that <em>some</em> outcome occurs is one: <span class="math inline">\(P(\Omega) = 1\)</span></li>
 <li><strong>Axiom 3.</strong> Probabilities “add up”: If <span class="math inline">\(A_1,A_2,...\)</span> is a countable set of disjoint events, then <span class="math inline">\(P(A_1 \cup A_2 \cup ... ) = \sum_{i} P(A_{i})\)</span></li>
 </ul>
@@ -1139,68 +1164,24 @@ probability measure if:
 <h1>Learnosity Concept Check</h1>
 
 </section>
-<section id="section-1" class="slide level2">
+<section id="section" class="slide level2">
 <h2></h2>
-<p>You run an experiment in which you flip 3 coins, and each one lands heads or tails. Your sample space can be written: <span class="math inline">\(\{HHH, HHT, HTH,
-  HTT, THH, THT, TTH, TTT\}\)</span> . Assume all outcomes have equal probability.</p>
+<p>You run an experiment in which you flip 3 coins, and each one lands heads or tails. Your sample space can be written:</p>
+<p><span class="math inline">\(\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\}\)</span>.</p>
+<p>Assume all outcomes have equal probability.</p>
 <ul>
 <li>(Assuming that you include all possible sets) what is the size of the event space?</li>
 <li>How many outcomes are in the event that the first coin lands heads?</li>
 <li>If A is the event that the first coin lands heads, and B is the event that the second and third coin land the same way, what is the probability of <span class="math inline">\(A \cup B\)</span></li>
 </ul>
-<aside class="notes">
-<ul>
-<li></li>
-<li></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="a-single-coin-example" class="slide level2">
 <h2>A Single Coin Example</h2>
-<aside class="notes">
-<ul>
-<li></li>
-<li></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+
 </section>
 <section id="learnosity-a-double-coin-example" class="slide level2">
 <h2>Learnosity: A Double Coin Example</h2>
-<aside class="notes">
-<ul>
-<li></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+
 </section></section>
 <section>
 <section id="reading-properties-of-probability" class="title-slide slide level1 center">
@@ -1218,7 +1199,7 @@ probability measure if:
 </section>
 <section id="a-helpful-analogy" class="slide level2">
 <h2>A Helpful Analogy</h2>
-<p><strong>Probability <span class="math inline">\(\Longleftrightarrow\)</span> Area</strong></p>
+<p><em>Probability <span class="math inline">\(\Longleftrightarrow\)</span> Area</em></p>
 
 <img data-src="figures/sample_space.png" class="r-stretch"><aside class="notes">
 <ul>
@@ -1227,7 +1208,7 @@ probability measure if:
 <li>Probabilities are a lot like areas. Actually, area is also a type of measure in mathematics - most of the structure is the same.</li>
 <li>If you just have a few events, it can help to draw them as areas. That’s not a proof, but it can give you an idea of how they behave.</li>
 <li>Let’s think about the sample space as a square dartboard. We’ll define its area to be 1. I’m really bad at darts so every point is just as likely as any other point.</li>
-<li>An event is some shape on the dartboard. so the probability that the dart lands in the shape is its area. A picture like this can help you figure out a tricky proof.</li>
+<li>An event is some shape on the dartboard. So the probability that the dart lands in the shape is its area. A picture like this can help you figure out a tricky proof.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1243,8 +1224,9 @@ probability measure if:
 </section>
 <section id="the-subset-subtraction-rule" class="slide level2">
 <h2>The Subset Subtraction Rule</h2>
-<p>Given <span class="math inline">\(A,B \in S\)</span> , <span class="math inline">\(A \subseteq B\)</span> . Compute <span class="math inline">\(P(B\setminus A)\)</span> .</p>
-<p>Ex: A = being over 7’, B = being over 6’.</p>
+<p>Given</p>
+<p><span class="math inline">\(A,B \in S\)</span>, <span class="math inline">\(A \subseteq B\)</span>. Compute <span class="math inline">\(P(B\setminus A)\)</span>.</p>
+<p>For example: <span class="math inline">\(A\)</span> = being over 7’, <span class="math inline">\(B\)</span> = being over 6’.</p>
 
 <img data-src="figures/sample_space.png" class="r-stretch"><aside class="notes">
 <ul>
@@ -1268,7 +1250,7 @@ probability measure if:
 </section>
 <section id="the-complement-rule" class="slide level2">
 <h2>The Complement Rule</h2>
-<p>Given <span class="math inline">\(A \in S\)</span> . Compute <span class="math inline">\(P(A^C)\)</span> .</p>
+<p>Given <span class="math inline">\(A \in S\)</span>. Compute <span class="math inline">\(P(A^C)\)</span>.</p>
 <aside class="notes">
 <ul>
 <li>Given the subtraction rule, you can very quickly solve for the complement rule</li>
@@ -1289,7 +1271,7 @@ probability measure if:
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 
 </section></section>
@@ -1298,16 +1280,16 @@ probability measure if:
 <h1>Learnosity Concept Check - Addition Rule</h1>
 
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="addition-rule" class="slide level2">
+<h2>Addition Rule</h2>
 <p>Here is a proof of the addition rule, select the best justification for each line.</p>
-<p><span class="math display">\[\begin{align*}
+<span class="math display">\[\begin{aligned}
 A \cup B &amp;=  (A \setminus B) \cup (A \cap B) \cup (B \setminus A) \\
 P(A \cup B) &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) + P(A \cap B) - P(A \cap B) \\
 &amp;=  P\big( (A \setminus B) \cup( A \cap B) \big) +  P\big( (B \setminus A) \cup (A \cap B) \big) - P(A \cap B)\\
 &amp;= P(A) + P(B)  - P(A \cap B)
-\end{align*}\]</span></p>
+\end{aligned}\]</span>
 <p>Options (to be scrambled):</p>
 <ul>
 <li>Partition Rule 2</li>
@@ -1316,21 +1298,6 @@ P(A \cup B) &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 <li>Axiom 3, countable additivity.</li>
 <li>Partition Rule 1.</li>
 </ul>
-<aside class="notes">
-<ul>
-<li></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section></section>
 <section>
 <section id="learnosity-concept-check---applying-the-addition-rule" class="title-slide slide level1 center">
@@ -1340,7 +1307,7 @@ P(A \cup B) &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 <section id="applying-the-addition-rule" class="slide level2">
 <h2>Applying the Addition Rule</h2>
 <p>A station along Route 66 sells gas and postcards. The probability that a customer buys postcards is .4. The probability that a customer leaves without buying anything is .3. The probability that the customer buys both gas and postcards is .2. What is the probability that the customer buys gas?</p>
-<p>Answer: .5</p>
+<p><strong>Answer</strong>: .5</p>
 </section></section>
 <section>
 <section id="conditional-probability" class="title-slide slide level1 center">
@@ -1349,49 +1316,23 @@ P(A \cup B) &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 </section>
 <section id="conditional-probability-part-i" class="slide level2">
 <h2>Conditional Probability, Part I</h2>
-<p>Conditional probability is a rescoping of the sample space from</p>
-<p><span class="math inline">\(\Omega\)</span> —every possible outcome—to a smaller set called the</p>
-<p><em>conditioning set</em> - What is the probability that a student on campus is a volleyball player ( <span class="math inline">\(V\)</span> )? - What is the probability that a student on campus is a volleyball player ( <span class="math inline">\(V\)</span> ), given that they are 6’3’ ( <span class="math inline">\(T\)</span> )’?</p>
-<p>Uses information to produce a <em>better</em> statement of the likelihood of an event</p>
-<aside class="notes">
+<p>Conditional probability is a rescoping of the sample space from <span class="math inline">\(\Omega\)</span> —every possible outcome—to a smaller set called the <em>conditioning set</em></p>
 <ul>
-<li></li>
-<li></li>
+<li>What is the probability that a student on campus is a volleyball player <span class="math inline">\((V)\)</span>?</li>
+<li>What is the probability that a student on campus is a volleyball player <span class="math inline">\((V)\)</span>, given that they are 6’3’ <span class="math inline">\((T)\)</span>?</li>
 </ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p>Uses information to produce a <em>better</em> statement of the likelihood of an event</p>
 </section>
 <section id="think-of-a-dartboard" class="slide level2">
 <h2>Think of a Dartboard…</h2>
-<p><embed data-src="./figures/vt.pdf"></p>
-<aside class="notes">
+<p><embed data-src="./figures/vt.pdf"> ::: {.notes}</p>
 <ul>
 <li>Let’s build up some intuition by thinking about the dartboard analogy.</li>
 <li>Event V for volleyball player is an area on the board.</li>
 <li>If all you know is that the dart hit the board randomly, the probability that it’s in V is the area of V divided by the area of the entire sample space (which we assume to be 1).</li>
 <li>Now what if I tell you that the dart landed somewhere in T, meaning tall? What does your intuition say?</li>
-<li>Well, now you don’t care about the rest of</li>
+<li>Well, now you don’t care about the rest of :::</li>
 </ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="conditional-probability-part-ii" class="slide level2">
 <h2>Conditional Probability, Part II</h2>
@@ -1405,32 +1346,17 @@ P(A \cup B) &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 <p><strong>Conditional probability</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>For events $A, B \in \Omega$ with $P(B) &gt; 0$, define the _conditional
-  probability_ of $A$ given $B$ to be
-\[
-  P(A|B) = \frac{P(A \cap B)}{P(B)}
-  \]</code></pre>
+<p>For events <span class="math inline">\(A, B \in \Omega\)</span> with <span class="math inline">\(P(B) &gt; 0\)</span>, define the <em>conditional probability</em> of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> to be</p>
+<p>[ P(A|B) = ]</p>
 </div>
 </div>
 </div>
 </div>
-
-<img data-src="./figures/a_and_b.png" class="r-stretch"><aside class="notes">
+<p><img data-src="./figures/a_and_b.png"> ::: {.notes}</p>
 <ul>
 <li>Here’s the formal definition. the conditional probability of A given B is a ratio.</li>
-<li>On the top we have the intersection. on the bottom we have all of B</li>
+<li>On the top we have the intersection. on the bottom we have all of B :::</li>
 </ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="conditional-probability-part-iii" class="slide level2">
 <h2>Conditional Probability, Part III</h2>
@@ -1444,11 +1370,8 @@ P(A \cup B) &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 <p><strong>Conditional probability</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>For events $A, B \in \Omega$ with $P(B) &gt; 0$, define the _conditional
-  probability_ of $A$ given $B$ to be
-\[
-  P(A|B) = \frac{P(A \cap B)}{P(B)}
-  \]</code></pre>
+<p>For events <span class="math inline">\(A, B \in \Omega\)</span> with <span class="math inline">\(P(B) &gt; 0\)</span>, define the <em>conditional probability</em> of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> to be</p>
+<p>[ P(A|B) = ]</p>
 </div>
 </div>
 </div>
@@ -1482,21 +1405,15 @@ P(A \cup B) &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 <p><strong>Multiplicative Law of Probability</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>  Rearranging the conditional probability statement minimally
-  produces the _Multiplicative Law of Probability_.
-
-  For $A, B \in \Omega$ with $P(B) &gt; 0$,
-
-  \[
-    P(A|B)P(B) = P(A \cap B) \pause = P(B|A)P(A)
-  \]</code></pre>
+<p>Rearranging the conditional probability statement minimally produces the <em>Multiplicative Law of Probability</em>.</p>
+<p>For <span class="math inline">\(A, B \in \Omega\)</span> with <span class="math inline">\(P(B) &gt; 0\)</span>,</p>
+<p>[ P(A|B)P(B) = P(A B) = P(B|A)P(A) ]</p>
 </div>
 </div>
 </div>
 </div>
 <aside class="notes">
 <ul>
-<li></li>
 <li>This is an important relationship. It gives us an intuitive way to compute the probability that A AND B occur.</li>
 <li>First, you write down the probability that A occurs. then, you assume that A has occurred, and you multiply by the probability, which is conditional, that B also occurs.</li>
 <li></li>
@@ -1518,8 +1435,8 @@ P(A \cup B) &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 <h1>Learnosity Check</h1>
 
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
+<section id="check" class="slide level2">
+<h2>Check:</h2>
 <p>Suppose that the probability that a student plays volleyball is .4, the probability that the student is tall is .5, and the probability that the student is both tall and plays volleyball is .3.</p>
 <p>What is the conditional probability that the student plays volleyball, given that they are tall?</p>
 <p>Answer: .6</p>
@@ -1550,15 +1467,10 @@ P(A \cup B) &amp;= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 <p><strong>The Law of Total Probability</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>If$\ A_{1}, A_{2}, \dots, A_{n}$ is a partition of $\Omega$, and
-if $B \in \Omega$, then
-\[
-  P(B) = \sum_{i} P(B \cap A_{i})
-\]
-If there is a positive probability for each partition $A_{i}$,
-then by the _Multiplicative Law of Probability_\[
-  P(B) = \sum_{i} P(B | A_{i})P(A_{i})
-\]</code></pre>
+<p>If <span class="math inline">\(\ A_{1}, A_{2}, \dots, A_{n}\)</span> is a partition of <span class="math inline">\(\Omega\)</span>, and if <span class="math inline">\(B \in \Omega\)</span>, then</p>
+<p>[ P(B) = <em>{i} P(B A</em>{i}) ]</p>
+<p>If there is a positive probability for each partition <span class="math inline">\(A_{i}\)</span>, then by the <em>Multiplicative Law of Probability</em></p>
+<p>[ P(B) = <em>{i} P(B | A</em>{i})P(A_{i}) ]</p>
 </div>
 </div>
 </div>
@@ -1593,20 +1505,11 @@ then by the _Multiplicative Law of Probability_\[
 <img data-src="./figures/total_probability_1.png" class="r-stretch"></section>
 <section id="total-probability-part-iv" class="slide level2">
 <h2>Total Probability, Part IV</h2>
-
-<img data-src="./figures/total_probability_2.png" class="r-stretch"></section>
-<section id="total-probability-part-v" class="slide level2">
-<h2>Total Probability, Part V</h2>
-
-<img data-src="./figures/total_probability_3.png" class="r-stretch"></section>
-<section id="total-probability-part-vi" class="slide level2">
-<h2>Total Probability, Part VI</h2>
-
-<img data-src="./figures/total_probability_4.png" class="r-stretch"></section>
-<section id="total-probability-part-vii" class="slide level2">
-<h2>Total Probability, Part VII</h2>
-
-<img data-src="./figures/total_probability_5.png" class="r-stretch"></section>
+<p><img data-src="./figures/total_probability_2.png"> ## Total Probability, Part V</p>
+<p><img data-src="./figures/total_probability_3.png"> ## Total Probability, Part VI</p>
+<p><img data-src="./figures/total_probability_4.png"> ## Total Probability, Part VII</p>
+<p><img data-src="./figures/total_probability_5.png"></p>
+</section>
 <section id="total-probability-part-viii" class="slide level2">
 <h2>Total Probability, Part VIII</h2>
 
@@ -1623,15 +1526,10 @@ then by the _Multiplicative Law of Probability_\[
 <p><strong>The Law of Total Probability</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>If$\ A_{1}, A_{2}, \dots, A_{n}$ is a partition of $\Omega$, and
-if $B \in \Omega$, then
-\[
-  P(B) = \sum_{i} P(B \cap A_{i})
-\]
-If there is a positive probability for each partition $A_{i}$,
-then by the _Multiplicative Law of Probability_\[
-  P(B) = \sum_{i} P(B | A_{i})P(A_{i})
-\]</code></pre>
+<p>If <span class="math inline">\(\ A_{1}, A_{2}, \dots, A_{n}\)</span> is a partition of <span class="math inline">\(\Omega\)</span>, and if <span class="math inline">\(B \in \Omega\)</span>, then</p>
+<p>[ P(B) = <em>{i} P(B A</em>{i}) ]</p>
+<p>If there is a positive probability for each partition <span class="math inline">\(A_{i}\)</span>, then by the <em>Multiplicative Law of Probability</em></p>
+<p>[ P(B) = <em>{i} P(B | A</em>{i})P(A_{i}) ]</p>
 </div>
 </div>
 </div>
@@ -1662,7 +1560,7 @@ then by the _Multiplicative Law of Probability_\[
 </section>
 <section id="conditional-inverses" class="slide level2">
 <h2>Conditional Inverses</h2>
-<p>Does<span class="math inline">\(P(X|Y) = P(Y|X)\)</span>? </p>
+<p>Does <span class="math inline">\(P(X|Y) = P(Y|X)\)</span>?</p>
 <p>Example:</p>
 <ul>
 <li><span class="math inline">\(X =\)</span> Visited Berkeley</li>
@@ -1741,9 +1639,15 @@ then by the _Multiplicative Law of Probability_\[
 </section>
 <section id="bayes-rule-example-cont." class="slide level2">
 <h2>Bayes’ Rule Example Cont.</h2>
-<p>We know:<br>
-<span class="math inline">\(P(D) = .0002,  P(D^C) = .9998\)</span> <span class="math inline">\(\qquad \qquad\ \  P(T|D)=1, P(T|D^C) = .01\)</span></p>
-<p>We want: <span class="math inline">\(P(D|T)\)</span></p>
+<p>We know:</p>
+[
+<span class="math display">\[\begin{aligned}
+    P(D) = 0.0002, &amp; P(D^{C}) = 0.9998 \\
+    P(T|D) = 1 &amp; P(T|D^{C}) = 0.01
+  \end{aligned}\]</span>
+<p>]</p>
+<p>We want:</p>
+<p><span class="math inline">\(P(D|T)\)</span></p>
 <aside class="notes">
 <ul>
 <li><span class="math inline">\(P(D|T) = \frac{P(T|D)P(D)}{P(T)}\)</span></li>
@@ -1766,11 +1670,13 @@ then by the _Multiplicative Law of Probability_\[
 </section>
 <section id="bayesian-statistics" class="slide level2">
 <h2>Bayesian Statistics</h2>
-<p>Let H be the event a hypothesis is true.</p>
+<p>Let <span class="math inline">\(H\)</span> be the event a hypothesis is true.</p>
 <ul>
-<li><p>We begin with prior (subjective) belief <span class="math inline">\(P(H)\)</span></p>
-<p>Let D be the data we collect</p></li>
-<li><p>Use Bayes’ Rule to compute posterior belief, <span class="math inline">\(P(H|D)\)</span> .</p></li>
+<li>We begin with prior (subjective) belief <span class="math inline">\(P(H)\)</span></li>
+</ul>
+<p>Let D be the data we collect</p>
+<ul>
+<li>Use Bayes’ Rule to compute posterior belief, <span class="math inline">\(P(H|D)\)</span> .</li>
 </ul>
 <aside class="notes">
 <ul>
@@ -1820,8 +1726,7 @@ then by the _Multiplicative Law of Probability_\[
 <p><strong>Independence of events</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>Events $A, B \in S$ are _independent_ if $P(A \cap B) =
-P(A)P(B)$. </code></pre>
+<p>Events <span class="math inline">\(A, B \in S\)</span> are <em>independent</em> if <span class="math inline">\(P(A \cap B) = P(A)P(B)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1836,8 +1741,7 @@ P(A)P(B)$. </code></pre>
 <p><strong>Theorem: conditional probability and independence</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>For $A, B \in S$ and $P(B)&gt;0$, $A$ and $B$ are
-independent if and only if $P(A|B) = P(A)$.</code></pre>
+<p>For <span class="math inline">\(A, B \in S\)</span> and <span class="math inline">\(P(B)&gt;0\)</span>, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if and only if <span class="math inline">\(P(A|B) = P(A)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1868,7 +1772,7 @@ independent if and only if $P(A|B) = P(A)$.</code></pre>
 <li>Let <span class="math inline">\(W\)</span> be the event our subscriber waited 2 hours on the phone.<span class="math inline">\(P(C) &lt; P(C | W)\)</span><span class="math inline">\(W\)</span> gives us_information_ about C.</li>
 </ul>
 </div><div class="column" style="width:35%;">
-<p>%%&lt;— here <img data-src="figures/phone.jpg"></p>
+<p><img data-src="figures/phone.jpg"></p>
 </div></div>
 <aside class="notes">
 <ul>
@@ -1896,7 +1800,7 @@ independent if and only if $P(A|B) = P(A)$.</code></pre>
 <li>Let <span class="math inline">\(H\)</span> be the event our subscriber hates cilantro. Is<span class="math inline">\(P(C)\)</span> different from<span class="math inline">\(P(C | H)\)</span>?</li>
 </ul>
 </div><div class="column" style="width:35%;">
-<p>%%&lt;— here <img data-src="figures/cilantro.jpg"></p>
+<p><img data-src="figures/cilantro.jpg"></p>
 </div></div>
 <aside class="notes">
 <ul>
@@ -1925,9 +1829,13 @@ independent if and only if $P(A|B) = P(A)$.</code></pre>
 <p>Later in the course: In a <em>random sample</em> every unit is independent of every other unit.</p>
 <div class="columns">
 <div class="column" style="width:65%;">
-<p>Survey Example:- Let <span class="math inline">\(D_1\)</span> be event that the first respondent has a dog. - Let <span class="math inline">\(D_2\)</span> be event that the second respondent has a dog. - </p>
+<p>Survey Example:- Let <span class="math inline">\(D_1\)</span> be event that the first respondent has a dog.</p>
+<ul>
+<li>Let <span class="math inline">\(D_2\)</span> be event that the second respondent has a dog.</li>
+<li></li>
+</ul>
 </div><div class="column" style="width:35%;">
-<p>%%&lt;— here <img data-src="figures/pug.jpg"></p>
+<p><img data-src="figures/pug.jpg"></p>
 </div></div>
 <aside class="notes">
 <ul>
@@ -1973,15 +1881,9 @@ independent if and only if $P(A|B) = P(A)$.</code></pre>
 <section>
 <section id="probability-and-police-shootings" class="title-slide slide level1 center">
 <h1>Probability and Police Shootings</h1>
-
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<p>standout</p>
 <p>Are Black citizens subjected to unfairly violent treatment by law enforcement?</p>
 <aside class="notes">
 <ul>
-<li></li>
 <li>Let’s start our discussion of probability with this question… <read><br>
 </read></li>
 <li>This is a matter that we care deeply about (as I’m sure many of our students do), but I want to make clear that we want to approach it today from an academic perspective - that means being dispassionate and using data to construct measurements that aren’t biased by our personal convictions.</li>
@@ -2010,8 +1912,7 @@ independent if and only if $P(A|B) = P(A)$.</code></pre>
 <p><strong>Johnson et al.&nbsp;(2019)</strong></p>
 </div>
 <div class="callout-content">
-<pre><code>Are minority groups subjected to unfairly violent treatment
-by law enforcement?  </code></pre>
+<p>Are minority groups subjected to unfairly violent treatment by law enforcement?</p>
 <ol type="1">
 <li>Are Black civilians overrepresented in FOIS?</li>
 <li>If so, is this because of racial discrimination by White officers?</li>
@@ -2024,22 +1925,6 @@ by law enforcement?  </code></pre>
 <li>Develop Database that is a near-total recording of all <em>fatal officer involved shootings</em> (FOIS) in the US in 2015.</li>
 <li>``Model’’ whether race of civilian is a factor that predicts being involved in a FOIS.</li>
 </ul>
-<aside class="notes">
-<ul>
-<li></li>
-<li></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="johnson-et-al.-2019-conclusions" class="slide level2">
 <h2>Johnson et al.&nbsp;(2019) Conclusions</h2>
@@ -2065,16 +1950,14 @@ by law enforcement?  </code></pre>
 <section id="probability-translation" class="slide level2">
 <h2>Probability Translation</h2>
 <p>Crystal clear probability statement about officer race:</p>
-<p><span class="math display">\[\begin{align*}
+<span class="math display">\[\begin{aligned}
     P(\text{shot} &amp;| \text{minority civilian, white officer}, X) \leq\\
                   &amp; P(\text{shot} | \text{minority civilian, minority officer}, X)
-  \end{align*}\]</span></p>
+\end{aligned}\]</span>
 <p>Question: Is it possible to justify this statement using only data of officer shootings?</p>
 <aside class="notes">
 <ul>
 <li>The answer to this probability statement informs policy: If true, then take proactive measures in hiring</li>
-<li></li>
-<li></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -2097,7 +1980,7 @@ by law enforcement?  </code></pre>
 </ul>
 <aside class="notes">
 <ul>
-<li><strong>We need these numbers</strong></li>
+<li><em>We need these numbers</em></li>
 <li>We could control for interactions with police. But, there are all kinds of reasons that these interactions – set by policy – are different between groups. The Oakland police are under federal receivership because of their treatment.</li>
 </ul>
 <style type="text/css">
