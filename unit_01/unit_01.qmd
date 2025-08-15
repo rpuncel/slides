@@ -10,22 +10,14 @@ subtitle: Introduction to Probability
 title: Week 1
 ---
 
-# 
-
 # The Nature of Statistical Models
-
 ## What is a Model?
 
-
-
 ![](figures/lego_1.jpg)
-
 
  Image: www.flickr.com/photos/brickset/ (CC BY
   2.0) 
   
-
-
 ::: {.notes}
 
 - This course is about statistical modeling.  So let's
@@ -43,16 +35,9 @@ title: Week 1
     to create something that you see in the world. 
 :::
 
-
-
-
 ## What is a Statistical Model?
 
-
-
 ![](figures/modeling.png)
-
-
 
 ::: {.notes}
 
@@ -69,15 +54,10 @@ title: Week 1
     model.  Then we can start to answer these questions.
 :::
 
-
-
-
 ## Course Plan
 
 1. Putting together statistical models
 2. Fitting models to data
-
-
 
 ::: {.notes}
 
@@ -90,19 +70,11 @@ title: Week 1
 - But don't worry, there will be a LOT of application in the second half of the course.
 :::
 
-
-
-
 ## First Models
-
-
 
 ![](figures/legos_3.jpg)
 
-
  Image: Hans Schou (CC BY-SA 3.0)
-
-
 
 ::: {.notes}
 
@@ -114,20 +86,12 @@ title: Week 1
     something simple to understand how the bricks fit together
 :::
 
-
-
-
 ## Useful Models
-
-
 
 ![](figures/disney_castle.jpg)
 
-
  Image: www.flickr.com/photos/brickset/ (CC BY 2.0)
   
-
-
 ::: {.notes}
 
 - But the key is not to worry about those problems at the
@@ -137,20 +101,12 @@ title: Week 1
     that's going to make them really useful.
 :::
 
-
-
-
 ## Probability is Rules for Putting Pieces Together
-
-
 
 ![](figures/sheep.jpg)
 
-
  Image: www.flickr.com/photos/billward/ (CC BY 2.0)
   
-
-
 ::: {.notes}
 
 - This week, we're starting with the foundation.  probability theory
@@ -161,9 +117,6 @@ title: Week 1
     scientist.
 :::
 
-
-
-
 # Unit Plan
 
 ## Necessary Foundation
@@ -171,12 +124,6 @@ title: Week 1
 - A precise definition of probability
 - How mathematicians build from a set of axioms to useful properties
 - How to connect these properties to problems that we want to solve
-
-
-
-
-
-
 
 # Reading Assignment
 
@@ -192,62 +139,37 @@ _async_
 - A proof of that concept
 - An application using data or problem solving
 
-
   We have designed the course so that you can complete the async,
   reading, and lecture activity components over a few self-contained
   study sessions.
 
-
-
-
-
-
-
 ## Reading Assignment (cont.)
 Read the following sections:
 
-  
 - Introduction, page xv - xviii
-
-
 
 ::: {.notes}
 
 - What do we actually say in this?
 :::
 
-
-
-
 # Probability is Reasoning Under Uncertainty
 
 ## Probablity is A System of Reasoning
 
-
 :::: {.columns}
-
-
 ::: {.column width="60%"}
 
-
-      "Essentially, the theory of probability is nothing but good common
-      sense reduced to mathematics. It provides an exact appreciation of
-      what sound minds feel with a kind of instinct, frequently without
-      being able to account for it.”
- 
-      - Pierre-Simon Laplace
+> "Essentially, the theory of probability is nothing but good common sense reduced to mathematics. It provides an exact appreciation of what sound minds feel with a kind of instinct, frequently without being able to account for it.”
+>  
+> \- Pierre-Simon Laplace
 :::
-
 
 ::: {.column width="40%"}
 
-
 ![](figures/Laplace.jpg)
 :::
-
 ::::
-
-
 
 ::: {.notes}
 
@@ -269,28 +191,20 @@ Read the following sections:
 - Let me try to convince you with a few examples.
 :::
 
-
-
-
 ## Probability is A Model of the World
-
 
 ::: {.callout-note title="Apocryphal quotations"}
 
+> * All models are wrong; some are useful.'' 
+> 
+> \— George Box
 
-    ``_All models are wrong; some are useful._'' \\\hspace{1em} —George Box
-  
 :::
 
+Probability is:
 
-
-  Probability is:
-
-  
 - A mathematical construct
 - A model or abstraction of the world
-
-
 
 ::: {.notes}
 
@@ -298,19 +212,12 @@ Read the following sections:
     model.  It's a very useful model - one that we can make
     mathematically precise.  But it's a model of the world.
 - Let me try to convince you with a few examples.
-- 
+
 :::
-
-
-
 
 ## Probability is a Model - Example 1
 
-
-
 ![](figures/mil_doctors.jpg)
-
-
 
 ::: {.notes}
 
@@ -327,16 +234,9 @@ Read the following sections:
     subjective sense -- as a strength of belief.
 :::
 
-
-
-
 ## Probability is a Model - Example 2
 
-
-
 ![](figures/forecast.png)
-
-
 
 ::: {.notes}
 
@@ -346,16 +246,9 @@ Read the following sections:
     future event, so you might think maybe.
 :::
 
-
-
-
 ## Probability is a Model - Example 2 (cont.)
 
-
-
 ![](figures/earth_copies.png)
-
-
 
 ::: {.notes}
 
@@ -370,35 +263,19 @@ Read the following sections:
     a model for the world.
 :::
 
-
-
-
 ## Probability is a Model - Example 3
-
-
 
 ![](figures/coin.jpg)
 
-
-
 ::: {.notes}
 
-- Finally, what about the most classic random event of all
-    - the coin flip.
-- Everyone knows that a coin lands heads 50
-- But is that true?  What if you could flip the coin in
-    exactly the same way each time.
-- And make sure every single atom in the air was moving in
-    exactly the same way.
-- You would probably find that it lands on the same side
-    each time.
-- Really, the only people who work with true randomness
-    are quantum physicists.  The rest of us are using probability as a
-    model.
+- Finally, what about the most classic random event of all: **the coin flip.**
+- Everyone knows that a coin lands heads 50 percent of the time. 
+- But is that true?  What if you could flip the coin in exactly the same way each time.
+- And make sure every single atom in the air was moving in exactly the same way.
+- You would probably find that it lands on the same side each time.
+- Really, the only people who work with true randomness are quantum physicists.  The rest of us are using probability as a model.
 :::
-
-
-
 
 ## An Axiomatic Approach
 Why take an axiomatic approach?
@@ -407,55 +284,30 @@ Why take an axiomatic approach?
     the world we observe
 - Deduce statements that must then be logically entailed
 
-_Thomas Kuhn's_
- Philosophy of Science
+_Thomas Kuhn's_ Philosophy of Science
 
-  
-- <1-> Axiomatic statements
-- <1-> Intermediate theories
-- <1-> Testable hypotheses
-
-
+1.Axiomatic statements
+2. Intermediate theories
+3. Testable hypotheses
 
 ::: {.notes}
 
-- We already have an intuitive model for probability in
-    our heads, but that's not enough to build statistical models - we
-    need a mathematically precise system.
-- How do we create one?  We distill our intuition into a
-    small set of axioms.  This is what mathematicians do...
-- Suppose that you're rolling die -- you could observe that
-    the P(1|2) is just P(1) + P(2).  You could write that down as a fact.
-- 
-- Instead, we need to identify axioms that explain the
-    probabilities of many different events. induct up to a higher set
-    of principles --  the pieces of the model that we need, that are
-    used to repredict to events.
-- You might find this frustrating -- you might want to
-    study this like it is an observational science; counting lions or
-    cosmic rays. But, it isn't!
-- Probability is a model, so we're inventing the rules,
-    not discovering them.  But if our system reminds us enough of the
-    real world, it can be useful.
+- We already have an intuitive model for probability in our heads, but that's not enough to build statistical models - we need a mathematically precise system.
+- How do we create one?  We distill our intuition into a small set of axioms.  This is what mathematicians do...
+- Suppose that you're rolling die -- you could observe that the $P(1|2)$ is just $P(1)$ + $P(2)$.  You could write that down as a fact.
+- Instead, we need to identify axioms that explain the probabilities of many different events. induct up to a higher set of principles --  the pieces of the model that we need, that are used to repredict to events.
+- You might find this frustrating -- you might want to study this like it is an observational science; counting lions or cosmic rays. But, it isn't!
+- Probability is a model, so we're inventing the rules, not discovering them.  But if our system reminds us enough of the real world, it can be useful.
 :::
-
-
-
 
 # Learnosity: Set Theory Diagnostic Quiz
 
 ## Set Theory
-If you already understand the following notation and can solve the
-  problem, we recommend that you skip this sequence and go straight to
-  the next segment about partitions. 
+If you already understand the following notation and can solve the problem, we recommend that you skip this sequence and go straight to the next segment about partitions. 
   
-  Notation:
+Notation:
   
-$A$
- and 
-$B$
- are sets.
-  
+$A$ and $B$ are sets.
   
 \begin{tabular}{c|c}
     union & $A \cup B$ \\
@@ -468,32 +320,20 @@ $B$
   Simplify the expression: 
 $(A \cap B) \cup( B \setminus A)$
 
-
 ::: {.notes}
 
-- To understand the upcoming definitions, you will need to be familiar
-  with basic set theory.  This sequence is a quick review of the set
-  operations we will be using most.
+- To understand the upcoming definitions, you will need to be familiar with basic set theory.  This sequence is a quick review of the set operations we will be using most.
 - Probably more notation to add, let's keep an eye out and add as we need it.
 :::
 
-
-
-
 # The Set Operations, Part 1
-
 ## Visualizing a Set
 
-
 :::: {.columns}
-
-
 ::: {.column width="30%"}
-
 
 ![](figures/bag.png)
 :::
-
 
 ::: {.column width="70%"}
 
@@ -501,25 +341,16 @@ $(A \cap B) \cup( B \setminus A)$
 - Items don't have an order.
 - Items can't repeat.
 :::
-
 ::::
-
-
 
 ::: {.notes}
 
-- What is a set?  I'm not going to give a precise
-    definition, set theory is interesting but it's pretty far down
-    into the foundations of mathematics. 
+- What is a set?  I'm not going to give a precise definition, set theory is interesting but it's pretty far down into the foundations of mathematics. 
 - What you need to know is that sets contain objects.
 - Imagine a bag, so there's no order inside the set.
 - An object is either in the set or outside.
-- Also, an object can't be in the set twice.  No
-    repetition - you're in or you're out.
+- Also, an object can't be in the set twice.  No repetition - you're in or you're out.
 :::
-
-
-
 
 ## Elements of Sets
 Defining a new set:
@@ -527,14 +358,11 @@ Defining a new set:
 - Elements go in curly braces. \note[item]{Let $A = \{1, 2, 3\}$.}
 - A colon means "such that". \note[item]{Let $B = \{b : b\text{ is an integer}, 1 \leq b \leq 3\} $}
 
-
   Specifying elements:
   
-- ' $\in$ ' means '"is an element of."
-- ' $\notin$ ' means "is not an element of."
-- ' $\emptyset$ ' means the empty set. \note[item]{$2 \in A$.  $5 \notin A$}
-
-
+- $\in$ means "is an element of"
+- $\notin$ means "is not an element of"
+- $\emptyset$ means "the empty set"
 
 ::: {.notes}
 
@@ -542,9 +370,6 @@ Defining a new set:
 - To start with, there are two common techniques for building a brand new set
 - First, we can just make a list of all the elements inside curly braces.
 :::
-
-
-
 
 ## Subsets and Supersets
 
@@ -564,23 +389,15 @@ Defining a new set:
     \center  \includegraphics[width=\linewidth]{figures/subset}
   \end{minipage}
 
-
 ::: {.notes}
 
 - A subset is set that's contained inside a set
 - The larger set is called a superset.
-- We take every element that's in at least one of the
-    sets.
+- We take every element that's in at least one of the sets.
 - We can write this: 
-- Most of the time, when we say subset, we mean that A is
-    inside B but A could be exactly the same as B.
-- If you ever really need to say that A is a subset and
-    actually smaller, you can add a slash through the bottom line.
-    that's called a strict subset or proper subset.
+- Most of the time, when we say subset, we mean that A is inside B but A could be exactly the same as B.
+- If you ever really need to say that A is a subset and actually smaller, you can add a slash through the bottom line. that's called a strict subset or proper subset.
 :::
-
-
-
 
 ## Set Union
 
@@ -596,9 +413,7 @@ Defining a new set:
     \center  \includegraphics[width=\linewidth]{figures/union}
   \end{minipage}
 
-
 ::: {.notes}
-
 - A set union means we're merging sets together
 - We take every element that's in at least one of the sets.
 - We can write this: 
@@ -606,17 +421,12 @@ Defining a new set:
 - In this case, 
 :::
 
-
-
-
 ## Properties of Unions
 
 - Symmetry: $A \cup B = B \cup A$
 - Association: $(A \cup B) \cup C = A \cup(B \cup C)$
 - $A \cup A = A$
 - $A \cup \emptyset = A$
-
-
 
 ::: {.notes}
 
@@ -627,11 +437,7 @@ Defining a new set:
 - Like I said, we're really down in the foundations.
 :::
 
-
-
-
 # The Set Operations, Part 2
-
 ## Set Intersection
 
 \begin{minipage}[t]{0.5\textwidth}
@@ -649,7 +455,6 @@ Defining a new set:
     \center  \includegraphics[width=\linewidth]{figures/intersection}
   \end{minipage}
 
-
 ::: {.notes}
 
 - A set intersection means we want only the common elements
@@ -661,21 +466,12 @@ Defining a new set:
 - If 
 :::
 
-
-
-
 ## Properties of Intersections
 
 - Symmetry: $A \cap B = B \cap A$
 - Association: $(A \cap B) \cap C = A \cap(B \cap C)$
 - $A \cap A = A$
 - $A \cap \emptyset = \emptyset$
-
-
-
-
-
-
 
 ## Distributing Union and Intersection
 
@@ -693,11 +489,6 @@ Defining a new set:
     \vspace{-5pt}
     \center  \includegraphics[width=\linewidth]{figures/abc}
   \end{minipage}
-
-
-
-
-
 
 ## Set Difference
 
@@ -723,9 +514,6 @@ Defining a new set:
 - We can write this: 
 - In this case, 
 :::
-
-
-
 
 ## Distributing Set Difference
 
@@ -754,9 +542,6 @@ Defining a new set:
 - It can be hard to remember these all at once, but let me highlight this first one, which we're definitely going to use.
 :::
 
-
-
-
 ## Set Complement
 
 \begin{minipage}[t]{0.6\textwidth}
@@ -783,8 +568,7 @@ Defining a new set:
     \vspace{-5pt}
     \center  \includegraphics[width=\linewidth]{figures/complement}
   \end{minipage}
-
-
+  
 ::: {.notes}
 
 - We we're doing probability theory, we're going to do all of our work inside a big set, which we call the sample space 
@@ -794,26 +578,16 @@ Defining a new set:
 - In this case, 
 :::
 
-
-
-
 # Set Partitions
-
 ## Set Partitions
-
 
 ::: {.callout-note title="Definition 1.1.12:  _partition_"}
 
-
-    A set of sets $A_{1}, A_{2}, \dots, A_{n}$ is a _partition_ of set $S$, if $A_{1}, A_{2}, \dots, A_{n}$ are nonempty and
-    pairwise disjoint, and if $S = A_{1} \cup A_{2} \cup \cdots \cup A_{n}$.
+A set of sets $A_{1}, A_{2}, \dots, A_{n}$ is a _partition_ of set $S$, if $A_{1}, A_{2}, \dots, A_{n}$ are nonempty and pairwise disjoint, and if $S = A_{1} \cup A_{2} \cup \cdots \cup A_{n}$.
   
 :::
 
-
-
 ![](./figures/set_for_partition.png)
-
 
 ::: {.notes}
 
@@ -821,23 +595,10 @@ Defining a new set:
 - Here's a set 
 :::
 
-
-
-
 ## Partition Rule 1
-Given a set 
-$A$
- and another set 
-$B$
-, a partition of 
-$A$
- is...
+Given a set  $A$  and another set $B$, a partition of $A$ is...
   
-
-
 ![](./figures/ab.png)
-
-
 
 ::: {.notes}
 
@@ -846,23 +607,10 @@ $A$
 - $A  = A \cap(B \cup B^C) = (A \cap B) \cup(A \cap B^C)  = (A \cap B) \cup(A \setminus B)$
 :::
 
-
-
-
 ## Partition Rule 2
-Given a set 
-$A$
- and another set 
-$B$
-, a partition of 
-$A \cup B$
- is...
+Given a set $A$ and another set  $B$, a partition of $A \cup B$is...
   
-
-
 ![](./figures/ab.png)
-
-
 
 ::: {.notes}
 
@@ -874,173 +622,116 @@ $A \cup B$
 - Guess what, A intersect B is in there twice.  if you take a union of a set with itself, you get the same set, so we can just remove one of them and we're done.
 :::
 
-
-
-
 ## Call to Reading
 
 - Chapter 1, from page 3 to the top of page 8, stopping before _Theorem 1.1.1_
 
-
-
-
-
-
-
 # Probability Spaces
-
 ## Fundamental Components of Probability Space
-
 
 ::: {.callout-note title="A Probability Space"}
 
-- A __sample space__ , denoted as $\Omega$ , is the
-      collection of _all_ possible outcomes.
-- An __event space__ , denoted as $S$ , is made up of sets of outcomes.
-- A __probability measure__ is a function that maps
-      events to numbers in $[0,1]$ .
-% include squiggly picture
+- A **sample space** , denoted as $\Omega$ , is the
+      collection of *all* possible outcomes.
+- An **event space** , denoted as $S$ , is made up of sets of outcomes.
+- A **probability measure** is a function that maps events to numbers in $[0,1]$ .
+
 :::
-
-
-
 
 ::: {.notes}
 
 - To build statistical models, we need a mathematical description of probability.
 - We need to take our intuition for what a system with uncertainty means, and encode it into a mathematical object.  that object will be what we call a probability space. 
+- include squiggly picture
 :::
 
-
-
-
 ## Sample Spaces
-Choosing sample space 
-$\Omega$
- to represent...
+Choosing sample space $\Omega$ to represent...
   
 - A die % which is discrete
 - A dartboard % which is continuous
 - A survey of 5 U.S. senators
 - A spoken conversation
 
-
-
 ::: {.notes}
 
 - Let's start with the sample space.  where do we get the sample space?  well we have to design it to represent the real world.  Let's give some examples.
-- A die  -- 
-- A dartboard -- 
-- A survey of 5 U.S. senators -- 
-- Suppose you're doing language translation --  
+  - A die  -- 
+  - A dartboard -- 
+  - A survey of 5 U.S. senators -- 
+  - Suppose you're doing language translation --  
 - Question: can you apply a probability measure directly to the set of outcomes?  unfortunately, no.  for simple ones you can, but what about the dartboard. there are an infinite number of locations, and the probability of each one is just zero.  but a function that's zero everywhere doesn't help us model this.
 :::
 
-
-
-
 ## Events
 An event is a set of outcomes.
-  
   
 - Rolling an even number. \note[item]{$\{2,4,6\}$ } % \item Rolling a 4. \note[item]{ $\{4\}$ }
 - Hitting a bullseye. \note[item]{$\{(x,y) \text{ such that } x^2 + y^2 \leq .05\}$} % \item Getting five dirty hippies in your survey: $\big\{ \{\text{Celeste, Dawn, Harmony, Indigo, Marley}\}, $ %   $\{\text{Mike Rivera, Dawn, Harmony, Karma, Leaf}\}, ... \big\}$
 - Starting a sentence with 'Um'.
 
-
-
-
-
-
-
 ## Forming New Events
 
-
 :::: {.columns}
-
-
 ::: {.column width="30%"}
-
 
 ![](figures/dice.jpg)
 :::
 
-
 ::: {.column width="70%"}
 
-$A = \{1,2\}, B = \{2,4,6\}$\note[item]{Because events are sets, we can combine them with
-        set operations to make new events.  Let's think about what
-        those operations mean.}\note[item]{Here's two events for the simple example of a die roll}\note[item]{First, think about how you would write down the
-        event A OR B?  that is, either A occurs or B occurs.}\note[item]{Well, that means that the outcome that occurs must
-        be in at least one of A or B, so it must be in their union.
-        When you see a union, think OR.}- A OR B:
+$A = \{1,2\}, B = \{2,4,6\}
+
+- A OR B:
 - A AND B:
 - NOT A:
 :::
-
 ::::
 
+::: {.notes}
 
-
-
-
-
+- Because events are sets, we can combine them with set operations to make new events.  Let's think about what those operations mean.
+- Here's two events for the simple example of a die roll
+- First, think about how you would write down the event A OR B?  that is, either A occurs or B occurs.
+- Well, that means that the outcome that occurs must be in at least one of A or B, so it must be in their union. When you see a union, think OR.
+:::
 
 ## Event Spaces
 
-
 ::: {.callout-note title="Intuition for an event space"}
 
-\note[item]{Now we have a bunch of events, and we want to group them
-      all together and call that an event space.}\note[item]{That seems like a simple idea, right?  But when you read
-      the textbook, you might have wondered, why is this so complicated?
-      well, it gets fairly technical, but it turns out that there are
-      sometimes sets of outcomes that we have to exclude from the event
-      space.  These are called non measurable.}- $S$ represents all possible events
+- We have a bunch of events, and we want to group them all together and call that an event space.
+- Seems like a simple idea, right?  
+- But when you read the textbook, you might have wondered, why is this so complicated? well, it gets fairly technical, but it turns out that there are sometimes sets of outcomes that we have to exclude from the event space.  These are called non measurable.}- $S$ represents all possible events
 - However, there are technical reasons that some sets of outcomes must be excluded (non-measurable).
 
 :::
 
 
-__Requirements for a $\sigma$-algebra__
+**Requirements for a $\sigma$-algebra**
+
 - Nonempty: $S \neq \emptyset$
 - Closed under complements: If $A \in S$ then $A^C \in S$
 - Closed under countable unions: if $A_1,A_2,... \in S$ then $A_1 \cup A_2 \cup ... \in S$
 
-
-
 ::: {.notes}
 
-- So Mathematicians said: we can't put all possible sets
-    in the event space, let's just make sure that any set we need for
-    a regular analysis is in there.  So they came up with a list of
-    guarantees and the technical term for these is a
+- So Mathematicians said: we can't put all possible sets in the event space, let's just make sure that any set we need for a regular analysis is in there.  So they came up with a list of guarantees and the technical term for these is a
     
-- You can think of this as making sure that any way you
-    can combine events together, the answer will always be an event,
-    so it will have a probability.  You can't accidentally fall out of
-    the event space. 
+- You can think of this as making sure that any way you can combine events together, the answer will always be an event, so it will have a probability.  You can't accidentally fall out of the event space. 
 :::
-
-
-
 
 ## Probability Measure
 
-
 ::: {.callout-note title="Definition of a probability measure"}
 
+A function $P: S \rightarrow \mathbb{R}$ is a probability measure if:
 
-    A function $P: S \rightarrow \mathbb{R}$ is a
-    probability measure if:
-    - __Axiom 1.__ There are no negative probabilities: $\forall A \in S: P(A) \geq 0$
-- __Axiom 2.__ The probability that _some_ outcome occurs is one: $P(\Omega) = 1$
-- __Axiom 3.__ Probabilities "add up": If $A_1,A_2,...$ is a countable set of disjoint events, then $P(A_1 \cup A_2 \cup ... ) = \sum_{i} P(A_{i})$
+- **Axiom 1.** There are no negative probabilities: $\forall A \in S: P(A) \geq 0$
+- **Axiom 2.** The probability that *some* outcome occurs is one: $P(\Omega) = 1$
+- **Axiom 3.** Probabilities "add up": If $A_1,A_2,...$ is a countable set of disjoint events, then $P(A_1 \cup A_2 \cup ... ) = \sum_{i} P(A_{i})$
 
 :::
-
-
-
 
 ::: {.notes}
 
@@ -1052,25 +743,17 @@ __Requirements for a $\sigma$-algebra__
 - What's the probability that the sun goes supernova someday?  well, you can add the probability for today, plus the probability for tomorrow, and on forever.
 :::
 
-
-
-
 ## Probability Measure
-
 
 ::: {.callout-note title="Definition of a probability measure"}
 
-
-    A function $P: S \rightarrow \mathbb{R}$ is a
-    probability measure if:
-    - __Axiom 1.__ There are no negative probabilities: $\forall A \in S: P(A) \geq 0$
-- __Axiom 2.__ The probability that _some_ outcome occurs is one: $P(\Omega) = 1$
-- __Axiom 3.__ Probabilities "add up": If $A_1,A_2,...$ is a countable set of disjoint events, then $P(A_1 \cup A_2 \cup ... ) = \sum_{i} P(A_{i})$
+A function $P: S \rightarrow \mathbb{R}$ is a probability measure if:
+  
+- **Axiom 1.** There are no negative probabilities: $\forall A \in S: P(A) \geq 0$
+- **Axiom 2.** The probability that _some_ outcome occurs is one: $P(\Omega) = 1$
+- **Axiom 3.** Probabilities "add up": If $A_1,A_2,...$ is a countable set of disjoint events, then $P(A_1 \cup A_2 \cup ... ) = \sum_{i} P(A_{i})$
 
 :::
-
-
-
 
 ::: {.notes}
 
@@ -1080,34 +763,20 @@ __Requirements for a $\sigma$-algebra__
 - 
 :::
 
-
-
-
 # Learnosity Concept Check
 
 ## 
-You run an experiment in which you flip 3 coins, and each one lands
-  heads or tails.  Your sample space can be written: 
-$\{HHH, HHT, HTH,
-  HTT, THH, THT, TTH, TTT\}$
-. Assume all outcomes have equal
-  probability. 
+You run an experiment in which you flip 3 coins, and each one lands heads or tails.  Your sample space can be written: 
+
+$\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\}$. 
+
+Assume all outcomes have equal probability. 
   
 - (Assuming that you include all possible sets) what is the size of the event space?
 - How many outcomes are in the event that the first coin lands heads?
 - If A is the event that the first coin lands heads, and B is the
   event that the second and third coin land the same way, what is the
   probability of $A \cup B$
-
-
-
-::: {.notes}
-
-- 
-- 
-:::
-
-
 
 
 ## A Single Coin Example
@@ -1125,16 +794,6 @@ $\{HHH, HHT, HTH,
     \end{itemize}
   \end{exampleblock}
 
-
-::: {.notes}
-
-- 
-- 
-:::
-
-
-
-
 ## Learnosity: A Double Coin Example
 
 \begin{exampleblock}{Two fair coins} 
@@ -1151,74 +810,33 @@ $\{HHH, HHT, HTH,
     \end{itemize} 
   \end{exampleblock}
 
-
-::: {.notes}
-
-- 
-:::
-
-
-
-
 # Reading: Properties of Probability
-
 ## Reading: Properties of Probability
 Read page 8 through the end of page 10.
 
-
-
-
-
-
-
 # Deriving Properties of Probability
-
 ## A Helpful Analogy
 
-
-__Probability $\Longleftrightarrow$ Area__
+*Probability $\Longleftrightarrow$ Area*
 
 ![](figures/sample_space.png)
 
-
-
 ::: {.notes}
 
-- The amazing thing about probability is that with just 3
-    axioms, you can prove all the other properties that you expect
-    based on your intuition.  But it can be tough to find a solution
-    just by staring at equations.
+- The amazing thing about probability is that with just 3 axioms, you can prove all the other properties that you expect based on your intuition. But it can be tough to find a solution just by staring at equations.
 - Here's an analogy that may help you.
-- Probabilities are a lot like areas.  Actually, area is
-    also a type of measure in mathematics - most of the structure is
-    the same.
-- If you just have a few events, it can help to draw them
-    as areas.  That's not a proof, but it can give you an idea of how
-    they behave.
-- Let's think about the sample space as a square
-    dartboard.  We'll define its area to be 1.  I'm really bad at
-    darts so every point is just as likely as any other point.
-- An event is some shape on the dartboard.  so the
-    probability that the dart lands in the shape is its area. A
-    picture like this can help you figure out a tricky proof.
+- Probabilities are a lot like areas.  Actually, area is also a type of measure in mathematics - most of the structure is the same.
+- If you just have a few events, it can help to draw them as areas.  That's not a proof, but it can give you an idea of how they behave.
+- Let's think about the sample space as a square dartboard.  We'll define its area to be 1.  I'm really bad at darts so every point is just as likely as any other point.
+- An event is some shape on the dartboard.  So the probability that the dart lands in the shape is its area. A picture like this can help you figure out a tricky proof.
 :::
-
-
-
 
 ## The Subset Subtraction Rule
 Given 
-$A,B \in S$
-, 
-$A \subseteq B$
-.  Compute 
-$P(B\setminus A)$
-.
+
+$A,B \in S$,  $A \subseteq B$.  Compute $P(B\setminus A)$.
   
-  Ex: A = being over 7', B = being over 6'.
-
-
-   
+For example:  $A$ = being over 7', $B$ = being over 6'.
 
 ![](figures/sample_space.png)
 
@@ -1226,43 +844,25 @@ $P(B\setminus A)$
 
 ::: {.notes}
 
-- Let's start with a simple property, if we assume that
-     event A is a subset of event B, what's the probability if we
-     subtract A from B.
-- For example, if A is the event of being over 7 foot
-     tall, and B is the event of being over 6 foot tall.  how do you
-     get the probability of being between 6 and 7 foot tall?
-- I'll draw a circle for B and a circle for A.  To apply
-     the probability axioms, we need disjoint sets.  A and B are not
-     disjoint, but we know how to partition 
+- Let's start with a simple property, if we assume that event A is a subset of event B, what's the probability if we subtract A from B.
+- For example, if A is the event of being over 7 foot tall, and B is the event of being over 6 foot tall.  how do you get the probability of being between 6 and 7 foot tall?
+- I'll draw a circle for B and a circle for A.  To apply the probability axioms, we need disjoint sets.  A and B are not disjoint, but we know how to partition 
 - $B = (B\setminus A) \cup( A \cap B) =  (B\setminus A) \cup  A  \implies P(B) = P(B\setminus A)+ P(A)$
 - Also, by axiom 1, 
 :::
 
-
-
-
 ## The Complement Rule
-Given 
-$A \in S$
-.  Compute 
-$P(A^C)$
-.
-  
 
+Given $A \in S$.  Compute $P(A^C)$.
 
 ::: {.notes}
 
-- Given the subtraction rule, you can very quickly solve
-    for the complement rule
+- Given the subtraction rule, you can very quickly solve for the complement rule
 - Note 
 - subtraction rule 
 - Axiom 2: 
 - $P(A^C) = 1 - P(A)$
 :::
-
-
-
 
 ## 
 
@@ -1297,23 +897,18 @@ $P(A^C)$
     % \end{itemize}
   \end{alertblock}
 
-
-
-
-
-
 # Learnosity Concept Check - Addition Rule
 
-## 
+## Addition Rule 
 Here is a proof of the addition rule, select the best justification for each line.
 
-\begin{align*}
+\begin{aligned}
 A \cup B &=  (A \setminus B) \cup (A \cap B) \cup (B \setminus A) \\
 P(A \cup B) &= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) \\
 &= P(A \setminus B) + P(A \cap B) +  P(B \setminus A) + P(A \cap B) - P(A \cap B) \\
 &=  P\big( (A \setminus B) \cup( A \cap B) \big) +  P\big( (B \setminus A) \cup (A \cap B) \big) - P(A \cap B)\\
 &= P(A) + P(B)  - P(A \cap B)
-\end{align*}
+\end{aligned}
 
 Options (to be scrambled):
 
@@ -1323,69 +918,26 @@ Options (to be scrambled):
 - Axiom 3, countable additivity.
 - Partition Rule 1.
 
-
-
-::: {.notes}
-
-- 
-:::
-
-
-
-
 # Learnosity Concept Check - Applying the Addition Rule
-
 ## Applying the Addition Rule
 A station along Route 66 sells gas and postcards.  The probability that a customer buys postcards is .4.  The probability that a customer leaves without buying anything is .3.  The probability that the customer buys both gas and postcards is .2.  What is the probability that the customer buys gas?
   
   
-Answer: .5
-
-
-
-
-
+**Answer**: .5
 
 # Conditional Probability
-
 ## Conditional Probability, Part I
-Conditional probability is a rescoping of the sample space from
-  
-$\Omega$
-—every possible outcome—to a smaller set called the
-  
-_conditioning set_
-- What is the probability that a student on campus is a
-    volleyball player ( $V$ )?
-- What is the probability that a student on campus is a
-    volleyball player ( $V$ ), given that they are 6'3' ( $T$ )'?
 
+Conditional probability is a rescoping of the sample space from $\Omega$ ---every possible outcome---to a smaller set called the *conditioning set*
 
-  Uses information to produce a 
-_better_
- statement of the
-  likelihood of an event
-  
-  
+- What is the probability that a student on campus is a volleyball player $(V)$?
+- What is the probability that a student on campus is a volleyball player  $(V)$, given that they are 6'3'  $(T)$?
 
-
-::: {.notes}
-
-- 
-- 
-:::
-
-
-
+Uses information to produce a _better_ statement of the likelihood of an event
 
 ## Think of a Dartboard...
 
-
-
 ![](./figures/vt.pdf)
-
-
-
 ::: {.notes}
 
 - Let's build up some intuition by thinking about the dartboard analogy.
@@ -1393,141 +945,103 @@ _better_
 - If all you know is that the dart hit the board randomly, the probability that it's in V is the area of V divided by the area of the entire sample space (which we assume to be 1).
 - Now what if I tell you that the dart landed somewhere in T, meaning tall?  What does your intuition say?
 - Well, now you don't care about the rest of 
+
 :::
-
-
-
 
 ## Conditional Probability, Part II
 
 
 ::: {.callout-note title="Conditional probability"}
 
-
-    For events $A, B \in \Omega$ with $P(B) > 0$, define the _conditional
-      probability_ of $A$ given $B$ to be
-    \[
-      P(A|B) = \frac{P(A \cap B)}{P(B)}
-      \]
+For events $A, B \in \Omega$ with $P(B) > 0$, define the _conditional probability_ of $A$ given $B$ to be
+    
+\[
+  P(A|B) = \frac{P(A \cap B)}{P(B)}
+\]
 :::
 
-
-
 ![](./figures/a_and_b.png)
-
-
 ::: {.notes}
 
 - Here's the formal definition.  the conditional probability of A given B is a ratio.
 - On the top we have the intersection.  on the bottom we have all of B
+
 :::
-
-
-
 
 ## Conditional Probability, Part III
 
 
 ::: {.callout-note title="Conditional probability"}
 
+For events $A, B \in \Omega$ with $P(B) > 0$, define the _conditional probability_ of $A$ given $B$ to be
 
-    For events $A, B \in \Omega$ with $P(B) > 0$, define the _conditional
-      probability_ of $A$ given $B$ to be
-    \[
-      P(A|B) = \frac{P(A \cap B)}{P(B)}
-      \]
+\[
+  P(A|B) = \frac{P(A \cap B)}{P(B)}
+\]
 :::
 
-
-
 ![](./figures/a_given_b.png)
-
 
 ::: {.notes}
 
 - The idea is we're dropping everything in the sample space outside of B - it's not relevant, and then we have to rescale the probability so everything adds up to 1.
+
 :::
 
-
-
-
 ## Conditional Probability, Part IV
-
 
 ::: {.callout-note title="Multiplicative Law of Probability"}
 
 
-      Rearranging the conditional probability statement minimally
-      produces the _Multiplicative Law of Probability_.
+Rearranging the conditional probability statement minimally produces the *Multiplicative Law of Probability*.
 
-      For $A, B \in \Omega$ with $P(B) > 0$,
+For $A, B \in \Omega$ with $P(B) > 0$,
 
-      \[
-        P(A|B)P(B) = P(A \cap B) \pause = P(B|A)P(A)
-      \]
+\[
+  P(A|B)P(B) = P(A \cap B) \pause = P(B|A)P(A)
+\]
 :::
-
-
-
 
 ::: {.notes}
 
-- 
 - This is an important relationship.  It gives us an intuitive way to compute the probability that A AND B occur. 
 - First, you write down the probability that A occurs.  then, you assume that A has occurred, and you multiply by the probability, which is conditional, that B also occurs.
-- 
+
 :::
-
-
-
 
 # Learnosity Check
 
-## 
+## Check: 
+
 Suppose that the probability that a student plays volleyball is .4, the probability that the student is tall is .5, and the probability that the student is both tall and plays volleyball is .3.
   
-  What is the conditional probability that the student plays volleyball, given that they are tall?
-  
+What is the conditional probability that the student plays volleyball, given that they are tall?
   
 Answer: .6
-
-
-
-
-
 
 # Reading: Bayes' Rule
 
 ## Reading: Bayes' Rule
 Read from the top of page 11 to the end of page 13.
 
-
-
-
-
-
-
 # Total Probability
-
 ## Total Probability, Part I
-
 
 ::: {.callout-note title="The Law of Total Probability"}
 
 
-    If$\ A_{1}, A_{2}, \dots, A_{n}$ is a partition of $\Omega$, and
-    if $B \in \Omega$, then
-    \[
-      P(B) = \sum_{i} P(B \cap A_{i})
-    \]
-    If there is a positive probability for each partition $A_{i}$,
-    then by the _Multiplicative Law of Probability_\[
-      P(B) = \sum_{i} P(B | A_{i})P(A_{i})
-    \]
+If $\ A_{1}, A_{2}, \dots, A_{n}$ is a partition of $\Omega$, and if $B \in \Omega$, then 
+
+\[
+  P(B) = \sum_{i} P(B \cap A_{i})
+\]
+
+If there is a positive probability for each partition $A_{i}$, then by the *Multiplicative Law of Probability* 
+
+\[
+  P(B) = \sum_{i} P(B | A_{i})P(A_{i})
+\]
 :::
-
-
-
 
 ::: {.notes}
 
@@ -1536,99 +1050,52 @@ Read from the top of page 11 to the end of page 13.
 - There is a famous technique that helps in a lot of cases.  it's called the law of total probability.
 - The idea is we can use a partition of 
 - Let's see a picture and then read the law carefully...
+
 :::
 
-
-
-
 ## Total Probability, Part II
-
 
 ![](./figures/total_probability_0.png)
 
 
-
-
-
-
 ## Total Probability, Part III
-
 
 ![](./figures/total_probability_1.png)
 
-
-
-
-
-
 ## Total Probability, Part IV
 
-
 ![](./figures/total_probability_2.png)
-
-
-
-
-
-
 ## Total Probability, Part V
 
-
 ![](./figures/total_probability_3.png)
-
-
-
-
-
-
 ## Total Probability, Part VI
 
-
 ![](./figures/total_probability_4.png)
-
-
-
-
-
-
 ## Total Probability, Part VII
-
 
 ![](./figures/total_probability_5.png)
 
-
-
-
-
-
 ## Total Probability, Part VIII
-
 
 ![](./figures/total_probability_6.png)
 
-
-
-
-
-
 ## Total Probability, Part I
-
 
 ::: {.callout-note title="The Law of Total Probability"}
 
 
-    If$\ A_{1}, A_{2}, \dots, A_{n}$ is a partition of $\Omega$, and
-    if $B \in \Omega$, then
-    \[
-      P(B) = \sum_{i} P(B \cap A_{i})
-    \]
-    If there is a positive probability for each partition $A_{i}$,
-    then by the _Multiplicative Law of Probability_\[
-      P(B) = \sum_{i} P(B | A_{i})P(A_{i})
-    \]
+If $\ A_{1}, A_{2}, \dots, A_{n}$ is a partition of $\Omega$, and if $B \in \Omega$, then
+    
+\[
+  P(B) = \sum_{i} P(B \cap A_{i})
+\]
+
+If there is a positive probability for each partition $A_{i}$, then by the *Multiplicative Law of Probability*
+
+\[
+  P(B) = \sum_{i} P(B | A_{i})P(A_{i})
+\]
 :::
-
-
 
 
 ::: {.notes}
@@ -1637,39 +1104,30 @@ Read from the top of page 11 to the end of page 13.
 - The probability of B is a sum, if you look inside the sum, what we do is we intersect B with some 
 - To finish the law, we can then apply the multiplication rule.  we write each of these joint probabilities as a product.  First, we take the probability we're inside 
 - That's the law of total probability.  It can be quite useful, if you can think of a good partition.
+
 :::
 
-
-
-
 # Bayes' Rule
-
 ## Conditional Inverses
 
- Does$P(X|Y) = P(Y|X)$?
-\pause
+Does $P(X|Y) = P(Y|X)$?
 
-  Example: 
+Example: 
 
 - $X =$ Visited Berkeley
 - $Y =$ Attend MIDS
-
-
 
 ::: {.notes}
 
 - We know about conditional probability.  Let's say we have two events X and Y.  Are these two conditional probabilities the same?
 - In fact, the answer is usually no.  here's an example to convince you. <read>
 - There is an easy way to get from one of these probabilities to the other.  it's the famous theorem known as Bayes' Rule.
+
 :::
-
-
-
 
 ## Deriving Bayes' Rule
 
 $P(X \cap Y)$
-
 
 ::: {.notes}
 
@@ -1677,10 +1135,8 @@ $P(X \cap Y)$
 - $P(Y)P(X|Y)=$
 - Divide: 
 - That's Bayes's Rule!  It's easy to derive if you ever forget it.
+
 :::
-
-
-
 
 ## Bayes' Rule Example
 
@@ -1691,11 +1147,8 @@ $P(X \cap Y)$
 
 Given that you get a positive test, what is the probability that you have the disease?
 
-
 - Let D be the event you have the disease
 - Let T be the event the test is positive.
-
-
 
 ::: {.notes}
 
@@ -1703,19 +1156,23 @@ Given that you get a positive test, what is the probability that you have the di
 - Let's work through a problem together.  This is a very classic example for Bayes' Rule.
 - You can see that this sounds quite scary, right?  the test is correct 99
 - Write down what we know: 
+
 :::
 
-
-
-
 ## Bayes' Rule Example Cont.
+
 We know:  
-$P(D) = .0002,  P(D^C) = .9998$
-$\qquad \qquad\ \  P(T|D)=1, P(T|D^C) = .01$
+
+\[ 
+  \begin{aligned} 
+    P(D) = 0.0002, & P(D^{C}) = 0.9998 \\ 
+    P(T|D) = 1 & P(T|D^{C}) = 0.01
+  \end{aligned}
+\]
 
 We want: 
-$P(D|T)$
 
+$P(D|T)$
 
 ::: {.notes}
 
@@ -1724,22 +1181,17 @@ $P(D|T)$
 - $P(T) = P(D)P(T|D) + P(D^C)P(T|D^C)$
 - $P(D|T) = \frac{P(T|D)P(D)}{P(T)} =  \frac{P(T|D)P(D)}{ P(D)P(T|D) + P(D^C)P(T|D^C) = .0196}$
 - Even though the test is 99
+
 :::
 
-
-
-
 ## Bayesian Statistics
-Let H be the event a hypothesis is true.
+Let $H$ be the event a hypothesis is true.
   
 - We begin with prior (subjective) belief $P(H)$
 
-
-  Let D be the data we collect
+Let D be the data we collect
   
 - Use Bayes' Rule to compute posterior belief, $P(H|D)$ .
-
-
 
 ::: {.notes}
 
@@ -1750,49 +1202,29 @@ Let H be the event a hypothesis is true.
 - To a bayesian, probability is used to represent your personal subjective belief.  before you see the data, you give the hypothesis a prior probability, P(H)
 - Then you see data, D.  you can use bayes rule to update your probability to 
 - There's your 60 second crash course on Bayesian stats.
+
 :::
 
-
-
-
 # Reading: Independence
-
 ## Reading: Independence
 Read section 1.1.4, Independence of Events
 
-
-
-
-
-
-
 # Independence
-
 ## Independence
-
 
 ::: {.callout-note title="Independence of events"}
 
-
-    Events $A, B \in S$ are _independent_ if $P(A \cap B) =
-    P(A)P(B)$. 
+Events $A, B \in S$ are _independent_ if $P(A \cap B) = P(A)P(B)$. 
   
 :::
-
-
 
 \pause
 
 ::: {.callout-note title="Theorem: conditional probability and independence"}
 
-
-    For $A, B \in S$ and $P(B)>0$, $A$ and $B$ are
-    independent if and only if $P(A|B) = P(A)$.
+For $A, B \in S$ and $P(B)>0$, $A$ and $B$ are independent if and only if $P(A|B) = P(A)$.
   
 :::
-
-
-
 
 ::: {.notes}
 
@@ -1800,31 +1232,20 @@ Read section 1.1.4, Independence of Events
 - However, as long as the events have nonzero probability, you can also write independence in terms of conditional probabilities.
 :::
 
-
-
-
 ## Conditional Probability and Information
 
-
 :::: {.columns}
-
-
 ::: {.column width="65%"}
 
 - Let $C$ be event that our subscriber cancels.
 - Let $W$ be the event our subscriber waited 2 hours on the phone.$P(C) < P(C | W)$$W$ gives us_information_ about C.
 :::
 
-
 ::: {.column width="35%"}
 
-%%<--- here
 ![](figures/phone.jpg)
 :::
-
 ::::
-
-
 
 ::: {.notes}
 
@@ -1832,15 +1253,10 @@ Read section 1.1.4, Independence of Events
 - This is what we usually expect, at least a little bit.  one event will give us some information about another event.  But it's not always the case.
 :::
 
-
-
-
 ## Understanding Independence
 
 
 :::: {.columns}
-
-
 ::: {.column width="65%"}
 
 - Let $C$ be event that our subscriber cancels.
@@ -1848,16 +1264,11 @@ Read section 1.1.4, Independence of Events
    Is$P(C)$ different from$P(C | H)$?
 :::
 
-
 ::: {.column width="35%"}
 
-%%<--- here
 ![](figures/cilantro.jpg)
 :::
-
 ::::
-
-
 
 ::: {.notes}
 
@@ -1869,40 +1280,22 @@ Read section 1.1.4, Independence of Events
 - Also, 
 :::
 
-
-
-
 ## Importance of Independence
-Later in the course: In a 
-_random sample_
- every unit is independent of every other unit.
-
-
-
-
-  
+Later in the course: In a _random sample_ every unit is independent of every other unit.
 
 :::: {.columns}
-
-
 ::: {.column width="65%"}
-
-
 Survey Example:- Let $D_1$ be event that the first respondent has a dog.
+
 - Let $D_2$ be event that the second respondent has a dog.
 - \dots
+
 :::
-
-
 ::: {.column width="35%"}
 
-%%<--- here
 ![](figures/pug.jpg)
 :::
-
 ::::
-
-
 
 ::: {.notes}
 
@@ -1913,49 +1306,27 @@ Survey Example:- Let $D_1$ be event that the first respondent has a dog.
 - But what it they are family members?  Then the responses of the first one probably does give you information about the second.  This makes it much harder to analyze the data.  Throughout this course, we always want to be skeptical about whether independence holds, but many of our techniques really will require it to work.
 :::
 
-
-
-
 # Framing the Following Segment
 
 ## Fatal Officer Involved Shootings
 We're going to take on an important, but challenging topic here -- the use of police force.
 
-  
 - In particular, we're going to read a paper that investigates whether office race plays any role in disparate use of force against people of color
 - This is an important, durable question and one that at the time that we're putting the course together is the predominant political issue.
-
-
-
-
-
-
 
 ## Fatal Officer Involved Shootings
 As faculty, we stand is solidarity with people of color, without exception and without qualification.
 
-  
 - We're going to read an academic, data-based conversation where the authors come to the conclusion that there is no evidence of differential treatment of people of color by white officers.
 - And, we're going to critically engage with this article, to assess whether the data supports this claim
 
-
-
-
-
-
-
 # Probability and Police Shootings
 
-## 
-standout
 
-  Are Black citizens subjected to unfairly violent treatment by law enforcement?
-
-
+Are Black citizens subjected to unfairly violent treatment by law enforcement?
 
 ::: {.notes}
 
-- 
 - Let's start our discussion of probability with this question... <read>  
 - This is a matter that we care deeply about (as I'm sure
   many of our students do), but I want to make clear that we want to
@@ -1964,82 +1335,46 @@ standout
   biased by our personal convictions.
 :::
 
-
-
-
 ## Johnson et al. (2019) 
 
 
 ::: {.callout-note title="Johnson et al. (2019)"}
+Are minority groups subjected to unfairly violent treatment by law enforcement?  
 
-
-    Are minority groups subjected to unfairly violent treatment
-    by law enforcement?  
-  1. Are Black civilians overrepresented in FOIS?
+1. Are Black civilians overrepresented in FOIS?
 2. If so, is this because of racial discrimination by White
     officers?
-
 :::
-
 
 - Develop Database that is a near-total recording of all _fatal officer
       involved shootings_ (FOIS) in the US in 2015.
 - ``Model'' whether race of civilian is a factor that
     predicts being involved in a FOIS.
 
-
-
-::: {.notes}
-
-- 
-- 
-:::
-
-
-
-
 ## Johnson et al. (2019) Conclusions
 
-
 ::: {.callout-note title="Study conclusions"}
-
 - _``We find no overall evidence of anti-Black or
         anti-Hispanic disparities in fatal shootings.''_
 - _``White officers are not more likely to shoot minority
         civilians than non-White officers.''_
-
 :::
-
-
-
-
-
-
-
 
 ## Probability Translation
 Crystal clear probability statement about officer race:
   
-\begin{align*}
+\begin{aligned}
     P(\text{shot} &| \text{minority civilian, white officer}, X) \leq\\ 
                   & P(\text{shot} | \text{minority civilian, minority officer}, X)
-  \end{align*}
+\end{aligned}
 
-  Question: Is it possible to justify this statement using only data of officer shootings?
+Question: Is it possible to justify this statement using only data of officer shootings?
   
-  
-
-
 ::: {.notes}
 
 - The answer to this probability statement informs policy: If true,
     then take proactive measures in hiring
-- 
-- 
 :::
-
-
-
 
 ## Measuring Fairness
 
@@ -2049,16 +1384,12 @@ Crystal clear probability statement about officer race:
 
 - White and Black civilians have different rates of exposure
     to situations that might result in FOIS.
-
-
-
+    
 ::: {.notes}
 
-- __We need these numbers__
+- *We need these numbers*
 - We could control for interactions with police. But,
     there are all kinds of reasons that these interactions -- set by
     policy -- are different between groups. The Oakland police are
     under federal receivership because of their treatment.
 :::
-
-
